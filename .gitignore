@@ -29,12 +29,11 @@ mind2web/real_data_full_output/
 mind2web/step_eval_*/
 webarena/local_demo_output*/
 
-# Keep the important full Vertex run summary artifacts.
+# Keep the two important Vertex evaluation runs, including traces/workflows.
 !mind2web/step_eval_vertex_full/
-mind2web/step_eval_vertex_full/*
-!mind2web/step_eval_vertex_full/paper_comparison.md
-!mind2web/step_eval_vertex_full/paper_metrics.md
-!mind2web/step_eval_vertex_full/paper_metrics.json
+!mind2web/step_eval_vertex_full/**
+!mind2web/step_eval_vertex_500/
+!mind2web/step_eval_vertex_500/**
 
 # Keep source dataset and hand-written workflows.
 !mind2web/data/

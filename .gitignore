@@ -1,0 +1,51 @@
+# Python/runtime clutter
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Local auth/session/config state
+*.log
+*.sqlite
+*.db
+*.pid
+webarena/.auth/
+webarena/autoeval/log
+webarena/config_files/__pycache__/
+
+# Generated benchmark/evaluation outputs
+**/results/
+mind2web/real_data_output/
+mind2web/real_data_full_output/
+mind2web/step_eval_*/
+webarena/local_demo_output*/
+
+# Keep the important full Vertex run summary artifacts.
+!mind2web/step_eval_vertex_full/
+mind2web/step_eval_vertex_full/*
+!mind2web/step_eval_vertex_full/paper_comparison.md
+!mind2web/step_eval_vertex_full/paper_metrics.md
+!mind2web/step_eval_vertex_full/paper_metrics.json
+
+# Keep source dataset and hand-written workflows.
+!mind2web/data/
+!mind2web/data/**
+!mind2web/workflow/
+!mind2web/workflow/**
+!webarena/workflow/
+!webarena/workflow/**
+
+# OS/editor files
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/

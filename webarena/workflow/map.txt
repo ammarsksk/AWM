@@ -1,0 +1,225 @@
+## Concrete Examples
+
+
+Query: I will arrive Pittsburgh Airport soon. Provide the name of a Hilton hotel in the vicinity, if available. Then, tell me the the shortest walking distance to a supermarket from the hotel.
+<think>
+To find a Hilton hotel near Pittsburgh Airport, I will search for "Hilton hotel near Pittsburgh Airport" on OpenStreetMap. Once I find a suitable hotel, I will then search for the shortest walking distance to a supermarket from that hotel.
+</think>
+<action>
+fill('145', 'Hilton hotel near Pittsburgh Airport')
+click('147')
+</action>
+
+<think>
+The search for "Hilton hotel near Pittsburgh Airport" returned no results. I need to refine the search query to find a Hilton hotel near Pittsburgh Airport. I will try searching for "Hilton Pittsburgh Airport" instead.
+</think>
+<action>
+fill('145', 'Hilton Pittsburgh Airport')
+click('147')
+</action>
+
+<think>
+The search results have provided the names of Hilton hotels near Pittsburgh Airport. The closest Hilton hotel is "Hilton Garden Inn Pittsburgh Airport South-Robinson Mall." Next, I need to find the shortest walking distance to a supermarket from this hotel.
+</think>
+<action>
+click('482')
+</action>
+
+<think>
+The map shows the location of the Hilton Garden Inn Pittsburgh Airport South-Robinson Mall. To find the shortest walking distance to a supermarket from this hotel, I will use the "Find directions between two points" feature on OpenStreetMap. I will enter the hotel's address in the "From" field and search for a nearby supermarket in the "To" field, then select "Foot (OSRM)" as the mode of transportation.
+</think>
+<action>
+click('149')
+fill('158', 'Hilton Garden Inn Pittsburgh Airport South-Robinson Mall')
+fill('163', 'supermarket')
+select_option('166', 'Foot (OSRM)')
+click('171')
+</action>
+
+<think>
+The current directions are incorrect as they show a route to a supermarket in Jamaica Avenue, Woodhaven, Queens County, New York, which is not the closest supermarket to Hilton Garden Inn Pittsburgh Airport South-Robinson Mall. I need to find the closest supermarket in Pittsburgh and get walking directions to it.
+</think>
+<action>
+clear('163')
+fill('163', 'supermarket, Pittsburgh')
+click('171')
+</action>
+
+<think>
+The current directions show a walking distance of 22 km from Hilton Garden Inn Pittsburgh Airport South-Robinson Mall to Community Supermarket, which is not practical. I need to find a closer supermarket to the hotel.
+</think>
+<action>
+clear('163')
+fill('163', 'supermarket near Hilton Garden Inn Pittsburgh Airport South-Robinson Mall')
+click('171')
+</action>
+
+<think>
+The search results have provided walking directions from Hilton Garden Inn Pittsburgh Airport South-Robinson Mall to ALDI, a supermarket located at 100 Costco Drive, Pittsburgh. The distance is 1.8 km, and the estimated walking time is 24 minutes.
+</think>
+<action>
+send_msg_to_user("The Hilton hotel near Pittsburgh Airport is Hilton Garden Inn Pittsburgh Airport South-Robinson Mall. The shortest walking distance to a supermarket (ALDI, 100 Costco Drive, Pittsburgh) from the hotel is 1.8 km, which takes approximately 24 minutes.")
+</action>
+
+
+Query: Tell me the closest cafe(s) to CMU Hunt library
+<think>
+To find the closest cafes to CMU Hunt Library, I will use the search functionality on OpenStreetMap. I will start by entering "cafe near CMU Hunt Library" in the search box and then click the "Go" button to locate nearby cafes.
+</think>
+<action>
+fill('145', 'cafe near CMU Hunt Library')
+click('147')
+</action>
+
+<think>
+The search for "cafe near CMU Hunt Library" returned no results. I need to refine the search query to find cafes near Carnegie Mellon University Hunt Library.
+</think>
+<action>
+clear('145')
+fill('145', 'cafes near Carnegie Mellon University Hunt Library')
+click('147')
+</action>
+
+<think>
+The search for "cafes near Carnegie Mellon University Hunt Library" returned no results. I will try a more general search term, "cafes near Carnegie Mellon University," to see if it yields better results.
+</think>
+<action>
+clear('145')
+fill('145', 'cafes near Carnegie Mellon University')
+click('147')
+</action>
+
+<think>
+The search results have provided a list of cafes near Carnegie Mellon University. I will identify the closest cafes to CMU Hunt Library from the list.
+</think>
+<action>
+send_msg_to_user("The closest cafes to CMU Hunt Library are:\n\n1. La Prima Espresso, 311 Hamerschlag Drive, Squirrel Hill North, Pittsburgh, PA 15213\n2. Rothberg's Roasters II, Hamerschlag Drive, Squirrel Hill North, Pittsburgh, PA 15213\n3. De Fer Coffee & Tea, 4909 Frew Street, Squirrel Hill North, Pittsburgh, PA 15213")
+</action>
+
+
+Query: Tell me the coordinates of Western Pennsylvania Hospital Heliport in DD format
+<think>
+To find the coordinates of Western Pennsylvania Hospital Heliport in decimal degrees (DD) format, I will first search for "Western Pennsylvania Hospital Heliport" on OpenStreetMap. Once located, I will extract the coordinates from the map.
+</think>
+<action>
+fill('145', 'Western Pennsylvania Hospital Heliport')
+click('147')
+</action>
+
+<think>
+The search for "Western Pennsylvania Hospital Heliport" returned no results. I need to refine the search query to find the correct location. I will try searching for "Western Pennsylvania Hospital" instead.
+</think>
+<action>
+fill('145', 'Western Pennsylvania Hospital')
+click('147')
+</action>
+
+<think>
+The search results have displayed the location of Western Pennsylvania Hospital on the map. To find the coordinates of the Western Pennsylvania Hospital Heliport in decimal degrees (DD) format, I need to interact with the map to get the exact coordinates of the heliport.
+</think>
+<action>
+click('426')
+</action>
+
+<think>
+The coordinates of Western Pennsylvania Hospital Heliport are displayed in the "Geo URI" section as "geo:40.46102,-79.94662?z=18". These coordinates are already in decimal degrees (DD) format.
+</think>
+<action>
+send_msg_to_user("The coordinates of Western Pennsylvania Hospital Heliport in DD format are 40.46102, -79.94662.")
+</action>
+
+
+Query: What is the zip code of Yale University?
+<think>
+To find the zip code of Yale University, I will search for "Yale University" on OpenStreetMap. Once located, I will extract the zip code from the map or the associated information.
+</think>
+<action>
+fill('145', 'Yale University')
+click('147')
+</action>
+
+<think>
+The search results have provided multiple locations for Yale University. The relevant result for the main campus is "Yale University, Prospect Walk, New Haven, South Central Connecticut Planning Region, Connecticut, 06511, United States." This location includes the zip code 06511.
+</think>
+<action>
+send_msg_to_user("The zip code of Yale University is 06511.")
+</action>
+
+
+Query: I am at CMU Pittsburgh, how long it takes to drive to the nearest cold stone ice cream
+<think>
+To find the driving time from Carnegie Mellon University (CMU) in Pittsburgh to the nearest Cold Stone Creamery, I will use the "Find directions between two points" feature on OpenStreetMap. I will start by clicking on the "Find directions between two points" link.
+</think>
+<action>
+click('149')
+</action>
+
+<think>
+To find the driving time from Carnegie Mellon University (CMU) in Pittsburgh to the nearest Cold Stone Creamery, I will use the "Find directions between two points" feature on OpenStreetMap. I will enter "Carnegie Mellon University, Pittsburgh" in the "From" field and "Cold Stone Creamery, Pittsburgh" in the "To" field, then click the "Go" button to get the driving directions and estimated time.
+</think>
+<action>
+fill('158', 'Carnegie Mellon University, Pittsburgh')
+fill('163', 'Cold Stone Creamery, Pittsburgh')
+click('171')
+</action>
+
+<think>
+The directions from Carnegie Mellon University to Cold Stone Creamery on Forbes Avenue have been successfully generated. The distance is 2.0 km, and the estimated driving time is 3 minutes.
+</think>
+<action>
+send_msg_to_user("The estimated driving time from Carnegie Mellon University to the nearest Cold Stone Creamery on Forbes Avenue is approximately 3 minutes.")
+</action>
+
+
+Query: How long does it take to walk from Univ of Pittsburgh to starbucks on Craig Street?
+<think>
+To find the walking time from the University of Pittsburgh to Starbucks on Craig Street, I will use the "Find directions between two points" feature on OpenStreetMap. I will start by clicking on the "Find directions between two points" link.
+</think>
+<action>
+click('149')
+</action>
+
+<think>
+To find the walking time from the University of Pittsburgh to Starbucks on Craig Street, I will use the "Find directions between two points" feature on OpenStreetMap. I will enter "University of Pittsburgh" in the "From" field and "Starbucks, Craig Street, Pittsburgh" in the "To" field, then select "Foot (OSRM)" as the mode of transportation and click the "Go" button.
+</think>
+<action>
+fill('158', 'University of Pittsburgh')
+fill('163', 'Starbucks, Craig Street, Pittsburgh')
+select_option('166', 'Foot (OSRM)')
+click('171')
+</action>
+
+<think>
+The directions from the University of Pittsburgh to Starbucks on Craig Street have been successfully generated. The distance is 1.4 km, and the estimated walking time is 18 minutes.
+</think>
+<action>
+send_msg_to_user("The estimated walking time from the University of Pittsburgh to Starbucks on Craig Street is approximately 18 minutes.")
+</action>
+
+
+Query: Find the walkway to the closest Trader Joe's from 401 Shady Ave, Pittsburgh.
+<think>
+To find the walkway to the closest Trader Joe's from 401 Shady Ave, Pittsburgh, I will use the "Find directions between two points" feature on OpenStreetMap. I will start by clicking on the "Find directions between two points" link.
+</think>
+<action>
+click('149')
+</action>
+
+<think>
+To find the walkway to the closest Trader Joe's from 401 Shady Ave, Pittsburgh, I will use the "Find directions between two points" feature on OpenStreetMap. I will enter "401 Shady Ave, Pittsburgh" in the "From" field and "Trader Joe's" in the "To" field, then select "Foot (OSRM)" as the mode of transportation and click the "Go" button.
+</think>
+<action>
+fill('158', '401 Shady Ave, Pittsburgh')
+fill('163', 'Trader Joe\'s')
+select_option('166', 'Foot (OSRM)')
+click('171')
+</action>
+
+<think>
+The current directions are incorrect as they show a route to Trader Joe's in Denville, New Jersey, which is not the closest Trader Joe's to 401 Shady Ave, Pittsburgh. I need to find the closest Trader Joe's in Pittsburgh and get walking directions to it.
+</think>
+<action>
+clear('163')
+fill('163', 'Trader Joe\'s, Pittsburgh')
+click('171')
+</action>

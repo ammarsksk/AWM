@@ -1,0 +1,193 @@
+## Concrete Examples
+
+Query: Upvote the newest post in deeplearning subreddit
+<think>
+To upvote the newest post in the "deeplearning" subreddit, I need to navigate to the "deeplearning" subreddit first. I will start by clicking on the "Forums" link to access the list of forums.
+</think>
+<action>
+click('42')
+</action>
+
+<think>
+To view the forums in alphabetical order, I need to click on the "Alphabetical" link in the navigation section. This should sort the forums alphabetically.
+</think>
+<action>
+click('117')
+</action>
+
+<think>
+The forums are now displayed in alphabetical order. To upvote the newest post in the "deeplearning" subreddit, I need to navigate to the "deeplearning" forum. I will click on the "deeplearning" link to proceed.
+</think>
+<action>
+click('166')
+</action>
+
+<think>
+To upvote the newest post in the "deeplearning" subreddit, I need to identify the post with the most recent timestamp. The post titled "Meta’s LLaMa weights leaked on torrent... and the best thing about it is someone put up a PR to replace the google form in the repo with it 😂" is the newest post. I will click the upvote button for this post.
+</think>
+<action>
+click('169')
+</action>
+
+
+Query: Post my question, "what is the recommended console to buy these days", in a subreddit where I'm likely to get an answer
+<think>
+To post a question in a subreddit, I need to navigate to the "Submit" section. I will start by clicking on the "Submit" link.
+</think>
+<action>
+click('62')
+</action>
+
+<think>
+To post the question "what is the recommended console to buy these days" in a subreddit where the user is likely to get an answer, I need to select an appropriate forum. A good choice would be a forum related to gaming or technology. I will start by selecting the forum dropdown to see the available options.
+</think>
+<action>
+click('379')
+</action>
+
+<think>
+To post the question "what is the recommended console to buy these days" in a subreddit where the user is likely to get an answer, I should select a relevant subreddit. The "consoles" subreddit seems appropriate for this question. I will select the "consoles" subreddit, fill in the title and body of the post, and then submit it.
+</think>
+<action>
+select_option('379', 'consoles')
+fill('137', 'What is the recommended console to buy these days?')
+fill('142', 'I am looking to buy a new gaming console and would like to know which one is recommended these days. Any suggestions?')
+click('396')
+</action>
+
+<think>
+I need to select the appropriate subreddit for posting the question. The "consoles" subreddit seems relevant for this question. I will select the "consoles" option from the dropdown menu, fill in the title and body of the post, and then submit the form.
+</think>
+<action>
+click('485')
+fill('137', 'What is the recommended console to buy these days?')
+fill('142', 'I am looking to buy a new gaming console and would like to know which one is recommended these days. Any suggestions?')
+click('396')
+</action>
+
+
+Query: Among the top 10 post in "books" forum, is there any post talks about supporting local book stores? If so, tell me the organizations involved
+<think>
+To find out if any of the top 10 posts in the "books" forum talk about supporting local bookstores, I need to navigate to the "books" forum. I will start by clicking on the "Forums" link.
+</think>
+<action>
+click('42')
+</action>
+
+<think>
+To find out if any of the top 10 posts in the "books" forum talk about supporting local bookstores, I need to navigate to the "books" forum. I will start by clicking on the "books" link.
+</think>
+<action>
+click('544')
+</action>
+
+<think>
+I need to identify if any of the top 10 posts in the "books" forum talk about supporting local bookstores. From the current view, I can see the titles of the posts. I will look for titles that suggest support for local bookstores and examine their content for any mention of organizations involved.
+</think>
+<action>
+scroll(0, 500)
+</action>
+
+<think>
+I need to identify if any of the top 10 posts in the "books" forum talk about supporting local bookstores. From the current view, I can see the titles and some content of the posts. I will look for any post that mentions supporting local bookstores and identify the organizations involved.
+</think>
+<action>
+scroll(0, 500)
+</action>
+
+<think>
+I have identified a post titled "Friendly reminder bookshop.org exists." This post likely discusses supporting local bookstores. I will click on this post to gather more details about the organizations involved.
+</think>
+<action>
+click('269')
+</action>
+
+<think>
+I have identified a post among the top 10 in the "books" forum that discusses supporting local bookstores. The post mentions Bookshop.org as an organization involved in supporting local bookstores. Additionally, the comments mention other organizations such as Libro.fm and local indie bookstores. I will now provide this information to the user.
+</think>
+<action>
+send_msg_to_user("Yes, there is a post among the top 10 in the 'books' forum that talks about supporting local bookstores. The organizations involved are:\n\n1. Bookshop.org\n2. Libro.fm\n3. Local indie bookstores")
+</action>
+
+
+Query: Among the top 10 post in "books" forum, show me the post URLs that recommand a single book
+<think>
+To find the top 10 posts in the "books" forum, I need to navigate to the "Forums" section. I will start by clicking on the "Forums" link.
+</think>
+<action>
+click('42')
+</action>
+
+<think>
+To find the top 10 posts in the "books" forum, I need to navigate to the "books" forum first. I can see the link to the "books" forum on the current page. I will click on the "books" link to proceed.
+</think>
+<action>
+click('544')
+</action>
+
+<think>
+I need to identify the posts among the top 10 that recommend a single book. I will start by examining the titles and content of each post to determine if they recommend a single book.
+</think>
+<action>
+scroll(0, 500)
+</action>
+
+<think>
+I need to identify the posts that recommend a single book among the top 10 posts in the "books" forum. From the current view, I can see the titles of the posts. I will look for titles that suggest a single book recommendation and note their URLs.
+</think>
+<action>
+send_msg_to_user("Here are the URLs of the posts that recommend a single book among the top 10 posts:\n\n1. 'I just finished reading The Hobbit to my 6 year old daughter, and she loved it!': [URL]\n2. 'Just finished Things Fall Apart (Chinua Achebe) and I LOVED it': [URL]\n3. 'The haunting of hill house was so good': [URL]")
+</action>
+
+
+Query: Create a new forum named sci_fi, with a description of A wild place for sci-fi enthusiasts, and include ['New', 'Classic', 'Movies', 'Post my novel', 'Random'] in the sidebar?
+<think>
+To create a new forum named "sci_fi" with the specified description and sidebar items, I need to navigate to the forum creation section. Currently, I am on the "Create submission" page. I will start by clicking on the "Forums" link to navigate to the forums section.
+</think>
+<action>
+click('42')
+</action>
+
+<think>
+To create a new forum, I need to click on the "Create forum" button. This should take me to a form where I can enter the details for the new forum.
+</think>
+<action>
+click('139')
+</action>
+
+<think>
+To create a new forum named "sci_fi" with the specified description and sidebar, I need to fill in the "Name," "Title," "Description," and "Sidebar" fields. After that, I will click the "Create forum" button to complete the process.
+</think>
+<action>
+fill('116', 'sci_fi')
+fill('121', 'sci_fi')
+fill('126', 'A wild place for sci-fi enthusiasts')
+fill('134', '["New", "Classic", "Movies", "Post my novel", "Random"]')
+click('274')
+</action>
+
+
+Query: Ask for advice about deal with long-distance relationships in a subreddit for relations
+<think>
+To ask for advice about dealing with long-distance relationships in a subreddit for relationships, I need to navigate to the "Submit" section. I will start by clicking on the "Submit" link.
+</think>
+<action>
+click('62')
+</action>
+
+<think>
+To ask for advice about dealing with long-distance relationships in a subreddit for relationships, I need to fill in the title and body of the post and select an appropriate subreddit. I will start by filling in the title and body fields.
+</think>
+<action>
+fill('137', 'Advice on dealing with long-distance relationships')
+fill('142', 'Hi everyone, I am looking for advice on how to manage and maintain a long-distance relationship. Any tips or personal experiences would be greatly appreciated!')
+click('379')
+</action>
+
+<think>
+I need to select the appropriate subreddit for posting the question about dealing with long-distance relationships. The "relationship_advice" subreddit seems relevant for this question. I will select the "relationship_advice" option from the dropdown menu and then submit the form.
+</think>
+<action>
+click('712')
+click('396')
+</action>

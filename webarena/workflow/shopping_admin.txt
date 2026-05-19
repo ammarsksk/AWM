@@ -1,0 +1,259 @@
+## Concrete Examples
+
+Query: Today is 3/15/2023, generate a sales order report for last month
+<think>
+To generate a sales order report for last month, I need to navigate to the "REPORTS" section where sales reports are typically managed. From the current page, I can see the "REPORTS" link in the left sidebar. I will click on the "REPORTS" link to proceed.
+</think>
+<action>
+click('347')
+</action>
+
+<think>
+To generate a sales order report for last month, I need to navigate to the "Orders" section under the "Sales" menu in the "Reports" section. From there, I can set the date range to last month and generate the report.
+</think>
+<action>
+click('391')
+</action>
+
+<think>
+To generate a sales order report for last month (February 2023), I need to set the "From" and "To" dates in the filter section. I will set the "From" date to 02/01/2023 and the "To" date to 02/28/2023. Then, I will click the "Show Report" button to generate the report.
+</think>
+<action>
+fill('765', '02/01/2023')
+fill('772', '02/28/2023')
+click('722')
+</action>
+
+
+Query: Make all Taurus Elements Shell as out of stock
+<think>
+To mark all Taurus Elements Shell products as out of stock, I need to navigate to the "Catalog" section where products are listed. From there, I can search for the Taurus Elements Shell products and update their stock status. I will start by clicking on the "CATALOG" link in the left sidebar.
+</think>
+<action>
+click('197')
+</action>
+
+<think>
+To mark all Taurus Elements Shell products as out of stock, I need to navigate to the "Products" section under the "Catalog" menu. From there, I can search for the Taurus Elements Shell products and update their stock status.
+</think>
+<action>
+click('209')
+</action>
+
+<think>
+To make all Taurus Elements Shell products out of stock, I need to filter the product list to show only Taurus Elements Shell products. Then, I will edit each product to set its quantity to 0. I will start by clearing the current filter and applying a new filter for Taurus Elements Shell.
+</think>
+<action>
+click('922')
+fill('1425', 'Taurus Elements Shell')
+click('1426')
+</action>
+
+<think>
+To make all Taurus Elements Shell products as out of stock, I need to edit each product and set its quantity to 0. I will start by clicking the "Edit" link for the first product in the list.
+</think>
+<action>
+click('1875')
+</action>
+
+<think>
+To mark the Taurus Elements Shell as out of stock, I need to change the "Stock Status" from "In Stock" to "Out of Stock". After making this change, I will save the changes.
+</think>
+<action>
+click('1044')
+select_option('1044', 'Out of Stock')
+click('901')
+</action>
+
+
+Query: Approve the positive reviews to display in our store.
+<think>
+To approve the positive reviews to display in the store, I need to navigate to the "MARKETING" section where reviews are typically managed. From the current page, I can see the "MARKETING" link in the left sidebar. I will click on the "MARKETING" link to proceed.
+</think>
+<action>
+click('234')
+</action>
+
+<think>
+To approve the positive reviews to display in the store, I need to navigate to the "Pending Reviews" section under "User Content" in the "Marketing" menu. From there, I can approve the positive reviews. I will start by clicking on the "Pending Reviews" link.
+</think>
+<action>
+click('298')
+</action>
+
+<think>
+To approve the positive reviews, I need to select the reviews and update their status. First, I will select the reviews by checking the checkboxes next to them. Then, I will choose the "Update Status" action from the "Actions" dropdown and set the status to "Approved".
+</think>
+<action>
+click('838')
+click('857')
+select_option('712', 'Update Status')
+click('715')
+select_option('818', 'Approved')
+click('901')
+</action>
+
+<think>
+I need to approve the selected positive reviews. The reviews are already selected, and the "Update Status" action is chosen. I need to set the status to "Approved" and then submit the changes.
+</think>
+<action>
+select_option('728', 'Approved')
+click('718')
+</action>
+
+
+Query: Get the total payment amount of the last 2 completed orders
+<think>
+To get the total payment amount of the last 2 completed orders, I need to navigate to the "Sales" section where orders are listed. From the current page, I can see the "SALES" link in the left sidebar. I will click on the "SALES" link to proceed.
+</think>
+<action>
+click('164')
+</action>
+
+<think>
+To find the total payment amount of the last 2 completed orders, I need to navigate to the "Orders" section under the "Sales" menu. From there, I can check the details of the last 2 completed orders.
+</think>
+<action>
+click('176')
+</action>
+
+<think>
+To get the total payment amount of the last 2 completed orders, I need to identify the orders with the "Completed" status and then sum their "Grand Total (Purchased)" values. I will start by filtering the orders to show only those with the "Completed" status.
+</think>
+<action>
+click('845')
+</action>
+
+<think>
+To find the total payment amount of the last 2 completed orders, I need to filter the orders by their status to show only completed orders. Then, I will sort the orders by the purchase date in descending order to get the most recent ones. Finally, I will sum the grand total of the last two completed orders.
+</think>
+<action>
+click('967')
+select_option('967', 'Complete')
+click('1060')
+</action>
+
+<think>
+To get the total payment amount of the last 2 completed orders, I need to look at the "Grand Total (Purchased)" column for the last two rows in the table. The last two completed orders are: 1. Order ID 000000009 with a total of $159.40. 2. Order ID 000000004 with a total of $106.00. I will sum these amounts to get the total payment amount.
+</think>
+<action>
+send_msg_to_user('The total payment amount of the last 2 completed orders is $159.40 + $106.00 = $265.40.')
+</action>
+
+
+Query: Delete all reviews from the scammer Arden
+<think>
+To delete all reviews from the user Arden, I need to navigate to the "MARKETING" section where reviews are typically managed. From the current page, I can see the "MARKETING" link in the left sidebar. I will click on the "MARKETING" link to proceed.
+</think>
+<action>
+click('234')
+</action>
+
+<think>
+To delete all reviews from the user named Arden, I need to navigate to the "All Reviews" section under "User Content" in the "Marketing" menu. From there, I can search for reviews by Arden and delete them. I will start by clicking on the "All Reviews" link.
+</think>
+<action>
+click('295')
+</action>
+
+<think>
+To delete all reviews from the user "Arden," I need to filter the reviews by the nickname "Arden" and then select and delete them. I will start by entering "Arden" in the "Nickname" filter field and clicking the "Search" button.
+</think>
+<action>
+fill('835', 'Arden')
+click('712')
+</action>
+
+<think>
+To delete all reviews from the user "Arden," I need to select the review(s) and then choose the "Delete" action from the "Actions" dropdown. I will start by selecting the checkbox next to the review.
+</think>
+<action>
+click('858')
+select_option('724', 'Delete')
+click('730')
+</action>
+
+<think>
+The confirmation dialog for deleting the review is displayed. To proceed with deleting the review from Arden, I need to confirm the action by clicking the "OK" button.
+</think>
+<action>
+click('1227')
+</action>
+
+
+Query: Cancel order 302
+
+<think>
+To cancel order 302, I need to navigate to the "Sales" section where orders are managed. From there, I can search for order 302 and cancel it. I will start by clicking on the "SALES" link in the left sidebar.
+</think>
+<action>
+click('156')
+</action>
+
+<think>
+To cancel order 302, I need to navigate to the "Orders" section under the "Sales" menu. From there, I can search for order 302 and proceed with the cancellation process.
+</think>
+<action>
+click('168')
+</action>
+
+<think>
+To cancel order 302, I need to locate the order in the list and click on the "View" link to access the order details. From there, I can proceed with the cancellation process. I will start by clicking the "View" link for order ID 000000302.
+</think>
+<action>
+click('2275')
+</action>
+
+<think>
+To cancel order 302, I need to click the "Cancel" button on the order details page. This will initiate the cancellation process for the order.
+</think>
+<action>
+click('736')
+</action>
+
+<think>
+The confirmation dialog for canceling the order is displayed. To proceed with canceling order 302, I need to confirm the action by clicking the "OK" button.
+</think>
+<action>
+click('2838')
+</action>
+
+
+Query: Change the page title of "Enable Cookies" page on my site to "Cookie monster coming to your place".
+
+<think>
+To change the page title of the "Enable Cookies" page, I need to navigate to the "CONTENT" section where pages are typically managed. From the current page, I can see the "CONTENT" link in the left sidebar. I will click on the "CONTENT" link to proceed.
+</think>
+<action>
+click('293')
+</action>
+
+<think>
+To change the page title of the "Enable Cookies" page, I need to navigate to the "Pages" section under the "Content" menu. From there, I can search for the "Enable Cookies" page and edit its title. I will start by clicking on the "Pages" link.
+</think>
+<action>
+click('305')
+</action>
+
+<think>
+To change the page title of the "Enable Cookies" page, I need to edit the page details. I have already selected the "Enable Cookies" page. Now, I need to click on the "Edit" button to modify the page details.
+</think>
+<action>
+click('1540')
+</action>
+
+<think>
+To change the page title of the "Enable Cookies" page, I need to click on the "Edit" link for that page. This will allow me to modify the page details, including the title.
+</think>
+<action>
+click('1543')
+</action>
+
+<think>
+To change the page title of the "Enable Cookies" page to "Cookie monster coming to your place", I need to update the text in the "Page Title" textbox and then save the changes. I will start by clearing the current text in the "Page Title" textbox and then entering the new title.
+</think>
+<action>
+clear('861')
+fill('861', 'Cookie monster coming to your place')
+click('816')
+</action>

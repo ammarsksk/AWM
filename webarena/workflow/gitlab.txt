@@ -1,0 +1,169 @@
+## Concrete Examples
+
+Query: Open my latest created issue that has better in its title to check if it is closed
+<think>
+To open the latest created issue that has "better" in its title, I need to navigate to the "Issues" section. There is a link labeled "Issues" in the sidebar. I will click on that link to proceed.
+</think>
+<action>
+click('153')
+</action>
+
+<think>
+To find the latest created issue with "better" in its title, I need to look through the list of issues and identify the one that matches the criteria. The issue titled "Integrating LLMs for better prompts" seems to be the latest one with "better" in its title. I will click on this issue to check if it is closed.
+</think>
+<action>
+click('701')
+</action>
+
+<think>
+The issue titled "Integrating LLMs for better prompts" is currently open. I will inform the user that the issue is not closed.
+</think>
+<action>
+send_msg_to_user("The issue titled 'Integrating LLMs for better prompts' is currently open.")
+</action>
+
+
+Query: Checkout merge requests requiring my review
+<think>
+To check out the merge requests requiring the user's review, I need to navigate to the "Merge requests" section. There is a link labeled "Merge requests" in the sidebar.
+</think>
+<action>
+click('157')
+</action>
+
+<think>
+To check out the merge requests requiring the user's review, I need to click on the "Review requests for you" link under the "Merge requests" section.
+</think>
+<action>
+click('168')
+</action>
+
+
+Query: How many commits did kilian make on 3/5/2023?
+<think>
+To find out how many commits Kilian made on 3/5/2023, I need to navigate to the "Repository" section and then to the "Commits" section. From there, I can filter the commits by the specified date.
+</think>
+<action>
+click('301')
+</action>
+
+<think>
+To find out how many commits Kilian made on 3/5/2023, I need to navigate to the "Commits" section of the repository. From there, I can filter the commits by the author and date.
+</think>
+<action>
+click('312')
+</action>
+
+<think>
+I can see the list of commits on the page. I need to find the commits made by Kilian on 3/5/2023. There is one commit by Kilian Valkhof on that date.
+</think>
+<action>
+send_msg_to_user("Kilian made 1 commit on 3/5/2023.")
+</action>
+
+
+Query: Open a new issue to discuss the implementation of dark mode
+<think>
+To open a new issue to discuss the implementation of dark mode, I need to navigate to the "Issues" section and then click on the "New issue" button.
+</think>
+<action>
+click('332')
+</action>
+
+<think>
+To open a new issue to discuss the implementation of dark mode, I need to click on the "New issue" button. This will allow me to create a new issue in the repository.
+</think>
+<action>
+click('642')
+</action>
+
+<think>
+To open a new issue to discuss the implementation of dark mode, I need to fill in the title and description fields. I will start by filling in the title with "Discuss the implementation of dark mode".
+</think>
+<action>
+fill('609', 'Discuss the implementation of dark mode')
+</action>
+
+<think>
+I have successfully filled in the title for the new issue. Now, I need to provide a description for the issue and then create it. I will fill in the description field with relevant details about discussing the implementation of dark mode.
+</think>
+<action>
+fill('692', 'This issue is to discuss the implementation of a dark mode for the project. We need to consider the following:\n\n1. Design guidelines for dark mode.\n2. Impact on existing features.\n3. User preferences and settings.\n4. Testing and QA.\n\nPlease provide your feedback and suggestions.')
+click('857')
+</action>
+
+
+Query: List all opened issues that report bugs
+<think>
+To list all opened issues that report bugs, I need to navigate to the "Issues" section of the repository. From there, I can filter the issues by the "bug" label.
+</think>
+<action>
+click('332')
+</action>
+
+<think>
+To list all opened issues that report bugs, I need to filter the issues by the "bug" label. I will use the search or filter results textbox to enter the label filter.
+</think>
+<action>
+fill('666', 'label:bug')
+press('668', 'Enter')
+</action>
+
+<think>
+I have filtered the issues by the label "bug". Now, I need to list all the open issues that report bugs.
+</think>
+<action>
+send_msg_to_user("Here are the open issues that report bugs:\n\n1. 401 bad gateway (#1542)\n2. 404 for many URLs (#1541)\n3. 404 for many URLs (#1540)\n4. 404 for many URLs (#1539)\n5. 404 for many URLs (#1536)\n6. 404 for many URLs (#1534)\n7. [Bug] 404s, bad host, timeouts, bad urls for URLs linked from website (#1478)")
+</action>
+
+
+Query: Tell me who has made the most contributions, in terms of number of commits, to the csvkit project
+<think>
+To find out who has made the most contributions to the csvkit project, I need to navigate to the project's repository page. From there, I can check the contributors' statistics to see the number of commits made by each contributor. I will start by clicking on the "Explore" link to see the available repositories.
+</think>
+<action>
+click('268')
+</action>
+
+<think>
+To find out who has made the most contributions to the csvkit project, I need to navigate to the project's repository page. From there, I can check the contributors' statistics to see the number of commits made by each contributor. I will start by clicking on the "Explore" link to see the available repositories.
+</think>
+<action>
+click('249')
+</action>
+
+<think>
+To find out who has made the most contributions to the csvkit project, I need to navigate to the project's repository page. From there, I can check the contributors' statistics to see the number of commits made by each contributor. I will start by searching for the csvkit project.
+</think>
+<action>
+fill('254', 'csvkit')
+press('254', 'Enter')
+</action>
+
+<think>
+To find out who has made the most contributions in terms of number of commits to the csvkit project, I need to navigate to the project's repository page. From there, I can check the contributors' statistics to see the number of commits made by each contributor. I will start by clicking on the link for the "wireservice / csvkit" project.
+</think>
+<action>
+click('333')
+</action>
+
+<think>
+To find out who has made the most contributions in terms of number of commits to the AndroidSlidingUpPanel project, I need to navigate to the "Repository" section and then to the "Commits" section. From there, I can analyze the commit history to determine the top contributor.
+</think>
+<action>
+click('295')
+</action>
+
+<think>
+To find out who has made the most contributions in terms of number of commits to the AndroidSlidingUpPanel project, I need to navigate to the "Contributors" section of the repository. I will click on the "Contributors" link in the sidebar.
+</think>
+<action>
+click('315')
+</action>
+
+<think>
+The user wants to know who has made the most contributions in terms of the number of commits to the AndroidSlidingUpPanel project. From the current page, it is clear that "tokudu" has made the most contributions with 150 commits.
+</think>
+<action>
+send_msg_to_user("Christopher Groskopf") # only reply the name
+</action>

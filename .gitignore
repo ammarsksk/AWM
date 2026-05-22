@@ -6,45 +6,112 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/
 
 # Local secrets and environment files
 .env
 .env.*
 !.env.example
 !.env.local.example
+*.pem
+*.key
+*.crt
+*_credentials.json
+*credentials*.json
+*service-account*.json
 
-# Local auth/session/config state
-*.log
-*.sqlite
-*.db
-*.pid
-webarena/.auth/
-webarena/autoeval/log
-webarena/config_files/__pycache__/
-
-# Generated benchmark/evaluation outputs
-**/results/
-mind2web/real_data_output/
-mind2web/real_data_full_output/
-mind2web/step_eval_*/
-webarena/local_demo_output*/
-
-# Keep the two important Vertex evaluation runs, including traces/workflows.
-!mind2web/step_eval_vertex_full/
-!mind2web/step_eval_vertex_full/**
-!mind2web/step_eval_vertex_500/
-!mind2web/step_eval_vertex_500/**
-
-# Keep source dataset and hand-written workflows.
-!mind2web/data/
-!mind2web/data/**
-!mind2web/workflow/
-!mind2web/workflow/**
-!webarena/workflow/
-!webarena/workflow/**
-
-# OS/editor files
+# Local editor/tool state
 .DS_Store
 **/.DS_Store
 .vscode/
 .idea/
+.agents/
+.codex/
+
+# Logs, local databases, and process state
+*.log
+*.pid
+*.sqlite
+*.sqlite3
+*.db
+*.duckdb
+
+# Downloaded/raw datasets and benchmark data
+mind2web/data/
+webarena/data/
+data/
+datasets/
+downloads/
+
+# Generated Mind2Web/WebArena runs, traces, workflows, and reports
+mind2web/real_data_output*/
+mind2web/real_data_full_output*/
+mind2web/step_eval_*/
+mind2web/embedding_trace_demo_output*/
+mind2web/memory_backend_benchmark_*/
+webarena/local_demo_output*/
+webarena/results/
+**/results/
+
+# Generated vector indexes, workflow stores, and retrieval artifacts
+**/workflow_embeddings.json
+**/structured_workflows.json
+**/raw_structured_workflows.json
+**/workflow_memory.txt
+**/prediction_trace.json
+**/retrieval_trace.json
+**/embedding_retrieval_trace.json
+**/llm_trace.json
+**/paper_metrics.json
+**/paper_metrics.md
+**/paper_comparison.md
+**/benchmark_summary.json
+**/comparison.json
+**/comparison.md
+**/events.json
+**/manifest.json
+**/metadata.jsonl
+**/*.index
+**/*.idx
+**/*.lance/
+**/*.memmap
+**/workflow_json/
+**/embedding_text/
+**/compressed_faiss/
+**/lancedb/
+**/memmap/
+
+# Local auth/session/config state
+webarena/.auth/
+webarena/autoeval/log
+webarena/config_files/*.json
+!webarena/config_files/generate_test_data.py
+
+# Large binary/generated artifacts
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.parquet
+*.arrow
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.bin
+*.pdf
+
+# Keep source files and lightweight project assets trackable.
+!README.md
+!assets/
+!assets/**
+!mind2web/
+!mind2web/**/*.py
+!mind2web/**/*.txt
+!mind2web/**/README.md
+!mind2web/requirements.txt
+!webarena/
+!webarena/**/*.py
+!webarena/**/*.txt
+!webarena/**/README.md

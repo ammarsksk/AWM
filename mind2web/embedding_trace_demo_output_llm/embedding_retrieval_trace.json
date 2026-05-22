@@ -1,0 +1,1520 @@
+[
+  {
+    "task_index": 1,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest\nObservation: <html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.047006625682115555,
+          -0.028971942141652107,
+          0.02987353689968586,
+          0.044177524745464325,
+          0.003945113159716129,
+          -0.0019797952845692635,
+          -0.028131071478128433,
+          -0.1267404407262802,
+          0.036989737302064896,
+          -0.07116927951574326,
+          0.011148029938340187,
+          0.003076699795201421,
+          -0.11387912929058075,
+          0.028271595016121864,
+          -0.02415534108877182,
+          -0.029384076595306396
+        ],
+        "candidate_elements": [
+          {
+            "id": "136",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location"
+          },
+          {
+            "id": "753",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html"
+          },
+          {
+            "id": "755",
+            "tag": "button",
+            "role_hint": "button select location",
+            "label": "button select location",
+            "nearby_text": "ivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html"
+          }
+        ],
+        "retrieval_candidates": [],
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "SELECT [136] [Pickup]",
+        "predicted_action": "SELECT [136] [pickup]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"SELECT [136] [pickup]\",\n  \"reason\": \"The user wants to find a pickup restaurant, so I need to select 'Pickup' from the dropdown menu.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "SELECT [136] [pickup]",
+          "reason": "The user wants to find a pickup restaurant, so I need to select 'Pickup' from the dropdown menu."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest\nObservation: <html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>",
+        "query_embedding_preview": [
+          0.030528178438544273,
+          -0.04886456951498985,
+          0.03330645337700844,
+          0.028015777468681335,
+          -0.012414722703397274,
+          -0.031027210876345634,
+          -0.054883893579244614,
+          -0.12096059322357178,
+          0.02662784792482853,
+          -0.06616193801164627,
+          0.005312884692102671,
+          0.002251920523121953,
+          -0.0960475504398346,
+          0.018641339614987373,
+          -0.010108848102390766,
+          -0.024275358766317368
+        ],
+        "candidate_elements": [
+          {
+            "id": "3721",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "html div input text location columbus, oh button button select location svg button div html"
+          },
+          {
+            "id": "3723",
+            "tag": "button",
+            "role_hint": "button select location",
+            "label": "button select location",
+            "nearby_text": "html div input text location columbus, oh button button select location svg button div html"
+          },
+          {
+            "id": "3113",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div input text location columbus, oh button button select location svg button div html"
+          }
+        ],
+        "retrieval_candidates": [],
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [3113]",
+        "predicted_action": "TYPE [3721] [Boston, NY]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [3721] [Boston, NY]\",\n  \"reason\": \"The user wants to find a restaurant in Boston, NY, so I need to update the location from the default 'columbus, oh' to 'Boston, NY'.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [3721] [Boston, NY]",
+          "reason": "The user wants to find a restaurant in Boston, NY, so I need to update the location from the default 'columbus, oh' to 'Boston, NY'."
+        }
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 1",
+    "workflow_embedding_preview": [
+      0.0066890898160636425,
+      -0.016826679930090904,
+      0.020506983622908592,
+      0.011795134283602238,
+      -0.0033922672737389803,
+      -0.004364548716694117,
+      0.041669514030218124,
+      -0.1565699726343155,
+      0.04066275432705879,
+      -0.062304042279720306,
+      0.028927823528647423,
+      -0.034028586000204086,
+      -0.08144132047891617,
+      -0.05304771289229393,
+      0.03697063401341438,
+      0.035794299095869064
+    ]
+  },
+  {
+    "task_index": 2,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.\nObservation: <html> <div> <select id=708 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=726 text location columbus, oh /> <button button select location> <svg id=110 /> </button> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.06789156794548035,
+          0.019314151257276535,
+          -0.008357299491763115,
+          0.057082127779722214,
+          -0.03008483164012432,
+          0.00828761886805296,
+          -0.02703104540705681,
+          -0.1188698336482048,
+          0.016971513628959656,
+          -0.08798452466726303,
+          0.02303973026573658,
+          -0.006638592574745417,
+          -0.07340696454048157,
+          0.04682758450508118,
+          0.011311210691928864,
+          -0.009125716984272003
+        ],
+        "candidate_elements": [
+          {
+            "id": "708",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg id"
+          },
+          {
+            "id": "726",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html"
+          },
+          {
+            "id": "110",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.5238,
+            "semantic_score": 0.6547,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "gold_action_for_trace_only": "CLICK [110]",
+        "predicted_action": "SELECT [708] [Wineries]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"SELECT [708] [Wineries]\",\n  \"reason\": \"The user wants to book a winery tour, so I need to select 'Wineries' from the dropdown menu to filter the search results. This aligns with the first step of the provided workflow, which also involves selecting the type of experience.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "SELECT [708] [Wineries]",
+          "reason": "The user wants to book a winery tour, so I need to select 'Wineries' from the dropdown menu to filter the search results. This aligns with the first step of the provided workflow, which also involves selecting the type of experience."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.\nObservation: <html> <body> <div> <select id=3825 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <select id=3869 time> <option 11:00 true> Now </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> <option 12:30> 12:30 PM </option> <option 13:00> 1:00 PM </option> <option 13:30> 1:30 PM </option> <option 14:00> 2:00 PM </option> <option 14:30> 2:30 PM </option> <option 15:00> 3:00 PM </option> <option 15:30> 3:30 PM </option> <option 16:00> 4:00 PM </option> <option 16:30> 4:30 PM </option> <option 17:00> 5:00 PM </option> <option 17:30> 5:30 PM </option> <option 18:00> 6:00 PM </option> <option 18:30> 6:30 PM </option> <option 19:00> 7:00 PM </option> <option 19:30> 7:30 PM </option> <option 20:00> 8:00 PM </option> <option 20:30> 8:30 PM </option> <option 21:00> 9:00 PM </option> <option 21:30> 9:30 PM </option> <option 22:00> 10:00 PM </option> <option 22:30> 10:30 PM </option> <option 23:00> 11:00 PM </option> </select> </div> <div dialog> <button clear search> <svg id=3210 /> </button> </div> </body> </html>",
+        "query_embedding_preview": [
+          0.05856893211603165,
+          -0.00760195916518569,
+          0.014458703808486462,
+          0.027562707662582397,
+          -0.04874826595187187,
+          -0.005150105804204941,
+          -0.027015935629606247,
+          -0.12402606755495071,
+          0.03947414085268974,
+          -0.06998822838068008,
+          0.0021485518664121628,
+          0.0014342899667099118,
+          -0.09797612577676773,
+          0.036718882620334625,
+          0.030147610232234,
+          -0.025662263855338097
+        ],
+        "candidate_elements": [
+          {
+            "id": "3825",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html body div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select select time option 11:00 true Now option option 11:30 11:30 AM option"
+          },
+          {
+            "id": "3869",
+            "tag": "select",
+            "role_hint": "time",
+            "label": "time",
+            "nearby_text": "ion pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select select time option 11:00 true Now option option 11:30 11:30 AM option option 12:00 12:00 PM option option 12:30 12:30 PM option option 13:00 1:00 P"
+          },
+          {
+            "id": "3210",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "21:30 9:30 PM option option 22:00 10:00 PM option option 22:30 10:30 PM option option 23:00 11:00 PM option select div div dialog button clear search svg button div body html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.5642,
+            "semantic_score": 0.7053,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "gold_action_for_trace_only": "CLICK [3210]",
+        "predicted_action": "CLICK [3210]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [3210]\",\n  \"reason\": \"The next logical step is to input the location 'Napa Valley'. Following the accepted workflow, clicking the SVG element is likely to reveal the location search bar.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [3210]",
+          "reason": "The next logical step is to input the location 'Napa Valley'. Following the accepted workflow, clicking the SVG element is likely to reveal the location search bar."
+        }
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 2",
+    "workflow_embedding_preview": [
+      0.051320891827344894,
+      -0.01814853772521019,
+      0.023500269278883934,
+      0.027221746742725372,
+      -0.033752452582120895,
+      -0.002466790145263076,
+      0.04753507301211357,
+      -0.14508123695850372,
+      0.03231917694211006,
+      -0.05583624541759491,
+      0.003866222221404314,
+      -0.0571347214281559,
+      -0.058110371232032776,
+      -0.04758987948298454,
+      0.051674652844667435,
+      0.07784922420978546
+    ]
+  },
+  {
+    "task_index": 3,
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001\nObservation: <html> <div> <div region> <div combobox> <input id=3714 search provide a location /> </div> </div> <div> <a id=116> Email Offers </a> <p> Don't miss an excuse to hit the road: our latest offers delivered to your inbox. </p> </div> </div> <a id=134 /> </html>",
+        "query_embedding_preview": [
+          0.015146248042583466,
+          0.050685517489910126,
+          0.04998866468667984,
+          0.009723607450723648,
+          0.02129853144288063,
+          -0.032818928360939026,
+          0.04647213965654373,
+          -0.03798339143395424,
+          0.02347729727625847,
+          -0.07205774635076523,
+          -0.04276120662689209,
+          0.03724536672234535,
+          0.02121848799288273,
+          0.026553092524409294,
+          -0.022844096645712852,
+          0.054140474647283554
+        ],
+        "candidate_elements": [
+          {
+            "id": "3714",
+            "tag": "input",
+            "role_hint": "search provide a location",
+            "label": "search provide a location",
+            "nearby_text": "html div div region div combobox input search provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html"
+          },
+          {
+            "id": "116",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div div region div combobox input search provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html"
+          },
+          {
+            "id": "134",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "arch provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.517,
+            "semantic_score": 0.3962,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3813,
+            "semantic_score": 0.4767,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [134]",
+        "predicted_action": "CLICK [116]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [116]\",\n  \"reason\": \"The user wants to sign up for email offers, and the element with id 116 is a link with the text 'Email Offers'. Clicking this link should take me to the email sign-up page.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [116]",
+          "reason": "The user wants to sign up for email offers, and the element with id 116 is a link with the text 'Email Offers'. Clicking this link should take me to the email sign-up page."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001\nObservation: <html> <form> <div> <input id=11031 text first-name /> <input id=14526 text last-name /> </div> <input id=14535 email /> </form> </html>",
+        "query_embedding_preview": [
+          0.002542457077652216,
+          0.03491075336933136,
+          0.04903996363282204,
+          0.011145215481519699,
+          -0.0026057278737425804,
+          -0.03088405355811119,
+          0.02939615584909916,
+          -0.0269628819078207,
+          0.004403660539537668,
+          -0.05427618697285652,
+          -0.03224973380565643,
+          -0.0007191863842308521,
+          0.020032960921525955,
+          0.032934509217739105,
+          -0.0070090508088469505,
+          0.05672992765903473
+        ],
+        "candidate_elements": [
+          {
+            "id": "11031",
+            "tag": "input",
+            "role_hint": "text first-name",
+            "label": "text first-name",
+            "nearby_text": "html form div input text first-name input text last-name div input email form html"
+          },
+          {
+            "id": "14526",
+            "tag": "input",
+            "role_hint": "text last-name",
+            "label": "text last-name",
+            "nearby_text": "html form div input text first-name input text last-name div input email form html"
+          },
+          {
+            "id": "14535",
+            "tag": "input",
+            "role_hint": "email",
+            "label": "email",
+            "nearby_text": "html form div input text first-name input text last-name div input email form html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4672,
+            "semantic_score": 0.334,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3326,
+            "semantic_score": 0.4158,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "TYPE [11031] [Allan]",
+        "predicted_action": "TYPE [11031] [Allan]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [11031] [Allan]\",\n  \"reason\": \"The first step is to enter the first name 'Allan' into the corresponding input field.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [11031] [Allan]",
+          "reason": "The first step is to enter the first name 'Allan' into the corresponding input field."
+        }
+      }
+    ],
+    "added_workflow": "enterprise / Car rental workflow 3",
+    "workflow_embedding_preview": [
+      0.0015068236971274018,
+      0.03439215198159218,
+      0.015521219000220299,
+      -0.05012543126940727,
+      0.00955661479383707,
+      -0.03406982868909836,
+      0.050290487706661224,
+      -0.0702720582485199,
+      0.02966342121362686,
+      -0.03814869746565819,
+      0.002302043605595827,
+      -0.0015342952683568,
+      0.003676187712699175,
+      0.02692812867462635,
+      0.05855780839920044,
+      0.09856835752725601
+    ]
+  },
+  {
+    "task_index": 4,
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.\nObservation: <html> <div> <nav main menu> <div id=2456 button> Vehicles </div> </nav> <div region> <div combobox> <input id=198 search provide a location /> </div> </div> <div region> <a id=5582> <span> Minivans & Vans </span> </a> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.07362254709005356,
+          0.08423810452222824,
+          0.06537318229675293,
+          -0.025806447491049767,
+          0.011465074494481087,
+          0.024311859160661697,
+          -0.04298574849963188,
+          -0.0017130739288404584,
+          -0.010967683047056198,
+          -0.03156934678554535,
+          -0.0036392398178577423,
+          0.05173001438379288,
+          0.033927448093891144,
+          0.06412003934383392,
+          -0.019905168563127518,
+          0.06973184645175934
+        ],
+        "candidate_elements": [
+          {
+            "id": "2456",
+            "tag": "div",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html"
+          },
+          {
+            "id": "198",
+            "tag": "input",
+            "role_hint": "search provide a location",
+            "label": "search provide a location",
+            "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html"
+          },
+          {
+            "id": "5582",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5636,
+            "semantic_score": 0.5885,
+            "bm25_score": 0.464,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.5303,
+            "semantic_score": 0.4128,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3939,
+            "semantic_score": 0.4923,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": "enterprise / Car rental workflow 3",
+        "gold_action_for_trace_only": "TYPE [198] [Brooklyn]",
+        "predicted_action": "TYPE [198] [Brooklyn City]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [198] [Brooklyn City]\",\n  \"reason\": \"The first step is to enter the pickup location, which is 'Brooklyn City', into the location search input field.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [198] [Brooklyn City]",
+          "reason": "The first step is to enter the pickup location, which is 'Brooklyn City', into the location search input field."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.\nObservation: <html> <div> <div region> <div combobox> <div listbox> <ul> <li id=13927 option> <span> <span> Brooklyn </span> , NY, US </span> <small> Select </small> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li id=17785 option> <span> <span> Brooklyn </span> , AU (New South Wales) </span> <small> Select </small> </li> <li option> </li> </ul> </div> </div> </div> <div region> <a id=19600> <span> Minivans & Vans </span> </a> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.07258512824773788,
+          0.06807315349578857,
+          0.05069386586546898,
+          0.005667783785611391,
+          0.0503854975104332,
+          0.024153579026460648,
+          -0.028548263013362885,
+          -0.059423718601465225,
+          -0.008128606714308262,
+          -0.030858313664793968,
+          0.0049710264429450035,
+          0.04867614060640335,
+          0.04270574823021889,
+          0.012053857557475567,
+          -0.022969108074903488,
+          0.0875725969672203
+        ],
+        "candidate_elements": [
+          {
+            "id": "13927",
+            "tag": "li",
+            "role_hint": "option",
+            "label": "option",
+            "nearby_text": "html div div region div combobox div listbox ul li option span span Brooklyn span , NY, US span small Select small li li option li li option li li option li li option li li option li li option li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li"
+          },
+          {
+            "id": "17785",
+            "tag": "li",
+            "role_hint": "option",
+            "label": "option",
+            "nearby_text": "span Brooklyn span , NY, US span small Select small li li option li li option li li option li li option li li option li li option li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li ul div div div div region a span Minivans & Vans span a div div html"
+          },
+          {
+            "id": "19600",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "n li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li ul div div div div region a span Minivans & Vans span a div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.6235,
+            "semantic_score": 0.5294,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5569,
+            "semantic_score": 0.5638,
+            "bm25_score": 0.5296,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4516,
+            "semantic_score": 0.5646,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [13927]",
+        "predicted_action": "CLICK [13927]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [13927]\",\n  \"reason\": \"I need to select the correct location, which is Brooklyn, NY, US, from the dropdown list that appeared after typing the location.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [13927]",
+          "reason": "I need to select the correct location, which is Brooklyn, NY, US, from the dropdown list that appeared after typing the location."
+        }
+      }
+    ],
+    "added_workflow": "enterprise / Car rental workflow 4",
+    "workflow_embedding_preview": [
+      0.05748049169778824,
+      0.07114338874816895,
+      0.027832960709929466,
+      -0.042458437383174896,
+      0.03588229417800903,
+      0.020957548171281815,
+      0.0031190377194434404,
+      -0.06089470908045769,
+      0.011287220753729343,
+      0.0032366812229156494,
+      0.047668445855379105,
+      -0.003744968445971608,
+      0.002171517116948962,
+      0.024204319342970848,
+      0.03324289247393608,
+      0.11032385379076004
+    ]
+  },
+  {
+    "task_index": 5,
+    "website": "kohls",
+    "domain": "Shopping",
+    "subdomain": "Department",
+    "goal": "Find the highest rated dog collar under 10 dollar.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: kohls\nDomain: Shopping\nSubdomain: Department\nTask: Find the highest rated dog collar under 10 dollar.\nObservation: <html> <article> <a id=1214> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=1457> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> <svg id=159 img /> </html>",
+        "query_embedding_preview": [
+          -0.011589073576033115,
+          0.06345365196466446,
+          -0.013632673770189285,
+          -0.01970362290740013,
+          0.020339064300060272,
+          -0.03344467282295227,
+          0.014412992633879185,
+          0.01371905580163002,
+          0.010421347804367542,
+          -0.01862449012696743,
+          0.04971005767583847,
+          0.0020189140923321247,
+          0.10499833524227142,
+          0.0699448436498642,
+          -0.03518778458237648,
+          0.005077790468931198
+        ],
+        "candidate_elements": [
+          {
+            "id": "1214",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html"
+          },
+          {
+            "id": "1457",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html"
+          },
+          {
+            "id": "159",
+            "tag": "svg",
+            "role_hint": "img",
+            "label": "img",
+            "nearby_text": "e a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.4862,
+            "semantic_score": 0.3597,
+            "bm25_score": 0.9922,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.4337,
+            "semantic_score": 0.2921,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2889,
+            "semantic_score": 0.3577,
+            "bm25_score": 0.0139,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.257,
+            "semantic_score": 0.3213,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [159]",
+        "predicted_action": "CLICK [1214]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [1214]\",\n  \"reason\": \"The user wants to find items under $10, and this link filters the results to show items that are '$10 & Under'.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [1214]",
+          "reason": "The user wants to find items under $10, and this link filters the results to show items that are '$10 & Under'."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: kohls\nDomain: Shopping\nSubdomain: Department\nTask: Find the highest rated dog collar under 10 dollar.\nObservation: <html> <div> <a id=7923> Pet </a> <article> <a id=18220> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=18463> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> </div> </html>",
+        "query_embedding_preview": [
+          -0.013368800282478333,
+          0.07473999261856079,
+          -0.006763778161257505,
+          -0.015488127246499062,
+          0.01632951758801937,
+          -0.03247781842947006,
+          0.016652343794703484,
+          -0.007298646494746208,
+          0.02259678579866886,
+          -0.03309345245361328,
+          0.029555916786193848,
+          0.010756950825452805,
+          0.09284473955631256,
+          0.05861002206802368,
+          -0.04139389470219612,
+          0.012988515198230743
+        ],
+        "candidate_elements": [
+          {
+            "id": "7923",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html"
+          },
+          {
+            "id": "18220",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html"
+          },
+          {
+            "id": "18463",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5107,
+            "semantic_score": 0.3903,
+            "bm25_score": 0.9922,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.4545,
+            "semantic_score": 0.3181,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3159,
+            "semantic_score": 0.3914,
+            "bm25_score": 0.0139,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2836,
+            "semantic_score": 0.3545,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [7923]",
+        "predicted_action": "CLICK [7923]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [7923]\",\n  \"reason\": \"The user wants to find a dog collar. Clicking on \\\"Pet\\\" will navigate to the pet products category, which is the first step towards finding dog collars.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [7923]",
+          "reason": "The user wants to find a dog collar. Clicking on \"Pet\" will navigate to the pet products category, which is the first step towards finding dog collars."
+        }
+      }
+    ],
+    "added_workflow": "kohls / Department workflow 5",
+    "workflow_embedding_preview": [
+      -0.026682808995246887,
+      0.02263077348470688,
+      -0.030056441202759743,
+      -0.0543309785425663,
+      0.01731380820274353,
+      -0.018205519765615463,
+      0.004363783169537783,
+      -0.058339640498161316,
+      0.01776721514761448,
+      -0.023182431235909462,
+      0.017438296228647232,
+      -0.04043497145175934,
+      0.014803235419094563,
+      0.021000204607844353,
+      0.015021227300167084,
+      0.038278862833976746
+    ]
+  },
+  {
+    "task_index": 6,
+    "website": "united",
+    "domain": "Travel",
+    "subdomain": "Airlines",
+    "goal": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: united\nDomain: Travel\nSubdomain: Airlines\nTask: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023\nObservation: <html> <div> <header banner> <nav navigation> <div tablist> <a id=912 tab> <span> BOOK </span> </a> <a tab> </a> <a id=918 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=127 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> </main> </div> </html>",
+        "query_embedding_preview": [
+          0.0987987071275711,
+          -0.007250106893479824,
+          0.042830176651477814,
+          0.012439343146979809,
+          -0.0044323294423520565,
+          0.015793025493621826,
+          -0.03966589644551277,
+          -0.0705765038728714,
+          -0.007970714010298252,
+          -0.043536387383937836,
+          -0.04098646715283394,
+          0.015924278646707535,
+          -0.010652890428900719,
+          0.012528574094176292,
+          -0.032333649694919586,
+          -0.019373852759599686
+        ],
+        "candidate_elements": [
+          {
+            "id": "912",
+            "tag": "a",
+            "role_hint": "tab",
+            "label": "tab",
+            "nearby_text": "html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section"
+          },
+          {
+            "id": "918",
+            "tag": "a",
+            "role_hint": "tab",
+            "label": "tab",
+            "nearby_text": "html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section main d"
+          },
+          {
+            "id": "127",
+            "tag": "input",
+            "role_hint": "combobox text columbus cmh",
+            "label": "combobox text columbus cmh from",
+            "nearby_text": "BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section main div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5887,
+            "semantic_score": 0.4859,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4895,
+            "semantic_score": 0.4763,
+            "bm25_score": 0.5424,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4506,
+            "semantic_score": 0.5633,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3308,
+            "semantic_score": 0.4074,
+            "bm25_score": 0.0241,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.2355,
+            "semantic_score": 0.2922,
+            "bm25_score": 0.0085,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7923] <action> CLICK [21141] <action> CLICK [47749] <action> CLICK [60708] <action> CLICK [85314] <action> CLICK [96208] <action> CLICK [111865] <action> CLICK [127548] <action> CLICK [150017]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "TYPE [127] [SPRINGFIELD]",
+        "predicted_action": "TYPE [127] [Springfield, IL]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [127] [Springfield, IL]\",\n  \"reason\": \"The user wants to book a flight from Springfield, IL, so I need to enter this as the departure location.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [127] [Springfield, IL]",
+          "reason": "The user wants to book a flight from Springfield, IL, so I need to enter this as the departure location."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: united\nDomain: Travel\nSubdomain: Airlines\nTask: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023\nObservation: <html> <main main> <section tabpanel> <div tabpanel> <div> <div tooltip> <div listbox> <ul listbox> <li option> <button id=3634 button> <span> <strong> Springfield </strong> , IL, US (SPI) </span> </button> </li> <li option> <button id=3635 button> <span> <strong> Springfield </strong> , MO, US (SGF) </span> </button> </li> </ul> </div> </div> <div> <input id=4592 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> </div> </section> </main> </html>",
+        "query_embedding_preview": [
+          0.07996062189340591,
+          -0.02730710059404373,
+          0.03848029300570488,
+          0.023333001881837845,
+          -0.0024451680947095156,
+          0.042374204844236374,
+          -0.006567330565303564,
+          -0.05056961625814438,
+          -0.07899767905473709,
+          -0.04783779755234718,
+          -0.02471582032740116,
+          0.01147651206701994,
+          0.011810453608632088,
+          -0.004851247649639845,
+          -0.011397391557693481,
+          -0.011752268299460411
+        ],
+        "candidate_elements": [
+          {
+            "id": "3634",
+            "tag": "button",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html main main section tabpanel div tabpanel div div tooltip div listbox ul listbox li option button button span strong Springfield strong , IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label e"
+          },
+          {
+            "id": "3635",
+            "tag": "button",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "bpanel div div tooltip div listbox ul listbox li option button button span strong Springfield strong , IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label enter your destination city, airport To"
+          },
+          {
+            "id": "4592",
+            "tag": "input",
+            "role_hint": "combobox text to",
+            "label": "combobox text to",
+            "nearby_text": ", IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label enter your destination city, airport To* label div div div section main html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5608,
+            "semantic_score": 0.451,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4349,
+            "semantic_score": 0.5436,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4017,
+            "semantic_score": 0.4579,
+            "bm25_score": 0.177,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3205,
+            "semantic_score": 0.3915,
+            "bm25_score": 0.0368,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.2511,
+            "semantic_score": 0.308,
+            "bm25_score": 0.0238,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7923] <action> CLICK [21141] <action> CLICK [47749] <action> CLICK [60708] <action> CLICK [85314] <action> CLICK [96208] <action> CLICK [111865] <action> CLICK [127548] <action> CLICK [150017]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [3634]",
+        "predicted_action": "CLICK [3634]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [3634]\",\n  \"reason\": \"I am selecting 'Springfield, IL, US (SPI)' as the departure location, which matches the user's request.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [3634]",
+          "reason": "I am selecting 'Springfield, IL, US (SPI)' as the departure location, which matches the user's request."
+        }
+      }
+    ],
+    "added_workflow": "united / Airlines workflow 6",
+    "workflow_embedding_preview": [
+      0.0439051128923893,
+      0.00853957049548626,
+      0.032131243497133255,
+      0.005985067691653967,
+      -0.029590481892228127,
+      0.012315325438976288,
+      -0.012682663276791573,
+      -0.12060007452964783,
+      -0.025608710944652557,
+      -0.031102782115340233,
+      -0.025465749204158783,
+      -0.023371638730168343,
+      -0.03585219010710716,
+      -0.013480506837368011,
+      0.005862069316208363,
+      -0.017751537263393402
+    ]
+  },
+  {
+    "task_index": 7,
+    "website": "budget",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: budget\nDomain: Travel\nSubdomain: Car rental\nTask: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.\nObservation: <html> <div> <ul> <a id=842 button> Reservations </a> <a id=133 button> Locations </a> </ul> <a id=3954> SUV Rental </a> </div> </html>",
+        "query_embedding_preview": [
+          0.047557421028614044,
+          0.012555032037198544,
+          0.003342068288475275,
+          0.04823274165391922,
+          -0.011548413895070553,
+          0.010209721513092518,
+          0.028861822560429573,
+          -0.014760109595954418,
+          0.03359275683760643,
+          0.04853701964020729,
+          0.015626143664121628,
+          0.023393895477056503,
+          0.043572332710027695,
+          0.06636226922273636,
+          0.019222695380449295,
+          -0.008347764611244202
+        ],
+        "candidate_elements": [
+          {
+            "id": "842",
+            "tag": "a",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html"
+          },
+          {
+            "id": "133",
+            "tag": "a",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html"
+          },
+          {
+            "id": "3954",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5548,
+            "semantic_score": 0.4435,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.4989,
+            "semantic_score": 0.46,
+            "bm25_score": 0.6544,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.3559,
+            "semantic_score": 0.4329,
+            "bm25_score": 0.0483,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 <action> TYPE [127] [SPRINGFIELD] <action> CLICK [3634] <action> TYPE [7125] [AUSTIN] <action> CLICK [10668] <action> CLICK [15069] <action> CLICK [18738] <action> CLICK [20010] <action> CLICK [23832] <action> CLICK [27986] <action> CLICK [32764] <action> CLICK [36839] <action> CLICK [47286]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3495,
+            "semantic_score": 0.2632,
+            "bm25_score": 0.6946,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.334,
+            "semantic_score": 0.3465,
+            "bm25_score": 0.2842,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [133]",
+        "predicted_action": "CLICK [842]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [842]\",\n  \"reason\": \"To start the car rental booking process, I need to click on the 'Reservations' button, which will likely take me to the booking form.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [842]",
+          "reason": "To start the car rental booking process, I need to click on the 'Reservations' button, which will likely take me to the booking form."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: budget\nDomain: Travel\nSubdomain: Car rental\nTask: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.\nObservation: <html> <div> <ul> <a id=10513 button> Reservations </a> <a id=9804> Find a Location </a> </ul> <a id=13625> SUV Rental </a> </div> </html>",
+        "query_embedding_preview": [
+          0.03810596466064453,
+          0.016109837219119072,
+          -4.2946787289110944e-05,
+          0.041078824549913406,
+          -0.005260763224214315,
+          0.010923557914793491,
+          0.031730491667985916,
+          -0.018875261768698692,
+          0.03705877810716629,
+          0.041856639087200165,
+          0.012683503329753876,
+          0.021364783868193626,
+          0.04181370884180069,
+          0.06658468395471573,
+          0.016149111092090607,
+          -0.011393298394978046
+        ],
+        "candidate_elements": [
+          {
+            "id": "10513",
+            "tag": "a",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html"
+          },
+          {
+            "id": "9804",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html"
+          },
+          {
+            "id": "13625",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5668,
+            "semantic_score": 0.4586,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5298,
+            "semantic_score": 0.4829,
+            "bm25_score": 0.7173,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3572,
+            "semantic_score": 0.2767,
+            "bm25_score": 0.6791,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.3546,
+            "semantic_score": 0.4433,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 <action> TYPE [127] [SPRINGFIELD] <action> CLICK [3634] <action> TYPE [7125] [AUSTIN] <action> CLICK [10668] <action> CLICK [15069] <action> CLICK [18738] <action> CLICK [20010] <action> CLICK [23832] <action> CLICK [27986] <action> CLICK [32764] <action> CLICK [36839] <action> CLICK [47286]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3421,
+            "semantic_score": 0.3656,
+            "bm25_score": 0.2478,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [9804]",
+        "predicted_action": "CLICK [10513]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [10513]\",\n  \"reason\": \"The user wants to make a car rental booking. Clicking on 'Reservations' is the most direct way to start this process.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [10513]",
+          "reason": "The user wants to make a car rental booking. Clicking on 'Reservations' is the most direct way to start this process."
+        }
+      }
+    ],
+    "added_workflow": "budget / Car rental workflow 7",
+    "workflow_embedding_preview": [
+      0.05012144148349762,
+      0.008466750383377075,
+      0.014425074681639671,
+      0.025109529495239258,
+      0.041225988417863846,
+      0.005468972958624363,
+      0.07097867131233215,
+      -0.07084034383296967,
+      0.04701274260878563,
+      0.00467189634218812,
+      -0.0006897643906995654,
+      0.0024361836258322,
+      -0.011187233030796051,
+      0.024023212492465973,
+      0.009615945629775524,
+      0.036385469138622284
+    ]
+  },
+  {
+    "task_index": 8,
+    "website": "underarmour",
+    "domain": "Shopping",
+    "subdomain": "Fashion",
+    "goal": "Find a men's UA outlet T-shirt of XL size and add to cart.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: underarmour\nDomain: Shopping\nSubdomain: Fashion\nTask: Find a men's UA outlet T-shirt of XL size and add to cart.\nObservation: <html> <div> <ul menubar> <li> <a id=1625 menuitem> <span> Men </span> </a> <div men> </div> </li> <li> <a id=4946 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <a id=6156> Shop Men </a> <a> Shop Women </a> <a> Shop Kids </a> </div> </main> </div> </html>",
+        "query_embedding_preview": [
+          -0.02684054523706436,
+          0.09694542735815048,
+          -0.01187098491936922,
+          0.025680335238575935,
+          0.05581630766391754,
+          -0.044052835553884506,
+          -0.004095881246030331,
+          -0.03399813547730446,
+          -0.03317170590162277,
+          -0.028103791177272797,
+          0.05268046632409096,
+          0.05458821728825569,
+          0.06033384054899216,
+          0.001365798874758184,
+          0.05050639063119888,
+          -0.03151373937726021
+        ],
+        "candidate_elements": [
+          {
+            "id": "1625",
+            "tag": "a",
+            "role_hint": "menuitem",
+            "label": "menuitem",
+            "nearby_text": "html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html"
+          },
+          {
+            "id": "4946",
+            "tag": "a",
+            "role_hint": "menuitem",
+            "label": "menuitem",
+            "nearby_text": "html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html"
+          },
+          {
+            "id": "6156",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "ar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5251,
+            "semantic_score": 0.4063,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4894,
+            "semantic_score": 0.4295,
+            "bm25_score": 0.729,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.4429,
+            "semantic_score": 0.378,
+            "bm25_score": 0.7026,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 <action> TYPE [127] [SPRINGFIELD] <action> CLICK [3634] <action> TYPE [7125] [AUSTIN] <action> CLICK [10668] <action> CLICK [15069] <action> CLICK [18738] <action> CLICK [20010] <action> CLICK [23832] <action> CLICK [27986] <action> CLICK [32764] <action> CLICK [36839] <action> CLICK [47286]"
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.3903,
+            "semantic_score": 0.3691,
+            "bm25_score": 0.4753,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7923] <action> CLICK [21141] <action> CLICK [47749] <action> CLICK [60708] <action> CLICK [85314] <action> CLICK [96208] <action> CLICK [111865] <action> CLICK [127548] <action> CLICK [150017]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3611,
+            "semantic_score": 0.4513,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [4946]",
+        "predicted_action": "CLICK [1625]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [1625]\",\n  \"reason\": \"The user wants to find a men's T-shirt, so the first step is to navigate to the men's section of the website. Clicking on the \\\"Men\\\" link in the navigation bar will achieve this.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [1625]",
+          "reason": "The user wants to find a men's T-shirt, so the first step is to navigate to the men's section of the website. Clicking on the \"Men\" link in the navigation bar will achieve this."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: underarmour\nDomain: Shopping\nSubdomain: Fashion\nTask: Find a men's UA outlet T-shirt of XL size and add to cart.\nObservation: <html> <main main> <div> <a id=12463 refine by gender: mens> Mens </a> <div> <div id=18543> Product Category </div> <div id=18577> Product Type </div> </div> </div> </main> </html>",
+        "query_embedding_preview": [
+          -0.024362388998270035,
+          0.10137701034545898,
+          -0.01828991249203682,
+          0.02443425916135311,
+          0.037757404148578644,
+          -0.06903230398893356,
+          0.02896749973297119,
+          -0.02982180193066597,
+          -0.06322135776281357,
+          -0.03211071342229843,
+          0.04569357633590698,
+          0.0031894368585199118,
+          0.04808641970157623,
+          0.026116037741303444,
+          0.06569215655326843,
+          -0.029819471761584282
+        ],
+        "candidate_elements": [
+          {
+            "id": "12463",
+            "tag": "a",
+            "role_hint": "refine by gender: mens",
+            "label": "refine by gender: mens",
+            "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html"
+          },
+          {
+            "id": "18543",
+            "tag": "div",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html"
+          },
+          {
+            "id": "18577",
+            "tag": "div",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.4929,
+            "semantic_score": 0.3661,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]"
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.4839,
+            "semantic_score": 0.3771,
+            "bm25_score": 0.9108,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7923] <action> CLICK [21141] <action> CLICK [47749] <action> CLICK [60708] <action> CLICK [85314] <action> CLICK [96208] <action> CLICK [111865] <action> CLICK [127548] <action> CLICK [150017]"
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.4623,
+            "semantic_score": 0.3954,
+            "bm25_score": 0.7297,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 <action> TYPE [127] [SPRINGFIELD] <action> CLICK [3634] <action> TYPE [7125] [AUSTIN] <action> CLICK [10668] <action> CLICK [15069] <action> CLICK [18738] <action> CLICK [20010] <action> CLICK [23832] <action> CLICK [27986] <action> CLICK [32764] <action> CLICK [36839] <action> CLICK [47286]"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3754,
+            "semantic_score": 0.3779,
+            "bm25_score": 0.3656,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3709,
+            "semantic_score": 0.3708,
+            "bm25_score": 0.3713,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]"
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [12463]",
+        "predicted_action": "CLICK [12463]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [12463]\",\n  \"reason\": \"The user is looking for a men's T-shirt, and this action clicks on the 'Mens' filter to refine the search results by gender.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [12463]",
+          "reason": "The user is looking for a men's T-shirt, and this action clicks on the 'Mens' filter to refine the search results by gender."
+        }
+      }
+    ],
+    "added_workflow": "underarmour / Fashion workflow 8",
+    "workflow_embedding_preview": [
+      -0.06738915294408798,
+      0.1050962507724762,
+      0.0028018744196742773,
+      -0.0006744376150891185,
+      0.038198016583919525,
+      -0.04148370027542114,
+      0.04443518817424774,
+      -0.030434206128120422,
+      -0.04947206377983093,
+      -0.03336043655872345,
+      0.03457670658826828,
+      -0.010120656341314316,
+      0.01140151359140873,
+      -0.015480558387935162,
+      0.10894868522882462,
+      0.04655144736170769
+    ]
+  }
+]

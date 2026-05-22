@@ -1,0 +1,30 @@
+{
+  "name": "booking / General workflow 116",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book a flight for two adults from Shanghai to Seoul on May 10, and return on May 12 also book a hotel with it, with maximum bundled savings and if top hotel not available book the next one.",
+  "steps": [
+    {
+      "action": "CLICK [775]",
+      "op": "CLICK",
+      "element": "775",
+      "value": "",
+      "description": "[span] Flight + Hotel -> CLICK",
+      "role": "span",
+      "label": "Flight + Hotel",
+      "observation": "<html> <body> <nav what are you looking for?> <a id=775> <span> Flight + Hotel </span> </a> </nav> <div main> <div region> <a id=1881> <div> <div> Hotels </div> <div> 950,739 hotels </div> </div> </a> </div> </div> <div contentinfo> <div navigation> <a id=4935> Hotels </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [6189] [SHANGHAI]",
+      "op": "TYPE",
+      "element": "6189",
+      "value": "SHANGHAI",
+      "description": "[textbox] Where from? -> TYPE: SHANGHAI",
+      "role": "textbox",
+      "label": "Where from?",
+      "observation": "<html> <div> <input id=6189 destination where from? /> <input id=7034 destination where to? /> <span> Sun 26 Mar - Sun 2 Apr </span> <span> 2 adults 0 children 1 room </span> <button id=7057 button> <span> Search </span> </button> </div> </html>"
+    }
+  ]
+}

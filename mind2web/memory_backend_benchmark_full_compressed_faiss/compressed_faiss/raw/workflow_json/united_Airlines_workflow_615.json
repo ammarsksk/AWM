@@ -1,0 +1,30 @@
+{
+  "name": "united / Airlines workflow 615",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Search receipt with the eTicket 12345678 for the trip reserved by Jason Two",
+  "steps": [
+    {
+      "action": "CLICK [899]",
+      "op": "CLICK",
+      "element": "899",
+      "value": "",
+      "description": "[tab] MY TRIPS -> CLICK",
+      "role": "tab",
+      "label": "MY TRIPS",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a id=899 tab> <span> MY TRIPS </span> </a> <a id=901 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <ul tablist> <li tab heading level 2 book a traveltab> </li> <li tab heading level 2 check flight statustab> </li> <li tab heading level 2 check in> </li> <li id=972 tab heading level 2 view and> <div> My trips </div> </li> </ul> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [4480]",
+      "op": "CLICK",
+      "element": "4480",
+      "value": "",
+      "description": "[link] Find a receipt -> CLICK",
+      "role": "link",
+      "label": "Find a receipt",
+      "observation": "<html> <div> <header banner> <nav navigation> <div dialog> <div tabpanel> <a id=4480> <span> Find a receipt </span> </a> </div> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <form> <div> <input id=4643 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> <div> <button id=4828 submit find flights> <span> Find flights </span> </button> <button button> Find your travel credits </button> </div> </form> </div> </section> </main> </div> </html>"
+    }
+  ]
+}

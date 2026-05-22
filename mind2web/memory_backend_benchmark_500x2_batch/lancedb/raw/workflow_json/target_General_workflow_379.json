@@ -1,0 +1,30 @@
+{
+  "name": "target / General workflow 379",
+  "source": "Mind2Web exemplar",
+  "website": "target",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Browse winter coats featured in the weekly ad and is at least 15% off.",
+  "steps": [
+    {
+      "action": "TYPE [128] [winter coat]",
+      "op": "TYPE",
+      "element": "128",
+      "value": "winter coat",
+      "description": "[searchbox] Search: suggestions appear below -> TYPE: winter coat",
+      "role": "searchbox",
+      "label": "Search: suggestions appear below",
+      "observation": "<html> <div> <div> <a> Registry </a> <a id=238> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <nav> <a id=261 categories> Categories </a> <form> <input id=128 search search: suggestions appear below searchterm /> <input true /> <button submit go> go </button> </form> </nav> </div> </html>"
+    },
+    {
+      "action": "CLICK [5217]",
+      "op": "CLICK",
+      "element": "5217",
+      "value": "",
+      "description": "[button] go -> CLICK",
+      "role": "button",
+      "label": "go",
+      "observation": "<html> <div> <div> <a> Registry </a> <a id=5326> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <nav> <a id=5349 categories> Categories </a> <form> <input search search: suggestions appear below searchterm winter coat /> <input true /> <button button reset> </button> <button id=5217 submit go> go </button> </form> </nav> </div> </html>"
+    }
+  ]
+}

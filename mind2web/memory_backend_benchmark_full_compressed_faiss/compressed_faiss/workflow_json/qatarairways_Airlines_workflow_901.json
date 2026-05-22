@@ -1,0 +1,51 @@
+{
+  "name": "qatarairways / Airlines workflow 901",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Search for a job in customer services in Qatar Airways, find any job available in India, view the details and save the job.",
+  "goal_pattern": "Search for a job in customer services in Qatar Airways, find any job available in India, view the details and save the job.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Careers This link will take you away from the Qata...",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Careers This link will take you away from the Qata...",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the 64",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "64",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [131]",
+      "gold_element_id": "131",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [23376]",
+      "gold_element_id": "23376",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "qatarairways / Airlines workflow 901"
+}

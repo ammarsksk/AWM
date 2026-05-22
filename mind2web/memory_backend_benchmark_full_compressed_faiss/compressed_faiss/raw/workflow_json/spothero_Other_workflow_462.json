@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 462",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find the cheapest wheelchair accessible parking for the Pittsburgh Pirates at St. Louis Cardinals event in Busch Stadium on Apr 13.",
+  "steps": [
+    {
+      "action": "TYPE [109] [busch stadium]",
+      "op": "TYPE",
+      "element": "109",
+      "value": "busch stadium",
+      "description": "[textbox] Search for parking -> TYPE: busch stadium",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=109 text search for parking search-input address, place, city or venue /> <button id=437 button> Search </button> </div> <div group> <a id=499> View All Stadiums </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [2104]",
+      "op": "CLICK",
+      "element": "2104",
+      "value": "",
+      "description": "[li] Busch Stadium, Clark Avenue, St. Louis, MO, USA -> CLICK",
+      "role": "li",
+      "label": "Busch Stadium, Clark Avenue, St. Louis, MO, USA",
+      "observation": "<html> <div> <input id=2423 text search for parking search-input busch stadium address, place, city or venue /> <ul> <li id=2104> Busch Stadium, Clark Avenue, St. Louis, MO, USA </li> <li id=2428> BUSCH STADIUM, Downtown, MO, USA </li> <li> Busch Stadium Loading Dock, 7th Street, St. Louis, MO, USA </li> <li> Stadium Lofts, Stadium Way, Indianapolis, IN, USA </li> <li> Bush Stadium, Cookeville, TN, USA </li> </ul> </div> </html>"
+    }
+  ]
+}

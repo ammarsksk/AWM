@@ -34,6 +34,12 @@ sys.path.insert(0, str(WEB_ARENA_DIR))
 from local_awm_full_demo import WorkflowEmbeddingIndex  # noqa: E402
 from real_data_awm_smoke import load_trajectories  # noqa: E402
 from utils.provider_config import get_openai_compatible_kwargs  # noqa: E402
+from workflow_abstraction import (  # noqa: E402
+    abstract_workflow_to_text,
+    abstract_workflow_with_llm,
+    deterministic_abstract_workflow,
+)
+from workflow_store import DiskWorkflowStore  # noqa: E402
 
 
 ACTION_RE = re.compile(
@@ -181,6 +187,10 @@ def choose_element(step: dict, observation: str) -> ElementCandidate | None:
     best_score = -1.0
     target_text = " ".join(
         [
+            step.get("step_intent", ""),
+            step.get("target_type", ""),
+            step.get("target_description", ""),
+            step.get("selection_rule", ""),
             step.get("role", ""),
             step.get("label", ""),
             step.get("description", ""),
@@ -193,7 +203,8 @@ def choose_element(step: dict, observation: str) -> ElementCandidate | None:
             f"{candidate.context} {candidate.raw}"
         )
         score = lexical_overlap(target_text, candidate_text)
-        if compatible_element(step.get("op", ""), candidate):
+        operation = step.get("op") or step.get("operation", "")
+        if compatible_element(operation, candidate):
             score += 0.35
         if step.get("role") and step["role"].lower() in candidate_text.lower():
             score += 0.25
@@ -244,6 +255,8 @@ def make_structured_workflow(traj, index: int) -> dict:
 
 
 def workflow_to_text(workflow: dict) -> str:
+    if workflow.get("abstraction_type"):
+        return abstract_workflow_to_text(workflow)
     lines = [
         f"## {workflow['name']}",
         f"Source: {workflow['source']}",
@@ -267,6 +280,47 @@ def workflow_to_text(workflow: dict) -> str:
         lines.append(step.get("action", ""))
         lines.append("</action>")
     return "\n".join(lines)
+
+
+def make_memory_workflow(
+    raw_workflow: dict,
+    args,
+    abstraction_client=None,
+) -> tuple[dict, str | None]:
+    """Return the workflow representation used for retrieval/prompting."""
+    if args.workflow_abstraction == "raw":
+        return raw_workflow, None
+    if args.workflow_abstraction == "deterministic":
+        return deterministic_abstract_workflow(raw_workflow), None
+    workflow, raw_llm = abstract_workflow_with_llm(
+        client=abstraction_client,
+        model=args.abstraction_model or args.model,
+        raw_workflow=raw_workflow,
+        max_output_tokens=args.abstraction_max_output_tokens,
+        max_steps=args.abstraction_max_steps,
+        retries=args.llm_retries,
+        retry_sleep=args.retry_sleep,
+    )
+    return workflow, raw_llm
+
+
+def make_workflow_container(output_dir: Path, storage: str):
+    if storage == "disk":
+        return DiskWorkflowStore(output_dir / "workflow_json")
+    return {}
+
+
+def add_workflow_to_container(workflows, workflow: dict):
+    if isinstance(workflows, DiskWorkflowStore):
+        return workflows.add(workflow)
+    workflows[workflow["name"]] = workflow
+    return None
+
+
+def workflows_to_dict(workflows) -> dict[str, dict]:
+    if isinstance(workflows, DiskWorkflowStore):
+        return workflows.to_dict()
+    return dict(workflows)
 
 
 def query_text(traj, observation: str) -> str:
@@ -301,7 +355,7 @@ def accept_reuse(policy: str, traj, workflow_name: str | None) -> bool:
     return False
 
 
-def get_workflow_step(workflows: dict[str, dict], name: str | None, step_index: int) -> dict | None:
+def get_workflow_step(workflows, name: str | None, step_index: int) -> dict | None:
     if not name or name not in workflows:
         return None
     steps = workflows[name].get("steps", [])
@@ -309,7 +363,7 @@ def get_workflow_step(workflows: dict[str, dict], name: str | None, step_index: 
 
 
 def predict_heuristic(
-    workflows: dict[str, dict],
+    workflows,
     workflow_name: str | None,
     step_index: int,
     observation: str,
@@ -320,7 +374,8 @@ def predict_heuristic(
     candidate = choose_element(step, observation)
     if candidate is None:
         return ""
-    return render_action(step.get("op", ""), candidate.element_id, step.get("value", ""))
+    operation = step.get("op") or step.get("operation", "")
+    return render_action(operation, candidate.element_id, step.get("value", ""))
 
 
 def compact_candidates(observation: str, limit: int = 60) -> list[dict]:
@@ -336,22 +391,37 @@ def compact_candidates(observation: str, limit: int = 60) -> list[dict]:
     ]
 
 
-def workflow_for_prompt(workflows: dict[str, dict], name: str | None) -> dict | None:
+def workflow_for_prompt(workflows, name: str | None) -> dict | None:
     if not name or name not in workflows:
         return None
     workflow = dict(workflows[name])
     compact_steps = []
     for step in workflow.get("steps", [])[:12]:
-        compact_steps.append(
-            {
-                "op": step.get("op", ""),
-                "target_role": step.get("role", ""),
-                "target_label": step.get("label", ""),
-                "example_value": step.get("value", ""),
-                "example_action": step.get("action", ""),
-            }
-        )
+        if workflow.get("abstraction_type"):
+            compact_steps.append(
+                {
+                    "step_intent": step.get("step_intent", ""),
+                    "operation": step.get("operation", step.get("op", "")),
+                    "target_type": step.get("target_type", ""),
+                    "target_description": step.get("target_description", ""),
+                    "value_policy": step.get("value_policy", ""),
+                    "selection_rule": step.get("selection_rule", ""),
+                    "success_signal": step.get("success_signal", ""),
+                }
+            )
+        else:
+            compact_steps.append(
+                {
+                    "op": step.get("op", ""),
+                    "target_role": step.get("role", ""),
+                    "target_label": step.get("label", ""),
+                    "example_value": step.get("value", ""),
+                    "example_action": step.get("action", ""),
+                }
+            )
     workflow["steps"] = compact_steps
+    workflow.pop("evidence", None)
+    workflow.pop("llm_raw_abstraction", None)
     return workflow
 
 
@@ -382,7 +452,7 @@ def predict_llm(
     observation: str,
     previous_actions: list[str],
     retrieval_candidates: list[dict],
-    workflows: dict[str, dict],
+    workflows,
     accepted_workflow: str | None,
     max_output_tokens: int = 1024,
     retries: int = 2,
@@ -597,13 +667,18 @@ def percent_payload(metrics: dict) -> dict:
 def save_outputs(
     output_dir: Path,
     records: list[dict],
-    workflows: dict[str, dict],
+    workflows,
     workflow_texts: list[str],
     embedding_index: WorkflowEmbeddingIndex | None = None,
+    raw_workflows=None,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "prediction_trace.json").write_text(json.dumps(records, indent=2))
-    (output_dir / "structured_workflows.json").write_text(json.dumps(workflows, indent=2))
+    (output_dir / "structured_workflows.json").write_text(json.dumps(workflows_to_dict(workflows), indent=2))
+    if raw_workflows is not None:
+        (output_dir / "raw_structured_workflows.json").write_text(
+            json.dumps(workflows_to_dict(raw_workflows), indent=2)
+        )
     (output_dir / "workflow_memory.txt").write_text("\n\n".join(workflow_texts) + "\n")
     if embedding_index is not None:
         embedding_index.save()
@@ -633,11 +708,13 @@ def save_outputs(
     (output_dir / "paper_metrics.md").write_text("\n".join(lines) + "\n")
 
 
-def build_retrieval_plan(selected: list, args) -> tuple[list[dict], dict[str, dict], list[str], WorkflowEmbeddingIndex]:
+def build_retrieval_plan(selected: list, args):
     embedding_index = WorkflowEmbeddingIndex(args.output_dir / "workflow_embeddings.json")
-    workflows: dict[str, dict] = {}
+    workflows = make_workflow_container(args.output_dir, args.workflow_storage)
+    raw_workflows = make_workflow_container(args.output_dir / "raw", args.workflow_storage)
     workflow_texts: list[str] = []
     records: list[dict] = []
+    abstraction_client = make_llm_client() if args.workflow_abstraction == "llm" else None
 
     for local_index, traj in enumerate(selected, start=1):
         global_index = args.start_index + local_index
@@ -666,9 +743,15 @@ def build_retrieval_plan(selected: list, args) -> tuple[list[dict], dict[str, di
                 }
             )
 
-        workflow = make_structured_workflow(traj, global_index)
+        raw_workflow = make_structured_workflow(traj, global_index)
+        workflow, abstraction_raw_output = make_memory_workflow(
+            raw_workflow,
+            args,
+            abstraction_client=abstraction_client,
+        )
         workflow_text = workflow_to_text(workflow)
-        workflows[workflow["name"]] = workflow
+        add_workflow_to_container(raw_workflows, raw_workflow)
+        add_workflow_to_container(workflows, workflow)
         workflow_texts.append(workflow_text)
         embedding_index.add_workflow(workflow_text, save=False)
 
@@ -681,8 +764,12 @@ def build_retrieval_plan(selected: list, args) -> tuple[list[dict], dict[str, di
                 "goal": traj.task,
                 "mode": args.mode,
                 "reuse_policy": args.reuse_policy,
+                "workflow_abstraction": args.workflow_abstraction,
+                "workflow_storage": args.workflow_storage,
                 "steps": task_steps,
                 "added_workflow": workflow["name"],
+                "abstraction_type": workflow.get("abstraction_type", "raw"),
+                "abstraction_raw_output": abstraction_raw_output,
                 "_trajectory": traj,
             }
         )
@@ -690,10 +777,10 @@ def build_retrieval_plan(selected: list, args) -> tuple[list[dict], dict[str, di
         if local_index % 100 == 0:
             print(f"planned {local_index}/{len(selected)} tasks")
 
-    return records, workflows, workflow_texts, embedding_index
+    return records, workflows, workflow_texts, embedding_index, raw_workflows
 
 
-def predict_record(record: dict, workflows: dict[str, dict], args) -> dict:
+def predict_record(record: dict, workflows, args) -> dict:
     traj = record["_trajectory"]
     record = dict(record)
     record.pop("_trajectory", None)
@@ -750,10 +837,47 @@ def main() -> int:
     parser.add_argument("--max-steps-per-task", type=int, default=None)
     parser.add_argument("--start-index", type=int, default=0)
     parser.add_argument("--reuse-policy", choices=["same-website", "same-subdomain", "threshold"], default="same-website")
+    parser.add_argument(
+        "--workflow-abstraction",
+        choices=["raw", "deterministic", "llm"],
+        default="raw",
+        help=(
+            "raw keeps the previous gold-action workflow format; deterministic "
+            "builds local abstract workflow fields; llm calls the provider once "
+            "per completed task to induce reusable abstract workflows."
+        ),
+    )
+    parser.add_argument(
+        "--workflow-storage",
+        choices=["ram", "disk"],
+        default="ram",
+        help=(
+            "ram keeps workflow JSON objects in a Python dict; disk writes each "
+            "workflow JSON under output_dir/workflow_json while FAISS vectors stay in RAM."
+        ),
+    )
+    parser.add_argument(
+        "--abstraction-model",
+        type=str,
+        default=None,
+        help="Model used for LLM workflow abstraction. Defaults to --model.",
+    )
     parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--save-every", type=int, default=5)
     parser.add_argument("--llm-retries", type=int, default=2)
     parser.add_argument("--retry-sleep", type=float, default=5.0)
+    parser.add_argument(
+        "--abstraction-max-output-tokens",
+        type=int,
+        default=4096,
+        help="LLM output token budget for workflow abstraction calls.",
+    )
+    parser.add_argument(
+        "--abstraction-max-steps",
+        type=int,
+        default=18,
+        help="Maximum trajectory steps included in each LLM workflow abstraction prompt.",
+    )
     parser.add_argument(
         "--max-output-tokens",
         type=int,
@@ -777,15 +901,29 @@ def main() -> int:
     if args.max_tasks is not None:
         selected = selected[: args.max_tasks]
 
-    planned_records, workflows, workflow_texts, embedding_index = build_retrieval_plan(selected, args)
-    save_outputs(args.output_dir, [], workflows, workflow_texts, embedding_index=embedding_index)
+    planned_records, workflows, workflow_texts, embedding_index, raw_workflows = build_retrieval_plan(selected, args)
+    save_outputs(
+        args.output_dir,
+        [],
+        workflows,
+        workflow_texts,
+        embedding_index=embedding_index,
+        raw_workflows=raw_workflows,
+    )
 
     records = []
     if args.parallel_workers <= 1:
         for index, record in enumerate(planned_records, start=1):
             records.append(predict_record(record, workflows, args))
             if index % args.save_every == 0:
-                save_outputs(args.output_dir, records, workflows, workflow_texts, embedding_index=embedding_index)
+                save_outputs(
+                    args.output_dir,
+                    records,
+                    workflows,
+                    workflow_texts,
+                    embedding_index=embedding_index,
+                    raw_workflows=raw_workflows,
+                )
                 print(f"processed {index}/{len(planned_records)} tasks")
     else:
         completed: dict[int, dict] = {}
@@ -799,11 +937,25 @@ def main() -> int:
                 completed[task_index] = future.result()
                 if done_count % args.save_every == 0:
                     records = [completed[key] for key in sorted(completed)]
-                    save_outputs(args.output_dir, records, workflows, workflow_texts, embedding_index=embedding_index)
+                    save_outputs(
+                        args.output_dir,
+                        records,
+                        workflows,
+                        workflow_texts,
+                        embedding_index=embedding_index,
+                        raw_workflows=raw_workflows,
+                    )
                     print(f"processed {done_count}/{len(planned_records)} tasks")
         records = [completed[key] for key in sorted(completed)]
 
-    save_outputs(args.output_dir, records, workflows, workflow_texts, embedding_index=embedding_index)
+    save_outputs(
+        args.output_dir,
+        records,
+        workflows,
+        workflow_texts,
+        embedding_index=embedding_index,
+        raw_workflows=raw_workflows,
+    )
     print(json.dumps(percent_payload(compute_metrics(records)), indent=2))
     return 0
 

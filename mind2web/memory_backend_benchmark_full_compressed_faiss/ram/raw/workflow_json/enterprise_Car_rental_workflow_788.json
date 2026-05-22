@@ -1,0 +1,30 @@
+{
+  "name": "enterprise / Car rental workflow 788",
+  "source": "Mind2Web exemplar",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find the booking with ticket 123456 under the name James Buck.",
+  "steps": [
+    {
+      "action": "CLICK [182]",
+      "op": "CLICK",
+      "element": "182",
+      "value": "",
+      "description": "[button] View / Modify / Cancel Reservation -> CLICK",
+      "role": "button",
+      "label": "View / Modify / Cancel Reservation",
+      "observation": "<html> <div> <nav main menu> <div id=2100 button> Reservations </div> </nav> <div region> <div> <span> <span> or </span> <button id=182 button view / modify / cancel> View / Modify / Cancel Reservation </button> </span> <div combobox> <input id=3790 search provide a location /> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [13590] [123456]",
+      "op": "TYPE",
+      "element": "13590",
+      "value": "123456",
+      "description": "[textbox] Confirmation Number (required",
+      "role": "textbox",
+      "label": "Confirmation Number (required",
+      "observation": "<html> <div region> <form> <div> <input id=13590 text /> <input id=17187 text lastname /> </div> <button id=13623 submit search> Search </button> </form> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "flightaware / Other workflow 381",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find flights from Washington airports to New York airports and only show those with scheduled status.",
+  "steps": [
+    {
+      "action": "CLICK [1739]",
+      "op": "CLICK",
+      "element": "1739",
+      "value": "",
+      "description": "[link] Flight Tracking -> HOVER",
+      "role": "link",
+      "label": "Flight Tracking",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=1290 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1739> <span> Flight Tracking </span> </a> </li> </ul> </nav> </div> </header> <div> <a id=2930 button filter flights /> <a> Clear Filters </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9892]",
+      "op": "CLICK",
+      "element": "9892",
+      "value": "",
+      "description": "[link] Flight Finder -> CLICK",
+      "role": "link",
+      "label": "Flight Finder",
+      "observation": "<html> <div> <header banner> <div> <span> All </span> <select id=11068 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <a id=12708 button filter flights /> <a> Clear Filters </a> </div> </div> <span id=9892> <text bounding_box_rect= -1,-1,-1,-1>Flight Finder</text> </span> </html>"
+    }
+  ]
+}

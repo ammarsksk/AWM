@@ -1,0 +1,30 @@
+{
+  "name": "kayak / Airlines workflow 309",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Browse for places to stay in Santa Fe, New Mexico for a weekend starting on Jun 16th for 3 guests and 2 rooms.",
+  "steps": [
+    {
+      "action": "CLICK [81]",
+      "op": "CLICK",
+      "element": "81",
+      "value": "",
+      "description": "[link] Search for hotels -> CLICK",
+      "role": "link",
+      "label": "Search for hotels",
+      "observation": "<html> <div> <div> <button button submit search> <svg id=387 img c8lpf-icon /> </button> <div> <a search for flights> </a> <a id=81 search for hotels> <svg hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> </div> <div button> <div img> </div> <input id=556 text pick-up location las vegas, nevada, united states from? /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [3288] [Santa Fe]",
+      "op": "TYPE",
+      "element": "3288",
+      "value": "Santa Fe",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> TYPE: Santa Fe",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a id=3802 search for hotels> <svg id=3803 hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> <input id=3288 text las vegas, nevada, united states enter a city, hotel, airport, /> </div> </html>"
+    }
+  ]
+}

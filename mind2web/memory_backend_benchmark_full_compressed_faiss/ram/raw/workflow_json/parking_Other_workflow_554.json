@@ -1,0 +1,30 @@
+{
+  "name": "parking / Other workflow 554",
+  "source": "Mind2Web exemplar",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show cheapest monthly price for parking near Shubert Theatre.",
+  "steps": [
+    {
+      "action": "TYPE [676] [Shubert Theatre]",
+      "op": "TYPE",
+      "element": "676",
+      "value": "Shubert Theatre",
+      "description": "[span] Enter an Address or Venue to find parking -> TYPE: Shubert Theatre",
+      "role": "span",
+      "label": "Enter an Address or Venue to find parking",
+      "observation": "<html> <div> <button id=644> Find parking near me </button> <div> <div> <a> Daily </a> <a id=657> Monthly </a> </div> <form get> <span> <input combobox text search /> <label id=676> <span> Enter an Address or Venue to find parking </span> </label> </span> </form> </div> <div dialog> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [3496]",
+      "op": "CLICK",
+      "element": "3496",
+      "value": "",
+      "description": "[option] Shubert Theatre 225 West 44th Street, New York De... -> CLICK",
+      "role": "option",
+      "label": "Shubert Theatre 225 West 44th Street, New York De...",
+      "observation": "<html> <form get> <span> <input combobox text search shubert theatre /> <pre id=3491> Shubert Theatre </pre> <span listbox> <span> <div id=3496 option> <div> <em> Shubert </em> <em> Theatre </em> <small> 225 West 44th Street, New York </small> <span> Destination </span> </div> </div> <div id=3507 option> <div> <em> Shubert </em> <em> Theatre </em> <small> 270 Tremont Street, Boston </small> <span> Destination </span> </div> </div> </span> </span> </span> </form> </html>"
+    }
+  ]
+}

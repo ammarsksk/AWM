@@ -1,0 +1,549 @@
+========================================================================================
+AWM embedding/retrieval trace demo
+========================================================================================
+data_path: /home/ammar/Downloads/agent-workflow-memory-main/mind2web/data/memory/exemplars.json
+output_dir: mind2web/embedding_trace_demo_output_llm
+tasks selected: 8
+top_k: 5
+reuse_policy: same-website
+use_llm: True
+llm_model: google/gemini-2.5-pro
+embedding backend: sentence_transformers_faiss_bm25
+embedding model/source: /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf
+initial RAM/index: entries=0 vector_values=0 approx_vector_mb=0.0000 text_kb=0.00 process_rss_mb=895.19
+========================================================================================
+
+########################################################################################
+TASK 1: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest
+website=exploretock domain=Travel subdomain=Restaurant
+memory size before task: 0 workflows
+RAM/index before task: entries=0 vector_values=0 approx_vector_mb=0.0000 text_kb=0.00 process_rss_mb=895.19
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: exploretock Domain: Travel Subdomain: Restaurant Task: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Observation: <html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0470, -0.0290, +0.0299, +0.0442, +0.0039, -0.0020, -0.0281, -0.1267]
+  parsed candidate elements: 3
+    id=136 tag=select role='type' label='type' text='html div select type option reservations true Dine in option option pickup Pickup opti ...'
+    id=753 tag=input role='text location columbus oh' label='text location columbus oh' text='ckup Pickup option option delivery Delivery option option events Events option option  ...'
+    id=755 tag=button role='button select location' label='button select location' text='ivery option option events Events option option wineries Wineries option option all Ev ...'
+  retrieval scores:
+    no retrieval candidates yet
+  top_retrieved_workflow: None
+  accepted_workflow: None
+  gold action, shown for trace only: SELECT [136] [Pickup]
+  LLM prompt payload preview:
+{ "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest", "website": "exploretock", "domain": "Travel", "subdomain": "Restaurant", "current_observation": "<html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>", "candidate_elements_preview": [ { "id": "136", "tag": "select", "role_hint": "type", "label": "type", "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location" }, { "id": "753", "tag": "input", "role_hint": "text location columbus oh", "label": "text location columbus oh", "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html" }, { "id": "755", "tag": "button", "role_hint": "button select location", "label": "button select location", "nearby_text": "ivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html" } ], "previous_actions": [], "retrieval_candidates": [], "accepted_workflow": null }
+  LLM predicted_action: SELECT [136] [pickup]
+  LLM raw output: ```json { "action": "SELECT [136] [pickup]", "reason": "The user wants to find a pickup restaurant, so I need to select 'Pickup' from the dropdown menu." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: exploretock Domain: Travel Subdomain: Restaurant Task: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Observation: <html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0305, -0.0489, +0.0333, +0.0280, -0.0124, -0.0310, -0.0549, -0.1210]
+  parsed candidate elements: 3
+    id=3721 tag=input role='text location columbus oh' label='text location columbus oh' text='html div input text location columbus, oh button button select location svg button div ...'
+    id=3723 tag=button role='button select location' label='button select location' text='html div input text location columbus, oh button button select location svg button div ...'
+    id=3113 tag=svg role='' label='' text='html div input text location columbus, oh button button select location svg button div ...'
+  retrieval scores:
+    no retrieval candidates yet
+  top_retrieved_workflow: None
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [3113]
+  LLM prompt payload preview:
+{ "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest", "website": "exploretock", "domain": "Travel", "subdomain": "Restaurant", "current_observation": "<html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>", "candidate_elements_preview": [ { "id": "3721", "tag": "input", "role_hint": "text location columbus oh", "label": "text location columbus oh", "nearby_text": "html div input text location columbus, oh button button select location svg button div html" }, { "id": "3723", "tag": "button", "role_hint": "button select location", "label": "button select location", "nearby_text": "html div input text location columbus, oh button button select location svg button div html" }, { "id": "3113", "tag": "svg", "role_hint": "", "label": "", "nearby_text": "html div input text location columbus, oh button button select location svg button div html" } ], "previous_actions": [ "SELECT [136] [pickup]" ], "retrieval_candidates": [], "accepted_workflow": null }
+  LLM predicted_action: TYPE [3721] [Boston, NY]
+  LLM raw output: ```json { "action": "TYPE [3721] [Boston, NY]", "reason": "The user wants to find a restaurant in Boston, NY, so I need to update the location from the default 'columbus, oh' to 'Boston, NY'." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: exploretock / Restaurant workflow 1
+  workflow steps: 11
+  text used for embedding: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]
+  workflow embedding: dim=384 norm=1.0000 first_8=[+0.0067, -0.0168, +0.0205, +0.0118, -0.0034, -0.0044, +0.0417, -0.1566]
+  RAM/index before storing workflow: entries=0 vector_values=0 approx_vector_mb=0.0000 text_kb=0.00 process_rss_mb=950.69
+  memory size after task: 1 workflows
+  RAM/index after storing workflow: entries=1 vector_values=384 approx_vector_mb=0.0015 text_kb=0.50 process_rss_mb=952.94
+
+########################################################################################
+TASK 2: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.
+website=exploretock domain=Travel subdomain=Restaurant
+memory size before task: 1 workflows
+RAM/index before task: entries=1 vector_values=384 approx_vector_mb=0.0015 text_kb=0.50 process_rss_mb=952.94
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: exploretock Domain: Travel Subdomain: Restaurant Task: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Observation: <html> <div> <select id=708 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=726 text location columbus, oh /> <button button select location> <svg id=110 /> </button> </div> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0679, +0.0193, -0.0084, +0.0571, -0.0301, +0.0083, -0.0270, -0.1189]
+  parsed candidate elements: 3
+    id=708 tag=select role='type' label='type' text='html div select type option reservations true Dine in option option pickup Pickup opti ...'
+    id=726 tag=input role='text location columbus oh' label='text location columbus oh' text='ckup Pickup option option delivery Delivery option option events Events option option  ...'
+    id=110 tag=svg role='' label='' text='Events option option wineries Wineries option option all Everything option select div  ...'
+  retrieval scores:
+    1. exploretock / Restaurant workflow 1 | combined=0.5238 semantic=0.6547 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: exploretock / Restaurant workflow 1
+  accepted_workflow: exploretock / Restaurant workflow 1
+  gold action, shown for trace only: CLICK [110]
+  LLM prompt payload preview:
+{ "task": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.", "website": "exploretock", "domain": "Travel", "subdomain": "Restaurant", "current_observation": "<html> <div> <select id=708 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=726 text location columbus, oh /> <button button select location> <svg id=110 /> </button> </div> </div> </html>", "candidate_elements_preview": [ { "id": "708", "tag": "select", "role_hint": "type", "label": "type", "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg id" }, { "id": "726", "tag": "input", "role_hint": "text location columbus oh", "label": "text location columbus oh", "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html" }, { "id": "110", "tag": "svg", "role_hint": "", "label": "", "nearby_text": "Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.5238, "semantic_score": 0.6547, "bm25_score": 0.0 } ], "accepted_workflow": { "name": "exploretock / Restaurant workflow 1", "source": "Mind2Web exemplar", "website": "exploretock", "domain": "Travel", "subdomain": "Restaurant", "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest", "steps": [ { "op": "SELECT", "target_role": "combobox", "target_label": "Reservation type", "example_value": "Pickup", "example_action": "SELECT [136] [Pickup]" }, { "op": "CLICK", "target_role": "svg", "target_label": "", "example_value": "", "example_action": "CLICK [3113]" }, { "op": "TYPE", "target_role": "searchbox", "target_label": "Find a  ...
+  LLM predicted_action: SELECT [708] [Wineries]
+  LLM raw output: ```json { "action": "SELECT [708] [Wineries]", "reason": "The user wants to book a winery tour, so I need to select 'Wineries' from the dropdown menu to filter the search results. This aligns with the first step of the provided workflow, which also involves selecting the type of experience." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: exploretock Domain: Travel Subdomain: Restaurant Task: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Observation: <html> <body> <div> <select id=3825 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <select id=3869 time> <option 11:00 true> Now </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> <option 12:30> 12:30 PM </option> <option 13:00> 1:00 PM </option> <optio ...
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0586, -0.0076, +0.0145, +0.0276, -0.0487, -0.0052, -0.0270, -0.1240]
+  parsed candidate elements: 3
+    id=3825 tag=select role='type' label='type' text='html body div select type option reservations true Dine in option option pickup Pickup ...'
+    id=3869 tag=select role='time' label='time' text='ion pickup Pickup option option delivery Delivery option option events Events option o ...'
+    id=3210 tag=svg role='' label='' text='21:30 9:30 PM option option 22:00 10:00 PM option option 22:30 10:30 PM option option  ...'
+  retrieval scores:
+    1. exploretock / Restaurant workflow 1 | combined=0.5642 semantic=0.7053 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: exploretock / Restaurant workflow 1
+  accepted_workflow: exploretock / Restaurant workflow 1
+  gold action, shown for trace only: CLICK [3210]
+  LLM prompt payload preview:
+{ "task": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.", "website": "exploretock", "domain": "Travel", "subdomain": "Restaurant", "current_observation": "<html> <body> <div> <select id=3825 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <select id=3869 time> <option 11:00 true> Now </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> <option 12:30> 12:30 PM </option> <option 13:00> 1:00 PM </option> <option 13:30> 1:30 PM </option> <option 14:00> 2:00 PM </option> <option 14:30> 2:30 PM </option> <option 15:00> 3:00 PM </option> <option 15:30> 3:30 PM </option> <option 16:00> 4:00 PM </option> <option 16:30> 4:30 PM </option> <op ...", "candidate_elements_preview": [ { "id": "3825", "tag": "select", "role_hint": "type", "label": "type", "nearby_text": "html body div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select select time option 11:00 true Now option option 11:30 11:30 AM option" }, { "id": "3869", "tag": "select", "role_hint": "time", "label": "time", "nearby_text": "ion pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select select time option 11:00 true Now option option 11:30 11:30 AM option option 12:00 12:00 PM option option 12:30 12:30 PM option option 13:00 1:00 P" }, { "id": "3210", "tag": "svg", "role_hint": "", "label": "", "nearby_text": "21:30 9:30 PM option option 22:00 10:00 PM option option 22:30 10:30 PM option option 23:00 11:00 PM option select div div dialog button clear search svg button div body html" } ], "previous_actions": [ "SELECT [708] [Wineries]" ], "retrieval_candidates": [ { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.5642, "semantic_score": 0.7053, "bm25_score": 0.0 } ], "accepted_workflow": { "name": "exploretock / Restaurant workflow 1", "source": "Mind2Web exemplar", "website": "exploretock", "domain": "Travel", "subdomain": "Restaurant", "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with j ...
+  LLM predicted_action: CLICK [3210]
+  LLM raw output: ```json { "action": "CLICK [3210]", "reason": "The next logical step is to input the location 'Napa Valley'. Following the accepted workflow, clicking the SVG element is likely to reveal the location search bar." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: exploretock / Restaurant workflow 2
+  workflow steps: 19
+  text used for embedding: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. <action> CLICK [110] <action> CLICK [3210] <action> TYPE [6383] [NAPA VALLEY] <action> CLICK [10933] <action> SELECT [12821] [Wineries] <action> CLICK [15915] <action> CLICK [22498] <action> CLICK [32588] <action> SELECT [42730] [10 00 AM] <action> SELECT [45915] [4 guests] <action> CLICK [49087] <action> CLICK [52022] <action> CLICK [56464] <action> CLICK [63678] <action> CLICK [67042] <action> CLICK [69168] <action> CLICK [71980] <action> CLICK [74792] <action> CLICK [78224]
+  workflow embedding: dim=384 norm=1.0000 first_8=[+0.0513, -0.0181, +0.0235, +0.0272, -0.0338, -0.0025, +0.0475, -0.1451]
+  RAM/index before storing workflow: entries=1 vector_values=384 approx_vector_mb=0.0015 text_kb=0.50 process_rss_mb=960.44
+  memory size after task: 2 workflows
+  RAM/index after storing workflow: entries=2 vector_values=768 approx_vector_mb=0.0029 text_kb=1.25 process_rss_mb=960.44
+
+########################################################################################
+TASK 3: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001
+website=enterprise domain=Travel subdomain=Car rental
+memory size before task: 2 workflows
+RAM/index before task: entries=2 vector_values=768 approx_vector_mb=0.0029 text_kb=1.25 process_rss_mb=960.44
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: enterprise Domain: Travel Subdomain: Car rental Task: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Observation: <html> <div> <div region> <div combobox> <input id=3714 search provide a location /> </div> </div> <div> <a id=116> Email Offers </a> <p> Don't miss an excuse to hit the road: our latest offers delivered to your inbox. </p> </div> </div> <a id=134 /> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0151, +0.0507, +0.0500, +0.0097, +0.0213, -0.0328, +0.0465, -0.0380]
+  parsed candidate elements: 3
+    id=3714 tag=input role='search provide a location' label='search provide a location' text='html div div region div combobox input search provide a location div div div a Email O ...'
+    id=116 tag=a role='' label='' text='html div div region div combobox input search provide a location div div div a Email O ...'
+    id=134 tag=a role='' label='' text='arch provide a location div div div a Email Offers a p Don t miss an excuse to hit the ...'
+  retrieval scores:
+    1. exploretock / Restaurant workflow 2 | combined=0.5170 semantic=0.3962 bm25=1.0000
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    2. exploretock / Restaurant workflow 1 | combined=0.3813 semantic=0.4767 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: exploretock / Restaurant workflow 2
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [134]
+  LLM prompt payload preview:
+{ "task": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001", "website": "enterprise", "domain": "Travel", "subdomain": "Car rental", "current_observation": "<html> <div> <div region> <div combobox> <input id=3714 search provide a location /> </div> </div> <div> <a id=116> Email Offers </a> <p> Don't miss an excuse to hit the road: our latest offers delivered to your inbox. </p> </div> </div> <a id=134 /> </html>", "candidate_elements_preview": [ { "id": "3714", "tag": "input", "role_hint": "search provide a location", "label": "search provide a location", "nearby_text": "html div div region div combobox input search provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html" }, { "id": "116", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div div region div combobox input search provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html" }, { "id": "134", "tag": "a", "role_hint": "", "label": "", "nearby_text": "arch provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.517, "semantic_score": 0.3962, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.3813, "semantic_score": 0.4767, "bm25_score": 0.0 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [116]
+  LLM raw output: ```json { "action": "CLICK [116]", "reason": "The user wants to sign up for email offers, and the element with id 116 is a link with the text 'Email Offers'. Clicking this link should take me to the email sign-up page." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: enterprise Domain: Travel Subdomain: Car rental Task: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Observation: <html> <form> <div> <input id=11031 text first-name /> <input id=14526 text last-name /> </div> <input id=14535 email /> </form> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0025, +0.0349, +0.0490, +0.0111, -0.0026, -0.0309, +0.0294, -0.0270]
+  parsed candidate elements: 3
+    id=11031 tag=input role='text first-name' label='text first-name' text='html form div input text first-name input text last-name div input email form html'
+    id=14526 tag=input role='text last-name' label='text last-name' text='html form div input text first-name input text last-name div input email form html'
+    id=14535 tag=input role='email' label='email' text='html form div input text first-name input text last-name div input email form html'
+  retrieval scores:
+    1. exploretock / Restaurant workflow 2 | combined=0.4672 semantic=0.3340 bm25=1.0000
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    2. exploretock / Restaurant workflow 1 | combined=0.3326 semantic=0.4158 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: exploretock / Restaurant workflow 2
+  accepted_workflow: None
+  gold action, shown for trace only: TYPE [11031] [Allan]
+  LLM prompt payload preview:
+{ "task": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001", "website": "enterprise", "domain": "Travel", "subdomain": "Car rental", "current_observation": "<html> <form> <div> <input id=11031 text first-name /> <input id=14526 text last-name /> </div> <input id=14535 email /> </form> </html>", "candidate_elements_preview": [ { "id": "11031", "tag": "input", "role_hint": "text first-name", "label": "text first-name", "nearby_text": "html form div input text first-name input text last-name div input email form html" }, { "id": "14526", "tag": "input", "role_hint": "text last-name", "label": "text last-name", "nearby_text": "html form div input text first-name input text last-name div input email form html" }, { "id": "14535", "tag": "input", "role_hint": "email", "label": "email", "nearby_text": "html form div input text first-name input text last-name div input email form html" } ], "previous_actions": [ "CLICK [116]" ], "retrieval_candidates": [ { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.4672, "semantic_score": 0.334, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.3326, "semantic_score": 0.4158, "bm25_score": 0.0 } ], "accepted_workflow": null }
+  LLM predicted_action: TYPE [11031] [Allan]
+  LLM raw output: ```json { "action": "TYPE [11031] [Allan]", "reason": "The first step is to enter the first name 'Allan' into the corresponding input field." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: enterprise / Car rental workflow 3
+  workflow steps: 7
+  text used for embedding: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 <action> CLICK [134] <action> TYPE [11031] [Allan] <action> TYPE [21847] [Smith] <action> TYPE [32673] [allan.smith@gmail.com] <action> TYPE [43500] [allan.smith@gmail.com] <action> TYPE [54343] [10001] <action> CLICK [65163]
+  workflow embedding: dim=384 norm=1.0000 first_8=[+0.0015, +0.0344, +0.0155, -0.0501, +0.0096, -0.0341, +0.0503, -0.0703]
+  RAM/index before storing workflow: entries=2 vector_values=768 approx_vector_mb=0.0029 text_kb=1.25 process_rss_mb=963.44
+  memory size after task: 3 workflows
+  RAM/index after storing workflow: entries=3 vector_values=1152 approx_vector_mb=0.0044 text_kb=1.69 process_rss_mb=963.81
+
+########################################################################################
+TASK 4: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.
+website=enterprise domain=Travel subdomain=Car rental
+memory size before task: 3 workflows
+RAM/index before task: entries=3 vector_values=1152 approx_vector_mb=0.0044 text_kb=1.69 process_rss_mb=963.81
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: enterprise Domain: Travel Subdomain: Car rental Task: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Observation: <html> <div> <nav main menu> <div id=2456 button> Vehicles </div> </nav> <div region> <div combobox> <input id=198 search provide a location /> </div> </div> <div region> <a id=5582> <span> Minivans & Vans </span> </a> </div> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0736, +0.0842, +0.0654, -0.0258, +0.0115, +0.0243, -0.0430, -0.0017]
+  parsed candidate elements: 3
+    id=2456 tag=div role='button' label='button' text='html div nav main menu div button Vehicles div nav div region div combobox input searc ...'
+    id=198 tag=input role='search provide a location' label='search provide a location' text='html div nav main menu div button Vehicles div nav div region div combobox input searc ...'
+    id=5582 tag=a role='' label='' text='html div nav main menu div button Vehicles div nav div region div combobox input searc ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 3 | combined=0.5636 semantic=0.5885 bm25=0.4640
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    2. exploretock / Restaurant workflow 2 | combined=0.5303 semantic=0.4128 bm25=1.0000
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    3. exploretock / Restaurant workflow 1 | combined=0.3939 semantic=0.4923 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: enterprise / Car rental workflow 3
+  accepted_workflow: enterprise / Car rental workflow 3
+  gold action, shown for trace only: TYPE [198] [Brooklyn]
+  LLM prompt payload preview:
+{ "task": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.", "website": "enterprise", "domain": "Travel", "subdomain": "Car rental", "current_observation": "<html> <div> <nav main menu> <div id=2456 button> Vehicles </div> </nav> <div region> <div combobox> <input id=198 search provide a location /> </div> </div> <div region> <a id=5582> <span> Minivans & Vans </span> </a> </div> </div> </html>", "candidate_elements_preview": [ { "id": "2456", "tag": "div", "role_hint": "button", "label": "button", "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html" }, { "id": "198", "tag": "input", "role_hint": "search provide a location", "label": "search provide a location", "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html" }, { "id": "5582", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.5636, "semantic_score": 0.5885, "bm25_score": 0.464 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.5303, "semantic_score": 0.4128, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.3939, "semantic_score": 0.4923, "bm25_score": 0.0 } ], "accepted_workflow": { "name": "enterprise / Car rental workflow 3", "source": "Mind2Web exemplar", "website": "enterprise", "domain": "Travel", "subdomain": "Car rental", "task": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001", "steps": [ { "op": "CLICK", "target_role": "a", "target_label": "", "example_value": "", "example_action": "CLICK [134]" }, { "op": "TYPE", "target_role": "textbox", "target_label": "First Name (required", "example_value": "Allan", "example_action": "TYPE [11031] [Allan]" }, { "op": "TYPE", "target_role": "textbox", "target_label": "Last Name (required", "example_value": "Smith", "example_action": "TYPE [21847] [Smith]" }, { "op": "TYPE", "target_role": "textbox", "target_label": "Email Addr ...
+  LLM predicted_action: TYPE [198] [Brooklyn City]
+  LLM raw output: ```json { "action": "TYPE [198] [Brooklyn City]", "reason": "The first step is to enter the pickup location, which is 'Brooklyn City', into the location search input field." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: enterprise Domain: Travel Subdomain: Car rental Task: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Observation: <html> <div> <div region> <div combobox> <div listbox> <ul> <li id=13927 option> <span> <span> Brooklyn </span> , NY, US </span> <small> Select </small> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li id=17785 option> <span> <span> Brooklyn </span> , AU (New South Wales) </span> <small> Select </small> </li> <li option> </li> </ul> </div> </div> </div> <div region> <a id=19600> <span> Minivans & Vans </span> </a> </div> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0726, +0.0681, +0.0507, +0.0057, +0.0504, +0.0242, -0.0285, -0.0594]
+  parsed candidate elements: 3
+    id=13927 tag=li role='option' label='option' text='html div div region div combobox div listbox ul li option span span Brooklyn span , NY ...'
+    id=17785 tag=li role='option' label='option' text='span Brooklyn span , NY, US span small Select small li li option li li option li li op ...'
+    id=19600 tag=a role='' label='' text='n li li option span span Brooklyn span , AU (New South Wales) span small Select small  ...'
+  retrieval scores:
+    1. exploretock / Restaurant workflow 2 | combined=0.6235 semantic=0.5294 bm25=1.0000
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    2. enterprise / Car rental workflow 3 | combined=0.5569 semantic=0.5638 bm25=0.5296
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    3. exploretock / Restaurant workflow 1 | combined=0.4516 semantic=0.5646 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: exploretock / Restaurant workflow 2
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [13927]
+  LLM prompt payload preview:
+{ "task": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.", "website": "enterprise", "domain": "Travel", "subdomain": "Car rental", "current_observation": "<html> <div> <div region> <div combobox> <div listbox> <ul> <li id=13927 option> <span> <span> Brooklyn </span> , NY, US </span> <small> Select </small> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li id=17785 option> <span> <span> Brooklyn </span> , AU (New South Wales) </span> <small> Select </small> </li> <li option> </li> </ul> </div> </div> </div> <div region> <a id=19600> <span> Minivans & Vans </span> </a> </div> </div> </html>", "candidate_elements_preview": [ { "id": "13927", "tag": "li", "role_hint": "option", "label": "option", "nearby_text": "html div div region div combobox div listbox ul li option span span Brooklyn span , NY, US span small Select small li li option li li option li li option li li option li li option li li option li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li" }, { "id": "17785", "tag": "li", "role_hint": "option", "label": "option", "nearby_text": "span Brooklyn span , NY, US span small Select small li li option li li option li li option li li option li li option li li option li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li ul div div div div region a span Minivans & Vans span a div div html" }, { "id": "19600", "tag": "a", "role_hint": "", "label": "", "nearby_text": "n li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li ul div div div div region a span Minivans & Vans span a div div html" } ], "previous_actions": [ "TYPE [198] [Brooklyn City]" ], "retrieval_candidates": [ { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.6235, "semantic_score": 0.5294, "bm25_score": 1.0 }, { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.5569, "semantic_score": 0.5638, "bm25_score": 0.5296 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.4516, "semantic_score": 0.5646, "bm25_score": 0.0 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [13927]
+  LLM raw output: ```json { "action": "CLICK [13927]", "reason": "I need to select the correct location, which is Brooklyn, NY, US, from the dropdown list that appeared after typing the location." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: enterprise / Car rental workflow 4
+  workflow steps: 11
+  text used for embedding: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. <action> TYPE [198] [Brooklyn] <action> CLICK [13927] <action> CLICK [27698] <action> CLICK [45881] <action> CLICK [55556] <action> CLICK [73248] <action> SELECT [83266] [22] <action> CLICK [96751] <action> CLICK [110393] <action> CLICK [124183] <action> CLICK [137873]
+  workflow embedding: dim=384 norm=1.0000 first_8=[+0.0575, +0.0711, +0.0278, -0.0425, +0.0359, +0.0210, +0.0031, -0.0609]
+  RAM/index before storing workflow: entries=3 vector_values=1152 approx_vector_mb=0.0044 text_kb=1.69 process_rss_mb=966.81
+  memory size after task: 4 workflows
+  RAM/index after storing workflow: entries=4 vector_values=1536 approx_vector_mb=0.0059 text_kb=2.17 process_rss_mb=966.81
+
+########################################################################################
+TASK 5: Find the highest rated dog collar under 10 dollar.
+website=kohls domain=Shopping subdomain=Department
+memory size before task: 4 workflows
+RAM/index before task: entries=4 vector_values=1536 approx_vector_mb=0.0059 text_kb=2.17 process_rss_mb=966.81
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: kohls Domain: Shopping Subdomain: Department Task: Find the highest rated dog collar under 10 dollar. Observation: <html> <article> <a id=1214> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=1457> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> <svg id=159 img /> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[-0.0116, +0.0635, -0.0136, -0.0197, +0.0203, -0.0334, +0.0144, +0.0137]
+  parsed candidate elements: 3
+    id=1214 tag=a role='' label='' text='html article a p span span $ span span 10 span span span & Under span p a a p span sup ...'
+    id=1457 tag=a role='' label='' text='html article a p span span $ span span 10 span span span & Under span p a a p span sup ...'
+    id=159 tag=svg role='img' label='img' text='e a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 s ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 4 | combined=0.4862 semantic=0.3597 bm25=0.9922
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    2. enterprise / Car rental workflow 3 | combined=0.4337 semantic=0.2921 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    3. exploretock / Restaurant workflow 1 | combined=0.2889 semantic=0.3577 bm25=0.0139
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+    4. exploretock / Restaurant workflow 2 | combined=0.2570 semantic=0.3213 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+  top_retrieved_workflow: enterprise / Car rental workflow 4
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [159]
+  LLM prompt payload preview:
+{ "task": "Find the highest rated dog collar under 10 dollar.", "website": "kohls", "domain": "Shopping", "subdomain": "Department", "current_observation": "<html> <article> <a id=1214> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=1457> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> <svg id=159 img /> </html>", "candidate_elements_preview": [ { "id": "1214", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html" }, { "id": "1457", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html" }, { "id": "159", "tag": "svg", "role_hint": "img", "label": "img", "nearby_text": "e a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.4862, "semantic_score": 0.3597, "bm25_score": 0.9922 }, { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.4337, "semantic_score": 0.2921, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.2889, "semantic_score": 0.3577, "bm25_score": 0.0139 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.257, "semantic_score": 0.3213, "bm25_score": 0.0 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [1214]
+  LLM raw output: ```json { "action": "CLICK [1214]", "reason": "The user wants to find items under $10, and this link filters the results to show items that are '$10 & Under'." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: kohls Domain: Shopping Subdomain: Department Task: Find the highest rated dog collar under 10 dollar. Observation: <html> <div> <a id=7923> Pet </a> <article> <a id=18220> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=18463> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[-0.0134, +0.0747, -0.0068, -0.0155, +0.0163, -0.0325, +0.0167, -0.0073]
+  parsed candidate elements: 3
+    id=7923 tag=a role='' label='' text='html div a Pet a article a p span span $ span span 10 span span span & Under span p a  ...'
+    id=18220 tag=a role='' label='' text='html div a Pet a article a p span span $ span span 10 span span span & Under span p a  ...'
+    id=18463 tag=a role='' label='' text='html div a Pet a article a p span span $ span span 10 span span span & Under span p a  ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 4 | combined=0.5107 semantic=0.3903 bm25=0.9922
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    2. enterprise / Car rental workflow 3 | combined=0.4545 semantic=0.3181 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    3. exploretock / Restaurant workflow 1 | combined=0.3159 semantic=0.3914 bm25=0.0139
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+    4. exploretock / Restaurant workflow 2 | combined=0.2836 semantic=0.3545 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+  top_retrieved_workflow: enterprise / Car rental workflow 4
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [7923]
+  LLM prompt payload preview:
+{ "task": "Find the highest rated dog collar under 10 dollar.", "website": "kohls", "domain": "Shopping", "subdomain": "Department", "current_observation": "<html> <div> <a id=7923> Pet </a> <article> <a id=18220> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=18463> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> </div> </html>", "candidate_elements_preview": [ { "id": "7923", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html" }, { "id": "18220", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html" }, { "id": "18463", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html" } ], "previous_actions": [ "CLICK [1214]" ], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.5107, "semantic_score": 0.3903, "bm25_score": 0.9922 }, { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.4545, "semantic_score": 0.3181, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.3159, "semantic_score": 0.3914, "bm25_score": 0.0139 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.2836, "semantic_score": 0.3545, "bm25_score": 0.0 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [7923]
+  LLM raw output: ```json { "action": "CLICK [7923]", "reason": "The user wants to find a dog collar. Clicking on \"Pet\" will navigate to the pet products category, which is the first step towards finding dog collars." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: kohls / Department workflow 5
+  workflow steps: 10
+  text used for embedding: ## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7923] <action> CLICK [21141] <action> CLICK [47749] <action> CLICK [60708] <action> CLICK [85314] <action> CLICK [96208] <action> CLICK [111865] <action> CLICK [127548] <action> CLICK [150017]
+  workflow embedding: dim=384 norm=1.0000 first_8=[-0.0267, +0.0226, -0.0301, -0.0543, +0.0173, -0.0182, +0.0044, -0.0583]
+  RAM/index before storing workflow: entries=4 vector_values=1536 approx_vector_mb=0.0059 text_kb=2.17 process_rss_mb=967.94
+  memory size after task: 5 workflows
+  RAM/index after storing workflow: entries=5 vector_values=1920 approx_vector_mb=0.0073 text_kb=2.57 process_rss_mb=967.94
+
+########################################################################################
+TASK 6: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023
+website=united domain=Travel subdomain=Airlines
+memory size before task: 5 workflows
+RAM/index before task: entries=5 vector_values=1920 approx_vector_mb=0.0073 text_kb=2.57 process_rss_mb=967.94
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: united Domain: Travel Subdomain: Airlines Task: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 Observation: <html> <div> <header banner> <nav navigation> <div tablist> <a id=912 tab> <span> BOOK </span> </a> <a tab> </a> <a id=918 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=127 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> </main> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0988, -0.0073, +0.0428, +0.0124, -0.0044, +0.0158, -0.0397, -0.0706]
+  parsed candidate elements: 3
+    id=912 tag=a role='tab' label='tab' text='html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab ...'
+    id=918 tag=a role='tab' label='tab' text='html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab ...'
+    id=127 tag=input role='combobox text columbus cmh' label='combobox text columbus cmh from' text='BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main  ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 4 | combined=0.5887 semantic=0.4859 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    2. exploretock / Restaurant workflow 2 | combined=0.4895 semantic=0.4763 bm25=0.5424
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    3. exploretock / Restaurant workflow 1 | combined=0.4506 semantic=0.5633 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+    4. enterprise / Car rental workflow 3 | combined=0.3308 semantic=0.4074 bm25=0.0241
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    5. kohls / Department workflow 5 | combined=0.2355 semantic=0.2922 bm25=0.0085
+       embedding text: ## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7 ...
+  top_retrieved_workflow: enterprise / Car rental workflow 4
+  accepted_workflow: None
+  gold action, shown for trace only: TYPE [127] [SPRINGFIELD]
+  LLM prompt payload preview:
+{ "task": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023", "website": "united", "domain": "Travel", "subdomain": "Airlines", "current_observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a id=912 tab> <span> BOOK </span> </a> <a tab> </a> <a id=918 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=127 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> </main> </div> </html>", "candidate_elements_preview": [ { "id": "912", "tag": "a", "role_hint": "tab", "label": "tab", "nearby_text": "html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section" }, { "id": "918", "tag": "a", "role_hint": "tab", "label": "tab", "nearby_text": "html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section main d" }, { "id": "127", "tag": "input", "role_hint": "combobox text columbus cmh", "label": "combobox text columbus cmh from", "nearby_text": "BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section main div html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.5887, "semantic_score": 0.4859, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.4895, "semantic_score": 0.4763, "bm25_score": 0.5424 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.4506, "semantic_score": 0.5633, "bm25_score": 0.0 }, { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.3308, "semantic_score": 0.4074, "bm25_score": 0.0241 }, { "workflow_name": "kohls / Department workflow 5", "combined_score": 0.2355, "semantic_score": 0.2922, "bm25_sc ...
+  LLM predicted_action: TYPE [127] [Springfield, IL]
+  LLM raw output: ```json { "action": "TYPE [127] [Springfield, IL]", "reason": "The user wants to book a flight from Springfield, IL, so I need to enter this as the departure location." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: united Domain: Travel Subdomain: Airlines Task: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 Observation: <html> <main main> <section tabpanel> <div tabpanel> <div> <div tooltip> <div listbox> <ul listbox> <li option> <button id=3634 button> <span> <strong> Springfield </strong> , IL, US (SPI) </span> </button> </li> <li option> <button id=3635 button> <span> <strong> Springfield </strong> , MO, US (SGF) </span> </button> </li> </ul> </div> </div> <div> <input id=4592 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> </div> </section> </main> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0800, -0.0273, +0.0385, +0.0233, -0.0024, +0.0424, -0.0066, -0.0506]
+  parsed candidate elements: 3
+    id=3634 tag=button role='button' label='button' text='html main main section tabpanel div tabpanel div div tooltip div listbox ul listbox li ...'
+    id=3635 tag=button role='button' label='button' text='bpanel div div tooltip div listbox ul listbox li option button button span strong Spri ...'
+    id=4592 tag=input role='combobox text to' label='combobox text to' text=', IL, US (SPI) span button li li option button button span strong Springfield strong , ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 4 | combined=0.5608 semantic=0.4510 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    2. exploretock / Restaurant workflow 1 | combined=0.4349 semantic=0.5436 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+    3. exploretock / Restaurant workflow 2 | combined=0.4017 semantic=0.4579 bm25=0.1770
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    4. enterprise / Car rental workflow 3 | combined=0.3205 semantic=0.3915 bm25=0.0368
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    5. kohls / Department workflow 5 | combined=0.2511 semantic=0.3080 bm25=0.0238
+       embedding text: ## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7 ...
+  top_retrieved_workflow: enterprise / Car rental workflow 4
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [3634]
+  LLM prompt payload preview:
+{ "task": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023", "website": "united", "domain": "Travel", "subdomain": "Airlines", "current_observation": "<html> <main main> <section tabpanel> <div tabpanel> <div> <div tooltip> <div listbox> <ul listbox> <li option> <button id=3634 button> <span> <strong> Springfield </strong> , IL, US (SPI) </span> </button> </li> <li option> <button id=3635 button> <span> <strong> Springfield </strong> , MO, US (SGF) </span> </button> </li> </ul> </div> </div> <div> <input id=4592 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> </div> </section> </main> </html>", "candidate_elements_preview": [ { "id": "3634", "tag": "button", "role_hint": "button", "label": "button", "nearby_text": "html main main section tabpanel div tabpanel div div tooltip div listbox ul listbox li option button button span strong Springfield strong , IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label e" }, { "id": "3635", "tag": "button", "role_hint": "button", "label": "button", "nearby_text": "bpanel div div tooltip div listbox ul listbox li option button button span strong Springfield strong , IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label enter your destination city, airport To" }, { "id": "4592", "tag": "input", "role_hint": "combobox text to", "label": "combobox text to", "nearby_text": ", IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label enter your destination city, airport To* label div div div section main html" } ], "previous_actions": [ "TYPE [127] [Springfield, IL]" ], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.5608, "semantic_score": 0.451, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.4349, "semantic_score": 0.5436, "bm25_score": 0.0 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.4017, "semantic_score": 0.4579, "bm25_score": 0.177 }, { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.3205, "semantic_score": 0.3915, "bm25_score": 0.0368 }, { "workfl ...
+  LLM predicted_action: CLICK [3634]
+  LLM raw output: ```json { "action": "CLICK [3634]", "reason": "I am selecting 'Springfield, IL, US (SPI)' as the departure location, which matches the user's request." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: united / Airlines workflow 6
+  workflow steps: 12
+  text used for embedding: ## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 <action> TYPE [127] [SPRINGFIELD] <action> CLICK [3634] <action> TYPE [7125] [AUSTIN] <action> CLICK [10668] <action> CLICK [15069] <action> CLICK [18738] <action> CLICK [20010] <action> CLICK [23832] <action> CLICK [27986] <action> CLICK [32764] <action> CLICK [36839] <action> CLICK [47286]
+  workflow embedding: dim=384 norm=1.0000 first_8=[+0.0439, +0.0085, +0.0321, +0.0060, -0.0296, +0.0123, -0.0127, -0.1206]
+  RAM/index before storing workflow: entries=5 vector_values=1920 approx_vector_mb=0.0073 text_kb=2.57 process_rss_mb=970.94
+  memory size after task: 6 workflows
+  RAM/index after storing workflow: entries=6 vector_values=2304 approx_vector_mb=0.0088 text_kb=3.08 process_rss_mb=970.94
+
+########################################################################################
+TASK 7: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.
+website=budget domain=Travel subdomain=Car rental
+memory size before task: 6 workflows
+RAM/index before task: entries=6 vector_values=2304 approx_vector_mb=0.0088 text_kb=3.08 process_rss_mb=970.94
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: budget Domain: Travel Subdomain: Car rental Task: Get an SUV with an additional driver and wifi for pick up in any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly. Observation: <html> <div> <ul> <a id=842 button> Reservations </a> <a id=133 button> Locations </a> </ul> <a id=3954> SUV Rental </a> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0476, +0.0126, +0.0033, +0.0482, -0.0115, +0.0102, +0.0289, -0.0148]
+  parsed candidate elements: 3
+    id=842 tag=a role='button' label='button' text='html div ul a button Reservations a a button Locations a ul a SUV Rental a div html'
+    id=133 tag=a role='button' label='button' text='html div ul a button Reservations a a button Locations a ul a SUV Rental a div html'
+    id=3954 tag=a role='' label='' text='html div ul a button Reservations a a button Locations a ul a SUV Rental a div html'
+  retrieval scores:
+    1. enterprise / Car rental workflow 3 | combined=0.5548 semantic=0.4435 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    2. enterprise / Car rental workflow 4 | combined=0.4989 semantic=0.4600 bm25=0.6544
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    3. united / Airlines workflow 6 | combined=0.3559 semantic=0.4329 bm25=0.0483
+       embedding text: ## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April  ...
+    4. exploretock / Restaurant workflow 2 | combined=0.3495 semantic=0.2632 bm25=0.6946
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    5. exploretock / Restaurant workflow 1 | combined=0.3340 semantic=0.3465 bm25=0.2842
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: enterprise / Car rental workflow 3
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [133]
+  LLM prompt payload preview:
+{ "task": "Get an SUV with an additional driver and wifi for pick up in any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.", "website": "budget", "domain": "Travel", "subdomain": "Car rental", "current_observation": "<html> <div> <ul> <a id=842 button> Reservations </a> <a id=133 button> Locations </a> </ul> <a id=3954> SUV Rental </a> </div> </html>", "candidate_elements_preview": [ { "id": "842", "tag": "a", "role_hint": "button", "label": "button", "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html" }, { "id": "133", "tag": "a", "role_hint": "button", "label": "button", "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html" }, { "id": "3954", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.5548, "semantic_score": 0.4435, "bm25_score": 1.0 }, { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.4989, "semantic_score": 0.46, "bm25_score": 0.6544 }, { "workflow_name": "united / Airlines workflow 6", "combined_score": 0.3559, "semantic_score": 0.4329, "bm25_score": 0.0483 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.3495, "semantic_score": 0.2632, "bm25_score": 0.6946 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.334, "semantic_score": 0.3465, "bm25_score": 0.2842 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [842]
+  LLM raw output: ```json { "action": "CLICK [842]", "reason": "To start the car rental booking process, I need to click on the 'Reservations' button, which will likely take me to the booking form." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: budget Domain: Travel Subdomain: Car rental Task: Get an SUV with an additional driver and wifi for pick up in any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly. Observation: <html> <div> <ul> <a id=10513 button> Reservations </a> <a id=9804> Find a Location </a> </ul> <a id=13625> SUV Rental </a> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[+0.0381, +0.0161, -0.0000, +0.0411, -0.0053, +0.0109, +0.0317, -0.0189]
+  parsed candidate elements: 3
+    id=10513 tag=a role='button' label='button' text='html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html'
+    id=9804 tag=a role='' label='' text='html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html'
+    id=13625 tag=a role='' label='' text='html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html'
+  retrieval scores:
+    1. enterprise / Car rental workflow 3 | combined=0.5668 semantic=0.4586 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    2. enterprise / Car rental workflow 4 | combined=0.5298 semantic=0.4829 bm25=0.7173
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    3. exploretock / Restaurant workflow 2 | combined=0.3572 semantic=0.2767 bm25=0.6791
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    4. united / Airlines workflow 6 | combined=0.3546 semantic=0.4433 bm25=0.0000
+       embedding text: ## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April  ...
+    5. exploretock / Restaurant workflow 1 | combined=0.3421 semantic=0.3656 bm25=0.2478
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: enterprise / Car rental workflow 3
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [9804]
+  LLM prompt payload preview:
+{ "task": "Get an SUV with an additional driver and wifi for pick up in any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.", "website": "budget", "domain": "Travel", "subdomain": "Car rental", "current_observation": "<html> <div> <ul> <a id=10513 button> Reservations </a> <a id=9804> Find a Location </a> </ul> <a id=13625> SUV Rental </a> </div> </html>", "candidate_elements_preview": [ { "id": "10513", "tag": "a", "role_hint": "button", "label": "button", "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html" }, { "id": "9804", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html" }, { "id": "13625", "tag": "a", "role_hint": "", "label": "", "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html" } ], "previous_actions": [ "CLICK [842]" ], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.5668, "semantic_score": 0.4586, "bm25_score": 1.0 }, { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.5298, "semantic_score": 0.4829, "bm25_score": 0.7173 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.3572, "semantic_score": 0.2767, "bm25_score": 0.6791 }, { "workflow_name": "united / Airlines workflow 6", "combined_score": 0.3546, "semantic_score": 0.4433, "bm25_score": 0.0 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.3421, "semantic_score": 0.3656, "bm25_score": 0.2478 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [10513]
+  LLM raw output: ```json { "action": "CLICK [10513]", "reason": "The user wants to make a car rental booking. Clicking on 'Reservations' is the most direct way to start this process." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: budget / Car rental workflow 7
+  workflow steps: 20
+  text used for embedding: ## budget / Car rental workflow 7 Source: Mind2Web exemplar Website: budget Domain: Travel Subdomain: Car rental Goal pattern: Get an SUV with an additional driver and wifi for pick up in any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly. <action> CLICK [133] <action> CLICK [9804] <action> TYPE [14714] [washington] <action> CLICK [19806] <action> CLICK [25444] <action> CLICK [28436] <action> CLICK [40185] <action> CLICK [54654] <action> CLICK [69104] <action> SELECT [83561] [11 00 AM] <action> SELECT [98021] [11 00 AM] <action> TYPE [112478] [washington] <action> CLICK [126940] <action> CLICK [141942] <action> CLICK [156500] <action> CLICK [171034] <action> CLICK [185486] <action> CLICK [202633] <action> CLICK [218049] <action> CLICK [233724]
+  workflow embedding: dim=384 norm=1.0000 first_8=[+0.0501, +0.0085, +0.0144, +0.0251, +0.0412, +0.0055, +0.0710, -0.0708]
+  RAM/index before storing workflow: entries=6 vector_values=2304 approx_vector_mb=0.0088 text_kb=3.08 process_rss_mb=972.81
+  memory size after task: 7 workflows
+  RAM/index after storing workflow: entries=7 vector_values=2688 approx_vector_mb=0.0103 text_kb=3.93 process_rss_mb=972.81
+
+########################################################################################
+TASK 8: Find a men's UA outlet T-shirt of XL size and add to cart.
+website=underarmour domain=Shopping subdomain=Fashion
+memory size before task: 7 workflows
+RAM/index before task: entries=7 vector_values=2688 approx_vector_mb=0.0103 text_kb=3.93 process_rss_mb=972.81
+########################################################################################
+
+  STEP 1
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: underarmour Domain: Shopping Subdomain: Fashion Task: Find a men's UA outlet T-shirt of XL size and add to cart. Observation: <html> <div> <ul menubar> <li> <a id=1625 menuitem> <span> Men </span> </a> <div men> </div> </li> <li> <a id=4946 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <a id=6156> Shop Men </a> <a> Shop Women </a> <a> Shop Kids </a> </div> </main> </div> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[-0.0268, +0.0969, -0.0119, +0.0257, +0.0558, -0.0441, -0.0041, -0.0340]
+  parsed candidate elements: 3
+    id=1625 tag=a role='menuitem' label='menuitem' text='html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Ou ...'
+    id=4946 tag=a role='menuitem' label='menuitem' text='html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Ou ...'
+    id=6156 tag=a role='' label='' text='ar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div o ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 4 | combined=0.5251 semantic=0.4063 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    2. exploretock / Restaurant workflow 2 | combined=0.4894 semantic=0.4295 bm25=0.7290
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+    3. united / Airlines workflow 6 | combined=0.4429 semantic=0.3780 bm25=0.7026
+       embedding text: ## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April  ...
+    4. kohls / Department workflow 5 | combined=0.3903 semantic=0.3691 bm25=0.4753
+       embedding text: ## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7 ...
+    5. exploretock / Restaurant workflow 1 | combined=0.3611 semantic=0.4513 bm25=0.0000
+       embedding text: ## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just  ...
+  top_retrieved_workflow: enterprise / Car rental workflow 4
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [4946]
+  LLM prompt payload preview:
+{ "task": "Find a men's UA outlet T-shirt of XL size and add to cart.", "website": "underarmour", "domain": "Shopping", "subdomain": "Fashion", "current_observation": "<html> <div> <ul menubar> <li> <a id=1625 menuitem> <span> Men </span> </a> <div men> </div> </li> <li> <a id=4946 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <a id=6156> Shop Men </a> <a> Shop Women </a> <a> Shop Kids </a> </div> </main> </div> </html>", "candidate_elements_preview": [ { "id": "1625", "tag": "a", "role_hint": "menuitem", "label": "menuitem", "nearby_text": "html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html" }, { "id": "4946", "tag": "a", "role_hint": "menuitem", "label": "menuitem", "nearby_text": "html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html" }, { "id": "6156", "tag": "a", "role_hint": "", "label": "", "nearby_text": "ar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html" } ], "previous_actions": [], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.5251, "semantic_score": 0.4063, "bm25_score": 1.0 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.4894, "semantic_score": 0.4295, "bm25_score": 0.729 }, { "workflow_name": "united / Airlines workflow 6", "combined_score": 0.4429, "semantic_score": 0.378, "bm25_score": 0.7026 }, { "workflow_name": "kohls / Department workflow 5", "combined_score": 0.3903, "semantic_score": 0.3691, "bm25_score": 0.4753 }, { "workflow_name": "exploretock / Restaurant workflow 1", "combined_score": 0.3611, "semantic_score": 0.4513, "bm25_score": 0.0 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [1625]
+  LLM raw output: ```json { "action": "CLICK [1625]", "reason": "The user wants to find a men's T-shirt, so the first step is to navigate to the men's section of the website. Clicking on the \"Men\" link in the navigation bar will achieve this." } ```
+
+  STEP 2
+  ------------------------------------------------------------------------------------
+  query text:
+    Website: underarmour Domain: Shopping Subdomain: Fashion Task: Find a men's UA outlet T-shirt of XL size and add to cart. Observation: <html> <main main> <div> <a id=12463 refine by gender: mens> Mens </a> <div> <div id=18543> Product Category </div> <div id=18577> Product Type </div> </div> </div> </main> </html>
+  query embedding: dim=384 norm=1.0000 first_8=[-0.0244, +0.1014, -0.0183, +0.0244, +0.0378, -0.0690, +0.0290, -0.0298]
+  parsed candidate elements: 3
+    id=12463 tag=a role='refine by gender: mens' label='refine by gender: mens' text='html main main div a refine by gender: mens Mens a div div Product Category div div Pr ...'
+    id=18543 tag=div role='' label='' text='html main main div a refine by gender: mens Mens a div div Product Category div div Pr ...'
+    id=18577 tag=div role='' label='' text='html main main div a refine by gender: mens Mens a div div Product Category div div Pr ...'
+  retrieval scores:
+    1. enterprise / Car rental workflow 4 | combined=0.4929 semantic=0.3661 bm25=1.0000
+       embedding text: ## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old re ...
+    2. kohls / Department workflow 5 | combined=0.4839 semantic=0.3771 bm25=0.9108
+       embedding text: ## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. <action> CLICK [159] <action> CLICK [7 ...
+    3. united / Airlines workflow 6 | combined=0.4623 semantic=0.3954 bm25=0.7297
+       embedding text: ## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April  ...
+    4. enterprise / Car rental workflow 3 | combined=0.3754 semantic=0.3779 bm25=0.3656
+       embedding text: ## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip co ...
+    5. exploretock / Restaurant workflow 2 | combined=0.3709 semantic=0.3708 bm25=0.3713
+       embedding text: ## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisin ...
+  top_retrieved_workflow: enterprise / Car rental workflow 4
+  accepted_workflow: None
+  gold action, shown for trace only: CLICK [12463]
+  LLM prompt payload preview:
+{ "task": "Find a men's UA outlet T-shirt of XL size and add to cart.", "website": "underarmour", "domain": "Shopping", "subdomain": "Fashion", "current_observation": "<html> <main main> <div> <a id=12463 refine by gender: mens> Mens </a> <div> <div id=18543> Product Category </div> <div id=18577> Product Type </div> </div> </div> </main> </html>", "candidate_elements_preview": [ { "id": "12463", "tag": "a", "role_hint": "refine by gender: mens", "label": "refine by gender: mens", "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html" }, { "id": "18543", "tag": "div", "role_hint": "", "label": "", "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html" }, { "id": "18577", "tag": "div", "role_hint": "", "label": "", "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html" } ], "previous_actions": [ "CLICK [1625]" ], "retrieval_candidates": [ { "workflow_name": "enterprise / Car rental workflow 4", "combined_score": 0.4929, "semantic_score": 0.3661, "bm25_score": 1.0 }, { "workflow_name": "kohls / Department workflow 5", "combined_score": 0.4839, "semantic_score": 0.3771, "bm25_score": 0.9108 }, { "workflow_name": "united / Airlines workflow 6", "combined_score": 0.4623, "semantic_score": 0.3954, "bm25_score": 0.7297 }, { "workflow_name": "enterprise / Car rental workflow 3", "combined_score": 0.3754, "semantic_score": 0.3779, "bm25_score": 0.3656 }, { "workflow_name": "exploretock / Restaurant workflow 2", "combined_score": 0.3709, "semantic_score": 0.3708, "bm25_score": 0.3713 } ], "accepted_workflow": null }
+  LLM predicted_action: CLICK [12463]
+  LLM raw output: ```json { "action": "CLICK [12463]", "reason": "The user is looking for a men's T-shirt, and this action clicks on the 'Mens' filter to refine the search results by gender." } ```
+
+  WORKFLOW STORAGE AFTER TASK
+  ------------------------------------------------------------------------------------
+  workflow name: underarmour / Fashion workflow 8
+  workflow steps: 11
+  text used for embedding: ## underarmour / Fashion workflow 8 Source: Mind2Web exemplar Website: underarmour Domain: Shopping Subdomain: Fashion Goal pattern: Find a men's UA outlet T-shirt of XL size and add to cart. <action> CLICK [4946] <action> CLICK [12463] <action> CLICK [40629] <action> CLICK [65251] <action> CLICK [89864] <action> CLICK [113524] <action> CLICK [137188] <action> CLICK [160426] <action> CLICK [183636] <action> CLICK [195281] <action> CLICK [228675]
+  workflow embedding: dim=384 norm=1.0000 first_8=[-0.0674, +0.1051, +0.0028, -0.0007, +0.0382, -0.0415, +0.0444, -0.0304]
+  RAM/index before storing workflow: entries=7 vector_values=2688 approx_vector_mb=0.0103 text_kb=3.93 process_rss_mb=973.94
+  memory size after task: 8 workflows
+  RAM/index after storing workflow: entries=8 vector_values=3072 approx_vector_mb=0.0117 text_kb=4.37 process_rss_mb=973.94
+
+========================================================================================
+done
+wrote: mind2web/embedding_trace_demo_output_llm/embedding_retrieval_trace.json
+wrote: mind2web/embedding_trace_demo_output_llm/structured_workflows.json
+wrote: mind2web/embedding_trace_demo_output_llm/workflow_memory.txt
+wrote: mind2web/embedding_trace_demo_output_llm/workflow_embeddings.json
+final RAM/index: entries=8 vector_values=3072 approx_vector_mb=0.0117 text_kb=4.37 process_rss_mb=974.31
+========================================================================================

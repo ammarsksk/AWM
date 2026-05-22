@@ -1,0 +1,30 @@
+{
+  "name": "aa / Airlines workflow 669",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Check status of flight 6944 on April 6",
+  "steps": [
+    {
+      "action": "CLICK [107]",
+      "op": "CLICK",
+      "element": "107",
+      "value": "",
+      "description": "[link] Flight status -> CLICK",
+      "role": "link",
+      "label": "Flight status",
+      "observation": "<html> <main main main content> <div> <ul tablist> <li tab> <a id=107> Flight status </a> </li> </ul> <div tabpanel> <form> <div> <label> From <input id=1183 text originairport cmh city or airport /> </label> <label> To <input id=1204 text city or airport /> </label> </div> </form> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [7208]",
+      "op": "CLICK",
+      "element": "7208",
+      "value": "",
+      "description": "[span] Flight number -> CLICK",
+      "role": "span",
+      "label": "Flight number",
+      "observation": "<html> <main main main content> <div tabpanel> <form> <ul radiogroup> <li> <input id=7206 radio searchby flightnumber /> <label id=7208> <span> Search by flight number </span> <span> Flight number </span> </label> </li> </ul> <label> To <span> , required. </span> <input id=7276 text city or airport /> </label> </form> </div> </main> </html>"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "cabelas / Speciality workflow 328",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "cabelas",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Search and view the details of  32-inch medium-light fishing rod for ice fishing available in stock under 100 dollars with an average rating of 4 and above.",
+  "goal_pattern": "Search and view the details of  32-inch medium-light fishing rod for ice fishing available in stock under 100 dollars with an average rating of 4 and above.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Fishing",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Fishing",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the View All",
+      "operation": "CLICK",
+      "target_type": "menuitem",
+      "target_description": "View All",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [154]",
+      "gold_element_id": "154",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [19277]",
+      "gold_element_id": "19277",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "cabelas / Speciality workflow 328"
+}

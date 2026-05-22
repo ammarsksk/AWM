@@ -1,0 +1,30 @@
+{
+  "name": "resy / Restaurant workflow 146",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find nearby top-rated restaurants in Chicago, save the restaurant, and then book a table for 7 people on April 20 for lunch at 2 pm.",
+  "steps": [
+    {
+      "action": "CLICK [121]",
+      "op": "CLICK",
+      "element": "121",
+      "value": "",
+      "description": "[link] Nearby Restaurants -> CLICK",
+      "role": "link",
+      "label": "Nearby Restaurants",
+      "observation": "<html> <div> <header banner main resy> <button id=246 button location toronto> <div> Toronto </div> </button> </header> <a id=500 button> Chicago </a> <a id=121> Nearby Restaurants </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [4958]",
+      "op": "CLICK",
+      "element": "4958",
+      "value": "",
+      "description": "[div] Toronto -> CLICK",
+      "role": "div",
+      "label": "Toronto",
+      "observation": "<html> <div> <header banner main resy> <button id=4958 button location toronto> <div> Toronto </div> </button> </header> <div> <div> <button button> </button> <button button> </button> <button button> </button> <button id=5164 button> <p> Top Rated </p> </button> <button button> </button> </div> <div> <a id=6165> <h3> PLANTA, Toronto </h3> </a> <div checkbox add planta, toronto to favorites /> </div> </div> </div> </html>"
+    }
+  ]
+}

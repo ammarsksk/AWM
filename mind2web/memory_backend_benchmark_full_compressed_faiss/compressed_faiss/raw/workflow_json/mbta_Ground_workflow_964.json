@@ -1,0 +1,30 @@
+{
+  "name": "mbta / Ground workflow 964",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Plan a trip from Boston Logan Airport to North Station.",
+  "steps": [
+    {
+      "action": "CLICK [1843]",
+      "op": "CLICK",
+      "element": "1843",
+      "value": "",
+      "description": "[tab] Trip Planner -> CLICK",
+      "role": "tab",
+      "label": "Trip Planner",
+      "observation": "<html> <div navigation> <div tablist> <a id=1843 tab> <svg id=1848 img> <title> trip planner </title> </svg> <span> Trip Planner </span> </a> </div> <div tabpanel> <a id=58> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [8541] [Boston Logan Airport]",
+      "op": "TYPE",
+      "element": "8541",
+      "value": "Boston Logan Airport",
+      "description": "[combobox] From -> TYPE: Boston Logan Airport",
+      "role": "combobox",
+      "label": "From",
+      "observation": "<html> <div navigation> <div tabpanel> <form> <input _utf8 /> <div> <div> <span> A </span> <input id=8541 combobox text plan[from] enter a location /> <input/> <input/> </div> <div> <span> B </span> <input id=10583 combobox text plan[to] enter a location /> <input/> <input/> </div> </div> <button id=10623 submit> Get trip suggestions </button> </form> </div> </div> </html>"
+    }
+  ]
+}

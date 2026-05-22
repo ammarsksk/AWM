@@ -1,0 +1,30 @@
+{
+  "name": "carmax / Auto workflow 27",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Search for used Jaguar XFs with no black exterior color and save the search as Jaguar  to get a notification daily.",
+  "steps": [
+    {
+      "action": "TYPE [120] [jaguar xf]",
+      "op": "TYPE",
+      "element": "120",
+      "value": "jaguar xf",
+      "description": "[searchbox] Search make, model, or keyword -> TYPE: jaguar xf",
+      "role": "searchbox",
+      "label": "Search make, model, or keyword",
+      "observation": "<html> <header banner> <nav primary> <div> <a id=255> Shop </a> <a id=258> Sell/Trade </a> <a> Finance </a> </div> </nav> <form search> <div> <label> Search make, model, or keyword </label> <input id=120 search search by make, model, or /> </div> </form> </header> </html>"
+    },
+    {
+      "action": "CLICK [5446]",
+      "op": "CLICK",
+      "element": "5446",
+      "value": "",
+      "description": "[link] Jaguar XF -> CLICK",
+      "role": "link",
+      "label": "Jaguar XF",
+      "observation": "<html> <header banner> <ul menu> <li id=5695 menuitem> <a id=5446> <div> Jaguar XF </div> </a> </li> <li menuitem> </li> <li menuitem> </li> <li id=5709 menuitem> <div> Jaguar XJ </div> </li> <li menuitem> </li> <li menuitem> </li> <li menuitem> </li> </ul> </header> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "rentalcars / Car rental workflow 272",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Search for Premium Cars available to rent at LondonHeathrow Airport.",
+  "steps": [
+    {
+      "action": "CLICK [131]",
+      "op": "CLICK",
+      "element": "131",
+      "value": "",
+      "description": "[label] Pick-up location -> CLICK",
+      "role": "label",
+      "label": "Pick-up location",
+      "observation": "<html> <main> <div> <label id=131> Pick-up location </label> <input id=372 pick-up location /> </div> <button id=1138 button> <div> Airports </div> </button> </main> </html>"
+    },
+    {
+      "action": "TYPE [3104] [London]",
+      "op": "TYPE",
+      "element": "3104",
+      "value": "London",
+      "description": "[textbox] Pick-up location -> TYPE: London",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <main> <div> <div> <label> Pick-up location </label> <input id=3104 pick-up location /> </div> <button id=3623 button> <div> Search </div> </button> </div> <button id=4131 button> <div> Airports </div> </button> </main> </html>"
+    }
+  ]
+}

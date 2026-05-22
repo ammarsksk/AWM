@@ -1,0 +1,51 @@
+{
+  "name": "travelzoo / General workflow 924",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Show me the highest rated Last-Minute Flights & Car Rentals",
+  "goal_pattern": "Show me the highest rated Last-Minute Flights & Car Rentals",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Last-Minute Deals",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Last-Minute Deals",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Last-Minute Flights & Car Rentals",
+      "operation": "CLICK",
+      "target_type": "heading",
+      "target_description": "Last-Minute Flights & Car Rentals",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [676]",
+      "gold_element_id": "676",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4152]",
+      "gold_element_id": "4152",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "travelzoo / General workflow 924"
+}

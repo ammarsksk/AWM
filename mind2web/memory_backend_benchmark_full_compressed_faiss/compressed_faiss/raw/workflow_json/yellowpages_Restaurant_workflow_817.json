@@ -1,0 +1,30 @@
+{
+  "name": "yellowpages / Restaurant workflow 817",
+  "source": "Mind2Web exemplar",
+  "website": "yellowpages",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Filter car accident lawyers in Stanford, CA, sort them by distane and find the phone number of the nearest one.",
+  "steps": [
+    {
+      "action": "TYPE [225] [Stanford, CA]",
+      "op": "TYPE",
+      "element": "225",
+      "value": "Stanford, CA",
+      "description": "[input] -> TYPE: Stanford, CA",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <form> <input id=300 text search_terms what are you looking for? /> <input id=225 text columbus, oh where? seattle, wa /> <button id=420 submit find> <span> Find </span> </button> </form> </html>"
+    },
+    {
+      "action": "TYPE [1842] [car accident lawyers]",
+      "op": "TYPE",
+      "element": "1842",
+      "value": "car accident lawyers",
+      "description": "[input] -> TYPE: car accident lawyers",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <form> <input id=1842 text search_terms what are you looking for? /> <a id=1998> <b> Stanford, CA </b> </a> <button id=2032 submit find> <span> Find </span> </button> </form> </html>"
+    }
+  ]
+}

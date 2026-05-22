@@ -1,0 +1,51 @@
+{
+  "name": "gamestop / Speciality workflow 792",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "gamestop",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "find trade in value for PS4 console",
+  "goal_pattern": "find trade in value for PS4 console",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the repeat Trade-In",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "repeat Trade-In",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Consoles",
+      "operation": "CLICK",
+      "target_type": "p",
+      "target_description": "Consoles",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [121]",
+      "gold_element_id": "121",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [11258]",
+      "gold_element_id": "11258",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "gamestop / Speciality workflow 792"
+}

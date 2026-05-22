@@ -1,0 +1,51 @@
+{
+  "name": "mbta / Ground workflow 815",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Show me the schedule and maps for the orange line",
+  "goal_pattern": "Show me the schedule and maps for the orange line",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the subway Subway Lines",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "subway Subway Lines",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Orange Line",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Orange Line",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [64]",
+      "gold_element_id": "64",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [10383]",
+      "gold_element_id": "10383",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "mbta / Ground workflow 815"
+}

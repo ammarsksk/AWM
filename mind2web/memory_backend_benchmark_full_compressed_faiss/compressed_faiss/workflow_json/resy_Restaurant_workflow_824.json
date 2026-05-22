@@ -1,0 +1,51 @@
+{
+  "name": "resy / Restaurant workflow 824",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find an article about a new restaurant and share it on Twitter",
+  "goal_pattern": "Find an article about a new restaurant and share it on Twitter",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the New Openings",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "New Openings",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the [a] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "a",
+      "target_description": "[a] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [470]",
+      "gold_element_id": "470",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [13843]",
+      "gold_element_id": "13843",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "resy / Restaurant workflow 824"
+}

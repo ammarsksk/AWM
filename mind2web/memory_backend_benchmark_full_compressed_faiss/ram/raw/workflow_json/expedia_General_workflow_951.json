@@ -1,0 +1,30 @@
+{
+  "name": "expedia / General workflow 951",
+  "source": "Mind2Web exemplar",
+  "website": "expedia",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find cheapest luxury car rental in New York for two with pickup from JFK airport at 9am, April 3 and drop off at JFK on 6pm, April 6",
+  "steps": [
+    {
+      "action": "CLICK [493]",
+      "op": "CLICK",
+      "element": "493",
+      "value": "",
+      "description": "[tab] Cars -> CLICK",
+      "role": "tab",
+      "label": "Cars",
+      "observation": "<html> <div main> <div> <ul tablist> <a id=493 tab> <span> Cars </span> </a> </ul> <div tabpanel> <button id=654 submit> Search </button> </div> </div> <div tabpanel> <a id=1234> Car rentals in New York </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4246]",
+      "op": "CLICK",
+      "element": "4246",
+      "value": "",
+      "description": "[button] Pick-up -> CLICK",
+      "role": "button",
+      "label": "Pick-up",
+      "observation": "<html> <div main> <div tabpanel> <div tabpanel> <div pick-up> <div> <label> Pick-up </label> <input text /> <button id=4246 button pick-up> <span> Pick-up </span> </button> <div> Pick-up </div> </div> </div> <div> <div> <input text d1 2023-04-05 pick-up date /> <button id=4689 button pick-up date april 5, 2023> Apr 5 </button> <button button /> </div> <div> <input text d2 2023-04-06 drop-off date /> <button id=4701 button drop-off date april 6, 2023> Apr 6 </button> <button button /> </div> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

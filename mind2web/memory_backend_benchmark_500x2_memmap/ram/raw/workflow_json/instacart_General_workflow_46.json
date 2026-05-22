@@ -1,0 +1,30 @@
+{
+  "name": "instacart / General workflow 46",
+  "source": "Mind2Web exemplar",
+  "website": "instacart",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Add a new address to the account. The address is 2983 Marietta Street,  APT 2. Business name is Buck.",
+  "steps": [
+    {
+      "action": "CLICK [278]",
+      "op": "CLICK",
+      "element": "278",
+      "value": "",
+      "description": "[span] 171 2nd street -> CLICK",
+      "role": "span",
+      "label": "171 2nd street",
+      "observation": "<html> <div> <div> <div search products, stores, and recipes> <form search> <p> Begin typing in the search field, and the app will offer suggestions. Use the arrow keys to navigate to a </p> <p> 3 entries </p> <input id=272 search search products, stores, and recipes /> <button submit search /> </form> </div> <div button> <button id=278 button current address: 171 2nd street.> <span> 171 2nd street </span> </button> </div> </div> <div main> <button id=506> Show more </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [1878] [2983 Marietta Street]",
+      "op": "TYPE",
+      "element": "1878",
+      "value": "2983 Marietta Street",
+      "description": "[textbox] Add a new address -> TYPE: 2983 Marietta Street",
+      "role": "textbox",
+      "label": "Add a new address",
+      "observation": "<html> <div dialog choose address> <div> <div> <input id=1878 text streetaddress /> <label id=2481> Add a new address </label> </div> <button id=2505> Edit </button> </div> </div> </html>"
+    }
+  ]
+}

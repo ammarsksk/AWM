@@ -1,0 +1,51 @@
+{
+  "name": "carnival / Other workflow 820",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carnival",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find cruises to Hawaii departing from Los Angeles in January 2024 with a duration of 12 days.",
+  "goal_pattern": "Find cruises to Hawaii departing from Los Angeles in January 2024 with a duration of 12 days.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the SAIL TO",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "SAIL TO",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Hawaii",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Hawaii",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [145]",
+      "gold_element_id": "145",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5511]",
+      "gold_element_id": "5511",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carnival / Other workflow 820"
+}

@@ -1,0 +1,171 @@
+[
+  {
+    "task_index": 1,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest\nObservation: <html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.047006625682115555,
+          -0.028971942141652107,
+          0.02987353689968586,
+          0.044177524745464325,
+          0.003945113159716129,
+          -0.0019797952845692635,
+          -0.028131071478128433,
+          -0.1267404407262802,
+          0.036989737302064896,
+          -0.07116927951574326,
+          0.011148029938340187,
+          0.003076699795201421,
+          -0.11387912929058075,
+          0.028271595016121864,
+          -0.02415534108877182,
+          -0.029384076595306396
+        ],
+        "candidate_elements": [
+          {
+            "id": "136",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location"
+          },
+          {
+            "id": "753",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html"
+          },
+          {
+            "id": "755",
+            "tag": "button",
+            "role_hint": "button select location",
+            "label": "button select location",
+            "nearby_text": "ivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html"
+          }
+        ],
+        "retrieval_candidates": [],
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "SELECT [136] [Pickup]",
+        "predicted_action": null,
+        "raw_llm_output": null,
+        "parsed_llm_output": null
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 1",
+    "workflow_embedding_preview": [
+      0.0066890898160636425,
+      -0.016826679930090904,
+      0.020506983622908592,
+      0.011795134283602238,
+      -0.0033922672737389803,
+      -0.004364548716694117,
+      0.041669514030218124,
+      -0.1565699726343155,
+      0.04066275432705879,
+      -0.062304042279720306,
+      0.028927823528647423,
+      -0.034028586000204086,
+      -0.08144132047891617,
+      -0.05304771289229393,
+      0.03697063401341438,
+      0.035794299095869064
+    ]
+  },
+  {
+    "task_index": 2,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.\nObservation: <html> <div> <select id=708 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=726 text location columbus, oh /> <button button select location> <svg id=110 /> </button> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.06789156794548035,
+          0.019314151257276535,
+          -0.008357299491763115,
+          0.057082127779722214,
+          -0.03008483164012432,
+          0.00828761886805296,
+          -0.02703104540705681,
+          -0.1188698336482048,
+          0.016971513628959656,
+          -0.08798452466726303,
+          0.02303973026573658,
+          -0.006638592574745417,
+          -0.07340696454048157,
+          0.04682758450508118,
+          0.011311210691928864,
+          -0.009125716984272003
+        ],
+        "candidate_elements": [
+          {
+            "id": "708",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg id"
+          },
+          {
+            "id": "726",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html"
+          },
+          {
+            "id": "110",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.5238,
+            "semantic_score": 0.6547,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest <action> SELECT [136] [Pickup] <action> CLICK [3113] <action> TYPE [6068] [Boston] <action> CLICK [10413] <action> CLICK [12210] <action> CLICK [18663] <action> SELECT [28709] [5 00 PM] <action> CLICK [31817] <action> CLICK [34711] <action> SELECT [36974] [1 guest] <action> CLICK [41495]"
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "gold_action_for_trace_only": "CLICK [110]",
+        "predicted_action": null,
+        "raw_llm_output": null,
+        "parsed_llm_output": null
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 2",
+    "workflow_embedding_preview": [
+      0.051320891827344894,
+      -0.01814853772521019,
+      0.023500269278883934,
+      0.027221746742725372,
+      -0.033752452582120895,
+      -0.002466790145263076,
+      0.04753507301211357,
+      -0.14508123695850372,
+      0.03231917694211006,
+      -0.05583624541759491,
+      0.003866222221404314,
+      -0.0571347214281559,
+      -0.058110371232032776,
+      -0.04758987948298454,
+      0.051674652844667435,
+      0.07784922420978546
+    ]
+  }
+]

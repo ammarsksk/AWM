@@ -1,0 +1,1536 @@
+[
+  {
+    "task_index": 1,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest\nObservation: <html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.047006625682115555,
+          -0.028971942141652107,
+          0.02987353689968586,
+          0.044177524745464325,
+          0.003945113159716129,
+          -0.0019797952845692635,
+          -0.028131071478128433,
+          -0.1267404407262802,
+          0.036989737302064896,
+          -0.07116927951574326,
+          0.011148029938340187,
+          0.003076699795201421,
+          -0.11387912929058075,
+          0.028271595016121864,
+          -0.02415534108877182,
+          -0.029384076595306396
+        ],
+        "candidate_elements": [
+          {
+            "id": "136",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location"
+          },
+          {
+            "id": "753",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html"
+          },
+          {
+            "id": "755",
+            "tag": "button",
+            "role_hint": "button select location",
+            "label": "button select location",
+            "nearby_text": "ivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location div div html"
+          }
+        ],
+        "retrieval_candidates": [],
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "SELECT [136] [Pickup]",
+        "predicted_action": "SELECT [136] [pickup]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"SELECT [136] [pickup]\",\n  \"reason\": \"The user wants to find a pickup restaurant, so I need to select the 'Pickup' option from the type dropdown.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "SELECT [136] [pickup]",
+          "reason": "The user wants to find a pickup restaurant, so I need to select the 'Pickup' option from the type dropdown."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest\nObservation: <html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>",
+        "query_embedding_preview": [
+          0.030528178438544273,
+          -0.04886456951498985,
+          0.03330645337700844,
+          0.028015777468681335,
+          -0.012414722703397274,
+          -0.031027210876345634,
+          -0.054883893579244614,
+          -0.12096059322357178,
+          0.02662784792482853,
+          -0.06616193801164627,
+          0.005312884692102671,
+          0.002251920523121953,
+          -0.0960475504398346,
+          0.018641339614987373,
+          -0.010108848102390766,
+          -0.024275358766317368
+        ],
+        "candidate_elements": [
+          {
+            "id": "3721",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "html div input text location columbus, oh button button select location svg button div html"
+          },
+          {
+            "id": "3723",
+            "tag": "button",
+            "role_hint": "button select location",
+            "label": "button select location",
+            "nearby_text": "html div input text location columbus, oh button button select location svg button div html"
+          },
+          {
+            "id": "3113",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div input text location columbus, oh button button select location svg button div html"
+          }
+        ],
+        "retrieval_candidates": [],
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [3113]",
+        "predicted_action": "TYPE [3721] [Boston, NY]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [3721] [Boston, NY]\",\n  \"reason\": \"The user wants to find a restaurant in Boston, NY, so I need to type 'Boston, NY' into the location input field.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [3721] [Boston, NY]",
+          "reason": "The user wants to find a restaurant in Boston, NY, so I need to type 'Boston, NY' into the location input field."
+        }
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 1",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"exploretock / Restaurant workflow 1\",\n  \"goal_pattern\": \"Find available restaurants for a specific reservation type and location.\",\n  \"applicability\": {\n    \"when_to_use\": \"When the user wants to find restaurants on Tock with a specific reservation type (e.g., Pickup, Delivery) and location.\",\n    \"when_not_to_use\": \"When searching for a specific restaurant by name or for a standard 'Dine in' reservation without changing the default location.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Select the desired reservation type.\",\n      \"operation\": \"SELECT\",\n      \"target_type\": \"select\",\n      \"target_description\": \"The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'.\",\n      \"value_policy\": \"Select the reservation type specified in the task goal (e.g., 'Pickup').\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Clear the pre-filled location to enter a new one.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"button\",\n      \"target_description\": \"The clear button, often an 'X' icon, located inside or next to the location input field.\",\n      \"value_policy\": null\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      0.022267017513513565,
+      -0.021935993805527687,
+      -0.03650616481900215,
+      0.031336043030023575,
+      -0.03670765832066536,
+      0.0066204918548464775,
+      0.03397015482187271,
+      -0.07845541834831238,
+      -0.012304847128689289,
+      -0.0571686327457428,
+      0.03463125228881836,
+      -0.05862407013773918,
+      -0.06165812537074089,
+      -0.015878137201070786,
+      0.1077156737446785,
+      0.07213395088911057
+    ]
+  },
+  {
+    "task_index": 2,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.\nObservation: <html> <div> <select id=708 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=726 text location columbus, oh /> <button button select location> <svg id=110 /> </button> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.06789156794548035,
+          0.019314151257276535,
+          -0.008357299491763115,
+          0.057082127779722214,
+          -0.03008483164012432,
+          0.00828761886805296,
+          -0.02703104540705681,
+          -0.1188698336482048,
+          0.016971513628959656,
+          -0.08798452466726303,
+          0.02303973026573658,
+          -0.006638592574745417,
+          -0.07340696454048157,
+          0.04682758450508118,
+          0.011311210691928864,
+          -0.009125716984272003
+        ],
+        "candidate_elements": [
+          {
+            "id": "708",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg id"
+          },
+          {
+            "id": "726",
+            "tag": "input",
+            "role_hint": "text location columbus oh",
+            "label": "text location columbus oh",
+            "nearby_text": "ckup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html"
+          },
+          {
+            "id": "110",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "Events option option wineries Wineries option option all Everything option select div input text location columbus, oh button button select location svg button div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3888,
+            "semantic_score": 0.486,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "gold_action_for_trace_only": "CLICK [110]",
+        "predicted_action": "SELECT [708] [Wineries]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"SELECT [708] [Wineries]\",\n  \"reason\": \"The user wants to book a winery tour, so the first step is to select 'Wineries' from the type dropdown menu to filter the search results.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "SELECT [708] [Wineries]",
+          "reason": "The user wants to book a winery tour, so the first step is to select 'Wineries' from the type dropdown menu to filter the search results."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: exploretock\nDomain: Travel\nSubdomain: Restaurant\nTask: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.\nObservation: <html> <body> <div> <select id=3825 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <select id=3869 time> <option 11:00 true> Now </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> <option 12:30> 12:30 PM </option> <option 13:00> 1:00 PM </option> <option 13:30> 1:30 PM </option> <option 14:00> 2:00 PM </option> <option 14:30> 2:30 PM </option> <option 15:00> 3:00 PM </option> <option 15:30> 3:30 PM </option> <option 16:00> 4:00 PM </option> <option 16:30> 4:30 PM </option> <option 17:00> 5:00 PM </option> <option 17:30> 5:30 PM </option> <option 18:00> 6:00 PM </option> <option 18:30> 6:30 PM </option> <option 19:00> 7:00 PM </option> <option 19:30> 7:30 PM </option> <option 20:00> 8:00 PM </option> <option 20:30> 8:30 PM </option> <option 21:00> 9:00 PM </option> <option 21:30> 9:30 PM </option> <option 22:00> 10:00 PM </option> <option 22:30> 10:30 PM </option> <option 23:00> 11:00 PM </option> </select> </div> <div dialog> <button clear search> <svg id=3210 /> </button> </div> </body> </html>",
+        "query_embedding_preview": [
+          0.05856893211603165,
+          -0.00760195916518569,
+          0.014458703808486462,
+          0.027562707662582397,
+          -0.04874826595187187,
+          -0.005150105804204941,
+          -0.027015935629606247,
+          -0.12402606755495071,
+          0.03947414085268974,
+          -0.06998822838068008,
+          0.0021485518664121628,
+          0.0014342899667099118,
+          -0.09797612577676773,
+          0.036718882620334625,
+          0.030147610232234,
+          -0.025662263855338097
+        ],
+        "candidate_elements": [
+          {
+            "id": "3825",
+            "tag": "select",
+            "role_hint": "type",
+            "label": "type",
+            "nearby_text": "html body div select type option reservations true Dine in option option pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select select time option 11:00 true Now option option 11:30 11:30 AM option"
+          },
+          {
+            "id": "3869",
+            "tag": "select",
+            "role_hint": "time",
+            "label": "time",
+            "nearby_text": "ion pickup Pickup option option delivery Delivery option option events Events option option wineries Wineries option option all Everything option select select time option 11:00 true Now option option 11:30 11:30 AM option option 12:00 12:00 PM option option 12:30 12:30 PM option option 13:00 1:00 P"
+          },
+          {
+            "id": "3210",
+            "tag": "svg",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "21:30 9:30 PM option option 22:00 10:00 PM option option 22:30 10:30 PM option option 23:00 11:00 PM option select div div dialog button clear search svg button div body html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3938,
+            "semantic_score": 0.4922,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "gold_action_for_trace_only": "CLICK [3210]",
+        "predicted_action": "CLICK [3210]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [3210]\",\n  \"reason\": \"The task requires searching for a winery in a specific location, 'Napa Valley'. The current location is likely a default one that needs to be cleared before entering the new location. The button with id 3210 is a 'clear search' button, which will clear the current location input.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [3210]",
+          "reason": "The task requires searching for a winery in a specific location, 'Napa Valley'. The current location is likely a default one that needs to be cleared before entering the new location. The button with id 3210 is a 'clear search' button, which will clear the current location input."
+        }
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 2",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"exploretock / Restaurant workflow 2\",\n  \"goal_pattern\": \"Search for and filter experiences like dining, events, or winery tours based on specific criteria.\",\n  \"applicability\": {\n    \"when_to_use\": \"When starting a search for an experience on Tock and needing to apply detailed filters to the results.\",\n    \"when_not_to_use\": \"When booking a previously visited or known establishment directly without searching.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Initiate a search for experiences.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"button\",\n      \"target_description\": \"Search button located next to the location input field.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"Choose the button adjacent to the location input.\",\n      \"success_signal\": \"The page loads search results.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Open the advanced filters panel.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"button\",\n      \"target_description\": \"Button to display more filtering options, often labeled 'Filters' or represented by a filter icon.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"Choose the button labeled 'Filters'.\",\n      \"success_signal\": \"A panel with additional filter categories appears.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      0.023643726482987404,
+      0.013333704322576523,
+      -0.01450421940535307,
+      0.044141802936792374,
+      -0.004395985510200262,
+      0.031629521399736404,
+      0.021063456311821938,
+      -0.10506414622068405,
+      -0.015370870009064674,
+      -0.11648005992174149,
+      -0.0114466967061162,
+      -0.05212889239192009,
+      -0.06367615610361099,
+      -0.003524076659232378,
+      0.03904614970088005,
+      0.057488832622766495
+    ]
+  },
+  {
+    "task_index": 3,
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001\nObservation: <html> <div> <div region> <div combobox> <input id=3714 search provide a location /> </div> </div> <div> <a id=116> Email Offers </a> <p> Don't miss an excuse to hit the road: our latest offers delivered to your inbox. </p> </div> </div> <a id=134 /> </html>",
+        "query_embedding_preview": [
+          0.015146248042583466,
+          0.050685517489910126,
+          0.04998866468667984,
+          0.009723607450723648,
+          0.02129853144288063,
+          -0.032818928360939026,
+          0.04647213965654373,
+          -0.03798339143395424,
+          0.02347729727625847,
+          -0.07205774635076523,
+          -0.04276120662689209,
+          0.03724536672234535,
+          0.02121848799288273,
+          0.026553092524409294,
+          -0.022844096645712852,
+          0.054140474647283554
+        ],
+        "candidate_elements": [
+          {
+            "id": "3714",
+            "tag": "input",
+            "role_hint": "search provide a location",
+            "label": "search provide a location",
+            "nearby_text": "html div div region div combobox input search provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html"
+          },
+          {
+            "id": "116",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div div region div combobox input search provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html"
+          },
+          {
+            "id": "134",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "arch provide a location div div div a Email Offers a p Don t miss an excuse to hit the road: our latest offers delivered to your inbox. p div div a html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4619,
+            "semantic_score": 0.3274,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.268,
+            "semantic_score": 0.335,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [134]",
+        "predicted_action": "CLICK [116]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [116]\",\n  \"reason\": \"The user wants to sign up for email offers, and clicking the 'Email Offers' link is the first step to navigate to the correct page.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [116]",
+          "reason": "The user wants to sign up for email offers, and clicking the 'Email Offers' link is the first step to navigate to the correct page."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001\nObservation: <html> <form> <div> <input id=11031 text first-name /> <input id=14526 text last-name /> </div> <input id=14535 email /> </form> </html>",
+        "query_embedding_preview": [
+          0.002542457077652216,
+          0.03491075336933136,
+          0.04903996363282204,
+          0.011145215481519699,
+          -0.0026057278737425804,
+          -0.03088405355811119,
+          0.02939615584909916,
+          -0.0269628819078207,
+          0.004403660539537668,
+          -0.05427618697285652,
+          -0.03224973380565643,
+          -0.0007191863842308521,
+          0.020032960921525955,
+          0.032934509217739105,
+          -0.0070090508088469505,
+          0.05672992765903473
+        ],
+        "candidate_elements": [
+          {
+            "id": "11031",
+            "tag": "input",
+            "role_hint": "text first-name",
+            "label": "text first-name",
+            "nearby_text": "html form div input text first-name input text last-name div input email form html"
+          },
+          {
+            "id": "14526",
+            "tag": "input",
+            "role_hint": "text last-name",
+            "label": "text last-name",
+            "nearby_text": "html form div input text first-name input text last-name div input email form html"
+          },
+          {
+            "id": "14535",
+            "tag": "input",
+            "role_hint": "email",
+            "label": "email",
+            "nearby_text": "html form div input text first-name input text last-name div input email form html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4419,
+            "semantic_score": 0.3023,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2298,
+            "semantic_score": 0.2873,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "TYPE [11031] [Allan]",
+        "predicted_action": "TYPE [11031] [Allan]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [11031] [Allan]\",\n  \"reason\": \"The user wants to sign up for email offers as Allan Smith. The first step is to type the first name 'Allan' into the first name input field.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [11031] [Allan]",
+          "reason": "The user wants to sign up for email offers as Allan Smith. The first step is to type the first name 'Allan' into the first name input field."
+        }
+      }
+    ],
+    "added_workflow": "enterprise / Car rental workflow 3",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"enterprise / Car rental workflow 3\",\n  \"goal_pattern\": \"Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code}\",\n  \"applicability\": {\n    \"when_to_use\": \"When the user wants to subscribe to email promotions or newsletters.\",\n    \"when_not_to_use\": \"When the user wants to book a car, manage a reservation, or perform any action other than signing up for email offers.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Navigate to the email offers sign-up page.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"link\",\n      \"target_description\": \"Email Offers\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"Choose the link associated with the text 'Email Offers'.\",\n      \"success_signal\": \"A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Enter the user's first name.\",\n      \"operation\": \"TYPE\",\n      \"target_type\": \"input\",\n      \"target_description\": \"First Name\",\n      \"value_policy\": \"Use the first name from the user details provided in the task goal.\",\n      \"selection_rule\": \"Select the text input field with an attribute like 'first-name'.\",\n      \"success_signal\": \"The first name is correctly entered into the input field.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      -0.028969990089535713,
+      0.07548218965530396,
+      0.011366410180926323,
+      -0.031438905745744705,
+      0.024033771827816963,
+      -0.014300779439508915,
+      0.06906772404909134,
+      0.002095395466312766,
+      -0.0043548536486923695,
+      -0.048885833472013474,
+      -0.026198891922831535,
+      -0.026494616642594337,
+      -0.004457905888557434,
+      0.001151131116785109,
+      0.06148189678788185,
+      0.12619739770889282
+    ]
+  },
+  {
+    "task_index": 4,
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.\nObservation: <html> <div> <nav main menu> <div id=2456 button> Vehicles </div> </nav> <div region> <div combobox> <input id=198 search provide a location /> </div> </div> <div region> <a id=5582> <span> Minivans & Vans </span> </a> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.07362254709005356,
+          0.08423810452222824,
+          0.06537318229675293,
+          -0.025806447491049767,
+          0.011465074494481087,
+          0.024311859160661697,
+          -0.04298574849963188,
+          -0.0017130739288404584,
+          -0.010967683047056198,
+          -0.03156934678554535,
+          -0.0036392398178577423,
+          0.05173001438379288,
+          0.033927448093891144,
+          0.06412003934383392,
+          -0.019905168563127518,
+          0.06973184645175934
+        ],
+        "candidate_elements": [
+          {
+            "id": "2456",
+            "tag": "div",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html"
+          },
+          {
+            "id": "198",
+            "tag": "input",
+            "role_hint": "search provide a location",
+            "label": "search provide a location",
+            "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html"
+          },
+          {
+            "id": "5582",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div nav main menu div button Vehicles div nav div region div combobox input search provide a location div div div region a span Minivans & Vans span a div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5533,
+            "semantic_score": 0.4416,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2835,
+            "semantic_score": 0.327,
+            "bm25_score": 0.1095,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2726,
+            "semantic_score": 0.3408,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": "enterprise / Car rental workflow 3",
+        "gold_action_for_trace_only": "TYPE [198] [Brooklyn]",
+        "predicted_action": "TYPE [198] [Brooklyn City]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [198] [Brooklyn City]\",\n  \"reason\": \"The first step is to input the pickup location, \\\"Brooklyn City\\\", into the location search bar to begin the car rental search process.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [198] [Brooklyn City]",
+          "reason": "The first step is to input the pickup location, \"Brooklyn City\", into the location search bar to begin the car rental search process."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: enterprise\nDomain: Travel\nSubdomain: Car rental\nTask: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.\nObservation: <html> <div> <div region> <div combobox> <div listbox> <ul> <li id=13927 option> <span> <span> Brooklyn </span> , NY, US </span> <small> Select </small> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li id=17785 option> <span> <span> Brooklyn </span> , AU (New South Wales) </span> <small> Select </small> </li> <li option> </li> </ul> </div> </div> </div> <div region> <a id=19600> <span> Minivans & Vans </span> </a> </div> </div> </html>",
+        "query_embedding_preview": [
+          0.07258512824773788,
+          0.06807315349578857,
+          0.05069386586546898,
+          0.005667783785611391,
+          0.0503854975104332,
+          0.024153579026460648,
+          -0.028548263013362885,
+          -0.059423718601465225,
+          -0.008128606714308262,
+          -0.030858313664793968,
+          0.0049710264429450035,
+          0.04867614060640335,
+          0.04270574823021889,
+          0.012053857557475567,
+          -0.022969108074903488,
+          0.0875725969672203
+        ],
+        "candidate_elements": [
+          {
+            "id": "13927",
+            "tag": "li",
+            "role_hint": "option",
+            "label": "option",
+            "nearby_text": "html div div region div combobox div listbox ul li option span span Brooklyn span , NY, US span small Select small li li option li li option li li option li li option li li option li li option li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li"
+          },
+          {
+            "id": "17785",
+            "tag": "li",
+            "role_hint": "option",
+            "label": "option",
+            "nearby_text": "span Brooklyn span , NY, US span small Select small li li option li li option li li option li li option li li option li li option li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li ul div div div div region a span Minivans & Vans span a div div html"
+          },
+          {
+            "id": "19600",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "n li li option span span Brooklyn span , AU (New South Wales) span small Select small li li option li ul div div div div region a span Minivans & Vans span a div div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5397,
+            "semantic_score": 0.4247,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3752,
+            "semantic_score": 0.3777,
+            "bm25_score": 0.3653,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3145,
+            "semantic_score": 0.3931,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": "enterprise / Car rental workflow 3",
+        "gold_action_for_trace_only": "CLICK [13927]",
+        "predicted_action": "CLICK [13927]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [13927]\",\n  \"reason\": \"I am selecting 'Brooklyn, NY, US' as the pickup location, which matches the user's request.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [13927]",
+          "reason": "I am selecting 'Brooklyn, NY, US' as the pickup location, which matches the user's request."
+        }
+      }
+    ],
+    "added_workflow": "enterprise / Car rental workflow 4",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"enterprise / Car rental workflow 4\",\n  \"goal_pattern\": \"Find a specific car type at a given location for specified dates and renter age.\",\n  \"applicability\": {\n    \"when_to_use\": \"When starting a car rental search by specifying a location.\",\n    \"when_not_to_use\": \"When the location is already selected or the user wants to use their current location.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Enter the desired pick-up and return location.\",\n      \"operation\": \"TYPE\",\n      \"target_type\": \"input\",\n      \"target_description\": \"Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'.\",\n      \"value_policy\": \"Use the city or airport name from the user's request.\",\n      \"selection_rule\": \"N/A\",\n      \"success_signal\": \"A dropdown list of location suggestions appears.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Select the correct location from the auto-suggested list.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"option\",\n      \"target_description\": \"The list item in the location suggestions that matches the intended city and state/country.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US').\",\n      \"success_signal\": \"The location input field is populated with the selected location and the suggestion list disappears.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      0.04340691119432449,
+      0.03547465056180954,
+      0.020555423572659492,
+      0.005900865886360407,
+      0.031857870519161224,
+      0.0399022102355957,
+      0.0646626353263855,
+      -0.0015764357522130013,
+      -0.006448510102927685,
+      -0.053951140493154526,
+      -0.016515810042619705,
+      -0.05323784053325653,
+      -0.024747589603066444,
+      0.05649122595787048,
+      0.05910833179950714,
+      0.10308340191841125
+    ]
+  },
+  {
+    "task_index": 5,
+    "website": "kohls",
+    "domain": "Shopping",
+    "subdomain": "Department",
+    "goal": "Find the highest rated dog collar under 10 dollar.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: kohls\nDomain: Shopping\nSubdomain: Department\nTask: Find the highest rated dog collar under 10 dollar.\nObservation: <html> <article> <a id=1214> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=1457> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> <svg id=159 img /> </html>",
+        "query_embedding_preview": [
+          -0.011589073576033115,
+          0.06345365196466446,
+          -0.013632673770189285,
+          -0.01970362290740013,
+          0.020339064300060272,
+          -0.03344467282295227,
+          0.014412992633879185,
+          0.01371905580163002,
+          0.010421347804367542,
+          -0.01862449012696743,
+          0.04971005767583847,
+          0.0020189140923321247,
+          0.10499833524227142,
+          0.0699448436498642,
+          -0.03518778458237648,
+          0.005077790468931198
+        ],
+        "candidate_elements": [
+          {
+            "id": "1214",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html"
+          },
+          {
+            "id": "1457",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html"
+          },
+          {
+            "id": "159",
+            "tag": "svg",
+            "role_hint": "img",
+            "label": "img",
+            "nearby_text": "e a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article svg img html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3878,
+            "semantic_score": 0.2347,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.2691,
+            "semantic_score": 0.1577,
+            "bm25_score": 0.7147,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.175,
+            "semantic_score": 0.148,
+            "bm25_score": 0.283,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.1372,
+            "semantic_score": 0.1715,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [159]",
+        "predicted_action": "CLICK [1214]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [1214]\",\n  \"reason\": \"The user wants to find items under $10, and this link filters for products that are '$10 & Under'.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [1214]",
+          "reason": "The user wants to find items under $10, and this link filters for products that are '$10 & Under'."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: kohls\nDomain: Shopping\nSubdomain: Department\nTask: Find the highest rated dog collar under 10 dollar.\nObservation: <html> <div> <a id=7923> Pet </a> <article> <a id=18220> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=18463> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> </div> </html>",
+        "query_embedding_preview": [
+          -0.013368800282478333,
+          0.07473999261856079,
+          -0.006763778161257505,
+          -0.015488127246499062,
+          0.01632951758801937,
+          -0.03247781842947006,
+          0.016652343794703484,
+          -0.007298646494746208,
+          0.02259678579866886,
+          -0.03309345245361328,
+          0.029555916786193848,
+          0.010756950825452805,
+          0.09284473955631256,
+          0.05861002206802368,
+          -0.04139389470219612,
+          0.012988515198230743
+        ],
+        "candidate_elements": [
+          {
+            "id": "7923",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html"
+          },
+          {
+            "id": "18220",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html"
+          },
+          {
+            "id": "18463",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div a Pet a article a p span span $ span span 10 span span span & Under span p a a p span sup $ sup 10 span & Under p a article div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4061,
+            "semantic_score": 0.2576,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.2927,
+            "semantic_score": 0.1791,
+            "bm25_score": 0.7472,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.1852,
+            "semantic_score": 0.1702,
+            "bm25_score": 0.2454,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.1541,
+            "semantic_score": 0.1926,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          }
+        ],
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [7923]",
+        "predicted_action": "CLICK [18220]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [18220]\",\n  \"reason\": \"The user wants to find items under $10. Element 18220 is a link with the text '$10 & Under', which corresponds to this price constraint.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [18220]",
+          "reason": "The user wants to find items under $10. Element 18220 is a link with the text '$10 & Under', which corresponds to this price constraint."
+        }
+      }
+    ],
+    "added_workflow": "kohls / Department workflow 5",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"kohls / Department workflow 5\",\n  \"goal_pattern\": \"Navigate to a specific product department.\",\n  \"applicability\": {\n    \"when_to_use\": \"When the user wants to browse a specific product department on Kohl's.\",\n    \"when_not_to_use\": \"When the user is searching for a specific product using the search bar or is not on a page with the main category navigation.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Open the main category navigation menu.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"link\",\n      \"target_description\": \"The main category navigation link, labeled 'Shop by Category'.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"N/A\",\n      \"success_signal\": \"A menu displaying product categories becomes visible.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Select the target product department from the category list.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"link\",\n      \"target_description\": \"The link for the desired product department.\",\n      \"value_policy\": \"Infer the department from the product mentioned in the task goal. For 'dog collar', the department is 'Pet'.\",\n      \"selection_rule\": \"Choose the link whose text matches the inferred department name.\",\n      \"success_signal\": \"The page loads the selected department's product listing.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      -0.012180686928331852,
+      0.008440446108579636,
+      -0.03765470162034035,
+      -0.0656525120139122,
+      0.03972044587135315,
+      -0.02119499258697033,
+      -0.0133290970697999,
+      -0.04189654439687729,
+      0.004559914115816355,
+      -0.064332976937294,
+      0.019168026745319366,
+      -0.042766131460666656,
+      0.013598850928246975,
+      -0.004691812209784985,
+      0.05318337306380272,
+      0.06694638729095459
+    ]
+  },
+  {
+    "task_index": 6,
+    "website": "united",
+    "domain": "Travel",
+    "subdomain": "Airlines",
+    "goal": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: united\nDomain: Travel\nSubdomain: Airlines\nTask: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023\nObservation: <html> <div> <header banner> <nav navigation> <div tablist> <a id=912 tab> <span> BOOK </span> </a> <a tab> </a> <a id=918 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=127 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> </main> </div> </html>",
+        "query_embedding_preview": [
+          0.0987987071275711,
+          -0.007250106893479824,
+          0.042830176651477814,
+          0.012439343146979809,
+          -0.0044323294423520565,
+          0.015793025493621826,
+          -0.03966589644551277,
+          -0.0705765038728714,
+          -0.007970714010298252,
+          -0.043536387383937836,
+          -0.04098646715283394,
+          0.015924278646707535,
+          -0.010652890428900719,
+          0.012528574094176292,
+          -0.032333649694919586,
+          -0.019373852759599686
+        ],
+        "candidate_elements": [
+          {
+            "id": "912",
+            "tag": "a",
+            "role_hint": "tab",
+            "label": "tab",
+            "nearby_text": "html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section"
+          },
+          {
+            "id": "918",
+            "tag": "a",
+            "role_hint": "tab",
+            "label": "tab",
+            "nearby_text": "html div header banner nav navigation div tablist a tab span BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section main d"
+          },
+          {
+            "id": "127",
+            "tag": "input",
+            "role_hint": "combobox text columbus cmh",
+            "label": "combobox text columbus cmh from",
+            "nearby_text": "BOOK span a a tab a a tab span TRAVEL INFO span a a tab a a tab a div nav header main main section tabpanel div tabpanel div input combobox text columbus cmh from* label enter your departing city, airport From* label div div section main div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.4459,
+            "semantic_score": 0.4248,
+            "bm25_score": 0.5302,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.4212,
+            "semantic_score": 0.2765,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Navigate to a specific product department. Abstract action pattern: CLICK intent=Open the main category navigation menu. target_type=link target=The main category navigation link, labeled 'Shop by Category'. value_policy=N/A selection_rule=N/A success=A menu displaying product categories becomes visible. Abstract action pattern: CLICK intent=Select the target product department from the category list. target_type=link target=The link for the desired product department. value_policy=Infer the department from the product mentioned in the task goal. For 'dog collar', the department is 'Pet'. selection_rule=Choose the link whose text matches the inferred department name. success=The page loads the selected department's product listing."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3106,
+            "semantic_score": 0.3791,
+            "bm25_score": 0.0365,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2967,
+            "semantic_score": 0.3708,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.2936,
+            "semantic_score": 0.3608,
+            "bm25_score": 0.0247,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "TYPE [127] [SPRINGFIELD]",
+        "predicted_action": "TYPE [127] [Springfiels, IL]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"TYPE [127] [Springfiels, IL]\",\n  \"reason\": \"The user wants to book a flight from Springfield, IL, so I need to type the departure city into the 'From' input field.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "TYPE [127] [Springfiels, IL]",
+          "reason": "The user wants to book a flight from Springfield, IL, so I need to type the departure city into the 'From' input field."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: united\nDomain: Travel\nSubdomain: Airlines\nTask: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023\nObservation: <html> <main main> <section tabpanel> <div tabpanel> <div> <div tooltip> <div listbox> <ul listbox> <li option> <button id=3634 button> <span> <strong> Springfield </strong> , IL, US (SPI) </span> </button> </li> <li option> <button id=3635 button> <span> <strong> Springfield </strong> , MO, US (SGF) </span> </button> </li> </ul> </div> </div> <div> <input id=4592 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> </div> </section> </main> </html>",
+        "query_embedding_preview": [
+          0.07996062189340591,
+          -0.02730710059404373,
+          0.03848029300570488,
+          0.023333001881837845,
+          -0.0024451680947095156,
+          0.042374204844236374,
+          -0.006567330565303564,
+          -0.05056961625814438,
+          -0.07899767905473709,
+          -0.04783779755234718,
+          -0.02471582032740116,
+          0.01147651206701994,
+          0.011810453608632088,
+          -0.004851247649639845,
+          -0.011397391557693481,
+          -0.011752268299460411
+        ],
+        "candidate_elements": [
+          {
+            "id": "3634",
+            "tag": "button",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html main main section tabpanel div tabpanel div div tooltip div listbox ul listbox li option button button span strong Springfield strong , IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label e"
+          },
+          {
+            "id": "3635",
+            "tag": "button",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "bpanel div div tooltip div listbox ul listbox li option button button span strong Springfield strong , IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label enter your destination city, airport To"
+          },
+          {
+            "id": "4592",
+            "tag": "input",
+            "role_hint": "combobox text to",
+            "label": "combobox text to",
+            "nearby_text": ", IL, US (SPI) span button li li option button button span strong Springfield strong , MO, US (SGF) span button li ul div div div input combobox text to* label enter your destination city, airport To* label div div div section main html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.586,
+            "semantic_score": 0.4825,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4326,
+            "semantic_score": 0.4109,
+            "bm25_score": 0.5194,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4191,
+            "semantic_score": 0.4261,
+            "bm25_score": 0.3909,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.3682,
+            "semantic_score": 0.3134,
+            "bm25_score": 0.5877,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Navigate to a specific product department. Abstract action pattern: CLICK intent=Open the main category navigation menu. target_type=link target=The main category navigation link, labeled 'Shop by Category'. value_policy=N/A selection_rule=N/A success=A menu displaying product categories becomes visible. Abstract action pattern: CLICK intent=Select the target product department from the category list. target_type=link target=The link for the desired product department. value_policy=Infer the department from the product mentioned in the task goal. For 'dog collar', the department is 'Pet'. selection_rule=Choose the link whose text matches the inferred department name. success=The page loads the selected department's product listing."
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3144,
+            "semantic_score": 0.393,
+            "bm25_score": 0.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [3634]",
+        "predicted_action": "CLICK [3634]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [3634]\",\n  \"reason\": \"I am selecting Springfield, IL as the departure city from the dropdown list that appeared after typing in the origin.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [3634]",
+          "reason": "I am selecting Springfield, IL as the departure city from the dropdown list that appeared after typing in the origin."
+        }
+      }
+    ],
+    "added_workflow": "united / Airlines workflow 6",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"united / Airlines workflow 6\",\n  \"goal_pattern\": \"Enter the departure airport for a flight search.\",\n  \"applicability\": {\n    \"when_to_use\": \"When starting a flight search and needing to specify the departure location.\",\n    \"when_not_to_use\": \"When the departure location is already populated or the flight search form is different.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Enter the name of the departure city to trigger airport suggestions.\",\n      \"operation\": \"TYPE\",\n      \"target_type\": \"combobox\",\n      \"target_description\": \"Input field for the departing city, labeled 'From*'.\",\n      \"value_policy\": \"Use the city name from the specified departure location.\",\n      \"selection_rule\": \"\",\n      \"success_signal\": \"A dropdown list of matching airports appears.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Select the specific departure airport from the list of suggestions.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"button\",\n      \"target_description\": \"The airport suggestion button in the dropdown list.\",\n      \"value_policy\": \"\",\n      \"selection_rule\": \"Choose the button whose label contains the city, state, and airport code matching the specified departure location.\",\n      \"success_signal\": \"The 'From' input field is populated with the selected airport.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      0.06196195259690285,
+      0.006597088184207678,
+      -0.024555528536438942,
+      -0.021016107872128487,
+      0.033859193325042725,
+      0.016200492158532143,
+      0.05325177311897278,
+      -0.057359158992767334,
+      -0.008850927464663982,
+      -0.03027985244989395,
+      -0.056029826402664185,
+      -0.052709195762872696,
+      -0.03546581417322159,
+      -0.012167132459580898,
+      0.05854766443371773,
+      0.08746073395013809
+    ]
+  },
+  {
+    "task_index": 7,
+    "website": "budget",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: budget\nDomain: Travel\nSubdomain: Car rental\nTask: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.\nObservation: <html> <div> <ul> <a id=842 button> Reservations </a> <a id=133 button> Locations </a> </ul> <a id=3954> SUV Rental </a> </div> </html>",
+        "query_embedding_preview": [
+          0.047557421028614044,
+          0.012555032037198544,
+          0.003342068288475275,
+          0.04823274165391922,
+          -0.011548413895070553,
+          0.010209721513092518,
+          0.028861822560429573,
+          -0.014760109595954418,
+          0.03359275683760643,
+          0.04853701964020729,
+          0.015626143664121628,
+          0.023393895477056503,
+          0.043572332710027695,
+          0.06636226922273636,
+          0.019222695380449295,
+          -0.008347764611244202
+        ],
+        "candidate_elements": [
+          {
+            "id": "842",
+            "tag": "a",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html"
+          },
+          {
+            "id": "133",
+            "tag": "a",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html"
+          },
+          {
+            "id": "3954",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div ul a button Reservations a a button Locations a ul a SUV Rental a div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.56,
+            "semantic_score": 0.45,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3775,
+            "semantic_score": 0.3269,
+            "bm25_score": 0.5799,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.3227,
+            "semantic_score": 0.3336,
+            "bm25_score": 0.2792,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Enter the departure airport for a flight search. Abstract action pattern: TYPE intent=Enter the name of the departure city to trigger airport suggestions. target_type=combobox target=Input field for the departing city, labeled 'From*'. value_policy=Use the city name from the specified departure location. selection_rule= success=A dropdown list of matching airports appears. Abstract action pattern: CLICK intent=Select the specific departure airport from the list of suggestions. target_type=button target=The airport suggestion button in the dropdown list. value_policy= selection_rule=Choose the button whose label contains the city, state, and airport code matching the specified departure location. success=The 'From' input field is populated with the selected airport."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2791,
+            "semantic_score": 0.2303,
+            "bm25_score": 0.4743,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2682,
+            "semantic_score": 0.2908,
+            "bm25_score": 0.1778,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [133]",
+        "predicted_action": "CLICK [3954]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [3954]\",\n  \"reason\": \"The user wants to rent an SUV, and there is a specific link for 'SUV Rental' which is the most direct way to start the booking process for this type of vehicle.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [3954]",
+          "reason": "The user wants to rent an SUV, and there is a specific link for 'SUV Rental' which is the most direct way to start the booking process for this type of vehicle."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: budget\nDomain: Travel\nSubdomain: Car rental\nTask: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.\nObservation: <html> <div> <ul> <a id=10513 button> Reservations </a> <a id=9804> Find a Location </a> </ul> <a id=13625> SUV Rental </a> </div> </html>",
+        "query_embedding_preview": [
+          0.03810596466064453,
+          0.016109837219119072,
+          -4.2946787289110944e-05,
+          0.041078824549913406,
+          -0.005260763224214315,
+          0.010923557914793491,
+          0.031730491667985916,
+          -0.018875261768698692,
+          0.03705877810716629,
+          0.041856639087200165,
+          0.012683503329753876,
+          0.021364783868193626,
+          0.04181370884180069,
+          0.06658468395471573,
+          0.016149111092090607,
+          -0.011393298394978046
+        ],
+        "candidate_elements": [
+          {
+            "id": "10513",
+            "tag": "a",
+            "role_hint": "button",
+            "label": "button",
+            "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html"
+          },
+          {
+            "id": "9804",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html"
+          },
+          {
+            "id": "13625",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html div ul a button Reservations a a Find a Location a ul a SUV Rental a div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5728,
+            "semantic_score": 0.466,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3772,
+            "semantic_score": 0.3378,
+            "bm25_score": 0.5346,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign up for email offers with user details: {first_name}, {last_name}, {email}, {zip_code} Abstract action pattern: CLICK intent=Navigate to the email offers sign-up page. target_type=link target=Email Offers value_policy=N/A selection_rule=Choose the link associated with the text 'Email Offers'. success=A form for email sign-up with fields like 'First Name' and 'Last Name' becomes visible. Abstract action pattern: TYPE intent=Enter the user's first name. target_type=input target=First Name value_policy=Use the first name from the user details provided in the task goal. selection_rule=Select the text input field with an attribute like 'first-name'. success=The first name is correctly entered into the input field."
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.3296,
+            "semantic_score": 0.3446,
+            "bm25_score": 0.2696,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Enter the departure airport for a flight search. Abstract action pattern: TYPE intent=Enter the name of the departure city to trigger airport suggestions. target_type=combobox target=Input field for the departing city, labeled 'From*'. value_policy=Use the city name from the specified departure location. selection_rule= success=A dropdown list of matching airports appears. Abstract action pattern: CLICK intent=Select the specific departure airport from the list of suggestions. target_type=button target=The airport suggestion button in the dropdown list. value_policy= selection_rule=Choose the button whose label contains the city, state, and airport code matching the specified departure location. success=The 'From' input field is populated with the selected airport."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2909,
+            "semantic_score": 0.3041,
+            "bm25_score": 0.2382,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2882,
+            "semantic_score": 0.2461,
+            "bm25_score": 0.4563,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          }
+        ],
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [9804]",
+        "predicted_action": "CLICK [10513]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [10513]\",\n  \"reason\": \"The user wants to make a car rental reservation. Clicking on 'Reservations' is the most direct way to begin the booking process.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [10513]",
+          "reason": "The user wants to make a car rental reservation. Clicking on 'Reservations' is the most direct way to begin the booking process."
+        }
+      }
+    ],
+    "added_workflow": "budget / Car rental workflow 7",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"budget / Car rental workflow 7\",\n  \"goal_pattern\": \"Find a car rental location.\",\n  \"applicability\": {\n    \"when_to_use\": \"When the user's primary goal is to find a rental location before starting a booking.\",\n    \"when_not_to_use\": \"When the user wants to start a booking directly from the main page search form.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Navigate to the location finder section.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"button\",\n      \"target_description\": \"A primary navigation button labeled 'Locations'.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"N/A\",\n      \"success_signal\": \"Sub-navigation options related to locations appear.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Initiate the location search.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"link\",\n      \"target_description\": \"A link labeled 'Find a Location'.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"N/A\",\n      \"success_signal\": \"A page or form for searching for a location is displayed.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      0.03809628635644913,
+      0.042395539581775665,
+      -0.029918938875198364,
+      0.01626976951956749,
+      0.041071053594350815,
+      0.005137315485626459,
+      -0.015784326940774918,
+      -0.056253835558891296,
+      -0.012046756222844124,
+      -0.009320398792624474,
+      0.025513552129268646,
+      -0.0199702400714159,
+      -5.697219239664264e-05,
+      0.038912758231163025,
+      0.04001866653561592,
+      0.06957612931728363
+    ]
+  },
+  {
+    "task_index": 8,
+    "website": "underarmour",
+    "domain": "Shopping",
+    "subdomain": "Fashion",
+    "goal": "Find a men's UA outlet T-shirt of XL size and add to cart.",
+    "steps": [
+      {
+        "step": 1,
+        "query_text": "Website: underarmour\nDomain: Shopping\nSubdomain: Fashion\nTask: Find a men's UA outlet T-shirt of XL size and add to cart.\nObservation: <html> <div> <ul menubar> <li> <a id=1625 menuitem> <span> Men </span> </a> <div men> </div> </li> <li> <a id=4946 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <a id=6156> Shop Men </a> <a> Shop Women </a> <a> Shop Kids </a> </div> </main> </div> </html>",
+        "query_embedding_preview": [
+          -0.02684054523706436,
+          0.09694542735815048,
+          -0.01187098491936922,
+          0.025680335238575935,
+          0.05581630766391754,
+          -0.044052835553884506,
+          -0.004095881246030331,
+          -0.03399813547730446,
+          -0.03317170590162277,
+          -0.028103791177272797,
+          0.05268046632409096,
+          0.05458821728825569,
+          0.06033384054899216,
+          0.001365798874758184,
+          0.05050639063119888,
+          -0.03151373937726021
+        ],
+        "candidate_elements": [
+          {
+            "id": "1625",
+            "tag": "a",
+            "role_hint": "menuitem",
+            "label": "menuitem",
+            "nearby_text": "html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html"
+          },
+          {
+            "id": "4946",
+            "tag": "a",
+            "role_hint": "menuitem",
+            "label": "menuitem",
+            "nearby_text": "html div ul menubar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html"
+          },
+          {
+            "id": "6156",
+            "tag": "a",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "ar li a menuitem span Men span a div men div li li a menuitem span Outlet span a div outlet div li ul main main div a Shop Men a a Shop Women a a Shop Kids a div main div html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.48,
+            "semantic_score": 0.3501,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Navigate to a specific product department. Abstract action pattern: CLICK intent=Open the main category navigation menu. target_type=link target=The main category navigation link, labeled 'Shop by Category'. value_policy=N/A selection_rule=N/A success=A menu displaying product categories becomes visible. Abstract action pattern: CLICK intent=Select the target product department from the category list. target_type=link target=The link for the desired product department. value_policy=Infer the department from the product mentioned in the task goal. For 'dog collar', the department is 'Pet'. selection_rule=Choose the link whose text matches the inferred department name. success=The page loads the selected department's product listing."
+          },
+          {
+            "workflow_name": "budget / Car rental workflow 7",
+            "combined_score": 0.3037,
+            "semantic_score": 0.3552,
+            "bm25_score": 0.0979,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## budget / Car rental workflow 7 Source: Mind2Web exemplar Website: budget Domain: Travel Subdomain: Car rental Goal pattern: Find a car rental location. Abstract action pattern: CLICK intent=Navigate to the location finder section. target_type=button target=A primary navigation button labeled 'Locations'. value_policy=N/A selection_rule=N/A success=Sub-navigation options related to locations appear. Abstract action pattern: CLICK intent=Initiate the location search. target_type=link target=A link labeled 'Find a Location'. value_policy=N/A selection_rule=N/A success=A page or form for searching for a location is displayed."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2736,
+            "semantic_score": 0.3317,
+            "bm25_score": 0.041,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2504,
+            "semantic_score": 0.3067,
+            "bm25_score": 0.0254,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.2226,
+            "semantic_score": 0.2522,
+            "bm25_score": 0.1041,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          }
+        ],
+        "top_retrieved_workflow": "kohls / Department workflow 5",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [4946]",
+        "predicted_action": "CLICK [1625]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [1625]\",\n  \"reason\": \"The user wants to find a men's T-shirt. Clicking on the 'Men' category is the first step to navigate to the men's section of the website.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [1625]",
+          "reason": "The user wants to find a men's T-shirt. Clicking on the 'Men' category is the first step to navigate to the men's section of the website."
+        }
+      },
+      {
+        "step": 2,
+        "query_text": "Website: underarmour\nDomain: Shopping\nSubdomain: Fashion\nTask: Find a men's UA outlet T-shirt of XL size and add to cart.\nObservation: <html> <main main> <div> <a id=12463 refine by gender: mens> Mens </a> <div> <div id=18543> Product Category </div> <div id=18577> Product Type </div> </div> </div> </main> </html>",
+        "query_embedding_preview": [
+          -0.024362388998270035,
+          0.10137701034545898,
+          -0.01828991249203682,
+          0.02443425916135311,
+          0.037757404148578644,
+          -0.06903230398893356,
+          0.02896749973297119,
+          -0.02982180193066597,
+          -0.06322135776281357,
+          -0.03211071342229843,
+          0.04569357633590698,
+          0.0031894368585199118,
+          0.04808641970157623,
+          0.026116037741303444,
+          0.06569215655326843,
+          -0.029819471761584282
+        ],
+        "candidate_elements": [
+          {
+            "id": "12463",
+            "tag": "a",
+            "role_hint": "refine by gender: mens",
+            "label": "refine by gender: mens",
+            "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html"
+          },
+          {
+            "id": "18543",
+            "tag": "div",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html"
+          },
+          {
+            "id": "18577",
+            "tag": "div",
+            "role_hint": "",
+            "label": "",
+            "nearby_text": "html main main div a refine by gender: mens Mens a div div Product Category div div Product Type div div div main html"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.4849,
+            "semantic_score": 0.3561,
+            "bm25_score": 1.0,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Navigate to a specific product department. Abstract action pattern: CLICK intent=Open the main category navigation menu. target_type=link target=The main category navigation link, labeled 'Shop by Category'. value_policy=N/A selection_rule=N/A success=A menu displaying product categories becomes visible. Abstract action pattern: CLICK intent=Select the target product department from the category list. target_type=link target=The link for the desired product department. value_policy=Infer the department from the product mentioned in the task goal. For 'dog collar', the department is 'Pet'. selection_rule=Choose the link whose text matches the inferred department name. success=The page loads the selected department's product listing."
+          },
+          {
+            "workflow_name": "budget / Car rental workflow 7",
+            "combined_score": 0.2658,
+            "semantic_score": 0.3302,
+            "bm25_score": 0.008,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## budget / Car rental workflow 7 Source: Mind2Web exemplar Website: budget Domain: Travel Subdomain: Car rental Goal pattern: Find a car rental location. Abstract action pattern: CLICK intent=Navigate to the location finder section. target_type=button target=A primary navigation button labeled 'Locations'. value_policy=N/A selection_rule=N/A success=Sub-navigation options related to locations appear. Abstract action pattern: CLICK intent=Initiate the location search. target_type=link target=A link labeled 'Find a Location'. value_policy=N/A selection_rule=N/A success=A page or form for searching for a location is displayed."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2342,
+            "semantic_score": 0.2846,
+            "bm25_score": 0.0326,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Search for and filter experiences like dining, events, or winery tours based on specific criteria. Abstract action pattern: CLICK intent=Initiate a search for experiences. target_type=button target=Search button located next to the location input field. value_policy=N/A selection_rule=Choose the button adjacent to the location input. success=The page loads search results. Abstract action pattern: CLICK intent=Open the advanced filters panel. target_type=button target=Button to display more filtering options, often labeled 'Filters' or represented by a filter icon. value_policy=N/A selection_rule=Choose the button labeled 'Filters'. success=A panel with additional filter categories appears."
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2212,
+            "semantic_score": 0.2714,
+            "bm25_score": 0.0203,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Find available restaurants for a specific reservation type and location. Abstract action pattern: SELECT intent=Select the desired reservation type. target_type=select target=The dropdown menu for choosing the reservation type, such as 'Dine in', 'Pickup', or 'Delivery'. value_policy=Select the reservation type specified in the task goal (e.g., 'Pickup'). selection_rule= success= Abstract action pattern: CLICK intent=Clear the pre-filled location to enter a new one. target_type=button target=The clear button, often an 'X' icon, located inside or next to the location input field. value_policy=None selection_rule= success="
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.1982,
+            "semantic_score": 0.2351,
+            "bm25_score": 0.0505,
+            "retrieval_backend": "sentence_transformers_faiss_bm25",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a specific car type at a given location for specified dates and renter age. Abstract action pattern: TYPE intent=Enter the desired pick-up and return location. target_type=input target=Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'. value_policy=Use the city or airport name from the user's request. selection_rule=N/A success=A dropdown list of location suggestions appears. Abstract action pattern: CLICK intent=Select the correct location from the auto-suggested list. target_type=option target=The list item in the location suggestions that matches the intended city and state/country. value_policy=N/A selection_rule=Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US'). success=The location input field is populated with the selected location and the suggestion list disappears."
+          }
+        ],
+        "top_retrieved_workflow": "kohls / Department workflow 5",
+        "accepted_workflow": null,
+        "gold_action_for_trace_only": "CLICK [12463]",
+        "predicted_action": "CLICK [12463]",
+        "raw_llm_output": "```json\n{\n  \"action\": \"CLICK [12463]\",\n  \"reason\": \"The user wants to find a men's t-shirt, so the next step is to click on the 'Mens' filter to narrow down the results.\"\n}\n```",
+        "parsed_llm_output": {
+          "action": "CLICK [12463]",
+          "reason": "The user wants to find a men's t-shirt, so the next step is to click on the 'Mens' filter to narrow down the results."
+        }
+      }
+    ],
+    "added_workflow": "underarmour / Fashion workflow 8",
+    "abstraction_type": "llm",
+    "abstraction_raw_output": "```json\n{\n  \"name\": \"underarmour / Fashion workflow 8\",\n  \"goal_pattern\": \"Find a {gender} outlet {product_type} of {size} and add to cart.\",\n  \"applicability\": {\n    \"when_to_use\": \"When the user wants to find a discounted item for a specific gender in the outlet section.\",\n    \"when_not_to_use\": \"When the desired item is not in the outlet or the primary navigation path is different.\"\n  },\n  \"steps\": [\n    {\n      \"step\": 1,\n      \"step_intent\": \"Navigate to the outlet section of the website.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"menuitem\",\n      \"target_description\": \"The main navigation link for the 'Outlet' section.\",\n      \"value_policy\": \"N/A\",\n      \"selection_rule\": \"N/A\",\n      \"success_signal\": \"The page displays outlet-specific categories or products.\"\n    },\n    {\n      \"step\": 2,\n      \"step_intent\": \"Filter outlet products by gender.\",\n      \"operation\": \"CLICK\",\n      \"target_type\": \"link\",\n      \"target_description\": \"A link to refine results by gender.\",\n      \"value_policy\": \"Select the gender specified in the task goal (e.g., 'Mens').\",\n      \"selection_rule\": \"Choose the link whose label matches the target gender.\",\n      \"success_signal\": \"The product listing is updated to show items for the selected gender.\"\n    }\n  ]\n}\n```",
+    "workflow_embedding_preview": [
+      0.00746413879096508,
+      0.05317893624305725,
+      -0.01965581625699997,
+      0.038502324372529984,
+      0.0435723252594471,
+      -0.023382771760225296,
+      0.04344997555017471,
+      -0.02300235815346241,
+      -0.0940055102109909,
+      -0.05911988765001297,
+      0.019422009587287903,
+      -0.04221075400710106,
+      -0.029046880081295967,
+      -0.015425252728164196,
+      0.12669958174228668,
+      0.07408282905817032
+    ]
+  }
+]

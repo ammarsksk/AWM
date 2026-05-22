@@ -1,0 +1,30 @@
+{
+  "name": "amazon / General workflow 133",
+  "source": "Mind2Web exemplar",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Add a pack of toilet paper and a bottle of laundry detergent to your Amazon cart with the lowest total price.",
+  "steps": [
+    {
+      "action": "TYPE [159] [toilet paper]",
+      "op": "TYPE",
+      "element": "159",
+      "value": "toilet paper",
+      "description": "[textbox] Search Amazon -> TYPE: toilet paper",
+      "role": "textbox",
+      "label": "Search Amazon",
+      "observation": "<html> <div> <div navigation> <form search site-search> <input id=159 text search amazon field-keywords /> </form> <a id=864 button open menu> <span> All </span> </a> </div> <div navigation more on amazon> <a id=3781> Amazon Fresh <span> Groceries & More Right To Your Door </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8851]",
+      "op": "CLICK",
+      "element": "8851",
+      "value": "",
+      "description": "[button] Go -> CLICK",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div navigation> <form search site-search> <span go> <input id=8851 submit go /> </span> </form> <div> <div id=9345 button toilet paper> toilet paper </div> <div id=9349 button toilet paper holder> toilet paper <span> holder </span> </div> </div> </div> </html>"
+    }
+  ]
+}

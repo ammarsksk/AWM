@@ -1,0 +1,30 @@
+{
+  "name": "qatarairways / Airlines workflow 814",
+  "source": "Mind2Web exemplar",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Book a best business class flight ticket from Colombo to New York with a two-day Qatar stopover for 2 adults and 1 child on June 24.",
+  "steps": [
+    {
+      "action": "TYPE [139] [colombo]",
+      "op": "TYPE",
+      "element": "139",
+      "value": "colombo",
+      "description": "[textbox] From Autocomplete selection. Enter your place. -> TYPE: colombo",
+      "role": "textbox",
+      "label": "From Autocomplete selection. Enter your place.",
+      "observation": "<html> <body> <div dialog> <button id=863> Continue </button> </div> <div> <a id=2482 button> Book </a> <div tabpanel> <span> <input id=139 text /> <pre> Doha DOH </pre> <ul tablist> </ul> </span> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [30355]",
+      "op": "CLICK",
+      "element": "30355",
+      "value": "",
+      "description": "[strong] Colombo -> CLICK",
+      "role": "strong",
+      "label": "Colombo",
+      "observation": "<html> <body> <div dialog> <button id=31077> Continue </button> </div> <div tabpanel> <span> <input text colombo /> <pre id=37130> colombo </pre> <div> <h3> All Airports </h3> <div id=30355 menuitem> <strong> Colombo </strong> <span> Sri Lanka </span> <strong> CMB </strong> <span> Bandaranayike International Airport </span> </div> </div> </span> </div> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "redbox / Movie workflow 48",
+  "source": "Mind2Web exemplar",
+  "website": "redbox",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find the newest movies for rent  in the Redbox kiosk at any Winn Dixie in Daytona Beach.",
+  "steps": [
+    {
+      "action": "CLICK [400]",
+      "op": "CLICK",
+      "element": "400",
+      "value": "",
+      "description": "[button] Navigate to Find a kiosk nearby -> CLICK",
+      "role": "button",
+      "label": "Navigate to Find a kiosk nearby",
+      "observation": "<html> <div> <nav navigation> <ul list> <li listitem> <button id=400 button navigate to find a kiosk> <svg img /> <span> Find A Kiosk </span> </button> </li> </ul> </nav> <div> <input checkbox on /> <label id=1735> <h2> At The Kiosk </h2> </label> <div> <a id=1739 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [5687] [Daytona]",
+      "op": "TYPE",
+      "element": "5687",
+      "value": "Daytona",
+      "description": "[textbox] City or ZIP Code -> TYPE: Daytona",
+      "role": "textbox",
+      "label": "City or ZIP Code",
+      "observation": "<html> <div> <div> <label> City or ZIP Code </label> <input id=5687 text enter city or zip code /> </div> <div> <div> <a id=7287 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> <div> <a navigate to on demand featured> Featured </a> <a id=7308 navigate to on demand new> New </a> <a navigate to on demand free> Free </a> <a navigate to on demand collections> Collections </a> <a navigate to on demand genres> Genres </a> </div> </div> </div> </html>"
+    }
+  ]
+}

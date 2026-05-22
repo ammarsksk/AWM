@@ -1,0 +1,30 @@
+{
+  "name": "budget / Car rental workflow 208",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Book the cheapest long-term car rental with a fuel plan, GPS, and satellite radio from June 29 to July 28, pick up at 9 am at Orlando airport and dropping off at the same location.",
+  "steps": [
+    {
+      "action": "CLICK [126]",
+      "op": "CLICK",
+      "element": "126",
+      "value": "",
+      "description": "[link] Long-Term Car Rental -> CLICK",
+      "role": "link",
+      "label": "Long-Term Car Rental",
+      "observation": "<html> <div> <form resform> <div> <button button> Select My Car </button> <a id=1835> Continue </a> </div> </form> <section> <a id=126> Long-Term Car Rental </a> <a id=4109> Rental Car Fuel Plans </a> </section> </div> </html>"
+    },
+    {
+      "action": "TYPE [5115] [orlando]",
+      "op": "TYPE",
+      "element": "5115",
+      "value": "orlando",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: orlando",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=5115 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> <div> <button button> Select My Car </button> <a id=6807> Continue </a> </div> </div> </form> <a id=8991> Rental Car Fuel Plans </a> </div> </html>"
+    }
+  ]
+}

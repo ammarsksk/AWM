@@ -1,0 +1,51 @@
+{
+  "name": "ebay / General workflow 581",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find a Blue iPhone 12 Pro 128gb and add to cart.",
+  "goal_pattern": "Find a Blue iPhone 12 Pro 128gb and add to cart.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search for anything",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Search for anything",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Search",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Search",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [251] [iPhone 12 Pro]",
+      "gold_element_id": "251",
+      "gold_value": "iPhone 12 Pro"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [10665]",
+      "gold_element_id": "10665",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "ebay / General workflow 581"
+}

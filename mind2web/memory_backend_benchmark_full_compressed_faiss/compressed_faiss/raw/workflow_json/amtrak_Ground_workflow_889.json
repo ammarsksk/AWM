@@ -1,0 +1,30 @@
+{
+  "name": "amtrak / Ground workflow 889",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find a train with the shortest trip from New York, NY to Washington DC on June 1 in first class and add the ticket to the cart,  preferably in the morning .",
+  "steps": [
+    {
+      "action": "TYPE [205] [new york]",
+      "op": "TYPE",
+      "element": "205",
+      "value": "new york",
+      "description": "[textbox] From -> TYPE: new york",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <header banner> <a id=3259 button my trip> <span> MY TRIP </span> </a> </header> <main main> <div> <mat-form-field combobox> <div> <input id=205 text /> <div listbox> </div> </div> </mat-form-field> <div> <button id=3779 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [13026]",
+      "op": "CLICK",
+      "element": "13026",
+      "value": "",
+      "description": "[option] New York, NY - Moynihan Train Hall at Penn Sta. (N... -> CLICK",
+      "role": "option",
+      "label": "New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+      "observation": "<html> <main main> <mat-form-field combobox> <div listbox> <div> <div> <div> Stations </div> <div option> New York State Fair, NY (NYF) </div> <div id=13026 option> New York, NY - Moynihan Train Hall at Penn Sta. (NYP) </div> </div> <div> <div> Locations </div> <div option> New York, NY, USA (New York County) </div> <div id=16428 option> New York </div> <div id=16430 option> New York, NY </div> <div option> New York Municipal Airport-LaGuardia Field, New York, NY </div> <div option> nyc, NY </div> <div option> Let me enter a station. </div> </div> </div> </div> </mat-form-field> </main> </html>"
+    }
+  ]
+}

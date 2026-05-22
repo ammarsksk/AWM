@@ -1,0 +1,51 @@
+{
+  "name": "carmax / Auto workflow 684",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Calculate vehicle price with a challenge credit score, monthly payment of $250 with a $3000 down payment and 24% APR for 48 months in Tennessee.",
+  "goal_pattern": "Calculate vehicle price with a challenge credit score, monthly payment of $250 with a $3000 down payment and 24% APR for 48 months in Tennessee.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Finance",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Finance",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Car payment calculator",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Car payment calculator",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [124]",
+      "gold_element_id": "124",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3513]",
+      "gold_element_id": "3513",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carmax / Auto workflow 684"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "thetrainline / Ground workflow 609",
+  "source": "Mind2Web exemplar",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find tickets from Manchester Piccadilly to any station in London on April 8, leaving nearest 10 AM for 1 adult",
+  "steps": [
+    {
+      "action": "CLICK [158]",
+      "op": "CLICK",
+      "element": "158",
+      "value": "",
+      "description": "[combobox] Departure station, none selected. Select a station... -> CLICK",
+      "role": "combobox",
+      "label": "Departure station, none selected. Select a station...",
+      "observation": "<html> <div> <main main> <form> <label> <span> From </span> <input id=158 combobox text departure station, none selected. select enter origin station... /> </label> <fieldset> <span> Return </span> <input id=638 text date use format: /> <div> Leaving at </div> </fieldset> </form> </main> <div tablist> <div> <div id=1497 tab> <h4> Stations </h4> </div> <div tabpanel> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [4025] [Manchester]",
+      "op": "TYPE",
+      "element": "4025",
+      "value": "Manchester",
+      "description": "[combobox] Departure station, none selected. Select a station... -> TYPE: Manchester",
+      "role": "combobox",
+      "label": "Departure station, none selected. Select a station...",
+      "observation": "<html> <main main> <div> <input id=4025 combobox text departure station, none selected. select enter origin station... /> <div dialog> <ul listbox> <div> <span> POPULAR </span> <li id=4363 option> <span> London <span> , Any </span> </span> </li> <li option> </li> <li option> </li> <li option> </li> <li id=4383 option> <span> Manchester Piccadilly </span> </li> <li option> </li> <li option> </li> <li option> </li> </div> </ul> </div> </div> </main> </html>"
+    }
+  ]
+}

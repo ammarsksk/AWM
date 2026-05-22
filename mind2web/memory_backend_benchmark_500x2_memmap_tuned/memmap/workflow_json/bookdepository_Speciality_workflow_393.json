@@ -1,0 +1,51 @@
+{
+  "name": "bookdepository / Speciality workflow 393",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Search for a non-fiction children's book for ages 9-11 on the topic of history in the Hindi language, and add the top book to the cart, if not available choose notify me option and also add the book to new wishlist must buy.",
+  "goal_pattern": "Search for a non-fiction children's book for ages 9-11 on the topic of history in the Hindi language, and add the top book to the cart, if not available choose notify me option and also add the book to new wishlist must buy.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Shop by category\u2228",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Shop by category\u2228",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Children's Books",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Children's Books",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [107]",
+      "gold_element_id": "107",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [34788]",
+      "gold_element_id": "34788",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "bookdepository / Speciality workflow 393"
+}

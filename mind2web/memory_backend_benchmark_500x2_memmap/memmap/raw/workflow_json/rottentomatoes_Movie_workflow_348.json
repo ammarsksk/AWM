@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 348",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find comedy tv shows on netflix sorted by audience score.",
+  "steps": [
+    {
+      "action": "CLICK [179]",
+      "op": "CLICK",
+      "element": "179",
+      "value": "",
+      "description": "[link] TV SHOWS -> CLICK",
+      "role": "link",
+      "label": "TV SHOWS",
+      "observation": "<html> <div> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=552 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <slot tv> <slot link> <a id=179> Tv shows </a> </slot> </slot> </slot> </div> </rt-header> <slot> <div> <a> Vudu </a> | <a id=5570> Netflix </a> | <a> Amazon </a> | <a> HBO </a> | <a> More... </a> </div> </slot> </div> </html>"
+    },
+    {
+      "action": "CLICK [15896]",
+      "op": "CLICK",
+      "element": "15896",
+      "value": "",
+      "description": "[img] netflix -> CLICK",
+      "role": "img",
+      "label": "netflix",
+      "observation": "<html> <div> <div> <filter-chip button sort: most popular> </filter-chip> <filter-chip id=18908 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip id=18936 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> <where-to-watch-bubble netflix> <affiliate-icon image netflix> <img id=15896 netflix /> </affiliate-icon> </where-to-watch-bubble> </div> </html>"
+    }
+  ]
+}

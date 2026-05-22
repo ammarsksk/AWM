@@ -1,0 +1,30 @@
+{
+  "name": "ebay / General workflow 581",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find a Blue iPhone 12 Pro 128gb and add to cart.",
+  "steps": [
+    {
+      "action": "TYPE [251] [iPhone 12 Pro]",
+      "op": "TYPE",
+      "element": "251",
+      "value": "iPhone 12 Pro",
+      "description": "[combobox] Search for anything -> TYPE: iPhone 12 Pro",
+      "role": "combobox",
+      "label": "Search for anything",
+      "observation": "<html> <body> <header banner> <input id=251 combobox text search for anything _nkw /> </header> <div main> <ul> <li> <a id=1420> Electronics </a> <button> Expand: Electronics </button> </li> <li> <a id=1618> Fashion </a> <button> Expand: Fashion </button> </li> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [10665]",
+      "op": "CLICK",
+      "element": "10665",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <header banner> <input id=10665 submit search /> <div navigation account> <div dialog your shopping cart> <div> <a id=11512 checkout> Checkout </a> <a view cart> View cart </a> </div> </div> </div> </header> <div main> <li> <a id=12485> Refurbished </a> <button> Expand: Refurbished </button> </li> </div> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "united / Airlines workflow 265",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Browse check in with confirmation number 123456 for John.",
+  "steps": [
+    {
+      "action": "CLICK [970]",
+      "op": "CLICK",
+      "element": "970",
+      "value": "",
+      "description": "[heading] Check-in -> CLICK",
+      "role": "heading",
+      "label": "Check-in",
+      "observation": "<html> <main main> <div> <ul tablist> <li tab heading level 2 book a traveltab> </li> <li tab heading level 2 check flight statustab> </li> <li id=970 tab heading level 2 check in> <div> Check-in </div> </li> <li tab heading level 2 view and> </li> </ul> <section tabpanel> <div tabpanel> <form> <div> <input id=1054 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> <div> <button id=1238 submit find flights> <span> Find flights </span> </button> <button button> Find your travel credits </button> </div> </form> </div> </section> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [3361] [123456]",
+      "op": "TYPE",
+      "element": "3361",
+      "value": "123456",
+      "description": "[textbox] Confirmation or ticket number* -> TYPE: 123456",
+      "role": "textbox",
+      "label": "Confirmation or ticket number*",
+      "observation": "<html> <main main> <section tabpanel> <form> <div> <label> Confirmation or ticket number* </label> <input id=3361 text please enter your 6 digit confirmation number* /> </div> <div> <label> Last name* </label> <input id=4264 text please enter the last name last name* /> </div> <button button> Check in with your MileagePlus number </button> <button id=4278 submit> Search </button> </form> </section> </main> </html>"
+    }
+  ]
+}

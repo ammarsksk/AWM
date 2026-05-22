@@ -1,0 +1,30 @@
+{
+  "name": "newegg / Digital workflow 65",
+  "source": "Mind2Web exemplar",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "task": "Find the cheapest power supply unit with at least 600W power output.",
+  "steps": [
+    {
+      "action": "TYPE [123] [600w power supply]",
+      "op": "TYPE",
+      "element": "123",
+      "value": "600w power supply",
+      "description": "[searchbox] Search Site -> TYPE: 600w power supply",
+      "role": "searchbox",
+      "label": "Search Site",
+      "observation": "<html> <div> <div> <i id=323 site menu /> <input id=123 search search site /> </div> <a id=10460 electronics> <div> Electronics </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [33741]",
+      "op": "CLICK",
+      "element": "33741",
+      "value": "",
+      "description": "[button] \uf002 -> CLICK",
+      "role": "button",
+      "label": "\uf002",
+      "observation": "<html> <div> <div> <input search search site 600w power supply /> <button id=33741> <span> Search </span> </button> </div> <div> <div> <a 850 w> 850 W </a> <a 650 w> 650 W </a> <a id=41697 600 w> 600 W </a> </div> <a id=41707 600w power supply> <em> 600w power supply </em> </a> </div> </div> </html>"
+    }
+  ]
+}

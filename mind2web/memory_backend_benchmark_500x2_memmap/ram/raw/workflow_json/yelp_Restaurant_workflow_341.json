@@ -1,0 +1,30 @@
+{
+  "name": "yelp / Restaurant workflow 341",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Browse barbershops that have private lot parking.",
+  "steps": [
+    {
+      "action": "TYPE [159] [barbershop]",
+      "op": "TYPE",
+      "element": "159",
+      "value": "barbershop",
+      "description": "[textbox] Find -> TYPE: barbershop",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=159 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=291 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <a id=373> <span> Home Services </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8685]",
+      "op": "CLICK",
+      "element": "8685",
+      "value": "",
+      "description": "[span] Barbershop -> CLICK",
+      "role": "span",
+      "label": "Barbershop",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div combobox> <input text /> <input id=8817 textbox text near columbus, oh address, neighborhood, city, state or /> </div> <button id=8822 submit search> <span img /> </button> </div> </form> </div> </div> <span id=8685 css-qgunke> <text bounding_box_rect= 176,97,79,19>Barbershop</text> </span> </html>"
+    }
+  ]
+}

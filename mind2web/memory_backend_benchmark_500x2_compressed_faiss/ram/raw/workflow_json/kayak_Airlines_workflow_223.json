@@ -1,0 +1,30 @@
+{
+  "name": "kayak / Airlines workflow 223",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a hotel with 4 star and above rating in Los Angeles for 3 days next week and save it.",
+  "steps": [
+    {
+      "action": "CLICK [88]",
+      "op": "CLICK",
+      "element": "88",
+      "value": "",
+      "description": "[link] Search for hotels -> CLICK",
+      "role": "link",
+      "label": "Search for hotels",
+      "observation": "<html> <div> <div> <button id=509 button submit search> <svg img c8lpf-icon /> </button> <div> <a search for flights> </a> <a id=88 search for hotels> <svg hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> </div> <button id=809 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [4551] [Los Angeles]",
+      "op": "TYPE",
+      "element": "4551",
+      "value": "Los Angeles",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> TYPE: Los Angeles",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <div> <div> <button button submit search> <svg id=5084 img c8lpf-icon /> </button> <a search for hotels> <svg id=5146 hotels icon /> <div> Stays </div> </a> </div> <input id=4551 text los angeles, california, united states enter a city, hotel, airport, /> </div> </html>"
+    }
+  ]
+}

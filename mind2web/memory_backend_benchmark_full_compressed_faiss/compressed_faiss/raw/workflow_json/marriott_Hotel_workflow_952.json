@@ -1,0 +1,30 @@
+{
+  "name": "marriott / Hotel workflow 952",
+  "source": "Mind2Web exemplar",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Find highest rated room for one adult in Los Angeles, CA between May 7 to May 14 which offers senior discount, free breakfast, is pet friendly and has a pool",
+  "steps": [
+    {
+      "action": "TYPE [117] [Los Angeles]",
+      "op": "TYPE",
+      "element": "117",
+      "value": "Los Angeles",
+      "description": "[textbox] \ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR... -> TYPE: Los Angeles",
+      "role": "textbox",
+      "label": "\ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+      "observation": "<html> <form search> <div> <div combobox> <div> <input id=117 text where can we take you? /> <button button clear /> </div> </div> <button id=151 button> <span> 1 Night </span> <span> Sat, Apr 08 - Sun, Apr 09 </span> </button> </div> <button id=154 submit> Find Hotels </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [16904]",
+      "op": "CLICK",
+      "element": "16904",
+      "value": "",
+      "description": "[span] , CA, USA -> CLICK",
+      "role": "span",
+      "label": ", CA, USA",
+      "observation": "<html> <form search> <ul listbox> <li id=16904 option> <p> Los Angeles <span> , CA, USA </span> </p> </li> <li option> </li> <li id=16913 option> <p> Los Angeles International Airport (LAX) <span> , World Way, Los Angeles, CA, USA </span> </p> </li> <li id=16918 option> <p> Los Angeles County <span> , CA, USA </span> </p> </li> <li option> </li> </ul> </form> </html>"
+    }
+  ]
+}

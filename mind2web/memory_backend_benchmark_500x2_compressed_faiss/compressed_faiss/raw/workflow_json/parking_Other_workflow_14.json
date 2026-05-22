@@ -1,0 +1,30 @@
+{
+  "name": "parking / Other workflow 14",
+  "source": "Mind2Web exemplar",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Book parking spot for James SMith at Stewart Hotel in New York for 2 hours. The street address is 133 st avenue in New York. Zip code is 10001 and phone number is 888888888. The email address is buckeye.foobar@gmail.com. Employer's name is Gua AB.",
+  "steps": [
+    {
+      "action": "CLICK [663]",
+      "op": "CLICK",
+      "element": "663",
+      "value": "",
+      "description": "[span] Enter an Address or Venue to find parking -> CLICK",
+      "role": "span",
+      "label": "Enter an Address or Venue to find parking",
+      "observation": "<html> <div> <button id=631> Find parking near me </button> <form get> <span> <input id=655 combobox text search /> <label id=663> <span> Enter an Address or Venue to find parking </span> </label> </span> </form> <div dialog> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2939] [stewart hotel]",
+      "op": "TYPE",
+      "element": "2939",
+      "value": "stewart hotel",
+      "description": "[span] Enter an Address or Venue to find parking -> TYPE: stewart hotel",
+      "role": "span",
+      "label": "Enter an Address or Venue to find parking",
+      "observation": "<html> <form get> <span> <input id=2929 combobox text search /> <label id=2939> <span> Enter an Address or Venue to find parking </span> </label> </span> <div> <input id=3495 2023-03-20 /> <button button /> </div> </form> </html>"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "rentalcars / Car rental workflow 385",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Choose a lowest priced hybrid SUV car to pick up from Bangkok downtown on May 24 at 9:30 am and drop off on May 28, at 9 am.",
+  "goal_pattern": "Choose a lowest priced hybrid SUV car to pick up from Bangkok downtown on May 24 at 9:30 am and drop off on May 28, at 9 am.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Pick-up location",
+      "operation": "TYPE",
+      "target_type": "label",
+      "target_description": "Pick-up location",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Downtown Bangkok",
+      "operation": "CLICK",
+      "target_type": "div",
+      "target_description": "Downtown Bangkok",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [113] [BANGKOK]",
+      "gold_element_id": "113",
+      "gold_value": "BANGKOK"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3325]",
+      "gold_element_id": "3325",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "rentalcars / Car rental workflow 385"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "aa / Airlines workflow 841",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find flights from Chicago to London on 20 April and return on 23 April.",
+  "steps": [
+    {
+      "action": "TYPE [100] [Chicago]",
+      "op": "TYPE",
+      "element": "100",
+      "value": "Chicago",
+      "description": "[textbox] From -> TYPE: Chicago",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <main main main content> <div tabpanel> <form> <div> <label> From <input id=100 text originairport city or airport /> </label> <label> To <input id=1320 text city or airport /> </label> </div> <div> <input id=1435 submit search /> <button button> Search </button> </div> </form> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [5660]",
+      "op": "CLICK",
+      "element": "5660",
+      "value": "",
+      "description": "[a] CHI - Chicago, IL -> CLICK",
+      "role": "a",
+      "label": "CHI - Chicago, IL",
+      "observation": "<html> <body> <main main main content> <div tabpanel> <form> <label> To <input id=6889 text city or airport /> </label> <div> <input id=7004 submit search /> <button button> Search </button> </div> </form> </div> </main> <a id=5660> CHI - Chicago, IL </a> </body> </html>"
+    }
+  ]
+}

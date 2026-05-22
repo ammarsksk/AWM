@@ -1,0 +1,30 @@
+{
+  "name": "carmax / Auto workflow 999",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find a Chevrolet with lowest mileage in zip 08817 with shipping charges of 99 dollars or less, with a price between 20k to 30k.",
+  "steps": [
+    {
+      "action": "CLICK [363]",
+      "op": "CLICK",
+      "element": "363",
+      "value": "",
+      "description": "[span] Columbus Easton -> CLICK",
+      "role": "span",
+      "label": "Columbus Easton",
+      "observation": "<html> <header banner> <nav primary> <div> <a id=339> Shop </a> <a> Sell/Trade </a> <a> Finance </a> </div> <button id=363 open my store flyout> <div> <span> Your store for 43219 </span> <span> Columbus Easton </span> </div> </button> </nav> <form search> <div> <label> Search make, model, or keyword </label> <input id=416 search /> </div> </form> </header> </html>"
+    },
+    {
+      "action": "TYPE [5525] [08817]",
+      "op": "TYPE",
+      "element": "5525",
+      "value": "08817",
+      "description": "[searchbox] Enter ZIP or State -> TYPE: 08817",
+      "role": "searchbox",
+      "label": "Enter ZIP or State",
+      "observation": "<html> <header banner> <nav primary> <div dialog> <div> <a> View more store details </a> <a id=5758> See cars at this store </a> </div> <form search> <div> <input id=5525 search keyword enter zip or state /> <button id=5773 submit search for carmax stores. /> </div> </form> </div> </nav> </header> </html>"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "cvs / Speciality workflow 938",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "cvs",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Browse the weekly ad in List View.",
+  "goal_pattern": "Browse the weekly ad in List View.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Savings & Memberships",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Savings & Memberships",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Weekly Ad",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Weekly Ad",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [64]",
+      "gold_element_id": "64",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4519]",
+      "gold_element_id": "4519",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "cvs / Speciality workflow 938"
+}

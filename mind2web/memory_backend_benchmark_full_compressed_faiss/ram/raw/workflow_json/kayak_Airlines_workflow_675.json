@@ -1,0 +1,30 @@
+{
+  "name": "kayak / Airlines workflow 675",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "book the cheapest hotel in Le maraise neighborhood in paris with 2 room for 3 adult on March 27th to April 2nd.",
+  "steps": [
+    {
+      "action": "CLICK [486]",
+      "op": "CLICK",
+      "element": "486",
+      "value": "",
+      "description": "[link] Search for hotels -> CLICK",
+      "role": "link",
+      "label": "Search for hotels",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a id=486 search for hotels> <svg id=487 hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> <button id=713 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [4330] [Le maraise]",
+      "op": "TYPE",
+      "element": "4330",
+      "value": "Le maraise",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> TYPE: Le maraise",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a id=4748 search for hotels> <svg id=4749 hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> <input id=4330 text enter a city, hotel, airport, /> </div> </html>"
+    }
+  ]
+}

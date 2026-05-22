@@ -1,0 +1,51 @@
+{
+  "name": "booking / General workflow 415",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Reserve a taxi from O'hare Airport to 123 Main St, West Chicago, IL on Mar 29, 2023 at 12 noon for 2 adults.",
+  "goal_pattern": "Reserve a taxi from O'hare Airport to 123 Main St, West Chicago, IL on Mar 29, 2023 at 12 noon for 2 adults.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Airport taxis",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Airport taxis",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the Pick-up location",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Pick-up location",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [809]",
+      "gold_element_id": "809",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [5828] [O'hare Airport]",
+      "gold_element_id": "5828",
+      "gold_value": "O'hare Airport"
+    }
+  ],
+  "raw_workflow_name": "booking / General workflow 415"
+}

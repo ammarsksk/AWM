@@ -1,0 +1,30 @@
+{
+  "name": "eventbrite / Event workflow 195",
+  "source": "Mind2Web exemplar",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Join the waitlist for a ticket for the Hackney Clothes Swap - Earth Day event being held on April 22nd. Name: Joe Bloggs. Email: joe@bloggs.com",
+  "steps": [
+    {
+      "action": "CLICK [358]",
+      "op": "CLICK",
+      "element": "358",
+      "value": "",
+      "description": "[div] Search for events -> CLICK",
+      "role": "div",
+      "label": "Search for events",
+      "observation": "<html> <div> <div> <button id=358 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <div> <a> Create an event </a> <a id=386> <span> Tickets </span> </a> </div> </div> <div> <div> Popular in </div> <input id=501 combobox text locationpicker columbus /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [1946] [Hackney]",
+      "op": "TYPE",
+      "element": "1946",
+      "value": "Hackney",
+      "description": "[combobox] autocomplete -> TYPE: Hackney",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <div> <div> <a> Create an event </a> <a id=2214> <span> Tickets </span> </a> </div> <div alertdialog> <main> <input id=2648 textbox search search for anything /> <input id=1946 combobox text columbus /> </main> </div> </div> </html>"
+    }
+  ]
+}

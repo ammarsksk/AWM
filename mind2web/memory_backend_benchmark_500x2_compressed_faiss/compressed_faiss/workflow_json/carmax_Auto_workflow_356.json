@@ -1,0 +1,51 @@
+{
+  "name": "carmax / Auto workflow 356",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Search for an automatic grey sports car with the lowest price, gas fuel and free shipping manufactured between 2018 to 2022, compare the top two results and compare photos.",
+  "goal_pattern": "Search for an automatic grey sports car with the lowest price, gas fuel and free shipping manufactured between 2018 to 2022, compare the top two results and compare photos.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Shop",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Shop",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Sports car icon",
+      "operation": "CLICK",
+      "target_type": "img",
+      "target_description": "Sports car icon",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [119]",
+      "gold_element_id": "119",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3231]",
+      "gold_element_id": "3231",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carmax / Auto workflow 356"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "carmax / Auto workflow 684",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Calculate vehicle price with a challenge credit score, monthly payment of $250 with a $3000 down payment and 24% APR for 48 months in Tennessee.",
+  "steps": [
+    {
+      "action": "CLICK [124]",
+      "op": "CLICK",
+      "element": "124",
+      "value": "",
+      "description": "[link] Finance -> CLICK",
+      "role": "link",
+      "label": "Finance",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a> Shop </a> <a> Sell/Trade </a> <a id=124> Finance </a> </div> </nav> </header> <main main> <div> <div> <input id=863 text $2,000 /> <label> Down Payment </label> </div> <div> <select id=868> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 579 FICO Score) </option> </select> <label> Credit Score </label> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3513]",
+      "op": "CLICK",
+      "element": "3513",
+      "value": "",
+      "description": "[link] Car payment calculator -> CLICK",
+      "role": "link",
+      "label": "Car payment calculator",
+      "observation": "<html> <main main> <header banner> <form search> <div> <label> Search make, model, or keyword </label> <input id=3699 search search by make, model, or /> <button id=3701 submit submit search by make, model,> <span> Search CarMax inventory </span> </button> </div> </form> </header> <div> <a> How it works </a> <a id=3513> Car payment calculator </a> <a> CarMax Auto Finance </a> </div> </main> </html>"
+    }
+  ]
+}

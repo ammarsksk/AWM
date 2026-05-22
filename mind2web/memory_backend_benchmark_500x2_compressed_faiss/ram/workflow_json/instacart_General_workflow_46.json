@@ -1,0 +1,51 @@
+{
+  "name": "instacart / General workflow 46",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "instacart",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Add a new address to the account. The address is 2983 Marietta Street,  APT 2. Business name is Buck.",
+  "goal_pattern": "Add a new address to the account. The address is 2983 Marietta Street,  APT 2. Business name is Buck.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the 171 2nd street",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "171 2nd street",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the Add a new address",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Add a new address",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [278]",
+      "gold_element_id": "278",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [1878] [2983 Marietta Street]",
+      "gold_element_id": "1878",
+      "gold_value": "2983 Marietta Street"
+    }
+  ],
+  "raw_workflow_name": "instacart / General workflow 46"
+}

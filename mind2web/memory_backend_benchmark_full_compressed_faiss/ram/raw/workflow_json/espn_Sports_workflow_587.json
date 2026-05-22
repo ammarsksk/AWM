@@ -1,0 +1,30 @@
+{
+  "name": "espn / Sports workflow 587",
+  "source": "Mind2Web exemplar",
+  "website": "espn",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "Find the latest news about Mikal Bridges",
+  "steps": [
+    {
+      "action": "CLICK [181]",
+      "op": "CLICK",
+      "element": "181",
+      "value": "",
+      "description": "[button] Open Search -> CLICK",
+      "role": "button",
+      "label": "Open Search",
+      "observation": "<html> <header> <a id=181 button open search /> <ul> <li> <a id=6912> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button nba /> </li> <li> <a id=8223> <span> <span> NHL </span> <span> NHL </span> </span> </a> <button nhl /> </li> </ul> </header> </html>"
+    },
+    {
+      "action": "TYPE [39152] [Mikal Bridges]",
+      "op": "TYPE",
+      "element": "39152",
+      "value": "Mikal Bridges",
+      "description": "[textbox] Search -> TYPE: Mikal Bridges",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <header> <div> <input id=39152 text search sports, teams or players... /> <input submit /> </div> <ul> <li> <a id=45883> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button nba /> </li> <li> <a id=47194> <span> <span> NHL </span> <span> NHL </span> </span> </a> <button nhl /> </li> </ul> </header> </html>"
+    }
+  ]
+}

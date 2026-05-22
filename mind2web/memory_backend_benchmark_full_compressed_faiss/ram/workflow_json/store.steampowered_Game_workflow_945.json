@@ -1,0 +1,51 @@
+{
+  "name": "store.steampowered / Game workflow 945",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "store.steampowered",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "task": "Show Massively Multiplayer games which can be played on VR.",
+  "goal_pattern": "Show Massively Multiplayer games which can be played on VR.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Massively Multiplayer",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Massively Multiplayer",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the VR",
+      "operation": "CLICK",
+      "target_type": "generic",
+      "target_description": "VR",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [109]",
+      "gold_element_id": "109",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5701]",
+      "gold_element_id": "5701",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "store.steampowered / Game workflow 945"
+}

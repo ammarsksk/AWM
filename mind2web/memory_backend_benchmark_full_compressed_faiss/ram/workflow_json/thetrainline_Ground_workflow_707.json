@@ -1,0 +1,51 @@
+{
+  "name": "thetrainline / Ground workflow 707",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Reserve a train ticket with seat from Berlin to Zurich on March 31 after 8 am in aisle quite zone in side by side seat formation.",
+  "goal_pattern": "Reserve a train ticket with seat from Berlin to Zurich on March 31 after 8 am in aisle quite zone in side by side seat formation.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Departure station, none selected. Select a station...",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Departure station, none selected. Select a station...",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Berlin",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Berlin",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [186] [BERLIN]",
+      "gold_element_id": "186",
+      "gold_value": "BERLIN"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4963]",
+      "gold_element_id": "4963",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "thetrainline / Ground workflow 707"
+}

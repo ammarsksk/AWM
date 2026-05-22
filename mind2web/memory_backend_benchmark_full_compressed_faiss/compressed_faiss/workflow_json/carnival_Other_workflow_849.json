@@ -1,0 +1,51 @@
+{
+  "name": "carnival / Other workflow 849",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carnival",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Get me info about planning a wedding cruise",
+  "goal_pattern": "Get me info about planning a wedding cruise",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Weddings & Occasions",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Weddings & Occasions",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the DOWNLOAD DIGITAL BROCHURE",
+      "operation": "CLICK",
+      "target_type": "heading",
+      "target_description": "DOWNLOAD DIGITAL BROCHURE",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [103]",
+      "gold_element_id": "103",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3896]",
+      "gold_element_id": "3896",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carnival / Other workflow 849"
+}

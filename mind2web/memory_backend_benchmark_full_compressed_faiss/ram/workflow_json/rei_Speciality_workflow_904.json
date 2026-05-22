@@ -1,0 +1,51 @@
+{
+  "name": "rei / Speciality workflow 904",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "rei",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find camping tents that can fit 6 people and sort the results by price from low to high.",
+  "goal_pattern": "Find camping tents that can fit 6 people and sort the results by price from low to high.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Camp & Hike",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Camp & Hike",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Camping Tents",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Camping Tents",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [707]",
+      "gold_element_id": "707",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [26509]",
+      "gold_element_id": "26509",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "rei / Speciality workflow 904"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ebay / General workflow 534",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find musical instruments and filter the results to show only those that are available for free local pickup.",
+  "steps": [
+    {
+      "action": "CLICK [208]",
+      "op": "CLICK",
+      "element": "208",
+      "value": "",
+      "description": "[combobox] Search for anything -> CLICK",
+      "role": "combobox",
+      "label": "Search for anything",
+      "observation": "<html> <header banner> <tr> <button id=382> Shop by category </button> <tr> <input id=208 combobox text search for anything _nkw /> <input id=652 submit search /> </tr> </tr> </header> </html>"
+    },
+    {
+      "action": "TYPE [8612] [musical instruments]",
+      "op": "TYPE",
+      "element": "8612",
+      "value": "musical instruments",
+      "description": "[combobox] Search for anything -> TYPE: musical instruments",
+      "role": "combobox",
+      "label": "Search for anything",
+      "observation": "<html> <header banner> <tr> <button id=8794> Shop by category </button> <tr> <div> <input id=8612 combobox text search for anything _nkw /> <span status> 9 results available; to navigate, use up and down arrow keys or swipe left and right on touch devices. </span> </div> <input id=9147 submit search /> </tr> </tr> </header> </html>"
+    }
+  ]
+}

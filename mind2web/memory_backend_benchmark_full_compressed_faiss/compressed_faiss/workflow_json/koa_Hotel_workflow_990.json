@@ -1,0 +1,51 @@
+{
+  "name": "koa / Hotel workflow 990",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "koa",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Search for KOA near Lansing, Michigan for June 7, 2023 to June 12, 2023.",
+  "goal_pattern": "Search for KOA near Lansing, Michigan for June 7, 2023 to June 12, 2023.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the WHERE DO YOU WANT TO GO?",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "WHERE DO YOU WANT TO GO?",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the KOA Logo Icon Auburn Hills / Holly KOA Holly, MI K...",
+      "operation": "CLICK",
+      "target_type": "list",
+      "target_description": "KOA Logo Icon Auburn Hills / Holly KOA Holly, MI K...",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [192] [Lansing]",
+      "gold_element_id": "192",
+      "gold_value": "Lansing"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [7878]",
+      "gold_element_id": "7878",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "koa / Hotel workflow 990"
+}

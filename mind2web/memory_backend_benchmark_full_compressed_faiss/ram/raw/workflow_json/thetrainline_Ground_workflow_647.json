@@ -1,0 +1,30 @@
+{
+  "name": "thetrainline / Ground workflow 647",
+  "source": "Mind2Web exemplar",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Book a cheapest train ticket in upstairs deck and at least one window seat from Paris to Milan on March 26, departing after noon for 16 year old and 45 year old.",
+  "steps": [
+    {
+      "action": "TYPE [152] [PARIS]",
+      "op": "TYPE",
+      "element": "152",
+      "value": "PARIS",
+      "description": "[combobox] Departure station, none selected. Select a station... -> TYPE: PARIS",
+      "role": "combobox",
+      "label": "Departure station, none selected. Select a station...",
+      "observation": "<html> <main main> <div> <ul menubar> <ul menu> <a id=345 menuitem> Cheap train tickets </a> </ul> </ul> <form> <label> <span> From </span> <input id=152 combobox text departure station, none selected. select enter origin station... /> </label> <fieldset> <span> Return </span> <input id=632 text date use format: /> <div> Leaving at </div> </fieldset> </form> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [4154]",
+      "op": "CLICK",
+      "element": "4154",
+      "value": "",
+      "description": "[span] Paris -> CLICK",
+      "role": "span",
+      "label": "Paris",
+      "observation": "<html> <main main> <form> <div> <div dialog> <ul listbox> <div> <li id=4154 option> <div> <span> Paris </span> <span> FR </span> </div> </li> <li option> </li> <li option> </li> <li option> </li> </div> </ul> </div> <label> <span> To </span> <input id=4281 combobox text arrival station, none selected. select enter destination station... /> </label> </div> <button id=4507 submit> <span> Get cheapest tickets </span> </button> </form> </main> </html>"
+    }
+  ]
+}

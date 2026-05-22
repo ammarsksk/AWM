@@ -1,0 +1,30 @@
+{
+  "name": "expedia / General workflow 947",
+  "source": "Mind2Web exemplar",
+  "website": "expedia",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find flights from Los Angeles to Miami for two people departing on July 1st and returning on July 7th.",
+  "steps": [
+    {
+      "action": "CLICK [476]",
+      "op": "CLICK",
+      "element": "476",
+      "value": "",
+      "description": "[tab] Flights -> CLICK",
+      "role": "tab",
+      "label": "Flights",
+      "observation": "<html> <div main> <ul tablist> <a id=476 tab> <span> Flights </span> </a> </ul> <div tabpanel> <ul> <a id=1002> Flights to Miami </a> <a id=1005> Flights to Los Angeles </a> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [3754] [Los Angeles, CA]",
+      "op": "TYPE",
+      "element": "3754",
+      "value": "Los Angeles, CA",
+      "description": "[button] Leaving from -> TYPE: Los Angeles, CA",
+      "role": "button",
+      "label": "Leaving from",
+      "observation": "<html> <div main> <div tabpanel> <div> <ul tablist> <a id=4137 tab> <span> One-way </span> </a> <button id=4149 button 1 traveler> 1 traveler </button> </ul> <div tabpanel> <div leaving from> <div> <label> Leaving from </label> <input text /> <button id=3754 button leaving from> <span> Leaving from </span> </button> <div> Leaving from </div> </div> </div> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

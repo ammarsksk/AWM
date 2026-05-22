@@ -1,0 +1,30 @@
+{
+  "name": "imdb / Movie workflow 264",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Play Trailer of \"The Flash\" 2023.",
+  "steps": [
+    {
+      "action": "CLICK [94]",
+      "op": "CLICK",
+      "element": "94",
+      "value": "",
+      "description": "[textbox] Search IMDb -> CLICK",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=167 button open navigation drawer> <svg id=170 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=94 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [5039] [The Flash]",
+      "op": "TYPE",
+      "element": "5039",
+      "value": "The Flash",
+      "description": "[textbox] Search IMDb -> TYPE: The Flash",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=5114 button open navigation drawer> <svg id=5117 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=5039 text search imdb q /> </div> </form> </div> </html>"
+    }
+  ]
+}

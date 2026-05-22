@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 708",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "List pg-13 comedy movies currently in theatres with the highest audience scores",
+  "steps": [
+    {
+      "action": "CLICK [74]",
+      "op": "CLICK",
+      "element": "74",
+      "value": "",
+      "description": "[link] MOVIES -> CLICK",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <rt-header navigation bar> <div> <slot nav-links> <a id=551> Critics </a> </slot> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=74> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2455> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [18337]",
+      "op": "CLICK",
+      "element": "18337",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <button id=21116> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip button sort> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=21346 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> <svg id=18337 /> </html>"
+    }
+  ]
+}

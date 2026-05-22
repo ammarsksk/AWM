@@ -1,0 +1,51 @@
+{
+  "name": "yellowpages / Restaurant workflow 817",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "yellowpages",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Filter car accident lawyers in Stanford, CA, sort them by distane and find the phone number of the nearest one.",
+  "goal_pattern": "Filter car accident lawyers in Stanford, CA, sort them by distane and find the phone number of the nearest one.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the [input] -> TYPE: Stanford, CA",
+      "operation": "TYPE",
+      "target_type": "input",
+      "target_description": "[input] -> TYPE: Stanford, CA",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the [input] -> TYPE: car accident lawyers",
+      "operation": "TYPE",
+      "target_type": "input",
+      "target_description": "[input] -> TYPE: car accident lawyers",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [225] [Stanford, CA]",
+      "gold_element_id": "225",
+      "gold_value": "Stanford, CA"
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [1842] [car accident lawyers]",
+      "gold_element_id": "1842",
+      "gold_value": "car accident lawyers"
+    }
+  ],
+  "raw_workflow_name": "yellowpages / Restaurant workflow 817"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "jetblue / Airlines workflow 800",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the flight from New York to Miami from Mar 27 to Mar 31  that has the lowest core price in points.",
+  "steps": [
+    {
+      "action": "TYPE [146] [new york]",
+      "op": "TYPE",
+      "element": "146",
+      "value": "new york",
+      "description": "[textbox] From -> TYPE: new york",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button id=780 tab button> <span> <jb-icon img /> <span> Flights </span> </span> </button> <button tab button> </button> <button tab button> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div> <div combobox> <jb-type-ahead-input> <label> From </label> <input id=146 text columbus port columbus intl apt, /> </jb-type-ahead-input> </div> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=925 text /> </jb-type-ahead-input> </div> </div> </jb-tab-panel> </jb-tabs> </html>"
+    },
+    {
+      "action": "CLICK [5256]",
+      "op": "CLICK",
+      "element": "5256",
+      "value": "",
+      "description": "[strong] New York -> CLICK",
+      "role": "strong",
+      "label": "New York",
+      "observation": "<html> <jb-tab-panel tabpanel> <div combobox> <jb-flyout-inner dialog> <ul listbox> <li option> </li> <li option> </li> <li id=5247 option> <div> <strong> New York </strong> City area (NYC) </div> </li> <li id=5256 option> <div> <strong> New York </strong> , NY (JFK) </div> </li> <li id=5265 option> <div> <strong> New York </strong> , NY (LGA) </div> </li> <li option> </li> <li option> </li> <li option> </li> </ul> </jb-flyout-inner> </div> </jb-tab-panel> </html>"
+    }
+  ]
+}

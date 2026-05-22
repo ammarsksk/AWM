@@ -1,0 +1,30 @@
+{
+  "name": "mbta / Ground workflow 815",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Show me the schedule and maps for the orange line",
+  "steps": [
+    {
+      "action": "CLICK [64]",
+      "op": "CLICK",
+      "element": "64",
+      "value": "",
+      "description": "[link] subway Subway Lines -> CLICK",
+      "role": "link",
+      "label": "subway Subway Lines",
+      "observation": "<html> <div navigation> <div tablist> <a id=1818 tab> <svg img> <title> map </title> </svg> <span> Schedules </span> </a> </div> <div tabpanel> <div> <a id=64> <svg img> <title> subway </title> </svg> <div> Subway <span> Lines </span> </div> </a> <a id=62> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10383]",
+      "op": "CLICK",
+      "element": "10383",
+      "value": "",
+      "description": "[span] Orange Line -> CLICK",
+      "role": "span",
+      "label": "Orange Line",
+      "observation": "<html> <div> <nav main navigation> <div find a location> <a id=9072> <div> Maps </div> </a> </div> </nav> <div> <a> Home </a> <a id=10220> Schedules & Maps </a> Subway </div> <a id=10383> <div> <svg img> <title> orange line </title> </svg> <span> Orange Line </span> <svg img service alert or delay icon icon-alert /> </div> </a> </div> </html>"
+    }
+  ]
+}

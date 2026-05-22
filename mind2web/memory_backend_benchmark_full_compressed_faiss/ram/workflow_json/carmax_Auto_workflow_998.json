@@ -1,0 +1,51 @@
+{
+  "name": "carmax / Auto workflow 998",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "find a CarMax in Michigan, 49107 and book an appointment for a car repair on April 7th..",
+  "goal_pattern": "find a CarMax in Michigan, 49107 and book an appointment for a car repair on April 7th..",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Open helpful links menu",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Open helpful links menu",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Service & Repairs",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Service & Repairs",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [279]",
+      "gold_element_id": "279",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5462]",
+      "gold_element_id": "5462",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carmax / Auto workflow 998"
+}

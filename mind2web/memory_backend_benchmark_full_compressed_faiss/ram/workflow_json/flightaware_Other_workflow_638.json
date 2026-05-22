@@ -1,0 +1,51 @@
+{
+  "name": "flightaware / Other workflow 638",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show the list of countries with the highest number of seen aircrafts.",
+  "goal_pattern": "Show the list of countries with the highest number of seen aircrafts.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the ADS-B",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "ADS-B",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Statistics",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Statistics",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [1678]",
+      "gold_element_id": "1678",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [10736]",
+      "gold_element_id": "10736",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "flightaware / Other workflow 638"
+}

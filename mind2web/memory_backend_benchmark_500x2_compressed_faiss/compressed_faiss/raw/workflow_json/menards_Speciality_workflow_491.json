@@ -1,0 +1,30 @@
+{
+  "name": "menards / Speciality workflow 491",
+  "source": "Mind2Web exemplar",
+  "website": "menards",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Track an order using the order number of 456481897 and phone number of 8984486417.",
+  "steps": [
+    {
+      "action": "CLICK [78]",
+      "op": "CLICK",
+      "element": "78",
+      "value": "",
+      "description": "[link] Order Tracker -> CLICK",
+      "role": "link",
+      "label": "Order Tracker",
+      "observation": "<html> <header> <div> <a id=78> Order Tracker </a> <a> Rebate Center </a> </div> <button id=592 button> Departments <svg id=594> <title> Expand Departments menu </title> </svg> </button> </header> </html>"
+    },
+    {
+      "action": "TYPE [4609] [456481897]",
+      "op": "TYPE",
+      "element": "4609",
+      "value": "456481897",
+      "description": "[textbox] Order number EXAMPLES: ECEA12345, 01234567 -> TYPE: 456481897",
+      "role": "textbox",
+      "label": "Order number EXAMPLES: ECEA12345, 01234567",
+      "observation": "<html> <div> <input id=4609 text ordernumber /> <input id=5359 text secondaryinput /> <button id=5362 submit> Search </button> </div> </html>"
+    }
+  ]
+}

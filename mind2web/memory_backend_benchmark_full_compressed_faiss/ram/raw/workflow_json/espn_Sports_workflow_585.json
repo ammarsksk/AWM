@@ -1,0 +1,30 @@
+{
+  "name": "espn / Sports workflow 585",
+  "source": "Mind2Web exemplar",
+  "website": "espn",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "Show me the Biography of the NFL player named Michael Jordan",
+  "steps": [
+    {
+      "action": "CLICK [161]",
+      "op": "CLICK",
+      "element": "161",
+      "value": "",
+      "description": "[button] Open Search -> CLICK",
+      "role": "button",
+      "label": "Open Search",
+      "observation": "<html> <header> <a id=161 button open search /> <ul> <li> <a id=3678> <span> <span> NFL </span> <span> NFL </span> </span> </a> <button nfl /> </li> <li> <a id=4816> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button nba /> </li> </ul> </header> </html>"
+    },
+    {
+      "action": "TYPE [35890] [Michael Jordan]",
+      "op": "TYPE",
+      "element": "35890",
+      "value": "Michael Jordan",
+      "description": "[textbox] Search -> TYPE: Michael Jordan",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <header> <div> <input id=35890 text search sports, teams or players... /> <input submit /> </div> <ul> <li> <a id=39407> <span> <span> NFL </span> <span> NFL </span> </span> </a> <button nfl /> </li> <li> <a id=40545> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button nba /> </li> </ul> </header> </html>"
+    }
+  ]
+}

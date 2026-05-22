@@ -1,0 +1,51 @@
+{
+  "name": "parking / Other workflow 859",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find parking spaces near Warner Theatre in Washington DC.",
+  "goal_pattern": "Find parking spaces near Warner Theatre in Washington DC.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the CITIES",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "CITIES",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the WASHINGTON DC",
+      "operation": "CLICK",
+      "target_type": "heading",
+      "target_description": "WASHINGTON DC",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [119]",
+      "gold_element_id": "119",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [2775]",
+      "gold_element_id": "2775",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "parking / Other workflow 859"
+}

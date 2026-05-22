@@ -1,0 +1,30 @@
+{
+  "name": "ryanair / Airlines workflow 887",
+  "source": "Mind2Web exemplar",
+  "website": "ryanair",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Book the cheapest available hotel for a three night stay from 1st June in Jakarta. The guest is named Joe Bloggs with the email address of buckeye.foobar@gmail.com and phone number of 11111111111. Billing address is in New York, zip code 10001",
+  "steps": [
+    {
+      "action": "CLICK [413]",
+      "op": "CLICK",
+      "element": "413",
+      "value": "",
+      "description": "[button] hotels -> CLICK",
+      "role": "button",
+      "label": "hotels",
+      "observation": "<html> <hp-home> <button id=346 plan> <span> Plan </span> </button> <hp-search-widget-tabs-container> <button flights> </button> <button car hire> </button> <button id=413 hotels> <div> hotels </div> </button> <a events & activities> </a> </hp-search-widget-tabs-container> <ry-input-d email> <input id=1036 email email address /> </ry-input-d> </hp-home> </html>"
+    },
+    {
+      "action": "TYPE [1978] [jakarta]",
+      "op": "TYPE",
+      "element": "1978",
+      "value": "jakarta",
+      "description": "[div] Destination or property -> TYPE: jakarta",
+      "role": "div",
+      "label": "Destination or property",
+      "observation": "<html> <div> <hp-input-button id=2324 button> <div> <div> Check-in </div> <div> Choose date </div> </div> </hp-input-button> <hp-input-button id=2330 button> <div> <div> Check-out </div> <div> Choose date </div> </div> </hp-input-button> </div> <div id=1978 b3> <label> <text bounding_box_rect= 77,146,124,14>Destination or property</text> </label> </div> </html>"
+    }
+  ]
+}

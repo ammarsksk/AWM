@@ -1,0 +1,242 @@
+{
+  "exploretock / Restaurant workflow 1": {
+    "name": "exploretock / Restaurant workflow 1",
+    "source": "Mind2Web exemplar",
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+    "steps": [
+      {
+        "action": "SELECT [136] [Pickup]",
+        "op": "SELECT",
+        "element": "136",
+        "value": "Pickup",
+        "description": "[combobox] Reservation type -> SELECT: Pickup",
+        "role": "combobox",
+        "label": "Reservation type",
+        "observation": "<html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>"
+      },
+      {
+        "action": "CLICK [3113]",
+        "op": "CLICK",
+        "element": "3113",
+        "value": "",
+        "description": "[svg] -> CLICK",
+        "role": "svg",
+        "label": "",
+        "observation": "<html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>"
+      }
+    ]
+  },
+  "exploretock / Restaurant workflow 2": {
+    "name": "exploretock / Restaurant workflow 2",
+    "source": "Mind2Web exemplar",
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "task": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.",
+    "steps": [
+      {
+        "action": "CLICK [110]",
+        "op": "CLICK",
+        "element": "110",
+        "value": "",
+        "description": "[svg] -> CLICK",
+        "role": "svg",
+        "label": "",
+        "observation": "<html> <div> <select id=708 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=726 text location columbus, oh /> <button button select location> <svg id=110 /> </button> </div> </div> </html>"
+      },
+      {
+        "action": "CLICK [3210]",
+        "op": "CLICK",
+        "element": "3210",
+        "value": "",
+        "description": "[svg] -> CLICK",
+        "role": "svg",
+        "label": "",
+        "observation": "<html> <body> <div> <select id=3825 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <select id=3869 time> <option 11:00 true> Now </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> <option 12:30> 12:30 PM </option> <option 13:00> 1:00 PM </option> <option 13:30> 1:30 PM </option> <option 14:00> 2:00 PM </option> <option 14:30> 2:30 PM </option> <option 15:00> 3:00 PM </option> <option 15:30> 3:30 PM </option> <option 16:00> 4:00 PM </option> <option 16:30> 4:30 PM </option> <option 17:00> 5:00 PM </option> <option 17:30> 5:30 PM </option> <option 18:00> 6:00 PM </option> <option 18:30> 6:30 PM </option> <option 19:00> 7:00 PM </option> <option 19:30> 7:30 PM </option> <option 20:00> 8:00 PM </option> <option 20:30> 8:30 PM </option> <option 21:00> 9:00 PM </option> <option 21:30> 9:30 PM </option> <option 22:00> 10:00 PM </option> <option 22:30> 10:30 PM </option> <option 23:00> 11:00 PM </option> </select> </div> <div dialog> <button clear search> <svg id=3210 /> </button> </div> </body> </html>"
+      }
+    ]
+  },
+  "enterprise / Car rental workflow 3": {
+    "name": "enterprise / Car rental workflow 3",
+    "source": "Mind2Web exemplar",
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "task": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+    "steps": [
+      {
+        "action": "CLICK [134]",
+        "op": "CLICK",
+        "element": "134",
+        "value": "",
+        "description": "[a] -> CLICK",
+        "role": "a",
+        "label": "",
+        "observation": "<html> <div> <div region> <div combobox> <input id=3714 search provide a location /> </div> </div> <div> <a id=116> Email Offers </a> <p> Don't miss an excuse to hit the road: our latest offers delivered to your inbox. </p> </div> </div> <a id=134 /> </html>"
+      },
+      {
+        "action": "TYPE [11031] [Allan]",
+        "op": "TYPE",
+        "element": "11031",
+        "value": "Allan",
+        "description": "[textbox] First Name (required",
+        "role": "textbox",
+        "label": "First Name (required",
+        "observation": "<html> <form> <div> <input id=11031 text first-name /> <input id=14526 text last-name /> </div> <input id=14535 email /> </form> </html>"
+      }
+    ]
+  },
+  "enterprise / Car rental workflow 4": {
+    "name": "enterprise / Car rental workflow 4",
+    "source": "Mind2Web exemplar",
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "task": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+    "steps": [
+      {
+        "action": "TYPE [198] [Brooklyn]",
+        "op": "TYPE",
+        "element": "198",
+        "value": "Brooklyn",
+        "description": "[searchbox] Pick-up & Return Location (ZIP, City or Airport",
+        "role": "searchbox",
+        "label": "Pick-up & Return Location (ZIP, City or Airport",
+        "observation": "<html> <div> <nav main menu> <div id=2456 button> Vehicles </div> </nav> <div region> <div combobox> <input id=198 search provide a location /> </div> </div> <div region> <a id=5582> <span> Minivans & Vans </span> </a> </div> </div> </html>"
+      },
+      {
+        "action": "CLICK [13927]",
+        "op": "CLICK",
+        "element": "13927",
+        "value": "",
+        "description": "[option] Brooklyn, NY, US Select -> CLICK",
+        "role": "option",
+        "label": "Brooklyn, NY, US Select",
+        "observation": "<html> <div> <div region> <div combobox> <div listbox> <ul> <li id=13927 option> <span> <span> Brooklyn </span> , NY, US </span> <small> Select </small> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li option> </li> <li id=17785 option> <span> <span> Brooklyn </span> , AU (New South Wales) </span> <small> Select </small> </li> <li option> </li> </ul> </div> </div> </div> <div region> <a id=19600> <span> Minivans & Vans </span> </a> </div> </div> </html>"
+      }
+    ]
+  },
+  "kohls / Department workflow 5": {
+    "name": "kohls / Department workflow 5",
+    "source": "Mind2Web exemplar",
+    "website": "kohls",
+    "domain": "Shopping",
+    "subdomain": "Department",
+    "task": "Find the highest rated dog collar under 10 dollar.",
+    "steps": [
+      {
+        "action": "CLICK [159]",
+        "op": "CLICK",
+        "element": "159",
+        "value": "",
+        "description": "[link] Shop by Category -> CLICK",
+        "role": "link",
+        "label": "Shop by Category",
+        "observation": "<html> <article> <a id=1214> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=1457> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> <svg id=159 img /> </html>"
+      },
+      {
+        "action": "CLICK [7923]",
+        "op": "CLICK",
+        "element": "7923",
+        "value": "",
+        "description": "[link] Pet -> CLICK",
+        "role": "link",
+        "label": "Pet",
+        "observation": "<html> <div> <a id=7923> Pet </a> <article> <a id=18220> <p> <span> <span> $ </span> <span> 10 </span> </span> <span> & Under </span> </p> </a> <a id=18463> <p> <span> <sup> $ </sup> 10 </span> & Under </p> </a> </article> </div> </html>"
+      }
+    ]
+  },
+  "united / Airlines workflow 6": {
+    "name": "united / Airlines workflow 6",
+    "source": "Mind2Web exemplar",
+    "website": "united",
+    "domain": "Travel",
+    "subdomain": "Airlines",
+    "task": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023",
+    "steps": [
+      {
+        "action": "TYPE [127] [SPRINGFIELD]",
+        "op": "TYPE",
+        "element": "127",
+        "value": "SPRINGFIELD",
+        "description": "[combobox] Enter your departing city, airport name, or airpor... -> TYPE: SPRINGFIELD",
+        "role": "combobox",
+        "label": "Enter your departing city, airport name, or airpor...",
+        "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a id=912 tab> <span> BOOK </span> </a> <a tab> </a> <a id=918 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=127 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> </main> </div> </html>"
+      },
+      {
+        "action": "CLICK [3634]",
+        "op": "CLICK",
+        "element": "3634",
+        "value": "",
+        "description": "[button] Springfield, IL, US (SPI",
+        "role": "button",
+        "label": "Springfield, IL, US (SPI",
+        "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div> <div tooltip> <div listbox> <ul listbox> <li option> <button id=3634 button> <span> <strong> Springfield </strong> , IL, US (SPI) </span> </button> </li> <li option> <button id=3635 button> <span> <strong> Springfield </strong> , MO, US (SGF) </span> </button> </li> </ul> </div> </div> <div> <input id=4592 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> </div> </section> </main> </html>"
+      }
+    ]
+  },
+  "budget / Car rental workflow 7": {
+    "name": "budget / Car rental workflow 7",
+    "source": "Mind2Web exemplar",
+    "website": "budget",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "task": "Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.",
+    "steps": [
+      {
+        "action": "CLICK [133]",
+        "op": "CLICK",
+        "element": "133",
+        "value": "",
+        "description": "[button] Locations -> HOVER",
+        "role": "button",
+        "label": "Locations",
+        "observation": "<html> <div> <ul> <a id=842 button> Reservations </a> <a id=133 button> Locations </a> </ul> <a id=3954> SUV Rental </a> </div> </html>"
+      },
+      {
+        "action": "CLICK [9804]",
+        "op": "CLICK",
+        "element": "9804",
+        "value": "",
+        "description": "[link] Find a Location -> CLICK",
+        "role": "link",
+        "label": "Find a Location",
+        "observation": "<html> <div> <ul> <a id=10513 button> Reservations </a> <a id=9804> Find a Location </a> </ul> <a id=13625> SUV Rental </a> </div> </html>"
+      }
+    ]
+  },
+  "underarmour / Fashion workflow 8": {
+    "name": "underarmour / Fashion workflow 8",
+    "source": "Mind2Web exemplar",
+    "website": "underarmour",
+    "domain": "Shopping",
+    "subdomain": "Fashion",
+    "task": "Find a men's UA outlet T-shirt of XL size and add to cart.",
+    "steps": [
+      {
+        "action": "CLICK [4946]",
+        "op": "CLICK",
+        "element": "4946",
+        "value": "",
+        "description": "[menuitem] Outlet -> CLICK",
+        "role": "menuitem",
+        "label": "Outlet",
+        "observation": "<html> <div> <ul menubar> <li> <a id=1625 menuitem> <span> Men </span> </a> <div men> </div> </li> <li> <a id=4946 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <a id=6156> Shop Men </a> <a> Shop Women </a> <a> Shop Kids </a> </div> </main> </div> </html>"
+      },
+      {
+        "action": "CLICK [12463]",
+        "op": "CLICK",
+        "element": "12463",
+        "value": "",
+        "description": "[link] Mens -> CLICK",
+        "role": "link",
+        "label": "Mens",
+        "observation": "<html> <main main> <div> <a id=12463 refine by gender: mens> Mens </a> <div> <div id=18543> Product Category </div> <div id=18577> Product Type </div> </div> </div> </main> </html>"
+      }
+    ]
+  }
+}

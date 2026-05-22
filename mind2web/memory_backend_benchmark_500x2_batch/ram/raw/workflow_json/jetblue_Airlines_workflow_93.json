@@ -1,0 +1,30 @@
+{
+  "name": "jetblue / Airlines workflow 93",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find check-in flight for John Smith having ticket no. 123456780",
+  "steps": [
+    {
+      "action": "CLICK [126]",
+      "op": "CLICK",
+      "element": "126",
+      "value": "",
+      "description": "[link] Check In -> CLICK",
+      "role": "link",
+      "label": "Check In",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <a id=126> Check In </a> </nav> </jb-header> <jb-tabs> <nav tablist> <div> <button id=769 tab button> <span> <jb-icon img /> <span> Flights </span> </span> </button> <button tab button> </button> <button tab button> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=915 text /> </jb-type-ahead-input> </div> </jb-tab-panel> </jb-tabs> </jb-app> </html>"
+    },
+    {
+      "action": "TYPE [2306] [John]",
+      "op": "TYPE",
+      "element": "2306",
+      "value": "John",
+      "description": "[textbox] first name maxlimit is 30 -> TYPE: John",
+      "role": "textbox",
+      "label": "first name maxlimit is 30",
+      "observation": "<html> <div> <div> <input id=2306 text first name maxlimit is 30 firstname /> <input id=3524 text last name maxlimit is 30 lastname /> </div> <button id=3634 button submitbutton> Find Flights </button> </div> </html>"
+    }
+  ]
+}

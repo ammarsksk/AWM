@@ -1,0 +1,30 @@
+{
+  "name": "travelzoo / General workflow 634",
+  "source": "Mind2Web exemplar",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find guided vacations in Europe for more than 10 nights in the month of July",
+  "steps": [
+    {
+      "action": "CLICK [99]",
+      "op": "CLICK",
+      "element": "99",
+      "value": "",
+      "description": "[textbox] What type of deals? -> CLICK",
+      "role": "textbox",
+      "label": "What type of deals?",
+      "observation": "<html> <div> <form> <input homepage /> <h3> Show me: </h3> <div> <label> What type of deals? </label> <input id=99 text all deals e.g. hotels, beach, disney /> <input 0 /> <button button> x </button> </div> <button id=482 submit search> Search Deals </button> </form> <a id=683> <span> Vacations </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [8236]",
+      "op": "CLICK",
+      "element": "8236",
+      "value": "",
+      "description": "[div] Vacations -> CLICK",
+      "role": "div",
+      "label": "Vacations",
+      "observation": "<html> <body> <a id=6883> <span> Vacations </span> </a> <ul> <li id=8217> <div> Vacations - Europe </div> </li> <li id=8236> <div> Vacations </div> </li> </ul> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "kayak / Airlines workflow 234",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the fastest single stop flight fron JFK airport in New York to Male in Maldives on March 13",
+  "steps": [
+    {
+      "action": "CLICK [133]",
+      "op": "CLICK",
+      "element": "133",
+      "value": "",
+      "description": "[span] Round-trip -> CLICK",
+      "role": "span",
+      "label": "Round-trip",
+      "observation": "<html> <div> <span id=133> Round-trip </span> <div> <input id=696 text flight origin input from? /> <input id=712 text flight destination input to? /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12030]",
+      "op": "CLICK",
+      "element": "12030",
+      "value": "",
+      "description": "[tab] One-way -> CLICK",
+      "role": "tab",
+      "label": "One-way",
+      "observation": "<html> <body> <input id=8731 text flight origin input from? /> <ul tablist> <li id=12030 tab one-way> <span> One-way </span> </li> <li id=12032 tab round-trip> <span> Round-trip </span> </li> <li tab multi-city> </li> <li tab trip builder> </li> </ul> </body> </html>"
+    }
+  ]
+}

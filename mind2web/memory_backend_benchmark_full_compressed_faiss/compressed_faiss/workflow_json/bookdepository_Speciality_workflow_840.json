@@ -1,0 +1,51 @@
+{
+  "name": "bookdepository / Speciality workflow 840",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "search new books from Jk Rowling available for kids within the age from 3 to 5 that are below $20",
+  "goal_pattern": "search new books from Jk Rowling available for kids within the age from 3 to 5 that are below $20",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search for books by keyword / title / author / ISB...",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Search for books by keyword / title / author / ISB...",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Jk rowling",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Jk rowling",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [125] [Jk rowling]",
+      "gold_element_id": "125",
+      "gold_value": "Jk rowling"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [36034]",
+      "gold_element_id": "36034",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "bookdepository / Speciality workflow 840"
+}

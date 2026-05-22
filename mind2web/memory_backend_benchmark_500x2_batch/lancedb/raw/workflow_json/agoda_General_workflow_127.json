@@ -1,0 +1,30 @@
+{
+  "name": "agoda / General workflow 127",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Show activities in Miami with lowest price and minimum 4 star rated.",
+  "steps": [
+    {
+      "action": "CLICK [109]",
+      "op": "CLICK",
+      "element": "109",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <div> <ul tablist> <li tab> <p> New! </p> <svg id=109> </svg> <h6> Activities </h6> </li> </ul> <div tabpanel> <button id=129> <span> SEARCH </span> </button> </div> </div> <button id=973> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [4354] [Miami]",
+      "op": "TYPE",
+      "element": "4354",
+      "value": "Miami",
+      "description": "[combobox] Search by city or activity -> TYPE: Miami",
+      "role": "combobox",
+      "label": "Search by city or activity",
+      "observation": "<html> <div> <div tabpanel> <div combobox> <input id=4354 combobox text search by city or activity /> </div> <button id=4384> <span> SEARCH </span> </button> </div> <button id=5065> <span> Explore hotels </span> </button> </div> </html>"
+    }
+  ]
+}

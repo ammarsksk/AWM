@@ -1,0 +1,51 @@
+{
+  "name": "enterprise / Car rental workflow 4",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+  "goal_pattern": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Pick-up & Return Location (ZIP, City or Airport",
+      "operation": "TYPE",
+      "target_type": "searchbox",
+      "target_description": "Pick-up & Return Location (ZIP, City or Airport",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Brooklyn, NY, US Select",
+      "operation": "CLICK",
+      "target_type": "option",
+      "target_description": "Brooklyn, NY, US Select",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [198] [Brooklyn]",
+      "gold_element_id": "198",
+      "gold_value": "Brooklyn"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [13927]",
+      "gold_element_id": "13927",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "enterprise / Car rental workflow 4"
+}

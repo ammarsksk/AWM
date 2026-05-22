@@ -1,0 +1,51 @@
+{
+  "name": "budget / Car rental workflow 243",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Select the mystery vehicle to pick up at Bradenton in Mahattan, Florida  on april 20 at 3 pm and return at 6pm",
+  "goal_pattern": "Select the mystery vehicle to pick up at Bradenton in Mahattan, Florida  on april 20 at 3 pm and return at 6pm",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Enter your pick-up location or zip code",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Enter your pick-up location or zip code",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Manhattan",
+      "operation": "CLICK",
+      "target_type": "div",
+      "target_description": "Manhattan",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [138] [Manhattan]",
+      "gold_element_id": "138",
+      "gold_value": "Manhattan"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [11912]",
+      "gold_element_id": "11912",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "budget / Car rental workflow 243"
+}

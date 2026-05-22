@@ -1,0 +1,51 @@
+{
+  "name": "carnival / Other workflow 851",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carnival",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show me the breakfast options on the Carnival Breeze ship.",
+  "goal_pattern": "Show me the breakfast options on the Carnival Breeze ship.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Explore",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Explore",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Dining",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Dining",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [661]",
+      "gold_element_id": "661",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5699]",
+      "gold_element_id": "5699",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carnival / Other workflow 851"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "carmax / Auto workflow 544",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find the cheapest 2017 Honda Civic within 100 miles of 07470 which has a sun roof and black exterior color while excluding out of market vehicles",
+  "goal_pattern": "Find the cheapest 2017 Honda Civic within 100 miles of 07470 which has a sun roof and black exterior color while excluding out of market vehicles",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the SEARCH CARS",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "SEARCH CARS",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Distance & Shipping",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Distance & Shipping",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [151]",
+      "gold_element_id": "151",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [2905]",
+      "gold_element_id": "2905",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carmax / Auto workflow 544"
+}

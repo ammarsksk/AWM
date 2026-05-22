@@ -1,0 +1,30 @@
+{
+  "name": "parking / Other workflow 857",
+  "source": "Mind2Web exemplar",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find parking near Disneyland that has EV charging.",
+  "steps": [
+    {
+      "action": "TYPE [664] [Disneyland]",
+      "op": "TYPE",
+      "element": "664",
+      "value": "Disneyland",
+      "description": "[span] Enter an Address or Venue to find parking -> TYPE: Disneyland",
+      "role": "span",
+      "label": "Enter an Address or Venue to find parking",
+      "observation": "<html> <div> <button id=632> Find parking near me </button> <form get> <span> <input id=656 combobox text search /> <label id=664> <span> Enter an Address or Venue to find parking </span> </label> </span> </form> <div dialog> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [2902]",
+      "op": "CLICK",
+      "element": "2902",
+      "value": "",
+      "description": "[combobox] \uf002 Enter an Address or Venue to find parking -> ENTER",
+      "role": "combobox",
+      "label": "\uf002 Enter an Address or Venue to find parking",
+      "observation": "<html> <div> <button id=3412> Find parking near me </button> <form get> <span> <input id=2902 combobox text search disneyland /> <pre> Disneyl </pre> </span> <div> <input id=3481 2023-04-18 /> <button button /> </div> </form> <div dialog> </div> </div> </html>"
+    }
+  ]
+}

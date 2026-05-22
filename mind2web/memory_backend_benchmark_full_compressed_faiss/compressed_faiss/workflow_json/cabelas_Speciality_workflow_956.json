@@ -1,0 +1,51 @@
+{
+  "name": "cabelas / Speciality workflow 956",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "cabelas",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find a black sleeping pad that is under $40.",
+  "goal_pattern": "Find a black sleeping pad that is under $40.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Search",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Search",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Search",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [151] [black sleeping bag]",
+      "gold_element_id": "151",
+      "gold_value": "black sleeping bag"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [19628]",
+      "gold_element_id": "19628",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "cabelas / Speciality workflow 956"
+}

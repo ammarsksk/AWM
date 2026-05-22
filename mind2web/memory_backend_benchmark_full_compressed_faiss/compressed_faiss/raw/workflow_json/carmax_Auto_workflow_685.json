@@ -1,0 +1,30 @@
+{
+  "name": "carmax / Auto workflow 685",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find a store in Modesto California and set is as my store.",
+  "steps": [
+    {
+      "action": "CLICK [109]",
+      "op": "CLICK",
+      "element": "109",
+      "value": "",
+      "description": "[link] Find a store -> CLICK",
+      "role": "link",
+      "label": "Find a store",
+      "observation": "<html> <div> <header banner> <nav primary> <button id=272 open my store flyout> <div> <span> Your store for 43219 </span> <span> Columbus Easton </span> </div> </button> </nav> </header> <main main> <aside alertdialog> <p> At CarMax, you can buy online or at your nearest CarMax store. If you purchase in-store, you can still take <a> buy online </a> , you can choose between getting it delivered or picking it up at the store. No matter how you want <a> your area </a> . CarMax delivery is available within a 60-mile radius of select stores. Not available to customers in all states. Please contact <a id=1128> nearest store </a> for details. Applicable store-to-store shipping fees are due in advance of vehicle delivery and are separate from sales transactions. </p> </aside> </main> <footer contentinfo> <a id=109> Find a store </a> </footer> </div> </html>"
+    },
+    {
+      "action": "TYPE [3248] [california]",
+      "op": "TYPE",
+      "element": "3248",
+      "value": "california",
+      "description": "[searchbox] Search carmax locations. -> TYPE: california",
+      "role": "searchbox",
+      "label": "Search carmax locations.",
+      "observation": "<html> <main> <div> <input id=3248 search search carmax locations. only letters and numbers are keyword search by zip or state /> <button id=3632 submit search. /> </div> <a id=3769> <div> <h2> California </h2> <p> 31 stores </p> </div> </a> </main> </html>"
+    }
+  ]
+}

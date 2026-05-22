@@ -1,0 +1,51 @@
+{
+  "name": "uniqlo / Fashion workflow 726",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "uniqlo",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "task": "View the toddler collection and add one pair of the cheapest socks for a 6 months to 5 years to the wishlist.",
+  "goal_pattern": "View the toddler collection and add one pair of the cheapest socks for a 6 months to 5 years to the wishlist.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the BABY",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "BABY",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Toddler (6M-5Y",
+      "operation": "CLICK",
+      "target_type": "tab",
+      "target_description": "Toddler (6M-5Y",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [321]",
+      "gold_element_id": "321",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [7241]",
+      "gold_element_id": "7241",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "uniqlo / Fashion workflow 726"
+}

@@ -1,0 +1,81 @@
+{
+  "name": "enterprise / Car rental workflow 4",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "llm",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+  "goal_pattern": "Find a specific car type at a given location for specified dates and renter age.",
+  "applicability": {
+    "when_to_use": "When starting a car rental search by specifying a location.",
+    "when_not_to_use": "When the location is already selected or the user wants to use their current location."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "Enter the desired pick-up and return location.",
+      "operation": "TYPE",
+      "target_type": "input",
+      "target_description": "Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'.",
+      "value_policy": "Use the city or airport name from the user's request.",
+      "selection_rule": "N/A",
+      "success_signal": "A dropdown list of location suggestions appears."
+    },
+    {
+      "step": 2,
+      "step_intent": "Select the correct location from the auto-suggested list.",
+      "operation": "CLICK",
+      "target_type": "option",
+      "target_description": "The list item in the location suggestions that matches the intended city and state/country.",
+      "value_policy": "N/A",
+      "selection_rule": "Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US').",
+      "success_signal": "The location input field is populated with the selected location and the suggestion list disappears."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [198] [Brooklyn]",
+      "gold_element_id": "198",
+      "gold_value": "Brooklyn"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [13927]",
+      "gold_element_id": "13927",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "enterprise / Car rental workflow 4",
+  "llm_raw_abstraction": {
+    "name": "enterprise / Car rental workflow 4",
+    "goal_pattern": "Find a specific car type at a given location for specified dates and renter age.",
+    "applicability": {
+      "when_to_use": "When starting a car rental search by specifying a location.",
+      "when_not_to_use": "When the location is already selected or the user wants to use their current location."
+    },
+    "steps": [
+      {
+        "step": 1,
+        "step_intent": "Enter the desired pick-up and return location.",
+        "operation": "TYPE",
+        "target_type": "input",
+        "target_description": "Search input for pick-up and return location, labeled 'Pick-up & Return Location (ZIP, City or Airport'.",
+        "value_policy": "Use the city or airport name from the user's request.",
+        "selection_rule": "N/A",
+        "success_signal": "A dropdown list of location suggestions appears."
+      },
+      {
+        "step": 2,
+        "step_intent": "Select the correct location from the auto-suggested list.",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target_description": "The list item in the location suggestions that matches the intended city and state/country.",
+        "value_policy": "N/A",
+        "selection_rule": "Choose the option that contains the desired location text (e.g., 'Brooklyn, NY, US').",
+        "success_signal": "The location input field is populated with the selected location and the suggestion list disappears."
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tvguide / Movie workflow 676",
+  "source": "Mind2Web exemplar",
+  "website": "tvguide",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show latest documentaries on Netflix and add the one with 70+ metascore.",
+  "steps": [
+    {
+      "action": "CLICK [128]",
+      "op": "CLICK",
+      "element": "128",
+      "value": "",
+      "description": "[link] What to Watch on Netflix -> CLICK",
+      "role": "link",
+      "label": "What to Watch on Netflix",
+      "observation": "<html> <ul menubar> <li menuitem> <a id=787> Streaming </a> <div menu> <a id=802 menuitem> Netflix </a> </div> </li> </ul> <img id=128 /> </html>"
+    },
+    {
+      "action": "CLICK [9296]",
+      "op": "CLICK",
+      "element": "9296",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <ul menubar> <li menuitem> <a id=9893> Streaming </a> <div menu> <a id=9908 menuitem> Netflix </a> </div> </li> </ul> <div> <h1> What to Watch on Netflix </h1> <p> Find what to watch on Netflix including the latest releases. Filter by movies, TV shows, release years, genres and more. </p> <button id=9296> Filter </button> <p> 5,480 results </p> </div> </div> </html>"
+    }
+  ]
+}

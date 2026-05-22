@@ -1,0 +1,30 @@
+{
+  "name": "aa / Airlines workflow 505",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the lowest travel time flight for 1 traveler from JFK, NYC to Heathrow, London on April 19, then from Heathrow, London to CDG, Paris on April 21 and then from CDG, Paris to JFK, NYC on April 23",
+  "steps": [
+    {
+      "action": "CLICK [110]",
+      "op": "CLICK",
+      "element": "110",
+      "value": "",
+      "description": "[button] PLAN TRAVEL -> CLICK",
+      "role": "button",
+      "label": "PLAN TRAVEL",
+      "observation": "<html> <body> <header header> <nav navigation main navigation> <button id=110> Plan Travel </button> </nav> </header> <main main main content> <div tabpanel> <form> <div> <label> From <input id=1186 text originairport cmh city or airport /> </label> <label> To <input id=1207 text city or airport /> </label> </div> </form> </div> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [5784]",
+      "op": "CLICK",
+      "element": "5784",
+      "value": "",
+      "description": "[link] Flights -> CLICK",
+      "role": "link",
+      "label": "Flights",
+      "observation": "<html> <body> <header header> <nav navigation main navigation> <a id=5784> Flights </a> </nav> </header> <main main main content> <div tabpanel> <form> <div> <label> From <input id=6869 text originairport cmh city or airport /> </label> <label> To <input id=6890 text city or airport /> </label> </div> </form> </div> </main> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "mbta / Ground workflow 915",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find the schedule of the East Boston ferry, check connections, and fares  and download the pdf schedule.",
+  "steps": [
+    {
+      "action": "CLICK [58]",
+      "op": "CLICK",
+      "element": "58",
+      "value": "",
+      "description": "[button] Transit \uf0d7 -> CLICK",
+      "role": "button",
+      "label": "Transit \uf0d7",
+      "observation": "<html> <div> <nav main navigation> <a id=58 button> Transit </a> <div modes of transit> <a id=613> <div> Ferry </div> </a> </div> <a button> Fares </a> </nav> <div navigation> <div tabpanel> <a id=1958> <svg img> <title> ferry </title> </svg> <div> Ferry <span> Routes </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9122]",
+      "op": "CLICK",
+      "element": "9122",
+      "value": "",
+      "description": "[link] Ferry -> CLICK",
+      "role": "link",
+      "label": "Ferry",
+      "observation": "<html> <div> <nav main navigation> <div modes of transit> <a id=9122> <div> Ferry </div> </a> </div> </nav> <div navigation> <div tabpanel> <div> <a id=10453> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> <a id=10467> <svg img> <title> ferry </title> </svg> <div> Ferry <span> Routes </span> </div> </a> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

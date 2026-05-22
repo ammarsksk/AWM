@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 852",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Browse movies in theaters that are certified fresh and sorty by highest audience score.",
+  "steps": [
+    {
+      "action": "CLICK [132]",
+      "op": "CLICK",
+      "element": "132",
+      "value": "",
+      "description": "[link] MOVIES -> CLICK",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <rt-header navigation bar> <div> <slot nav-links> <a id=643> What's the Tomatometer? </a> </slot> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=132> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2588> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [18248]",
+      "op": "CLICK",
+      "element": "18248",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <button id=21016> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=21332 button> <slot label> <span> Certified Fresh </span> </slot> </filter-chip> </div> </div> <svg id=18248 /> </html>"
+    }
+  ]
+}

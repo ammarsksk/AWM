@@ -1,0 +1,51 @@
+{
+  "name": "amtrak / Ground workflow 18",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Get quote for Amtrak vacation for two adults across country while leaving from Chicago on the 22nd of April. It should include Deluxe bedroom. The passenger is named John Mark with email address of johnmark@gmail.com and phone number of 234567890.",
+  "goal_pattern": "Get quote for Amtrak vacation for two adults across country while leaving from Chicago on the 22nd of April. It should include Deluxe bedroom. The passenger is named John Mark with email address of johnmark@gmail.com and phone number of 234567890.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the DEALS",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "DEALS",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the VACATIONS & RAIL TOURS Train vacation packages thr...",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "VACATIONS & RAIL TOURS Train vacation packages thr...",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [159]",
+      "gold_element_id": "159",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [12687]",
+      "gold_element_id": "12687",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "amtrak / Ground workflow 18"
+}

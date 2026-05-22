@@ -1,0 +1,51 @@
+{
+  "name": "jetblue / Airlines workflow 755",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Book two rooms in the cheapest 3-star hotel which provides free breakfast, and free airport transportation for three adults, and one child from April 22 to 25 in texas city, the hotel should provide amenities for kids.",
+  "goal_pattern": "Book two rooms in the cheapest 3-star hotel which provides free breakfast, and free airport transportation for three adults, and one child from April 22 to 25 in texas city, the hotel should provide amenities for kids.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Stays",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Stays",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Unlock deals External Link should open in a new wi...",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Unlock deals External Link should open in a new wi...",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [877]",
+      "gold_element_id": "877",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5033]",
+      "gold_element_id": "5033",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "jetblue / Airlines workflow 755"
+}

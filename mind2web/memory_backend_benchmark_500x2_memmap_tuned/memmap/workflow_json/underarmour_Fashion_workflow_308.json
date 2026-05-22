@@ -1,0 +1,51 @@
+{
+  "name": "underarmour / Fashion workflow 308",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "underarmour",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "task": "Shop for UA outlet clothing and find a outdoor sports jacket in size ymd.",
+  "goal_pattern": "Shop for UA outlet clothing and find a outdoor sports jacket in size ymd.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Outlet",
+      "operation": "CLICK",
+      "target_type": "menuitem",
+      "target_description": "Outlet",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Girls",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Girls",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [4992]",
+      "gold_element_id": "4992",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [8358]",
+      "gold_element_id": "8358",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "underarmour / Fashion workflow 308"
+}

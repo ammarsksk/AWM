@@ -1,0 +1,51 @@
+{
+  "name": "aa / Airlines workflow 503",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Get email alerts for a flight from BHZ to EWN leaving on april 30 on the email lin.lon@gmail.com",
+  "goal_pattern": "Get email alerts for a flight from BHZ to EWN leaving on april 30 on the email lin.lon@gmail.com",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Flight status",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Flight status",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Create flight status notification",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Create flight status notification",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [104]",
+      "gold_element_id": "104",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5703]",
+      "gold_element_id": "5703",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "aa / Airlines workflow 503"
+}

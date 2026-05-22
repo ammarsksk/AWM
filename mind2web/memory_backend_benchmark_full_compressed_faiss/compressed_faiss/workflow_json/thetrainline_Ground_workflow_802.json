@@ -1,0 +1,51 @@
+{
+  "name": "thetrainline / Ground workflow 802",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Get the cheapest return tickets from Leeds to Sheffield leaving at 8:30 am on Mar 25, 2023 and returning at 23:00 pm on same day for 1 adult and 2 child.",
+  "goal_pattern": "Get the cheapest return tickets from Leeds to Sheffield leaving at 8:30 am on Mar 25, 2023 and returning at 23:00 pm on same day for 1 adult and 2 child.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Departure station, none selected. Select a station...",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Departure station, none selected. Select a station...",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Leeds",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Leeds",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [149] [Leeds]",
+      "gold_element_id": "149",
+      "gold_value": "Leeds"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4300]",
+      "gold_element_id": "4300",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "thetrainline / Ground workflow 802"
+}

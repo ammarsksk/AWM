@@ -1,0 +1,30 @@
+{
+  "name": "ticketcenter / Event workflow 51",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Show MLB tickets for this weekend and select the next one.",
+  "steps": [
+    {
+      "action": "CLICK [75]",
+      "op": "CLICK",
+      "element": "75",
+      "value": "",
+      "description": "[button] SPORTS -> HOVER",
+      "role": "button",
+      "label": "SPORTS",
+      "observation": "<html> <body> <a id=75 button> Sports </a> <div> <input id=2313 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2562 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [8721]",
+      "op": "CLICK",
+      "element": "8721",
+      "value": "",
+      "description": "[link] All MLB Tickets -> CLICK",
+      "role": "link",
+      "label": "All MLB Tickets",
+      "observation": "<html> <li> <a id=9008 button> Sports </a> <div> <ul tablist> <a id=9034 tab> MLB </a> </ul> <div tabpanel> <div> <a id=8721> All MLB Tickets </a> <a> Arizona Diamondbacks </a> <a> Atlanta Braves </a> <a> Baltimore Orioles </a> </div> </div> </div> </li> </html>"
+    }
+  ]
+}

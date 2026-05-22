@@ -1,0 +1,30 @@
+{
+  "name": "bookdepository / Speciality workflow 231",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find a book in Hindi with ISBN 1648926800.",
+  "steps": [
+    {
+      "action": "CLICK [108]",
+      "op": "CLICK",
+      "element": "108",
+      "value": "",
+      "description": "[link] Advanced Search -> CLICK",
+      "role": "link",
+      "label": "Advanced Search",
+      "observation": "<html> <div> <div> <div> <input id=324 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <a id=108> Advanced Search </a> </div> <div> <a id=1290> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19348]",
+      "op": "CLICK",
+      "element": "19348",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <input id=19550 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <div> <div> <label> ISBN </label> <input id=19348 text searchisbn /> </div> <div> <label id=20424> Language </label> <select searchlang> </select> </div> </div> </div> </html>"
+    }
+  ]
+}

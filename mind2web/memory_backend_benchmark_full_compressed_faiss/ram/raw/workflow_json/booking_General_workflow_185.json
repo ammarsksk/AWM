@@ -1,0 +1,30 @@
+{
+  "name": "booking / General workflow 185",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book fasted flexible direct flights from New York to Tokyo on June 1, between 6 to 12 pm departure, and from Tokyo to New Delhi on June 5.",
+  "steps": [
+    {
+      "action": "CLICK [760]",
+      "op": "CLICK",
+      "element": "760",
+      "value": "",
+      "description": "[span] Flights -> CLICK",
+      "role": "span",
+      "label": "Flights",
+      "observation": "<html> <body> <nav what are you looking for?> <a id=760> <span> Flights </span> </a> </nav> <ul tablist> <button id=2767 tab> <span> Regions </span> </button> <button id=2776 tab> <span> Cities </span> </button> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [6192] [NEW YORK]",
+      "op": "TYPE",
+      "element": "6192",
+      "value": "NEW YORK",
+      "description": "[b] Columbus -> TYPE: NEW YORK",
+      "role": "b",
+      "label": "Columbus",
+      "observation": "<html> <div> <div> <button id=6192 button> <span> <b> Columbus </b> All airports </span> <span> <b> Columbus </b> All airports </span> </button> <button button switch origin and return destinations /> <button id=6219 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <ul tablist> <button id=6581 tab button> <span> Asia </span> </button> </ul> </div> </html>"
+    }
+  ]
+}

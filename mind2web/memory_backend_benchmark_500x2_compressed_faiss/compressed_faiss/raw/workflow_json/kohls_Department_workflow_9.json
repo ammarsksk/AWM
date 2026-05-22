@@ -1,0 +1,30 @@
+{
+  "name": "kohls / Department workflow 9",
+  "source": "Mind2Web exemplar",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "task": "Browse for wall art with a price range of $25 to $50.",
+  "steps": [
+    {
+      "action": "TYPE [158] [wall art]",
+      "op": "TYPE",
+      "element": "158",
+      "value": "wall art",
+      "description": "[textbox] Search by keyword or web id -> TYPE: wall art",
+      "role": "textbox",
+      "label": "Search by keyword or web id",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=154 submit submit-search /> <input id=158 text search hi james, what are you /> </fieldset> <a id=472> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [7858]",
+      "op": "CLICK",
+      "element": "7858",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=7858 submit submit-search /> <input id=8069 text search hi james, what are you wall art /> </fieldset> <a id=8239> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    }
+  ]
+}

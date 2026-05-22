@@ -1,0 +1,30 @@
+{
+  "name": "us.megabus / Ground workflow 680",
+  "source": "Mind2Web exemplar",
+  "website": "us.megabus",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find the next available bus from Chicago to Ann Arbor.",
+  "steps": [
+    {
+      "action": "TYPE [136] [Chicago]",
+      "op": "TYPE",
+      "element": "136",
+      "value": "Chicago",
+      "description": "[textbox] From (type text or use the arrow keys",
+      "role": "textbox",
+      "label": "From (type text or use the arrow keys",
+      "observation": "<html> <form> <div> <mb-typeahead-component startingat> <div> <input id=136 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <mb-typeahead-component goingto> <div> <input id=2282 text enter a town, city or /> <button button clear input box /> <div enter a town, city or> </div> </div> </mb-typeahead-component> </div> <button id=2373 submit findtickets> Find tickets </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [6208]",
+      "op": "CLICK",
+      "element": "6208",
+      "value": "",
+      "description": "[span] Chicago, IL -> CLICK",
+      "role": "span",
+      "label": "Chicago, IL",
+      "observation": "<html> <form> <div> <mb-typeahead-component startingat> <div enter a town, city or> <div> <span> Megabus cities </span> <span id=6208> Chicago, IL </span> </div> </div> </mb-typeahead-component> <mb-typeahead-component goingto> <div> <input id=6737 text enter a town, city or /> <button button clear input box /> <div enter a town, city or> </div> </div> </mb-typeahead-component> </div> <button id=6828 submit findtickets> Find tickets </button> </form> </html>"
+    }
+  ]
+}

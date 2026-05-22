@@ -1,0 +1,51 @@
+{
+  "name": "discogs / Music workflow 205",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "discogs",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Buy a pop rock album CD from the United Kingdom that was released in 2016, is between \u00a315 and \u00a320 and in perfect condition.",
+  "goal_pattern": "Buy a pop rock album CD from the United Kingdom that was released in 2016, is between \u00a315 and \u00a320 and in perfect condition.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Marketplace",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Marketplace",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Pop Rock",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Pop Rock",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [130]",
+      "gold_element_id": "130",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5571]",
+      "gold_element_id": "5571",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "discogs / Music workflow 205"
+}

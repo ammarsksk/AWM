@@ -1,0 +1,30 @@
+{
+  "name": "thetrainline / Ground workflow 803",
+  "source": "Mind2Web exemplar",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Book a journey with return option on same day from Edinburg to Manchester on April 2nd and book the best possible option available.",
+  "steps": [
+    {
+      "action": "TYPE [159] [edinburg]",
+      "op": "TYPE",
+      "element": "159",
+      "value": "edinburg",
+      "description": "[combobox] Departure station, London selected. -> TYPE: edinburg",
+      "role": "combobox",
+      "label": "Departure station, London selected.",
+      "observation": "<html> <main main> <form> <label> <span> From </span> <input id=159 combobox text departure station, london selected. london enter origin station... /> </label> <fieldset> <span> Return </span> <input id=668 text date use format: /> </fieldset> <button id=757 submit> <span> Get cheapest tickets </span> </button> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [4356]",
+      "op": "CLICK",
+      "element": "4356",
+      "value": "",
+      "description": "[span] Edinburgh (Waverley",
+      "role": "span",
+      "label": "Edinburgh (Waverley",
+      "observation": "<html> <main main> <form> <div dialog> <ul listbox> <div> <li id=4356 option> <span> Edinburgh (Waverley) <span> , City centre, Main </span> </span> </li> <li option> </li> <li option> </li> <li id=4373 option> <span> Edinburgh Gateway </span> </li> <li option> </li> </div> </ul> </div> <button id=4644 submit> <span> Get cheapest tickets </span> </button> </form> </main> </html>"
+    }
+  ]
+}

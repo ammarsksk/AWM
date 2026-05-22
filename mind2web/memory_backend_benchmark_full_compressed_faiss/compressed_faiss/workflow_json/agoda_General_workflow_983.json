@@ -1,0 +1,51 @@
+{
+  "name": "agoda / General workflow 983",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Search a cheapest homestay with balcony in Bali, Indoneshia from April 1 to 4 for 2 adults and 4 children aged 3, 5, 8, and 12 years, respectively, double beds prefered, including breakfast.",
+  "goal_pattern": "Search a cheapest homestay with balcony in Bali, Indoneshia from April 1 to 4 for 2 adults and 4 children aged 3, 5, 8, and 12 years, respectively, double beds prefered, including breakfast.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Enter a destination or property",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Enter a destination or property",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Indonesia",
+      "operation": "CLICK",
+      "target_type": "generic",
+      "target_description": "Indonesia",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [110] [bali]",
+      "gold_element_id": "110",
+      "gold_value": "bali"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4498]",
+      "gold_element_id": "4498",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "agoda / General workflow 983"
+}

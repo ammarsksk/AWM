@@ -1,0 +1,51 @@
+{
+  "name": "nps.gov / Other workflow 409",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "nps.gov",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search for a park in the state of California called Castle Mountains National Monument and find out it's Basic Information.",
+  "goal_pattern": "Search for a park in the state of California called Castle Mountains National Monument and find out it's Basic Information.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Find a Park by State",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Find a Park by State",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the California",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "California",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [106]",
+      "gold_element_id": "106",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3043]",
+      "gold_element_id": "3043",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "nps.gov / Other workflow 409"
+}

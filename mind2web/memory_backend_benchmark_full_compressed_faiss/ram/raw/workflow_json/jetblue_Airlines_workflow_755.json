@@ -1,0 +1,30 @@
+{
+  "name": "jetblue / Airlines workflow 755",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Book two rooms in the cheapest 3-star hotel which provides free breakfast, and free airport transportation for three adults, and one child from April 22 to 25 in texas city, the hotel should provide amenities for kids.",
+  "steps": [
+    {
+      "action": "CLICK [877]",
+      "op": "CLICK",
+      "element": "877",
+      "value": "",
+      "description": "[span] Stays -> CLICK",
+      "role": "span",
+      "label": "Stays",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <a id=470 button> <span> Book </span> </a> </nav> </jb-header> <jb-tabs> <nav tablist> <div> <button tab button> </button> <button tab button> </button> <button tab button> </button> <button id=877 tab button> <span> <jb-icon img /> <span> Stays </span> </span> </button> </div> </nav> <jb-tab-panel tabpanel> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=966 text /> </jb-type-ahead-input> </div> </jb-tab-panel> </jb-tabs> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [5033]",
+      "op": "CLICK",
+      "element": "5033",
+      "value": "",
+      "description": "[button] Unlock deals External Link should open in a new wi... -> CLICK",
+      "role": "button",
+      "label": "Unlock deals External Link should open in a new wi...",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <a id=4602 button> <span> Book </span> </a> </nav> </jb-header> <jb-tab-panel tabpanel> <div> <div> With Paisly, save up to 20% on stays. Plus, TrueBlue members can enjoy even more deals and earn points. Now </div> <a id=5033 button> <span> Unlock deals </span> <jb-icon img external link should open in /> </a> </div> </jb-tab-panel> <div> <textarea text /> <div> 250 characters remaining </div> <button id=5932> Submit </button> </div> </jb-app> </html>"
+    }
+  ]
+}

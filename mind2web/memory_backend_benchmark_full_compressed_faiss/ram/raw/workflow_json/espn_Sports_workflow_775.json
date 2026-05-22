@@ -1,0 +1,30 @@
+{
+  "name": "espn / Sports workflow 775",
+  "source": "Mind2Web exemplar",
+  "website": "espn",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "Find the Real Madrid team schedule of the UEFA Champions League championship.",
+  "steps": [
+    {
+      "action": "CLICK [170]",
+      "op": "CLICK",
+      "element": "170",
+      "value": "",
+      "description": "[button] Open Search -> CLICK",
+      "role": "button",
+      "label": "Open Search",
+      "observation": "<html> <div> <header> <a id=170 button open search /> <li> <a id=10265> <span> <span> Soccer </span> <span> Soccer </span> </span> </a> <button soccer /> </li> </header> <a id=19664> Champions League: As it happened </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [47076] [Real Madrid]",
+      "op": "TYPE",
+      "element": "47076",
+      "value": "Real Madrid",
+      "description": "[textbox] Search -> TYPE: Real Madrid",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <header> <div> <input id=47076 text search sports, teams or players... /> <input submit /> </div> <li> <a id=57169> <span> <span> Soccer </span> <span> Soccer </span> </span> </a> <button id=57183 soccer /> </li> </header> </html>"
+    }
+  ]
+}

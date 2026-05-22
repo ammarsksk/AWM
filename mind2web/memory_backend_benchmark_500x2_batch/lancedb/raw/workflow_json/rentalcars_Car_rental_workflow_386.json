@@ -1,0 +1,30 @@
+{
+  "name": "rentalcars / Car rental workflow 386",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Check if cars are available for tomorrow at Elevated Escape in North Carolina.",
+  "steps": [
+    {
+      "action": "TYPE [3169] [Elevated Escape]",
+      "op": "TYPE",
+      "element": "3169",
+      "value": "Elevated Escape",
+      "description": "[textbox] Pick-up location -> TYPE: Elevated Escape",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div> <label id=3172> Pick-up location </label> <input id=3169 pick-up location /> </div> <button id=3669 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [6430]",
+      "op": "CLICK",
+      "element": "6430",
+      "value": "",
+      "description": "[div] Elevated Escape -> CLICK",
+      "role": "div",
+      "label": "Elevated Escape",
+      "observation": "<html> <div> <ul listbox> <li option> <div id=6430 button> <div> <span> Place </span> <div> <div> Elevated Escape </div> <div> Blowing Rock, North Carolina, United States </div> </div> </div> </div> </li> </ul> <div> <button id=6494 button tue, mar 28> <div> <div> Pick-up date </div> <div> Tue, Mar 28 </div> </div> </button> <button id=6619 button fri, mar 31> <div> <div> Drop-off date </div> <div> Fri, Mar 31 </div> </div> </button> </div> </div> </html>"
+    }
+  ]
+}

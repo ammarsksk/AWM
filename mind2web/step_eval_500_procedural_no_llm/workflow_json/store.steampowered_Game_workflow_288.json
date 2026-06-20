@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "name": "store.steampowered / Game workflow 288",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "store.steampowered",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "goal_pattern": "Show most played games based on daily players.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "players",
+      "most",
+      "played",
+      "daily",
+      "link",
+      "store",
+      "steampowered",
+      "entertainment",
+      "game",
+      "show",
+      "games",
+      "based",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "new",
+      "noteworthy",
+      "generic",
+      "div"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the New & Noteworthy",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "New & Noteworthy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Most Played",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Most Played",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the By Current Players",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "By Current Players",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the By Daily Players",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "By Daily Players",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "store.steampowered / Game workflow 288"
+}

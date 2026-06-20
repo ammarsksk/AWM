@@ -1,0 +1,230 @@
+{
+  "name": "amtrak / Ground workflow 18",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Get quote for Amtrak vacation for two adults across country while leaving from Chicago on the 22nd of April. It should include Deluxe bedroom. The passenger is named John Mark with email address of johnmark@gmail.com and phone number of 234567890.",
+  "steps": [
+    {
+      "action": "CLICK [159]",
+      "op": "CLICK",
+      "element": "159",
+      "value": "",
+      "description": "[button] DEALS -> CLICK",
+      "role": "button",
+      "label": "DEALS",
+      "observation": "<html> <header banner> <div> <nav navigation primary> <li> <a id=159 button> DEALS </a> <a id=3068> <span> VACATIONS & RAIL TOURS </span> <span> Train vacation packages throughout North America </span> </a> </li> </nav> <a id=3186 button my trip> <span> MY TRIP </span> </a> </div> </header> </html>"
+    },
+    {
+      "action": "CLICK [12687]",
+      "op": "CLICK",
+      "element": "12687",
+      "value": "",
+      "description": "[link] VACATIONS & RAIL TOURS Train vacation packages thr... -> CLICK",
+      "role": "link",
+      "label": "VACATIONS & RAIL TOURS Train vacation packages thr...",
+      "observation": "<html> <div> <header banner> <div> <nav navigation primary> <a id=12687> <span> VACATIONS & RAIL TOURS </span> <span> Train vacation packages throughout North America </span> </a> </nav> <a id=15740 button my trip> <span> MY TRIP </span> </a> </div> </header> <main main> <mat-form-field combobox> <div> <input id=16091 text /> <div listbox> </div> </div> </mat-form-field> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [19008]",
+      "op": "CLICK",
+      "element": "19008",
+      "value": "",
+      "description": "[img] -> CLICK",
+      "role": "img",
+      "label": "",
+      "observation": "<html> <div> <header banner> <a id=22022 button my trip> <span> MY TRIP </span> </a> </header> <main main> <nav navigation secondary> <a id=22441> Amtrak Vacations </a> </nav> </main> </div> <img id=19008 /> </html>"
+    },
+    {
+      "action": "CLICK [30204]",
+      "op": "CLICK",
+      "element": "30204",
+      "value": "",
+      "description": "[link] Close -> CLICK",
+      "role": "link",
+      "label": "Close",
+      "observation": "<html> <body> <main> <div> <button id=31714> Instant Quote </button> <button> Available Dates </button> </div> <button id=32658 submit> <span> Search </span> </button> </main> <div dialog> <a id=30204 close /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [36180]",
+      "op": "CLICK",
+      "element": "36180",
+      "value": "",
+      "description": "[button] Instant Quote -> CLICK",
+      "role": "button",
+      "label": "Instant Quote",
+      "observation": "<html> <main> <div> <div> <button> Overview </button> <button id=37680> Itinerary </button> <button> Details </button> <button> Onboard </button> </div> <div> <button id=36180> Instant Quote </button> <button> Available Dates </button> </div> </div> <button id=38630 submit> <span> Search </span> </button> </main> </html>"
+    },
+    {
+      "action": "TYPE [39222] [Chicago]",
+      "op": "TYPE",
+      "element": "39222",
+      "value": "Chicago",
+      "description": "[textbox] What city would you like to depart from? -> TYPE: Chicago",
+      "role": "textbox",
+      "label": "What city would you like to depart from?",
+      "observation": "<html> <div> <div> <label> What city would you like to depart from? </label> <input id=39222 text city name /> </div> <div> <input id=40754 checkbox 1 /> <label id=40756> Deluxe Bedroom </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [43633]",
+      "op": "CLICK",
+      "element": "43633",
+      "value": "",
+      "description": "[checkbox] I'm interested in the reverse trip of the selected... -> CLICK",
+      "role": "checkbox",
+      "label": "I'm interested in the reverse trip of the selected...",
+      "observation": "<html> <div> <div> <input id=43633 checkbox revreq 1 /> <label> I'm interested in the reverse trip of the selected package </label> </div> <div> <input id=45164 checkbox 1 /> <label id=45166> Deluxe Bedroom </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [48041]",
+      "op": "CLICK",
+      "element": "48041",
+      "value": "",
+      "description": "[checkbox] Deluxe Bedroom -> CLICK",
+      "role": "checkbox",
+      "label": "Deluxe Bedroom",
+      "observation": "<html> <div> <div> <input id=48041 checkbox 1 /> <label id=49574> Deluxe Bedroom </label> </div> <input id=49621 submit op continue /> <input form_build_id /> <input form_id /> </div> </html>"
+    },
+    {
+      "action": "CLICK [52446]",
+      "op": "CLICK",
+      "element": "52446",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <div> <div> <div> <label> Preferred date of travel </label> <input id=53945 text leaving_on preferred date of travel /> </div> <div> <input id=53987 checkbox 1 /> <label> A sleeper but not sure which one I need. </label> </div> </div> <input id=52446 submit op continue /> <input form_build_id /> <input form_id /> </div> </html>"
+    },
+    {
+      "action": "CLICK [56860]",
+      "op": "CLICK",
+      "element": "56860",
+      "value": "",
+      "description": "[link] Close -> CLICK",
+      "role": "link",
+      "label": "Close",
+      "observation": "<html> <body> <div> <div> <select id=58704 select month> <option 3 true> Apr </option> <option 4> May </option> <option 5> Jun </option> <option 6> Jul </option> <option 7> Aug </option> <option 8> Sep </option> <option 9> Oct </option> <option 10> Nov </option> <option 11> Dec </option> </select> <select select year> </select> </div> <td available> <a id=58835> 22 </a> </td> </div> <div dialog> <a id=56860 close /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [61280]",
+      "op": "CLICK",
+      "element": "61280",
+      "value": "",
+      "description": "[textbox] *Preferred date of travel -> CLICK",
+      "role": "textbox",
+      "label": "*Preferred date of travel",
+      "observation": "<html> <div> <div> <div> <label> Preferred date of travel </label> <input id=61280 text leaving_on preferred date of travel /> <span> Please fill out this field. </span> </div> <div> <input id=62782 checkbox 1 /> <label> A sleeper but not sure which one I need. </label> </div> </div> <input id=62823 submit op continue /> <input form_build_id /> <input form_id /> </div> </html>"
+    },
+    {
+      "action": "CLICK [65694]",
+      "op": "CLICK",
+      "element": "65694",
+      "value": "",
+      "description": "[link] 22 -> CLICK",
+      "role": "link",
+      "label": "22",
+      "observation": "<html> <body> <div> <input checkbox 1 true /> <label id=67190> Deluxe Bedroom </label> </div> <div> <div> <select id=67539 select month> <option 3 true> Apr </option> <option 4> May </option> <option 5> Jun </option> <option 6> Jul </option> <option 7> Aug </option> <option 8> Sep </option> <option 9> Oct </option> <option 10> Nov </option> <option 11> Dec </option> </select> <select select year> </select> </div> <td available> <a id=65694> 22 </a> </td> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [70110]",
+      "op": "CLICK",
+      "element": "70110",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <div> <div> <div> <input checkbox 1 true /> <label id=71607> Deluxe Bedroom </label> </div> <div> <input id=71613 checkbox 1 /> <label> A sleeper but not sure which one I need. </label> </div> </div> <input id=70110 submit op continue /> <input form_build_id /> <input form_id /> </div> </html>"
+    },
+    {
+      "action": "CLICK [72364]",
+      "op": "CLICK",
+      "element": "72364",
+      "value": "",
+      "description": "[div] + -> CLICK",
+      "role": "div",
+      "label": "+",
+      "observation": "<html> <div> <div> <label> Adults (Age 13+) </label> <input id=73770 number adults_num 1 /> </div> <div> <input submit op < previous page /> <input id=74199 submit op continue /> </div> </div> <div id=72364 input-button /> </div> </html>"
+    },
+    {
+      "action": "TYPE [76922] [Wedding Anniversary]",
+      "op": "TYPE",
+      "element": "76922",
+      "value": "Wedding Anniversary",
+      "description": "[textbox] About Your Trip: -> TYPE: Wedding Anniversary",
+      "role": "textbox",
+      "label": "About Your Trip:",
+      "observation": "<html> <div> <div> <div> <label> Adults (Age 13+) </label> <input id=78329 number adults_num 2 /> </div> <div> <label> About Your Trip: </label> <textarea id=76922 are you traveling for a /> </div> </div> <div> <input submit op < previous page /> <input id=78758 submit op continue /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [81483]",
+      "op": "CLICK",
+      "element": "81483",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <div> <div> <div> <label> Adults (Age 13+) </label> <input id=82891 number adults_num 2 /> </div> <div> <label> About Your Trip: </label> <textarea id=83293 wedding anniversary are you traveling for a /> </div> </div> <div> <input submit op < previous page /> <input id=81483 submit op continue /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [83813] [John]",
+      "op": "TYPE",
+      "element": "83813",
+      "value": "John",
+      "description": "[textbox] *First Name -> TYPE: John",
+      "role": "textbox",
+      "label": "*First Name",
+      "observation": "<html> <div> <div> <div> <label> First Name </label> <input id=83813 text first_name first name /> </div> <div> <label> Last Name </label> <input id=85230 text last_name last name /> </div> </div> <div> <input submit op < previous page /> <input id=85335 submit op submit quote request /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [87745] [Mark]",
+      "op": "TYPE",
+      "element": "87745",
+      "value": "Mark",
+      "description": "[textbox] *Last Name -> TYPE: Mark",
+      "role": "textbox",
+      "label": "*Last Name",
+      "observation": "<html> <div> <div> <div> <label> Last Name </label> <input id=87745 text last_name last name /> </div> <div> <label> Phone Number </label> <input id=89181 tel phone_number phone number /> </div> </div> <div> <input submit op < previous page /> <input id=89268 submit op submit quote request /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [91678] [Johnmark@gmail.com]",
+      "op": "TYPE",
+      "element": "91678",
+      "value": "Johnmark@gmail.com",
+      "description": "[textbox] *Email Address -> TYPE: Johnmark@gmail.com",
+      "role": "textbox",
+      "label": "*Email Address",
+      "observation": "<html> <div> <div> <div> <label> Email Address </label> <input id=91678 email email_address email address /> </div> <div> <label> Phone Number </label> <input id=93114 tel phone_number phone number /> </div> </div> <div> <input submit op < previous page /> <input id=93201 submit op submit quote request /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [95612] [234567890]",
+      "op": "TYPE",
+      "element": "95612",
+      "value": "234567890",
+      "description": "[textbox] *Phone Number -> TYPE: 234567890",
+      "role": "textbox",
+      "label": "*Phone Number",
+      "observation": "<html> <div> <div> <div> <label> Email Address </label> <input id=97040 email email_address email address /> </div> <div> <label> Phone Number </label> <input id=95612 tel phone_number phone number /> </div> </div> <div> <input submit op < previous page /> <input id=97135 submit op submit quote request /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [99545]",
+      "op": "CLICK",
+      "element": "99545",
+      "value": "",
+      "description": "[label] I am NOT a Travel Advisor. -> CLICK",
+      "role": "label",
+      "label": "I am NOT a Travel Advisor.",
+      "observation": "<html> <div> <div> <div> <input radio not advisor /> <label id=99545> I am NOT a Travel Advisor. </label> </div> <div> <input radio advisor /> <label id=101011> I am a Travel Advisor. </label> </div> </div> <div> <input submit op < previous page /> <input id=101067 submit op submit quote request /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [103477]",
+      "op": "CLICK",
+      "element": "103477",
+      "value": "",
+      "description": "[button] Submit Quote Request -> HOVER",
+      "role": "button",
+      "label": "Submit Quote Request",
+      "observation": "<html> <div> <div> <input submit op < previous page /> <input id=103477 submit op submit quote request /> </div> <div> <div> <div> Reservations </div> <a id=105076> 1-800-268-7252 </a> </div> <a id=105111> Trip Planning </a> </div> </div> </html>"
+    }
+  ]
+}

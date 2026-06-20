@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "name": "ikea / Speciality workflow 305",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "ikea",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Find wall mirrors for under $20.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "span",
+      "mirrors",
+      "link",
+      "wall",
+      "ikea",
+      "shopping",
+      "speciality",
+      "find",
+      "under",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "products",
+      "home",
+      "cor",
+      "show",
+      "more",
+      "filters",
+      "modal",
+      "price",
+      "view"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Products",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Products",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Home d\u00e9cor",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Home d\u00e9cor",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Mirrors",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Mirrors",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Wall mirrors",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Wall mirrors",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Show more filters modal",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show more filters modal",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Price",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Price",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the View",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "View",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "ikea / Speciality workflow 305"
+}

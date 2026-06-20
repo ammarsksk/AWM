@@ -1,0 +1,230 @@
+{
+  "name": "kayak / Airlines workflow 313",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the quickest one-way flight from New York To Paris on June 4 for two adults with one carry-on and one check-in bag in business class.",
+  "steps": [
+    {
+      "action": "CLICK [111]",
+      "op": "CLICK",
+      "element": "111",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <button id=715 button submit search> <svg id=718 img c8lpf-icon /> </button> <svg id=111 img wiih-chevron /> </html>"
+    },
+    {
+      "action": "CLICK [12378]",
+      "op": "CLICK",
+      "element": "12378",
+      "value": "",
+      "description": "[tab] One-way -> CLICK",
+      "role": "tab",
+      "label": "One-way",
+      "observation": "<html> <body> <select id=8916 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <ul tablist> <li id=12378 tab one-way> <span> One-way </span> </li> <li id=12380 tab round-trip> <span> Round-trip </span> </li> <li tab multi-city> </li> <li tab trip builder> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [16615]",
+      "op": "CLICK",
+      "element": "16615",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <select id=17132 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <button id=17201 button submit search> <svg img c8lpf-icon /> </button> </div> <svg id=16615 img s9tw-chevron /> </html>"
+    },
+    {
+      "action": "CLICK [24816]",
+      "op": "CLICK",
+      "element": "24816",
+      "value": "",
+      "description": "[button] Increment -> CLICK",
+      "role": "button",
+      "label": "Increment",
+      "observation": "<html> <div travelers> <div> <div> <button decrement> </button> <input spinbutton adults 1 /> <button id=28723 increment> <svg img /> </button> </div> <div> <button decrement> </button> <input spinbutton children 0 /> <button id=28778 increment> <svg img /> </button> </div> </div> </div> <svg id=24816 img /> </html>"
+    },
+    {
+      "action": "CLICK [33673]",
+      "op": "CLICK",
+      "element": "33673",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <body> <div> <select id=33641 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <svg id=33673 img tn7z-icon> </svg> </div> <div travelers> <div> <button decrement> </button> <input spinbutton adults 2 /> <button id=37029 increment> <svg img /> </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [41496] [NEW YORK]",
+      "op": "TYPE",
+      "element": "41496",
+      "value": "NEW YORK",
+      "description": "[textbox] Flight origin input -> TYPE: NEW YORK",
+      "role": "textbox",
+      "label": "Flight origin input",
+      "observation": "<html> <div> <select id=42015 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <div> <input id=41496 text flight origin input from? /> <button button submit search> <svg id=42086 img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [53738]",
+      "op": "CLICK",
+      "element": "53738",
+      "value": "",
+      "description": "[span] All airports -> CLICK",
+      "role": "span",
+      "label": "All airports",
+      "observation": "<html> <body> <button id=50429 button submit search> <svg id=50432 img c8lpf-icon /> </button> <ul listbox> <li id=53738 option new york, united states> <div> <img city:new york, united states /> <div> <div> <span> New York, United States </span> <span> NYC </span> </div> <span> All airports </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> <li option john f kennedy intl> </li> <li option laguardia> </li> <li option newark> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [58108] [PARIS]",
+      "op": "TYPE",
+      "element": "58108",
+      "value": "PARIS",
+      "description": "[textbox] Flight destination input -> TYPE: PARIS",
+      "role": "textbox",
+      "label": "Flight destination input",
+      "observation": "<html> <div> <select id=58627 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <div> <input id=58108 text flight destination input to? /> <button id=58699 button submit search> <svg img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [70123]",
+      "op": "CLICK",
+      "element": "70123",
+      "value": "",
+      "description": "[span] All airports -> CLICK",
+      "role": "span",
+      "label": "All airports",
+      "observation": "<html> <ul listbox> <li id=70123 option paris, france> <div> <img id=70130 city:paris, france /> <div> <div> <span> Paris, France </span> <span> PAR </span> </div> <span> All airports </span> </div> <span> <input id=70141 checkbox false /> <svg img icon /> </span> </div> </li> <li option charles de gaulle> </li> <li option orly> </li> <li option beauvais-tille> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [74454]",
+      "op": "CLICK",
+      "element": "74454",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <select id=74973 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <button id=75052 button submit search> <svg img c8lpf-icon /> </button> </div> <path id=74454 /> </html>"
+    },
+    {
+      "action": "CLICK [83043]",
+      "op": "CLICK",
+      "element": "83043",
+      "value": "",
+      "description": "[div] 4 -> CLICK",
+      "role": "div",
+      "label": "4",
+      "observation": "<html> <div menu> <div tab start date calendar input use> <button button previous month> </button> <div> <div> <div button monday may 1, 2023> 1 </div> <div button tuesday may 2, 2023> 2 </div> <div button wednesday may 3, 2023> 3 </div> <div id=87125 button thursday may 4, 2023> 4 </div> <div button friday may 5, 2023> 5 </div> <div button saturday may 6, 2023> 6 </div> <div button sunday may 7, 2023> 7 </div> </div> <div> <div button thursday june 1, 2023> 1 </div> <div button friday june 2, 2023> 2 </div> <div button saturday june 3, 2023> 3 </div> <div id=83043 button sunday june 4, 2023> 4 </div> <div button monday june 5, 2023> 5 </div> <div button tuesday june 6, 2023> 6 </div> <div button wednesday june 7, 2023> 7 </div> </div> </div> <button id=87277 button next month> <svg img /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [91635]",
+      "op": "CLICK",
+      "element": "91635",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <select id=92154 cabin class> <option economy e true> Economy </option> <option premium economy p> Premium Economy </option> <option business b> Business </option> <option first f> First </option> <option multiple m> Multiple </option> </select> <button id=92236 button submit search> <svg img c8lpf-icon /> </button> </div> <svg id=91635 img s9tw-chevron /> </html>"
+    },
+    {
+      "action": "CLICK [100033]",
+      "op": "CLICK",
+      "element": "100033",
+      "value": "",
+      "description": "[button] Increment -> CLICK",
+      "role": "button",
+      "label": "Increment",
+      "observation": "<html> <div bags> <div> <div> <button decrement> </button> <input spinbutton carry-on bag 0 /> <button id=104073 increment> <svg img /> </button> </div> <div> <button decrement> </button> <input spinbutton carry-on bag 0 /> <button id=104087 increment> <svg img /> </button> </div> </div> </div> <svg id=100033 img /> </html>"
+    },
+    {
+      "action": "CLICK [108471]",
+      "op": "CLICK",
+      "element": "108471",
+      "value": "",
+      "description": "[button] Increment -> CLICK",
+      "role": "button",
+      "label": "Increment",
+      "observation": "<html> <div bags> <div> <button decrement> </button> <input id=112510 spinbutton carry-on bag 1 /> <button id=112511 increment> <svg img /> </button> </div> </div> <svg id=108471 img /> </html>"
+    },
+    {
+      "action": "CLICK [116910]",
+      "op": "CLICK",
+      "element": "116910",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <body> <button button submit search> <svg id=116910 img c8lpf-icon /> </button> <div bags> <div> <div> <button decrement> </button> <input id=120948 spinbutton carry-on bag 1 /> <button increment> </button> </div> <div> <button decrement> </button> <input id=120963 spinbutton carry-on bag 1 /> <button increment> </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [137557]",
+      "op": "CLICK",
+      "element": "137557",
+      "value": "",
+      "description": "[span] Quickest -> CLICK",
+      "role": "span",
+      "label": "Quickest",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <div region airlines> <div> <a id=128351> Select all </a> <span> | </span> <a> Clear all </a> </div> </div> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div id=137542 button best> <div> <div> <span> Best </span> <svg img /> </div> <div> <span> $482 </span> <span> 7h 15m </span> </div> </div> </div> <div id=137557 button quickest> <div> <span> Quickest </span> <div> <span> $985 </span> <span> 7h 10m </span> </div> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [157851]",
+      "op": "CLICK",
+      "element": "157851",
+      "value": "",
+      "description": "[button] Cabin -> CLICK",
+      "role": "button",
+      "label": "Cabin",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div heading> <div id=157851 button> <h3> Cabin </h3> <a> Reset </a> </div> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div button best> </div> <div id=170062 button quickest> <div> <span> Quickest </span> <div> <span> $985 </span> <span> 7h 10m </span> </div> </div> </div> </div> </div> <div alertdialog> <div> <button close /> <button id=172828> OK </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [196987]",
+      "op": "CLICK",
+      "element": "196987",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <ul list cabin> <li id=196987 listitem> <div> <div> <div> <input checkbox bfbe true /> <label> Basic Economy </label> </div> <button button basic economy only> only </button> </div> <div> <button basic economy /> <button> $482 </button> </div> </div> </li> <li listitem> </li> <li listitem> </li> <li listitem> </li> </ul> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div button best> </div> <div id=203107 button quickest> <div> <span> Quickest </span> <div> <span> $985 </span> <span> 7h 10m </span> </div> </div> </div> </div> </div> <div alertdialog> <div> <button close /> <button id=205874> OK </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [229988]",
+      "op": "CLICK",
+      "element": "229988",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <ul list cabin> <li listitem> </li> <li id=229988 listitem> <div> <div> <div> <input checkbox e true /> <label> Economy </label> </div> <button button economy only> only </button> </div> <div> <button economy /> <button> $458 </button> </div> </div> </li> <li listitem> </li> <li listitem> </li> <li listitem> </li> </ul> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div button best> </div> <div id=236099 button quickest> <div> <span> Quickest </span> <div> <span> $1,030 </span> <span> 7h 10m </span> </div> </div> </div> </div> </div> <div alertdialog> <div> <button close /> <button id=238791> OK </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [256520]",
+      "op": "CLICK",
+      "element": "256520",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <ul list cabin> <li listitem> </li> <li listitem> </li> <li id=256520 listitem> <div> <div> <div> <input checkbox p true /> <label> Prem Econ </label> </div> <button button prem econ only> only </button> </div> <div> <button prem econ /> <button> $705 </button> </div> </div> </li> <li listitem> </li> <li listitem> </li> </ul> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div id=268589 button best> <div> <div> <span> Best </span> <svg img /> </div> <div> <span> $707 </span> <span> 7h 15m </span> </div> </div> </div> <div id=268604 button quickest> <div> <span> Quickest </span> <div> <span> $3,489 </span> <span> 7h 10m </span> </div> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [289840]",
+      "op": "CLICK",
+      "element": "289840",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <ul list cabin> <li listitem> </li> <li listitem> </li> <li listitem> </li> <li id=289840 listitem> <div> <div> <div> <input checkbox true /> <label> Mixed </label> </div> <button button mixed only> only </button> </div> <div> <button the current filters are hiding /> <button> $1,115 </button> </div> </div> </li> </ul> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div button best> </div> <div id=301906 button quickest> <div> <span> Quickest </span> <div> <span> $5,032 </span> <span> 7h 15m </span> </div> </div> </div> </div> </div> <div alertdialog> <div> <button close /> <button id=304528> OK </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [334612]",
+      "op": "CLICK",
+      "element": "334612",
+      "value": "",
+      "description": "[div] View Deal -> CLICK",
+      "role": "div",
+      "label": "View Deal",
+      "observation": "<html> <div flight results section> <div> <div button cheapest> </div> <div id=334376 button best> <div> <div> <span> Best </span> <svg img /> </div> <div> <span> $2,791 </span> <span> 11h 45m </span> </div> </div> </div> <div id=334391 button quickest> <div> <span> Quickest </span> <div> <span> $5,032 </span> <span> 7h 15m </span> </div> </div> </div> </div> <div main flight search results> <div group> <div listbox> <div button> <a id=334612> <div> View Deal </div> </a> </div> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

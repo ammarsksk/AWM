@@ -1,0 +1,80 @@
+{
+  "name": "flightaware / Other workflow 333",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Get route information for flights from Ohio and New York airports that have already arrived.",
+  "steps": [
+    {
+      "action": "TYPE [91] [Ohio]",
+      "op": "TYPE",
+      "element": "91",
+      "value": "Ohio",
+      "description": "[textbox] Origin -> TYPE: Ohio",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=1264 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1713> <span> Flight Tracking </span> </a> </li> </ul> </nav> </div> </header> <form> <input id=91 text origin kosu /> <div button> </div> <input text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [9935]",
+      "op": "CLICK",
+      "element": "9935",
+      "value": "",
+      "description": "[div] Ohio -> CLICK",
+      "role": "div",
+      "label": "Ohio",
+      "observation": "<html> <body> <form> <input text origin kosu ohio /> <div button> </div> <input id=12064 text destination /> <input submit /> </form> <div> <div id=9935> <strong> Ohio </strong> State University (Columbus) - OSU - KOSU </div> <div> Univ (Athens/Albany) - UNI - KUNI </div> <div> County (Hartford) - JQD - KJQD </div> <div> Mid- Valley Rgnl (Parkersburg) - PKB - KPKB </div> <div> Wheeling County (Wheeling) - HLG - KHLG </div> <div id=14636> Northeast <strong> Ohio </strong> Rgnl (Ashtabula) - HZY - KHZY </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [19821] [New York]",
+      "op": "TYPE",
+      "element": "19821",
+      "value": "New York",
+      "description": "[textbox] Destination -> TYPE: New York",
+      "role": "textbox",
+      "label": "Destination",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=20994 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=21443> <span> Flight Tracking </span> </a> </li> </ul> </nav> </div> </header> <form> <input text origin kosu /> <div button> </div> <input id=19821 text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [29754]",
+      "op": "CLICK",
+      "element": "29754",
+      "value": "",
+      "description": "[div] New York -> CLICK",
+      "role": "div",
+      "label": "New York",
+      "observation": "<html> <body> <header banner> <div> <span> All </span> <select id=30926 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <div id=29754> <strong> New York </strong> , NY / All Airports - ZNY </div> <div> John F Kennedy Intl ( <strong id=34467> New York </strong> ) - JFK - KJFK </div> <div> LaGuardia ( ) - LGA - KLGA </div> <div> Downtown Manhattan Heliport ( ) - JRB - KJRB </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [39725]",
+      "op": "CLICK",
+      "element": "39725",
+      "value": "",
+      "description": "[img] Submit Search -> CLICK",
+      "role": "img",
+      "label": "Submit Search",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=40897 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=41346> <span> Flight Tracking </span> </a> </li> </ul> </nav> </div> </header> <button submit> <img id=39725 submit search /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [44798]",
+      "op": "CLICK",
+      "element": "44798",
+      "value": "",
+      "description": "[group] \uf067 Status -> CLICK",
+      "role": "group",
+      "label": "\uf067 Status",
+      "observation": "<html> <div> <header banner> <div> <span> All </span> <select id=46012 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <legend id=44798> Status </legend> <legend id=47053> Arrive </legend> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [52660]",
+      "op": "CLICK",
+      "element": "52660",
+      "value": "",
+      "description": "[checkbox] Diverted -> CLICK",
+      "role": "checkbox",
+      "label": "Diverted",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=53914 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <input id=53937 text search for flight, tail, airport, /> </div> </header> <div> <input id=52660 checkbox status r_diverted true /> <label> Diverted </label> </div> </div> </html>"
+    }
+  ]
+}

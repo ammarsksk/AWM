@@ -1,0 +1,50 @@
+{
+  "name": "tesla / Auto workflow 62",
+  "source": "Mind2Web exemplar",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Show me the inventory of the Tesla Model S within 200 miles from 10001",
+  "steps": [
+    {
+      "action": "CLICK [3566]",
+      "op": "CLICK",
+      "element": "3566",
+      "value": "",
+      "description": "[link] Model S -> CLICK",
+      "role": "link",
+      "label": "Model S",
+      "observation": "<html> <header> <a id=3566 model s> <span> Model S </span> </a> <ol> <a id=3594 shop> <span> Shop </span> </a> <button id=3602 button menu> <span> Menu </span> </button> </ol> </header> </html>"
+    },
+    {
+      "action": "CLICK [8192]",
+      "op": "CLICK",
+      "element": "8192",
+      "value": "",
+      "description": "[link] View Inventory -> CLICK",
+      "role": "link",
+      "label": "View Inventory",
+      "observation": "<html> <div> <button id=8071 button menu> <span> Menu </span> </button> <main main> <div> <section> <a id=8192 view inventory> <span> View Inventory </span> </a> <a order now> </a> </section> <section> <a order now> </a> <a id=8853 view inventory> <span> View Inventory </span> </a> </section> </div> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [11469] [10001]",
+      "op": "TYPE",
+      "element": "11469",
+      "value": "10001",
+      "description": "[textbox] Registration Zip Code Where you will register the ... -> TYPE: 10001",
+      "role": "textbox",
+      "label": "Registration Zip Code Where you will register the ...",
+      "observation": "<html> <body> <input id=11469 zip 43235 enter zip /> <form> <input id=14992 text firstname /> <input id=15032 text zip /> </form> </body> </html>"
+    },
+    {
+      "action": "SELECT [18925] [200 miles]",
+      "op": "SELECT",
+      "element": "18925",
+      "value": "200 miles",
+      "description": "[combobox] Search within -> SELECT: 200 miles",
+      "role": "combobox",
+      "label": "Search within",
+      "observation": "<html> <body> <select id=18925 select range> <option 25> 25 miles </option> <option 50> 50 miles </option> <option 100> 100 miles </option> <option 200 true> 200 miles </option> </select> <form> <input id=21854 text firstname /> <input id=21894 text zip /> </form> </body> </html>"
+    }
+  ]
+}

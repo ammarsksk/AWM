@@ -1,0 +1,170 @@
+{
+  "name": "carmax / Auto workflow 448",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find series 1 and series 2 BMW vehicles in the store nearest to 07055",
+  "steps": [
+    {
+      "action": "CLICK [166]",
+      "op": "CLICK",
+      "element": "166",
+      "value": "",
+      "description": "[link] SEARCH CARS -> CLICK",
+      "role": "link",
+      "label": "SEARCH CARS",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a id=301> Shop </a> <a> Sell/Trade </a> <a> Finance </a> </div> </nav> </header> <main main> <div> <h1> Love Your Car </h1> <a id=166> Search Cars </a> </div> <aside alertdialog> <p> At CarMax, you can buy online or at your nearest CarMax store. If you purchase in-store, you can still take <a> buy online </a> , you can choose between getting it delivered or picking it up at the store. No matter how you want <a> your area </a> . CarMax delivery is available within a 60-mile radius of select stores. Not available to customers in all states. Please contact <a id=1105> nearest store </a> for details. Applicable store-to-store shipping fees are due in advance of vehicle delivery and are separate from sales transactions. </p> </aside> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3397]",
+      "op": "CLICK",
+      "element": "3397",
+      "value": "",
+      "description": "[div] Best match -> CLICK",
+      "role": "div",
+      "label": "Best match",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=3397 button sort by> <div> <h4> Sort by </h4> <div> Best match </div> </div> </button> <button id=3408 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=3417 button make> <h4> Make </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [19419]",
+      "op": "CLICK",
+      "element": "19419",
+      "value": "",
+      "description": "[label] Nearest distance -> CLICK",
+      "role": "label",
+      "label": "Nearest distance",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=20005 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=20014 button make> <h4> Make </h4> </button> </div> <div> <input radio /> <label id=19419> Nearest distance </label> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [36051]",
+      "op": "CLICK",
+      "element": "36051",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=36624 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=36645 button make> <h4> Make </h4> </button> </div> <button id=36051 button back to all categories> Back to all filters </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [52848]",
+      "op": "CLICK",
+      "element": "52848",
+      "value": "",
+      "description": "[button] Distance & Shipping -> CLICK",
+      "role": "button",
+      "label": "Distance & Shipping",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=53421 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=52848 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=53441 button make> <h4> Make </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [69672]",
+      "op": "CLICK",
+      "element": "69672",
+      "value": "",
+      "description": "[button] Change Location -> CLICK",
+      "role": "button",
+      "label": "Change Location",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=70266 button make> <h4> Make </h4> </button> <div> <div> <div> Your store for 43270: </div> <button id=69672 button change location> Change store </button> </div> <div button shop by distance has 7> <div button> <button id=70438 button> <span> Nationwide </span> </button> </div> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [86764]",
+      "op": "CLICK",
+      "element": "86764",
+      "value": "",
+      "description": "[textbox] Enter ZIP or State -> CLICK",
+      "role": "textbox",
+      "label": "Enter ZIP or State",
+      "observation": "<html> <body> <header banner> <div dialog> <form> <input id=86764 keyword enter zip or state 43270 /> <button submit set my store /> </form> </div> </header> <main search cars> <aside region search filters> <div> <button id=87933 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=87945 button distance & shipping> <h4> Distance & Shipping </h4> </button> </div> </aside> </main> </body> </html>"
+    },
+    {
+      "action": "TYPE [105235] [07055]",
+      "op": "TYPE",
+      "element": "105235",
+      "value": "07055",
+      "description": "[textbox] Enter ZIP or State -> TYPE: 07055",
+      "role": "textbox",
+      "label": "Enter ZIP or State",
+      "observation": "<html> <body> <header banner> <div dialog> <form> <input id=105235 keyword enter zip or state 43270 /> <button submit set my store /> </form> </div> </header> <main search cars> <aside region search filters> <div> <button id=106406 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=106418 button distance & shipping> <h4> Distance & Shipping </h4> </button> </div> </aside> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [123725]",
+      "op": "CLICK",
+      "element": "123725",
+      "value": "",
+      "description": "[button] Set My Store -> CLICK",
+      "role": "button",
+      "label": "Set My Store",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=124893 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=124905 button distance & shipping> <h4> Distance & Shipping </h4> </button> </div> </aside> </main> <svg id=123725 /> </html>"
+    },
+    {
+      "action": "CLICK [141507]",
+      "op": "CLICK",
+      "element": "141507",
+      "value": "",
+      "description": "[button] set store -> CLICK",
+      "role": "button",
+      "label": "set store",
+      "observation": "<html> <body> <header banner> <div dialog> <button id=141507 button set store> Set as my store </button> </div> </header> <main search cars> <aside region search filters> <div> <button id=142650 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=142671 button make> <h4> Make </h4> </button> </div> </aside> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [159876]",
+      "op": "CLICK",
+      "element": "159876",
+      "value": "",
+      "description": "[button] Make -> CLICK",
+      "role": "button",
+      "label": "Make",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=160450 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=160462 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=159876 button make> <h4> Make </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [177894]",
+      "op": "CLICK",
+      "element": "177894",
+      "value": "",
+      "description": "[span] (954",
+      "role": "span",
+      "label": "(954",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=177704 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=177716 button distance & shipping> <h4> Distance & Shipping </h4> </button> </div> <li id=177894> <input checkbox bmw (954) on /> <span> BMW <span> (954) </span> </span> </li> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [195578]",
+      "op": "CLICK",
+      "element": "195578",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=196084 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=196096 button distance & shipping> <h4> Distance & Shipping </h4> </button> </div> <button id=195578 button back to all categories> Back to all filters </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [215087]",
+      "op": "CLICK",
+      "element": "215087",
+      "value": "",
+      "description": "[button] Series -> CLICK",
+      "role": "button",
+      "label": "Series",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=215688 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <button id=215700 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=215087 button series> <h4> Series </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [233458]",
+      "op": "CLICK",
+      "element": "233458",
+      "value": "",
+      "description": "[listitem] 1-SERIES (8",
+      "role": "listitem",
+      "label": "1-SERIES (8",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=233964 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <ul> <li id=233458> <input checkbox 1-series (8) on /> <span> 1-SERIES <span> (8) </span> </span> </li> <li> <input id=234192 checkbox 2-series (5) on /> <span> 2-SERIES </span> </li> </ul> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [252474]",
+      "op": "CLICK",
+      "element": "252474",
+      "value": "",
+      "description": "[listitem] 2-SERIES (5",
+      "role": "listitem",
+      "label": "2-SERIES (5",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=252998 button sort by> <div> <h4> Sort by </h4> <div> Nearest distance </div> </div> </button> <ul> <li> <input id=253195 checkbox 2 series (1) on /> <span> 2 SERIES </span> </li> <li id=252474> <input checkbox 2-series (5) on /> <span> 2-SERIES <span> (5) </span> </span> </li> </ul> </div> </aside> </main> </html>"
+    }
+  ]
+}

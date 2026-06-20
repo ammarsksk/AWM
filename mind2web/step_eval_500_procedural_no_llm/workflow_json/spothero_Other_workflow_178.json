@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "name": "spothero / Other workflow 178",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Find monthly daytime only parking nearest to Madison Square Garden starting from April 22",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "monthly",
+      "parking",
+      "use",
+      "madison",
+      "square",
+      "garden",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "daytime",
+      "only",
+      "nearest",
+      "starting",
+      "april",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "pennsylvania",
+      "plaza",
+      "new",
+      "yor",
+      "all",
+      "options",
+      "start",
+      "date",
+      "gridcell",
+      "sat",
+      "apr",
+      "2023",
+      "update"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Monthly",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Monthly",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search for parking",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Madison Square Garden, Pennsylvania Plaza, New Yor...",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Madison Square Garden, Pennsylvania Plaza, New Yor...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "select the All Parking Options",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "All Parking Options",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Monthly Start Date",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Monthly Start Date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Sat Apr 22 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Sat Apr 22 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Update Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Update Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "spothero / Other workflow 178"
+}

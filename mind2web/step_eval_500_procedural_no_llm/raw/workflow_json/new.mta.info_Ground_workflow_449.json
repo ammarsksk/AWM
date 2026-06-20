@@ -1,0 +1,50 @@
+{
+  "name": "new.mta.info / Ground workflow 449",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find the subway station nearest to 07055",
+  "steps": [
+    {
+      "action": "CLICK [1667]",
+      "op": "CLICK",
+      "element": "1667",
+      "value": "",
+      "description": "[span] Nearby Stations & Stops -> CLICK",
+      "role": "span",
+      "label": "Nearby Stations & Stops",
+      "observation": "<html> <div main> <div> <aside complementary> <div region> <div> <div> <label> From </label> <input id=769 search address, station, landmark /> </div> <div> <label> To </label> <input id=779 search address, station, landmark /> </div> </div> </div> </aside> <a id=1667 click to open nearby stations> <img nearby map /> <span> Nearby Stations & Stops </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [3265]",
+      "op": "CLICK",
+      "element": "3265",
+      "value": "",
+      "description": "[searchbox] Address, station, landmark -> CLICK",
+      "role": "searchbox",
+      "label": "Address, station, landmark",
+      "observation": "<html> <div main> <div> <div> <div location> <input id=3265 search address, station, landmark /> </div> <ul tablist> <a id=3839 tab> Rail </a> </ul> </div> <div tabpanel> <p id=4272> Nearest subway stations to your location </p> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [15281] [07055]",
+      "op": "TYPE",
+      "element": "15281",
+      "value": "07055",
+      "description": "[searchbox] Address, station, landmark -> TYPE: 07055",
+      "role": "searchbox",
+      "label": "Address, station, landmark",
+      "observation": "<html> <div main> <div> <div location> <input id=15281 search address, station, landmark /> <li> Use My Current Location </li> </div> <div tabpanel> <p id=16296> Nearest subway stations to your location </p> <ul> <li button> </li> <li button> </li> <li button> </li> <li id=16946 button> <div> 34 St-Penn Station </div> <div> <span> Walking duration </span> 23 min </div> <div> <p> Lines: </p> <ul group> <li listitem 1> 1 </li> <li listitem 2> 2 </li> <li listitem 3> 3 </li> </ul> </div> </li> <li button> </li> <li button> </li> <li button> </li> </ul> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [27354]",
+      "op": "CLICK",
+      "element": "27354",
+      "value": "",
+      "description": "[listitem] Passaic, NJ 07055, USA -> CLICK",
+      "role": "listitem",
+      "label": "Passaic, NJ 07055, USA",
+      "observation": "<html> <div main> <div> <div location> <input id=27910 search address, station, landmark 07055 /> <div> <span> Addresses </span> <li id=27354 passaic, nj 07055, usa> Passaic, NJ 07055, USA </li> </div> </div> <div tabpanel> <p id=28376> Nearest subway stations to your location </p> </div> </div> </div> </html>"
+    }
+  ]
+}

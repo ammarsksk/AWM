@@ -1,0 +1,195 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "svg",
+      "pizza",
+      "specific",
+      "field",
+      "find",
+      "making",
+      "class",
+      "new",
+      "york",
+      "combobox",
+      "path",
+      "exploretock",
+      "travel",
+      "restaurant",
+      "tickets",
+      "next",
+      "month",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "searchbox",
+      "location",
+      "span",
+      "reservation",
+      "event",
+      "date",
+      "edit",
+      "cuisine",
+      "filter",
+      "checkbox",
+      "submit",
+      "view",
+      "thursday",
+      "pda",
+      "slice",
+      "shop"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[svg] -> CLICK",
+        "target_type": "svg",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[svg] -> CLICK",
+        "target_type": "svg",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Find a location",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Find a location",
+        "target_type": "searchbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the New York",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "New York",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the Reservation type",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Reservation type",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "select the Event date",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Event date",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[path] -> CLICK",
+        "target_type": "path",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Edit cuisine type filter",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Edit cuisine type filter",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Pizza",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pizza",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Submit",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 10,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Submit",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the View Thursday Pizza Making Class at PDA Slice Shop...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 11,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "View Thursday Pizza Making Class at PDA Slice Shop...",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find tickets for Pizza making class in New York next month.",
+  "memory_type": "typed_procedure",
+  "name": "exploretock / Restaurant workflow 338",
+  "raw_workflow_name": "exploretock / Restaurant workflow 338",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 11.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Restaurant",
+  "termination": {
+    "max_steps_hint": 11,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "exploretock"
+}

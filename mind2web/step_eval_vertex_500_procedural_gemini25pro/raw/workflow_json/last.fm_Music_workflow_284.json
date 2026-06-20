@@ -1,0 +1,40 @@
+{
+  "name": "last.fm / Music workflow 284",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Show Jazz music genre albums and tracks.",
+  "steps": [
+    {
+      "action": "CLICK [149]",
+      "op": "CLICK",
+      "element": "149",
+      "value": "",
+      "description": "[link] Music -> CLICK",
+      "role": "link",
+      "label": "Music",
+      "observation": "<html> <div main> <div> <div> <a> Last.fm </a> <a id=147> Search </a> <ul primary navigation> <a id=149> Music </a> </ul> </div> <a id=2321> Last.fm Music </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [6609]",
+      "op": "CLICK",
+      "element": "6609",
+      "value": "",
+      "description": "[link] jazz -> CLICK",
+      "role": "link",
+      "label": "jazz",
+      "observation": "<html> <div main> <div> <a id=6609> <span> jazz </span> </a> <form> <label> Artist </label> <input id=9968 search seed enter an artist name /> <button submit> Get recommendations </button> </form> <form> <label> Search </label> <input id=12506 search q search for an artist, album /> <button submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21402]",
+      "op": "CLICK",
+      "element": "21402",
+      "value": "",
+      "description": "[link] More tracks -> CLICK",
+      "role": "link",
+      "label": "More tracks",
+      "observation": "<html> <div main> <div> <nav secondary navigation> <ul> <a id=22064> Albums </a> <a id=22067> Tracks </a> </ul> </nav> <section> <a> Top Tracks </a> <a id=21402> More tracks </a> </section> </div> </div> </html>"
+    }
+  ]
+}

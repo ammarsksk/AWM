@@ -1,0 +1,30 @@
+2026-06-19 20:23:39,677 - 3691081 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.262_19 in:
+  results/2026-06-19_20-23-39_GenericAgentArgs_on_webarena.262_19
+2026-06-19 20:23:41,761 - 3691081 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 20:23:41,761 - 3691081 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 20:23:55,788 - 3691081 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 20:23:56,482 - 3691081 - browsergym.experiments.loop - INFO - The user wants to navigate to the "Men shoes" category.
+Looking at the page, I can see a navigation menu with several categories.
+The category "Clothing, Shoes & Jewelry" seems like the most relevant one.
+I will first hover over "Clothing, Shoes & Jewelry" to reveal its sub-menu.
+The `bid` for "Clothing, Shoes & Jewelry" is 471.
+
+action:
+hover('471')
+
+2026-06-19 20:24:06,394 - 3691081 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 20:24:06,839 - 3691081 - browsergym.experiments.loop - INFO - The user wants to browse products in the "Men shoes" category. I have already hovered over "Clothing, Shoes & Jewelry". Now I see a sub-menu. I need to find "Men" in this sub-menu and hover over it to see more options. The element with bid '475' corresponds to "Men". I will hover over it.
+
+action:
+hover('475')
+
+2026-06-19 20:24:14,555 - 3691081 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 20:24:15,103 - 3691081 - browsergym.experiments.loop - INFO - The user wants to browse products in the "Men shoes" category.
+I have already hovered over "Clothing, Shoes & Jewelry" and then "Men".
+The next step is to click on "Shoes" to navigate to the men's shoes category page.
+The element with bid '482' corresponds to the "Shoes" menu item.
+
+action:
+click('482')
+
+2026-06-19 20:24:21,654 - 3691081 - browsergym.experiments.loop - INFO - Saving summary info.

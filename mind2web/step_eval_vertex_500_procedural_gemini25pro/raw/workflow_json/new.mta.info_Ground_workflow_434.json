@@ -1,0 +1,120 @@
+{
+  "name": "new.mta.info / Ground workflow 434",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "find schedule for Long Island Rail Road & Metro-North Railroad from Bay Shore to Breakneck Ridge on Thu, Mar 23, 08:37 AM.",
+  "steps": [
+    {
+      "action": "CLICK [186]",
+      "op": "CLICK",
+      "element": "186",
+      "value": "",
+      "description": "[link] Schedules -> CLICK",
+      "role": "link",
+      "label": "Schedules",
+      "observation": "<html> <div> <section navigation> <div> <a id=186> Schedules </a> <a> Maps </a> <a> Fares & Tolls </a> <a> Planned Work </a> </div> </section> <div main> <aside complementary> <div region> <div> <label> To </label> <input id=761 search address, station, landmark /> </div> </div> </aside> </div> <div main> <a id=1846> <span> Long Island Rail Road </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [3141] [Bay Shore]",
+      "op": "TYPE",
+      "element": "3141",
+      "value": "Bay Shore",
+      "description": "[searchbox] From -> TYPE: Bay Shore",
+      "role": "searchbox",
+      "label": "From",
+      "observation": "<html> <div main> <article article> <div> <div form> <div> <div> <label> From </label> <input id=3141 search from choose station /> </div> <div> <label> To </label> <input id=3720 search to lirr-to-search choose station /> </div> </div> </div> <div> <a id=4036 button> <div> Long Island Rail Road schedules </div> </a> <a button> </a> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [8055]",
+      "op": "CLICK",
+      "element": "8055",
+      "value": "",
+      "description": "[listitem] Bay Shore -> CLICK",
+      "role": "listitem",
+      "label": "Bay Shore",
+      "observation": "<html> <div main> <article article> <div form> <div> <div> <li id=8055 bay shore> <span> Bay Shore </span> </li> <div> <label> To </label> <input id=8068 search to lirr-to-search choose station /> </div> </div> <div> <input id=8092 text select date (format date-lirr today 03/18/2023 /> <a button /> </div> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "TYPE [11819] [Breakneck ridge]",
+      "op": "TYPE",
+      "element": "11819",
+      "value": "Breakneck ridge",
+      "description": "[searchbox] To -> TYPE: Breakneck ridge",
+      "role": "searchbox",
+      "label": "To",
+      "observation": "<html> <div main> <article article> <div form> <div> <div> <label> To </label> <input id=11819 search to lirr-to-search choose station /> </div> <div> <div> <input id=12422 text select date (format date-lirr today 03/18/2023 /> <a button /> </div> <select id=11817 number> <option 0> 00 </option> <option 1> 01 </option> <option 2> 02 </option> <option 3> 03 </option> <option 4> 04 </option> <option 5> 05 </option> <option 6> 06 </option> <option 7> 07 </option> <option 8> 08 </option> <option 9> 09 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> <option> 13 </option> <option> 14 </option> <option> 15 </option> <option> 16 </option> <option> 17 </option> <option> 18 </option> <option> 19 </option> <option> 20 </option> <option> 21 </option> <option> 22 </option> <option> 23 </option> <option> 24 </option> </select> </div> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [16746]",
+      "op": "CLICK",
+      "element": "16746",
+      "value": "",
+      "description": "[span] Breakneck Ridge -> CLICK",
+      "role": "span",
+      "label": "Breakneck Ridge",
+      "observation": "<html> <div main> <article article> <div form> <div> <li id=16746 breakneck ridge> <span> Breakneck Ridge </span> </li> <img switch icon /> <div> <input id=16775 text select date (format date-lirr today 03/18/2023 /> <a button /> </div> <button id=17010 submit> Find Schedules </button> <div> v1.0:12-30 </div> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [21108]",
+      "op": "CLICK",
+      "element": "21108",
+      "value": "",
+      "description": "[button] 03/18/2023 -> CLICK",
+      "role": "button",
+      "label": "03/18/2023",
+      "observation": "<html> <div> <section navigation> <div> <a id=20931> Schedules </a> <a> Maps </a> <a> Fares & Tolls </a> <a> Planned Work </a> </div> </section> <div main> <article article> <div form> <div> <img switch icon /> <div> <input text select date (format date-lirr today 03/18/2023 /> <a id=21108 button> </a> </div> <button id=21339 submit> Find Schedules </button> <div> v1.0:12-30 </div> </div> </div> </article> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [25733]",
+      "op": "CLICK",
+      "element": "25733",
+      "value": "",
+      "description": "[link] 23, Thursday March 2023 -> CLICK",
+      "role": "link",
+      "label": "23, Thursday March 2023",
+      "observation": "<html> <div> <section navigation> <div> <a id=25419> Schedules </a> <a> Maps </a> <a> Fares & Tolls </a> <a> Planned Work </a> </div> </section> <div main> <article article> <div form> <div> <input text select date (format date-lirr today 03/18/2023 /> <a id=25596 button> </a> <div dialog calendar> <table application calendar> <tr> <td 20, monday march 2023> </td> <td 21, tuesday march 2023> </td> <td 22, wednesday march 2023> </td> <td id=25733 23, thursday march 2023> <span> 23 </span> </td> <td 24, friday march 2023> </td> <td 25, saturday march 2023> </td> </tr> </table> </div> </div> </div> </article> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [29475] [8]",
+      "op": "SELECT",
+      "element": "29475",
+      "value": "8",
+      "description": "[select] 1 -> SELECT: 8",
+      "role": "select",
+      "label": "1",
+      "observation": "<html> <div> <section navigation> <div> <a id=29908> Schedules </a> <a> Maps </a> <a> Fares & Tolls </a> <a> Planned Work </a> </div> </section> <div main> <article article> <div form> <div> <img switch icon /> <select id=29475 number> <option> 1 </option> <option true> 2 </option> <option> 3 </option> <option> 4 </option> <option> 5 </option> <option> 6 </option> <option> 7 </option> <option> 8 </option> <option> 9 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> </select> <button id=30318 submit> Find Schedules </button> <div> v1.0:12-30 </div> </div> </div> </article> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [33799] [37]",
+      "op": "SELECT",
+      "element": "33799",
+      "value": "37",
+      "description": "[select] 00 -> SELECT: 37",
+      "role": "select",
+      "label": "00",
+      "observation": "<html> <div main> <article article> <div form> <div> <img switch icon /> <div> <select id=33803 number> <option> 1 </option> <option> 2 </option> <option> 3 </option> <option> 4 </option> <option> 5 </option> <option> 6 </option> <option> 7 </option> <option true> 8 </option> <option> 9 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> </select> <select id=33799 number> <option 0> 00 </option> <option 1> 01 </option> <option 2> 02 </option> <option 3> 03 </option> <option 4> 04 </option> <option 5> 05 </option> <option 6> 06 </option> <option 7> 07 </option> <option 8> 08 </option> <option 9> 09 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> <option> 13 </option> <option> 14 </option> <option> 15 </option> <option> 16 </option> <option> 17 </option> <option> 18 </option> <option> 19 </option> <option> 20 </option> <option> 21 </option> <option> 22 </option> <option> 23 </option> <option> 24 </option> </select> </div> <button id=34642 submit> Find Schedules </button> <div> v1.0:12-30 </div> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "SELECT [38127] [AM]",
+      "op": "SELECT",
+      "element": "38127",
+      "value": "AM",
+      "description": "[select] AM -> SELECT: AM",
+      "role": "select",
+      "label": "AM",
+      "observation": "<html> <div main> <article article> <div form> <div> <img switch icon /> <div> <select id=38126 number> <option 0> 00 </option> <option 1> 01 </option> <option 2> 02 </option> <option 3> 03 </option> <option 4> 04 </option> <option 5> 05 </option> <option 6> 06 </option> <option 7> 07 </option> <option 8> 08 </option> <option 9> 09 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> <option> 13 </option> <option> 14 </option> <option> 15 </option> <option> 16 </option> <option> 17 </option> <option> 18 </option> <option> 19 </option> <option> 20 </option> <option> 21 </option> <option> 22 </option> <option> 23 </option> <option> 24 </option> </select> <select id=38127> <option true> AM </option> <option> PM </option> </select> </div> <button id=38966 submit> Find Schedules </button> <div> v1.0:12-30 </div> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [42452]",
+      "op": "CLICK",
+      "element": "42452",
+      "value": "",
+      "description": "[link] Find Schedules -> CLICK",
+      "role": "link",
+      "label": "Find Schedules",
+      "observation": "<html> <div main> <article article> <div form> <div> <img switch icon /> <div> <div> <input text select date (format date-lirr today 3/23/2023 /> <a id=43062 button> </a> </div> <select id=42456 number> <option 0> 00 </option> <option 1> 01 </option> <option 2> 02 </option> <option 3> 03 </option> <option 4> 04 </option> <option 5> 05 </option> <option 6> 06 </option> <option 7> 07 </option> <option 8> 08 </option> <option 9> 09 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> <option> 13 </option> <option> 14 </option> <option> 15 </option> <option> 16 </option> <option> 17 </option> <option> 18 </option> <option> 19 </option> <option> 20 </option> <option> 21 </option> <option> 22 </option> <option> 23 </option> <option> 24 </option> </select> </div> <button id=42452 submit> Find Schedules </button> <div> v1.0:12-30 </div> </div> </div> </article> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "cvs / Speciality workflow 173",
+  "source": "Mind2Web exemplar",
+  "website": "cvs",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Show weekly deals of Columbus, Oh 43215 store.",
+  "steps": [
+    {
+      "action": "CLICK [233]",
+      "op": "CLICK",
+      "element": "233",
+      "value": "",
+      "description": "[link] Locations -> CLICK",
+      "role": "link",
+      "label": "Locations",
+      "observation": "<html> <app-root> <div> <form search search cvs> <div> <label> Search products and services </label> <input id=439 combobox search search products and services /> </div> </form> <div> <a> Sign out </a> <a> Espaol </a> <a> Track an order </a> <a id=233> Locations </a> </div> </div> <footer contentinfo> <a id=1991> Store Locator </a> </footer> </app-root> </html>"
+    },
+    {
+      "action": "TYPE [4560] [43215]",
+      "op": "TYPE",
+      "element": "4560",
+      "value": "43215",
+      "description": "[combobox] Search by ZIP code, city, or state -> TYPE: 43215",
+      "role": "combobox",
+      "label": "Search by ZIP code, city, or state",
+      "observation": "<html> <div main> <div> <form search search by zip code, city,> <input id=4560 combobox search 43215 /> </form> <cvs-store-locator-search-container> <cvs-link weekly deals at 591 e.> <a id=5536> View weekly deals </a> </cvs-link> <cvs-link weekly deals at 1400 parsons> <a id=5694> View weekly deals </a> </cvs-link> </cvs-store-locator-search-container> </div> </div> </html>"
+    }
+  ]
+}

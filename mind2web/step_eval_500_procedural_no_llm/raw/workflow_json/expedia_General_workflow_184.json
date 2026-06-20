@@ -1,0 +1,180 @@
+{
+  "name": "expedia / General workflow 184",
+  "source": "Mind2Web exemplar",
+  "website": "expedia",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find the cheapest non-stop or 1 stop flight from JFK, New York to Changi, Singapore for 1 traveler on April 11 which includes seat selection and free cancellation",
+  "steps": [
+    {
+      "action": "CLICK [140]",
+      "op": "CLICK",
+      "element": "140",
+      "value": "",
+      "description": "[tab] Flights -> CLICK",
+      "role": "tab",
+      "label": "Flights",
+      "observation": "<html> <div main> <div> <ul tablist> <a id=140 tab> <span> Flights </span> </a> </ul> <div tabpanel> <form> <div going to> <div> <label> Going to </label> <input text /> <button id=589 button going to> <span> Going to </span> </button> <div> Going to </div> </div> </div> <button id=650 submit> Search </button> </form> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4239]",
+      "op": "CLICK",
+      "element": "4239",
+      "value": "",
+      "description": "[tab] One-way -> CLICK",
+      "role": "tab",
+      "label": "One-way",
+      "observation": "<html> <div main> <div tabpanel> <form> <div> <ul tablist> <a id=4239 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div going to> <div> <label> Going to </label> <input text /> <button id=4390 button going to> <span> Going to </span> </button> <div> Going to </div> </div> </div> </div> </div> <button id=4435 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7619]",
+      "op": "CLICK",
+      "element": "7619",
+      "value": "",
+      "description": "[button] Leaving from -> CLICK",
+      "role": "button",
+      "label": "Leaving from",
+      "observation": "<html> <div main> <div tabpanel> <form> <div tabpanel> <div> <div leaving from> <div> <label> Leaving from </label> <input text /> <button id=7619 button leaving from> <span> Leaving from </span> </button> <div> Leaving from </div> </div> </div> <div going to> <div> <label> Going to </label> <input text /> <button id=8155 button going to> <span> Going to </span> </button> <div> Going to </div> </div> </div> </div> </div> <button id=8186 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [11382] [jfk]",
+      "op": "TYPE",
+      "element": "11382",
+      "value": "jfk",
+      "description": "[textbox] Leaving from -> TYPE: jfk",
+      "role": "textbox",
+      "label": "Leaving from",
+      "observation": "<html> <div main> <div tabpanel> <form> <div tabpanel> <div> <div leaving from> <div> <label> Leaving from </label> <input id=11382 text where are you leaving from? /> </div> </div> <div going to> <div> <label> Going to </label> <input text /> <button id=11955 button going to> <span> Going to </span> </button> <div> Going to </div> </div> </div> </div> </div> <button id=11986 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15211]",
+      "op": "CLICK",
+      "element": "15211",
+      "value": "",
+      "description": "[button] New York (JFK - John F. Kennedy Intl.",
+      "role": "button",
+      "label": "New York (JFK - John F. Kennedy Intl.",
+      "observation": "<html> <div main> <div tabpanel> <form> <div tabpanel> <div> <div leaving from> <button id=15211 button new york (jfk - john /> </div> <div going to> <div> <label> Going to </label> <input text /> <button id=15836 button going to> <span> Going to </span> </button> <div> Going to </div> </div> </div> </div> </div> <button id=15867 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19148]",
+      "op": "CLICK",
+      "element": "19148",
+      "value": "",
+      "description": "[button] Going to -> CLICK",
+      "role": "button",
+      "label": "Going to",
+      "observation": "<html> <div main> <div tabpanel> <form> <div> <ul tablist> <a id=19532 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div going to> <div> <label> Going to </label> <input text /> <button id=19148 button going to> <span> Going to </span> </button> <div> Going to </div> </div> </div> </div> </div> <button id=19714 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [22917] [changi]",
+      "op": "TYPE",
+      "element": "22917",
+      "value": "changi",
+      "description": "[textbox] Going to -> TYPE: changi",
+      "role": "textbox",
+      "label": "Going to",
+      "observation": "<html> <div main> <div tabpanel> <form> <div> <ul tablist> <a id=23302 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div going to> <div> <label> Going to </label> <input id=22917 text where are you going to? /> </div> </div> </div> </div> <button id=23545 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [26768]",
+      "op": "CLICK",
+      "element": "26768",
+      "value": "",
+      "description": "[button] Singapore (SIN - Changi",
+      "role": "button",
+      "label": "Singapore (SIN - Changi",
+      "observation": "<html> <div main> <div tabpanel> <form> <div> <ul tablist> <a id=27152 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div going to> <button id=26768 button singapore (sin - changi) singapore /> </div> </div> </div> <button id=27383 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30619]",
+      "op": "CLICK",
+      "element": "30619",
+      "value": "",
+      "description": "[button] Departing April 5, 2023 -> CLICK",
+      "role": "button",
+      "label": "Departing April 5, 2023",
+      "observation": "<html> <div main> <div tabpanel> <form> <div> <ul tablist> <a id=31003 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div> <input text d1 2023-04-05 departing /> <button id=30619 button departing april 5, 2023> Apr 5 </button> <button button /> </div> </div> </div> <button id=31184 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [34743]",
+      "op": "CLICK",
+      "element": "34743",
+      "value": "",
+      "description": "[button] Apr 11, 2023 -> CLICK",
+      "role": "button",
+      "label": "Apr 11, 2023",
+      "observation": "<html> <div main> <div tabpanel> <div> <ul tablist> <a id=35129 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div> <button id=34743 button apr 11, 2023 /> <button id=35671 button> Done <span> : (Save changes and close the date picker.) </span> </button> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [39245]",
+      "op": "CLICK",
+      "element": "39245",
+      "value": "",
+      "description": "[button] Done : (Save changes and close the date picker.",
+      "role": "button",
+      "label": "Done : (Save changes and close the date picker.",
+      "observation": "<html> <div main> <div tabpanel> <div> <ul tablist> <a id=39629 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div> <div leaving from> <div> <label> Leaving from </label> <input text new york (jfk - john placeholder /> <button id=39757 button leaving from new york (jfk> <span> Leaving from: </span> New York (JFK - John F. Kennedy Intl.) </button> </div> </div> <button id=39245 button> Done <span> : (Save changes and close the date picker.) </span> </button> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [43366]",
+      "op": "CLICK",
+      "element": "43366",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div main> <div tabpanel> <form> <div> <ul tablist> <a id=43750 tab> <span> One-way </span> </a> </ul> <div tabpanel> <div going to> <div> <label> Going to </label> <input text singapore (sin - changi) placeholder /> <button id=43902 button going to singapore (sin -> <span> Going to: </span> Singapore (SIN - Changi) </button> </div> </div> </div> </div> <button id=43366 submit> Search </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [45275]",
+      "op": "CLICK",
+      "element": "45275",
+      "value": "",
+      "description": "[checkbox] Nonstop (1",
+      "role": "checkbox",
+      "label": "Nonstop (1",
+      "observation": "<html> <div> <section search> <div flying to> <div> <label> Flying to </label> <input text singapore (sin-changi) placeholder /> <button id=46499 button flying to singapore (sin-changi)> Singapore (SIN-Changi) </button> </div> </div> </section> <div> <input id=45275 checkbox num_of_stops 0 /> <label id=46569> <span> Nonstop (1) </span> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [52971]",
+      "op": "CLICK",
+      "element": "52971",
+      "value": "",
+      "description": "[checkbox] 1 Stop (49",
+      "role": "checkbox",
+      "label": "1 Stop (49",
+      "observation": "<html> <div> <section search> <div flying to> <div> <label> Flying to </label> <input text singapore (sin-changi) placeholder /> <button id=54183 button flying to singapore (sin-changi)> Singapore (SIN-Changi) </button> </div> </div> </section> <div> <input id=52971 checkbox num_of_stops 1 /> <div> <label> Sort by </label> <select id=54474 sort> <option true> Price (Lowest) </option> <option> Price (Highest) </option> <option> Duration (Shortest) </option> <option> Duration (Longest) </option> <option> Departure (Earliest) </option> <option> Departure (Latest) </option> <option> Arrival (Earliest) </option> <option> Arrival (Latest) </option> </select> <div> Sort by </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57583]",
+      "op": "CLICK",
+      "element": "57583",
+      "value": "",
+      "description": "[checkbox] Seat choice included -> CLICK",
+      "role": "checkbox",
+      "label": "Seat choice included",
+      "observation": "<html> <div> <section search> <div flying to> <div> <label> Flying to </label> <input text singapore (sin-changi) placeholder /> <button id=58806 button flying to singapore (sin-changi)> Singapore (SIN-Changi) </button> </div> </div> </section> <div> <input id=57583 checkbox seat_choice /> <div> <label> Sort by </label> <select id=59445 sort> <option true> Price (Lowest) </option> <option> Price (Highest) </option> <option> Duration (Shortest) </option> <option> Duration (Longest) </option> <option> Departure (Earliest) </option> <option> Departure (Latest) </option> <option> Arrival (Earliest) </option> <option> Arrival (Latest) </option> </select> <div> Sort by </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [65392]",
+      "op": "CLICK",
+      "element": "65392",
+      "value": "",
+      "description": "[checkbox] No cancel fee -> CLICK",
+      "role": "checkbox",
+      "label": "No cancel fee",
+      "observation": "<html> <div> <section search> <div flying to> <div> <label> Flying to </label> <input text singapore (sin-changi) placeholder /> <button id=66590 button flying to singapore (sin-changi)> Singapore (SIN-Changi) </button> </div> </div> </section> <div> <input id=65392 checkbox no_cancel_fee /> <div> <label> Sort by </label> <select id=67085 sort> <option true> Price (Lowest) </option> <option> Price (Highest) </option> <option> Duration (Shortest) </option> <option> Duration (Longest) </option> <option> Departure (Earliest) </option> <option> Departure (Latest) </option> <option> Arrival (Earliest) </option> <option> Arrival (Latest) </option> </select> <div> Sort by </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [72850] [Price (Lowest)]",
+      "op": "SELECT",
+      "element": "72850",
+      "value": "Price (Lowest)",
+      "description": "[combobox] Sort by -> SELECT: Price (Lowest",
+      "role": "combobox",
+      "label": "Sort by",
+      "observation": "<html> <div> <section search> <div> <div flying to> <div> <label> Flying to </label> <input text singapore (sin-changi) placeholder /> <button id=74049 button flying to singapore (sin-changi)> Singapore (SIN-Changi) </button> </div> </div> <div> <input text startdate 2023-04-11 departing /> <button id=74079 button departing> Apr 11 </button> <button button /> </div> </div> </section> <div> <label> Sort by </label> <select id=72850 sort> <option true> Price (Lowest) </option> <option> Price (Highest) </option> <option> Duration (Shortest) </option> <option> Duration (Longest) </option> <option> Departure (Earliest) </option> <option> Departure (Latest) </option> <option> Arrival (Earliest) </option> <option> Arrival (Latest) </option> </select> <div> Sort by </div> </div> </div> </html>"
+    }
+  ]
+}

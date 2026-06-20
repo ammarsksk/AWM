@@ -1,0 +1,60 @@
+{
+  "name": "resy / Restaurant workflow 453",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find a pasta restaurant in Sydney and save it",
+  "steps": [
+    {
+      "action": "CLICK [229]",
+      "op": "CLICK",
+      "element": "229",
+      "value": "",
+      "description": "[button] Location Columbus, OH -> CLICK",
+      "role": "button",
+      "label": "Location Columbus, OH",
+      "observation": "<html> <div> <header banner main resy> <div> <button id=229 button location columbus, oh> <div> Columbus, OH </div> </button> <input id=325 text search restaurants, cuisines, etc. /> </div> </header> <a id=510 button> Sydney </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [3580]",
+      "op": "CLICK",
+      "element": "3580",
+      "value": "",
+      "description": "[button] Sydney -> CLICK",
+      "role": "button",
+      "label": "Sydney",
+      "observation": "<html> <div> <header banner main resy> <div> <a id=3580 button> Sydney </a> <input id=3802 text search restaurants, cuisines, etc. /> </div> </header> <a id=3987 button> Sydney </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [7052] [pasta]",
+      "op": "TYPE",
+      "element": "7052",
+      "value": "pasta",
+      "description": "[textbox] Search restaurants, cuisines, etc. -> TYPE: pasta",
+      "role": "textbox",
+      "label": "Search restaurants, cuisines, etc.",
+      "observation": "<html> <div> <header banner main resy> <div> <button id=7152 button location sydney> <div> Sydney </div> </button> <div> <input id=7052 text search restaurants, cuisines, etc. /> <a button> </a> </div> </div> </header> <div resy blog content and complementary> <div about resy, statistics, and social> <a id=7363> <span> New Openings </span> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12434]",
+      "op": "CLICK",
+      "element": "12434",
+      "value": "",
+      "description": "[textbox] Search restaurants, cuisines, etc. -> ENTER",
+      "role": "textbox",
+      "label": "Search restaurants, cuisines, etc.",
+      "observation": "<html> <div> <header banner main resy> <div combobox> <input id=12434 text pasta search restaurants, cuisines, etc. /> <div listbox> <ul listbox> <li option> </li> <li id=12655 option> <div> <h3> Y Pasta </h3> <div> International </div> <div> <div> Hong Kong </div> <span> , </span> <div> Hong Kong </div> </div> </div> </li> <li option> </li> <li option> </li> <li option> </li> </ul> </div> </div> </header> <div resy blog content and complementary> <div about resy, statistics, and social> <a id=12819> <span> New Openings </span> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15779]",
+      "op": "CLICK",
+      "element": "15779",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <header banner main resy> <div> <button id=15885 button location sydney> <div> Sydney </div> </button> <div combobox> <input id=15983 text pasta search restaurants, cuisines, etc. /> </div> </div> </header> <path id=15779 /> </html>"
+    }
+  ]
+}

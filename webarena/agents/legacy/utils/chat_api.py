@@ -9,6 +9,8 @@ from typing import Optional, List, Any
 import logging
 from typing import Tuple
 import time
+from pathlib import Path
+import sys
 
 from langchain_community.llms import HuggingFaceHub, HuggingFacePipeline
 from langchain_openai import ChatOpenAI
@@ -21,6 +23,11 @@ from dataclasses import dataclass
 from huggingface_hub import InferenceClient
 from transformers import AutoTokenizer
 from transformers import GPT2TokenizerFast
+
+WEB_ARENA_DIR = Path(__file__).resolve().parents[3]
+if str(WEB_ARENA_DIR) not in sys.path:
+    sys.path.insert(0, str(WEB_ARENA_DIR))
+from provider_config import get_openai_compatible_kwargs
 
 
 @dataclass
@@ -57,7 +64,7 @@ class ChatModelArgs:
         The maximum number of total tokens (input + output). Defaults to 4096.
     """
 
-    model_name: str = "openai/gpt-3.5-turbo"
+    model_name: str = "openai/google/gemini-2.5-pro"
     model_url: str = None
     temperature: float = 0.1
     max_new_tokens: int = None
@@ -74,27 +81,13 @@ class ChatModelArgs:
     def make_chat_model(self):
         if self.model_name.startswith("openai"):
             _, model_name = self.model_name.split("/", 1)
-            base_url = (
-                os.environ.get("OPENAI_BASE_URL")
-                or os.environ.get("OPENAI_API_BASE")
-                or os.environ.get("NVIDIA_NIM_BASE_URL")
-                or os.environ.get("NVIDIA_BASE_URL")
-            )
-            api_key = (
-                os.environ.get("OPENAI_API_KEY")
-                or os.environ.get("NVIDIA_NIM_API_KEY")
-                or os.environ.get("NVIDIA_API_KEY")
-            )
-            if base_url is None and (
-                os.environ.get("NVIDIA_NIM_API_KEY") or os.environ.get("NVIDIA_API_KEY")
-            ):
-                base_url = "https://integrate.api.nvidia.com/v1"
+            provider_kwargs = get_openai_compatible_kwargs()
             return ChatOpenAI(
                 model=model_name,
                 temperature=self.temperature,
                 max_tokens=self.max_new_tokens,
-                api_key=api_key,
-                base_url=base_url,
+                api_key=provider_kwargs.get("api_key"),
+                base_url=provider_kwargs.get("base_url"),
             )
         else:
             return HuggingFaceChatModel(

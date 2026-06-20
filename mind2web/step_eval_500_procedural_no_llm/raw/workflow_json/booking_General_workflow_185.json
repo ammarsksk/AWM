@@ -1,0 +1,230 @@
+{
+  "name": "booking / General workflow 185",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book fasted flexible direct flights from New York to Tokyo on June 1, between 6 to 12 pm departure, and from Tokyo to New Delhi on June 5.",
+  "steps": [
+    {
+      "action": "CLICK [760]",
+      "op": "CLICK",
+      "element": "760",
+      "value": "",
+      "description": "[span] Flights -> CLICK",
+      "role": "span",
+      "label": "Flights",
+      "observation": "<html> <body> <nav what are you looking for?> <a id=760> <span> Flights </span> </a> </nav> <ul tablist> <button id=2767 tab> <span> Regions </span> </button> <button id=2776 tab> <span> Cities </span> </button> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [6192] [NEW YORK]",
+      "op": "TYPE",
+      "element": "6192",
+      "value": "NEW YORK",
+      "description": "[b] Columbus -> TYPE: NEW YORK",
+      "role": "b",
+      "label": "Columbus",
+      "observation": "<html> <div> <div> <button id=6192 button> <span> <b> Columbus </b> All airports </span> <span> <b> Columbus </b> All airports </span> </button> <button button switch origin and return destinations /> <button id=6219 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <ul tablist> <button id=6581 tab button> <span> Asia </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [8021]",
+      "op": "CLICK",
+      "element": "8021",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <input radio sr_search_type multistop /> <label id=8480> <div> Multi-city </div> </label> </div> <div> <button button> </button> <button button switch origin and return destinations /> <button id=8556 button> <span> Where to? </span> <span> Where to? </span> </button> </div> </div> <span id=8021 /> </label> </div> </span> </html>"
+    },
+    {
+      "action": "CLICK [10930]",
+      "op": "CLICK",
+      "element": "10930",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <button button> </button> <button button switch origin and return destinations /> <button id=11475 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <ul tablist> <button id=11547 tab button> <span> International </span> </button> </ul> </div> <svg id=10930 /> </html>"
+    },
+    {
+      "action": "TYPE [14374] [TOKYO]",
+      "op": "TYPE",
+      "element": "14374",
+      "value": "TOKYO",
+      "description": "[span] Where to? -> TYPE: TOKYO",
+      "role": "span",
+      "label": "Where to?",
+      "observation": "<html> <div> <div> <div> <input radio sr_search_type multistop /> <label id=14298> <div> Multi-city </div> </label> </div> <div> <button button> </button> <button button switch origin and return destinations /> <button id=14374 button> <span> Where to? </span> <span> Where to? </span> </button> </div> </div> <ul tablist> <button id=14445 tab button> <span> International </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [16468]",
+      "op": "CLICK",
+      "element": "16468",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <body> <div> <button button> </button> <button button switch origin and return destinations /> <button id=17004 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <ul use enter to select airport> <li id=17528> <span> <span> <b> TYO </b> Tokyo All airports </span> <div> Tokyo-to, Japan </div> </span> <input checkbox citytyo /> </li> </ul> </body> <span id=16468 /> </label> </div> </span> </html>"
+    },
+    {
+      "action": "CLICK [19470]",
+      "op": "CLICK",
+      "element": "19470",
+      "value": "",
+      "description": "[div] Multi-city -> CLICK",
+      "role": "div",
+      "label": "Multi-city",
+      "observation": "<html> <div> <div> <input radio sr_search_type multistop /> <label id=19470> <div> Multi-city </div> </label> </div> <ul tablist> <button id=19621 tab button> <span> International </span> </button> </ul> <ul tablist> <button id=19911 tab button> <span> Asia </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [22047]",
+      "op": "CLICK",
+      "element": "22047",
+      "value": "",
+      "description": "[span] Sat 13 May -> CLICK",
+      "role": "span",
+      "label": "Sat 13 May",
+      "observation": "<html> <div> <button id=22047 button choose departure date> <span> Sat 13 May </span> <span> Sat 13 May </span> </button> <div> <button id=22074 button> <span> Where from? </span> <span> Where from? </span> </button> <button button switch origin and return destinations /> <button id=22098 button> <span> Where to? </span> <span> Where to? </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [25591]",
+      "op": "CLICK",
+      "element": "25591",
+      "value": "",
+      "description": "[checkbox] 1 June 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "1 June 2023",
+      "observation": "<html> <body> <div> <button id=24838 button> <span> Where from? </span> <span> Where from? </span> </button> <button button switch origin and return destinations /> <button button> </button> </div> <div> <table grid> <td gridcell> <span id=25432 checkbox 1 may 2023> <span> 1 </span> </span> </td> </table> <table grid> <td gridcell> <span id=25591 checkbox 1 june 2023> <span> 1 </span> </span> </td> </table> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [27597] [TOKYO]",
+      "op": "TYPE",
+      "element": "27597",
+      "value": "TOKYO",
+      "description": "[span] Where from? -> TYPE: TOKYO",
+      "role": "span",
+      "label": "Where from?",
+      "observation": "<html> <div> <div> <button id=27597 button> <span> Where from? </span> <span> Where from? </span> </button> <button button switch origin and return destinations /> <button id=27620 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <ul tablist> <button id=27701 tab button> <span> International </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [30615]",
+      "op": "CLICK",
+      "element": "30615",
+      "value": "",
+      "description": "[span] TYO -> CLICK",
+      "role": "span",
+      "label": "TYO",
+      "observation": "<html> <body> <div> <button id=30059 button> <span> Where from? </span> <span> Where from? </span> </button> <button button switch origin and return destinations /> <button id=30083 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <ul use enter to select airport> <li id=30615> <span> <span> <b> TYO </b> Tokyo All airports </span> <div> Tokyo-to, Japan </div> </span> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [32603] [NEW DELHI]",
+      "op": "TYPE",
+      "element": "32603",
+      "value": "NEW DELHI",
+      "description": "[span] Where to? -> TYPE: NEW DELHI",
+      "role": "span",
+      "label": "Where to?",
+      "observation": "<html> <div> <div> <div> <input radio sr_search_type multistop true /> <label id=32458> <div> Multi-city </div> </label> </div> <div> <button button> </button> <button button switch origin and return destinations /> <button id=32603 button> <span> Where to? </span> <span> Where to? </span> </button> </div> </div> <ul tablist> <button id=32683 tab button> <span> International </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [35590]",
+      "op": "CLICK",
+      "element": "35590",
+      "value": "",
+      "description": "[b] DEL -> CLICK",
+      "role": "b",
+      "label": "DEL",
+      "observation": "<html> <body> <div> <button button> </button> <button button switch origin and return destinations /> <button id=35069 button> <span> Where to? </span> <span> Where to? </span> </button> </div> <div> <input id=35588 text new delhi airport or city /> <ul use enter to select airport> <li id=35590> <span> <span> <b> DEL </b> Delhi International Airport </span> <div> New Delhi, Delhi NCR, India </div> </span> </li> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [36919]",
+      "op": "CLICK",
+      "element": "36919",
+      "value": "",
+      "description": "[button] Choose departure date -> CLICK",
+      "role": "button",
+      "label": "Choose departure date",
+      "observation": "<html> <div> <div> <button id=37469 button choose departure date> <span> Thu 1 Jun </span> <span> Thu 1 Jun </span> </button> <button id=36919 button choose departure date> <span> Choose departure date </span> <span> Choose departure date </span> </button> </div> <div> <button button> </button> <button id=37580 button> <span> Search </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [40887]",
+      "op": "CLICK",
+      "element": "40887",
+      "value": "",
+      "description": "[checkbox] 5 June 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "5 June 2023",
+      "observation": "<html> <div> <table grid> <tbody> <td gridcell> <span id=40870 checkbox 1 june 2023> <span> 1 </span> </span> </td> <td gridcell> <span id=40887 checkbox 5 june 2023> <span> 5 </span> </span> </td> </tbody> </table> <table grid> <td gridcell> <span id=41027 checkbox 1 july 2023> <span> 1 </span> </span> </td> </table> </div> </html>"
+    },
+    {
+      "action": "CLICK [43158]",
+      "op": "CLICK",
+      "element": "43158",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div> <input radio sr_search_type multistop true /> <label id=42957> <div> Multi-city </div> </label> </div> <button id=43046 button choose departure date> <span> Thu 1 Jun </span> <span> Thu 1 Jun </span> </button> <div> <button button> </button> <button id=43158 button> <span> Search </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [45070]",
+      "op": "CLICK",
+      "element": "45070",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <input radio sr_search_type multistop true /> <label id=44823> <div> Multi-city </div> </label> </div> <div> <div> <input radio direct only /> <label id=45070> <span> <div> Direct only </div> <div> From $1,038.50 </div> </span> </label> </div> <ul tablist> <button id=45413 tab button> <span> Fastest </span> </button> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [48948]",
+      "op": "CLICK",
+      "element": "48948",
+      "value": "",
+      "description": "[tab] Fastest -> CLICK",
+      "role": "tab",
+      "label": "Fastest",
+      "observation": "<html> <div> <div> <input radio sr_search_type multistop true /> <label id=49278> <div> Multi-city </div> </label> </div> <div> <div tabpanel> <div id=49614> 1 </div> </div> <ul tablist> <button id=48948 tab button> <span> Fastest </span> </button> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [53077]",
+      "op": "CLICK",
+      "element": "53077",
+      "value": "",
+      "description": "[button] See flight -> CLICK",
+      "role": "button",
+      "label": "See flight",
+      "observation": "<html> <div> <div tabpanel> <div id=52775> 1 </div> </div> <div> <ul tablist> <button id=52945 tab button> <span> Fastest </span> </button> </ul> <button id=53077 button> <span> See flight </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57089]",
+      "op": "CLICK",
+      "element": "57089",
+      "value": "",
+      "description": "[button] Select -> CLICK",
+      "role": "button",
+      "label": "Select",
+      "observation": "<html> <body> <div> <button id=55817 button choose departure date> <span> Thu 1 Jun </span> <span> Thu 1 Jun </span> </button> <button id=55898 button choose departure date> <span> Mon 5 Jun </span> <span> Mon 5 Jun </span> </button> </div> <div dialog> <button id=57089 button> <span> Select </span> </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [57487]",
+      "op": "CLICK",
+      "element": "57487",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div> New York to Tokyo, Tokyo to Delhi </div> <a id=57785 button view flight details> <span> View flight details </span> </a> </div> <div> <button button> </button> <button id=57982 button> <span> Next </span> </button> </div> </div> <span id=57487 /> </label> </div> </div> </div> </span> </html>"
+    },
+    {
+      "action": "CLICK [59162]",
+      "op": "CLICK",
+      "element": "59162",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <div> <div> <div id=58955> New York to Tokyo, Tokyo to Delhi </div> <a id=58957 button view flight details> <span> View flight details </span> </a> </div> <div> <button button> </button> <button id=59162 button> <span> Next </span> </button> </div> </div> </html>"
+    }
+  ]
+}

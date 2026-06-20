@@ -1,0 +1,40 @@
+{
+  "name": "spothero / Other workflow 222",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find an hourly parking in New York City of lowest price.",
+  "steps": [
+    {
+      "action": "TYPE [132] [New York City]",
+      "op": "TYPE",
+      "element": "132",
+      "value": "New York City",
+      "description": "[textbox] Search for parking -> TYPE: New York City",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <div tablist> <button id=437 tab button> Hourly </button> <button tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=132 text search for parking search-input address, place, city or venue /> </div> <ul list> <a id=736> New York City Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [2127]",
+      "op": "CLICK",
+      "element": "2127",
+      "value": "",
+      "description": "[li] New York City, NY, USA -> CLICK",
+      "role": "li",
+      "label": "New York City, NY, USA",
+      "observation": "<html> <div> <div> <div tablist> <button id=2431 tab button> Hourly </button> <button tab button> Monthly </button> <button tab button> Airport </button> </div> <ul> <li id=2127> New York City, NY, USA </li> <li> City Island, The Bronx, NY, USA </li> <li> City Hall, New York, NY, USA </li> <li> New York City Center, West 55th Street, New York, NY, USA </li> </ul> </div> <ul list> <a id=2743> New York City Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "SELECT [4259] [Sort by Price]",
+      "op": "SELECT",
+      "element": "4259",
+      "value": "Sort by Price",
+      "description": "[select] Sort by Distance -> SELECT: Sort by Price",
+      "role": "select",
+      "label": "Sort by Distance",
+      "observation": "<html> <div> <div> <div tablist> <button id=5042 tab button> Hourly </button> <button tab button> Monthly </button> </div> <button id=5389 button> Filter </button> </div> <select id=4259> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    }
+  ]
+}

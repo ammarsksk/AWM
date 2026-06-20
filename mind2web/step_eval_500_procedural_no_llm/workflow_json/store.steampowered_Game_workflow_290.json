@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "name": "store.steampowered / Game workflow 290",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "store.steampowered",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "goal_pattern": "Purchase the classic bundle for the simulation game Cities Skylines.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "link",
+      "value",
+      "required",
+      "game",
+      "purchase",
+      "bundle",
+      "simulation",
+      "cities",
+      "skylines",
+      "store",
+      "steampowered",
+      "entertainment",
+      "classic",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "categories",
+      "info",
+      "add",
+      "cart",
+      "myself"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Categories",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Simulation",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Simulation",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the CITIES: SKYLINES",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "CITIES: SKYLINES",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Bundle info",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Bundle info",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Add to Cart",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Add to Cart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Purchase for myself",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Purchase for myself",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "store.steampowered / Game workflow 290"
+}

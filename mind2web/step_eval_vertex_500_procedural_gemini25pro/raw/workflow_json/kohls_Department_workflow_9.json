@@ -1,0 +1,60 @@
+{
+  "name": "kohls / Department workflow 9",
+  "source": "Mind2Web exemplar",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "task": "Browse for wall art with a price range of $25 to $50.",
+  "steps": [
+    {
+      "action": "TYPE [158] [wall art]",
+      "op": "TYPE",
+      "element": "158",
+      "value": "wall art",
+      "description": "[textbox] Search by keyword or web id -> TYPE: wall art",
+      "role": "textbox",
+      "label": "Search by keyword or web id",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=154 submit submit-search /> <input id=158 text search hi james, what are you /> </fieldset> <a id=472> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [7858]",
+      "op": "CLICK",
+      "element": "7858",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=7858 submit submit-search /> <input id=8069 text search hi james, what are you wall art /> </fieldset> <a id=8239> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [11778]",
+      "op": "CLICK",
+      "element": "11778",
+      "value": "",
+      "description": "[link] Wall Art -> CLICK",
+      "role": "link",
+      "label": "Wall Art",
+      "observation": "<html> <div> <span id=19805> Price </span> <a id=11796 button price> <span> Price </span> </a> </div> <img id=11778 /> </html>"
+    },
+    {
+      "action": "CLICK [20789]",
+      "op": "CLICK",
+      "element": "20789",
+      "value": "",
+      "description": "[div] Price -> CLICK",
+      "role": "div",
+      "label": "Price",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input submit submit-search /> <input id=21043 text search hi james, what are you /> </fieldset> <div> <div> <a menu expandable> </a> <a id=21550> Featured <span> undefined </span> </a> <ul list> </ul> </div> <div id=20789> <span> Price </span> <a button price> <span> Price </span> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [44612]",
+      "op": "CLICK",
+      "element": "44612",
+      "value": "",
+      "description": "[link] $25 to $50 (5,006",
+      "role": "link",
+      "label": "$25 to $50 (5,006",
+      "observation": "<html> <div> <div> <span id=44569> Price </span> <a id=37580 button price> <span> Price </span> </a> </div> <a id=44612 $25 to $50 - selecting> <span> $25 to $50 </span> <span> (5,006) </span> </a> </div> </html>"
+    }
+  ]
+}

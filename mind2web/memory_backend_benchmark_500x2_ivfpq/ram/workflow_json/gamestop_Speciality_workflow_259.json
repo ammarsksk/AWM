@@ -1,0 +1,51 @@
+{
+  "name": "gamestop / Speciality workflow 259",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "gamestop",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Buy a $25 digital gift card for Tim Stebee, whose email address is scisoorbros@gmail.com. Fill in sender name Jeerimiah Waton",
+  "goal_pattern": "Buy a $25 digital gift card for Tim Stebee, whose email address is scisoorbros@gmail.com. Fill in sender name Jeerimiah Waton",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the [img] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "img",
+      "target_description": "[img] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the GameStop Digital Gift Cards",
+      "operation": "CLICK",
+      "target_type": "img",
+      "target_description": "GameStop Digital Gift Cards",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [119]",
+      "gold_element_id": "119",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [7580]",
+      "gold_element_id": "7580",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "gamestop / Speciality workflow 259"
+}

@@ -1,0 +1,90 @@
+{
+  "name": "kbb / Auto workflow 198",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find a Ford Mustang with lowest price and save it.",
+  "steps": [
+    {
+      "action": "CLICK [133]",
+      "op": "CLICK",
+      "element": "133",
+      "value": "",
+      "description": "[link] Cars for Sale -> HOVER",
+      "role": "link",
+      "label": "Cars for Sale",
+      "observation": "<html> <div> <a id=133 unstyled> Cars for Sale </a> <div> <a id=1177> <div> Ford </div> </a> <a id=1441> <div> Ford </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7208]",
+      "op": "CLICK",
+      "element": "7208",
+      "value": "",
+      "description": "[link] Cars for Sale -> CLICK",
+      "role": "link",
+      "label": "Cars for Sale",
+      "observation": "<html> <div> <a id=7208 unstyled> Cars for Sale </a> <div> <a id=8252> <div> Ford </div> </a> <a id=8516> <div> Ford </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [15870] [Mustang]",
+      "op": "TYPE",
+      "element": "15870",
+      "value": "Mustang",
+      "description": "[textbox] Search by Make, Model, Body Style or Keyword -> TYPE: Mustang",
+      "role": "textbox",
+      "label": "Search by Make, Model, Body Style or Keyword",
+      "observation": "<html> <div> <a id=16054 unstyled> Price New/Used </a> <div main> <div> <input id=15870 text search by make, model, body /> <button submit search-btn /> </div> <div> <label> Sort By: </label> <select id=15856 sortby> <option relevance true> Relevance </option> <option price - lowest> Price - Lowest </option> <option price - highest> Price - Highest </option> <option distance - closest distanceasc> Distance - Closest </option> <option date - oldest datelistedasc> Date - Oldest </option> <option date - newest datelisteddesc> Date - Newest </option> <option mileage - lowest mileageasc> Mileage - Lowest </option> <option mileage - highest mileagedesc> Mileage - Highest </option> <option year - oldest yearasc> Year - Oldest </option> <option year - newest yeardesc> Year - Newest </option> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30787]",
+      "op": "CLICK",
+      "element": "30787",
+      "value": "",
+      "description": "[div] Ford -> CLICK",
+      "role": "div",
+      "label": "Ford",
+      "observation": "<html> <div main> <div combobox> <div listbox> <ul listbox> <li id=30787 option> <div> <b> Ford </b> Mustang </div> </li> <li id=30798 option> <div> <b> Ford </b> Mustang <b> Mach-E </b> </div> </li> <li option> </li> <li option> </li> <li option> </li> </ul> </div> </div> <div> <label> Sort By: </label> <select id=30404 sortby> <option relevance true> Relevance </option> <option price - lowest> Price - Lowest </option> <option price - highest> Price - Highest </option> <option distance - closest distanceasc> Distance - Closest </option> <option date - oldest datelistedasc> Date - Oldest </option> <option date - newest datelisteddesc> Date - Newest </option> <option mileage - lowest mileageasc> Mileage - Lowest </option> <option mileage - highest mileagedesc> Mileage - Highest </option> <option year - oldest yearasc> Year - Oldest </option> <option year - newest yeardesc> Year - Newest </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [45137] [Price - Lowest]",
+      "op": "SELECT",
+      "element": "45137",
+      "value": "Price - Lowest",
+      "description": "[combobox] Sort By: -> SELECT: Price - Lowest",
+      "role": "combobox",
+      "label": "Sort By:",
+      "observation": "<html> <div main> <div> <div> <a cars for sale> Cars for Sale </a> <a ford> Ford </a> <a id=45511 mustang> Mustang </a> </div> <span> <span> Ford </span> <span id=45542> Mustang </span> </span> </div> <div> <label> Sort By: </label> <select id=45137 sortby> <option relevance true> Relevance </option> <option price - lowest> Price - Lowest </option> <option price - highest> Price - Highest </option> <option distance - closest distanceasc> Distance - Closest </option> <option date - oldest datelistedasc> Date - Oldest </option> <option date - newest datelisteddesc> Date - Newest </option> <option mileage - lowest mileageasc> Mileage - Lowest </option> <option mileage - highest mileagedesc> Mileage - Highest </option> <option year - oldest yearasc> Year - Oldest </option> <option year - newest yeardesc> Year - Newest </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [58449]",
+      "op": "CLICK",
+      "element": "58449",
+      "value": "",
+      "description": "[heading] Used 2000 Ford Mustang GT -> CLICK",
+      "role": "heading",
+      "label": "Used 2000 Ford Mustang GT",
+      "observation": "<html> <div> <a id=55957 unstyled> Price New/Used </a> <div main> <button button next> <svg id=56482 /> </button> <div> <a id=58449> <h3> Used 2000 Ford Mustang GT </h3> </a> <span> 25,799 </span> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [63551]",
+      "op": "CLICK",
+      "element": "63551",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div main> <div> <div used 2000 ford mustang gt> <span id=63551 /> </div> <form> <div> <label> Last Name </label> <input id=64174 text lastname /> </div> <input id=64192 tel phonenumber /> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [67220]",
+      "op": "CLICK",
+      "element": "67220",
+      "value": "",
+      "description": "[button] Save -> CLICK",
+      "role": "button",
+      "label": "Save",
+      "observation": "<html> <body> <div main> <input id=67863 tel phonenumber /> <div tabpanel finance> <div> <label> Est. Trade-In Value </label> <input id=67999 text tradeininput $0 /> </div> </div> </div> <div dialog> <div dialog> <div document> <div> <button button> Close </button> <button id=67220 submit> Save </button> </div> </div> </div> </div> </body> </html>"
+    }
+  ]
+}

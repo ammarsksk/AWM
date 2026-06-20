@@ -1,0 +1,150 @@
+{
+  "name": "last.fm / Music workflow 200",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find events starting from April 1, 2023 within 100 miles of New York and see who are going in the top listed event and follow all of them who are going.",
+  "steps": [
+    {
+      "action": "CLICK [137]",
+      "op": "CLICK",
+      "element": "137",
+      "value": "",
+      "description": "[link] Events -> CLICK",
+      "role": "link",
+      "label": "Events",
+      "observation": "<html> <div main> <div> <div> <a> Last.fm </a> <a id=251> Search </a> <ul primary navigation> <a id=137> Events </a> </ul> </div> <nav secondary navigation> <a id=987> Events </a> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9933]",
+      "op": "CLICK",
+      "element": "9933",
+      "value": "",
+      "description": "[button] Near you -> CLICK",
+      "role": "button",
+      "label": "Near you",
+      "observation": "<html> <div main> <div> <button id=9947> All events </button> <button id=9948> <span> From today </span> </button> <button id=9933> Near you </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [21294] [new york]",
+      "op": "TYPE",
+      "element": "21294",
+      "value": "new york",
+      "description": "[textbox] Location search -> TYPE: new york",
+      "role": "textbox",
+      "label": "Location search",
+      "observation": "<html> <div main> <div> <button id=21362> All events </button> <div> <button id=21365> Near you </button> <div> <p> or search: </p> <label> Location search </label> <input id=21294 text enter a location /> <p> Pro tip: you can also drag the pin to change location! </p> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [33214]",
+      "op": "CLICK",
+      "element": "33214",
+      "value": "",
+      "description": "[span] New York -> CLICK",
+      "role": "span",
+      "label": "New York",
+      "observation": "<html> <body> <div main> <div> <button id=33226> All events </button> <button id=33229> Near you </button> </div> </div> <div> <span id=33214> New York </span> <span> NY, USA </span> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [45140] [100 km]",
+      "op": "SELECT",
+      "element": "45140",
+      "value": "100 km",
+      "description": "[combobox] SEARCH RADIUS -> SELECT: 100 km",
+      "role": "combobox",
+      "label": "SEARCH RADIUS",
+      "observation": "<html> <div main> <div> <button id=45117> All events </button> <div> <button id=45120> Near you </button> <select id=45140 radius> <option 10000> 10 km </option> <option 20000> 20 km </option> <option 30000> 30 km </option> <option 40000> 40 km </option> <option 50000> 50 km </option> <option 60000 true> 60 km </option> <option 70000> 70 km </option> <option 80000> 80 km </option> <option 90000> 90 km </option> <option 100000> 100 km </option> <option 200000> 200 km </option> <option 300000> 300 km </option> <option 400000> 400 km </option> <option 500000> 500 km </option> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [56573]",
+      "op": "CLICK",
+      "element": "56573",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div main> <div> <button id=56534> All events </button> <div> <button id=56537> Near you </button> <div> <button button> Cancel </button> <button id=56573 submit> <span> Apply </span> </button> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [67918]",
+      "op": "CLICK",
+      "element": "67918",
+      "value": "",
+      "description": "[button] From today -> CLICK",
+      "role": "button",
+      "label": "From today",
+      "observation": "<html> <div main> <div> <div> <button id=67917> All events </button> <button id=67918> <span> From today </span> </button> </div> <a id=70944> Next </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [77650]",
+      "op": "CLICK",
+      "element": "77650",
+      "value": "",
+      "description": "[Date] FROM -> CLICK",
+      "role": "Date",
+      "label": "FROM",
+      "observation": "<html> <div main> <div> <button id=77625> All events </button> <div> <label> From </label> <input id=77650 date from 2023-03-19 yyyy-mm-dd /> </div> <button id=77628> New York, United States </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [87379] [04/01/2023]",
+      "op": "TYPE",
+      "element": "87379",
+      "value": "04/01/2023",
+      "description": "[Date] FROM -> TYPE: 04/01/2023",
+      "role": "Date",
+      "label": "FROM",
+      "observation": "<html> <div main> <div> <button id=87353> All events </button> <form> <div> <label> From </label> <input id=87379 date from 2023-03-19 yyyy-mm-dd /> </div> <div> <button button> Cancel </button> <button id=87401 submit> Apply </button> </div> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [97152]",
+      "op": "CLICK",
+      "element": "97152",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div main> <div> <button id=97126> All events </button> <div> <button button> Cancel </button> <button id=97152 submit> Apply </button> </div> <button id=97129> New York, United States </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [106870]",
+      "op": "CLICK",
+      "element": "106870",
+      "value": "",
+      "description": "[link] 3 going -> CLICK",
+      "role": "link",
+      "label": "3 going",
+      "observation": "<html> <div main> <div> <div> <button id=106879> All events </button> <button id=106882> New York, United States </button> </div> <a id=106870> 3 going </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [117323]",
+      "op": "CLICK",
+      "element": "117323",
+      "value": "",
+      "description": "[button] -> CLICK",
+      "role": "button",
+      "label": "",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=117349> Next </button> </ul> </section> <div main> <span> <span> Apr </span> <span id=118137> 1 </span> </span> </div> </body> <button id=117323 submit toggle-button /> </html>"
+    },
+    {
+      "action": "CLICK [123398]",
+      "op": "CLICK",
+      "element": "123398",
+      "value": "",
+      "description": "[button] -> CLICK",
+      "role": "button",
+      "label": "",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=123424> Next </button> </ul> </section> <div main> <span> <span> Apr </span> <span id=124215> 1 </span> </span> </div> </body> <button id=123398 submit toggle-button /> </html>"
+    },
+    {
+      "action": "CLICK [129835]",
+      "op": "CLICK",
+      "element": "129835",
+      "value": "",
+      "description": "[button] -> CLICK",
+      "role": "button",
+      "label": "",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=129861> Next </button> </ul> </section> <div main> <span> <span> Apr </span> <span id=130652> 1 </span> </span> </div> </body> <button id=129835 submit toggle-button /> </html>"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "name": "booking / General workflow 417",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book a low-priced small air-conditioned car on rent in Mexico City Airport for under 100 dollars and book without insurance for next day.",
+  "steps": [
+    {
+      "action": "CLICK [781]",
+      "op": "CLICK",
+      "element": "781",
+      "value": "",
+      "description": "[span] Car rentals -> CLICK",
+      "role": "span",
+      "label": "Car rentals",
+      "observation": "<html> <body> <header> <button id=709 button prices in united states dollar> <span> USD </span> </button> <nav what are you looking for?> <a id=781> <span> Car rentals </span> </a> </nav> </header> <ul tablist> <button id=3233 tab> <span> Cities </span> </button> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [6051] [mexico city]",
+      "op": "TYPE",
+      "element": "6051",
+      "value": "mexico city",
+      "description": "[searchbox] Please type your destination -> TYPE: mexico city",
+      "role": "searchbox",
+      "label": "Please type your destination",
+      "observation": "<html> <form search> <div> <label> <span> Please type your destination </span> <input id=6051 search please type your destination ss_origin pick-up location /> </label> <input search please type your destination ss drop-off location /> <div> <input id=7198 text check-out day 30 /> / <input text check-out month checkout_month 3 /> / <input text check-out year checkout_year 2023 /> </div> <button id=9267 submit> <span> Search </span> </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [17108]",
+      "op": "CLICK",
+      "element": "17108",
+      "value": "",
+      "description": "[option] Mexico City - Benito Juarez Intl, MX (MEX",
+      "role": "option",
+      "label": "Mexico City - Benito Juarez Intl, MX (MEX",
+      "observation": "<html> <form search> <div> <ul listbox list of suggested destinations> <li id=17108 option> <span> <span> Mexico City - Benito Juarez Intl, MX (MEX) </span> Mexico </span> </li> <li id=17119 option> <span> <span> Mexico City, DIF, MX </span> Mexico </span> </li> </ul> <input search please type your destination ss drop-off location /> <button id=19437 submit> <span> Search </span> </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [29617]",
+      "op": "CLICK",
+      "element": "29617",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <form search> <div> <input search please type your destination ss drop-off location /> <div> <div> <input id=27479 text check-in day 27 /> / <input text check-in month checkin_month 3 /> / <input text check-in year checkin_year 2023 /> </div> <div> <input id=27548 text check-out day 30 /> / <input text check-out month checkout_month 3 /> / <input text check-out year checkout_year 2023 /> </div> </div> <button id=29617 submit> <span> Search </span> </button> </div> </form> </html>"
+    },
+    {
+      "action": "SELECT [31491] [Low to High]",
+      "op": "SELECT",
+      "element": "31491",
+      "value": "Low to High",
+      "description": "[combobox] Sort by -> SELECT: Low to High",
+      "role": "combobox",
+      "label": "Sort by",
+      "observation": "<html> <div> <div> <div> <input checkbox airport (rental car center) /> <label id=31799> <div> Airport (rental car center) </div> </label> </div> <div> <input checkbox small /> <label id=31980> <div> Small </div> </label> </div> </div> <select id=31491 sort by> <option natural true> Recommended </option> <option price> Low to High </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [40276]",
+      "op": "CLICK",
+      "element": "40276",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div> <input checkbox air conditioning /> <label id=40276> <div> Air Conditioning </div> </label> </div> <div> <input checkbox small /> <label id=40377> <div> Small </div> </label> </div> </div> <div region> <button id=40610 show small cars> <div> Small </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [55371]",
+      "op": "CLICK",
+      "element": "55371",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div> <input checkbox $50 - $100 /> <label id=55227> <div> $50 - $100 </div> </label> </div> <div> <input checkbox small /> <label id=55371> <div> Small </div> </label> </div> </div> <div region> <button id=55613 show small cars> <div> Small </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [70218]",
+      "op": "CLICK",
+      "element": "70218",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div> <input checkbox $0 - $50 /> <label id=70218> <div> $0 - $50 </div> </label> </div> <div> <input checkbox small true /> <label id=70382> <div> Small </div> </label> </div> </div> <div region> <button id=69971 show small cars> <div> Small </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [77610]",
+      "op": "CLICK",
+      "element": "77610",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <input checkbox $50 - $100 /> <label id=77610> <div> $50 - $100 </div> </label> </div> <div> <div region> <button id=78058 show small cars> <div> Small </div> </button> </div> <select id=78110 sort by> <option natural> Recommended </option> <option price true> Low to High </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [81956]",
+      "op": "CLICK",
+      "element": "81956",
+      "value": "",
+      "description": "[div] View deal -> CLICK",
+      "role": "div",
+      "label": "View deal",
+      "observation": "<html> <div> <div region> <button id=81130 show small cars> <div> Small </div> </button> </div> <select id=81865 sort by> <option natural> Recommended </option> <option price true> Low to High </option> </select> <section search results kia rio supplied> <button id=81956 button> <div> View deal </div> </button> </section> </div> </html>"
+    },
+    {
+      "action": "CLICK [89048]",
+      "op": "CLICK",
+      "element": "89048",
+      "value": "",
+      "description": "[span] Go to book -> CLICK",
+      "role": "span",
+      "label": "Go to book",
+      "observation": "<html> <div> <button id=88961 button> <div> $35,000 primary coverage </div> </button> <div> <button id=89048 button> <div> <span> Go to book </span> <span> Without Collision Damage Coverage </span> </div> </button> <button id=89057 button> <div> <span> Go to book </span> <span> With Collision Damage Coverage </span> </div> </button> </div> </div> </html>"
+    }
+  ]
+}

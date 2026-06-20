@@ -1,0 +1,70 @@
+{
+  "name": "yelp / Restaurant workflow 340",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Search for McDonalds located in Greenvill, SC.",
+  "steps": [
+    {
+      "action": "CLICK [166]",
+      "op": "CLICK",
+      "element": "166",
+      "value": "",
+      "description": "[textbox] Near -> CLICK",
+      "role": "textbox",
+      "label": "Near",
+      "observation": "<html> <div> <div banner explore banner section> <div search> <div> <form search> <div combobox> <input text /> <input id=166 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </form> <nav business categories> <a id=374> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> <div navigation category navigation section> <a id=3591> <p> Restaurants </p> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [8000] [Greenville]",
+      "op": "TYPE",
+      "element": "8000",
+      "value": "Greenville",
+      "description": "[textbox] Near -> TYPE: Greenville",
+      "role": "textbox",
+      "label": "Near",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=8121 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=8000 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <a id=8273> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15910]",
+      "op": "CLICK",
+      "element": "15910",
+      "value": "",
+      "description": "[span] Greenville -> CLICK",
+      "role": "span",
+      "label": "Greenville",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div combobox> <input text /> <input id=16030 textbox text find find_desc tacos, cheap dinner, maxs /> </div> </form> <nav business categories> <a id=16402> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> <span id=15910 css-qgunke> <text bounding_box_rect= 469,173,68,19>Greenville</text> </span> </html>"
+    },
+    {
+      "action": "CLICK [24217]",
+      "op": "CLICK",
+      "element": "24217",
+      "value": "",
+      "description": "[textbox] Find -> CLICK",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=24217 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <button id=24354 submit search> <span img /> </button> </div> </form> <nav business categories> <a id=24425> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [32316] [McDonalds]",
+      "op": "TYPE",
+      "element": "32316",
+      "value": "McDonalds",
+      "description": "[textbox] Find -> TYPE: McDonalds",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=32316 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <button id=32471 submit search> <span img /> </button> </div> </form> <nav business categories> <a id=32858> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [40889]",
+      "op": "CLICK",
+      "element": "40889",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div> <div combobox> <input text /> <input id=40872 textbox text find find_desc mcdonalds tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=40884 textbox text near greenville, sc address, neighborhood, city, state or /> </div> </div> <button id=40889 submit search> <span img /> </button> </div> </form> </div> </div> </html>"
+    }
+  ]
+}

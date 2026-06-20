@@ -1,0 +1,90 @@
+{
+  "name": "ticketcenter / Event workflow 468",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Book 2 hot seat VIP tickets through email id adelefan@hotmail.com for Adele's concert in Las Vegas on the last weekend of June.",
+  "steps": [
+    {
+      "action": "TYPE [136] [adele]",
+      "op": "TYPE",
+      "element": "136",
+      "value": "adele",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: adele",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=283 button> Concerts </a> <div> <input id=136 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2628 tab> Concerts </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [11051]",
+      "op": "CLICK",
+      "element": "11051",
+      "value": "",
+      "description": "[option] Adele -> CLICK",
+      "role": "option",
+      "label": "Adele",
+      "observation": "<html> <body> <a id=8955 button> Concerts </a> <ul listbox> <a id=11051 option> <strong> Adele </strong> </a> </ul> <a id=12708> Adele </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [17889]",
+      "op": "CLICK",
+      "element": "17889",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <div> <table grid> <tbody> <tr row> <a id=17786> <span> Tickets </span> </a> </tr> <tr row> <a id=17889> <span> Tickets </span> </a> </tr> </tbody> </table> <ul> <a> Previous </a> <a> 1 </a> <a id=18426> 2 </a> <a> Next </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [22384]",
+      "op": "CLICK",
+      "element": "22384",
+      "value": "",
+      "description": "[div] Quantity -> CLICK",
+      "role": "div",
+      "label": "Quantity",
+      "observation": "<html> <body> <a id=22544 button> Concerts </a> <div> <div id=22384> <div> <p> Quantity </p> <p> Any Quantity </p> </div> </div> <div> More Options </div> </div> <a id=30211> Concert Tickets </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [38349]",
+      "op": "CLICK",
+      "element": "38349",
+      "value": "",
+      "description": "[label] 2 -> CLICK",
+      "role": "label",
+      "label": "2",
+      "observation": "<html> <div> <div> <p id=40671> Quantity </p> <p> Any Quantity </p> </div> <div> <label> Any </label> <label> <input id=40730 radio options 1 /> 1 </label> <label id=38349> <input radio options 2 /> 2 </label> <label> 3 </label> <label> 4 </label> <label> 5 </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [58299]",
+      "op": "CLICK",
+      "element": "58299",
+      "value": "",
+      "description": "[button] $3,535/ea -> CLICK",
+      "role": "button",
+      "label": "$3,535/ea",
+      "observation": "<html> <tbody> <button id=58299 button> <span> $3,535 </span> <span> /ea </span> </button> <button id=59146 button> <span> $6,246 </span> <span> /ea </span> </button> <button id=59620 button> <span> $8,106 </span> <span> /ea </span> </button> </tbody> </html>"
+    },
+    {
+      "action": "TYPE [61293] [adelefan@hotmail.com]",
+      "op": "TYPE",
+      "element": "61293",
+      "value": "adelefan@hotmail.com",
+      "description": "[textbox] *Email Address -> TYPE: adelefan@hotmail.com",
+      "role": "textbox",
+      "label": "*Email Address",
+      "observation": "<html> <main main> <section cart> <select id=61579> <option> 1 </option> <option true> 2 </option> <option> 3 </option> <option> 4 </option> <option> 5 </option> <option> 6 </option> <option> 8 </option> </select> </section> <section delivery> <div> <div> <input id=61293 email /> <button button> </button> </div> <button id=62283 submit verifydelivery> Proceed to Payment </button> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [80401]",
+      "op": "CLICK",
+      "element": "80401",
+      "value": "",
+      "description": "[button] Proceed to Payment -> CLICK",
+      "role": "button",
+      "label": "Proceed to Payment",
+      "observation": "<html> <main main> <section cart> <select id=80686> <option> 1 </option> <option true> 2 </option> <option> 3 </option> <option> 4 </option> <option> 5 </option> <option> 6 </option> <option> 8 </option> </select> </section> <section delivery> <div> <input id=81064 email /> <button id=80401 submit verifydelivery> Proceed to Payment </button> </div> </section> </main> </html>"
+    }
+  ]
+}

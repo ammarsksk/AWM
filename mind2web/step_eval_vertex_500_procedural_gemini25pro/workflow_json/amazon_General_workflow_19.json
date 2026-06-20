@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "name": "amazon / General workflow 19",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "See today's deals on video games and find the best deal on the lowest-priced mouse.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "games",
+      "today",
+      "deals",
+      "video",
+      "amazon",
+      "shopping",
+      "general",
+      "see",
+      "find",
+      "best",
+      "deal",
+      "lowest",
+      "priced",
+      "mouse",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "open",
+      "menu",
+      "movies",
+      "music",
+      "accessories",
+      "gaming",
+      "mice",
+      "span",
+      "featured",
+      "option",
+      "price",
+      "low",
+      "high"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Open Menu",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Menu",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Movies, Music & Games",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Movies, Music & Games",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Video Games",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Video Games",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Today's Deals",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Today's Deals",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the PC",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "PC",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Accessories",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Accessories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Gaming Mice",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Gaming Mice",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Featured",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Featured",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Price: Low to High",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Price: Low to High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "amazon / General workflow 19"
+}

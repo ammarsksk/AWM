@@ -1,0 +1,228 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "checkbox",
+      "april",
+      "use",
+      "birmingham",
+      "search",
+      "packages",
+      "restaurant",
+      "fitness",
+      "free",
+      "internet",
+      "textbox",
+      "specific",
+      "field",
+      "span",
+      "tuesday",
+      "svg",
+      "kayak",
+      "travel",
+      "airlines",
+      "bhx",
+      "paris",
+      "casinos",
+      "7th",
+      "11th",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "england",
+      "united",
+      "kingdom",
+      "enter",
+      "destination",
+      "airport",
+      "city",
+      "generic",
+      "4th",
+      "div",
+      "2023",
+      "amenities",
+      "casino"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Search for packages",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search for packages",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the From",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "From",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Birmingham, England, United Kingdom",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Birmingham, England, United Kingdom",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Enter destination or airport",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Enter destination or airport",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the City",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "City",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Tuesday April 4th",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Tuesday April 4th",
+        "target_type": "generic",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 7",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "7",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Tuesday April 11, 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Tuesday April 11, 2023",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[svg] -> CLICK",
+        "target_type": "svg",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Free internet",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 10,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Free internet",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Amenities",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 11,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Amenities",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Casino",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 12,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Casino",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Restaurant",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 13,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Restaurant",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Fitness",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 14,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Fitness",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "From Birmingham (BHX) to Paris search for packages with casinos, restaurant, fitness and a free internet from April 7th to 11th.",
+  "memory_type": "typed_procedure",
+  "name": "kayak / Airlines workflow 12",
+  "raw_workflow_name": "kayak / Airlines workflow 12",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 14.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Airlines",
+  "termination": {
+    "max_steps_hint": 14,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "kayak"
+}

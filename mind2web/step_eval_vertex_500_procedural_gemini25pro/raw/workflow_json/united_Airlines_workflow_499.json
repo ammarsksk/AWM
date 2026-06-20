@@ -1,0 +1,80 @@
+{
+  "name": "united / Airlines workflow 499",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "View the bag charges for the passenger James Son for the flight with the confirmation number 10000002",
+  "steps": [
+    {
+      "action": "CLICK [889]",
+      "op": "CLICK",
+      "element": "889",
+      "value": "",
+      "description": "[tab] TRAVEL INFO -> CLICK",
+      "role": "tab",
+      "label": "TRAVEL INFO",
+      "observation": "<html> <header banner> <nav navigation> <button id=873 button main menu> <span> Menu </span> </button> <div tablist> <a id=883 tab> <span> BOOK </span> </a> <a tab> </a> <a id=889 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [4702]",
+      "op": "CLICK",
+      "element": "4702",
+      "value": "",
+      "description": "[link] Baggage info -> CLICK",
+      "role": "link",
+      "label": "Baggage info",
+      "observation": "<html> <header banner> <nav navigation> <div> <div tablist> <a id=4639 tab> <span> BOOK </span> </a> <a tab> </a> <a tab> </a> <a tab> </a> </div> <div dialog> <div tabpanel> <ul> <a id=4702> <span> Baggage info </span> </a> <a id=4705> <span> Flight status </span> </a> </ul> </div> </div> </div> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [5825]",
+      "op": "CLICK",
+      "element": "5825",
+      "value": "",
+      "description": "[link] Baggage fee calculator -> CLICK",
+      "role": "link",
+      "label": "Baggage fee calculator",
+      "observation": "<html> <main main> <div> <article> <a id=6935> Carry-on bags </a> Learn about traveling with carry-on bags. </article> <article> <a id=6942> Checked bags </a> <p> Learn about traveling with checked bags. </p> <a id=5825> Baggage fee calculator </a> </article> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [8215]",
+      "op": "CLICK",
+      "element": "8215",
+      "value": "",
+      "description": "[tab] My flights -> CLICK",
+      "role": "tab",
+      "label": "My flights",
+      "observation": "<html> <div> <ul tablist> <a id=8215 tab> My flights </a> </ul> <div tabpanel any flights> <form> <div> <label> To </label> <input id=8724 combobox text arrival city /> </div> <button id=8811 submit> <span> View bag charges </span> </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [10440] [10000002]",
+      "op": "TYPE",
+      "element": "10440",
+      "value": "10000002",
+      "description": "[textbox] Confirmation number (required",
+      "role": "textbox",
+      "label": "Confirmation number (required",
+      "observation": "<html> <div tabpanel my flights> <div> <div> <label> Confirmation number </label> <input id=10440 text confirmation number /> <div> (ex. A0fCK7) </div> </div> <div> <label> Last name </label> <input id=10967 text last name /> </div> <button id=10968 submit> <span> View my bag charges </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [12578] [Son]",
+      "op": "TYPE",
+      "element": "12578",
+      "value": "Son",
+      "description": "[textbox] Last name (required",
+      "role": "textbox",
+      "label": "Last name (required",
+      "observation": "<html> <div tabpanel my flights> <div> <div> <label> Confirmation number </label> <input id=13105 text confirmation number 10000002 /> <div> (ex. A0fCK7) </div> </div> <div> <label> Last name </label> <input id=12578 text last name /> </div> <button id=13114 submit> <span> View my bag charges </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15250]",
+      "op": "CLICK",
+      "element": "15250",
+      "value": "",
+      "description": "[button] View my bag charges -> CLICK",
+      "role": "button",
+      "label": "View my bag charges",
+      "observation": "<html> <div> <ul tablist> <a id=15208 tab> Any flights </a> </ul> <div tabpanel my flights> <div> <div> <svg id=15238 img atm-c-icon /> The confirmation number has an invalid format </div> <button id=15250 submit> <span> View my bag charges </span> </button> </div> </div> </div> </html>"
+    }
+  ]
+}

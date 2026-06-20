@@ -1,0 +1,51 @@
+{
+  "name": "rottentomatoes / Movie workflow 210",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Browse certified fresh sci-fi films streaming at home.",
+  "goal_pattern": "Browse certified fresh sci-fi films streaming at home.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the MOVIES",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "MOVIES",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Certified fresh movies",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Certified fresh movies",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [162]",
+      "gold_element_id": "162",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [31810]",
+      "gold_element_id": "31810",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "rottentomatoes / Movie workflow 210"
+}

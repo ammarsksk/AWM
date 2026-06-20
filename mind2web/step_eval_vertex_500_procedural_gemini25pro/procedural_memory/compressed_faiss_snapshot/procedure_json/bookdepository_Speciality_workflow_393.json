@@ -1,0 +1,199 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "add",
+      "use",
+      "book",
+      "wishlist",
+      "specific",
+      "field",
+      "non",
+      "fiction",
+      "children",
+      "history",
+      "notify",
+      "all",
+      "bookdepository",
+      "shopping",
+      "speciality",
+      "search",
+      "ages",
+      "topic",
+      "hindi",
+      "language",
+      "top",
+      "cart",
+      "not",
+      "available",
+      "choose",
+      "option",
+      "also",
+      "new",
+      "must",
+      "buy",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "shop",
+      "category",
+      "books",
+      "refine",
+      "results",
+      "textbox",
+      "name"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Shop by category\u2228",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Shop by category\u2228",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Children's Books",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Children's Books",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Non-Fiction",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Non-Fiction",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the History",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "History",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the All",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "All",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "select the All",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "All",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Refine results",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Refine results",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Notify me",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Notify me",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Add to wishlist",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Add to wishlist",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Wishlist name",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 10,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Wishlist name",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Add",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 11,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Add",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Search for a non-fiction children's book for ages 9-11 on the topic of history in the Hindi language, and add the top book to the cart, if not available choose notify me option and also add the book to new wishlist must buy.",
+  "memory_type": "typed_procedure",
+  "name": "bookdepository / Speciality workflow 393",
+  "raw_workflow_name": "bookdepository / Speciality workflow 393",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 11.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Speciality",
+  "termination": {
+    "max_steps_hint": 11,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "bookdepository"
+}

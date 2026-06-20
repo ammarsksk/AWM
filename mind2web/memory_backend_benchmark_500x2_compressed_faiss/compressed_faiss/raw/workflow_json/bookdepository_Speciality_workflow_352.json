@@ -1,0 +1,30 @@
+{
+  "name": "bookdepository / Speciality workflow 352",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "check the most popular Spanish recipe book available in paperback that are in stock.",
+  "steps": [
+    {
+      "action": "TYPE [124] [recipe]",
+      "op": "TYPE",
+      "element": "124",
+      "value": "recipe",
+      "description": "[textbox] Search for books by keyword / title / author / ISB... -> TYPE: recipe",
+      "role": "textbox",
+      "label": "Search for books by keyword / title / author / ISB...",
+      "observation": "<html> <div> <div> <input id=124 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <div> <div> <a id=1322> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> <p> Looking for your new favourite book? Browse some of our top categories such as <a> Children's Books </a> , <a> Fiction </a> , <a> Graphic Novels, Anime & Manga </a> , <a id=16882> Food & Drink books </a> , <a> Crafts & Hobbies </a> , <a> Art & Photography </a> , <a> Biography </a> , and . Our editors have created lovely features for you to explore: , , , , , , and more. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36211]",
+      "op": "CLICK",
+      "element": "36211",
+      "value": "",
+      "description": "[link] recipe book -> CLICK",
+      "role": "link",
+      "label": "recipe book",
+      "observation": "<html> <div> <div> <a> recipe </a> <a id=36211> recipe book </a> <a> slow cooker recipes </a> <a> recipe journal </a> <a> The fast 800 recipe book </a> </div> <div> <a id=36469> Paperback </a> <a id=36498> Paperback </a> </div> </div> </html>"
+    }
+  ]
+}

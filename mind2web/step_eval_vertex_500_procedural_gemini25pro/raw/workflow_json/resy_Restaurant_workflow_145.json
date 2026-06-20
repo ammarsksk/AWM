@@ -1,0 +1,60 @@
+{
+  "name": "resy / Restaurant workflow 145",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "What are the top restaurants in Boston to reserve for april 22?",
+  "steps": [
+    {
+      "action": "CLICK [87]",
+      "op": "CLICK",
+      "element": "87",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <header banner main resy> <input id=302 text search restaurants, cuisines, etc. /> </header> <a id=3939> Nearby Restaurants </a> </div> <path id=87 /> </html>"
+    },
+    {
+      "action": "CLICK [8939]",
+      "op": "CLICK",
+      "element": "8939",
+      "value": "",
+      "description": "[button] Boston -> CLICK",
+      "role": "button",
+      "label": "Boston",
+      "observation": "<html> <header banner main resy> <div> <a id=8939 button> Boston </a> <input id=9150 text search restaurants, cuisines, etc. /> <div> <button id=9248 button> Today </button> <div> For </div> </div> </div> </header> </html>"
+    },
+    {
+      "action": "CLICK [15747]",
+      "op": "CLICK",
+      "element": "15747",
+      "value": "",
+      "description": "[link] {{ 'see_more_label' | translate }} {{::list.info.n... -> CLICK",
+      "role": "link",
+      "label": "{{ 'see_more_label' | translate }} {{::list.info.n...",
+      "observation": "<html> <resy-home> <article main algorithmic lists: climbing, top rated,> <a id=15747 {{ | translate }}> see more </a> </article> <div> <div> <div> Apr </div> <div id=17639> 22 </div> </div> <div> <div> Apr </div> <div id=17668> 22 </div> </div> </div> </resy-home> </html>"
+    },
+    {
+      "action": "CLICK [21672]",
+      "op": "CLICK",
+      "element": "21672",
+      "value": "",
+      "description": "[button] Today -> CLICK",
+      "role": "button",
+      "label": "Today",
+      "observation": "<html> <div> <header banner main resy> <input id=21861 text search restaurants, cuisines, etc. /> </header> <div> <div> <button id=21672 button> Today </button> <div> For </div> </div> <div> <a id=23263> <h3> Tambo 22 </h3> </a> <div checkbox add tambo 22 to favorites /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [29672]",
+      "op": "CLICK",
+      "element": "29672",
+      "value": "",
+      "description": "[button] April 22, 2023. -> CLICK",
+      "role": "button",
+      "label": "April 22, 2023.",
+      "observation": "<html> <header banner main resy> <div dialog> <div> <tr> <button id=29897 button april 21, 2023.> 21 </button> <button id=29672 button april 22, 2023.> 22 </button> </tr> <button id=30061 button may 22, 2023.> 22 </button> </div> </div> </header> </html>"
+    }
+  ]
+}

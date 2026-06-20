@@ -1,0 +1,60 @@
+{
+  "tasks": 500,
+  "steps": 3790,
+  "mode": "llm",
+  "model": "google/gemini-2.5-pro",
+  "parallel_workers": 9,
+  "reuse_policy": "same-website",
+  "total_wall_s": 4794.9587783101015,
+  "build_plan_s": 348.55169361503795,
+  "prediction_s": 4246.45473520807,
+  "rss_start_mb": 20.421875,
+  "rss_after_build_mb": 1252.43359375,
+  "rss_end_mb": 2425.61328125,
+  "output_bytes": 157054866,
+  "output_mb": 149.7791919708252,
+  "memory_backend": {
+    "architecture": "procedural",
+    "workflow_abstraction": "deterministic",
+    "workflow_storage": "disk",
+    "top_k": 5,
+    "retrieval_candidate_k": 50,
+    "procedural_manifest": {
+      "backend": "procedural_graph_hybrid",
+      "procedure_count": 500,
+      "edge_count": 33346,
+      "negative_memory_count": 1205,
+      "embedding_backend": "sentence_transformers_faiss_bm25",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "candidate_k": 50,
+      "scoring": {
+        "semantic_weight": 0.5,
+        "lexical_weight": 0.14,
+        "activation_weight": 0.16,
+        "graph_weight": 0.08,
+        "outcome_weight": 0.08,
+        "metadata_weight": 0.04,
+        "acceptance_threshold": 0.34,
+        "activation_threshold": 0.04
+      }
+    },
+    "compressed_snapshot": {
+      "backend": "compressed_faiss",
+      "workflow_count": 500,
+      "python_vector_count": 0,
+      "python_vector_values": 0,
+      "python_vector_mb": 0.0,
+      "actual_index_kind": "sq8_flat",
+      "candidate_k": 50,
+      "faiss_code_size_bytes": 384,
+      "estimated_faiss_code_mb": 0.18310546875,
+      "avg_batch_add_ms": 6617.5351911224425,
+      "avg_batch_index_ms": 0.6792268250137568,
+      "avg_retrieve_ms": 0.0,
+      "avg_text_load_ms": 0.0,
+      "workflow_text_cache_items": 0,
+      "workflow_text_cache_hits": 0,
+      "workflow_text_cache_misses": 0
+    }
+  }
+}

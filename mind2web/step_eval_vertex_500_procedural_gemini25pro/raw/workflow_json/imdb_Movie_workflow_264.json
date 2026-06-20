@@ -1,0 +1,50 @@
+{
+  "name": "imdb / Movie workflow 264",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Play Trailer of \"The Flash\" 2023.",
+  "steps": [
+    {
+      "action": "CLICK [94]",
+      "op": "CLICK",
+      "element": "94",
+      "value": "",
+      "description": "[textbox] Search IMDb -> CLICK",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=167 button open navigation drawer> <svg id=170 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=94 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [5039] [The Flash]",
+      "op": "TYPE",
+      "element": "5039",
+      "value": "The Flash",
+      "description": "[textbox] Search IMDb -> TYPE: The Flash",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=5114 button open navigation drawer> <svg id=5117 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=5039 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [10495]",
+      "op": "CLICK",
+      "element": "10495",
+      "value": "",
+      "description": "[div] The Flash -> CLICK",
+      "role": "div",
+      "label": "The Flash",
+      "observation": "<html> <form search> <div combobox> <ul listbox> <li option> <a id=10450> <img the flash /> <div> <div> The Flash </div> <div> 2014 </div> <div> Grant Gustin, Candice Patton </div> </div> </a> </li> <li option> <a id=10495> <img the flash /> <div> <div> The Flash </div> <div> 2023 </div> <div> Ben Affleck, Michael Shannon </div> </div> </a> </li> <li option> <a id=10538> <img the flash /> <div> <div> The Flash </div> <div> 1990 </div> <div> John Wesley Shipp, Amanda Pays </div> </div> </a> </li> </ul> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [12742]",
+      "op": "CLICK",
+      "element": "12742",
+      "value": "",
+      "description": "[generic] Watch Official Trailer -> CLICK",
+      "role": "generic",
+      "label": "Watch Official Trailer",
+      "observation": "<html> <main main> <div group> <div> <div group> <a id=13794 trailer> <div> Watch Official Trailer </div> </a> </div> <div group> <a id=13830 trailer> <div> Watch Official Trailer </div> </a> </div> </div> </div> </main> <div id=12742 /> </div> </html>"
+    }
+  ]
+}

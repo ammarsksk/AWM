@@ -1,0 +1,60 @@
+{
+  "name": "flightaware / Other workflow 335",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search for flights available from Calgary (CYYC) to New York (ZNY).",
+  "steps": [
+    {
+      "action": "TYPE [128] [Calgary]",
+      "op": "TYPE",
+      "element": "128",
+      "value": "Calgary",
+      "description": "[textbox] Origin -> TYPE: Calgary",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <form> <input id=128 text origin kosu /> <div button> </div> <input id=2293 text destination /> <input submit /> </form> <input id=3023 text /> </div> </html>"
+    },
+    {
+      "action": "CLICK [10076]",
+      "op": "CLICK",
+      "element": "10076",
+      "value": "",
+      "description": "[div] Calgary -> CLICK",
+      "role": "div",
+      "label": "Calgary",
+      "observation": "<html> <div> <div id=10076> <strong> Calgary </strong> Int'l ( <strong> Calgary </strong> ) - YYC - CYYC </div> <div> <strong> Calgary </strong> /Springbank (Springbank) ( <strong id=14786> Calgary </strong> ) - YBW - CYBW </div> <div> /Airdrie (Airdrie) (Airdrie) - CEF4 </div> <div> Peter Lougheed Centre Heliport ( ) - CLC3 </div> <div> <strong> Calgary </strong> (Aerial Recon) Heliport ( <strong id=14825> Calgary </strong> ) - CAR3 </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [20173] [New York]",
+      "op": "TYPE",
+      "element": "20173",
+      "value": "New York",
+      "description": "[textbox] Destination -> TYPE: New York",
+      "role": "textbox",
+      "label": "Destination",
+      "observation": "<html> <div> <form> <input text origin kosu cyyc /> <div button> </div> <input id=20173 text destination /> <input submit /> </form> <div> <input id=23068 text /> <input id=23096 text /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30294]",
+      "op": "CLICK",
+      "element": "30294",
+      "value": "",
+      "description": "[strong] New York -> CLICK",
+      "role": "strong",
+      "label": "New York",
+      "observation": "<html> <body> <input id=33189 text /> <div> <div id=35066> <strong id=30294> New York </strong> , NY / All Airports - ZNY </div> <div> John F Kennedy Intl ( ) - JFK - KJFK </div> <div> LaGuardia ( ) - LGA - KLGA </div> <div> Downtown Manhattan Heliport ( ) - JRB - KJRB </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [40472]",
+      "op": "CLICK",
+      "element": "40472",
+      "value": "",
+      "description": "[img] Submit Search -> CLICK",
+      "role": "img",
+      "label": "Submit Search",
+      "observation": "<html> <div> <button submit> <img id=40472 submit search /> </button> <div> <a id=43320 button filter flights /> <a> Clear Filters </a> <input id=43366 text /> </div> </div> </html>"
+    }
+  ]
+}

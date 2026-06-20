@@ -1,0 +1,30 @@
+{
+  "name": "agoda / General workflow 929",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find the cheapest and highest-rated hotel in the Navi Mumbai area of Mumbai, India, on April 12 for just one day.",
+  "steps": [
+    {
+      "action": "TYPE [108] [mumbai]",
+      "op": "TYPE",
+      "element": "108",
+      "value": "mumbai",
+      "description": "[combobox] Enter a destination or property -> TYPE: mumbai",
+      "role": "combobox",
+      "label": "Enter a destination or property",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=108 combobox text enter a destination or property /> <button id=547> <span> SEARCH </span> </button> </div> </div> <button id=930> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [4502]",
+      "op": "CLICK",
+      "element": "4502",
+      "value": "",
+      "description": "[span] Mumbai -> CLICK",
+      "role": "span",
+      "label": "Mumbai",
+      "observation": "<html> <div tabpanel> <div dialog> <ul listbox> <li id=4493 option top destination mumbai, india (city)> <ul> <span> Top destination </span> <li id=4502> <span> Mumbai </span> <div> <span india> India </span> <span> Popular </span> </div> </li> <li city> <span> City </span> </li> </ul> </li> <li option top destination stay in the> </li> <li option destination malabar hill, mumbai, india> </li> <li option destination western suburbs, mumbai, india> </li> <li option destination colaba, mumbai, india (region)> </li> <li id=4602 option destination vashi, navi mumbai, india> <ul> <span> Destination </span> <li> <span> Vashi, Navi <span> Mumbai </span> </span> <span india> India </span> </li> <li region> <span> Region </span> </li> </ul> </li> </ul> </div> </div> </html>"
+    }
+  ]
+}

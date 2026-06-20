@@ -1,0 +1,30 @@
+{
+  "name": "kohls / Department workflow 1005",
+  "source": "Mind2Web exemplar",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "task": "Add a set of sonoma bath towels to the cart and apply a coupon code for free shipping.",
+  "steps": [
+    {
+      "action": "TYPE [159] [bath towels]",
+      "op": "TYPE",
+      "element": "159",
+      "value": "bath towels",
+      "description": "[textbox] Search by keyword or web id -> TYPE: bath towels",
+      "role": "textbox",
+      "label": "Search by keyword or web id",
+      "observation": "<html> <div> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input submit submit-search /> <input id=159 text search hi james, what are you /> </fieldset> <div> <svg img /> <a id=472> <span> check out </span> </a> </div> </div> <a id=495> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [8917]",
+      "op": "CLICK",
+      "element": "8917",
+      "value": "",
+      "description": "[span] bath towels -> CLICK",
+      "role": "span",
+      "label": "bath towels",
+      "observation": "<html> <div> <form> <fieldset> <label> Search by Keyword or Web ID </label> <input submit submit-search /> <input id=8896 text search hi james, what are you bath towels /> </fieldset> <li id=8917> <span> sonoma <span> bath towels </span> </span> </li> </form> <a id=9053> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    }
+  ]
+}

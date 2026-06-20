@@ -1,0 +1,90 @@
+{
+  "name": "kayak / Airlines workflow 309",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Browse for places to stay in Santa Fe, New Mexico for a weekend starting on Jun 16th for 3 guests and 2 rooms.",
+  "steps": [
+    {
+      "action": "CLICK [81]",
+      "op": "CLICK",
+      "element": "81",
+      "value": "",
+      "description": "[link] Search for hotels -> CLICK",
+      "role": "link",
+      "label": "Search for hotels",
+      "observation": "<html> <div> <div> <button button submit search> <svg id=387 img c8lpf-icon /> </button> <div> <a search for flights> </a> <a id=81 search for hotels> <svg hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> </div> <div button> <div img> </div> <input id=556 text pick-up location las vegas, nevada, united states from? /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [3288] [Santa Fe]",
+      "op": "TYPE",
+      "element": "3288",
+      "value": "Santa Fe",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> TYPE: Santa Fe",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a id=3802 search for hotels> <svg id=3803 hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> <input id=3288 text las vegas, nevada, united states enter a city, hotel, airport, /> </div> </html>"
+    },
+    {
+      "action": "CLICK [23173]",
+      "op": "CLICK",
+      "element": "23173",
+      "value": "",
+      "description": "[span] Santa Fe, New Mexico, United States -> CLICK",
+      "role": "span",
+      "label": "Santa Fe, New Mexico, United States",
+      "observation": "<html> <ul listbox> <li id=23173 option santa fe, new mexico, united> <div> <img id=23180 city:santa fe, new mexico, united /> <div> <span> Santa Fe, New Mexico, United States </span> <span> Town </span> </div> </div> </li> <li option santa fe, new mexico, united> </li> <li option santa fe, cebu, philippines> </li> <li option santa fe, argentina> </li> <li option santa fe, panama> </li> <li id=23240 option santa fe, mexico city, mexico> <div> <img city:santa fe, mexico city, mexico /> <div> <span> Santa Fe, Mexico City, Mexico City Federal District, Mexico </span> <span> Neighborhood </span> </div> </div> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [30307]",
+      "op": "CLICK",
+      "element": "30307",
+      "value": "",
+      "description": "[div] 16 -> CLICK",
+      "role": "div",
+      "label": "16",
+      "observation": "<html> <div tab start date calendar input use> <div> <div> <div button tuesday may 30, 2023> 30 </div> <div button wednesday may 31, 2023> 31 </div> <div button thursday june 1, 2023> 1 </div> <div id=36860 button friday june 2, 2023> 2 </div> <div button saturday june 3, 2023> 3 </div> <div button sunday june 4, 2023> 4 </div> <div button monday june 5, 2023> 5 </div> <div button tuesday june 13, 2023> 13 </div> <div button wednesday june 14, 2023> 14 </div> <div button thursday june 15, 2023> 15 </div> <div id=30307 button friday june 16, 2023> 16 </div> <div button saturday june 17, 2023> 17 </div> <div button sunday june 18, 2023> 18 </div> <div button monday june 19, 2023> 19 </div> </div> <div> <div button thursday july 13, 2023> 13 </div> <div button friday july 14, 2023> 14 </div> <div button saturday july 15, 2023> 15 </div> <div id=36978 button sunday july 16, 2023> 16 </div> <div button monday july 17, 2023> 17 </div> <div button tuesday july 18, 2023> 18 </div> <div button wednesday july 19, 2023> 19 </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [44083]",
+      "op": "CLICK",
+      "element": "44083",
+      "value": "",
+      "description": "[div] 18 -> CLICK",
+      "role": "div",
+      "label": "18",
+      "observation": "<html> <div tab end date calendar input use> <div> <div> <div button tuesday june 13, 2023> 13 </div> <div button wednesday june 14, 2023> 14 </div> <div button thursday june 15, 2023> 15 </div> <div id=50665 button friday june 16, 2023> 16 </div> <div button saturday june 17, 2023> 17 </div> <div id=44083 button sunday june 18, 2023> 18 </div> <div button monday june 19, 2023> 19 </div> <div button tuesday june 20, 2023> 20 </div> <div button wednesday june 21, 2023> 21 </div> </div> <div> <div button thursday july 13, 2023> 13 </div> <div button friday july 14, 2023> 14 </div> <div button saturday july 15, 2023> 15 </div> <div id=50755 button sunday july 16, 2023> 16 </div> <div button monday july 17, 2023> 17 </div> <div button tuesday july 18, 2023> 18 </div> <div button wednesday july 19, 2023> 19 </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57690]",
+      "op": "CLICK",
+      "element": "57690",
+      "value": "",
+      "description": "[button] Increment -> CLICK",
+      "role": "button",
+      "label": "Increment",
+      "observation": "<html> <div menu> <div> <div> <button decrement> </button> <input spinbutton rooms 1 /> <button id=64220 increment> <svg img /> </button> </div> <div> <button decrement> </button> <input spinbutton adults 2 /> <button id=57690 increment> <svg img /> </button> </div> <div> <button decrement> </button> <input spinbutton children 0 /> <button id=64241 increment> <svg img /> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [71127]",
+      "op": "CLICK",
+      "element": "71127",
+      "value": "",
+      "description": "[button] Increment -> CLICK",
+      "role": "button",
+      "label": "Increment",
+      "observation": "<html> <body> <div dialog> <div> <div> Connect with Facebook </div> <div> Connect with Google </div> <a> Use your email address </a> <button id=76632> Continue as a guest </button> <div> Any saved items will be lost after 7 days. </div> </div> </div> <div menu> <div> <div> <button decrement> </button> <input spinbutton rooms 1 /> <button id=71127 increment> <svg img /> </button> </div> <div> <button decrement> </button> <input spinbutton adults 3 /> <button id=77667 increment> <svg img /> </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [84582]",
+      "op": "CLICK",
+      "element": "84582",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <body> <button button submit search> <svg id=84582 img c8lpf-icon> </svg> </button> <div dialog> <div> <div> Connect with Facebook </div> <div> Connect with Google </div> <a> Use your email address </a> <button id=90066> Continue as a guest </button> <div> Any saved items will be lost after 7 days. </div> </div> </div> <div menu> <div> <button decrement> </button> <input spinbutton rooms 2 /> <button id=91091 increment> <svg img /> </button> </div> </div> </body> </html>"
+    }
+  ]
+}

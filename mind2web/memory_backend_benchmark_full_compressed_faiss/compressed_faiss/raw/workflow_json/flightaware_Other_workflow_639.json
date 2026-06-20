@@ -1,0 +1,30 @@
+{
+  "name": "flightaware / Other workflow 639",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find Airport information of Camarillo Airport, CA and check weather.",
+  "steps": [
+    {
+      "action": "SELECT [110] [Airport]",
+      "op": "SELECT",
+      "element": "110",
+      "value": "Airport",
+      "description": "[combobox] Search Method -> SELECT: Airport",
+      "role": "combobox",
+      "label": "Search Method",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=110 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1924> <span> Community </span> </a> </li> </ul> </nav> </div> </header> <form> <input text origin kosu /> <div button> </div> <input id=2275 text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [10078] [Camarillo]",
+      "op": "TYPE",
+      "element": "10078",
+      "value": "Camarillo",
+      "description": "[textbox] Airport City (e.g. New York",
+      "role": "textbox",
+      "label": "Airport City (e.g. New York",
+      "observation": "<html> <div> <header banner> <form> <input id=11351 text airport code (e.g. kjfk) airport /> <input id=10078 text airport city (e.g. new york) /> <input submit /> </form> </header> <form> <input id=12236 text origin kosu /> <div button> </div> <input text destination /> <input submit /> </form> </div> </html>"
+    }
+  ]
+}

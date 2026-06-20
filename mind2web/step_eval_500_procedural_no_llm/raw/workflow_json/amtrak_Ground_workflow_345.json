@@ -1,0 +1,70 @@
+{
+  "name": "amtrak / Ground workflow 345",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find trip for 123456 last name Smith.",
+  "steps": [
+    {
+      "action": "CLICK [3232]",
+      "op": "CLICK",
+      "element": "3232",
+      "value": "",
+      "description": "[button] MY TRIP -> CLICK",
+      "role": "button",
+      "label": "MY TRIP",
+      "observation": "<html> <div> <header banner> <a id=3232 button my trip> <span> MY TRIP </span> </a> </header> <main main> <div> <mat-form-field combobox> <div> <input id=3582 text /> <div listbox> </div> </div> </mat-form-field> <mat-form-field combobox> <input id=3644 text /> </mat-form-field> </div> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [12730] [123456]",
+      "op": "TYPE",
+      "element": "12730",
+      "value": "123456",
+      "description": "[textbox] Reservation/Ticket Number -> TYPE: 123456",
+      "role": "textbox",
+      "label": "Reservation/Ticket Number",
+      "observation": "<html> <body> <main main> <mat-form-field combobox> <div> <input id=16137 text /> <div listbox> </div> </div> </mat-form-field> </main> <modal-container dialog> <div document> <div dialog> <form> <input id=12730 number /> <button id=18448 submit find trip> Find Trip </button> </form> </div> </div> </modal-container> </body> </html>"
+    },
+    {
+      "action": "CLICK [25380]",
+      "op": "CLICK",
+      "element": "25380",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <main main> <mat-form-field combobox> <div> <input id=28759 text /> <div listbox> </div> </div> </mat-form-field> </main> <modal-container dialog> <div document> <div dialog> <button id=31069 submit find trip> Find Trip </button> </div> </div> </modal-container> </body> <div id=25380 d-flex w-100 /> <span> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [37992]",
+      "op": "CLICK",
+      "element": "37992",
+      "value": "",
+      "description": "[option] Last Name -> CLICK",
+      "role": "option",
+      "label": "Last Name",
+      "observation": "<html> <body> <main main> <mat-form-field combobox> <div> <input id=41371 text /> <div listbox> </div> </div> </mat-form-field> </main> <modal-container dialog> <div document> <div dialog> <form> <div listbox> <div option email address> Email Address </div> <div option phone number> Phone Number </div> <div id=37992 option last name> Last Name </div> </div> <button id=43681 submit find trip> Find Trip </button> </form> </div> </div> </modal-container> </body> </html>"
+    },
+    {
+      "action": "TYPE [50599] [Smith]",
+      "op": "TYPE",
+      "element": "50599",
+      "value": "Smith",
+      "description": "[textbox] Last Name -> TYPE: Smith",
+      "role": "textbox",
+      "label": "Last Name",
+      "observation": "<html> <body> <main main> <mat-form-field combobox> <div> <input id=54006 text /> <div listbox> </div> </div> </mat-form-field> </main> <modal-container dialog> <div document> <div dialog> <form> <input id=50599 last name /> <button id=56333 submit find trip> Find Trip </button> </form> </div> </div> </modal-container> </body> </html>"
+    },
+    {
+      "action": "CLICK [63278]",
+      "op": "CLICK",
+      "element": "63278",
+      "value": "",
+      "description": "[button] Find Trip -> CLICK",
+      "role": "button",
+      "label": "Find Trip",
+      "observation": "<html> <body> <header banner> <a id=66310 button my trip> <span> MY TRIP </span> </a> </header> <modal-container dialog> <div document> <div dialog> <form> <input id=68930 number 123456 /> <button id=63278 submit find trip> Find Trip </button> </form> </div> </div> </modal-container> </body> </html>"
+    }
+  ]
+}

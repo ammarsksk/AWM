@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "name": "spothero / Other workflow 459",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Find career openings in the marketing department",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "marketing",
+      "value",
+      "required",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "career",
+      "openings",
+      "department",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "careers",
+      "tab"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Careers",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Careers",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Marketing (2",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Marketing (2",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 2
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 2.0
+  },
+  "raw_workflow_name": "spothero / Other workflow 459"
+}

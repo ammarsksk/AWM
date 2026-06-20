@@ -1,0 +1,51 @@
+{
+  "name": "eventbrite / Event workflow 994",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Search for all free virtual  business start-up events happening tomorrow in Las Vegas and follow the organizer with most followers.",
+  "goal_pattern": "Search for all free virtual  business start-up events happening tomorrow in Las Vegas and follow the organizer with most followers.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Business",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Business",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the [svg] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "svg",
+      "target_description": "[svg] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [599]",
+      "gold_element_id": "599",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [2193]",
+      "gold_element_id": "2193",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "eventbrite / Event workflow 994"
+}

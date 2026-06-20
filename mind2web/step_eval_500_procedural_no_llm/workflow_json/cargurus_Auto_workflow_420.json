@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "name": "cargurus / Auto workflow 420",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find the newest silver-colored Lexus SUV with a black interior and backup camera to purchase which has been made between 2022-2023 and is within 50 miles of zip 10017.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "specific",
+      "field",
+      "combobox",
+      "lexus",
+      "silver",
+      "suv",
+      "black",
+      "backup",
+      "camera",
+      "2023",
+      "zip",
+      "menuitem",
+      "new",
+      "year",
+      "cargurus",
+      "shopping",
+      "auto",
+      "find",
+      "newest",
+      "colored",
+      "interior",
+      "purchase",
+      "which",
+      "has",
+      "been",
+      "made",
+      "between",
+      "2022",
+      "within",
+      "miles",
+      "10017",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "buy",
+      "cars",
+      "crossover",
+      "textbox",
+      "search",
+      "minimum",
+      "maximum",
+      "filter"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Buy",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Buy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the New Cars",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "New Cars",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the SUV / Crossover",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "SUV / Crossover",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the ZIP",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "ZIP",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "select the Select Minimum Year",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Select Minimum Year",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "select the Select Maximum Year",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Select Maximum Year",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "select the select-filter",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "select-filter",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Silver",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Silver",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Black",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Black",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Lexus",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Lexus",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Backup Camera",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Backup Camera",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "select the Select Sort Order",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Select Sort Order",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the New 2023 Lexus NX 350 AWD",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "New 2023 Lexus NX 350 AWD",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 14
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 14.0
+  },
+  "raw_workflow_name": "cargurus / Auto workflow 420"
+}

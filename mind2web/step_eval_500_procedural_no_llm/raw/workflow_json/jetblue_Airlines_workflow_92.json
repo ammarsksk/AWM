@@ -1,0 +1,50 @@
+{
+  "name": "jetblue / Airlines workflow 92",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find JetBlue career openings in New York",
+  "steps": [
+    {
+      "action": "CLICK [145]",
+      "op": "CLICK",
+      "element": "145",
+      "value": "",
+      "description": "[link] CareersExternal Link should open in a new window o... -> CLICK",
+      "role": "link",
+      "label": "CareersExternal Link should open in a new window o...",
+      "observation": "<html> <jb-app> <jb-tab-panel tabpanel> <div> <div combobox> <jb-type-ahead-input> <label> From </label> <input id=918 text columbus port columbus intl apt, /> </jb-type-ahead-input> </div> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=937 text /> </jb-type-ahead-input> </div> </div> </jb-tab-panel> <jb-footer contentinfo> <a id=145> Careers <jb-icon img external link should open in /> </a> </jb-footer> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [4413]",
+      "op": "CLICK",
+      "element": "4413",
+      "value": "",
+      "description": "[textbox] Search by Location -> CLICK",
+      "role": "textbox",
+      "label": "Search by Location",
+      "observation": "<html> <div main> <form search keywordsearch> <div> <div> <div> <span> Search by Keyword </span> <input id=4842 text search by keyword q /> </div> <div> <span> Search by Location </span> <input id=4413 text search by location locationsearch /> </div> </div> <input id=4869 submit search jobs /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [6440] [New York]",
+      "op": "TYPE",
+      "element": "6440",
+      "value": "New York",
+      "description": "[textbox] Search by Location -> TYPE: New York",
+      "role": "textbox",
+      "label": "Search by Location",
+      "observation": "<html> <div main> <div> <form search keywordsearch> <div> <div> <span> Search by Location </span> <input id=6440 text search by location locationsearch /> </div> <input id=6898 submit search jobs /> </div> </form> <span> <p> Calling all pilots take your career to new heights and join our award-winning crew. We are now accepting first officer </p> <a id=7270> Apply now </a> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8463]",
+      "op": "CLICK",
+      "element": "8463",
+      "value": "",
+      "description": "[button] Search Jobs -> CLICK",
+      "role": "button",
+      "label": "Search Jobs",
+      "observation": "<html> <div main> <div> <form search keywordsearch> <input id=8463 submit search jobs /> </form> <span> <p> Calling all pilots take your career to new heights and join our award-winning crew. We are now accepting first officer </p> <a id=9293> Apply now </a> </span> <label> E-mail Address <input id=9353 text e-mail address ucc_email /> </label> </div> </div> </html>"
+    }
+  ]
+}

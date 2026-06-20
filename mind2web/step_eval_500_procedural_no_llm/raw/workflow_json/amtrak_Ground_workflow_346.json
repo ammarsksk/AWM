@@ -1,0 +1,50 @@
+{
+  "name": "amtrak / Ground workflow 346",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Show me current deals for California.",
+  "steps": [
+    {
+      "action": "CLICK [139]",
+      "op": "CLICK",
+      "element": "139",
+      "value": "",
+      "description": "[button] DEALS -> CLICK",
+      "role": "button",
+      "label": "DEALS",
+      "observation": "<html> <header banner> <nav navigation primary> <ul> <a id=1246 button> Destinations </a> <li> <a id=139 button> DEALS </a> <a id=3082> <span> DEALS & PROMOTIONS </span> <span> Amtrak travel deals, promotions and other partner offers </span> </a> </li> </ul> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [12959]",
+      "op": "CLICK",
+      "element": "12959",
+      "value": "",
+      "description": "[link] DEALS & PROMOTIONS Amtrak travel deals, promotions... -> CLICK",
+      "role": "link",
+      "label": "DEALS & PROMOTIONS Amtrak travel deals, promotions...",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=12959> <span> DEALS & PROMOTIONS </span> <span> Amtrak travel deals, promotions and other partner offers </span> </a> </nav> </header> <main main> <div> <mat-form-field combobox> <input id=16567 text /> </mat-form-field> <div> <button id=16652 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [20990]",
+      "op": "CLICK",
+      "element": "20990",
+      "value": "",
+      "description": "[label] All Regions -> CLICK",
+      "role": "label",
+      "label": "All Regions",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=22060 button> Destinations </a> </nav> </header> <main main> <form promofilters> <article> <input checkbox all regions on /> <label id=20990> All Regions </label> <label id=24575> <input radio region california /> <span> California </span> </label> </article> </form> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [38149]",
+      "op": "CLICK",
+      "element": "38149",
+      "value": "",
+      "description": "[generic] California -> CLICK",
+      "role": "generic",
+      "label": "California",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=35633 button> Destinations </a> </nav> </header> <main main> <form promofilters> <ul> <label id=38149> <input radio region california /> <span> California </span> </label> <label id=38185> <input radio region west /> <span> West </span> </label> </ul> </form> </main> </div> </html>"
+    }
+  ]
+}

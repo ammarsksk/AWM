@@ -1,0 +1,70 @@
+{
+  "name": "jetblue / Airlines workflow 93",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find check-in flight for John Smith having ticket no. 123456780",
+  "steps": [
+    {
+      "action": "CLICK [126]",
+      "op": "CLICK",
+      "element": "126",
+      "value": "",
+      "description": "[link] Check In -> CLICK",
+      "role": "link",
+      "label": "Check In",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <a id=126> Check In </a> </nav> </jb-header> <jb-tabs> <nav tablist> <div> <button id=769 tab button> <span> <jb-icon img /> <span> Flights </span> </span> </button> <button tab button> </button> <button tab button> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=915 text /> </jb-type-ahead-input> </div> </jb-tab-panel> </jb-tabs> </jb-app> </html>"
+    },
+    {
+      "action": "TYPE [2306] [John]",
+      "op": "TYPE",
+      "element": "2306",
+      "value": "John",
+      "description": "[textbox] first name maxlimit is 30 -> TYPE: John",
+      "role": "textbox",
+      "label": "first name maxlimit is 30",
+      "observation": "<html> <div> <div> <input id=2306 text first name maxlimit is 30 firstname /> <input id=3524 text last name maxlimit is 30 lastname /> </div> <button id=3634 button submitbutton> Find Flights </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [5260] [Smith]",
+      "op": "TYPE",
+      "element": "5260",
+      "value": "Smith",
+      "description": "[textbox] last name maxlimit is 30 -> TYPE: Smith",
+      "role": "textbox",
+      "label": "last name maxlimit is 30",
+      "observation": "<html> <div> <div> <input text first name maxlimit is 30 firstname john /> <input id=5260 text last name maxlimit is 30 lastname /> </div> <div> <input id=6547 text pnr number maxlimit is 6 recordlocator /> <input text flight number maxlimit is 4 flightnumber /> <input text ticket number maxlimit is 13 ticketnumber /> </div> <button id=6588 button submitbutton> Find Flights </button> </div> </html>"
+    },
+    {
+      "action": "SELECT [8212] [Ticket Number]",
+      "op": "SELECT",
+      "element": "8212",
+      "value": "Ticket Number",
+      "description": "[select] Confirmation Code -> SELECT: Ticket Number",
+      "role": "select",
+      "label": "Confirmation Code",
+      "observation": "<html> <div> <div> <select id=8212> <option confirmation code true> Confirmation Code </option> <option flight number> Flight Number </option> <option ticket number> Ticket Number </option> </select> <input id=9500 text pnr number maxlimit is 6 recordlocator /> <input text flight number maxlimit is 4 flightnumber /> <input text ticket number maxlimit is 13 ticketnumber /> </div> <button id=9541 button submitbutton> Find Flights </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [11166] [123456780]",
+      "op": "TYPE",
+      "element": "11166",
+      "value": "123456780",
+      "description": "[textbox] ticket number maxlimit is 13 -> TYPE: 123456780",
+      "role": "textbox",
+      "label": "ticket number maxlimit is 13",
+      "observation": "<html> <div> <div> <select id=11165> <option confirmation code> Confirmation Code </option> <option flight number> Flight Number </option> <option ticket number true> Ticket Number </option> </select> <input text pnr number maxlimit is 6 recordlocator /> <input text flight number maxlimit is 4 flightnumber /> <input id=11166 text ticket number maxlimit is 13 ticketnumber /> <input idby ticketnumber /> </div> <button id=12494 button submitbutton> Find Flights </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [14120]",
+      "op": "CLICK",
+      "element": "14120",
+      "value": "",
+      "description": "[button] FIND FLIGHTS -> CLICK",
+      "role": "button",
+      "label": "FIND FLIGHTS",
+      "observation": "<html> <div> <div> <input id=15334 text first name maxlimit is 30 firstname john /> <input text last name maxlimit is 30 lastname smith /> </div> <select id=14119> <option confirmation code> Confirmation Code </option> <option flight number> Flight Number </option> <option ticket number true> Ticket Number </option> </select> <button id=14120 button submitbutton> Find Flights </button> </div> </html>"
+    }
+  ]
+}

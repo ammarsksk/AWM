@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "name": "nps.gov / Other workflow 406",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "nps.gov",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Locate a park that has a campground and is located in the state of Colorado.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "park",
+      "state",
+      "use",
+      "link",
+      "search",
+      "activity",
+      "nps",
+      "gov",
+      "travel",
+      "other",
+      "locate",
+      "has",
+      "campground",
+      "located",
+      "colorado",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "find",
+      "topic",
+      "combobox",
+      "specific",
+      "field"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the FIND A PARK",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "FIND A PARK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Search by Activity or Topic",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Search by Activity or Topic",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "select the By State",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "By State",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Activity",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Activity",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "input",
+        "target": "[input] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "nps.gov / Other workflow 406"
+}

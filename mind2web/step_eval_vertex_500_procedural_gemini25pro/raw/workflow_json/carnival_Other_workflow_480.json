@@ -1,0 +1,100 @@
+{
+  "name": "carnival / Other workflow 480",
+  "source": "Mind2Web exemplar",
+  "website": "carnival",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Order an adult\u2019s bottomless bubbles package for Joe Bloggs who is booked onto cruise 101010",
+  "steps": [
+    {
+      "action": "CLICK [120]",
+      "op": "CLICK",
+      "element": "120",
+      "value": "",
+      "description": "[link] Beverage Packages -> CLICK",
+      "role": "link",
+      "label": "Beverage Packages",
+      "observation": "<html> <body> <nav main menu> <a id=904 popular searches: cheers! beverage program> CHEERS! Beverage Program </a> </nav> <div main> <a id=1166 button> <span> SEARCH CRUISES </span> </a> </div> <div contentinfo> <a id=120> Beverage Packages </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [3218]",
+      "op": "CLICK",
+      "element": "3218",
+      "value": "",
+      "description": "[img] -> CLICK",
+      "role": "img",
+      "label": "",
+      "observation": "<html> <div dialog> <div document> <div> <button button close> <img id=3218 close /> </button> <form orgaccessform> <div> <div> <input id=3534 text please enter booking id /> <span> Booking # </span> </div> <div> <input id=3553 text please enter last name of /> <span> Last Name of Guest </span> </div> </div> </form> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4621]",
+      "op": "CLICK",
+      "element": "4621",
+      "value": "",
+      "description": "[link] Beverage Packages -> CLICK",
+      "role": "link",
+      "label": "Beverage Packages",
+      "observation": "<html> <body> <nav main menu> <a id=5407 popular searches: cheers! beverage program> CHEERS! Beverage Program </a> </nav> <div main> <a id=5668 button> <span> SEARCH CRUISES </span> </a> </div> <div contentinfo> <a id=4621> Beverage Packages </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [7714]",
+      "op": "CLICK",
+      "element": "7714",
+      "value": "",
+      "description": "[button] add Bottomless Bubbles to the cart with price $9.5... -> CLICK",
+      "role": "button",
+      "label": "add Bottomless Bubbles to the cart with price $9.5...",
+      "observation": "<html> <div main> <div> <span> Drink Packages </span> <a id=9566 bottomless bubbles> Bottomless Bubbles </a> <div> <button id=7714 add bottomless bubbles to the> Add to cart </button> <a id=9614 more details about bottomless bubbles> More Details </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [14659]",
+      "op": "CLICK",
+      "element": "14659",
+      "value": "",
+      "description": "[div] I want to give a gift to a booked cruiser -> CLICK",
+      "role": "div",
+      "label": "I want to give a gift to a booked cruiser",
+      "observation": "<html> <body> <div dialog> <div document> <div> <div id=14659> <input radio on /> <label collapsed i want to give> I want to give a gift to a booked cruiser </label> <div> <input text first-name first name (required) /> <input text last-name last name (required) /> <div> <input text booking-number #booking number /> <div> <button button> Select Sailing Month </button> <div> <button button> Select Sailing Month </button> <button button> Apr 2023 </button> <button button> May 2023 </button> <button button> Jun 2023 </button> <button button> Jul 2023 </button> <button button> Aug 2023 </button> <button button> Sep 2023 </button> <button button> Oct 2023 </button> <button button> Nov 2023 </button> <button button> Dec 2023 </button> <button button> Jan 2024 </button> <button button> Feb 2024 </button> <button button> Mar 2024 </button> <button button> Apr 2024 </button> <button button> May 2024 </button> <button button> Jun 2024 </button> <button button> Jul 2024 </button> <button button> Aug 2024 </button> <button button> Sep 2024 </button> </div> </div> </div> </div> </div> <button id=15122 save details and continue> Save & Continue </button> </div> </div> </div> <div main> <div> <span> Drink Packages </span> <a id=16793 bottomless bubbles> Bottomless Bubbles </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [22143] [Joe]",
+      "op": "TYPE",
+      "element": "22143",
+      "value": "Joe",
+      "description": "[textbox] first-name -> TYPE: Joe",
+      "role": "textbox",
+      "label": "first-name",
+      "observation": "<html> <div dialog> <div document> <div> <div> <label> Recipient's Name </label> <input id=22143 text first-name first name (required) /> <input text last-name last name (required) /> <div> <label> Recipient's Cruise Information </label> <input id=22486 text booking-number #booking number /> <span> Or </span> </div> </div> <button id=22607 save details and continue> Save & Continue </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [29643] [Bloggs]",
+      "op": "TYPE",
+      "element": "29643",
+      "value": "Bloggs",
+      "description": "[textbox] last-name -> TYPE: Bloggs",
+      "role": "textbox",
+      "label": "last-name",
+      "observation": "<html> <div dialog> <div document> <div> <div> <label> Recipient's Name </label> <input text first-name first name (required) joe /> <input id=29643 text last-name last name (required) /> <div> <label> Recipient's Cruise Information </label> <input id=29986 text booking-number #booking number /> <span> Or </span> </div> </div> <button id=30107 save details and continue> Save & Continue </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [37134] [101010]",
+      "op": "TYPE",
+      "element": "37134",
+      "value": "101010",
+      "description": "[textbox] booking-number -> TYPE: 101010",
+      "role": "textbox",
+      "label": "booking-number",
+      "observation": "<html> <body> <div dialog> <div document> <div> <label> Recipient's Cruise Information </label> <input id=37134 text booking-number #booking number /> <span> Or </span> </div> </div> </div> <div main> <div> <span> Drink Packages </span> <a id=39269 bottomless bubbles> Bottomless Bubbles </a> </div> <button id=39519 beverage packages /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [44631]",
+      "op": "CLICK",
+      "element": "44631",
+      "value": "",
+      "description": "[button] save details and continue -> CLICK",
+      "role": "button",
+      "label": "save details and continue",
+      "observation": "<html> <body> <div dialog> <div document> <button id=44631 save details and continue> Save & Continue </button> </div> </div> <div main> <div> <span> Drink Packages </span> <a id=46766 bottomless bubbles> Bottomless Bubbles </a> </div> <button id=47016 beverage packages /> </div> </body> </html>"
+    }
+  ]
+}

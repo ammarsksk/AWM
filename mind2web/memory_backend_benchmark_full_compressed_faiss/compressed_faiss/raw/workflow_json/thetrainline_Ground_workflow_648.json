@@ -1,0 +1,30 @@
+{
+  "name": "thetrainline / Ground workflow 648",
+  "source": "Mind2Web exemplar",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find a cheapest standard train ticket from London to Sheffield on March, 29, arriving by 10:45 am for 2 adults.",
+  "steps": [
+    {
+      "action": "TYPE [144] [london]",
+      "op": "TYPE",
+      "element": "144",
+      "value": "london",
+      "description": "[combobox] Departure station, none selected. Select a station... -> TYPE: london",
+      "role": "combobox",
+      "label": "Departure station, none selected. Select a station...",
+      "observation": "<html> <main main> <div> <ul menubar> <ul menu> <a id=339 menuitem> Cheap train tickets </a> </ul> </ul> <form> <label> <span> From </span> <input id=144 combobox text departure station, none selected. select enter origin station... /> </label> <fieldset> <span> Return </span> <input id=626 text date use format: /> <div> Leaving at </div> </fieldset> </form> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [4149]",
+      "op": "CLICK",
+      "element": "4149",
+      "value": "",
+      "description": "[span] London -> CLICK",
+      "role": "span",
+      "label": "London",
+      "observation": "<html> <main main> <form> <div dialog> <ul listbox> <div> <li id=4149 option> <span> London <span> , Any </span> </span> </li> <li option> </li> <li option> </li> <li option> </li> </div> </ul> </div> <fieldset> <span> Return </span> <input id=4427 text date use format: /> <div> Leaving at </div> </fieldset> <button id=4510 submit> <span> Get cheapest tickets </span> </button> </form> </main> </html>"
+    }
+  ]
+}

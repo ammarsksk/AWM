@@ -1,0 +1,135 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "store",
+      "find",
+      "set",
+      "link",
+      "stores",
+      "carmax",
+      "shopping",
+      "auto",
+      "los",
+      "angeles",
+      "california",
+      "riverside",
+      "add",
+      "card",
+      "favorites",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "see",
+      "all",
+      "shop",
+      "local",
+      "cars",
+      "img",
+      "car",
+      "not",
+      "saved"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Find a store",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Find a store",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 31 stores",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "31 stores",
+        "target_type": "p",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the see all stores",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "see all stores",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the SET AS MY STORE",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "SET AS MY STORE",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the SHOP LOCAL CARS",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "SHOP LOCAL CARS",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Car not saved",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Car not saved",
+        "target_type": "img",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find a store in Los Angeles, California, and set Riverside as my store and add a card from that store to my favorites",
+  "memory_type": "typed_procedure",
+  "name": "carmax / Auto workflow 354",
+  "raw_workflow_name": "carmax / Auto workflow 354",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 6.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Auto",
+  "termination": {
+    "max_steps_hint": 6,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "carmax"
+}

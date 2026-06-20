@@ -1,0 +1,60 @@
+{
+  "name": "yellowpages / Restaurant workflow 487",
+  "source": "Mind2Web exemplar",
+  "website": "yellowpages",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Search for person named John Smith in New York.",
+  "steps": [
+    {
+      "action": "CLICK [149]",
+      "op": "CLICK",
+      "element": "149",
+      "value": "",
+      "description": "[link] Find People -> CLICK",
+      "role": "link",
+      "label": "Find People",
+      "observation": "<html> <body> <input id=223 text search_terms what are you looking for? /> <a id=149 find people> Find People </a> <div> <a> Miami </a> <a> Milwaukee </a> <a id=886> New York </a> <a> Oklahoma City </a> <a> Orlando </a> <a> Philadelphia </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [1030] [John]",
+      "op": "TYPE",
+      "element": "1030",
+      "value": "John",
+      "description": "[input] -> TYPE: John",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <body> <div> <input id=1030 text first_name first name /> <form> <input text areacode area code /> <input id=1684 submit search /> </form> </div> <div> <a> Miami </a> <a> Milwaukee </a> <a id=1791> New York </a> <a> Oklahoma City </a> <a> Orlando </a> <a> Philadelphia </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [3951] [Smith]",
+      "op": "TYPE",
+      "element": "3951",
+      "value": "Smith",
+      "description": "[input] -> TYPE: Smith",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <body> <form> <input id=3951 text last_name last name (required) /> <select state> </select> <input id=3985 submit search for someone /> </form> <div> <a> Miami </a> <a> Milwaukee </a> <a id=4711> New York </a> <a> Oklahoma City </a> <a> Orlando </a> <a> Philadelphia </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [6865] [New York]",
+      "op": "TYPE",
+      "element": "6865",
+      "value": "New York",
+      "description": "[input] -> TYPE: New York",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <body> <form> <input id=6865 text city /> <select id=7365 state> <option true> State </option> <option al> AL </option> <option ak> AK </option> <option az> AZ </option> <option ar> AR </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option de> DE </option> <option dc> DC </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ia> IA </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option me> ME </option> <option md> MD </option> <option ma> MA </option> <option mi> MI </option> <option mn> MN </option> </select> <input submit search for someone /> </form> <div> <a> Miami </a> <a> Milwaukee </a> <a id=7625> New York </a> <a> Oklahoma City </a> <a> Orlando </a> <a> Philadelphia </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [9772]",
+      "op": "CLICK",
+      "element": "9772",
+      "value": "",
+      "description": "[button] Search for Someone -> CLICK",
+      "role": "button",
+      "label": "Search for Someone",
+      "observation": "<html> <div> <form> <select id=10272 state> <option true> State </option> <option al> AL </option> <option ak> AK </option> <option az> AZ </option> <option ar> AR </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option de> DE </option> <option dc> DC </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ia> IA </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option me> ME </option> <option md> MD </option> <option ma> MA </option> <option mi> MI </option> <option mn> MN </option> </select> <input id=9772 submit search for someone /> </form> <form> <input text areacode area code /> <input id=10425 submit search /> </form> </div> </html>"
+    }
+  ]
+}

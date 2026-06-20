@@ -1,0 +1,106 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "thailand",
+      "use",
+      "path",
+      "search",
+      "agoda",
+      "travel",
+      "general",
+      "look",
+      "activities",
+      "phuket",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "combobox",
+      "city",
+      "activity",
+      "specific",
+      "field",
+      "generic"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[path] -> CLICK",
+        "target_type": "path",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Search by city or activity",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search by city or activity",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Thailand",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Thailand",
+        "target_type": "generic",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the SEARCH",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "SEARCH",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Look for activities in Phuket, Thailand.",
+  "memory_type": "typed_procedure",
+  "name": "agoda / General workflow 97",
+  "raw_workflow_name": "agoda / General workflow 97",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 4.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "General",
+  "termination": {
+    "max_steps_hint": 4,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "agoda"
+}

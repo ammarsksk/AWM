@@ -1,0 +1,51 @@
+{
+  "name": "amazon / General workflow 765",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find the cheapest new surge protector with 6 to 8 outlets under 25 dollars with customer reviews above 4+, add 2 pieces to the cart.",
+  "goal_pattern": "Find the cheapest new surge protector with 6 to 8 outlets under 25 dollars with customer reviews above 4+, add 2 pieces to the cart.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search Amazon",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Search Amazon",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the surge protector",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "surge protector",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [127] [surge protector]",
+      "gold_element_id": "127",
+      "gold_value": "surge protector"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [8695]",
+      "gold_element_id": "8695",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "amazon / General workflow 765"
+}

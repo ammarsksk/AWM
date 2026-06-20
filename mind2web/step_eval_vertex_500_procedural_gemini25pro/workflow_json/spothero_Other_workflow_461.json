@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "name": "spothero / Other workflow 461",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Find EV charging supported parking closest to Smithsonian museum on Apr 9 between 9am to 6pm",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "specific",
+      "field",
+      "charging",
+      "parking",
+      "smithsonian",
+      "museum",
+      "apr",
+      "textbox",
+      "search",
+      "start",
+      "combobox",
+      "time",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "supported",
+      "closest",
+      "between",
+      "9am",
+      "6pm",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "national",
+      "air",
+      "space",
+      "indepen",
+      "filter",
+      "checkbox",
+      "show",
+      "results",
+      "date",
+      "gridcell",
+      "sun",
+      "2023",
+      "end",
+      "update",
+      "sort",
+      "distance"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search for parking",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Smithsonian National Air and Space Museum, Indepen...",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Smithsonian National Air and Space Museum, Indepen...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the EV Charging (1",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "EV Charging (1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Show 1 Results",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show 1 Results",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Start Date",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Start Date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Sun Apr 09 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Sun Apr 09 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "select the Start Time",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Start Time",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "select the End Time",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "End Time",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Update Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Update Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "select the Sort by Distance",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "Sort by Distance",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 11
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 11.0
+  },
+  "raw_workflow_name": "spothero / Other workflow 461"
+}

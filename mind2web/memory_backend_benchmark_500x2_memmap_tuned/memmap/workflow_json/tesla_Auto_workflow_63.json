@@ -1,0 +1,51 @@
+{
+  "name": "tesla / Auto workflow 63",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Go to the page with help in choosing a solar energy product for homes.",
+  "goal_pattern": "Go to the page with help in choosing a solar energy product for homes.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Solar Panels",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Solar Panels",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Order Now",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Order Now",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [3564]",
+      "gold_element_id": "3564",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [7954]",
+      "gold_element_id": "7954",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "tesla / Auto workflow 63"
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "name": "marriott / Hotel workflow 323",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "goal_pattern": "Look for a room at the Marriott Bonvoy resort in the Caribbean for a 10-day stay starting on May 5th.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "marriott",
+      "use",
+      "apr",
+      "span",
+      "travel",
+      "hotel",
+      "look",
+      "room",
+      "bonvoy",
+      "resort",
+      "caribbean",
+      "day",
+      "stay",
+      "starting",
+      "may",
+      "5th",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "destination",
+      "where",
+      "can",
+      "take",
+      "you",
+      "search",
+      "cur",
+      "specific",
+      "field",
+      "night",
+      "wed",
+      "thu",
+      "done",
+      "find",
+      "hotels"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the \ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "\ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the \ue9571 NIGHT Wed, Apr 19 - Thu, Apr 20",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\ue9571 NIGHT Wed, Apr 19 - Thu, Apr 20",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the 5",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "5",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 15",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "15",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Find Hotels",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Find Hotels",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "marriott / Hotel workflow 323"
+}

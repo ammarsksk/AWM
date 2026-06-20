@@ -1,0 +1,120 @@
+{
+  "name": "spothero / Other workflow 461",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find EV charging supported parking closest to Smithsonian museum on Apr 9 between 9am to 6pm",
+  "steps": [
+    {
+      "action": "TYPE [101] [Smithsonian]",
+      "op": "TYPE",
+      "element": "101",
+      "value": "Smithsonian",
+      "description": "[textbox] Search for parking -> TYPE: Smithsonian",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=101 text search for parking search-input address, place, city or venue /> <button id=432 button> Search </button> </div> <button id=434 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [2088]",
+      "op": "CLICK",
+      "element": "2088",
+      "value": "",
+      "description": "[li] Smithsonian National Air and Space Museum, Indepen... -> CLICK",
+      "role": "li",
+      "label": "Smithsonian National Air and Space Museum, Indepen...",
+      "observation": "<html> <ul> <li id=2088> Smithsonian National Air and Space Museum, Independence Avenue Southwest, Washington, DC, USA </li> <li> Smithsonian National Zoological Park, Connecticut Avenue Northwest, Washington, DC, USA </li> <li id=2417> Smithsonian National Museum of American History, Constitution Avenue Northwest, Washington, DC, USA </li> <li> Smithsonian National Museum of Natural History, Constitution Avenue Northwest, Washington, DC, USA </li> <li id=2421> Smithsonian American Art Museum, 8th Street Northwest, Washington, DC, USA </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [4172]",
+      "op": "CLICK",
+      "element": "4172",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <div> <div> <p> Book Parking Near </p> <input id=4894 text search for parking search national air and space museum, address, place, city or venue /> </div> <button id=4172 button> Filter </button> </div> <select id=5127> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [8499]",
+      "op": "CLICK",
+      "element": "8499",
+      "value": "",
+      "description": "[checkbox] EV Charging (1",
+      "role": "checkbox",
+      "label": "EV Charging (1",
+      "observation": "<html> <body> <button id=9450 button> Filter </button> <div> <input id=8499 checkbox ev on /> <label id=10629> EV Charging <span> (1) </span> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [12104]",
+      "op": "CLICK",
+      "element": "12104",
+      "value": "",
+      "description": "[button] Show 1 Results -> CLICK",
+      "role": "button",
+      "label": "Show 1 Results",
+      "observation": "<html> <body> <div> <button id=12942 button> <span> 1 </span> Filter </button> <select id=12950> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> <div> <button id=12104 button> Show 1 Results </button> <button button> Clear All </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [14767]",
+      "op": "CLICK",
+      "element": "14767",
+      "value": "",
+      "description": "[textbox] Start Date -> CLICK",
+      "role": "textbox",
+      "label": "Start Date",
+      "observation": "<html> <div> <div> <div> <p> Book Parking Near </p> <input id=15377 text search for parking search national air and space museum, address, place, city or venue /> </div> <input id=14767 text start date today /> </div> <select id=15611> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [17323]",
+      "op": "CLICK",
+      "element": "17323",
+      "value": "",
+      "description": "[gridcell] Sun Apr 09 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Sun Apr 09 2023",
+      "observation": "<html> <body> <div> <div> <p> Book Parking Near </p> <input id=17932 text search for parking search national air and space museum, address, place, city or venue /> </div> <button id=18159 button> <span> 1 </span> Filter </button> </div> <div grid> <div rowgroup> <div row> <div id=17323 gridcell sun apr 09 2023> <span> 9 </span> </div> <div gridcell mon apr 10 2023> </div> <div gridcell tue apr 11 2023> </div> <div gridcell wed apr 12 2023> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [19867] [9 00 AM]",
+      "op": "SELECT",
+      "element": "19867",
+      "value": "9 00 AM",
+      "description": "[combobox] Start Time -> SELECT: 9:00 AM",
+      "role": "combobox",
+      "label": "Start Time",
+      "observation": "<html> <div> <div> <p> Book Parking Near </p> <input id=20478 text search for parking search national air and space museum, address, place, city or venue /> </div> <select id=19867 start time> <option> Start Time </option> <option 12:00 am> 12:00 AM </option> <option 12:30 am> 12:30 AM </option> <option 01:00 am> 1:00 AM </option> <option 01:30 am> 1:30 AM </option> <option 02:00 am> 2:00 AM </option> <option 02:30 am> 2:30 AM </option> <option 03:00 am> 3:00 AM </option> <option 03:30 am> 3:30 AM </option> <option 04:00 am> 4:00 AM </option> <option 04:30 am> 4:30 AM </option> <option 05:00 am> 5:00 AM </option> <option 05:30 am> 5:30 AM </option> <option 06:00 am> 6:00 AM </option> <option 06:30 am> 6:30 AM </option> <option 07:00 am> 7:00 AM </option> <option 07:30 am true> 7:30 AM </option> <option 08:00 am> 8:00 AM </option> <option 08:30 am> 8:30 AM </option> <option 09:00 am> 9:00 AM </option> <option 09:30 am> 9:30 AM </option> <option 10:00 am> 10:00 AM </option> <option 10:30 am> 10:30 AM </option> <option 11:00 am> 11:00 AM </option> <option 11:30 am> 11:30 AM </option> </select> <div> <button id=20695 button> Update Search </button> <button button> Cancel </button> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [22247] [6 00 PM]",
+      "op": "SELECT",
+      "element": "22247",
+      "value": "6 00 PM",
+      "description": "[combobox] End Time -> SELECT: 6:00 PM",
+      "role": "combobox",
+      "label": "End Time",
+      "observation": "<html> <div> <div> <p> Book Parking Near </p> <input id=22857 text search for parking search national air and space museum, address, place, city or venue /> </div> <select id=22247 end time> <option> End Time </option> <option 09:30 am true> 9:30 AM </option> <option 10:00 am> 10:00 AM </option> <option 10:30 am> 10:30 AM </option> <option 11:00 am> 11:00 AM </option> <option 11:30 am> 11:30 AM </option> <option 12:00 pm> 12:00 PM </option> <option 12:30 pm> 12:30 PM </option> <option 01:00 pm> 1:00 PM </option> <option 01:30 pm> 1:30 PM </option> <option 02:00 pm> 2:00 PM </option> <option 02:30 pm> 2:30 PM </option> <option 03:00 pm> 3:00 PM </option> <option 03:30 pm> 3:30 PM </option> <option 04:00 pm> 4:00 PM </option> <option 04:30 pm> 4:30 PM </option> <option 05:00 pm> 5:00 PM </option> <option 05:30 pm> 5:30 PM </option> <option 06:00 pm> 6:00 PM </option> <option 06:30 pm> 6:30 PM </option> <option 07:00 pm> 7:00 PM </option> <option 07:30 pm> 7:30 PM </option> <option 08:00 pm> 8:00 PM </option> <option 08:30 pm> 8:30 PM </option> <option 09:00 pm> 9:00 PM </option> </select> <div> <button id=23068 button> Update Search </button> <button button> Cancel </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [24620]",
+      "op": "CLICK",
+      "element": "24620",
+      "value": "",
+      "description": "[button] Update Search -> CLICK",
+      "role": "button",
+      "label": "Update Search",
+      "observation": "<html> <div> <div> <div> <p> Book Parking Near </p> <input id=25229 text search for parking search national air and space museum, address, place, city or venue /> </div> <div> <button id=24620 button> Update Search </button> <button button> Cancel </button> </div> </div> <select id=25447> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "SELECT [26982] [Sort by Distance]",
+      "op": "SELECT",
+      "element": "26982",
+      "value": "Sort by Distance",
+      "description": "[select] Sort by Distance -> SELECT: Sort by Distance",
+      "role": "select",
+      "label": "Sort by Distance",
+      "observation": "<html> <div> <div> <div> <p> Book Parking Near </p> <input id=27592 text search for parking search national air and space museum, address, place, city or venue /> </div> <button id=27813 button> <span> 1 </span> Filter </button> </div> <select id=26982> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    }
+  ]
+}

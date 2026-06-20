@@ -1,0 +1,90 @@
+{
+  "name": "ryanair / Airlines workflow 109",
+  "source": "Mind2Web exemplar",
+  "website": "ryanair",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a fully electric car pickup at Athens Airport (ATH) Sat, Apr 1, 2023 and return to the same palce at Mon, Apr 3, 2023.",
+  "steps": [
+    {
+      "action": "CLICK [370]",
+      "op": "CLICK",
+      "element": "370",
+      "value": "",
+      "description": "[div] Car Hire -> CLICK",
+      "role": "div",
+      "label": "Car Hire",
+      "observation": "<html> <hp-home> <button id=311 plan> <span> Plan </span> </button> <div> <hp-search-widget-tabs-container> <button flights> </button> <button id=370 car hire> <div> Car Hire </div> </button> <button hotels> </button> <a events & activities> </a> </hp-search-widget-tabs-container> <div> <label> To </label> <input id=468 text destination /> </div> </div> </hp-home> </html>"
+    },
+    {
+      "action": "TYPE [1991] [Athens]",
+      "op": "TYPE",
+      "element": "1991",
+      "value": "Athens",
+      "description": "[textbox] I need a car in -> TYPE: Athens",
+      "role": "textbox",
+      "label": "I need a car in",
+      "observation": "<html> <div> <hp-car-hire-widget-controls> <div> <label> I need a car in </label> <input id=1991 text type in city or airport /> </div> <div> <hp-input-button id=2359 button> <div> <div> Drop off date </div> <div> Fri, 31 Mar </div> </div> </hp-input-button> <hp-input-button button> </hp-input-button> </div> </hp-car-hire-widget-controls> <button id=2386 let's go> <ry-spinner> Let's go </ry-spinner> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [4033]",
+      "op": "CLICK",
+      "element": "4033",
+      "value": "",
+      "description": "[button] Athens Airport (ATH",
+      "role": "button",
+      "label": "Athens Airport (ATH",
+      "observation": "<html> <ry-tooltip tooltip> <hp-car-hire-location> <button id=4033> Athens Airport <span> (ATH) </span> <div> Athens, Greece </div> </button> <button id=5069> Athens <div> Attica, Greece (City) </div> </button> <button id=5078> Athens <div> Texas, United States of America (City) </div> </button> </hp-car-hire-location> </ry-tooltip> </html>"
+    },
+    {
+      "action": "CLICK [7226]",
+      "op": "CLICK",
+      "element": "7226",
+      "value": "",
+      "description": "[div] Apr -> CLICK",
+      "role": "div",
+      "label": "Apr",
+      "observation": "<html> <ry-tooltip tooltip> <ry-datepicker-desktop> <div> <div> Mar </div> <div id=7226> Apr </div> <div> May </div> <div> Jun </div> <div> Jul </div> <div> Feb </div> <div> Mar </div> <div id=8801> Apr </div> <div> May </div> <div> Jun </div> <div> Jul </div> </div> <div> <div id=8901> 1 </div> <div> 2 </div> <div> 3 </div> <div> 4 </div> </div> </ry-datepicker-desktop> </ry-tooltip> </html>"
+    },
+    {
+      "action": "CLICK [11359]",
+      "op": "CLICK",
+      "element": "11359",
+      "value": "",
+      "description": "[generic] 1 -> CLICK",
+      "role": "generic",
+      "label": "1",
+      "observation": "<html> <body> <button id=12293 let's go> <ry-spinner> Let's go </ry-spinner> </button> <ry-tooltip tooltip> <div> <div> <div id=11359> 1 </div> <div> 2 </div> </div> <div> <div id=13213> 1 </div> <div> 2 </div> <div> 3 </div> <div> 4 </div> </div> </div> </ry-tooltip> </body> </html>"
+    },
+    {
+      "action": "CLICK [15472]",
+      "op": "CLICK",
+      "element": "15472",
+      "value": "",
+      "description": "[generic] 3 -> CLICK",
+      "role": "generic",
+      "label": "3",
+      "observation": "<html> <body> <div> <hp-search-widget-tabs-container> <button flights> </button> <button id=15776 car hire> <div> Car Hire </div> </button> <button hotels> </button> <a events & activities> </a> </hp-search-widget-tabs-container> <button id=16397 let's go> <ry-spinner> Let's go </ry-spinner> </button> </div> <ry-tooltip tooltip> <div> <div id=15472> 3 </div> <div> 4 </div> <div> 5 </div> <div> 6 </div> </div> </ry-tooltip> </body> </html>"
+    },
+    {
+      "action": "CLICK [18686]",
+      "op": "CLICK",
+      "element": "18686",
+      "value": "",
+      "description": "[button] Let's go -> CLICK",
+      "role": "button",
+      "label": "Let's go",
+      "observation": "<html> <div> <hp-search-widget-tabs-container> <button flights> </button> <button id=18993 car hire> <div> Car Hire </div> </button> <button hotels> </button> <a events & activities> </a> </hp-search-widget-tabs-container> <div> <div> <hp-input-button id=19074 button> <div> <div> Drop off date </div> <div> Mon, 3 Apr </div> </div> </hp-input-button> <hp-input-button button> </hp-input-button> </div> <button id=18686 let's go> <ry-spinner> Let's go </ry-spinner> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20709]",
+      "op": "CLICK",
+      "element": "20709",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div> <input checkbox airport (in terminal) /> <label id=20607> <div> Airport (in terminal) </div> </label> </div> <div> <input checkbox airport (shuttle) /> <label id=20631> <div> Airport (shuttle) </div> </label> </div> </div> <div> <input checkbox fully electric /> <label id=20709> <div> Fully electric </div> </label> </div> </div> </html>"
+    }
+  ]
+}

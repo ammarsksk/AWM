@@ -1,0 +1,124 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "movie",
+      "required",
+      "use",
+      "link",
+      "rottentomatoes",
+      "entertainment",
+      "find",
+      "box",
+      "office",
+      "revenue",
+      "highest",
+      "tomatometer",
+      "rated",
+      "actress",
+      "playing",
+      "sam",
+      "carpenter",
+      "most",
+      "recent",
+      "scream",
+      "has",
+      "been",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "neve",
+      "campbell",
+      "courteney",
+      "cox",
+      "david",
+      "arquette",
+      "melissa",
+      "barrera",
+      "heights"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Entertainment",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the Search",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Neve Campbell, Courteney Cox, David Arquette",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Neve Campbell, Courteney Cox, David Arquette",
+        "target_type": "p",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Melissa Barrera",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Melissa Barrera",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the In the Heights",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "In the Heights",
+        "target_type": "link",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find the US box office revenue for the highest tomatometer rated movie that the actress playing Sam Carpenter in the most recent Scream movie has been in.",
+  "memory_type": "typed_procedure",
+  "name": "rottentomatoes / Movie workflow 211",
+  "raw_workflow_name": "rottentomatoes / Movie workflow 211",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 4.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Movie",
+  "termination": {
+    "max_steps_hint": 4,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "rottentomatoes"
+}

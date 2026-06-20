@@ -1,0 +1,144 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "status",
+      "flight",
+      "use",
+      "check",
+      "san",
+      "antonio",
+      "washington",
+      "link",
+      "textbox",
+      "specific",
+      "field",
+      "travel",
+      "airlines",
+      "between",
+      "texas",
+      "bellingham",
+      "april",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "sat",
+      "international",
+      "was",
+      "search",
+      "1957",
+      "american",
+      "airlin"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Flight status",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Flight status",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the From , required.",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "From , required.",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the SAT - San Antonio International, TX",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "SAT - San Antonio International, TX",
+        "target_type": "a",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the To , required.",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "To , required.",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the WAS - Washington, DC",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "WAS - Washington, DC",
+        "target_type": "a",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Check status \u00bb for flight, 1957 of American Airlin...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Check status \u00bb for flight, 1957 of American Airlin...",
+        "target_type": "link",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Check the status of a flight between San Antonio, Texas, and Bellingham, Washington  on April 8.",
+  "memory_type": "typed_procedure",
+  "name": "aa / Airlines workflow 138",
+  "raw_workflow_name": "aa / Airlines workflow 138",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 7.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Airlines",
+  "termination": {
+    "max_steps_hint": 7,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "aa"
+}

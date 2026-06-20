@@ -1,0 +1,60 @@
+{
+  "name": "rentalcars / Car rental workflow 271",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find cheapest cars available at San Francisco Airport for a day.",
+  "steps": [
+    {
+      "action": "CLICK [896]",
+      "op": "CLICK",
+      "element": "896",
+      "value": "",
+      "description": "[link] San Francisco Airport -> CLICK",
+      "role": "link",
+      "label": "San Francisco Airport",
+      "observation": "<html> <div> <div> <a id=859> <span> San Francisco </span> </a> <a id=896> <span> San Francisco Airport </span> </a> </div> <button id=1137 button> <div> Airports </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [2131]",
+      "op": "CLICK",
+      "element": "2131",
+      "value": "",
+      "description": "[div] Fri, Mar 31 -> CLICK",
+      "role": "div",
+      "label": "Fri, Mar 31",
+      "observation": "<html> <body> <a id=1885> <span> Car rental </span> </a> <div> <button id=2131 button fri, mar 31> <div> <div> Drop-off date </div> <div> Fri, Mar 31 </div> </div> </button> <button id=2251 button> <div> Search </div> </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [5951]",
+      "op": "CLICK",
+      "element": "5951",
+      "value": "",
+      "description": "[checkbox] 29 March 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "29 March 2023",
+      "observation": "<html> <div> <table grid> <td gridcell> <span id=5951 checkbox 29 march 2023> <span> 29 </span> </span> </td> </table> <button id=6248 button fri, mar 31> <div> <div> Drop-off date </div> <div> Fri, Mar 31 </div> </div> </button> <button id=6369 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [9836]",
+      "op": "CLICK",
+      "element": "9836",
+      "value": "",
+      "description": "[div] Search -> CLICK",
+      "role": "div",
+      "label": "Search",
+      "observation": "<html> <div> <button id=9590 button tue, mar 28> <div> <div> Pick-up date </div> <div> Tue, Mar 28 </div> </div> </button> <button id=9715 button wed, mar 29> <div> <div> Drop-off date </div> <div> Wed, Mar 29 </div> </div> </button> <button id=9836 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [12777]",
+      "op": "CLICK",
+      "element": "12777",
+      "value": "",
+      "description": "[label] Price (lowest first",
+      "role": "label",
+      "label": "Price (lowest first",
+      "observation": "<html> <div> <div> <div> <input checkbox airport (shuttle) /> <label id=13098> <div> Airport (shuttle) </div> </label> </div> <div> <input checkbox airport (rental car center) /> <label id=13108> <div> Airport (rental car center) </div> </label> </div> </div> <span> <input radio sort by natural true /> <label> Recommended </label> <input radio sort by price /> <label id=12777> Price (lowest first) </label> </span> </div> </html>"
+    }
+  ]
+}

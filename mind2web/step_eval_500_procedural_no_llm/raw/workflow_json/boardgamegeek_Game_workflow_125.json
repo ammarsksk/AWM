@@ -1,0 +1,130 @@
+{
+  "name": "boardgamegeek / Game workflow 125",
+  "source": "Mind2Web exemplar",
+  "website": "boardgamegeek",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "task": "Buy the cheapest copy of King of Tokyo on GeekMarket that ships to Canada.",
+  "steps": [
+    {
+      "action": "CLICK [357]",
+      "op": "CLICK",
+      "element": "357",
+      "value": "",
+      "description": "[button] Shopping -> CLICK",
+      "role": "button",
+      "label": "Shopping",
+      "observation": "<html> <div> <button id=357 button> Shopping </button> <div> <input id=867 combobox search searchterm /> <button id=868 submit> <svg img /> <span> Search </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7289]",
+      "op": "CLICK",
+      "element": "7289",
+      "value": "",
+      "description": "[link] GeekMarket -> CLICK",
+      "role": "link",
+      "label": "GeekMarket",
+      "observation": "<html> <div> <ul> <button id=7466 button> Browse </button> <div> <a id=7289> GeekMarket </a> <a> Trades </a> <a> BGG Store </a> <a> Geek Game Shop </a> </div> </ul> <div> <input id=7796 combobox search searchterm /> <button submit> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [10829] [king of tokyo]",
+      "op": "TYPE",
+      "element": "10829",
+      "value": "king of tokyo",
+      "description": "[combobox] Search Board Games... -> TYPE: king of tokyo",
+      "role": "combobox",
+      "label": "Search Board Games...",
+      "observation": "<html> <div> <nav navigation> <form search> <input id=10829 combobox text search board games... q /> </form> </nav> <div toolbar> <button id=11201 button> Add Filter </button> <button id=11233 button> Sort: Recently Added </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17757]",
+      "op": "CLICK",
+      "element": "17757",
+      "value": "",
+      "description": "[link] King of Tokyo -> CLICK",
+      "role": "link",
+      "label": "King of Tokyo",
+      "observation": "<html> <div> <nav navigation> <form search> <ul listbox> <li option> <a id=17757 king of tokyo> <strong> King of Tokyo </strong> </a> </li> </ul> </form> </nav> <div toolbar> <button id=18077 button> Add Filter </button> <button id=18109 button> Sort: Recently Added </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21065]",
+      "op": "CLICK",
+      "element": "21065",
+      "value": "",
+      "description": "[button] Sort: Recently Added -> CLICK",
+      "role": "button",
+      "label": "Sort: Recently Added",
+      "observation": "<html> <body> <div toolbar> <button id=21490 button> Add Filter </button> <button id=21065 button> Sort: Recently Added </button> </div> <div dialog> <div> <button id=23740 button> I'm OK with that </button> <button button> Reject All </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [27790]",
+      "op": "CLICK",
+      "element": "27790",
+      "value": "",
+      "description": "[link] Price (lowest first",
+      "role": "link",
+      "label": "Price (lowest first",
+      "observation": "<html> <div toolbar> <button id=28189 button> Add Filter </button> <ul> <a id=27790> Price (lowest first) </a> <a id=28244> Price (highest first) </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [34506]",
+      "op": "CLICK",
+      "element": "34506",
+      "value": "",
+      "description": "[button] Add Filter -> CLICK",
+      "role": "button",
+      "label": "Add Filter",
+      "observation": "<html> <div> <nav navigation> <form search> <input id=34710 combobox text search board games... q /> </form> </nav> <div toolbar> <button id=34506 button> Add Filter </button> <button id=34936 button> Sort: Price (lowest first) </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [41211]",
+      "op": "CLICK",
+      "element": "41211",
+      "value": "",
+      "description": "[link] Ship Location -> CLICK",
+      "role": "link",
+      "label": "Ship Location",
+      "observation": "<html> <div toolbar> <ul> <a id=41629> Country of Origin </a> <a id=41211> Ship Location </a> </ul> <button id=41641 button> Sort: Price (lowest first) </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [47988]",
+      "op": "CLICK",
+      "element": "47988",
+      "value": "",
+      "description": "[button] Ship Location: Any -> CLICK",
+      "role": "button",
+      "label": "Ship Location: Any",
+      "observation": "<html> <body> <div toolbar> <button id=48414 button> Sort: Price (lowest first) </button> <button id=47988 button> Ship Location: Any </button> </div> <div dialog> <div> <button id=50707 button> I'm OK with that </button> <button button> Reject All </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [54850]",
+      "op": "CLICK",
+      "element": "54850",
+      "value": "",
+      "description": "[link] Canada -> CLICK",
+      "role": "link",
+      "label": "Canada",
+      "observation": "<html> <div toolbar> <button id=55276 button> Sort: Price (lowest first) </button> <ul> <a id=55319> Any </a> <a id=54850> Canada </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [61600]",
+      "op": "CLICK",
+      "element": "61600",
+      "value": "",
+      "description": "[link] King of Tokyo -> CLICK",
+      "role": "link",
+      "label": "King of Tokyo",
+      "observation": "<html> <div> <div toolbar> <button id=61999 button> Add Filter </button> <button id=62026 button> Sort: Price (lowest first) </button> </div> <div> <a id=61600 view item details> King of Tokyo </a> <p> King of Tokyo (Italian edition) </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [64526]",
+      "op": "CLICK",
+      "element": "64526",
+      "value": "",
+      "description": "[button] \uf0e0 Message -> CLICK",
+      "role": "button",
+      "label": "\uf0e0 Message",
+      "observation": "<html> <div> <nav navigation> <form search> <input id=64731 combobox text search board games... q /> </form> </nav> <div> <tr> <td id=64977> Price </td> <td> 12.00 </td> </tr> <div> <span> 12.00 Like New </span> <button id=64526 send geekmail to user> Message </button> </div> </div> </div> </html>"
+    }
+  ]
+}

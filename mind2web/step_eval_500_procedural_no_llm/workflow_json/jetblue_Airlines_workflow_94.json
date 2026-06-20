@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "name": "jetblue / Airlines workflow 94",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Book a flight + cruise for two flying from Atlanta in October for vacation starting on October 8 for 6 nights with Miami as the departure port, choose the cheapest flight, hotel, and room in the cruise for booking.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "cruise",
+      "span",
+      "october",
+      "flights",
+      "2023",
+      "flight",
+      "atlanta",
+      "nights",
+      "miami",
+      "use",
+      "search",
+      "link",
+      "label",
+      "jetblue",
+      "travel",
+      "airlines",
+      "book",
+      "two",
+      "flying",
+      "vacation",
+      "starting",
+      "departure",
+      "port",
+      "choose",
+      "cheapest",
+      "hotel",
+      "room",
+      "booking",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "external",
+      "should",
+      "open",
+      "combobox",
+      "departing",
+      "specific",
+      "field",
+      "atl",
+      "jun",
+      "option",
+      "oct",
+      "view"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Flights + Cruise",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Flights + Cruise",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Search flights + cruise External Link should open ...",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search flights + cruise External Link should open ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Departing from",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Departing from",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Atlanta, GA (ATL",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Atlanta, GA (ATL",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Jun 2023",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Jun 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Oct 2023",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Oct 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Search flights + cruise",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search flights + cruise",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the October 08, 2023",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "October 08, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Nights",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Nights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Miami",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Miami",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the View details",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "View details",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Select package",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Select package",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Checkout",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Checkout",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 13
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 13.0
+  },
+  "raw_workflow_name": "jetblue / Airlines workflow 94"
+}

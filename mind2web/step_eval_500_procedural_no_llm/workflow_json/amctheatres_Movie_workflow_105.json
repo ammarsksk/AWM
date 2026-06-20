@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "name": "amctheatres / Movie workflow 105",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "amctheatres",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Check the movie \"65\" that is digital at the AMC Grove City 14 showing at 7:30 pm on Tuesday, March 28, 2023 and buy four tickets for seats J10 through J7",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "text",
+      "specific",
+      "field",
+      "movie",
+      "amc",
+      "grove",
+      "city",
+      "j10",
+      "svg",
+      "amctheatres",
+      "entertainment",
+      "check",
+      "digital",
+      "showing",
+      "tuesday",
+      "march",
+      "2023",
+      "buy",
+      "four",
+      "tickets",
+      "seats",
+      "through",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "all",
+      "movies",
+      "sun",
+      "mar",
+      "link",
+      "30pm"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "select the AMC Grove City 14",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "AMC Grove City 14",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "select the All Movies",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "All Movies",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "select the Sun, Mar 26",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "Sun, Mar 26",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 7:30pm",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "7:30pm",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the J10",
+        "operation": "CLICK",
+        "target_type": "text",
+        "target": "J10",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the J9",
+        "operation": "CLICK",
+        "target_type": "text",
+        "target": "J9",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the J8",
+        "operation": "CLICK",
+        "target_type": "text",
+        "target": "J8",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the J7",
+        "operation": "CLICK",
+        "target_type": "text",
+        "target": "J7",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "amctheatres / Movie workflow 105"
+}

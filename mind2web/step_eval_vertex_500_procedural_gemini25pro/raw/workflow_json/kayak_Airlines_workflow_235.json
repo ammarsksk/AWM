@@ -1,0 +1,190 @@
+{
+  "name": "kayak / Airlines workflow 235",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the cheapest Hawaii package for two adults from June 18 to 21, and the hotel must be near a beach, have a beachfront, hot tub, and pool, and provides towels.",
+  "steps": [
+    {
+      "action": "CLICK [490]",
+      "op": "CLICK",
+      "element": "490",
+      "value": "",
+      "description": "[link] Search for packages -> CLICK",
+      "role": "link",
+      "label": "Search for packages",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=490 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <button id=714 button submit search> <svg id=717 img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [4441]",
+      "op": "CLICK",
+      "element": "4441",
+      "value": "",
+      "description": "[link] Hawaii Vacations -> CLICK",
+      "role": "link",
+      "label": "Hawaii Vacations",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=4736 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <button button submit search> <svg id=4924 img c8lpf-icon /> </button> <div> <a> Key West Vacations </a> <a> Orlando Vacations </a> <a> Barcelona Vacations </a> <a id=4441> Hawaii Vacations </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [6482]",
+      "op": "CLICK",
+      "element": "6482",
+      "value": "",
+      "description": "[generic] Departure date input -> CLICK",
+      "role": "generic",
+      "label": "Departure date input",
+      "observation": "<html> <form searchform> <div> <button id=6021 button select number and age of> <div> 2 travelers </div> </button> <div dialog> <div application> <div> <button button decrement /> <input text 2 /> <button id=6109 button increment /> </div> </div> </div> </div> <div departure date input> <div id=6482> Wed 5/3 </div> <button button decrement date by one day /> <button button increment date by one day /> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [16077]",
+      "op": "CLICK",
+      "element": "16077",
+      "value": "",
+      "description": "[button] Next month -> CLICK",
+      "role": "button",
+      "label": "Next month",
+      "observation": "<html> <div dialog> <div grid> <div row> <div id=19889 gridcell june 18> <div id=19890> 18 </div> </div> <div gridcell june 19> </div> <div gridcell june 20> </div> <div gridcell june 21> </div> </div> </div> </div> <svg id=16077 /> </html>"
+    },
+    {
+      "action": "CLICK [27674]",
+      "op": "CLICK",
+      "element": "27674",
+      "value": "",
+      "description": "[gridcell] June 18 -> CLICK",
+      "role": "gridcell",
+      "label": "June 18",
+      "observation": "<html> <div dialog> <div> <div grid> <div row> <div id=31357 gridcell june 18> <div id=27674> 18 </div> </div> <div gridcell june 19> </div> <div gridcell june 20> </div> <div gridcell june 21> </div> </div> </div> <div grid> <div row> <div gridcell july 18> <div id=31490> 18 </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [39285]",
+      "op": "CLICK",
+      "element": "39285",
+      "value": "",
+      "description": "[gridcell] June 21 -> CLICK",
+      "role": "gridcell",
+      "label": "June 21",
+      "observation": "<html> <div dialog> <div> <div grid> <div row> <div gridcell june 18> </div> <div gridcell june 19> </div> <div gridcell june 20> </div> <div id=42977 gridcell june 21> <div id=39285> 21 </div> </div> <div gridcell june 22> </div> <div gridcell june 23> </div> <div gridcell june 24> </div> </div> </div> <div grid> <div row> <div gridcell july 18> </div> <div gridcell july 19> </div> <div gridcell july 20> </div> <div id=43109 gridcell july 21> <div> 21 </div> </div> <div gridcell july 22> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [51735]",
+      "op": "CLICK",
+      "element": "51735",
+      "value": "",
+      "description": "[button] Search packages -> CLICK",
+      "role": "button",
+      "label": "Search packages",
+      "observation": "<html> <body> <div> <nav main navigation> <a id=51125 search for packages> <span> Packages </span> </a> </nav> <form searchform> <button id=51735 submit search packages> <span> Search </span> </button> </form> </div> <div dialog> <div> <div button previous month /> <div id=56023 button next month> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [62496]",
+      "op": "CLICK",
+      "element": "62496",
+      "value": "",
+      "description": "[button] Amenities -> CLICK",
+      "role": "button",
+      "label": "Amenities",
+      "observation": "<html> <div> <div> <div region price> <div id=63099 button price> <div> Price </div> <svg img /> </div> </div> <div region amenities> <div id=62496 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> <div id=63539 button> <div> Sorted by </div> <div> <div> Recommended </div> <svg img /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [71802]",
+      "op": "CLICK",
+      "element": "71802",
+      "value": "",
+      "description": "[checkbox] Beachfront -> CLICK",
+      "role": "checkbox",
+      "label": "Beachfront",
+      "observation": "<html> <div> <div region amenities> <span> <span> <input id=71802 checkbox false /> <svg img icon /> </span> <label id=72825> <div> Beachfront </div> </label> </span> </div> <div id=73351 button> <div> Sorted by </div> <div> <div> Recommended </div> <svg img /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [82024]",
+      "op": "CLICK",
+      "element": "82024",
+      "value": "",
+      "description": "[checkbox] Hot tub -> CLICK",
+      "role": "checkbox",
+      "label": "Hot tub",
+      "observation": "<html> <div> <div region amenities> <div> <div id=83017 button amenities> <div> Amenities </div> <svg img /> </div> <div button reset all values for amenities> Reset </div> </div> <span> <input id=82024 checkbox false /> <svg img icon /> </span> </div> <div id=83615 button> <div> Sorted by </div> <div> <div> Recommended </div> <svg img /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [94614]",
+      "op": "CLICK",
+      "element": "94614",
+      "value": "",
+      "description": "[checkbox] Pool -> CLICK",
+      "role": "checkbox",
+      "label": "Pool",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=94865 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <div region price> <div id=95211 button price> <div> Price </div> <svg img /> </div> </div> <div region amenities> <span> <input id=94614 checkbox false /> <svg img icon /> </span> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [104636]",
+      "op": "CLICK",
+      "element": "104636",
+      "value": "",
+      "description": "[checkbox] Towels -> CLICK",
+      "role": "checkbox",
+      "label": "Towels",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=104884 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div region amenities> <div> <div id=105553 button amenities> <div> Amenities </div> <svg img /> </div> <div button reset all values for amenities> Reset </div> </div> <span> <input id=104636 checkbox false /> <svg img icon /> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [114567]",
+      "op": "CLICK",
+      "element": "114567",
+      "value": "",
+      "description": "[button] Property style -> CLICK",
+      "role": "button",
+      "label": "Property style",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=114780 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <div region amenities> <label id=115492> <div> Beachfront </div> </label> </div> <div region property style> <div id=114567 button property style> <div> Property style </div> <svg img /> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [120717]",
+      "op": "CLICK",
+      "element": "120717",
+      "value": "",
+      "description": "[checkbox] Beach -> CLICK",
+      "role": "checkbox",
+      "label": "Beach",
+      "observation": "<html> <div> <div region amenities> <label id=121651> <div> Beachfront </div> </label> </div> <div region property style> <span> <span> <input id=120717 checkbox false /> <svg img icon /> </span> <label id=122052> <div> Beach </div> </label> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [128644]",
+      "op": "CLICK",
+      "element": "128644",
+      "value": "",
+      "description": "[div] Recommended -> CLICK",
+      "role": "div",
+      "label": "Recommended",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=127291 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <div region amenities> <label id=127997> <div> Beachfront </div> </label> </div> <div id=128644 button> <div> Sorted by </div> <div> <div> Recommended </div> <svg img /> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [134990]",
+      "op": "CLICK",
+      "element": "134990",
+      "value": "",
+      "description": "[tab] Price (low to high",
+      "role": "tab",
+      "label": "Price (low to high",
+      "observation": "<html> <body> <div region price> <div id=133536 button price> <div> Price </div> <svg img /> </div> </div> <ul tablist> <li tab recommended> </li> <li id=134990 tab price (low to high)> <div> Price (low to high) </div> </li> <li id=134992 tab price (high to low)> <div> Price (high to low) </div> </li> <li tab review score> </li> <li tab stars (5 to 1)> </li> <li tab stars (1 to 5)> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [140656]",
+      "op": "CLICK",
+      "element": "140656",
+      "value": "",
+      "description": "[div] View Deal -> CLICK",
+      "role": "div",
+      "label": "View Deal",
+      "observation": "<html> <div> <a search for packages> <svg id=139127 find packages icon /> <div> Packages </div> </a> <div> <div id=140479 button> <div> Sorted by </div> <div> <div> Price (low to high) </div> <svg img /> </div> </div> <div button> <div button> <div group> <button id=140656 button> <div> View Deal </div> </button> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [144637]",
+      "op": "CLICK",
+      "element": "144637",
+      "value": "",
+      "description": "[button] Next: Final details -> CLICK",
+      "role": "button",
+      "label": "Next: Final details",
+      "observation": "<html> <div> <ul> <button id=145573 button add luau buffet dinner &> Add to package </button> <button id=145762 button add lucky lady deluxe -> Add to package </button> </ul> <div> <button id=144637 button> Next: Final details </button> <span loading the checkout page /> </div> </div> </html>"
+    }
+  ]
+}

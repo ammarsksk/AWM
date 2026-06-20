@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "name": "ebay / General workflow 150",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "Get a Hasbro Hulk action figure manufactured in 1990 with the lowest price + shipping.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "hasbro",
+      "hulk",
+      "action",
+      "manufactured",
+      "1990",
+      "lowest",
+      "price",
+      "shipping",
+      "tab",
+      "checkbox",
+      "ebay",
+      "shopping",
+      "general",
+      "get",
+      "figure",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "toys",
+      "figures",
+      "img",
+      "all",
+      "filters",
+      "character",
+      "year",
+      "apply",
+      "sort",
+      "selector",
+      "best",
+      "match",
+      "selected",
+      "first"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Toys",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Toys",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Action Figures",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Action Figures",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Hasbro",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Hasbro",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the All Filters",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "All Filters",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Character",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Character",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Hulk",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Hulk",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Year Manufactured",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Year Manufactured",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 1990",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "1990",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Apply",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Apply",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "input",
+        "target": "[input] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Sort selector. Best Match selected.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sort selector. Best Match selected.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Price + Shipping: lowest first",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price + Shipping: lowest first",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "ebay / General workflow 150"
+}

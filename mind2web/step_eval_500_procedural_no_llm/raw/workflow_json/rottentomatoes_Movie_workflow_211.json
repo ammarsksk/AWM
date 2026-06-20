@@ -1,0 +1,50 @@
+{
+  "name": "rottentomatoes / Movie workflow 211",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find the US box office revenue for the highest tomatometer rated movie that the actress playing Sam Carpenter in the most recent Scream movie has been in.",
+  "steps": [
+    {
+      "action": "TYPE [142] [scream]",
+      "op": "TYPE",
+      "element": "142",
+      "value": "scream",
+      "description": "[textbox] Search -> TYPE: scream",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=142 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <div> <slot nav-links> <a id=691> What's the Tomatometer? </a> </slot> <slot nav-dropdowns> <slot movies> <slot link> <a id=828> Movies </a> </slot> </slot> </slot> </div> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [31921]",
+      "op": "CLICK",
+      "element": "31921",
+      "value": "",
+      "description": "[p] Neve Campbell, Courteney Cox, David Arquette -> CLICK",
+      "role": "p",
+      "label": "Neve Campbell, Courteney Cox, David Arquette",
+      "observation": "<html> <rt-header navigation bar> <slot desktop-search> <slot search-results> <slot content> <slot results> <ul> <a id=31921> <div> <img scream /> <div> <p> Scream <span> (2022) </span> </p> <p> Neve Campbell, Courteney Cox, David Arquette </p> </div> </div> </a> <a id=31939> <div> <img scream /> <p> Scream <span> (2015) </span> </p> </div> </a> <a id=31975> <div> <img scream /> <div> <p> Scream <span> (1996) </span> </p> <p> Neve Campbell, David Arquette, Courteney Cox </p> </div> </div> </a> </ul> </slot> </slot> </slot> </slot> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [55061]",
+      "op": "CLICK",
+      "element": "55061",
+      "value": "",
+      "description": "[link] Melissa Barrera -> CLICK",
+      "role": "link",
+      "label": "Melissa Barrera",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-links> <a id=47766> What's the Tomatometer? </a> </slot> </rt-header> <div> <a id=55061> <p> Melissa Barrera </p> </a> <p> Sam Carpenter </p> </div> <a id=57687> What's the Tomatometer ? </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [58506]",
+      "op": "CLICK",
+      "element": "58506",
+      "value": "",
+      "description": "[link] In the Heights -> CLICK",
+      "role": "link",
+      "label": "In the Heights",
+      "observation": "<html> <div> <table> <tr> <button id=61834> Tomatometer </button> <button> Audience Score </button> <button> Title </button> <span> Credit </span> </tr> <a id=58506> In the Heights </a> </table> <tr> <button id=62212> Tomatometer </button> <button> Audience Score </button> <button> Title </button> <span> Credit </span> </tr> </div> </html>"
+    }
+  ]
+}

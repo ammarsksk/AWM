@@ -1,0 +1,90 @@
+{
+  "name": "spothero / Other workflow 111",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Sell my parking space in Houston. Name: James Smith, Email: buckeye.foobar@gmail.com, phone: 8888888888. Address: 123rd st.",
+  "steps": [
+    {
+      "action": "CLICK [82]",
+      "op": "CLICK",
+      "element": "82",
+      "value": "",
+      "description": "[link] Rent My Parking Space -> CLICK",
+      "role": "link",
+      "label": "Rent My Parking Space",
+      "observation": "<html> <div> <div> <input id=409 text search for parking search-input address, place, city or venue /> <button id=420 button> Find Parking Near Me </button> </div> <ul list> <a id=82> Rent My Parking Space </a> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [1090] [James]",
+      "op": "TYPE",
+      "element": "1090",
+      "value": "James",
+      "description": "[textbox] First Name * -> TYPE: James",
+      "role": "textbox",
+      "label": "First Name *",
+      "observation": "<html> <form> <input returl /> <input lead_source independent sellers /> <label> First Name </label> <input id=1090 text first_name /> <label> Last Name </label> <input text last_name /> <label> Email </label> <label> Phone </label> <input text phone /> <label> Market: </label> <select id=1486 market name=> <option true> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea id=1616 /> <input submit /> </form> </html>"
+    },
+    {
+      "action": "TYPE [3257] [Smith]",
+      "op": "TYPE",
+      "element": "3257",
+      "value": "Smith",
+      "description": "[textbox] Last Name * -> TYPE: Smith",
+      "role": "textbox",
+      "label": "Last Name *",
+      "observation": "<html> <form> <label> First Name </label> <input text first_name james /> <label> Last Name </label> <input id=3257 text last_name /> <label> Email </label> <input text email /> <label> Phone </label> <input text phone /> <label> Market: </label> <select id=3656 market name=> <option true> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea id=3786 /> <input submit /> </form> </html>"
+    },
+    {
+      "action": "TYPE [5424] [buckeye.foobar@gmail.com]",
+      "op": "TYPE",
+      "element": "5424",
+      "value": "buckeye.foobar@gmail.com",
+      "description": "[textbox] Email * -> TYPE: buckeye.foobar@gmail.com",
+      "role": "textbox",
+      "label": "Email *",
+      "observation": "<html> <form> <label> Last Name </label> <input text last_name smith /> <label> Email </label> <input id=5424 text email /> <label> Phone </label> <input text phone /> <label> Market: </label> <select id=5823 market name=> <option true> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea id=5953 /> <input submit /> </form> </html>"
+    },
+    {
+      "action": "TYPE [7591] [8888888888]",
+      "op": "TYPE",
+      "element": "7591",
+      "value": "8888888888",
+      "description": "[textbox] Phone * -> TYPE: 8888888888",
+      "role": "textbox",
+      "label": "Phone *",
+      "observation": "<html> <div> <form> <label> Email </label> <input text email /> <label> Phone </label> <input id=7591 text phone /> <label id=7985> Market: <span> * </span> </label> <select market name=> </select> <label> Spot Address: </label> <textarea/> </form> <ul list> <a id=8208> Rent My Parking Space </a> </ul> </div> </html>"
+    },
+    {
+      "action": "SELECT [9758] [Chicago]",
+      "op": "SELECT",
+      "element": "9758",
+      "value": "Chicago",
+      "description": "[combobox] Market: * -> SELECT: Chicago",
+      "role": "combobox",
+      "label": "Market: *",
+      "observation": "<html> <div> <form> <input text email /> <label> Phone </label> <input text phone 8888888888 /> <label id=10153> Market: <span> * </span> </label> <select id=9758 market name=> <option true> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea/> </form> <ul list> <a id=10375> Rent My Parking Space </a> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [11933] [123rd st]",
+      "op": "TYPE",
+      "element": "11933",
+      "value": "123rd st",
+      "description": "[textbox] Spot Address: * -> TYPE: 123rd st",
+      "role": "textbox",
+      "label": "Spot Address: *",
+      "observation": "<html> <div> <form> <label> Phone </label> <input text phone 8888888888 /> <label> Market: </label> <select id=12330 market name=> <option> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago true> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea id=11933 /> <input submit /> </form> <ul list> <a id=12546> Rent My Parking Space </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [14109]",
+      "op": "CLICK",
+      "element": "14109",
+      "value": "",
+      "description": "[button] Submit -> HOVER",
+      "role": "button",
+      "label": "Submit",
+      "observation": "<html> <div> <form> <label> Phone </label> <input text phone 8888888888 /> <label> Market: </label> <select id=14506 market name=> <option> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago true> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea 123rd st /> <input id=14109 submit /> </form> <ul list> <a id=14722> Rent My Parking Space </a> </ul> </div> </html>"
+    }
+  ]
+}

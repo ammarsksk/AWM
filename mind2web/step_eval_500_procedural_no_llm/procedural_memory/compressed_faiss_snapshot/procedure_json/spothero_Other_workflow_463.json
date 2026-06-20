@@ -1,0 +1,153 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "parking",
+      "use",
+      "required",
+      "specific",
+      "field",
+      "search",
+      "only",
+      "monthly",
+      "seattle",
+      "stripe",
+      "5th",
+      "avenue",
+      "spothero",
+      "travel",
+      "other",
+      "book",
+      "cheapest",
+      "daytime",
+      "option",
+      "near",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "usa",
+      "tab",
+      "all",
+      "options",
+      "sort",
+      "distance",
+      "heading",
+      "335",
+      "columbia",
+      "motorcycle",
+      "proceed",
+      "checkout"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search for parking",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Stripe, 5th Avenue, Seattle, WA, USA",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Stripe, 5th Avenue, Seattle, WA, USA",
+        "target_type": "li",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Monthly",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Monthly",
+        "target_type": "tab",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the All Parking Options",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "All Parking Options",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "select the Sort by Distance",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Sort by Distance",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the 335 Columbia St. - MOTORCYCLE PARKING ONLY",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "335 Columbia St. - MOTORCYCLE PARKING ONLY",
+        "target_type": "heading",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Proceed to Checkout",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Proceed to Checkout",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Search and book the cheapest daytime only monthly parking option in Seattle near Stripe, 5th Avenue",
+  "memory_type": "typed_procedure",
+  "name": "spothero / Other workflow 463",
+  "raw_workflow_name": "spothero / Other workflow 463",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 7.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Other",
+  "termination": {
+    "max_steps_hint": 7,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "spothero"
+}

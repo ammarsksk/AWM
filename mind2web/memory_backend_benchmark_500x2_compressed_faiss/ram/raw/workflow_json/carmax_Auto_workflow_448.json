@@ -1,0 +1,30 @@
+{
+  "name": "carmax / Auto workflow 448",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find series 1 and series 2 BMW vehicles in the store nearest to 07055",
+  "steps": [
+    {
+      "action": "CLICK [166]",
+      "op": "CLICK",
+      "element": "166",
+      "value": "",
+      "description": "[link] SEARCH CARS -> CLICK",
+      "role": "link",
+      "label": "SEARCH CARS",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a id=301> Shop </a> <a> Sell/Trade </a> <a> Finance </a> </div> </nav> </header> <main main> <div> <h1> Love Your Car </h1> <a id=166> Search Cars </a> </div> <aside alertdialog> <p> At CarMax, you can buy online or at your nearest CarMax store. If you purchase in-store, you can still take <a> buy online </a> , you can choose between getting it delivered or picking it up at the store. No matter how you want <a> your area </a> . CarMax delivery is available within a 60-mile radius of select stores. Not available to customers in all states. Please contact <a id=1105> nearest store </a> for details. Applicable store-to-store shipping fees are due in advance of vehicle delivery and are separate from sales transactions. </p> </aside> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3397]",
+      "op": "CLICK",
+      "element": "3397",
+      "value": "",
+      "description": "[div] Best match -> CLICK",
+      "role": "div",
+      "label": "Best match",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=3397 button sort by> <div> <h4> Sort by </h4> <div> Best match </div> </div> </button> <button id=3408 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=3417 button make> <h4> Make </h4> </button> </div> </aside> </main> </html>"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "backend": "procedural_graph_hybrid",
+  "procedure_count": 500,
+  "edge_count": 33346,
+  "negative_memory_count": 548,
+  "embedding_backend": "sentence_transformers_faiss_bm25",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "candidate_k": 50,
+  "scoring": {
+    "semantic_weight": 0.5,
+    "lexical_weight": 0.14,
+    "activation_weight": 0.16,
+    "graph_weight": 0.08,
+    "outcome_weight": 0.08,
+    "metadata_weight": 0.04,
+    "acceptance_threshold": 0.34,
+    "activation_threshold": 0.04
+  }
+}

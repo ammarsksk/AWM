@@ -1,0 +1,110 @@
+{
+  "name": "bookdepository / Speciality workflow 230",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Check all English Reading and Writing skills Educational Books for Ages 6-8 currently in stock that are available in hardback under 20$.",
+  "steps": [
+    {
+      "action": "CLICK [124]",
+      "op": "CLICK",
+      "element": "124",
+      "value": "",
+      "description": "[link] Shop by category\u2228 -> CLICK",
+      "role": "link",
+      "label": "Shop by category\u2228",
+      "observation": "<html> <div> <div> <li> <a id=124> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <a id=923> English </a> </div> <div> <a id=1322> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36013]",
+      "op": "CLICK",
+      "element": "36013",
+      "value": "",
+      "description": "[link] Shop by category\u2228 -> CLICK",
+      "role": "link",
+      "label": "Shop by category\u2228",
+      "observation": "<html> <div> <div> <li> <a id=36013> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <a id=36812> English </a> </div> <div> <a id=37211> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [71913]",
+      "op": "CLICK",
+      "element": "71913",
+      "value": "",
+      "description": "[link] Ages 6-8 -> CLICK",
+      "role": "link",
+      "label": "Ages 6-8",
+      "observation": "<html> <div> <ul> <a id=72278> Dictionaries & Languages </a> <a id=71913> Ages 6-8 </a> </ul> <a id=72715> English </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [91750]",
+      "op": "CLICK",
+      "element": "91750",
+      "value": "",
+      "description": "[link] Education -> CLICK",
+      "role": "link",
+      "label": "Education",
+      "observation": "<html> <div> <a id=92544> English </a> <div> <a id=91750> Education </a> <div> <label id=92885> Language </label> <select searchlang> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [111417]",
+      "op": "CLICK",
+      "element": "111417",
+      "value": "",
+      "description": "[span] English Language -> CLICK",
+      "role": "span",
+      "label": "English Language",
+      "observation": "<html> <div> <ul> <li id=111417> <span> English Language </span> </li> <a id=111425> English Language: Reading & Writing Skills </a> </ul> <div> <label id=111503> Language </label> <select searchlang> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [121525]",
+      "op": "CLICK",
+      "element": "121525",
+      "value": "",
+      "description": "[link] English Language: Reading & Writing Skills -> CLICK",
+      "role": "link",
+      "label": "English Language: Reading & Writing Skills",
+      "observation": "<html> <div> <a id=121525> English Language: Reading & Writing Skills </a> <form> <div> <label> Price range </label> <select id=122606 price> <option all true> All </option> <option under us$20 low> Under US$20 </option> <option us$20 to us$40 med> US$20 to US$40 </option> <option us$40 + high> US$40 + </option> </select> </div> <button id=123182 submit> Refine results </button> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [127131] [In Stock (41,088)]",
+      "op": "SELECT",
+      "element": "127131",
+      "value": "In Stock (41,088)",
+      "description": "[select] All -> SELECT: In Stock (41,088",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <a id=128152> Books for Ages 6-8 </a> <form> <div> <label id=128210> Price range </label> <select price> </select> </div> <div> <label> Availability </label> <select id=127131 availability> <option all true> All </option> <option in stock (41,088) 1> In Stock (41,088) </option> <option pre-order (163) 2> Pre-order (163) </option> </select> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [137912] [Hardback (13,067)]",
+      "op": "SELECT",
+      "element": "137912",
+      "value": "Hardback (13,067)",
+      "description": "[select] All -> SELECT: Hardback (13,067",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <a id=138939> Education </a> <form> <div> <label id=138991> Price range </label> <select price> </select> </div> <div> <label> Format </label> <select id=137912 format> <option all true> All </option> <option paperback (128,363) 1> Paperback (128,363) </option> <option hardback (13,067) 2> Hardback (13,067) </option> <option audio (722) 3> Audio (722) </option> <option baby books (613) 4> Baby Books (613) </option> <option digital (554) 5> Digital (554) </option> <option stationery (37) 7> Stationery (37) </option> <option toys (23) 8> Toys (23) </option> <option maps (1) 6> Maps (1) </option> </select> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [148677] [Under US$20]",
+      "op": "SELECT",
+      "element": "148677",
+      "value": "Under US$20",
+      "description": "[select] All -> SELECT: Under US$20",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <a id=149705> Education </a> <div> <label id=149757> Price range </label> <select id=148677 price> <option all true> All </option> <option under us$20 low> Under US$20 </option> <option us$20 to us$40 med> US$20 to US$40 </option> <option us$40 + high> US$40 + </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [159461]",
+      "op": "CLICK",
+      "element": "159461",
+      "value": "",
+      "description": "[button] Refine results -> CLICK",
+      "role": "button",
+      "label": "Refine results",
+      "observation": "<html> <div> <a id=160491> English Language </a> <form> <div> <label id=160576> Language </label> <select searchlang> </select> </div> <button id=159461 submit> Refine results </button> </form> </div> </html>"
+    }
+  ]
+}

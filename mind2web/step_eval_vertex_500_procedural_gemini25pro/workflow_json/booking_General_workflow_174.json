@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "name": "booking / General workflow 174",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "goal_pattern": "Find the most popular tours and attractions in Kyoto, Japan from May 25 with free cancellation option, check availability for 2 adults and 1 infant, and book.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "svg",
+      "span",
+      "may",
+      "most",
+      "popular",
+      "attractions",
+      "kyoto",
+      "availability",
+      "div",
+      "dates",
+      "checkbox",
+      "2023",
+      "booking",
+      "travel",
+      "general",
+      "find",
+      "tours",
+      "japan",
+      "free",
+      "cancellation",
+      "option",
+      "check",
+      "adults",
+      "infant",
+      "book",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "asia",
+      "your",
+      "label",
+      "see",
+      "show",
+      "more",
+      "next"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Attractions",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Attractions",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Asia",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Asia",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Kyoto",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Kyoto",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Select your dates",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Select your dates",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the 25 May 2023",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "25 May 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Most popular",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Most popular",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the See availability",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "See availability",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Show more dates",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show more dates",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the 25 May 2023",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "25 May 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 18
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 18.0
+  },
+  "raw_workflow_name": "booking / General workflow 174"
+}

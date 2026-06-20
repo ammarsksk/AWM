@@ -1,0 +1,51 @@
+{
+  "name": "kohls / Department workflow 589",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "task": "Locate a store in spring, Texas.",
+  "goal_pattern": "Locate a store in spring, Texas.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Store Locator",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Store Locator",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the Please enter City, State, or Zip Code",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Please enter City, State, or Zip Code",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [97]",
+      "gold_element_id": "97",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [3420] [SPRING, TX]",
+      "gold_element_id": "3420",
+      "gold_value": "SPRING, TX"
+    }
+  ],
+  "raw_workflow_name": "kohls / Department workflow 589"
+}

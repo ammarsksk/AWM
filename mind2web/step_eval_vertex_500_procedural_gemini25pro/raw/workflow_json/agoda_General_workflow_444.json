@@ -1,0 +1,120 @@
+{
+  "name": "agoda / General workflow 444",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find a cheapest flight from London to New York on 9th May.",
+  "steps": [
+    {
+      "action": "CLICK [73]",
+      "op": "CLICK",
+      "element": "73",
+      "value": "",
+      "description": "[tab] Flights -> CLICK",
+      "role": "tab",
+      "label": "Flights",
+      "observation": "<html> <div> <ul tablist> <li tab> <svg id=73 /> <h6> Flights </h6> </li> </ul> <div tabpanel> <div> <input id=439 combobox text enter a destination or property /> <button id=484> <span> SEARCH </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [4146] [London]",
+      "op": "TYPE",
+      "element": "4146",
+      "value": "London",
+      "description": "[combobox] Flying from -> TYPE: London",
+      "role": "combobox",
+      "label": "Flying from",
+      "observation": "<html> <div tabpanel> <div> <div combobox> <input id=4146 combobox text flying from /> </div> <div combobox> <input id=4536 combobox text flying to /> </div> </div> <button id=4192> <span> SEARCH FLIGHTS </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [8792]",
+      "op": "CLICK",
+      "element": "8792",
+      "value": "",
+      "description": "[option] Destination London -> CLICK",
+      "role": "option",
+      "label": "Destination London",
+      "observation": "<html> <div tabpanel> <div> <div dialog> <ul listbox> <li option destination london, (all airports)> <ul listbox> <li id=8792 option destination london> <span> <span> London </span> , United Kingdom </span> <span all airports> All airports </span> </li> </ul> </li> </ul> </div> <div combobox> <input id=9086 combobox text flying to /> </div> </div> <button id=8422> <span> SEARCH FLIGHTS </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [12946] [New York]",
+      "op": "TYPE",
+      "element": "12946",
+      "value": "New York",
+      "description": "[combobox] Flying to -> TYPE: New York",
+      "role": "combobox",
+      "label": "Flying to",
+      "observation": "<html> <div tabpanel> <div> <div combobox> <input id=13327 combobox text flying from london /> </div> <div combobox> <input id=12946 combobox text flying to /> </div> </div> <button id=12993> <span> SEARCH FLIGHTS </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [17600]",
+      "op": "CLICK",
+      "element": "17600",
+      "value": "",
+      "description": "[option] Destination New York (NY",
+      "role": "option",
+      "label": "Destination New York (NY",
+      "observation": "<html> <div tabpanel> <div dialog> <ul listbox> <li option destination new york (ny), (all> <ul listbox> <li id=17600 option destination new york (ny)> <span> <span> New York </span> (NY), United States </span> <span all airports> All airports </span> </li> </ul> </li> <li option destination new york, (all airports)> <ul listbox> <li id=17713 option destination new york> <span> <span> New York </span> , United Kingdom </span> <span all airports> All airports </span> </li> </ul> </li> </ul> </div> <button id=17249> <span> SEARCH FLIGHTS </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [22058]",
+      "op": "CLICK",
+      "element": "22058",
+      "value": "",
+      "description": "[span] 9 -> CLICK",
+      "role": "span",
+      "label": "9",
+      "observation": "<html> <div tabpanel> <div departure> <div listbox departure> <div dialog> <div> <div grid> <div rowgroup> <div row> <div gridcell thu apr 06 2023> </div> <div gridcell fri apr 07 2023> </div> <div gridcell sat apr 08 2023> </div> <div id=22561 gridcell sun apr 09 2023> <span id=22564> 9 </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell tue may 09 2023> <span id=22058> 9 </span> </div> </div> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [27327]",
+      "op": "CLICK",
+      "element": "27327",
+      "value": "",
+      "description": "[button] SEARCH FLIGHTS -> CLICK",
+      "role": "button",
+      "label": "SEARCH FLIGHTS",
+      "observation": "<html> <div tabpanel> <div> <div combobox> <input id=27226 combobox text flying from london /> </div> <div departure> <div combobox departure date picker is opened> <div> <div id=27254 button 9 may 2023> 9 May 2023 </div> <div> Tuesday </div> </div> </div> </div> </div> <button id=27327> <span> SEARCH FLIGHTS </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [29728]",
+      "op": "CLICK",
+      "element": "29728",
+      "value": "",
+      "description": "[span] Price per person -> CLICK",
+      "role": "span",
+      "label": "Price per person",
+      "observation": "<html> <div> <div> <div id=29651 button> <section> <div> <p> Cheapest </p> 11h 10m </div> <div> <span> From </span> <div> <span> $ </span> <span> 586 </span> </div> </div> </section> </div> <div button> </div> <div button> </div> </div> <div> <span id=29726> Sort by </span> <button id=29728> <span> Price per person </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [38116]",
+      "op": "CLICK",
+      "element": "38116",
+      "value": "",
+      "description": "[p] Cheapest first -> CLICK",
+      "role": "p",
+      "label": "Cheapest first",
+      "observation": "<html> <body> <div> <div> <div id=35974 button> <section> <div> <p> Cheapest </p> 11h 10m </div> <div> <span> From </span> <div> <span> $ </span> <span> 586 </span> </div> </div> </section> </div> <div button> </div> <div button> </div> </div> <div> <button id=36146> <span> SELECT </span> </button> <div button flight details> </div> </div> </div> <div group flights search results sort options> <label id=38116> <input radio flighttype 1 true /> <div> <p> Price per person </p> <p> Cheapest first </p> </div> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [41794]",
+      "op": "CLICK",
+      "element": "41794",
+      "value": "",
+      "description": "[div] Economy Light -> CLICK",
+      "role": "div",
+      "label": "Economy Light",
+      "observation": "<html> <div> <div> <div id=41794> <span> Economy Light </span> <div> <svg free cancellation within 24-hours of /> <svg cabin baggage allowance included /> <svg changes not allowed /> <svg seat selection available for purchase /> </div> </div> <div> <button id=42541> <span> SELECT </span> </button> <div button flight details> </div> </div> </div> <div> <button id=42635> <span> SELECT </span> </button> <div button flight details> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [49198]",
+      "op": "CLICK",
+      "element": "49198",
+      "value": "",
+      "description": "[button] SELECT -> CLICK",
+      "role": "button",
+      "label": "SELECT",
+      "observation": "<html> <div> <div> <div> <button id=49051> <span> SELECT </span> </button> <div button flight details> </div> </div> <button id=49198> <span> SELECT </span> </button> </div> <div> <button id=49284> <span> SELECT </span> </button> <div button flight details> </div> </div> </div> </html>"
+    }
+  ]
+}

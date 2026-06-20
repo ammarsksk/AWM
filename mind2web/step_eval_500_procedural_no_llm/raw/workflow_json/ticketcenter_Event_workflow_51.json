@@ -1,0 +1,60 @@
+{
+  "name": "ticketcenter / Event workflow 51",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Show MLB tickets for this weekend and select the next one.",
+  "steps": [
+    {
+      "action": "CLICK [75]",
+      "op": "CLICK",
+      "element": "75",
+      "value": "",
+      "description": "[button] SPORTS -> HOVER",
+      "role": "button",
+      "label": "SPORTS",
+      "observation": "<html> <body> <a id=75 button> Sports </a> <div> <input id=2313 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2562 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [8721]",
+      "op": "CLICK",
+      "element": "8721",
+      "value": "",
+      "description": "[link] All MLB Tickets -> CLICK",
+      "role": "link",
+      "label": "All MLB Tickets",
+      "observation": "<html> <li> <a id=9008 button> Sports </a> <div> <ul tablist> <a id=9034 tab> MLB </a> </ul> <div tabpanel> <div> <a id=8721> All MLB Tickets </a> <a> Arizona Diamondbacks </a> <a> Atlanta Braves </a> <a> Baltimore Orioles </a> </div> </div> </div> </li> </html>"
+    },
+    {
+      "action": "CLICK [18286]",
+      "op": "CLICK",
+      "element": "18286",
+      "value": "",
+      "description": "[button] All dates -> CLICK",
+      "role": "button",
+      "label": "All dates",
+      "observation": "<html> <body> <div> <input id=17641 text query search for artists, teams or /> <button submit> </button> </div> <div> <h1> MLB Baseball </h1> <a id=17693> Show More </a> <button id=18286 all dates> </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [26264]",
+      "op": "CLICK",
+      "element": "26264",
+      "value": "",
+      "description": "[link] This weekend -> CLICK",
+      "role": "link",
+      "label": "This weekend",
+      "observation": "<html> <ul> <a id=26264 this weekend> This weekend </a> <a id=29064 next 7 days> Next 7 days </a> <a id=29067 next 30 days> Next 30 days </a> </ul> </html>"
+    },
+    {
+      "action": "CLICK [39824]",
+      "op": "CLICK",
+      "element": "39824",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <div> <a id=39763> <span> This weekend </span> <span> [x] </span> </a> <div> <table grid> <tr row> <a id=39824> <span> Tickets </span> </a> </tr> </table> <ul> <a> Previous </a> <a> 1 </a> <a> 2 </a> <a id=40468> Next </a> </ul> </div> </div> </html>"
+    }
+  ]
+}

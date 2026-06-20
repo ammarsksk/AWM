@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "name": "menards / Speciality workflow 286",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "menards",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Look for the cheapest led smart home indoor strip lighting, add it to the cart, and schedule the delivery.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "smart",
+      "lighting",
+      "cart",
+      "home",
+      "indoor",
+      "strip",
+      "add",
+      "link",
+      "menards",
+      "shopping",
+      "speciality",
+      "look",
+      "cheapest",
+      "led",
+      "schedule",
+      "delivery",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "departments",
+      "electrical",
+      "checkbox",
+      "light",
+      "sort",
+      "best",
+      "match",
+      "price",
+      "low",
+      "high",
+      "view",
+      "label"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Departments",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Departments",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Electrical",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Electrical",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Smart Home",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Smart Home",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Smart Lighting",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Smart Lighting",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Indoor Lighting (7",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Indoor Lighting (7",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Strip Light (3",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Strip Light (3",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Sort By: Best Match",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sort By: Best Match",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Price Low to High",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Price Low to High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the ADD TO CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "ADD TO CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the VIEW CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "VIEW CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Select",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Select",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 11
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 11.0
+  },
+  "raw_workflow_name": "menards / Speciality workflow 286"
+}

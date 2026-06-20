@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "name": "newegg / Digital workflow 405",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "goal_pattern": "Find the cheapest unused wireless Logitech Keyboard under $70.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "logitech",
+      "specific",
+      "field",
+      "apply",
+      "keyboard",
+      "site",
+      "span",
+      "newegg",
+      "shopping",
+      "digital",
+      "find",
+      "cheapest",
+      "unused",
+      "wireless",
+      "under",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "area",
+      "searchbox",
+      "search",
+      "new",
+      "textbox",
+      "price",
+      "combobox",
+      "featured",
+      "items",
+      "link",
+      "k120",
+      "wired",
+      "windows",
+      "plug"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search Site",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Search Site",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the \uf002",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\uf002",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the New",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "New",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Logitech",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Logitech",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "type the price to",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "price to",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "select the Featured Items \uf0d7",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Featured Items \uf0d7",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Logitech K120 Wired Keyboard for Windows, Plug and...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Logitech K120 Wired Keyboard for Windows, Plug and...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "newegg / Digital workflow 405"
+}

@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "name": "agoda / General workflow 128",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "goal_pattern": "Look for the highest reviewed for a 4-adults stay in Hollywood, USA, on April 19 to 23 with an option for free cancellation with a price range between 150 to 200 dollars.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "price",
+      "specific",
+      "field",
+      "filter",
+      "hollywood",
+      "span",
+      "img",
+      "add",
+      "textbox",
+      "svg",
+      "agoda",
+      "travel",
+      "general",
+      "look",
+      "highest",
+      "reviewed",
+      "adults",
+      "stay",
+      "usa",
+      "april",
+      "option",
+      "free",
+      "cancellation",
+      "range",
+      "between",
+      "150",
+      "200",
+      "dollars",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "combobox",
+      "enter",
+      "destination",
+      "property",
+      "search",
+      "minimum",
+      "maximum",
+      "checkbox",
+      "list",
+      "item",
+      "label"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Enter a destination or property",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Enter a destination or property",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Hollywood",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Hollywood",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the 19",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "19",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 23",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "23",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Add",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Add",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Add",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Add",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [i] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "i",
+        "target": "[i] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the SEARCH",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "SEARCH",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "type the Minimum price filter",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Minimum price filter",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "type the Maximum price filter",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Maximum price filter",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the list-filter-item-label-4",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "list-filter-item-label-4",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "agoda / General workflow 128"
+}

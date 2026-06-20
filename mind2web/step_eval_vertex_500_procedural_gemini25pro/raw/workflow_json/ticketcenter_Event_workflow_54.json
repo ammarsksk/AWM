@@ -1,0 +1,110 @@
+{
+  "name": "ticketcenter / Event workflow 54",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Buy two tickets for the Boston Red Sox vs. New York Yankees game on August 18th, with a total cost of no more than $200.",
+  "steps": [
+    {
+      "action": "TYPE [103] [red sox vs yankees]",
+      "op": "TYPE",
+      "element": "103",
+      "value": "red sox vs yankees",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: red sox vs yankees",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=391 button> Sports </a> <div> <input id=103 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2591 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [10999]",
+      "op": "CLICK",
+      "element": "10999",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <a id=9036 button> Sports </a> <div> <input text query search for artists, teams or red sox vs yankees /> <ul listbox> </ul> <button id=10999 submit> <span> Search </span> </button> </div> <a id=12320> Boston Red Sox </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [15677]",
+      "op": "CLICK",
+      "element": "15677",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <table grid> <tbody> <tr row> <a id=15487> <span> New York Yankees vs. Boston Red Sox </span> <span> Yankee Stadium </span> <span> Bronx, NY </span> </a> </tr> <tr row> <a id=15513> <span> New York Yankees vs. Boston Red Sox </span> <span> Yankee Stadium </span> <span> Bronx, NY </span> </a> </tr> <tr row> <a id=15677> <span> Tickets </span> </a> </tr> </tbody> </table> </html>"
+    },
+    {
+      "action": "CLICK [16132]",
+      "op": "CLICK",
+      "element": "16132",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <body> <a id=16434 button> Sports </a> <div> <h1 id=18294> New York Yankees vs. Boston Red Sox </h1> <div> Yankee Stadium, Bronx, NY </div> <a> Important Event Information </a> <a> All Yankee Stadium Events </a> </div> </body> <span id=16132 cm-down-arrow sea-angle /> </html>"
+    },
+    {
+      "action": "CLICK [39555]",
+      "op": "CLICK",
+      "element": "39555",
+      "value": "",
+      "description": "[label] 2 -> CLICK",
+      "role": "label",
+      "label": "2",
+      "observation": "<html> <body> <a id=39856 button> Sports </a> <div> <div> <p> Quantity </p> <p id=41884> Any Quantity </p> </div> <div> <label> Any </label> <label> 1 </label> <label id=39555> <input radio options 2 /> 2 </label> <label> 3 </label> <label> 4 </label> <label> 5 </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [62970]",
+      "op": "CLICK",
+      "element": "62970",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <body> <a id=63295 button> Sports </a> <button id=66103 button> <span> $215 </span> <span> /ea </span> </button> </body> <span id=62970 cm-down-arrow sea-angle /> </html>"
+    },
+    {
+      "action": "TYPE [86378] [200]",
+      "op": "TYPE",
+      "element": "86378",
+      "value": "200",
+      "description": "[input] -> TYPE: 200",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <div> <input id=86378 tel 7,777 /> <span> $ </span> <div> Max </div> </div> <label> <input id=88844 checkbox options any /> <span> Prices with Fees </span> </label> </div> <button id=88863> Done </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [112257]",
+      "op": "CLICK",
+      "element": "112257",
+      "value": "",
+      "description": "[span] Prices with Fees -> CLICK",
+      "role": "span",
+      "label": "Prices with Fees",
+      "observation": "<html> <div> <div> <div> <input id=112245 tel 200 /> <span> $ </span> <div> Max </div> </div> <label id=112257> <input checkbox options any /> <span> Prices with Fees </span> </label> </div> <button id=112277> Done </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [133539]",
+      "op": "CLICK",
+      "element": "133539",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <body> <a id=133840 button> Sports </a> <div> <div> <span> $ </span> <input id=135966 tel 70 /> <div> Min </div> </div> <button id=133539> Done </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [160307]",
+      "op": "CLICK",
+      "element": "160307",
+      "value": "",
+      "description": "[button] $83.95/ea -> CLICK",
+      "role": "button",
+      "label": "$83.95/ea",
+      "observation": "<html> <body> <a id=157913 button> Sports </a> <tbody> <button id=160307 button> <span> $83.95 </span> <span> /ea </span> </button> <button id=160552 button> <span> $190.90 </span> <span> /ea </span> </button> </tbody> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "rentalcars / Car rental workflow 386",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Check if cars are available for tomorrow at Elevated Escape in North Carolina.",
+  "steps": [
+    {
+      "action": "TYPE [3169] [Elevated Escape]",
+      "op": "TYPE",
+      "element": "3169",
+      "value": "Elevated Escape",
+      "description": "[textbox] Pick-up location -> TYPE: Elevated Escape",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div> <label id=3172> Pick-up location </label> <input id=3169 pick-up location /> </div> <button id=3669 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [6430]",
+      "op": "CLICK",
+      "element": "6430",
+      "value": "",
+      "description": "[div] Elevated Escape -> CLICK",
+      "role": "div",
+      "label": "Elevated Escape",
+      "observation": "<html> <div> <ul listbox> <li option> <div id=6430 button> <div> <span> Place </span> <div> <div> Elevated Escape </div> <div> Blowing Rock, North Carolina, United States </div> </div> </div> </div> </li> </ul> <div> <button id=6494 button tue, mar 28> <div> <div> Pick-up date </div> <div> Tue, Mar 28 </div> </div> </button> <button id=6619 button fri, mar 31> <div> <div> Drop-off date </div> <div> Fri, Mar 31 </div> </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9487]",
+      "op": "CLICK",
+      "element": "9487",
+      "value": "",
+      "description": "[div] Tue, Mar 28 -> CLICK",
+      "role": "div",
+      "label": "Tue, Mar 28",
+      "observation": "<html> <div> <button id=9487 button tue, mar 28> <div> <div> Pick-up date </div> <div> Tue, Mar 28 </div> </div> </button> <button id=9611 button fri, mar 31> <div> <div> Drop-off date </div> <div> Fri, Mar 31 </div> </div> </button> <button id=9732 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [12937]",
+      "op": "CLICK",
+      "element": "12937",
+      "value": "",
+      "description": "[checkbox] 24 March 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "24 March 2023",
+      "observation": "<html> <div> <div> <table grid> <td gridcell> <span id=12937 checkbox 24 march 2023> <span> 24 </span> </span> </td> </table> <button id=13130 button tue, mar 28> <div> <div> Pick-up date </div> <div> Tue, Mar 28 </div> </div> </button> </div> <button id=13255 button fri, mar 31> <div> <div> Drop-off date </div> <div> Fri, Mar 31 </div> </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [16900]",
+      "op": "CLICK",
+      "element": "16900",
+      "value": "",
+      "description": "[div] Sat, Mar 25 -> CLICK",
+      "role": "div",
+      "label": "Sat, Mar 25",
+      "observation": "<html> <div> <button id=16775 button fri, mar 24> <div> <div> Pick-up date </div> <div> Fri, Mar 24 </div> </div> </button> <button id=16900 button sat, mar 25> <div> <div> Drop-off date </div> <div> Sat, Mar 25 </div> </div> </button> <button id=17020 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [20229]",
+      "op": "CLICK",
+      "element": "20229",
+      "value": "",
+      "description": "[checkbox] 25 March 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "25 March 2023",
+      "observation": "<html> <div> <table grid> <td gridcell> <span id=20229 checkbox 25 march 2023> <span> 25 </span> </span> </td> </table> <button id=20543 button sat, mar 25> <div> <div> Drop-off date </div> <div> Sat, Mar 25 </div> </div> </button> <button id=20664 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [23157]",
+      "op": "CLICK",
+      "element": "23157",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <button id=23412 button fri, mar 24> <div> <div> Pick-up date </div> <div> Fri, Mar 24 </div> </div> </button> <button id=23537 button sat, mar 25> <div> <div> Drop-off date </div> <div> Sat, Mar 25 </div> </div> </button> <button id=23157 button> <div> Search </div> </button> </div> </html>"
+    }
+  ]
+}

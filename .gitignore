@@ -3,6 +3,7 @@ __pycache__/
 **/__pycache__/
 *.py[cod]
 *.pyo
+.venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -115,3 +116,32 @@ webarena/config_files/*.json
 !webarena/**/*.py
 !webarena/**/*.txt
 !webarena/**/README.md
+
+# Explicitly version the WebArena experiment artifacts requested for transfer.
+!webarena/results/
+!webarena/results/**
+!webarena/*.log
+!webarena/memory/
+!webarena/memory/procedural/
+!webarena/memory/procedural/procedural_memory.sqlite3
+!webarena/memory/procedural/procedure_embeddings.json
+!webarena/memory/procedural/procedural_manifest.json
+!webarena/memory_graph.dot
+!webarena/memory_graph.svg
+!webarena/PROCEDURAL_MEMORY_REPORT.md
+!webarena/metrics/
+!webarena/metrics/**
+!docs/
+!docs/**
+!metrics/
+!metrics/**
+
+# Explicitly version the Mind2Web experiment artifacts requested for transfer.
+!mind2web/data/
+!mind2web/data/**
+!mind2web/step_eval_*/
+!mind2web/step_eval_*/**
+!mind2web/embedding_trace_demo_output*/
+!mind2web/embedding_trace_demo_output*/**
+!mind2web/memory_backend_benchmark_*/
+!mind2web/memory_backend_benchmark_*/**

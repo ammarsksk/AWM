@@ -1,0 +1,40 @@
+{
+  "name": "cargurus / Auto workflow 419",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Show all used Tesla cars for 10017 zip code.",
+  "steps": [
+    {
+      "action": "SELECT [124] [Tesla]",
+      "op": "SELECT",
+      "element": "124",
+      "value": "Tesla",
+      "description": "[combobox] Select Make -> SELECT: Tesla",
+      "role": "combobox",
+      "label": "Select Make",
+      "observation": "<html> <form dealfinderform> <fieldset> <input sourcecontext /> <div> <select id=124 select make> <option -1> All Makes </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32 true> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <select id=1429 select model> <option -1> All Models </option> <optgroup popular models> <option d488> Cherokee </option> <option d849> Commander </option> <option d905 true> Compass </option> <option d2021> Gladiator </option> <option d490> Grand Cherokee </option> <option d3212> Grand Cherokee 4xe </option> <option d3108> Grand Cherokee L </option> <option d492> Liberty </option> <option d906> Patriot </option> <option d2268> Renegade </option> <option d494> Wrangler </option> <option d3134> Wrangler Unlimited 4xe </option> </optgroup> <optgroup other models> <option d1575> CJ-5 </option> <option d2763> CJ-6 </option> <option d1549> CJ-7 </option> <option d1576> CJ-8 </option> <option d489> Comanche </option> <option d2662> Commando </option> <option d491> Grand Wagoneer </option> <option d2726> J-10 </option> <option d3057> Jeepster </option> <option d493> Wagoneer </option> </optgroup> </select> </div> <span> near </span> <input id=1521 tel zip /> <input submit search /> </fieldset> </form> </html>"
+    },
+    {
+      "action": "TYPE [16083] [10017]",
+      "op": "TYPE",
+      "element": "16083",
+      "value": "10017",
+      "description": "[textbox] Zip -> TYPE: 10017",
+      "role": "textbox",
+      "label": "Zip",
+      "observation": "<html> <div> <form dealfinderform> <fieldset> <input sourcecontext /> <select id=17386 select model> <option -1 true> All Models </option> <optgroup popular models> <option d2475> Model 3 </option> <option d2039> Model S </option> <option d2132> Model X </option> <option d3044> Model Y </option> </optgroup> <optgroup other models> <option d1041> Roadster </option> </optgroup> </select> <span> near </span> <input id=16083 tel zip /> <input submit search /> </fieldset> </form> <a id=22649> Tesla </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [31936]",
+      "op": "CLICK",
+      "element": "31936",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <label id=32699> <span> Buy Used </span> </label> <form dealfinderform> <fieldset> <select id=33241 select model> <option -1 true> All Models </option> <optgroup popular models> <option d2475> Model 3 </option> <option d2039> Model S </option> <option d2132> Model X </option> <option d3044> Model Y </option> </optgroup> <optgroup other models> <option d1041> Roadster </option> </optgroup> </select> <span> near </span> <input tel zip 10017 /> <input id=31936 submit search /> </fieldset> </form> </div> </html>"
+    }
+  ]
+}

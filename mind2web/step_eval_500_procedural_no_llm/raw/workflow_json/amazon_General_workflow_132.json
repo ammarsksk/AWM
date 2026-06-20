@@ -1,0 +1,60 @@
+{
+  "name": "amazon / General workflow 132",
+  "source": "Mind2Web exemplar",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find a book by Sam Harris that has a rating of at least 4 stars and is available in paperback format.",
+  "steps": [
+    {
+      "action": "TYPE [94] [Sam Harris]",
+      "op": "TYPE",
+      "element": "94",
+      "value": "Sam Harris",
+      "description": "[textbox] Search Amazon -> TYPE: Sam Harris",
+      "role": "textbox",
+      "label": "Search Amazon",
+      "observation": "<html> <div navigation> <form search site-search> <input id=94 text search amazon field-keywords /> <span go> <input id=499 submit go /> </span> </form> <div> <a> Gift Cards </a> <a> Video Games </a> <a> Pharmacy </a> <a id=836> Books </a> <a> Pet Supplies </a> <a> Find a Gift </a> <a> Beauty & Personal Care </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7894]",
+      "op": "CLICK",
+      "element": "7894",
+      "value": "",
+      "description": "[button] sam harris -> CLICK",
+      "role": "button",
+      "label": "sam harris",
+      "observation": "<html> <div navigation> <div> <a id=8473> <div id=8475 button paperback> Paperback </div> </a> <div id=7894 button sam harris> sam harris </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21192]",
+      "op": "CLICK",
+      "element": "21192",
+      "value": "",
+      "description": "[region] 4 Stars & Up -> CLICK",
+      "role": "region",
+      "label": "4 Stars & Up",
+      "observation": "<html> <div> <div> <span> , </span> <a> Hardcover </a> <span> , </span> <a id=15673> Paperback </a> </div> <li id=21189> <a id=21192> <section 4 stars & up> <span> 4 Stars & Up </span> <span> & Up </span> </section> </a> </li> </div> </html>"
+    },
+    {
+      "action": "CLICK [28365]",
+      "op": "CLICK",
+      "element": "28365",
+      "value": "",
+      "description": "[link] Paperback -> CLICK",
+      "role": "link",
+      "label": "Paperback",
+      "observation": "<html> <div> <div> <div> <span> Other formats: </span> <a id=24800> Paperback </a> <span> , </span> <a> Kindle </a> </div> <div> <span> , </span> <a> Hardcover </a> <span> , </span> <a id=26331> Paperback </a> </div> </div> <a id=28365> <span> Paperback </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [31898]",
+      "op": "CLICK",
+      "element": "31898",
+      "value": "",
+      "description": "[heading] Waking Up: A Guide to Spirituality Without Religio... -> CLICK",
+      "role": "heading",
+      "label": "Waking Up: A Guide to Spirituality Without Religio...",
+      "observation": "<html> <div> <span sort by:> <span> <span> Sort by: </span> <span id=31517> Featured </span> </span> </span> <div> <a id=31898> <span> Waking Up: A Guide to Spirituality Without Religion </span> </a> <a id=35900> <section 4 stars & up> <span> 4 Stars & Up </span> <span> & Up </span> </section> </a> </div> </div> </html>"
+    }
+  ]
+}

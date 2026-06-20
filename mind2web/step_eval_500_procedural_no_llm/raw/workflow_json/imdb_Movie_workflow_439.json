@@ -1,0 +1,40 @@
+{
+  "name": "imdb / Movie workflow 439",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show me movies produced by Aaron Horvath.",
+  "steps": [
+    {
+      "action": "TYPE [124] [Aaron Horvath]",
+      "op": "TYPE",
+      "element": "124",
+      "value": "Aaron Horvath",
+      "description": "[textbox] Search IMDb -> TYPE: Aaron Horvath",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=200 button open navigation drawer> <svg id=203 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=124 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [5397]",
+      "op": "CLICK",
+      "element": "5397",
+      "value": "",
+      "description": "[div] Aaron Horvath -> CLICK",
+      "role": "div",
+      "label": "Aaron Horvath",
+      "observation": "<html> <div> <label id=5062 button open navigation drawer> <svg id=5065 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <ul listbox> <li option> <a id=5397> <img aaron horvath /> <div> <div> Aaron Horvath </div> <div> Director, The Super Mario Bros. Movie (2023) </div> </div> </a> </li> </ul> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [8715]",
+      "op": "CLICK",
+      "element": "8715",
+      "value": "",
+      "description": "[button] Expand Previous -> CLICK",
+      "role": "button",
+      "label": "Expand Previous",
+      "observation": "<html> <div> <div> <label id=7583 button open navigation drawer> <svg id=7584 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> </div> <main main> <label id=8715 button expand previous> <ul> <li> Previous </li> <li> 5 </li> </ul> <svg ipc-icon /> </label> </main> </div> </html>"
+    }
+  ]
+}

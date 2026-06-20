@@ -1,0 +1,155 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "airport",
+      "use",
+      "parking",
+      "jfk",
+      "specific",
+      "field",
+      "gridcell",
+      "apr",
+      "2023",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "spaces",
+      "between",
+      "april",
+      "have",
+      "lowest",
+      "shuttle",
+      "times",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "searchbox",
+      "name",
+      "code",
+      "city",
+      "john",
+      "kennedy",
+      "international",
+      "textbox",
+      "start",
+      "date",
+      "tue",
+      "thu",
+      "featured"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Airport",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Airport",
+        "target_type": "tab",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Airport Name, Code or City",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Airport Name, Code or City",
+        "target_type": "searchbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the John F. Kennedy International Airport (JFK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "John F. Kennedy International Airport (JFK",
+        "target_type": "li",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Parking Start Date",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Parking Start Date",
+        "target_type": "textbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Tue Apr 18 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Tue Apr 18 2023",
+        "target_type": "gridcell",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Thu Apr 20 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Thu Apr 20 2023",
+        "target_type": "gridcell",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the Featured",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Featured",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find parking spaces in JFK airport between April 18-20 that have lowest shuttle times",
+  "memory_type": "typed_procedure",
+  "name": "spothero / Other workflow 465",
+  "raw_workflow_name": "spothero / Other workflow 465",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 7.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Other",
+  "termination": {
+    "max_steps_hint": 7,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "spothero"
+}

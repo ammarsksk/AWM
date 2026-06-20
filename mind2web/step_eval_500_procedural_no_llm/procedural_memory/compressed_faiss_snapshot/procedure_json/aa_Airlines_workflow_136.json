@@ -1,0 +1,110 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "airlines",
+      "jobs",
+      "use",
+      "site",
+      "link",
+      "travel",
+      "find",
+      "available",
+      "texas",
+      "american",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "area",
+      "hiring",
+      "join",
+      "our",
+      "team",
+      "opens",
+      "another",
+      "search",
+      "open",
+      "specific",
+      "field",
+      "filter"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the We're hiring! Join our team , Opens another site i...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "We're hiring! Join our team , Opens another site i...",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Search open jobs",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search open jobs",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the [input] -> TYPE: TX",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[input] -> TYPE: TX",
+        "target_type": "input",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Filter",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find jobs available in Texas for American Airlines.",
+  "memory_type": "typed_procedure",
+  "name": "aa / Airlines workflow 136",
+  "raw_workflow_name": "aa / Airlines workflow 136",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 4.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Airlines",
+  "termination": {
+    "max_steps_hint": 4,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "aa"
+}

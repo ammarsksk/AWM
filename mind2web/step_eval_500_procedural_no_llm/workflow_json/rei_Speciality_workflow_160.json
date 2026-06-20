@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "name": "rei / Speciality workflow 160",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "rei",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Find rental charges for bikes in 37863.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "find",
+      "rental",
+      "use",
+      "link",
+      "path",
+      "rei",
+      "shopping",
+      "speciality",
+      "charges",
+      "bikes",
+      "37863",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "store",
+      "textbox",
+      "enter",
+      "zip",
+      "city",
+      "state",
+      "specific",
+      "field",
+      "generic",
+      "bike",
+      "shop",
+      "pigeon",
+      "forge",
+      "see",
+      "services",
+      "menu",
+      "rentals",
+      "image",
+      "category",
+      "item",
+      "cycling",
+      "gear"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Find a Store",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Find a Store",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Enter ZIP or City, State",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Enter ZIP or City, State",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "path",
+        "target": "[path] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Bike shop Pigeon Forge",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Bike shop Pigeon Forge",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the See services menu for Rentals",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "See services menu for Rentals",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the image of rental category item Cycling Gear",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "image of rental category item Cycling Gear",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "rei / Speciality workflow 160"
+}

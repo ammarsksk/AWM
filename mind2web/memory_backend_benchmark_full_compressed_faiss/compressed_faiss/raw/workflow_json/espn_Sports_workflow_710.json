@@ -1,0 +1,30 @@
+{
+  "name": "espn / Sports workflow 710",
+  "source": "Mind2Web exemplar",
+  "website": "espn",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "Find Golden State Warriors Player List.",
+  "steps": [
+    {
+      "action": "CLICK [154]",
+      "op": "CLICK",
+      "element": "154",
+      "value": "",
+      "description": "[button] Open Search -> CLICK",
+      "role": "button",
+      "label": "Open Search",
+      "observation": "<html> <header> <li> <a id=154 button open search /> <div> <input id=6041 text search sports, teams or players... /> <input submit /> </div> </li> <li> <a id=7251> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button nba /> </li> </header> </html>"
+    },
+    {
+      "action": "TYPE [46668] [Golden State Warriors]",
+      "op": "TYPE",
+      "element": "46668",
+      "value": "Golden State Warriors",
+      "description": "[textbox] Search -> TYPE: Golden State Warriors",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <div> <header> <div> <input id=46668 text search sports, teams or players... /> <input submit /> </div> <li> <a id=53752> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button nba /> </li> </header> <li id=63500> <div> <div> <span> Golden State Warriors </span> <span> Warriors </span> <span> GS </span> </div> <div> 36-34 </div> </div> </li> </div> </html>"
+    }
+  ]
+}

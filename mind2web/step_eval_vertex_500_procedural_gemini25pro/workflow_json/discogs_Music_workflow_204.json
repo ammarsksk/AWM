@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "name": "discogs / Music workflow 204",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "discogs",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "goal_pattern": "Buy a copy of the Gorillaz first studio album.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "gorillaz",
+      "link",
+      "required",
+      "buy",
+      "copy",
+      "use",
+      "discogs",
+      "entertainment",
+      "music",
+      "first",
+      "studio",
+      "album",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "combobox",
+      "search",
+      "artists",
+      "albums",
+      "more",
+      "specific",
+      "field",
+      "artist",
+      "add",
+      "cart"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search artists, albums and more...",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Search artists, albums and more...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Gorillaz Gorillaz Artist",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Gorillaz Gorillaz Artist",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Gorillaz",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Gorillaz",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Buy a copy",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Buy a copy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Add to Cart",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Add to Cart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "discogs / Music workflow 204"
+}

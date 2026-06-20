@@ -1,0 +1,30 @@
+{
+  "name": "thetrainline / Ground workflow 976",
+  "source": "Mind2Web exemplar",
+  "website": "thetrainline",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Book a lowest priced ticket from Bristal airport to London Paddington on April 8 after 2 pm, seating must be forward facing window side with power socket.",
+  "steps": [
+    {
+      "action": "TYPE [152] [BRISTOL]",
+      "op": "TYPE",
+      "element": "152",
+      "value": "BRISTOL",
+      "description": "[combobox] Departure station, none selected. Select a station... -> TYPE: BRISTOL",
+      "role": "combobox",
+      "label": "Departure station, none selected. Select a station...",
+      "observation": "<html> <main main> <form> <label> <span> From </span> <input id=152 combobox text departure station, none selected. select enter origin station... /> </label> <fieldset> <span> Return </span> <input id=634 text date use format: /> <div> Leaving at </div> </fieldset> <button id=717 submit> <span> Get cheapest tickets </span> </button> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [4160]",
+      "op": "CLICK",
+      "element": "4160",
+      "value": "",
+      "description": "[span] Bristol Airport (By Bus",
+      "role": "span",
+      "label": "Bristol Airport (By Bus",
+      "observation": "<html> <main main> <form> <div dialog> <ul listbox> <div> <li option> </li> <li id=4154 option> <span> Bristol Parkway <span> , Near M4/M32 </span> </span> </li> <li id=4160 option> <span> Bristol Airport (By Bus) <span> , Bristol International Airport (by bus) </span> </span> </li> <li option> </li> <li option> </li> </div> </ul> </div> <button id=4409 submit> <span> Get cheapest tickets </span> </button> </form> </main> </html>"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "name": "amtrak / Ground workflow 292",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find trains from New York to Washington DC leaving on april 18 for 2 adults with disability",
+  "steps": [
+    {
+      "action": "CLICK [201]",
+      "op": "CLICK",
+      "element": "201",
+      "value": "",
+      "description": "[textbox] From -> CLICK",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <main main> <div> <mat-form-field combobox> <div> <input id=201 text /> <div listbox> </div> </div> </mat-form-field> <div> <button id=3739> <span> 1 </span> <img passenger /> <span> Traveler </span> <img add travelers and discounts /> </button> <div> <input checkbox on /> <label id=3753> <span> Passenger with Disability or Assistance Needed? </span> </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [12704]",
+      "op": "CLICK",
+      "element": "12704",
+      "value": "",
+      "description": "[option] New York, NY - Moynihan Train Hall (NYP",
+      "role": "option",
+      "label": "New York, NY - Moynihan Train Hall (NYP",
+      "observation": "<html> <main main> <mat-form-field combobox> <div listbox> <div> <div> Top departure stations </div> <div id=12704 option> New York, NY - Moynihan Train Hall (NYP) </div> <div id=16100 option> Washington, DC - Union Station (WAS) </div> <div option> Chicago, IL - Union Station (CHI) </div> <div option> Philadelphia, PA - William H. Gray III 30th St. Station (PHL) </div> <div option> Boston, MA - South Station (BOS) </div> <div option> Los Angeles, CA - Union Station (LAX) </div> <div option> Baltimore, MD - Penn Station (BAL) </div> <div id=16112 option> Newark, NJ - Penn Station (NWK) </div> <div option> Seattle, WA - King Street Station (SEA) </div> <div option> Let me enter a station. </div> </div> </div> </mat-form-field> </main> </html>"
+    },
+    {
+      "action": "CLICK [25294]",
+      "op": "CLICK",
+      "element": "25294",
+      "value": "",
+      "description": "[textbox] To -> CLICK",
+      "role": "textbox",
+      "label": "To",
+      "observation": "<html> <main main> <div> <mat-form-field combobox> <input id=25294 text /> </mat-form-field> <div> <button id=28885> <span> 1 </span> <img passenger /> <span> Traveler </span> <img add travelers and discounts /> </button> <div> <input checkbox on /> <label id=28899> <span> Passenger with Disability or Assistance Needed? </span> </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [38030]",
+      "op": "CLICK",
+      "element": "38030",
+      "value": "",
+      "description": "[option] Washington, DC - Union Station (WAS",
+      "role": "option",
+      "label": "Washington, DC - Union Station (WAS",
+      "observation": "<html> <main main> <div> <mat-form-field combobox> <div listbox> <div> <div> Top destinations from NYP </div> <div id=38030 option> Washington, DC - Union Station (WAS) </div> <div option> Philadelphia, PA - William H. Gray III 30th St. Station (PHL) </div> <div option> Boston, MA - South Station (BOS) </div> <div option> Boston, MA - Back Bay Station (BBY) </div> </div> </div> </mat-form-field> <div> <button id=41619> <span> 1 </span> <img passenger /> <span> Traveler </span> <img add travelers and discounts /> </button> <div> <input checkbox on /> <label id=41633> <span> Passenger with Disability or Assistance Needed? </span> </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [50762]",
+      "op": "CLICK",
+      "element": "50762",
+      "value": "",
+      "description": "[textbox] Depart Date -> CLICK",
+      "role": "textbox",
+      "label": "Depart Date",
+      "observation": "<html> <main main> <div> <input id=50762 /> <div> <button id=54349> <span> 1 </span> <img passenger /> <span> Traveler </span> <img add travelers and discounts /> </button> <div> <input checkbox on /> <label id=54363> <span> Passenger with Disability or Assistance Needed? </span> </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [63791]",
+      "op": "CLICK",
+      "element": "63791",
+      "value": "",
+      "description": "[gridcell] Tuesday, April 18, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Tuesday, April 18, 2023",
+      "observation": "<html> <main main> <div> <ngb-datepicker-month grid> <div row> <div gridcell sunday, april 16, 2023> </div> <div gridcell monday, april 17, 2023> </div> <div id=67475 gridcell tuesday, april 18, 2023> <span id=63791> 18 </span> </div> <div gridcell wednesday, april 19, 2023> </div> <div gridcell thursday, april 20, 2023> </div> <div gridcell friday, april 21, 2023> </div> </div> </ngb-datepicker-month> <ngb-datepicker-month grid> <div row> <div gridcell monday, may 15, 2023> </div> <div gridcell tuesday, may 16, 2023> </div> <div gridcell wednesday, may 17, 2023> </div> <div id=67593 gridcell thursday, may 18, 2023> <span> 18 </span> </div> <div gridcell friday, may 19, 2023> </div> <div gridcell saturday, may 20, 2023> </div> </div> </ngb-datepicker-month> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [77118]",
+      "op": "CLICK",
+      "element": "77118",
+      "value": "",
+      "description": "[img] Add travelers and discounts -> CLICK",
+      "role": "img",
+      "label": "Add travelers and discounts",
+      "observation": "<html> <main main> <div> <div> <ngb-datepicker-month grid> <div row> <div gridcell tuesday, april 18, 2023> <span id=80787> 18 </span> </div> </div> </ngb-datepicker-month> <div> <button> Close </button> <button id=80962> Done </button> </div> </div> <button> <span> 1 </span> <img passenger /> <span> Traveler </span> <img id=77118 add travelers and discounts /> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [103447]",
+      "op": "CLICK",
+      "element": "103447",
+      "value": "",
+      "description": "[button] + -> CLICK",
+      "role": "button",
+      "label": "+",
+      "observation": "<html> <main main> <div> <am-counter adult> <div> <input text 1 /> <input text quant[1] 1 /> <button id=103447> <span> + </span> </button> </div> </am-counter> <div group> <button button> <img id=103443 passenger types and discounts /> </button> </div> <div> <input text add promo code promo code (e.g., x000) /> <button id=107224 apply filters> Done </button> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [116596]",
+      "op": "CLICK",
+      "element": "116596",
+      "value": "",
+      "description": "[button] Apply Filters -> CLICK",
+      "role": "button",
+      "label": "Apply Filters",
+      "observation": "<html> <main main> <div> <div> <div group> <button button> <img id=116592 passenger types and discounts /> </button> </div> <div> <input text add promo code promo code (e.g., x000) /> <button id=116596 apply filters> Done </button> </div> </div> <div> <input checkbox on /> <label id=120414> <span> Passenger with Disability or Assistance Needed? </span> </label> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [129791]",
+      "op": "CLICK",
+      "element": "129791",
+      "value": "",
+      "description": "[checkbox] Passenger with Disability or Assistance Needed? -> CLICK",
+      "role": "checkbox",
+      "label": "Passenger with Disability or Assistance Needed?",
+      "observation": "<html> <main main> <div> <div> <button id=133351 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> <div> <input id=129791 checkbox on /> <label id=133376> <span> Passenger with Disability or Assistance Needed? </span> </label> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [142510]",
+      "op": "CLICK",
+      "element": "142510",
+      "value": "",
+      "description": "[button] FIND TRAINS -> CLICK",
+      "role": "button",
+      "label": "FIND TRAINS",
+      "observation": "<html> <main main> <div> <div> <button id=142510 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> <div> <button> <span> 2 </span> <img passenger /> <span> Travelers </span> <img id=142526 add travelers and discounts /> </button> <button id=146126> <img plus icon /> <img plus icon /> <span> Add Trip </span> </button> </div> </div> </main> </html>"
+    }
+  ]
+}

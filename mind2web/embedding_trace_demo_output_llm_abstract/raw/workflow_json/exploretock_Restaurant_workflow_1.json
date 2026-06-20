@@ -1,0 +1,120 @@
+{
+  "name": "exploretock / Restaurant workflow 1",
+  "source": "Mind2Web exemplar",
+  "website": "exploretock",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+  "steps": [
+    {
+      "action": "SELECT [136] [Pickup]",
+      "op": "SELECT",
+      "element": "136",
+      "value": "Pickup",
+      "description": "[combobox] Reservation type -> SELECT: Pickup",
+      "role": "combobox",
+      "label": "Reservation type",
+      "observation": "<html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [3113]",
+      "op": "CLICK",
+      "element": "3113",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [6068] [Boston]",
+      "op": "TYPE",
+      "element": "6068",
+      "value": "Boston",
+      "description": "[searchbox] Find a location -> TYPE: Boston",
+      "role": "searchbox",
+      "label": "Find a location",
+      "observation": "<html> <body> <div> <button id=6691 button select location> <svg/> </button> <select id=6715 time> <option 20:30 true> Now </option> <option 21:00> 9:00 PM </option> <option 21:30> 9:30 PM </option> <option 22:00> 10:00 PM </option> <option 22:30> 10:30 PM </option> <option 23:00> 11:00 PM </option> <option 23:30> 11:30 PM </option> </select> </div> <div dialog> <div> <input id=6068 search columbus, oh, us find a location /> <button clear search /> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [10413]",
+      "op": "CLICK",
+      "element": "10413",
+      "value": "",
+      "description": "[span] Boston -> CLICK",
+      "role": "span",
+      "label": "Boston",
+      "observation": "<html> <div dialog> <ul location search results> <li id=10396> <span> <span> Boston </span> <span> MA, USA </span> </span> </li> <li id=10412> <button id=10413> <span> <span> Boston </span> <span> NY, USA </span> </span> </button> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [12210]",
+      "op": "CLICK",
+      "element": "12210",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <input id=12832 text date thu, mar 16 /> <button id=12834 button date, selected value is thu,> <svg id=12210 /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [18663]",
+      "op": "CLICK",
+      "element": "18663",
+      "value": "",
+      "description": "[button] 18 -> CLICK",
+      "role": "button",
+      "label": "18",
+      "observation": "<html> <body> <div> <input id=19297 text date thu, mar 16 /> <button id=19299 button date, selected value is thu,> <svg/> </button> </div> <div dialog> <table grid> <button id=18663 button 18th march (saturday) day> 18 </button> </table> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [28709] [5 00 PM]",
+      "op": "SELECT",
+      "element": "28709",
+      "value": "5 00 PM",
+      "description": "[combobox] Time -> SELECT: 5:00 PM",
+      "role": "combobox",
+      "label": "Time",
+      "observation": "<html> <div> <button id=29322 button select location> <svg/> </button> <button id=29335 button date, selected value is sat,> <svg/> </button> <select id=28709 time> <option 00:00> 12:00 AM </option> <option 00:30> 12:30 AM </option> <option 01:00> 1:00 AM </option> <option 01:30> 1:30 AM </option> <option 02:00> 2:00 AM </option> <option 02:30> 2:30 AM </option> <option 03:00> 3:00 AM </option> <option 03:30> 3:30 AM </option> <option 04:00> 4:00 AM </option> <option 04:30> 4:30 AM </option> <option 05:00> 5:00 AM </option> <option 05:30> 5:30 AM </option> <option 06:00> 6:00 AM </option> <option 06:30> 6:30 AM </option> <option 07:00> 7:00 AM </option> <option 07:30> 7:30 AM </option> <option 08:00> 8:00 AM </option> <option 08:30> 8:30 AM </option> <option 09:00> 9:00 AM </option> <option 09:30> 9:30 AM </option> <option 10:00> 10:00 AM </option> <option 10:30> 10:30 AM </option> <option 11:00> 11:00 AM </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [31817]",
+      "op": "CLICK",
+      "element": "31817",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <button id=32429 button select location> <svg/> </button> <a id=32552 search> <svg id=31817 /> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [34711]",
+      "op": "CLICK",
+      "element": "34711",
+      "value": "",
+      "description": "[span] 2 guests -> CLICK",
+      "role": "span",
+      "label": "2 guests",
+      "observation": "<html> <div> <div> <button id=34662> <span> Search </span> </button> <button search /> <button toggle menu open> </button> </div> <div> <button change experience type filter> </button> <button id=34703 change location> <span> Boston, NY </span> </button> <button id=34711 change date, time, and party-size> <span> <span> Mar 18 </span> <span> 5:00 PM </span> <span> 2 guests </span> </span> </button> <button open additional search filters> </button> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [36974] [1 guest]",
+      "op": "SELECT",
+      "element": "36974",
+      "value": "1 guest",
+      "description": "[combobox] Size -> SELECT: 1 guest",
+      "role": "combobox",
+      "label": "Size",
+      "observation": "<html> <body> <div> <button change experience type filter> </button> <button change location> </button> <button id=37509 change date, time, and party-size> <span> <span> Mar 18 </span> <span> 5:00 PM </span> <span> 2 guests </span> </span> </button> <button open additional search filters> </button> </div> <div> <select id=36974 size> <option> Party size </option> <option 1> 1 guest </option> <option 2 true> 2 guests </option> <option 3> 3 guests </option> <option 4> 4 guests </option> <option 5> 5 guests </option> <option 6> 6 guests </option> <option 7> 7 guests </option> <option 8> 8 guests </option> <option 9> 9 guests </option> <option 10> 10 guests </option> </select> <button id=38288> <span> Update search </span> </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [41495]",
+      "op": "CLICK",
+      "element": "41495",
+      "value": "",
+      "description": "[button] Update search -> CLICK",
+      "role": "button",
+      "label": "Update search",
+      "observation": "<html> <div> <select id=41263 time> <option 00:00> 12:00 AM </option> <option 00:15> 12:15 AM </option> <option 00:30> 12:30 AM </option> <option 00:45> 12:45 AM </option> <option 01:00> 1:00 AM </option> <option 01:15> 1:15 AM </option> <option 01:30> 1:30 AM </option> <option 01:45> 1:45 AM </option> <option 02:00> 2:00 AM </option> <option 02:15> 2:15 AM </option> <option 02:30> 2:30 AM </option> <option 02:45> 2:45 AM </option> <option 03:00> 3:00 AM </option> <option 03:15> 3:15 AM </option> <option 03:30> 3:30 AM </option> <option 03:45> 3:45 AM </option> <option 04:00> 4:00 AM </option> <option 04:15> 4:15 AM </option> <option 04:30> 4:30 AM </option> <option 04:45> 4:45 AM </option> <option 05:00> 5:00 AM </option> <option 05:15> 5:15 AM </option> <option 05:30> 5:30 AM </option> <option 05:45> 5:45 AM </option> <option 06:00> 6:00 AM </option> </select> <select id=41465 size> <option> Party size </option> <option 1 true> 1 guest </option> <option 2> 2 guests </option> <option 3> 3 guests </option> <option 4> 4 guests </option> <option 5> 5 guests </option> <option 6> 6 guests </option> <option 7> 7 guests </option> <option 8> 8 guests </option> <option 9> 9 guests </option> <option 10> 10 guests </option> </select> <button id=41495> <span> Update search </span> </button> </div> </html>"
+    }
+  ]
+}

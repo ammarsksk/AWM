@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "name": "redbox / Movie workflow 48",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "redbox",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Find the newest movies for rent  in the Redbox kiosk at any Winn Dixie in Daytona Beach.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "kiosk",
+      "use",
+      "redbox",
+      "find",
+      "rent",
+      "city",
+      "specific",
+      "field",
+      "filters",
+      "path",
+      "entertainment",
+      "movie",
+      "newest",
+      "movies",
+      "any",
+      "winn",
+      "dixie",
+      "daytona",
+      "beach",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "navigate",
+      "nearby",
+      "textbox",
+      "zip",
+      "code",
+      "search",
+      "using",
+      "zipcode",
+      "browse",
+      "show",
+      "filter",
+      "span",
+      "hide",
+      "combobox",
+      "sortby"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Navigate to Find a kiosk nearby",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Navigate to Find a kiosk nearby",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the City or ZIP Code",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "City or ZIP Code",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the select to search for a kiosk using city or zipcode",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "select to search for a kiosk using city or zipcode",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the select to browse a kiosk",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "select to browse a kiosk",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Show Filters",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show Filters",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Filter by rent",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Filter by rent",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Hide Filters",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Hide Filters",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "path",
+        "target": "[path] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "select the sortBy",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "sortBy",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "redbox / Movie workflow 48"
+}

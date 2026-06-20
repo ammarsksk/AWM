@@ -1,0 +1,50 @@
+{
+  "name": "cvs / Speciality workflow 173",
+  "source": "Mind2Web exemplar",
+  "website": "cvs",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Show weekly deals of Columbus, Oh 43215 store.",
+  "steps": [
+    {
+      "action": "CLICK [233]",
+      "op": "CLICK",
+      "element": "233",
+      "value": "",
+      "description": "[link] Locations -> CLICK",
+      "role": "link",
+      "label": "Locations",
+      "observation": "<html> <app-root> <div> <form search search cvs> <div> <label> Search products and services </label> <input id=439 combobox search search products and services /> </div> </form> <div> <a> Sign out </a> <a> Espaol </a> <a> Track an order </a> <a id=233> Locations </a> </div> </div> <footer contentinfo> <a id=1991> Store Locator </a> </footer> </app-root> </html>"
+    },
+    {
+      "action": "TYPE [4560] [43215]",
+      "op": "TYPE",
+      "element": "4560",
+      "value": "43215",
+      "description": "[combobox] Search by ZIP code, city, or state -> TYPE: 43215",
+      "role": "combobox",
+      "label": "Search by ZIP code, city, or state",
+      "observation": "<html> <div main> <div> <form search search by zip code, city,> <input id=4560 combobox search 43215 /> </form> <cvs-store-locator-search-container> <cvs-link weekly deals at 591 e.> <a id=5536> View weekly deals </a> </cvs-link> <cvs-link weekly deals at 1400 parsons> <a id=5694> View weekly deals </a> </cvs-link> </cvs-store-locator-search-container> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11348]",
+      "op": "CLICK",
+      "element": "11348",
+      "value": "",
+      "description": "[span] Columbus, Ohio -> CLICK",
+      "role": "span",
+      "label": "Columbus, Ohio",
+      "observation": "<html> <div main> <form search search by zip code, city,> <div listbox search suggestions for 43215> <ul> <li id=11348 option> <span> 43215 <span> Columbus, Ohio </span> </span> </li> <li id=11353 option> <span> 43215 <span> Cedar Glen Terrace, Ashburn, Virginia 20147 </span> </span> </li> <li id=11359 option> <span> 43215 <span> Whelplehill Terrace, Ashburn, Virginia 20148 </span> </span> </li> <li option> </li> <li option> </li> </ul> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [16214]",
+      "op": "CLICK",
+      "element": "16214",
+      "value": "",
+      "description": "[link] View weekly deals -> CLICK",
+      "role": "link",
+      "label": "View weekly deals",
+      "observation": "<html> <div main> <cvs-store-locator-search-container> <cvs-link weekly deals at 759 neil> <a id=16214> View weekly deals </a> </cvs-link> <cvs-link weekly deals at 591 e.> <a id=17189> View weekly deals </a> </cvs-link> <cvs-link weekly deals at 1400 parsons> <a id=17347> View weekly deals </a> </cvs-link> </cvs-store-locator-search-container> </div> </html>"
+    }
+  ]
+}

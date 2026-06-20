@@ -1,0 +1,70 @@
+{
+  "name": "carmax / Auto workflow 354",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find a store in Los Angeles, California, and set Riverside as my store and add a card from that store to my favorites",
+  "steps": [
+    {
+      "action": "CLICK [188]",
+      "op": "CLICK",
+      "element": "188",
+      "value": "",
+      "description": "[link] Find a store -> CLICK",
+      "role": "link",
+      "label": "Find a store",
+      "observation": "<html> <div> <header banner> <form search> <div> <label> Search make, model, or keyword </label> <input id=425 search /> </div> </form> </header> <main main> <div tabpanel> <div> <input id=1626 tel /> <label> What's your zip code? </label> </div> </div> </main> <footer contentinfo> <a id=188> Find a store </a> </footer> </div> </html>"
+    },
+    {
+      "action": "CLICK [3608]",
+      "op": "CLICK",
+      "element": "3608",
+      "value": "",
+      "description": "[p] 31 stores -> CLICK",
+      "role": "p",
+      "label": "31 stores",
+      "observation": "<html> <main> <div> <input id=3470 search search carmax locations. only letters and numbers are keyword search by zip or state /> <button id=3471 submit search. /> </div> <a id=3608> <div> <h2> California </h2> <p> 31 stores </p> </div> </a> </main> </html>"
+    },
+    {
+      "action": "CLICK [5237]",
+      "op": "CLICK",
+      "element": "5237",
+      "value": "",
+      "description": "[span] see all stores -> CLICK",
+      "role": "span",
+      "label": "see all stores",
+      "observation": "<html> <main> <div> <input id=4901 search search carmax locations. only letters and numbers are keyword search by zip or state /> <button submit search. /> </div> <ul> <button id=5237 button to expand list of> <div> <h2> Los Angeles </h2> <p> 10 stores </p> </div> <span> see all stores </span> </button> <a id=5279> <div> <h2> Palm Springs </h2> <p> 1 store </p> </div> </a> </ul> </main> </html>"
+    },
+    {
+      "action": "CLICK [7324]",
+      "op": "CLICK",
+      "element": "7324",
+      "value": "",
+      "description": "[button] SET AS MY STORE -> CLICK",
+      "role": "button",
+      "label": "SET AS MY STORE",
+      "observation": "<html> <ul> <span> <input 7196 /> <a id=8175 visit riverside store details.> <h2> Riverside </h2> View Store Details </a> <div> Open Today </div> <button id=7324> set as my store </button> </span> <a id=8250> <div> <h2> Palm Springs </h2> <p> 1 store </p> </div> </a> </ul> </html>"
+    },
+    {
+      "action": "CLICK [8832]",
+      "op": "CLICK",
+      "element": "8832",
+      "value": "",
+      "description": "[link] SHOP LOCAL CARS -> CLICK",
+      "role": "link",
+      "label": "SHOP LOCAL CARS",
+      "observation": "<html> <div> <header banner> <nav primary> <button id=8966 open my store flyout> <div> <span> Your store for 92504 </span> <span> Riverside </span> </div> </button> </nav> </header> <section> <a id=8832> shop local cars </a> <div> store selected </div> </section> <footer contentinfo> <button id=9830 open my store flyout> <span> My store name </span> <span> Riverside </span> </button> </footer> </div> </html>"
+    },
+    {
+      "action": "CLICK [10473]",
+      "op": "CLICK",
+      "element": "10473",
+      "value": "",
+      "description": "[img] Car not saved -> CLICK",
+      "role": "img",
+      "label": "Car not saved",
+      "observation": "<html> <main search cars> <div> <aside region search filters> <button id=11075 button distance & shipping> <h4> Distance & Shipping </h4> </button> </aside> <section search results> <section search results> <article select 2012 volkswagen jetta se> <div select car> <button button add favorite> <img id=10473 car not saved /> </button> </div> </article> </section> <a id=16863> Los Angeles, CA </a> </section> </div> </main> </html>"
+    }
+  ]
+}

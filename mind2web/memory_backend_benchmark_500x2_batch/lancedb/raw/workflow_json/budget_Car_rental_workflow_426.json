@@ -1,0 +1,30 @@
+{
+  "name": "budget / Car rental workflow 426",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find the budget price for the vehicle with most seats availible at Roanoke Regional Airport from April 5-6.",
+  "steps": [
+    {
+      "action": "TYPE [106] [Roanoke]",
+      "op": "TYPE",
+      "element": "106",
+      "value": "Roanoke",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: Roanoke",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <a id=816 button> Reservations </a> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=106 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> <div> <button id=1812 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [10843]",
+      "op": "CLICK",
+      "element": "10843",
+      "value": "",
+      "description": "[span] Roanoke Regional Airport -> CLICK",
+      "role": "span",
+      "label": "Roanoke Regional Airport",
+      "observation": "<html> <form resform> <angucomplete-alt enter your pick-up location or> <div> <span> <span id=10843> Roanoke Regional Airport </span> <span id=12080> , Roanoke </span> <span> , Virginia </span> <span> , United States-(ROA) </span> </span> <span> <span id=12290> Roanoke </span> <span> , Texas </span> <span> , United States </span> </span> </div> </angucomplete-alt> </form> </html>"
+    }
+  ]
+}

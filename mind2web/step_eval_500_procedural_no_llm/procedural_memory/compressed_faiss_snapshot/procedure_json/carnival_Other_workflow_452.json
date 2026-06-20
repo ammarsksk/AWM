@@ -1,0 +1,124 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "offers",
+      "use",
+      "vifp",
+      "club",
+      "show",
+      "members",
+      "only",
+      "link",
+      "deals",
+      "carnival",
+      "travel",
+      "other",
+      "find",
+      "loyalty",
+      "number",
+      "9016467685",
+      "ones",
+      "are",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "manage",
+      "visit",
+      "our",
+      "cruise",
+      "page",
+      "view",
+      "your"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Manage",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Manage",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [use] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[use] -> CLICK",
+        "target_type": "use",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Visit our cruise deals page to view your offers",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Visit our cruise deals page to view your offers",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Show My Deals",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Show My Deals",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the VIFP Club Members-Only Offers (2",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "VIFP Club Members-Only Offers (2",
+        "target_type": "link",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find offers for VIFP Club loyalty number 9016467685 and show the ones that are for members only.",
+  "memory_type": "typed_procedure",
+  "name": "carnival / Other workflow 452",
+  "raw_workflow_name": "carnival / Other workflow 452",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 5.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Other",
+  "termination": {
+    "max_steps_hint": 5,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "carnival"
+}

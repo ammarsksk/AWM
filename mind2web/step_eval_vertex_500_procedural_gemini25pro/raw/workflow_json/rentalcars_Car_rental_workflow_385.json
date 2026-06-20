@@ -1,0 +1,130 @@
+{
+  "name": "rentalcars / Car rental workflow 385",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Choose a lowest priced hybrid SUV car to pick up from Bangkok downtown on May 24 at 9:30 am and drop off on May 28, at 9 am.",
+  "steps": [
+    {
+      "action": "TYPE [113] [BANGKOK]",
+      "op": "TYPE",
+      "element": "113",
+      "value": "BANGKOK",
+      "description": "[label] Pick-up location -> TYPE: BANGKOK",
+      "role": "label",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div> <label id=113> Pick-up location </label> <input pick-up location /> </div> <div> <button id=488 button sun, apr 23> <div> <div> Drop-off date </div> <div> Sun, Apr 23 </div> </div> </button> <button id=609 button> <div> Search </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [3325]",
+      "op": "CLICK",
+      "element": "3325",
+      "value": "",
+      "description": "[div] Downtown Bangkok -> CLICK",
+      "role": "div",
+      "label": "Downtown Bangkok",
+      "observation": "<html> <ul listbox> <li option> </li> <li option> </li> <li option> <div id=3314 button> <div> <span> City </span> <div> <div> Bangkok </div> <div> Bangkok, Bangkok Province, Thailand </div> </div> </div> </div> </li> <li id=3324 option> <div id=3325 button> <div> <span> District </span> <div> <div> Downtown Bangkok </div> <div> Bangkok, Bangkok Province, Thailand </div> </div> </div> </div> </li> <li option> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [6276]",
+      "op": "CLICK",
+      "element": "6276",
+      "value": "",
+      "description": "[div] Thu, Apr 20 -> CLICK",
+      "role": "div",
+      "label": "Thu, Apr 20",
+      "observation": "<html> <div> <button id=6276 button thu, apr 20> <div> <div> Pick-up date </div> <div> Thu, Apr 20 </div> </div> </button> <button id=6400 button sun, apr 23> <div> <div> Drop-off date </div> <div> Sun, Apr 23 </div> </div> </button> <button id=6521 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [9806]",
+      "op": "CLICK",
+      "element": "9806",
+      "value": "",
+      "description": "[checkbox] 24 May 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "24 May 2023",
+      "observation": "<html> <div> <table grid> <tr> <td id=9653 gridcell> <span id=9654 checkbox 24 april 2023> <span> 24 </span> </span> </td> <td gridcell> </td> <td gridcell> </td> <td gridcell> </td> </tr> </table> <table grid> <td gridcell> <span id=9806 checkbox 24 may 2023> <span> 24 </span> </span> </td> </table> </div> </html>"
+    },
+    {
+      "action": "CLICK [13240]",
+      "op": "CLICK",
+      "element": "13240",
+      "value": "",
+      "description": "[checkbox] 28 May 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "28 May 2023",
+      "observation": "<html> <div> <table grid> <tr> <td gridcell> <span id=12852 checkbox 24 may 2023> <span> 24 </span> </span> </td> <td gridcell> <span id=13240 checkbox 28 may 2023> <span> 28 </span> </span> </td> </tr> </table> <table grid> <td gridcell> <span id=13383 checkbox 24 june 2023> <span> 24 </span> </span> </td> </table> </div> </html>"
+    },
+    {
+      "action": "SELECT [16084] [9 30 AM]",
+      "op": "SELECT",
+      "element": "16084",
+      "value": "9 30 AM",
+      "description": "[combobox] Pick up time -> SELECT: 9:30 AM",
+      "role": "combobox",
+      "label": "Pick up time",
+      "observation": "<html> <div> <select id=16084 pick up time pickup-time> <option 00:00> Midnight </option> <option 00:30> 12:30 AM </option> <option 01:00> 1:00 AM </option> <option 01:30> 1:30 AM </option> <option 02:00> 2:00 AM </option> <option 02:30> 2:30 AM </option> <option 03:00> 3:00 AM </option> <option 03:30> 3:30 AM </option> <option 04:00> 4:00 AM </option> <option 04:30> 4:30 AM </option> <option 05:00> 5:00 AM </option> <option 05:30> 5:30 AM </option> <option 06:00> 6:00 AM </option> <option 06:30> 6:30 AM </option> <option 07:00> 7:00 AM </option> <option 07:30> 7:30 AM </option> <option 08:00> 8:00 AM </option> <option 08:30> 8:30 AM </option> <option 09:00> 9:00 AM </option> <option 09:30> 9:30 AM </option> <option 10:00 true> 10:00 AM </option> <option 10:30> 10:30 AM </option> <option 11:00> 11:00 AM </option> <option 11:30> 11:30 AM </option> <option 12:00> Noon </option> </select> <button id=16460 button sun, may 28> <div> <div> Drop-off date </div> <div> Sun, May 28 </div> </div> </button> <button id=16581 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "SELECT [19034] [9 00 AM]",
+      "op": "SELECT",
+      "element": "19034",
+      "value": "9 00 AM",
+      "description": "[combobox] Drop off time -> SELECT: 9:00 AM",
+      "role": "combobox",
+      "label": "Drop off time",
+      "observation": "<html> <div> <div> <button id=19411 button sun, may 28> <div> <div> Drop-off date </div> <div> Sun, May 28 </div> </div> </button> <select id=19034 drop off time dropoff-time> <option 00:00> Midnight </option> <option 00:30> 12:30 AM </option> <option 01:00> 1:00 AM </option> <option 01:30> 1:30 AM </option> <option 02:00> 2:00 AM </option> <option 02:30> 2:30 AM </option> <option 03:00> 3:00 AM </option> <option 03:30> 3:30 AM </option> <option 04:00> 4:00 AM </option> <option 04:30> 4:30 AM </option> <option 05:00> 5:00 AM </option> <option 05:30> 5:30 AM </option> <option 06:00> 6:00 AM </option> <option 06:30> 6:30 AM </option> <option 07:00> 7:00 AM </option> <option 07:30> 7:30 AM </option> <option 08:00> 8:00 AM </option> <option 08:30> 8:30 AM </option> <option 09:00> 9:00 AM </option> <option 09:30> 9:30 AM </option> <option 10:00 true> 10:00 AM </option> <option 10:30> 10:30 AM </option> <option 11:00> 11:00 AM </option> <option 11:30> 11:30 AM </option> <option 12:00> Noon </option> </select> </div> <button id=19531 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [22481]",
+      "op": "CLICK",
+      "element": "22481",
+      "value": "",
+      "description": "[div] Search -> CLICK",
+      "role": "div",
+      "label": "Search",
+      "observation": "<html> <div> <button id=22235 button wed, may 24> <div> <div> Pick-up date </div> <div> Wed, May 24 </div> </div> </button> <button id=22360 button sun, may 28> <div> <div> Drop-off date </div> <div> Sun, May 28 </div> </div> </button> <button id=22481 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [24970]",
+      "op": "CLICK",
+      "element": "24970",
+      "value": "",
+      "description": "[div] SUVs -> CLICK",
+      "role": "div",
+      "label": "SUVs",
+      "observation": "<html> <div> <div> <input checkbox suvs /> <label id=25392> <div> SUVs </div> </label> </div> <div> <div region> <button id=24970 show suvs> <div> <div> SUVs </div> <div> Popular </div> </div> </button> </div> <span> <input radio sort by natural true /> <label> Recommended </label> <input radio sort by price /> <label id=25596> Price (lowest first) </label> <input radio sort by distance /> <label> Distance </label> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [41535]",
+      "op": "CLICK",
+      "element": "41535",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <input checkbox hybrid /> <label id=41535> <div> Hybrid </div> </label> </div> <span> <input radio sort by natural true /> <label id=41851> Recommended </label> <input radio sort by price /> <label id=41855> Price (lowest first) </label> <input radio sort by distance /> <label> Distance </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [57430]",
+      "op": "CLICK",
+      "element": "57430",
+      "value": "",
+      "description": "[label] Price (lowest first",
+      "role": "label",
+      "label": "Price (lowest first",
+      "observation": "<html> <div> <div> <input checkbox hybrid true /> <label id=57794> <div> Hybrid </div> </label> </div> <span> <input radio sort by natural true /> <label id=58157> Recommended </label> <input radio sort by price /> <label id=57430> Price (lowest first) </label> <input radio sort by distance /> <label> Distance </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [60801]",
+      "op": "CLICK",
+      "element": "60801",
+      "value": "",
+      "description": "[div] View deal -> CLICK",
+      "role": "div",
+      "label": "View deal",
+      "observation": "<html> <div> <section search results nissan kicks supplied> <button id=60801 button> <div> View deal </div> </button> </section> <section search results nissan kicks supplied> <div id=60860> Hybrid </div> </section> <section search results nissan kicks supplied> <div id=60997> Hybrid </div> </section> </div> </html>"
+    }
+  ]
+}

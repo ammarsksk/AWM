@@ -1,0 +1,110 @@
+{
+  "name": "united / Airlines workflow 99",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the flight schedule between London and New York for April 7 and check the upgrade details of the noon flight.",
+  "steps": [
+    {
+      "action": "CLICK [1075]",
+      "op": "CLICK",
+      "element": "1075",
+      "value": "",
+      "description": "[heading] Flight status -> CLICK",
+      "role": "heading",
+      "label": "Flight status",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a id=1018 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <ul tablist> <li tab heading level 2 book a traveltab> </li> <li id=1075 tab heading level 2 check flight statustab> <span> Flight status </span> </li> <li tab heading level 2 check in> </li> <li tab heading level 2 view and> </li> </ul> <div> <button submit> </button> <button id=1491 button> <span> Refine search </span> </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [9054] [london]",
+      "op": "TYPE",
+      "element": "9054",
+      "value": "london",
+      "description": "[combobox] Enter your departing city, airport name, or airpor... -> TYPE: london",
+      "role": "combobox",
+      "label": "Enter your departing city, airport name, or airpor...",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a id=9942 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div> <input id=9054 combobox text columbus cmh from /> <label enter your departing city, airport> From </label> </div> </section> <div> <button submit> </button> <button id=10207 button> <span> Refine search </span> </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [17812]",
+      "op": "CLICK",
+      "element": "17812",
+      "value": "",
+      "description": "[span] London -> CLICK",
+      "role": "span",
+      "label": "London",
+      "observation": "<html> <main main> <section tabpanel> <div tooltip> <ul listbox> <li option> <button id=17812 button london, gb (lon - all> <div> <span> London </span> , GB (LON - All Airports) </div> </button> </li> <li option> <button id=17815 button london, gb (lhr - heathrow)> <div> <span> London </span> , GB (LHR) </div> </button> </li> <li option> <button id=17818 button london, gb (lcy - city)> <div> <span> London </span> , GB (LCY) </div> </button> </li> </ul> </div> </section> </main> </html>"
+    },
+    {
+      "action": "TYPE [26555] [new york]",
+      "op": "TYPE",
+      "element": "26555",
+      "value": "new york",
+      "description": "[combobox] Enter your destination city, airport name, or airp... -> TYPE: new york",
+      "role": "combobox",
+      "label": "Enter your destination city, airport name, or airp...",
+      "observation": "<html> <main main> <section tabpanel> <div> <div> <input id=26555 combobox text new york/newark ewr to /> <label enter your destination city, airport> To </label> </div> <div> <button id=27556 combobox button date, enter to change collapsed datesdropdown apr 6, 2023> <div apr 6, 2023> Apr 6, 2023 </div> </button> <label date, enter to change collapsed> Date </label> </div> </div> </section> <div> <button submit> </button> <button id=27707 button> <span> Refine search </span> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [35290]",
+      "op": "CLICK",
+      "element": "35290",
+      "value": "",
+      "description": "[span] New York -> CLICK",
+      "role": "span",
+      "label": "New York",
+      "observation": "<html> <main main> <section tabpanel> <div tooltip> <ul listbox> <li option> <button id=35290 button new york, ny, us (nyc> <div> <span> New York </span> , NY, US (NYC - All Airports) </div> </button> </li> <li option> <button id=35293 button new york, ny, us (lga> <div> <span> New York </span> , NY, US (LGA) </div> </button> </li> <li option> <button id=35298 button new york, ny, us (nys> <div> <span> New York </span> , NY, US (NYS) </div> </button> </li> </ul> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [45031]",
+      "op": "CLICK",
+      "element": "45031",
+      "value": "",
+      "description": "[generic] Apr 6, 2023 -> CLICK",
+      "role": "generic",
+      "label": "Apr 6, 2023",
+      "observation": "<html> <main main> <section tabpanel> <div> <button id=45031 combobox button date, enter to change collapsed datesdropdown apr 6, 2023> <div apr 6, 2023> Apr 6, 2023 </div> </button> <label date, enter to change collapsed> Date </label> </div> </section> <div> <div group> <button id=45105 button> <span> Continue booking </span> </button> </div> <div> <button submit> </button> <button id=45181 button> <span> Refine search </span> </button> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [52763]",
+      "op": "CLICK",
+      "element": "52763",
+      "value": "",
+      "description": "[option] Apr 7, 2023 -> CLICK",
+      "role": "option",
+      "label": "Apr 7, 2023",
+      "observation": "<html> <main main> <section tabpanel> <div> <ul listbox> <li option apr 4, 2023> Apr 4, 2023 </li> <li option apr 5, 2023> Apr 5, 2023 </li> <li option apr 6, 2023> Apr 6, 2023 </li> <li id=52763 option apr 7, 2023> Apr 7, 2023 </li> <li option apr 8, 2023> Apr 8, 2023 </li> </ul> <a receive flight status notifications by> Receive flight status notifications by email or text message </a> <button id=53784 submit search> <span> Search </span> </button> </div> </section> <div> <button submit> </button> <button id=53915 button> <span> Refine search </span> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [62517]",
+      "op": "CLICK",
+      "element": "62517",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a id=62382 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div> <a receive flight status notifications by> Receive flight status notifications by email or text message </a> <button id=62517 submit search> <span> Search </span> </button> </div> </section> <div> <button submit> </button> <button id=62647 button> <span> Refine search </span> </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [68292]",
+      "op": "CLICK",
+      "element": "68292",
+      "value": "",
+      "description": "[link] View details -> CLICK",
+      "role": "link",
+      "label": "View details",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a id=68112 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <div grid> <div rowgroup> <div row> <div gridcell> <button id=68212 button> <span> View details </span> </button> </div> </div> <div row> <div gridcell> <button id=68292 button> <span> View details </span> </button> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [73727]",
+      "op": "CLICK",
+      "element": "73727",
+      "value": "",
+      "description": "[tab] Upgrades -> CLICK",
+      "role": "tab",
+      "label": "Upgrades",
+      "observation": "<html> <body> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a id=74607 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <ul tablist> <li tab> Aircraft </li> <li tab> Standby </li> <li id=73727 tab> Upgrades </li> </ul> </div> <div dialog> <div alert> <svg id=75615 img atm-c-icon /> <p> The seat map for this flight is currently unavailable. Please try again later. </p> </div> </div> </body> </html>"
+    }
+  ]
+}

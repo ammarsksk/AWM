@@ -1,0 +1,30 @@
+{
+  "name": "aa / Airlines workflow 885",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Check flight status from London to New York City for next day.",
+  "steps": [
+    {
+      "action": "CLICK [114]",
+      "op": "CLICK",
+      "element": "114",
+      "value": "",
+      "description": "[link] Flight status -> CLICK",
+      "role": "link",
+      "label": "Flight status",
+      "observation": "<html> <main main main content> <div> <ul tablist> <li tab> <a id=114> Flight status </a> </li> </ul> <div tabpanel> <form> <label> From <input id=1322 text originairport ord city or airport /> </label> <div> <input id=1458 submit search /> <button button> Search </button> </div> </form> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [5679] [London]",
+      "op": "TYPE",
+      "element": "5679",
+      "value": "London",
+      "description": "[textbox] From , required. -> TYPE: London",
+      "role": "textbox",
+      "label": "From , required.",
+      "observation": "<html> <main main main content> <div tabpanel> <form> <ul radiogroup> <li> <input radio searchby city true /> <label id=7092> <span> Search by cities </span> <span> Cities </span> </label> </li> </ul> <div> <label> From <span> , required. </span> <input id=5679 text originairport city or airport /> </label> <label> To <span> , required. </span> <input id=7174 text city or airport /> </label> </div> </form> </div> </main> </html>"
+    }
+  ]
+}

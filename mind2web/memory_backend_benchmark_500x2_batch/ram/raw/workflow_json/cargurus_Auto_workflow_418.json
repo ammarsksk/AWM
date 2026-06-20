@@ -1,0 +1,30 @@
+{
+  "name": "cargurus / Auto workflow 418",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find used BMW i3 for 10001 zip code with lowest price.",
+  "steps": [
+    {
+      "action": "CLICK [15421]",
+      "op": "CLICK",
+      "element": "15421",
+      "value": "",
+      "description": "[menuitem] Buy -> CLICK",
+      "role": "menuitem",
+      "label": "Buy",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=15421 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <form dealfinderform> <fieldset> <input sourcecontext /> <span> near </span> <input id=16604 tel zip 10017 /> <input id=16608 submit search /> </fieldset> </form> </body> </html>"
+    },
+    {
+      "action": "SELECT [25275] [BMW]",
+      "op": "SELECT",
+      "element": "25275",
+      "value": "BMW",
+      "description": "[combobox] Select Make -> SELECT: BMW",
+      "role": "combobox",
+      "label": "Select Make",
+      "observation": "<html> <form> <div> <select id=25275 select make selectedmakeid> <option true> All Makes </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <svg img /> </div> <div> <input id=26446 tel zip code zip 10017 /> <button button find my location> </button> </div> <button id=26477 submit> <div> Search </div> </button> </form> </html>"
+    }
+  ]
+}

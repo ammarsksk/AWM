@@ -1,0 +1,30 @@
+{
+  "name": "exploretock / Restaurant workflow 921",
+  "source": "Mind2Web exemplar",
+  "website": "exploretock",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "book a reservation for three guest on April 5th, 5pm in Alinea restaurant, Chicago, IL",
+  "steps": [
+    {
+      "action": "CLICK [636]",
+      "op": "CLICK",
+      "element": "636",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div> <button id=636> <span> Search </span> </button> <button search /> <button toggle menu open> </button> </div> <div> <input id=728 text location columbus, oh /> <button id=730 button select location /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [3301] [Alinea]",
+      "op": "TYPE",
+      "element": "3301",
+      "value": "Alinea",
+      "description": "[textbox] Search -> TYPE: Alinea",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <body> <div> <input id=3927 text location columbus, oh /> <button id=3929 button select location /> </div> <input id=3301 text search find a business, cuisine, or /> </body> </html>"
+    }
+  ]
+}

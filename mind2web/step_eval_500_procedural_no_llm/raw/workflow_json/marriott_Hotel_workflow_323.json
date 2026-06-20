@@ -1,0 +1,70 @@
+{
+  "name": "marriott / Hotel workflow 323",
+  "source": "Mind2Web exemplar",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Look for a room at the Marriott Bonvoy resort in the Caribbean for a 10-day stay starting on May 5th.",
+  "steps": [
+    {
+      "action": "TYPE [109] [Carribbean]",
+      "op": "TYPE",
+      "element": "109",
+      "value": "Carribbean",
+      "description": "[textbox] \ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR... -> TYPE: Carribbean",
+      "role": "textbox",
+      "label": "\ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+      "observation": "<html> <div> <form search> <div combobox> <div> <input id=109 text where can we take you? /> <button button clear /> </div> </div> <button id=2319 submit> Find Hotels </button> </form> <a id=6109> Resorts </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [14995]",
+      "op": "CLICK",
+      "element": "14995",
+      "value": "",
+      "description": "[button] \ue9571 NIGHT Wed, Apr 19 - Thu, Apr 20 -> CLICK",
+      "role": "button",
+      "label": "\ue9571 NIGHT Wed, Apr 19 - Thu, Apr 20",
+      "observation": "<html> <body> <a id=15250> <span> Marriott Bonvoy </span> </a> <form search> <div> <ul listbox> <li id=17213 option> <p> Caribbean </p> </li> <li option> </li> <li option> </li> <li option> </li> </ul> <button id=14995 button> <span> 1 Night </span> <span> Wed, Apr 19 - Thu, Apr 20 </span> </button> </div> </form> </body> </html>"
+    },
+    {
+      "action": "CLICK [30362]",
+      "op": "CLICK",
+      "element": "30362",
+      "value": "",
+      "description": "[span] 5 -> CLICK",
+      "role": "span",
+      "label": "5",
+      "observation": "<html> <form search> <div> <div> <div grid> <div rowgroup> <div row> <div gridcell wed apr 05 2023> <span> <span id=32704> 5 </span> <input 3 /> <input 2023 /> </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell fri may 05 2023> <span> <span id=30362> 5 </span> <input 4 /> <input 2023 /> </span> </div> </div> </div> </div> </div> <button id=33102 button> Done </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [46216]",
+      "op": "CLICK",
+      "element": "46216",
+      "value": "",
+      "description": "[span] 15 -> CLICK",
+      "role": "span",
+      "label": "15",
+      "observation": "<html> <form search> <div> <div grid> <div rowgroup> <div row> <div gridcell wed apr 05 2023> <span> <span id=48560> 5 </span> <input 3 /> <input 2023 /> </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell fri may 05 2023> <span> <span id=48786> 5 </span> <input 4 /> <input 2023 /> </span> </div> </div> <div row> <div gridcell mon may 15 2023> <span> <span id=46216> 15 </span> <input 4 /> <input 2023 /> </span> </div> </div> </div> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [62085]",
+      "op": "CLICK",
+      "element": "62085",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <form search> <div> <div grid> <div rowgroup> <div row> <div gridcell fri may 05 2023> <span> <span id=64654> 5 </span> <input 4 /> <input 2023 /> </span> </div> </div> <div row> <div gridcell wed may 10 2023> <span> <span id=64685> 10 </span> <input 4 /> <input 2023 /> </span> </div> </div> </div> </div> <button id=62085 button> Done </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [77457]",
+      "op": "CLICK",
+      "element": "77457",
+      "value": "",
+      "description": "[button] Find Hotels -> CLICK",
+      "role": "button",
+      "label": "Find Hotels",
+      "observation": "<html> <div> <form search> <button id=77483 button> <span> 10 Nights </span> <span> Fri, May 05 - Mon, May 15 </span> </button> <button id=77457 submit> Find Hotels </button> </form> <button id=82179> <span> Next </span> </button> </div> </html>"
+    }
+  ]
+}

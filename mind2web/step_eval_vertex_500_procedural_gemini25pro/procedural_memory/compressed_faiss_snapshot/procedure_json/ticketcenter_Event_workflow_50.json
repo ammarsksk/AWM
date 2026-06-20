@@ -1,0 +1,148 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "off",
+      "broadway",
+      "theatre",
+      "gridcell",
+      "ticketcenter",
+      "entertainment",
+      "event",
+      "find",
+      "list",
+      "shows",
+      "april",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "all",
+      "dates",
+      "textbox",
+      "date",
+      "range",
+      "apply"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Entertainment",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the THEATRE",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "THEATRE",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Off-Broadway",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Off-Broadway",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the All dates",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "All dates",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Select Date Range",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Select Date Range",
+        "target_type": "textbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 19",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "19",
+        "target_type": "gridcell",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[input] -> CLICK",
+        "target_type": "input",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 19",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "19",
+        "target_type": "gridcell",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Apply",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Apply",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find the list of off-Broadway theatre shows on April 19",
+  "memory_type": "typed_procedure",
+  "name": "ticketcenter / Event workflow 50",
+  "raw_workflow_name": "ticketcenter / Event workflow 50",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 8.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Event",
+  "termination": {
+    "max_steps_hint": 8,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "ticketcenter"
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "name": "rottentomatoes / Movie workflow 216",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Browse movie trailers currently in theaters with \"fresh\" rating.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "movie",
+      "trailers",
+      "div",
+      "rottentomatoes",
+      "entertainment",
+      "browse",
+      "currently",
+      "theaters",
+      "fresh",
+      "rating",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "movies",
+      "view",
+      "all",
+      "span",
+      "tomatometer",
+      "apply"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the MOVIES",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "MOVIES",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Trailers",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Trailers",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the VIEW ALL",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "VIEW ALL",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Tomatometer",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Tomatometer",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [div] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "[div] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "rottentomatoes / Movie workflow 216"
+}

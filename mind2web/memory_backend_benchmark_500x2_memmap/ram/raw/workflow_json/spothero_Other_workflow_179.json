@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 179",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a monthly parking with valet service at the New York University.",
+  "steps": [
+    {
+      "action": "CLICK [131]",
+      "op": "CLICK",
+      "element": "131",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=131 tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=458 text search for parking search-input address, place, city or venue /> </div> <ul list> <a id=754> Monthly Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [2124] [New York University]",
+      "op": "TYPE",
+      "element": "2124",
+      "value": "New York University",
+      "description": "[textbox] Search for parking -> TYPE: New York University",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=2124 text search for parking search-input address, place, city or venue /> <button id=2460 button> Search </button> </div> <ul list> <a id=2747> Monthly Parking </a> </ul> </div> </html>"
+    }
+  ]
+}

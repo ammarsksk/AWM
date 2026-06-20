@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "name": "booking / General workflow 116",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "goal_pattern": "Book a flight for two adults from Shanghai to Seoul on May 10, and return on May 12 also book a hotel with it, with maximum bundled savings and if top hotel not available book the next one.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "svg",
+      "book",
+      "may",
+      "hotel",
+      "choose",
+      "use",
+      "room",
+      "flight",
+      "shanghai",
+      "seoul",
+      "textbox",
+      "where",
+      "specific",
+      "field",
+      "div",
+      "path",
+      "checkbox",
+      "2023",
+      "your",
+      "booking",
+      "travel",
+      "general",
+      "two",
+      "adults",
+      "return",
+      "also",
+      "maximum",
+      "bundled",
+      "savings",
+      "top",
+      "not",
+      "available",
+      "next",
+      "one",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "china",
+      "republic",
+      "korea",
+      "search",
+      "link"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Flight + Hotel",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Flight + Hotel",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Where from?",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Where from?",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Shanghai, China",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Shanghai, China",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Where to?",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Where to?",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Seoul, Republic Of Korea",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Seoul, Republic Of Korea",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "path",
+        "target": "[path] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 10 May 2023",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "10 May 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the 12 May 2023",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "12 May 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Choose your room",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Choose your room",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Choose Another Hotel",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Choose Another Hotel",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Choose your room",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Choose your room",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Book Double Bed - Standard Room",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Book Double Bed - Standard Room",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Choose",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Choose",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 17
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 17.0
+  },
+  "raw_workflow_name": "booking / General workflow 116"
+}

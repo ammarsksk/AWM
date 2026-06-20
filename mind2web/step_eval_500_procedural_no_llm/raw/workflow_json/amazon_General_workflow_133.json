@@ -1,0 +1,110 @@
+{
+  "name": "amazon / General workflow 133",
+  "source": "Mind2Web exemplar",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Add a pack of toilet paper and a bottle of laundry detergent to your Amazon cart with the lowest total price.",
+  "steps": [
+    {
+      "action": "TYPE [159] [toilet paper]",
+      "op": "TYPE",
+      "element": "159",
+      "value": "toilet paper",
+      "description": "[textbox] Search Amazon -> TYPE: toilet paper",
+      "role": "textbox",
+      "label": "Search Amazon",
+      "observation": "<html> <div> <div navigation> <form search site-search> <input id=159 text search amazon field-keywords /> </form> <a id=864 button open menu> <span> All </span> </a> </div> <div navigation more on amazon> <a id=3781> Amazon Fresh <span> Groceries & More Right To Your Door </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8851]",
+      "op": "CLICK",
+      "element": "8851",
+      "value": "",
+      "description": "[button] Go -> CLICK",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div navigation> <form search site-search> <span go> <input id=8851 submit go /> </span> </form> <div> <div id=9345 button toilet paper> toilet paper </div> <div id=9349 button toilet paper holder> toilet paper <span> holder </span> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [13233]",
+      "op": "CLICK",
+      "element": "13233",
+      "value": "",
+      "description": "[span] Featured -> CLICK",
+      "role": "span",
+      "label": "Featured",
+      "observation": "<html> <div> <span> <label> Sort by: </label> <select s> </select> <span id=13363 sort by:> <span> <span> Sort by: </span> <span id=13233> Featured </span> </span> </span> </span> <a id=28831> <span> Bulk Quantity Toilet Tissue </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [49992]",
+      "op": "CLICK",
+      "element": "49992",
+      "value": "",
+      "description": "[option] Price: Low to High -> CLICK",
+      "role": "option",
+      "label": "Price: Low to High",
+      "observation": "<html> <body> <a id=65028> <span> laundry detergent </span> </a> <ul listbox> <li option> <a id=49992> Price: Low to High </a> </li> <li option> <a id=68016> Price: High to Low </a> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [70512]",
+      "op": "CLICK",
+      "element": "70512",
+      "value": "",
+      "description": "[button] Add to Cart -> CLICK",
+      "role": "button",
+      "label": "Add to Cart",
+      "observation": "<html> <div> <form> <input qid 1679984432 /> <input sr 8-11 /> <input {} /> <button id=70512 button> Add to Cart </button> </form> <div> <a id=78272> <span> Toilet Paper </span> </a> <li paper> <a id=79467> <input checkbox /> <span> Paper </span> </a> </li> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [93211] [laundry detergent]",
+      "op": "TYPE",
+      "element": "93211",
+      "value": "laundry detergent",
+      "description": "[textbox] Search Amazon -> TYPE: laundry detergent",
+      "role": "textbox",
+      "label": "Search Amazon",
+      "observation": "<html> <div> <div navigation> <form search site-search> <input id=93211 text search amazon field-keywords toilet paper /> </form> </div> <div> <a id=101164> <span> Toilet Paper </span> </a> <li paper> <a id=102359> <input checkbox /> <span> Paper </span> </a> </li> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [116568]",
+      "op": "CLICK",
+      "element": "116568",
+      "value": "",
+      "description": "[button] Go -> CLICK",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div> <div navigation> <form search site-search> <span go> <input id=116568 submit go /> </span> </form> <div id=117177 button laundry detergent> laundry detergent </div> </div> <li paper> <a id=125795> <input checkbox /> <span> Paper </span> </a> </li> </div> </html>"
+    },
+    {
+      "action": "CLICK [128223]",
+      "op": "CLICK",
+      "element": "128223",
+      "value": "",
+      "description": "[span] Featured -> CLICK",
+      "role": "span",
+      "label": "Featured",
+      "observation": "<html> <span> <label> Sort by: </label> <select id=128364 s> <option true> Featured </option> <option price-asc-rank> Price: Low to High </option> <option> Price: High to Low </option> <option review-rank> Avg. Customer Review </option> <option date-desc-rank> Newest Arrivals </option> </select> <span id=128365 sort by:> <span> <span> Sort by: </span> <span id=128223> Featured </span> </span> </span> </span> </html>"
+    },
+    {
+      "action": "CLICK [168006]",
+      "op": "CLICK",
+      "element": "168006",
+      "value": "",
+      "description": "[option] Price: Low to High -> CLICK",
+      "role": "option",
+      "label": "Price: Low to High",
+      "observation": "<html> <body> <a id=184824> <span> toilet paper </span> </a> <ul listbox> <li option> <a id=168006> Price: Low to High </a> </li> <li option> <a id=187622> Price: High to Low </a> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [190286]",
+      "op": "CLICK",
+      "element": "190286",
+      "value": "",
+      "description": "[button] Add to Cart -> CLICK",
+      "role": "button",
+      "label": "Add to Cart",
+      "observation": "<html> <div> <form> <input qid 1679984515 /> <input sr 8-2 /> <input {} /> <button id=190286 button> Add to Cart </button> </form> <ul> <a id=201000> <span> Laundry Detergent </span> </a> <a id=201010> <span> Liquid Laundry Detergent </span> </a> </ul> </div> </html>"
+    }
+  ]
+}

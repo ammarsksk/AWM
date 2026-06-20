@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "name": "united / Airlines workflow 6",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "austin",
+      "april",
+      "2023",
+      "combobox",
+      "enter",
+      "your",
+      "city",
+      "airport",
+      "name",
+      "specific",
+      "field",
+      "span",
+      "link",
+      "united",
+      "travel",
+      "airlines",
+      "compare",
+      "fare",
+      "types",
+      "book",
+      "adult",
+      "ticket",
+      "springfiels",
+      "29th",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "departing",
+      "airpor",
+      "springfield",
+      "spi",
+      "destination",
+      "airp",
+      "aus",
+      "find",
+      "flights",
+      "textbox",
+      "date",
+      "move",
+      "backward",
+      "switch",
+      "previous"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Enter your departing city, airport name, or airpor...",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Enter your departing city, airport name, or airpor...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Springfield, IL, US (SPI",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Springfield, IL, US (SPI",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Enter your destination city, airport name, or airp...",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Enter your destination city, airport name, or airp...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Austin, TX, US (AUS",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Austin, TX, US (AUS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Find flights",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Find flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Date",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Move backward to switch to the previous month.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Move backward to switch to the previous month.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Saturday, April 29, 2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Saturday, April 29, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Update",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Update",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Details",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Details",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Seats",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Seats",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "united / Airlines workflow 6"
+}

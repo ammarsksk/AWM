@@ -1,0 +1,120 @@
+{
+  "name": "spothero / Other workflow 180",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show the details for a monthly parking option in Ney York City near Street Taco to start on may 6 that i can self park",
+  "steps": [
+    {
+      "action": "CLICK [105]",
+      "op": "CLICK",
+      "element": "105",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=105 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=427 text search for parking search-input address, place, city or venue /> <button id=436 button> Search </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2076] [street taco]",
+      "op": "TYPE",
+      "element": "2076",
+      "value": "street taco",
+      "description": "[textbox] Search for parking -> TYPE: street taco",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=2388 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=2076 text search for parking search-input address, place, city or venue /> <button id=2408 button> Search </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4071]",
+      "op": "CLICK",
+      "element": "4071",
+      "value": "",
+      "description": "[li] Street Taco, Broadway, New York, NY, USA -> CLICK",
+      "role": "li",
+      "label": "Street Taco, Broadway, New York, NY, USA",
+      "observation": "<html> <div> <div> <input id=4394 text search for parking search-input street taco address, place, city or venue /> <ul> <li id=4071> Street Taco, Broadway, New York, NY, USA </li> <li> Street Tacos Cantina, Falls of Neuse Road, Raleigh, NC, USA </li> <li> Street Taco Company, De Zavala Road, San Antonio, TX, USA </li> <li> Street Tacos, Chickasaw Ridge Drive, Oakland, TN, USA </li> </ul> </div> <button id=4415 button> Search </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [6165]",
+      "op": "CLICK",
+      "element": "6165",
+      "value": "",
+      "description": "[textbox] Monthly Start Date -> CLICK",
+      "role": "textbox",
+      "label": "Monthly Start Date",
+      "observation": "<html> <div> <div> <input id=6165 text monthly start date apr 7, 2023 /> <button id=6900 button> Filter </button> </div> <button id=6982 button> View Details </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [10089]",
+      "op": "CLICK",
+      "element": "10089",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <button button> <svg id=10089 icon /> </button> <div grid> <div rowgroup> <div row> <div gridcell thu apr 06 2023> <span id=11902> 6 </span> </div> </div> <div row> <div gridcell sat may 06 2023> <span id=11996> 6 </span> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [14164]",
+      "op": "CLICK",
+      "element": "14164",
+      "value": "",
+      "description": "[gridcell] Sat May 06 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Sat May 06 2023",
+      "observation": "<html> <body> <button id=14898 button> Filter </button> <div grid> <div rowgroup> <div row> <div gridcell wed may 03 2023> </div> <div gridcell thu may 04 2023> </div> <div gridcell fri may 05 2023> </div> <div id=15965 gridcell sat may 06 2023> <span id=14164> 6 </span> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [18055]",
+      "op": "CLICK",
+      "element": "18055",
+      "value": "",
+      "description": "[button] Update Search -> CLICK",
+      "role": "button",
+      "label": "Update Search",
+      "observation": "<html> <div> <div> <button id=18055 button> Update Search </button> <button button> Cancel </button> </div> <div> <button id=18857 button> View Details </button> <button id=18890 button> View Details </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21792]",
+      "op": "CLICK",
+      "element": "21792",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=22466 tab button> Monthly </button> </div> <input id=22512 text monthly start date may 6, 2023 /> <button id=21792 button> Filter </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [25653]",
+      "op": "CLICK",
+      "element": "25653",
+      "value": "",
+      "description": "[checkbox] Self Park (1",
+      "role": "checkbox",
+      "label": "Self Park (1",
+      "observation": "<html> <body> <div tablist> <button tab button> Hourly </button> <button id=26328 tab button> Monthly </button> </div> <div> <input id=25653 checkbox self-park on /> <label id=27506> Self Park <span> (1) </span> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [28738]",
+      "op": "CLICK",
+      "element": "28738",
+      "value": "",
+      "description": "[button] Show 1 Results -> CLICK",
+      "role": "button",
+      "label": "Show 1 Results",
+      "observation": "<html> <body> <button id=29359 button> <span> 1 </span> Filter </button> <div> <div> <input checkbox no-contract on /> <label id=29675> Month to Month <span> (1) </span> </label> </div> <div> <button id=28738 button> Show 1 Results </button> <button button> Clear All </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [30971]",
+      "op": "CLICK",
+      "element": "30971",
+      "value": "",
+      "description": "[button] View Details -> CLICK",
+      "role": "button",
+      "label": "View Details",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=31530 tab button> Monthly </button> </div> <input id=31576 text monthly start date may 6, 2023 /> </div> <button id=30971 button> View Details </button> </div> </html>"
+    }
+  ]
+}

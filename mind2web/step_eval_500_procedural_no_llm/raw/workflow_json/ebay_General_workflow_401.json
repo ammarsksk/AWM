@@ -1,0 +1,80 @@
+{
+  "name": "ebay / General workflow 401",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Browse new laptops from $400 to $500 that offers free shippping.",
+  "steps": [
+    {
+      "action": "TYPE [229] [laptop]",
+      "op": "TYPE",
+      "element": "229",
+      "value": "laptop",
+      "description": "[combobox] Search for anything -> TYPE: laptop",
+      "role": "combobox",
+      "label": "Search for anything",
+      "observation": "<html> <body> <header banner> <tr> <td> <input id=229 combobox text search for anything _nkw /> <ul listbox> </ul> </td> <input id=768 submit search /> </tr> </header> <div main> <li> <a id=1008> Electronics </a> <button> Expand: Electronics </button> </li> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [9208]",
+      "op": "CLICK",
+      "element": "9208",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <header banner> <tr> <ul listbox> <a id=9581 option laptop computers> <b> laptop </b> computers </a> </ul> <input id=9208 submit search /> </tr> </header> <div main> <li> <a id=9943> Electronics </a> <button> Expand: Electronics </button> </li> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [13485]",
+      "op": "CLICK",
+      "element": "13485",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <ul> <input id=13485 checkbox new on /> <li> <div id=16059 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=16148 button submit price range /> </div> </li> </ul> </html>"
+    },
+    {
+      "action": "TYPE [26619] [400]",
+      "op": "TYPE",
+      "element": "26619",
+      "value": "400",
+      "description": "[textbox] Minimum Value in $ -> TYPE: 400",
+      "role": "textbox",
+      "label": "Minimum Value in $",
+      "observation": "<html> <li> <div id=29276 button> <h3> Price </h3> </div> <div> <span> <label> Min </label> <input id=26619 text minimum value in $ /> </span> <span> to </span> <button id=29364 button submit price range /> </div> </li> </html>"
+    },
+    {
+      "action": "TYPE [49807] [500]",
+      "op": "TYPE",
+      "element": "49807",
+      "value": "500",
+      "description": "[textbox] Maximum Value in $ -> TYPE: 500",
+      "role": "textbox",
+      "label": "Maximum Value in $",
+      "observation": "<html> <li> <div id=52578 button> <h3> Price </h3> </div> <div> <span> to </span> <span> <label> Max </label> <input id=49807 text maximum value in $ /> </span> <button id=52642 button submit price range /> </div> </li> </html>"
+    },
+    {
+      "action": "CLICK [73006]",
+      "op": "CLICK",
+      "element": "73006",
+      "value": "",
+      "description": "[button] Submit price range -> CLICK",
+      "role": "button",
+      "label": "Submit price range",
+      "observation": "<html> <ul> <li> <div id=75725 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=73006 button submit price range /> </div> </li> <li lh_fs> <a id=76043> <div> <input checkbox free shipping on /> <span> Free Shipping </span> </div> </a> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [84591]",
+      "op": "CLICK",
+      "element": "84591",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <ul> <div id=87093 button> <h3> Price </h3> </div> <li lh_fs> <a id=87451> <div> <input id=84591 checkbox free shipping on /> <span> Free Shipping </span> </div> </a> </li> </ul> </html>"
+    }
+  ]
+}

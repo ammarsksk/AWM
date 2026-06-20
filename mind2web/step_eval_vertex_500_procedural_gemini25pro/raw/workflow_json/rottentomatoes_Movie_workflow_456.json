@@ -1,0 +1,60 @@
+{
+  "name": "rottentomatoes / Movie workflow 456",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find adventure movies coming to theaters.",
+  "steps": [
+    {
+      "action": "CLICK [162]",
+      "op": "CLICK",
+      "element": "162",
+      "value": "",
+      "description": "[link] MOVIES -> HOVER",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=498 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=162> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2499> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [30977]",
+      "op": "CLICK",
+      "element": "30977",
+      "value": "",
+      "description": "[link] Coming soon to theaters -> CLICK",
+      "role": "link",
+      "label": "Coming soon to theaters",
+      "observation": "<html> <rt-header navigation bar> <slot nav-dropdowns> <nav> <slot movies> <slot dropdown> <slot column> <div> <slot title> <a id=31604> Movies in theaters </a> </slot> <slot links> <a id=30977> Coming soon to theaters </a> </slot> </div> </slot> </slot> </slot> <slot showtimes> <slot link> <a id=33313> Showtimes </a> </slot> </slot> </nav> </slot> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [49363]",
+      "op": "CLICK",
+      "element": "49363",
+      "value": "",
+      "description": "[span] Genre -> CLICK",
+      "role": "span",
+      "label": "Genre",
+      "observation": "<html> <div> <rt-header navigation bar> <slot desktop-search> <slot> <slot search-input> <input id=46789 text search search movies, tv, actors, more... /> </slot> </slot> </slot> </rt-header> <div> <filter-chip button sort> </filter-chip> <filter-chip id=49363 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip id=49389 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [68334]",
+      "op": "CLICK",
+      "element": "68334",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <slot content> <select-checkbox-group group> <slot row> <select-label id=68315> <div> <slot label> <span id=68327> ADVENTURE </span> </slot> <slot input> <select-checkbox id=68334 checkbox adventure> </select-checkbox> </slot> </div> </select-label> </slot> </select-checkbox-group> </slot> </html>"
+    },
+    {
+      "action": "CLICK [84453]",
+      "op": "CLICK",
+      "element": "84453",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <slot content> <select-checkbox-group group adventure> <slot row> <div> <slot label> <span id=87566> ADVENTURE </span> </slot> <slot input> <select-checkbox id=87573 checkbox adventure> </select-checkbox> </slot> </div> </slot> </select-checkbox-group> </slot> <slot cta2> <button id=84453> Apply </button> </slot> </div> </html>"
+    }
+  ]
+}

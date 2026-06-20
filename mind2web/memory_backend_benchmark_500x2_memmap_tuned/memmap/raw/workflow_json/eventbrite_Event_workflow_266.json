@@ -1,0 +1,30 @@
+{
+  "name": "eventbrite / Event workflow 266",
+  "source": "Mind2Web exemplar",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Get 2 tickets for a free pet festival in English in Portland on april 15 to april 16",
+  "steps": [
+    {
+      "action": "CLICK [351]",
+      "op": "CLICK",
+      "element": "351",
+      "value": "",
+      "description": "[div] Search for events -> CLICK",
+      "role": "div",
+      "label": "Search for events",
+      "observation": "<html> <div> <button id=351 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <div> <div> <div> Popular in </div> <input id=499 combobox text locationpicker colorado /> </div> <button id=546 button> <span> Charity & Causes </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2060] [pet festival]",
+      "op": "TYPE",
+      "element": "2060",
+      "value": "pet festival",
+      "description": "[textbox] Search events -> TYPE: pet festival",
+      "role": "textbox",
+      "label": "Search events",
+      "observation": "<html> <div> <div> <div> Popular in </div> <input id=2448 combobox text locationpicker colorado /> </div> <div alertdialog> <main> <input id=2060 textbox search search for anything /> <input id=3322 combobox text colorado /> </main> </div> </div> </html>"
+    }
+  ]
+}

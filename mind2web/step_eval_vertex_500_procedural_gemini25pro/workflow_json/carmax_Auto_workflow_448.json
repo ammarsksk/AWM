@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "name": "carmax / Auto workflow 448",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find series 1 and series 2 BMW vehicles in the store nearest to 07055",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "series",
+      "store",
+      "nearest",
+      "use",
+      "distance",
+      "back",
+      "all",
+      "categories",
+      "textbox",
+      "enter",
+      "zip",
+      "state",
+      "set",
+      "listitem",
+      "carmax",
+      "shopping",
+      "auto",
+      "find",
+      "bmw",
+      "vehicles",
+      "07055",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "search",
+      "cars",
+      "div",
+      "best",
+      "match",
+      "label",
+      "shipping",
+      "change",
+      "location",
+      "specific",
+      "field",
+      "make",
+      "span",
+      "954"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the SEARCH CARS",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "SEARCH CARS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Best match",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Best match",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Nearest distance",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Nearest distance",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Back to all categories",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Back to all categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Distance & Shipping",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Distance & Shipping",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Change Location",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Change Location",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Enter ZIP or State",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Enter ZIP or State",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "type the Enter ZIP or State",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Enter ZIP or State",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Set My Store",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Set My Store",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the set store",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "set store",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Make",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Make",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the (954",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "(954",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Back to all categories",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Back to all categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Series",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Series",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the 1-SERIES (8",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "1-SERIES (8",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the 2-SERIES (5",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "2-SERIES (5",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 16
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 16.0
+  },
+  "raw_workflow_name": "carmax / Auto workflow 448"
+}

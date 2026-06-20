@@ -1,0 +1,80 @@
+{
+  "name": "mbta / Ground workflow 368",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Show me the upcoming departures for the oak grove station going southbound direction",
+  "steps": [
+    {
+      "action": "TYPE [71] [oak grove station]",
+      "op": "TYPE",
+      "element": "71",
+      "value": "oak grove station",
+      "description": "[combobox] Search MBTA.com -> TYPE: oak grove station",
+      "role": "combobox",
+      "label": "Search MBTA.com",
+      "observation": "<html> <div> <div> <label> Search MBTA.com </label> <input id=71 combobox text query search for routes, info, and /> <button search> </button> </div> <div navigation> <div tabpanel> <div> <a id=1974> <svg img> <title> subway </title> </svg> <div> Subway <span> Lines </span> </div> </a> <a id=69> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9577]",
+      "op": "CLICK",
+      "element": "9577",
+      "value": "",
+      "description": "[button] search -> CLICK",
+      "role": "button",
+      "label": "search",
+      "observation": "<html> <div> <label> Search MBTA.com </label> <input combobox text query search for routes, info, and oak grove station /> <pre> oak grove station </pre> <button id=9577 search> <svg img> <title> search </title> </svg> </button> <div> 11 results </div> <span listbox> <span> <div option> </div> <div id=9902 option> <a id=9904> <span> MBTA <em> Oak </em> <em> Grove </em> <em> Station </em> , Malden, MA 02148, United States </span> </a> </div> <div option> </div> </span> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [13084]",
+      "op": "CLICK",
+      "element": "13084",
+      "value": "",
+      "description": "[link] T orange line bus commuter rail Zone 1A Oak Grove -> CLICK",
+      "role": "link",
+      "label": "T orange line bus commuter rail Zone 1A Oak Grove",
+      "observation": "<html> <div> <div> <a id=15438> <span> MBTA- <em> Oak </em> <em> Grove </em> , Washington St, Malden, MA 02148, United States </span> </a> <a id=15457> <span> MBTA <em> Oak </em> <em> Grove </em> <em> Station </em> , Malden, MA 02148, United States </span> </a> </div> <a id=13084> <svg img> <title> T </title> </svg> <span> <svg img> <title> orange line </title> </svg> <svg img> <title> bus </title> </svg> <svg img> <title> commuter rail </title> </svg> <span> Zone 1A </span> </span> <span> <em> Oak </em> <em> Grove </em> </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [20883]",
+      "op": "CLICK",
+      "element": "20883",
+      "value": "",
+      "description": "[link] Go to route -> CLICK",
+      "role": "link",
+      "label": "Go to route",
+      "observation": "<html> <div> <div> <a id=20883> <span> Go to route </span> </a> <div id=22843> Southbound </div> </div> <a id=22865> <span> Go to route </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [23633]",
+      "op": "CLICK",
+      "element": "23633",
+      "value": "",
+      "description": "[button] View upcoming departures -> CLICK",
+      "role": "button",
+      "label": "View upcoming departures",
+      "observation": "<html> <div> <div> <div id=25579> Southbound </div> <div> Forest Hills </div> <button id=23631 button> Change Direction </button> </div> <button id=23633 button> View upcoming departures </button> </div> </html>"
+    },
+    {
+      "action": "SELECT [36127] [SOUTHBOUND Forest Hills]",
+      "op": "SELECT",
+      "element": "36127",
+      "value": "SOUTHBOUND Forest Hills",
+      "description": "[combobox] Choose a direction -> SELECT: SOUTHBOUND Forest Hills",
+      "role": "combobox",
+      "label": "Choose a direction",
+      "observation": "<html> <body> <div> <div id=33912> Southbound </div> <div> Forest Hills </div> <button id=33917 button> Change Direction </button> </div> <aside dialog schedules on the orange line> <label> Choose a direction <div id=36127 button> <select> <option southbound forest hills 0 true> SOUTHBOUND Forest Hills </option> <option northbound oak grove 1> NORTHBOUND Oak Grove </option> </select> <svg img /> </div> </label> </aside> </body> </html>"
+    },
+    {
+      "action": "CLICK [40537]",
+      "op": "CLICK",
+      "element": "40537",
+      "value": "",
+      "description": "[button] Oak Grove Zone 1A -> CLICK",
+      "role": "button",
+      "label": "Oak Grove Zone 1A",
+      "observation": "<html> <body> <header> <a id=42537> <span> Oak Grove </span> </a> <svg img /> </header> <aside dialog choose origin stop> <div> <div> <label> Choose an origin stop </label> <input id=44639 text filter stops and stations /> <button button search> </button> </div> <div> <div id=40537 button> Oak Grove <span> Zone 1A </span> </div> <div button> Malden Center </div> <div button> Wellington </div> <div button> Assembly </div> </div> </div> </aside> </body> </html>"
+    }
+  ]
+}

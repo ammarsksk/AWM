@@ -1,0 +1,51 @@
+{
+  "name": "marriott / Hotel workflow 543",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Use the \"Meetings & Events\" section of the website to browse locations for a business meeting for one room and 20 guests in Boston from May 30th to June 1st.",
+  "goal_pattern": "Use the \"Meetings & Events\" section of the website to browse locations for a business meeting for one room and 20 guests in Boston from May 30th to June 1st.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Meetings & Events",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Meetings & Events",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Book An Event Book a Meeting or Event",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Book An Event Book a Meeting or Event",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [1335]",
+      "gold_element_id": "1335",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [14658]",
+      "gold_element_id": "14658",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "marriott / Hotel workflow 543"
+}

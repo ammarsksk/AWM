@@ -1,0 +1,60 @@
+{
+  "name": "sports.yahoo / Sports workflow 441",
+  "source": "Mind2Web exemplar",
+  "website": "sports.yahoo",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "search for news about the latest news about Lebron James' injury and share the article on twitter.",
+  "steps": [
+    {
+      "action": "TYPE [87] [lebron james]",
+      "op": "TYPE",
+      "element": "87",
+      "value": "lebron james",
+      "description": "[combobox] Search query -> TYPE: lebron james",
+      "role": "combobox",
+      "label": "Search query",
+      "observation": "<html> <div banner> <div> <nav navigation> <a id=556> NEWS </a> </nav> <form search> <input id=87 combobox text p /> <input fr sports /> <input fr2 p:sprt,m:sb /> </form> <a id=730> Sports </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12188]",
+      "op": "CLICK",
+      "element": "12188",
+      "value": "",
+      "description": "[img] LeBron James -> CLICK",
+      "role": "img",
+      "label": "LeBron James",
+      "observation": "<html> <div banner> <div> <nav navigation> <a id=12481> NEWS </a> </nav> <form search> <li id=12618 lebron james> <img id=12188 lebron james /> <div> <h5> LeBron James </h5> <span> NBA - LA Lakers </span> </div> </li> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21592]",
+      "op": "CLICK",
+      "element": "21592",
+      "value": "",
+      "description": "[link] News -> CLICK",
+      "role": "link",
+      "label": "News",
+      "observation": "<html> <div> <div> <div banner> <nav navigation> <a id=18868> NEWS </a> </nav> </div> <div navigation> <a id=21001 injuries> Injuries </a> </div> </div> <a id=21592> <span> News </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [33080]",
+      "op": "CLICK",
+      "element": "33080",
+      "value": "",
+      "description": "[button] Social media share article menu -> CLICK",
+      "role": "button",
+      "label": "Social media share article menu",
+      "observation": "<html> <div> <div banner> <form search> <input id=33485 combobox text p /> <input fr sports /> <input fr2 p:sprt,m:sb /> </form> </div> <div navigation> <a id=35509 injuries> Injuries </a> </div> </div> <svg id=33080 m(a) cur(p) /> </html>"
+    },
+    {
+      "action": "CLICK [42228]",
+      "op": "CLICK",
+      "element": "42228",
+      "value": "",
+      "description": "[link] Share article on Twitter -> CLICK",
+      "role": "link",
+      "label": "Share article on Twitter",
+      "observation": "<html> <div> <div navigation> <a id=44630 injuries> Injuries </a> </div> <div tooltip hover menu of share icons> <div> <a facebook /> <a id=45279 share article on twitter> </a> <a email /> <a share article on reddit /> </div> </div> </div> <svg id=42228 d(ib) cur(p) /> </html>"
+    }
+  ]
+}

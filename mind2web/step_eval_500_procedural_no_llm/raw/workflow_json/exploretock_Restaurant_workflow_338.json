@@ -1,0 +1,120 @@
+{
+  "name": "exploretock / Restaurant workflow 338",
+  "source": "Mind2Web exemplar",
+  "website": "exploretock",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find tickets for Pizza making class in New York next month.",
+  "steps": [
+    {
+      "action": "CLICK [105]",
+      "op": "CLICK",
+      "element": "105",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <select id=703 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=721 text location columbus, oh /> <button button select location> <svg id=105 /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [3218]",
+      "op": "CLICK",
+      "element": "3218",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <body> <div> <select id=3828 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <input id=3846 text location columbus, oh /> </div> <div dialog> <button clear search> <svg id=3218 /> </button> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [6394] [NEW YORK]",
+      "op": "TYPE",
+      "element": "6394",
+      "value": "NEW YORK",
+      "description": "[searchbox] Find a location -> TYPE: NEW YORK",
+      "role": "searchbox",
+      "label": "Find a location",
+      "observation": "<html> <body> <div> <select id=7005 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <button id=7025 button select location> <svg/> </button> </div> <div dialog> <input id=6394 search find a location /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [10956]",
+      "op": "CLICK",
+      "element": "10956",
+      "value": "",
+      "description": "[span] New York -> CLICK",
+      "role": "span",
+      "label": "New York",
+      "observation": "<html> <body> <input id=9596 text location columbus, oh /> <div dialog> <ul location search results> <button id=10956> <span> <span> New York </span> <span> NY, USA </span> </span> </button> <button id=10963> <span> <span> New York State </span> <span> USA </span> </span> </button> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [12848] [Events]",
+      "op": "SELECT",
+      "element": "12848",
+      "value": "Events",
+      "description": "[combobox] Reservation type -> SELECT: Events",
+      "role": "combobox",
+      "label": "Reservation type",
+      "observation": "<html> <div> <select id=12848 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=13479 text date sat, mar 18 /> <button button date, selected value is sat, /> </div> <select id=13492 time> <option 10:00 true> Now </option> <option 10:30> 10:30 AM </option> <option 11:00> 11:00 AM </option> <option 11:30> 11:30 AM </option> <option 12:00> 12:00 PM </option> <option 12:30> 12:30 PM </option> <option 13:00> 1:00 PM </option> <option 13:30> 1:30 PM </option> <option 14:00> 2:00 PM </option> <option 14:30> 2:30 PM </option> <option 15:00> 3:00 PM </option> <option 15:30> 3:30 PM </option> <option 16:00> 4:00 PM </option> <option 16:30> 4:30 PM </option> <option 17:00> 5:00 PM </option> <option 17:30> 5:30 PM </option> <option 18:00> 6:00 PM </option> <option 18:30> 6:30 PM </option> <option 19:00> 7:00 PM </option> <option 19:30> 7:30 PM </option> <option 20:00> 8:00 PM </option> <option 20:30> 8:30 PM </option> <option 21:00> 9:00 PM </option> <option 21:30> 9:30 PM </option> <option 22:00> 10:00 PM </option> </select> </div> </html>"
+    },
+    {
+      "action": "SELECT [15870] [Next month]",
+      "op": "SELECT",
+      "element": "15870",
+      "value": "Next month",
+      "description": "[combobox] Event date -> SELECT: Next month",
+      "role": "combobox",
+      "label": "Event date",
+      "observation": "<html> <div> <select id=16466 type> <option reservations> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events true> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <button button select location> <svg id=15874 /> </button> <select id=15870 event-date> <option upcoming true> All upcoming </option> <option today> Today </option> <option week> This week </option> <option weekend> This weekend </option> <option month> This month </option> <option nextmonth> Next month </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [19434]",
+      "op": "CLICK",
+      "element": "19434",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <button id=19405 button select location> <svg/> </button> <a id=19431 search> <svg id=19434> </svg> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [21511]",
+      "op": "CLICK",
+      "element": "21511",
+      "value": "",
+      "description": "[button] Edit cuisine type filter -> CLICK",
+      "role": "button",
+      "label": "Edit cuisine type filter",
+      "observation": "<html> <div> <button change experience type filter> </button> <button id=21497 change location> <span> New York, NY </span> </button> <button id=21505 change date, time, and party-size> <span> Next month </span> </button> <button id=21511 edit cuisine type filter> <span> Cuisines </span> </button> <button open additional search filters> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [24636]",
+      "op": "CLICK",
+      "element": "24636",
+      "value": "",
+      "description": "[checkbox] Pizza -> CLICK",
+      "role": "checkbox",
+      "label": "Pizza",
+      "observation": "<html> <body> <div> <button change experience type filter> </button> <button change location> </button> <button change date, time, and party-size> </button> <button id=25176 edit cuisine type filter> <span> Cuisines </span> </button> <button open additional search filters> </button> </div> <fieldset cuisines> <label id=26179> <input id=24636 checkbox pizza /> <span> Pizza </span> </label> </fieldset> </body> </html>"
+    },
+    {
+      "action": "CLICK [30035]",
+      "op": "CLICK",
+      "element": "30035",
+      "value": "",
+      "description": "[button] Submit -> CLICK",
+      "role": "button",
+      "label": "Submit",
+      "observation": "<html> <body> <div> <button change experience type filter> </button> <button id=28956 change location> <span> New York, NY </span> </button> <button id=28964 change date, time, and party-size> <span> Next month </span> </button> <button edit cuisine type filter> </button> <button open additional search filters> </button> </div> <button id=30035 submit> <span> Submit </span> </button> </body> </html>"
+    },
+    {
+      "action": "CLICK [32194]",
+      "op": "CLICK",
+      "element": "32194",
+      "value": "",
+      "description": "[button] View Thursday Pizza Making Class at PDA Slice Shop... -> CLICK",
+      "role": "button",
+      "label": "View Thursday Pizza Making Class at PDA Slice Shop...",
+      "observation": "<html> <div> <div> <button change experience type filter> </button> <button id=32702 change location> <span> New York, NY </span> </button> <button id=32710 change date, time, and party-size> <span> Next month </span> </button> <button cuisine type filter: pizza> </button> <button open additional search filters> </button> </div> <button id=32194 view thursday pizza making class> <h2> Thursday Pizza Making Class at PDA Slice Shop </h2> </button> </div> </html>"
+    }
+  ]
+}

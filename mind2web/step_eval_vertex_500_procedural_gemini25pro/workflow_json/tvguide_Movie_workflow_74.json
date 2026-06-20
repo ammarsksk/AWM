@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "name": "tvguide / Movie workflow 74",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "tvguide",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Find the channel number for the local CBS in Spokane Washington in 99201.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "spokane",
+      "use",
+      "broadcast",
+      "tvguide",
+      "entertainment",
+      "movie",
+      "find",
+      "channel",
+      "number",
+      "local",
+      "cbs",
+      "washington",
+      "99201",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "live",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "antenna",
+      "apply",
+      "skip",
+      "div"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Live TV",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Live TV",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Broadcast TV Spokane (3",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Broadcast TV Spokane (3",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Search",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Antenna",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Antenna",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Broadcast TV Spokane (3",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Broadcast TV Spokane (3",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Apply",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Apply",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Skip",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Skip",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the CH 2.1",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "CH 2.1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "tvguide / Movie workflow 74"
+}

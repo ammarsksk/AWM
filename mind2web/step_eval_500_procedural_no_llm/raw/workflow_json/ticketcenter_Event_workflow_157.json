@@ -1,0 +1,50 @@
+{
+  "name": "ticketcenter / Event workflow 157",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Select a ticket for an event similar to professional boxing",
+  "steps": [
+    {
+      "action": "TYPE [87] [professional boxing]",
+      "op": "TYPE",
+      "element": "87",
+      "value": "professional boxing",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: professional boxing",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=375 button> Sports </a> <div> <input id=87 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2575 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [10986]",
+      "op": "CLICK",
+      "element": "10986",
+      "value": "",
+      "description": "[option] Professional Boxing -> CLICK",
+      "role": "option",
+      "label": "Professional Boxing",
+      "observation": "<html> <body> <a id=9031 button> Sports </a> <ul listbox> <a id=10986 option> <strong> Professional Boxing </strong> </a> <a id=10989 option> Live <strong> Professional Boxing </strong> </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [15303]",
+      "op": "CLICK",
+      "element": "15303",
+      "value": "",
+      "description": "[link] CES Boxing -> CLICK",
+      "role": "link",
+      "label": "CES Boxing",
+      "observation": "<html> <body> <a id=15616 button> Sports </a> <div> <a id=15303> CES Boxing </a> <ul tablist> <a id=18020 tab> <span> Sports </span> </a> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [24104]",
+      "op": "CLICK",
+      "element": "24104",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <body> <a id=22056 button> Sports </a> <div> <table grid> <tr row> <a id=24104> <span> Tickets </span> </a> </tr> </table> <div id=24377> Similar <span> Events </span> </div> </div> </body> </html>"
+    }
+  ]
+}

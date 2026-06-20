@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "name": "bookdepository / Speciality workflow 231",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Find a book in Hindi with ISBN 1648926800.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "required",
+      "1648926800",
+      "search",
+      "specific",
+      "field",
+      "bookdepository",
+      "shopping",
+      "speciality",
+      "find",
+      "book",
+      "hindi",
+      "isbn",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "advanced",
+      "all"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Advanced Search",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Advanced Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "input",
+        "target": "[input] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the [input] -> TYPE: 1648926800",
+        "operation": "TYPE",
+        "target_type": "input",
+        "target": "[input] -> TYPE: 1648926800",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "select the All",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "All",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "bookdepository / Speciality workflow 231"
+}

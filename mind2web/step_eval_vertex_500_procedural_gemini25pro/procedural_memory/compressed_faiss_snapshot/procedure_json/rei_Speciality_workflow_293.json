@@ -1,0 +1,190 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "trade",
+      "use",
+      "specific",
+      "field",
+      "link",
+      "mail",
+      "membership",
+      "joe",
+      "bloggs",
+      "123456789",
+      "search",
+      "rei",
+      "shopping",
+      "speciality",
+      "nemo",
+      "front",
+      "porch",
+      "tent",
+      "via",
+      "info",
+      "phone",
+      "number",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "combobox",
+      "img",
+      "icon",
+      "complete",
+      "verify",
+      "continue",
+      "proceed",
+      "checkout"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Trade In",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Trade In",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Trade in by mail",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Trade in by mail",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the search input",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "search input",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the search icon",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "search icon",
+        "target_type": "img",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Trade in",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Trade in",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Complete trade-in",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Complete trade-in",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Verify membership to continue",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Verify membership to continue",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the [input] -> TYPE: Joe",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[input] -> TYPE: Joe",
+        "target_type": "input",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "type the [input] -> TYPE: Bloggs",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[input] -> TYPE: Bloggs",
+        "target_type": "input",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "type the [input] -> TYPE: 123456789",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 10,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[input] -> TYPE: 123456789",
+        "target_type": "input",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Proceed to checkout",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 11,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Proceed to checkout",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Trade in a Nemo Front Porch 2P Tent via mail with my membership info Joe Bloggs, phone number 123456789",
+  "memory_type": "typed_procedure",
+  "name": "rei / Speciality workflow 293",
+  "raw_workflow_name": "rei / Speciality workflow 293",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 11.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Speciality",
+  "termination": {
+    "max_steps_hint": 11,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "rei"
+}

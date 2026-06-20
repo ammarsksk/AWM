@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "name": "carmax / Auto workflow 399",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find the documents required to sell a car in New Jersey for which payments are being paid and it has single person on the title who can come to the store",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "required",
+      "value",
+      "radio",
+      "sell",
+      "car",
+      "are",
+      "use",
+      "what",
+      "you",
+      "yes",
+      "carmax",
+      "shopping",
+      "auto",
+      "find",
+      "documents",
+      "new",
+      "jersey",
+      "which",
+      "payments",
+      "being",
+      "paid",
+      "has",
+      "single",
+      "person",
+      "title",
+      "who",
+      "can",
+      "come",
+      "store",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "trade",
+      "combobox",
+      "state",
+      "selling",
+      "specific",
+      "field",
+      "bring"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Sell/Trade",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Sell/Trade",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "select the In what state are you selling the car?",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "In what state are you selling the car?",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Yes",
+        "operation": "CLICK",
+        "target_type": "radio",
+        "target": "Yes",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "radio",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Yes",
+        "operation": "CLICK",
+        "target_type": "radio",
+        "target": "Yes",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the WHAT TO BRING WITH YOU",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "WHAT TO BRING WITH YOU",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "carmax / Auto workflow 399"
+}

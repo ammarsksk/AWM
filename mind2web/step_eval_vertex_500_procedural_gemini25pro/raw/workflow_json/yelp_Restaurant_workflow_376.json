@@ -1,0 +1,130 @@
+{
+  "name": "yelp / Restaurant workflow 376",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Look for a best rated  Thai restaurant in Westminster, California, that provides takeout, and whose staff is fully vaccinated and accepts Apple pay.",
+  "steps": [
+    {
+      "action": "CLICK [367]",
+      "op": "CLICK",
+      "element": "367",
+      "value": "",
+      "description": "[link] Restaurants -> HOVER",
+      "role": "link",
+      "label": "Restaurants",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=279 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=291 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <a id=367> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8463]",
+      "op": "CLICK",
+      "element": "8463",
+      "value": "",
+      "description": "[span] Thai -> CLICK",
+      "role": "span",
+      "label": "Thai",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=8295 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=8307 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <div> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> <a id=8463 menuitem> <div> <span img /> <span> Thai </span> </div> </a> </div> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [14836] [WESTMINSTER]",
+      "op": "TYPE",
+      "element": "14836",
+      "value": "WESTMINSTER",
+      "description": "[textbox] Near -> TYPE: WESTMINSTER",
+      "role": "textbox",
+      "label": "Near",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=14836 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </form> <div> <a id=15458 button> <span> Recommended </span> <span img /> </a> <span group filters> <button button> </button> <button button> </button> <button id=14853 button> <span> Offers Takeout </span> </button> <button button> </button> <button button> </button> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [24071]",
+      "op": "CLICK",
+      "element": "24071",
+      "value": "",
+      "description": "[span] Westminster -> CLICK",
+      "role": "span",
+      "label": "Westminster",
+      "observation": "<html> <div> <a id=24905 button> <span> Recommended </span> <span img /> </a> <span group filters> <button button> </button> <button button> </button> <button id=24089 button> <span> Offers Takeout </span> </button> <button button> </button> <button button> </button> </span> </div> <span id=24071 css-qgunke> <text bounding_box_rect= 469,137,85,19>Westminster</text> </span> </html>"
+    },
+    {
+      "action": "CLICK [33459]",
+      "op": "CLICK",
+      "element": "33459",
+      "value": "",
+      "description": "[checkbox] Offers Takeout -> CLICK",
+      "role": "checkbox",
+      "label": "Offers Takeout",
+      "observation": "<html> <div> <a id=34008> Westminster, CA </a> <a id=34041 button> <span> Recommended </span> <span img /> </a> </div> <input id=33459 checkbox feature /> </html>"
+    },
+    {
+      "action": "CLICK [43026]",
+      "op": "CLICK",
+      "element": "43026",
+      "value": "",
+      "description": "[button] Thai -> CLICK",
+      "role": "button",
+      "label": "Thai",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=43249 textbox text find find_desc thai tacos, cheap dinner, maxs /> </div> </form> <a id=43624 button> <span> Recommended </span> <span img /> </a> </div> <p id=43026 css-fohjg7> <text bounding_box_rect= -1,-1,-1,-1>Thai</text> </p> </html>"
+    },
+    {
+      "action": "CLICK [52144]",
+      "op": "CLICK",
+      "element": "52144",
+      "value": "",
+      "description": "[button] See all -> CLICK",
+      "role": "button",
+      "label": "See all",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=52377 textbox text find find_desc thai tacos, cheap dinner, maxs /> </div> </form> <a id=52746 button> <span> Recommended </span> <span img /> </a> </div> <a id=52144 button css-4mfze4> <text bounding_box_rect= -1,-1,-1,-1>See all</text> </a> </html>"
+    },
+    {
+      "action": "CLICK [61502]",
+      "op": "CLICK",
+      "element": "61502",
+      "value": "",
+      "description": "[checkbox] All staff fully vaccinated -> CLICK",
+      "role": "checkbox",
+      "label": "All staff fully vaccinated",
+      "observation": "<html> <yelp-react-root> <a id=62177 button> <span> Recommended </span> <span img /> </a> <div dialog> <ul> <label id=65644> <div> <input checkbox feature /> <span> Accepts Apple Pay </span> </div> </label> <div> <input id=61502 checkbox feature /> <span> All staff fully vaccinated </span> </div> </ul> </div> </yelp-react-root> </html>"
+    },
+    {
+      "action": "CLICK [71281]",
+      "op": "CLICK",
+      "element": "71281",
+      "value": "",
+      "description": "[checkbox] Accepts Apple Pay -> CLICK",
+      "role": "checkbox",
+      "label": "Accepts Apple Pay",
+      "observation": "<html> <yelp-react-root> <a id=71957 button> <span> Recommended </span> <span img /> </a> <div dialog> <label id=75424> <div> <input id=71281 checkbox feature /> <span> Accepts Apple Pay </span> </div> </label> </div> </yelp-react-root> </html>"
+    },
+    {
+      "action": "CLICK [81085]",
+      "op": "CLICK",
+      "element": "81085",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <yelp-react-root> <a id=81725 button> <span> Recommended </span> <span img /> </a> <div dialog> <div> <div> <input id=85183 checkbox feature /> <span> Open to All </span> </div> <button id=81085 submit> <span> Search </span> </button> </div> </div> </yelp-react-root> </html>"
+    },
+    {
+      "action": "CLICK [91184]",
+      "op": "CLICK",
+      "element": "91184",
+      "value": "",
+      "description": "[button] Recommended -> CLICK",
+      "role": "button",
+      "label": "Recommended",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=90816 textbox text find find_desc thai tacos, cheap dinner, maxs /> </div> </form> <div> <a id=91184 button> <span> Recommended </span> <span img /> </a> <span group filters> <button button> </button> <button button> </button> <button id=90585 button> <span> Offers Takeout </span> </button> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [100593]",
+      "op": "CLICK",
+      "element": "100593",
+      "value": "",
+      "description": "[span] Highest Rated -> CLICK",
+      "role": "span",
+      "label": "Highest Rated",
+      "observation": "<html> <div> <a id=100577 button> <span> Recommended </span> <span img /> </a> <menu> <button submit> </button> <button id=100593 submit> <span> Highest Rated </span> </button> <button id=100598 submit> <span> Most Reviewed </span> </button> </menu> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+2026-06-19 16:43:49,371 - 3470815 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.147_5 in:
+  results/2026-06-19_16-43-49_GenericAgentArgs_on_webarena.147_5
+2026-06-19 16:43:51,678 - 3470815 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 16:43:51,678 - 3470815 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 16:44:01,170 - 3470815 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 16:44:01,170 - 3470815 - faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-19 16:44:01,170 - 3470815 - faiss.loader - INFO - Loading faiss.
+2026-06-19 16:44:01,200 - 3470815 - faiss.loader - INFO - Successfully loaded faiss.
+2026-06-19 16:44:01,468 - 3470815 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 16:44:01,469 - 3470815 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 16:44:04,479 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:44:05,082 - 3470815 - browsergym.experiments.loop - INFO - action:
+click('179')
+
+2026-06-19 16:44:15,863 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:44:16,036 - 3470815 - browsergym.experiments.loop - INFO - action:
+click('1416')
+
+2026-06-19 16:44:23,695 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:44:24,009 - 3470815 - browsergym.experiments.loop - INFO - The user wants to find the size configuration of a picture frame they bought in 2022. I am on the "My Account" page, which shows recent orders. The recent orders are from 2023. To find an order from 2022, I need to view all orders. I see a "View All" link with bid '1426'. I will click this link to see the complete order history.
+
+action:
+click('1426')
+
+2026-06-19 16:44:27,783 - 3470815 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:44:39,471 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:44:39,744 - 3470815 - browsergym.experiments.loop - INFO - The user wants to find the size configuration of a picture frame they bought in 2022. I am currently on the "My Orders" page, which lists the user's past orders. The orders are sorted by date in descending order, with the most recent orders appearing first. The current page shows orders from 2023. To find the orders from 2022, I need to navigate to the older pages of the order history. I see pagination links for "Page 2", "Page 3", and "Page 4". I will click on "Page 2" to see if there are any orders from 2022 on that page. The bid for "Page 2" is '1486'.
+
+action:
+click('1486')
+
+2026-06-19 16:44:43,252 - 3470815 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:44:56,211 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:44:56,518 - 3470815 - browsergym.experiments.loop - INFO - The user wants to find the size configuration of a picture frame they bought in 2022. I am on the "My Orders" page, which lists past orders. I can see several orders from 2022. I will start by examining the order from 12/18/22 to see if it contains the picture frame. I will click the "View Order" link for that order. The bid for the "View Order" link for the order on 12/18/22 is '1390'.
+
+action:
+click('1390')
+
+2026-06-19 16:45:00,435 - 3470815 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:45:12,591 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:45:12,924 - 3470815 - browsergym.experiments.loop - INFO - The user wants to find the size configuration of a picture frame they bought in 2022. I am currently on the order details page for an order from December 18, 2022. I have reviewed the items in this order and none of them are a picture frame. Therefore, I need to go back to the list of all orders to find the correct one. I see a link "My Orders" with bid '1514' in the "My Account" section on the left side of the page. I will click this link to navigate to the order history.
+
+action:
+click('1514')
+
+2026-06-19 16:45:17,168 - 3470815 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:45:29,137 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:45:29,514 - 3470815 - browsergym.experiments.loop - INFO - The user wants to find the size configuration of a picture frame they bought in 2022. I am on the "My Orders" page, which lists the user's past orders. The orders are sorted by date in descending order. The current page shows orders from 2023. To find orders from 2022, I need to navigate to the later pages of the order history. I see pagination links for pages 2, 3, and 4. I will click on "Page 4" to go to the last page, which should contain the oldest orders. The bid for "Page 4" is '1493'. After navigating to page 4, I will look for orders from 2022 and then find the picture frame order to view its details.
+
+action:
+click('1493')
+
+2026-06-19 16:45:32,846 - 3470815 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:45:50,441 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:45:50,837 - 3470815 - browsergym.experiments.loop - INFO - The user wants to find the size configuration of a picture frame they bought in 2022. I am on the "My Orders" page, which lists past orders. I can see several orders from 2022. I need to find an order that contains a picture frame and then view the order details to find the size configuration.
+
+I will start by examining the completed orders from 2022. The most recent completed order from 2022 is order '000000181' from '5/22/22'. I will click the "View Order" link for this order to see if it contains a picture frame. The bid for this link is '1380'.
+
+action:
+click('1380')
+
+2026-06-19 16:46:06,910 - 3470815 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:46:07,262 - 3470815 - browsergym.experiments.loop - INFO - The user wants to know the size of the picture frame they bought in 2022. I have navigated to the order details page for an order placed on May 22, 2022. The page lists the items ordered. I can see a picture frame in the list of items: "DAX 2863W2X Black Solid Wood Poster Frames w/Plastic Window, Wide Profile, 18 x 24". The size is clearly stated in the product name as "18 x 24". I will now provide this information to the user.
+
+action:
+send_msg_to_user('The picture frame you bought has a size configuration of 18 x 24.')
+
+2026-06-19 16:46:09,360 - 3470815 - browsergym.experiments.loop - INFO - Saving summary info.

@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "name": "new.mta.info / Ground workflow 82",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Plan a trip from Brooklyn, NY to Staten Island, NY on March 25th mainly using bus and subway terminal. The trip should arive at 9:45 AM.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "specific",
+      "field",
+      "2023",
+      "travel",
+      "trip",
+      "march",
+      "link",
+      "plan",
+      "brooklyn",
+      "staten",
+      "island",
+      "bus",
+      "searchbox",
+      "listitem",
+      "usa",
+      "saturday",
+      "label",
+      "press",
+      "enter",
+      "key",
+      "submit",
+      "new",
+      "mta",
+      "info",
+      "ground",
+      "25th",
+      "mainly",
+      "using",
+      "subway",
+      "terminal",
+      "should",
+      "arive",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "leave",
+      "now",
+      "change",
+      "time",
+      "textbox",
+      "date",
+      "format"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Brooklyn, NY, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Brooklyn, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Staten Island, NY, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Staten Island, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Leave now Change Time",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Leave now Change Time",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Select date (format month/day/year",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Select date (format month/day/year",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the 03/18/2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "03/18/2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 25, Saturday March 2023",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "25, Saturday March 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Arrive by",
+        "operation": "CLICK",
+        "target_type": "radio",
+        "target": "Arrive by",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "select the 1",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "1",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "select the 00",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "00",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "select the AM",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "AM",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the 3/25/2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "3/25/2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the 25, Saturday March 2023",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "25, Saturday March 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Open Travel Preferences modal.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Travel Preferences modal.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Rail",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Rail",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Express Bus",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Express Bus",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the Done button - Press enter key to submit travel pre...",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done button - Press enter key to submit travel pre...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 19
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 19.0
+  },
+  "raw_workflow_name": "new.mta.info / Ground workflow 82"
+}

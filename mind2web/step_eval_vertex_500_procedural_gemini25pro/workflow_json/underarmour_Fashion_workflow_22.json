@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "name": "underarmour / Fashion workflow 22",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "underarmour",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "goal_pattern": "Find men's running shoes of size 9 with lowest price and add to bag.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "men",
+      "running",
+      "shoes",
+      "link",
+      "size",
+      "price",
+      "add",
+      "bag",
+      "underarmour",
+      "shopping",
+      "fashion",
+      "find",
+      "lowest",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "menuitem",
+      "div",
+      "span",
+      "now",
+      "trending",
+      "low",
+      "high",
+      "img",
+      "surge"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Men",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Men",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Shoes",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Shoes",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Running",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Running",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Size",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Size",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the 9",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "9",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Now Trending",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Now Trending",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Price (Low - High",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Price (Low - High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Men's UA Surge 3 Running Shoes",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Men's UA Surge 3 Running Shoes",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the 9",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "9",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Add to Bag",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to Bag",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "underarmour / Fashion workflow 22"
+}

@@ -21,7 +21,10 @@ from typing import Any
 
 import numpy as np
 
-from webarena.local_awm_full_demo import RetrievalResult, WorkflowEmbeddingIndex
+try:
+    from webarena.local_awm_full_demo import RetrievalResult, WorkflowEmbeddingIndex
+except ModuleNotFoundError:
+    from local_awm_full_demo import RetrievalResult, WorkflowEmbeddingIndex
 
 
 def safe_name(name: str) -> str:

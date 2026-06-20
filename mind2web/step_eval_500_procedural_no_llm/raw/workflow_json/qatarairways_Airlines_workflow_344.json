@@ -1,0 +1,50 @@
+{
+  "name": "qatarairways / Airlines workflow 344",
+  "source": "Mind2Web exemplar",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Compare all membership tier benefits.",
+  "steps": [
+    {
+      "action": "CLICK [103]",
+      "op": "CLICK",
+      "element": "103",
+      "value": "",
+      "description": "[rect] -> CLICK",
+      "role": "rect",
+      "label": "",
+      "observation": "<html> <body> <div dialog> <button id=825> Continue </button> </div> <div> <label> From </label> <input id=11327 text /> </div> </body> <rect id=103 /> </html>"
+    },
+    {
+      "action": "TYPE [26814] [Membership tier]",
+      "op": "TYPE",
+      "element": "26814",
+      "value": "Membership tier",
+      "description": "[textbox] e.g.: New York -> TYPE: Membership tier",
+      "role": "textbox",
+      "label": "e.g.: New York",
+      "observation": "<html> <body> <div dialog> <button id=27537> Continue </button> </div> <div> <a id=29709 button> Explore <span> (current) </span> </a> <form> <input id=26814 text e.g.: new york /> <button button> Search </button> </form> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [53526]",
+      "op": "CLICK",
+      "element": "53526",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <div dialog> <button id=54251> Continue </button> </div> <div> <form> <input text e.g.: new york membership tier /> <button id=53526 button> Search </button> </form> <div> <label> From </label> <input id=64754 text /> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [67224]",
+      "op": "CLICK",
+      "element": "67224",
+      "value": "",
+      "description": "[link] Privilege Club Membership Tiers -> CLICK",
+      "role": "link",
+      "label": "Privilege Club Membership Tiers",
+      "observation": "<html> <body> <div dialog> <div> <input id=67907 text /> <span> Enter your message </span> </div> </div> <div dialog> <button id=68082> Continue </button> </div> <article> <a id=67224> Privilege Club Membership Tiers </a> <p> Privilege Club members in different tiers can enjoy benefits exclusively tailored to suit their needs, when flying with Qatar Airways. </p> </article> </body> </html>"
+    }
+  ]
+}

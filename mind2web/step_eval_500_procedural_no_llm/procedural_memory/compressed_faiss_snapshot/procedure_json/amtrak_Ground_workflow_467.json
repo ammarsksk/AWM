@@ -1,0 +1,175 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "textbox",
+      "find",
+      "new",
+      "york",
+      "washington",
+      "shortest",
+      "trip",
+      "specific",
+      "field",
+      "option",
+      "span",
+      "amtrak",
+      "travel",
+      "ground",
+      "schedule",
+      "between",
+      "sorted",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "moynihan",
+      "train",
+      "hall",
+      "penn",
+      "sta",
+      "union",
+      "station",
+      "was",
+      "depart",
+      "date",
+      "gridcell",
+      "monday",
+      "april",
+      "2023",
+      "trains",
+      "sort",
+      "filter"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the From",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "From",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+        "target_type": "option",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the To",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "To",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Washington, DC - Union Station (WAS",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Washington, DC - Union Station (WAS",
+        "target_type": "option",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Depart Date",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Depart Date",
+        "target_type": "textbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Monday, April 17, 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Monday, April 17, 2023",
+        "target_type": "gridcell",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the FIND TRAINS",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "FIND TRAINS",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Sort/Filter",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Sort/Filter",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Shortest Trip",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Shortest Trip",
+        "target_type": "span",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find the schedule between New York and Washington DC sorted by shortest trip.",
+  "memory_type": "typed_procedure",
+  "name": "amtrak / Ground workflow 467",
+  "raw_workflow_name": "amtrak / Ground workflow 467",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 9.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Ground",
+  "termination": {
+    "max_steps_hint": 9,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "amtrak"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "exploretock / Restaurant workflow 697",
+  "source": "Mind2Web exemplar",
+  "website": "exploretock",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Check if 5pm is available to book a indoor reservation on 31st of March in Matthews Winery for 5 people",
+  "steps": [
+    {
+      "action": "CLICK [634]",
+      "op": "CLICK",
+      "element": "634",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div> <button id=634> <span> Search </span> </button> <button search /> <button toggle menu open> </button> </div> <div> <div> <input id=726 text location columbus, oh /> <button button select location /> </div> <div> <input id=739 text date fri, mar 17 /> <button button date, selected value is fri, /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [3275] [Matthews winery]",
+      "op": "TYPE",
+      "element": "3275",
+      "value": "Matthews winery",
+      "description": "[textbox] Search -> TYPE: Matthews winery",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <body> <div> <div> <input id=3901 text location columbus, oh /> <button button select location /> </div> <div> <input id=3914 text date fri, mar 17 /> <button button date, selected value is fri, /> </div> </div> <input id=3275 text search find a business, cuisine, or /> </body> </html>"
+    }
+  ]
+}

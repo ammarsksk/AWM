@@ -1,0 +1,100 @@
+{
+  "name": "kayak / Airlines workflow 214",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Get the hotel with highest review score having free internet and free cancelation in Chennai for 20/03/23",
+  "steps": [
+    {
+      "action": "CLICK [87]",
+      "op": "CLICK",
+      "element": "87",
+      "value": "",
+      "description": "[link] Search for hotels -> CLICK",
+      "role": "link",
+      "label": "Search for hotels",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a id=87 search for hotels> <svg hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> <h1> Search <a> Flights </a> , <a id=1382> Hotels </a> & <a> Rental Cars </a> </h1> <p> Search <a> flights </a> , <a id=3853> hotels </a> , <a> rental cars </a> , <a> travel guides </a> and more with KAYAK. KAYAK searches hundreds of other travel sites at once to get you the information you need </p> </div> </html>"
+    },
+    {
+      "action": "TYPE [4455] [Chennai]",
+      "op": "TYPE",
+      "element": "4455",
+      "value": "Chennai",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> TYPE: Chennai",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <body> <div> <input id=4455 text enter a city, hotel, airport, /> <button button submit search> <svg id=5055 img c8lpf-icon /> </button> </div> <div dialog> <div> <div> Connect with Facebook </div> <div> Connect with Google </div> <a> Use your email address </a> <button id=9729> Continue as a guest </button> <div> Any saved items will be lost after 7 days. </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [23644]",
+      "op": "CLICK",
+      "element": "23644",
+      "value": "",
+      "description": "[option] Chennai, Tamil Nadu, India -> CLICK",
+      "role": "option",
+      "label": "Chennai, Tamil Nadu, India",
+      "observation": "<html> <body> <button button submit search> <svg id=17950 img c8lpf-icon /> </button> <ul listbox> <li id=23644 option chennai, tamil nadu, india> <div> <img city:chennai, tamil nadu, india /> <div> <span> Chennai, Tamil Nadu, India </span> <span> City </span> </div> </div> </li> <li id=23657 option chennai, tamil nadu, india> <div> <svg img /> <div> <div> <span> Chennai, Tamil Nadu, India </span> <span> MAA </span> </div> <span> Chennai </span> </div> </div> </li> <li option chennai egmore, chennai, tamil nadu,> </li> <li option chennai central railway station, chennai,> </li> <li option novotel chennai chamiers road> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [30533]",
+      "op": "CLICK",
+      "element": "30533",
+      "value": "",
+      "description": "[button] Monday March 20, 2023 -> CLICK",
+      "role": "button",
+      "label": "Monday March 20, 2023",
+      "observation": "<html> <div tab start date calendar input use> <div> <div> <div button friday march 17, 2023> 17 </div> <div button saturday march 18, 2023> 18 </div> <div button sunday march 19, 2023> 19 </div> <div id=30533 button monday march 20, 2023> 20 </div> <div button tuesday march 21, 2023> 21 </div> <div button wednesday march 22, 2023> 22 </div> <div button thursday march 23, 2023> 23 </div> </div> <div> <div button monday april 17, 2023> 17 </div> <div button tuesday april 18, 2023> 18 </div> <div button wednesday april 19, 2023> 19 </div> <div id=36985 button thursday april 20, 2023> 20 </div> <div button friday april 21, 2023> 21 </div> <div button saturday april 22, 2023> 22 </div> <div id=36991 button sunday april 23, 2023> 23 </div> <div button monday april 24, 2023> 24 </div> <div button tuesday april 25, 2023> 25 </div> <div button wednesday april 26, 2023> 26 </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [43629]",
+      "op": "CLICK",
+      "element": "43629",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <button id=43629 button submit search> <svg img c8lpf-icon /> </button> <div dialog> <button id=48548 close /> </div> <div dialog> <div> <div> Connect with Facebook </div> <div> Connect with Google </div> <a> Use your email address </a> <button id=48902> Continue as a guest </button> <div> Any saved items will be lost after 7 days. </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [56516]",
+      "op": "CLICK",
+      "element": "56516",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div hotel result filters> <div region amenities> <div id=67473 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> <div hotel results section> <div id=67628 button> <div> Sorted by </div> <div> <div> Recommended </div> <svg img /> </div> </div> </div> </div> <svg id=56516 img /> </html>"
+    },
+    {
+      "action": "CLICK [105464]",
+      "op": "CLICK",
+      "element": "105464",
+      "value": "",
+      "description": "[tab] Review score -> CLICK",
+      "role": "tab",
+      "label": "Review score",
+      "observation": "<html> <body> <div> <div hotel result filters> <div region amenities> <div id=100252 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> <div hotel results section> <div id=100407 button> <div> Sorted by </div> <div> <div> Recommended </div> <svg img /> </div> </div> </div> </div> <ul tablist> <li tab price (low to high)> </li> <li tab price (high to low)> </li> <li tab hotel class (highest first)> </li> <li id=105464 tab review score> <div> Review score </div> </li> <li tab distance> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [122061]",
+      "op": "CLICK",
+      "element": "122061",
+      "value": "",
+      "description": "[checkbox] Free internet -> CLICK",
+      "role": "checkbox",
+      "label": "Free internet",
+      "observation": "<html> <div> <div hotel result filters> <div> <div region freebies> <span> <input id=122061 checkbox false /> <svg img icon /> </span> </div> <div region amenities> <div id=133012 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> </div> <div hotel results section> <div id=133170 button> <div> Sorted by </div> <div> <div> Review score </div> <svg img /> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [155452]",
+      "op": "CLICK",
+      "element": "155452",
+      "value": "",
+      "description": "[checkbox] Free cancellation -> CLICK",
+      "role": "checkbox",
+      "label": "Free cancellation",
+      "observation": "<html> <div> <div hotel result filters> <div> <div region freebies> <span> <input id=155452 checkbox false /> <svg img icon /> </span> </div> <div region amenities> <div id=166381 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> </div> <div hotel results section> <div id=166541 button> <div> Sorted by </div> <div> <div> Review score </div> <svg img /> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 457",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "List upcoming animation and anime movies in theaters",
+  "steps": [
+    {
+      "action": "CLICK [93]",
+      "op": "CLICK",
+      "element": "93",
+      "value": "",
+      "description": "[link] MOVIES -> CLICK",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=404 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=93> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2442> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [18545]",
+      "op": "CLICK",
+      "element": "18545",
+      "value": "",
+      "description": "[button] IN THEATERS -> CLICK",
+      "role": "button",
+      "label": "IN THEATERS",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot showtimes> <slot link> <a id=21025> Showtimes </a> </slot> </slot> </slot> </rt-header> <div> <div> <button id=18545> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip button sort> </filter-chip> <filter-chip id=21599 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </div> </html>"
+    }
+  ]
+}

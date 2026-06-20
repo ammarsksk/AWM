@@ -1,0 +1,50 @@
+{
+  "name": "target / General workflow 380",
+  "source": "Mind2Web exemplar",
+  "website": "target",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find organic dog food and add it to the cart.",
+  "steps": [
+    {
+      "action": "TYPE [132] [organic dog food]",
+      "op": "TYPE",
+      "element": "132",
+      "value": "organic dog food",
+      "description": "[searchbox] Search: suggestions appear below -> TYPE: organic dog food",
+      "role": "searchbox",
+      "label": "Search: suggestions appear below",
+      "observation": "<html> <div> <nav> <a id=331 categories> Categories </a> <form> <input id=132 search search: suggestions appear below searchterm /> <input true /> <button submit go> go </button> </form> </nav> <a id=1825> <span> Pets </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [7231]",
+      "op": "CLICK",
+      "element": "7231",
+      "value": "",
+      "description": "[link] organic dog food -> CLICK",
+      "role": "link",
+      "label": "organic dog food",
+      "observation": "<html> <body> <form> <input id=5557 search search: suggestions appear below searchterm organic dog food /> <input true /> <button button reset> </button> <button submit go> go </button> </form> <div dialog> <div> <a id=7231> <span> organic dog food </span> </a> <button id=5367 replace search term with organic organic dog food /> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [10539]",
+      "op": "CLICK",
+      "element": "10539",
+      "value": "",
+      "description": "[link] Tender & True Organic Small Breed Chicken and Live... -> CLICK",
+      "role": "link",
+      "label": "Tender & True Organic Small Breed Chicken and Live...",
+      "observation": "<html> <div> <div> <button id=10841 button category> Category </button> <button button deals> Deals </button> <button button price> Price </button> <button button sold by> Sold by </button> </div> <div> <div tender & true organic small> <a id=10539 tender & true organic small> Tender & True Organic Small Breed Chicken and Liver Recipe Dry Dog Food - 4lb </a> </div> <button id=11498 button add tender & true organic> Add to cart </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [14838]",
+      "op": "CLICK",
+      "element": "14838",
+      "value": "",
+      "description": "[button] Add to cart for Tender & True Organic Small Breed ... -> CLICK",
+      "role": "button",
+      "label": "Add to cart for Tender & True Organic Small Breed ...",
+      "observation": "<html> <div> <div> <a id=15080 dog food> <span> Dog Food </span> </a> <button id=14838 button add to cart for tender> Add to cart </button> </div> <button id=15462 button> Show more </button> </div> </html>"
+    }
+  ]
+}

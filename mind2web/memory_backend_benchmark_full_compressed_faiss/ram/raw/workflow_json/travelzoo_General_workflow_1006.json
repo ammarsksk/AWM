@@ -1,0 +1,30 @@
+{
+  "name": "travelzoo / General workflow 1006",
+  "source": "Mind2Web exemplar",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find a luxury trip deal anywhere to go in spring",
+  "steps": [
+    {
+      "action": "CLICK [101]",
+      "op": "CLICK",
+      "element": "101",
+      "value": "",
+      "description": "[textbox] What type of deals? -> CLICK",
+      "role": "textbox",
+      "label": "What type of deals?",
+      "observation": "<html> <form> <input homepage /> <h3> Show me: </h3> <div> <div> <label> What type of deals? </label> <input id=101 text all deals e.g. hotels, beach, disney /> <input 0 /> <button button> x </button> </div> <div> <label> Where? </label> <input id=386 text anywhere... /> <button button> x </button> </div> </div> <button id=487 submit search> Search Deals </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [8394]",
+      "op": "CLICK",
+      "element": "8394",
+      "value": "",
+      "description": "[div] Luxury Trips -> CLICK",
+      "role": "div",
+      "label": "Luxury Trips",
+      "observation": "<html> <body> <form> <input homepage /> <h3> Show me: </h3> <div> <label> Where? </label> <input id=6729 text anywhere... /> <button button> x </button> </div> <button id=6830 submit search> Search Deals </button> </form> <li id=8394> <div> Luxury Trips </div> </li> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "ali",
+      "wong",
+      "use",
+      "required",
+      "tvguide",
+      "entertainment",
+      "movie",
+      "find",
+      "birth",
+      "place",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "shows",
+      "movies",
+      "specific",
+      "field",
+      "div",
+      "hard",
+      "knock",
+      "wife"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Entertainment",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the Search TV Shows and Movies...",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search TV Shows and Movies...",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Ali Wong: Hard Knock Wife",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Ali Wong: Hard Knock Wife",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [a] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[a] -> CLICK",
+        "target_type": "a",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find the birth place of Ali Wong.",
+  "memory_type": "typed_procedure",
+  "name": "tvguide / Movie workflow 106",
+  "raw_workflow_name": "tvguide / Movie workflow 106",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 3.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Movie",
+  "termination": {
+    "max_steps_hint": 3,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "tvguide"
+}

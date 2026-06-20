@@ -1,0 +1,120 @@
+{
+  "name": "rei / Speciality workflow 293",
+  "source": "Mind2Web exemplar",
+  "website": "rei",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Trade in a Nemo Front Porch 2P Tent via mail with my membership info Joe Bloggs, phone number 123456789",
+  "steps": [
+    {
+      "action": "CLICK [116]",
+      "op": "CLICK",
+      "element": "116",
+      "value": "",
+      "description": "[link] Trade In -> CLICK",
+      "role": "link",
+      "label": "Trade In",
+      "observation": "<html> <header banner> <nav primary> <a id=116> <span> Trade In </span> </a> </nav> <nav navigation shop categories> <ul> <a id=810> Tents </a> <a id=10153> Trade-In </a> </ul> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [12992]",
+      "op": "CLICK",
+      "element": "12992",
+      "value": "",
+      "description": "[link] Trade in by mail -> CLICK",
+      "role": "link",
+      "label": "Trade in by mail",
+      "observation": "<html> <div application> <div navigation menu> <ol menu> <li> <a id=13582 menuitem trade in> Trade In </a> <p> new! </p> </li> </ol> </div> <div> <a> Trade in at your local REI </a> <a id=12992> Trade in by mail </a> </div> <label> <span> Email </span> <input id=13879 text enter your email address /> </label> </div> </html>"
+    },
+    {
+      "action": "TYPE [15250] [Nemo Front Porch 2P Tent]",
+      "op": "TYPE",
+      "element": "15250",
+      "value": "Nemo Front Porch 2P Tent",
+      "description": "[combobox] search input -> TYPE: Nemo Front Porch 2P Tent",
+      "role": "combobox",
+      "label": "search input",
+      "observation": "<html> <div application> <section> <form search good and used> <input id=15250 combobox text search input q search by brand, description, or /> <button submit search> <img id=15240 search icon /> </button> </form> <a id=15873> <div> Tents </div> </a> </section> </div> </html>"
+    },
+    {
+      "action": "CLICK [17381]",
+      "op": "CLICK",
+      "element": "17381",
+      "value": "",
+      "description": "[img] search icon -> CLICK",
+      "role": "img",
+      "label": "search icon",
+      "observation": "<html> <div application> <form search good and used> <img clear search /> <input id=18007 combobox text search input q search by brand, description, or nemo front porch 2p tent /> <button id=18008 submit search> <img id=17381 search icon /> </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [19454]",
+      "op": "CLICK",
+      "element": "19454",
+      "value": "",
+      "description": "[button] Trade in -> CLICK",
+      "role": "button",
+      "label": "Trade in",
+      "observation": "<html> <div application> <ol> <div> <p> Potential Credit: $129 </p> <button id=19454 button> Trade in </button> </div> <div> <p> Potential Credit: $129 </p> <button id=20228 button> Trade in </button> </div> <div> <p> Potential Credit: $8 </p> <button id=20240 button> Trade in </button> </div> </ol> </div> </html>"
+    },
+    {
+      "action": "CLICK [21854]",
+      "op": "CLICK",
+      "element": "21854",
+      "value": "",
+      "description": "[link] Complete trade-in -> CLICK",
+      "role": "link",
+      "label": "Complete trade-in",
+      "observation": "<html> <div application> <div> <div> <h2> Total Estimated Trade-In Value: $129* </h2> <span> Items in trade-in bag: 1 </span> <p> *$6 will be deducted from gift card for shipping </p> <a id=21854> Complete trade-in </a> <button button> Add another item </button> </div> <ol> <div> <p> Potential Credit: $129 </p> <button id=22656 button> Trade in </button> </div> <div> <p> Potential Credit: $8 </p> <button id=22668 button> Trade in </button> </div> </ol> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [24064]",
+      "op": "CLICK",
+      "element": "24064",
+      "value": "",
+      "description": "[button] Verify membership to continue -> CLICK",
+      "role": "button",
+      "label": "Verify membership to continue",
+      "observation": "<html> <body> <div application> <section> <div> <h5> Nemo </h5> <p> Front Porch 2P Tent </p> <p> Birch Leaf </p> <button id=24691 button> Remove </button> </div> <button id=24064 button> Verify membership to continue </button> </section> </div> <iframe recaptcha challenge expires in two c-cwm0bp1k1i6l> <button id=25023> Verify </button> </iframe> </body> </html>"
+    },
+    {
+      "action": "TYPE [26069] [Joe]",
+      "op": "TYPE",
+      "element": "26069",
+      "value": "Joe",
+      "description": "[input] -> TYPE: Joe",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div application> <div> <form> <input id=26069 text firstname first name /> <input id=26699 text lastname last name /> </form> <button id=26706 button> Proceed to checkout </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [28078] [Bloggs]",
+      "op": "TYPE",
+      "element": "28078",
+      "value": "Bloggs",
+      "description": "[input] -> TYPE: Bloggs",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div application> <div> <form> <input id=28078 text lastname last name /> <input id=28713 text membernumber member number /> </form> <button id=28717 button> Proceed to checkout </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [30096] [123456789]",
+      "op": "TYPE",
+      "element": "30096",
+      "value": "123456789",
+      "description": "[input] -> TYPE: 123456789",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div application> <div> <form> <input id=30728 text lastname bloggs last name /> <input id=30096 text membernumber member number /> </form> <button id=30734 button> Proceed to checkout </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [32116]",
+      "op": "CLICK",
+      "element": "32116",
+      "value": "",
+      "description": "[button] Proceed to checkout -> CLICK",
+      "role": "button",
+      "label": "Proceed to checkout",
+      "observation": "<html> <div application> <div> <form> <input id=32109 text lastname bloggs last name /> <input id=32749 text membernumber 12345678 member number /> </form> <button id=32116 button> Proceed to checkout </button> </div> </div> </html>"
+    }
+  ]
+}

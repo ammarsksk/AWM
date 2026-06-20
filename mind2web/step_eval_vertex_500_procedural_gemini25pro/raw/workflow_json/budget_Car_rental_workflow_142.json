@@ -1,0 +1,80 @@
+{
+  "name": "budget / Car rental workflow 142",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "View a reservation made under the last name Walker in Australia for a car using the reservation confirmation number A987654.",
+  "steps": [
+    {
+      "action": "CLICK [121]",
+      "op": "CLICK",
+      "element": "121",
+      "value": "",
+      "description": "[link] close dialog -> CLICK",
+      "role": "link",
+      "label": "close dialog",
+      "observation": "<html> <div> <a id=832 button> Reservations </a> <form resform> <div> <button id=1829 button> Select My Car </button> <a> Continue </a> </div> </form> </div> <svg id=121 bx-close-xsvg /> </html>"
+    },
+    {
+      "action": "CLICK [9999]",
+      "op": "CLICK",
+      "element": "9999",
+      "value": "",
+      "description": "[button] Reservations -> CLICK",
+      "role": "button",
+      "label": "Reservations",
+      "observation": "<html> <div> <a id=9999 button> Reservations </a> <form resform> <div> <button id=11706 button> Select My Car </button> <a> Continue </a> </div> </form> <form myform> <select id=14105 country> <option ? true /> </select> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [19587]",
+      "op": "CLICK",
+      "element": "19587",
+      "value": "",
+      "description": "[link] View / Modify / Cancel -> CLICK",
+      "role": "link",
+      "label": "View / Modify / Cancel",
+      "observation": "<html> <div> <ul> <a id=20324> Make a Reservation </a> <a id=19587> View / Modify / Cancel </a> </ul> <form resform> <div> <button id=21313 button> Select My Car </button> <a> Continue </a> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [24471] [AUSTRALIA]",
+      "op": "SELECT",
+      "element": "24471",
+      "value": "AUSTRALIA",
+      "description": "[combobox] Select Residency -> SELECT: AUSTRALIA",
+      "role": "combobox",
+      "label": "Select Residency",
+      "observation": "<html> <form vmcform> <div> <select id=24471 select residency countrylookup> <option albania> ALBANIA </option> <option andorra> ANDORRA </option> <option angola> ANGOLA </option> <option antigua> ANTIGUA </option> <option argentina> ARGENTINA </option> <option armenia> ARMENIA </option> <option aruba string:l-aruba> ARUBA </option> <option aruba string:b-aruba> ARUBA </option> <option australia> AUSTRALIA </option> <option australia> AUSTRALIA </option> <option austria> AUSTRIA </option> <option bahamas> BAHAMAS </option> <option bahamas> BAHAMAS </option> <option bahrain> BAHRAIN </option> <option belarus> BELARUS </option> <option belgium> BELGIUM </option> <option belize> BELIZE </option> <option bolivia> BOLIVIA </option> <option bonaire> BONAIRE </option> <option bonaire> BONAIRE </option> <option bosnia> BOSNIA </option> <option bosnia & herzegovina & herzegovina> BOSNIA & HERZEGOVINA </option> <option botswana> BOTSWANA </option> <option brazil> BRAZIL </option> <option brunei> BRUNEI </option> </select> <div> <label agreement number> Confirmation/Rental Agreement Number </label> <input id=25889 text /> </div> <button id=24473 submit> Find Reservation </button> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [28818] [Walker]",
+      "op": "TYPE",
+      "element": "28818",
+      "value": "Walker",
+      "description": "[input] -> TYPE: Walker",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <form vmcform> <div> <div> <label last name> Last Name </label> <input id=28818 text /> </div> <div> <label agreement number> Confirmation/Rental Agreement Number </label> <input id=30236 text /> </div> <button id=28820 submit> Find Reservation </button> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [33167] [A987654]",
+      "op": "TYPE",
+      "element": "33167",
+      "value": "A987654",
+      "description": "[input] -> TYPE: A987654",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <a id=33847 button> Reservations </a> <form vmcform> <div> <div> <label agreement number> Confirmation/Rental Agreement Number </label> <input id=33167 text /> </div> <button id=33165 submit> Find Reservation </button> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [37508]",
+      "op": "CLICK",
+      "element": "37508",
+      "value": "",
+      "description": "[button] Find Reservation -> CLICK",
+      "role": "button",
+      "label": "Find Reservation",
+      "observation": "<html> <div> <a id=38188 button> Reservations </a> <form vmcform> <div> <select id=38548 select residency countrylookup> <option albania> ALBANIA </option> <option andorra> ANDORRA </option> <option angola> ANGOLA </option> <option antigua> ANTIGUA </option> <option argentina> ARGENTINA </option> <option armenia> ARMENIA </option> <option aruba string:l-aruba> ARUBA </option> <option aruba string:b-aruba> ARUBA </option> <option australia true> AUSTRALIA </option> <option australia> AUSTRALIA </option> <option austria> AUSTRIA </option> <option bahamas> BAHAMAS </option> <option bahamas> BAHAMAS </option> <option bahrain> BAHRAIN </option> <option belarus> BELARUS </option> <option belgium> BELGIUM </option> <option belize> BELIZE </option> <option bolivia> BOLIVIA </option> <option bonaire> BONAIRE </option> <option bonaire> BONAIRE </option> <option bosnia> BOSNIA </option> <option bosnia & herzegovina & herzegovina> BOSNIA & HERZEGOVINA </option> <option botswana> BOTSWANA </option> <option brazil> BRAZIL </option> <option brunei> BRUNEI </option> </select> <button id=37508 submit> Find Reservation </button> </div> </form> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 23",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show reviews of top critics for lowest rated Tom Hanks work",
+  "steps": [
+    {
+      "action": "TYPE [89] [Tom Hanks]",
+      "op": "TYPE",
+      "element": "89",
+      "value": "Tom Hanks",
+      "description": "[textbox] Search -> TYPE: Tom Hanks",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=89 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <div> <slot nav-links> <a id=596> Critics </a> </slot> <slot nav-dropdowns> <slot movies> <slot link> <a id=732> Movies </a> </slot> </slot> </slot> </div> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [37174]",
+      "op": "CLICK",
+      "element": "37174",
+      "value": "",
+      "description": "[p] Tom Hanks -> CLICK",
+      "role": "p",
+      "label": "Tom Hanks",
+      "observation": "<html> <rt-header navigation bar> <div> <slot desktop-search> <slot search-results> <slot celebrity> <slot results> <a id=37174> <div> <img id=36666 tom hanks /> <p> Tom Hanks </p> </div> </a> </slot> </slot> </slot> </slot> <slot nav-links> <a id=37319> Critics </a> </slot> </div> </rt-header> </html>"
+    }
+  ]
+}

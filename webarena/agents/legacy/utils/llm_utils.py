@@ -23,6 +23,16 @@ from PIL import Image
 from openai import RateLimitError
 
 
+class ApproxTokenizer:
+    """Small local tokenizer fallback for OpenAI-compatible non-OpenAI models."""
+
+    def encode(self, text):
+        return re.findall(r"\w+|[^\w\s]", text or "", flags=re.UNICODE)
+
+    def decode(self, tokens):
+        return " ".join(tokens)
+
+
 def _extract_wait_time(error_message, min_retry_wait_time=60):
     """Extract the wait time from an OpenAI RateLimitError message."""
     match = re.search(r"try again in (\d+(\.\d+)?)s", error_message)
@@ -175,7 +185,14 @@ def truncate_tokens(text, max_tokens=8000, start=0, model_name="gpt-4"):
 @cache
 def get_tokenizer(model_name="openai/gpt-4"):
     if model_name.startswith("openai"):
-        return tiktoken.encoding_for_model(model_name.split("/")[-1])
+        try:
+            return tiktoken.encoding_for_model(model_name.split("/")[-1])
+        except KeyError:
+            # OpenAI-compatible providers such as Vertex/Gemini are not always
+            # known to tiktoken. Use a local approximate tokenizer for prompt
+            # budgeting instead of failing before the first model call or
+            # downloading tokenizer assets at runtime.
+            return ApproxTokenizer()
     else:
         return AutoTokenizer.from_pretrained(model_name)
 

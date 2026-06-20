@@ -1,0 +1,200 @@
+{
+  "name": "kbb / Auto workflow 389",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find value of 2016 Toyota Camry XLE Sedan 4D in black color with number plate AZXA46.",
+  "steps": [
+    {
+      "action": "CLICK [135]",
+      "op": "CLICK",
+      "element": "135",
+      "value": "",
+      "description": "[link] Car Values -> HOVER",
+      "role": "link",
+      "label": "Car Values",
+      "observation": "<html> <div> <div> <a id=135 unstyled> Car Values </a> <a id=701 unstyled> Price New/Used </a> </div> <a id=847> <span> Price New/Used </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [6710]",
+      "op": "CLICK",
+      "element": "6710",
+      "value": "",
+      "description": "[link] My Car's Value -> CLICK",
+      "role": "link",
+      "label": "My Car's Value",
+      "observation": "<html> <div> <ul> <a id=7277 unstyled> Price New/Used </a> <a id=6710 unstyled> My Car's Value </a> </ul> <a id=7962> <div> Toyota </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [12053]",
+      "op": "CLICK",
+      "element": "12053",
+      "value": "",
+      "description": "[div] Make/Model -> CLICK",
+      "role": "div",
+      "label": "Make/Model",
+      "observation": "<html> <div> <label id=12053> <input radio picker /> <div> Make/Model </div> </label> <label id=12061> <input id=12062 radio picker /> <div> License Plate </div> </label> </div> </html>"
+    },
+    {
+      "action": "SELECT [16125] [2016]",
+      "op": "SELECT",
+      "element": "16125",
+      "value": "2016",
+      "description": "[combobox] Year -> SELECT: 2016",
+      "role": "combobox",
+      "label": "Year",
+      "observation": "<html> <div> <div radiogroup> <label id=16926> <input id=16927 radio license plate picker /> <div> License Plate </div> </label> </div> <div> <select id=16125 year> <option> Year </option> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> <option 2020> 2020 </option> <option 2019> 2019 </option> <option 2018> 2018 </option> <option 2017> 2017 </option> <option 2016> 2016 </option> <option 2015> 2015 </option> <option 2014> 2014 </option> <option 2013> 2013 </option> <option 2012> 2012 </option> <option 2011> 2011 </option> <option 2010> 2010 </option> <option 2009> 2009 </option> <option 2008> 2008 </option> <option 2007> 2007 </option> <option 2006> 2006 </option> <option 2005> 2005 </option> <option 2004> 2004 </option> <option 2003> 2003 </option> <option 2002> 2002 </option> <option 2001 true> 2001 </option> <option 2000> 2000 </option> </select> <label> Year </label> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [21367] [Toyota]",
+      "op": "SELECT",
+      "element": "21367",
+      "value": "Toyota",
+      "description": "[combobox] Make -> SELECT: Toyota",
+      "role": "combobox",
+      "label": "Make",
+      "observation": "<html> <div> <div radiogroup> <label id=22168> <input id=22169 radio license plate picker /> <div> License Plate </div> </label> </div> <select id=21367 make> <option true> Make </option> <option 2> Acura </option> <option 3> Alfa Romeo </option> <option 54> Aston Martin </option> <option 4> Audi </option> <option 5> BMW </option> <option 57> Bentley </option> <option 7> Buick </option> <option 8> Cadillac </option> <option 9> Chevrolet </option> <option 10> Chrysler </option> <option 13> Dodge </option> <option 430> FIAT </option> <option 397> Ferrari </option> <option 15> Ford </option> <option 867> Freightliner </option> <option 16> GMC </option> <option 18> Honda </option> <option 20> Hyundai </option> <option 21> INFINITI </option> <option 23> Jaguar </option> <option 24> Jeep </option> <option 25> Kia </option> <option 59> Lamborghini </option> <option 26> Land Rover </option> </select> </div> </html>"
+    },
+    {
+      "action": "SELECT [26594] [Camry]",
+      "op": "SELECT",
+      "element": "26594",
+      "value": "Camry",
+      "description": "[combobox] Model -> SELECT: Camry",
+      "role": "combobox",
+      "label": "Model",
+      "observation": "<html> <div> <div radiogroup> <label id=27395> <input id=27396 radio license plate picker /> <div> License Plate </div> </label> </div> <select id=26594 model> <option true> Model </option> <option 294> 4Runner </option> <option 285> Avalon </option> <option 286> Camry </option> <option 290> Corolla </option> <option 295> Highlander </option> <option 297> Land Cruiser </option> <option 35699> Mirai </option> <option 292> Prius </option> <option 29217> Prius c </option> <option 28995> Prius v </option> <option 298> RAV4 </option> <option 296> Sequoia </option> <option 299> Sienna </option> <option 873> Tacoma Access Cab </option> <option 872> Tacoma Double Cab </option> <option 11794> Tundra CrewMax </option> <option 858> Tundra Double Cab </option> <option 860> Tundra Regular Cab </option> <option 914> Yaris </option> </select> </div> </html>"
+    },
+    {
+      "action": "TYPE [31938] [40000]",
+      "op": "TYPE",
+      "element": "31938",
+      "value": "40000",
+      "description": "[textbox] Mileage -> TYPE: 40000",
+      "role": "textbox",
+      "label": "Mileage",
+      "observation": "<html> <div radiogroup> <label id=32704> <input id=32705 radio license plate picker /> <div> License Plate </div> </label> </div> <input id=31938 tel mileage css-2o7seo e1c4c4fv1 /> </html>"
+    },
+    {
+      "action": "CLICK [38277]",
+      "op": "CLICK",
+      "element": "38277",
+      "value": "",
+      "description": "[button] Go -> CLICK",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div> <div radiogroup> <label id=38012> <input id=38013 radio license plate picker /> <div> License Plate </div> </label> </div> <button id=38277 submit> <span> Go </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [43318]",
+      "op": "CLICK",
+      "element": "43318",
+      "value": "",
+      "description": "[div] XLE Sedan 4D -> CLICK",
+      "role": "div",
+      "label": "XLE Sedan 4D",
+      "observation": "<html> <div> <h2> Which Style Is Your Vehicle? </h2> <div> <label id=43318> <input radio xle sedan 4d /> <div> XLE Sedan 4D </div> </label> <label id=43327> <input radio xse sedan 4d /> <div> XSE Sedan 4D </div> </label> </div> <button id=43379> <span> Next </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [48805]",
+      "op": "CLICK",
+      "element": "48805",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <div> <a id=48478 unstyled> Price New/Used </a> <div> <div> <h2> Which Style Is Your Vehicle? </h2> <button id=48805> <span> Next </span> </button> </div> <div> <select id=49017 make> <option> Make </option> <option 2> Acura </option> <option 3> Alfa Romeo </option> <option 54> Aston Martin </option> <option 4> Audi </option> <option 5> BMW </option> <option 57> Bentley </option> <option 7> Buick </option> <option 8> Cadillac </option> <option 9> Chevrolet </option> <option 10> Chrysler </option> <option 13> Dodge </option> <option 430> FIAT </option> <option 840> Fisker </option> <option 15> Ford </option> <option 16> GMC </option> <option 897> Genesis </option> <option 18> Honda </option> <option 20> Hyundai </option> <option 21> INFINITI </option> <option 23> Jaguar </option> <option 24> Jeep </option> <option 25> Kia </option> <option 26> Land Rover </option> <option 27> Lexus </option> </select> <label> Make </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [52857]",
+      "op": "CLICK",
+      "element": "52857",
+      "value": "",
+      "description": "[div] Select Your Options -> CLICK",
+      "role": "div",
+      "label": "Select Your Options",
+      "observation": "<html> <div> <a id=52610 unstyled> Price New/Used </a> <div> <div> <label id=52857> <input radio /> <div> Select Your Options </div> </label> <div> (Ex. engine, transmission, drivetrain, etc.) </div> </div> <button id=52888> <span> Next </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [60330]",
+      "op": "CLICK",
+      "element": "60330",
+      "value": "",
+      "description": "[generic] Black image Black -> CLICK",
+      "role": "generic",
+      "label": "Black image Black",
+      "observation": "<html> <div> <a id=59318 unstyled> Price New/Used </a> <div> <label id=60330> <input radio group1 /> <div> <img black image /> <div> Black </div> </div> </label> <button id=60379> <span> Next </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [67858]",
+      "op": "CLICK",
+      "element": "67858",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <div> <a id=66796 unstyled> Price New/Used </a> <div> <button id=67858> <span> Next </span> </button> <div default> <div default> <div default> <button id=67920> <span> Search Listings </span> </button> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [72157]",
+      "op": "CLICK",
+      "element": "72157",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <a id=71896 unstyled> Price New/Used </a> <div> <div> (Your trade-in value and private party value will be the same either way.) </div> <label id=72157> <input checkbox test on /> <div> <div> Get a Cash Offer for Your Specific Vehicle </div> <div> With a Kelley Blue Book Instant Cash Offer, you can see what a local dealership will give you for your </div> </div> </label> <button id=72168> <span> Next </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [77717]",
+      "op": "CLICK",
+      "element": "77717",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <div> <a id=77443 unstyled> Price New/Used </a> <div> <div> <div> (Your trade-in value and private party value will be the same either way.) </div> <button id=77717> <span> Next </span> </button> </div> <div> <select id=77929 make> <option> Make </option> <option 2> Acura </option> <option 3> Alfa Romeo </option> <option 54> Aston Martin </option> <option 4> Audi </option> <option 5> BMW </option> <option 57> Bentley </option> <option 7> Buick </option> <option 8> Cadillac </option> <option 9> Chevrolet </option> <option 10> Chrysler </option> <option 13> Dodge </option> <option 430> FIAT </option> <option 840> Fisker </option> <option 15> Ford </option> <option 16> GMC </option> <option 897> Genesis </option> <option 18> Honda </option> <option 20> Hyundai </option> <option 21> INFINITI </option> <option 23> Jaguar </option> <option 24> Jeep </option> <option 25> Kia </option> <option 26> Land Rover </option> <option 27> Lexus </option> </select> <label> Make </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [80076]",
+      "op": "CLICK",
+      "element": "80076",
+      "value": "",
+      "description": "[div] License Plate -> CLICK",
+      "role": "div",
+      "label": "License Plate",
+      "observation": "<html> <div> <a id=79942 unstyled> Price New/Used </a> <div> <li id=80076> <div> License Plate </div> <span> License Plate </span> </li> <div> <input text enter the 17-digit vin /> <button id=80092> Go </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [81905] [AZXA46]",
+      "op": "TYPE",
+      "element": "81905",
+      "value": "AZXA46",
+      "description": "[textbox] License Plate -> TYPE: AZXA46",
+      "role": "textbox",
+      "label": "License Plate",
+      "observation": "<html> <div> <input id=81905 text license plate /> <div> <label> State </label> <select id=81901> <option true> Select </option> <option ak> AK </option> <option al> AL </option> <option ar> AR </option> <option az> AZ </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option dc> DC </option> <option de> DE </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option ia> IA </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option ma> MA </option> <option md> MD </option> <option me> ME </option> <option mi> MI </option> <option mn> MN </option> </select> </div> <button id=82452> Go </button> </div> </html>"
+    },
+    {
+      "action": "SELECT [84699] [AZ]",
+      "op": "SELECT",
+      "element": "84699",
+      "value": "AZ",
+      "description": "[combobox] State -> SELECT: AZ",
+      "role": "combobox",
+      "label": "State",
+      "observation": "<html> <div> <a id=84991 unstyled> Price New/Used </a> <div> <div> <label> State </label> <select id=84699> <option true> Select </option> <option ak> AK </option> <option al> AL </option> <option ar> AR </option> <option az> AZ </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option dc> DC </option> <option de> DE </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option ia> IA </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option ma> MA </option> <option md> MD </option> <option me> ME </option> <option mi> MI </option> <option mn> MN </option> </select> </div> <button id=85251> Go </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [87502]",
+      "op": "CLICK",
+      "element": "87502",
+      "value": "",
+      "description": "[button] Go -> HOVER",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div> <a id=87790 unstyled> Price New/Used </a> <div> <div> <label> State </label> <select id=87498> <option> Select </option> <option ak> AK </option> <option al> AL </option> <option ar> AR </option> <option az true> AZ </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option dc> DC </option> <option de> DE </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option ia> IA </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option ma> MA </option> <option md> MD </option> <option me> ME </option> <option mi> MI </option> <option mn> MN </option> </select> </div> <button id=87502> Go </button> </div> </div> </html>"
+    }
+  ]
+}

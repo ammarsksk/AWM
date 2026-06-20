@@ -1,0 +1,30 @@
+{
+  "name": "us.megabus / Ground workflow 561",
+  "source": "Mind2Web exemplar",
+  "website": "us.megabus",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Track my bus with service number SE4.",
+  "steps": [
+    {
+      "action": "CLICK [105]",
+      "op": "CLICK",
+      "element": "105",
+      "value": "",
+      "description": "[button] Check my bus\ue911 -> CLICK",
+      "role": "button",
+      "label": "Check my bus\ue911",
+      "observation": "<html> <body> <li> <a id=105 button> Check my bus </a> <ul menu> </ul> </li> <div> <mb-typeahead-component startingat> <div> <input id=603 text enter a town, city or new york, ny /> <button button clear input box /> </div> </mb-typeahead-component> <mb-typeahead-component goingto> <div> <input id=629 text enter a town, city or washington, dc /> <button button clear input box /> </div> </mb-typeahead-component> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [2409]",
+      "op": "CLICK",
+      "element": "2409",
+      "value": "",
+      "description": "[link] Track my bus -> CLICK",
+      "role": "link",
+      "label": "Track my bus",
+      "observation": "<html> <body> <ul menu> <a id=2409> Track my bus </a> </ul> <form> <mb-typeahead-component goingto> <div> <input id=2932 text enter a town, city or washington, dc /> <button button clear input box /> </div> </mb-typeahead-component> <input id=2992 number 2 /> </form> </body> </html>"
+    }
+  ]
+}

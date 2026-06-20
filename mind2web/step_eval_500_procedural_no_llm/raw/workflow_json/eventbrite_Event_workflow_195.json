@@ -1,0 +1,140 @@
+{
+  "name": "eventbrite / Event workflow 195",
+  "source": "Mind2Web exemplar",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Join the waitlist for a ticket for the Hackney Clothes Swap - Earth Day event being held on April 22nd. Name: Joe Bloggs. Email: joe@bloggs.com",
+  "steps": [
+    {
+      "action": "CLICK [358]",
+      "op": "CLICK",
+      "element": "358",
+      "value": "",
+      "description": "[div] Search for events -> CLICK",
+      "role": "div",
+      "label": "Search for events",
+      "observation": "<html> <div> <div> <button id=358 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <div> <a> Create an event </a> <a id=386> <span> Tickets </span> </a> </div> </div> <div> <div> Popular in </div> <input id=501 combobox text locationpicker columbus /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [1946] [Hackney]",
+      "op": "TYPE",
+      "element": "1946",
+      "value": "Hackney",
+      "description": "[combobox] autocomplete -> TYPE: Hackney",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <div> <div> <a> Create an event </a> <a id=2214> <span> Tickets </span> </a> </div> <div alertdialog> <main> <input id=2648 textbox search search for anything /> <input id=1946 combobox text columbus /> </main> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4965]",
+      "op": "CLICK",
+      "element": "4965",
+      "value": "",
+      "description": "[div] Hackney -> CLICK",
+      "role": "div",
+      "label": "Hackney",
+      "observation": "<html> <div alertdialog> <ul menu> <li menuitem> <button id=4965 button> <div> <div> Hackney </div> <div> London, UK </div> </div> </button> </li> <li menuitem> <button id=4982 button> <div> <div> Hackney </div> <div> KS, USA </div> </div> </button> </li> <li menuitem> <button id=4991 button> <div> <div> Hackney Central </div> <div> London, UK </div> </div> </button> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [6409]",
+      "op": "CLICK",
+      "element": "6409",
+      "value": "",
+      "description": "[combobox] autocomplete -> CLICK",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <div> <button id=6823 button> <span> Earth Day </span> </button> <div alertdialog> <main> <input id=7111 textbox search search for anything /> <input id=6409 combobox text columbus /> </main> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [8624] [Hackney]",
+      "op": "TYPE",
+      "element": "8624",
+      "value": "Hackney",
+      "description": "[combobox] autocomplete -> TYPE: Hackney",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <div> <a id=8878> Create an event </a> <div alertdialog> <main> <input id=9326 textbox search search for anything /> <div> <input id=8624 combobox text choose a location /> <ul menu> </ul> </div> </main> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11431]",
+      "op": "CLICK",
+      "element": "11431",
+      "value": "",
+      "description": "[div] London, UK -> CLICK",
+      "role": "div",
+      "label": "London, UK",
+      "observation": "<html> <div> <div> <a id=10898> Create an event </a> <button id=11058 button> <span> Earth Day </span> </button> </div> <div alertdialog> <ul menu> <li menuitem> <button id=11431 button> <div> <div> Hackney </div> <div> London, UK </div> </div> </button> </li> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [12860] [Hackney Clothes Swap - Earth Day]",
+      "op": "TYPE",
+      "element": "12860",
+      "value": "Hackney Clothes Swap - Earth Day",
+      "description": "[textbox] Search events -> TYPE: Hackney Clothes Swap - Earth Day",
+      "role": "textbox",
+      "label": "Search events",
+      "observation": "<html> <div> <div> <a id=13114> Create an event </a> <button id=13274 button> <span> Earth Day </span> </button> </div> <div alertdialog> <input id=12860 textbox search search for anything /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15713]",
+      "op": "CLICK",
+      "element": "15713",
+      "value": "",
+      "description": "[div] Hackney Clothes Swap - Earth Day -> CLICK",
+      "role": "div",
+      "label": "Hackney Clothes Swap - Earth Day",
+      "observation": "<html> <div> <ul> <button id=15394 button> <span> Today </span> </button> <button id=15405 button> <span> Earth Day </span> </button> </ul> <div alertdialog> <div> <a id=15713> <div> <div> Hackney Clothes Swap - Earth Day </div> <div> Hackney Clothes Swap - Earth Day </div> </div> </a> <div> Sat, Apr 22, 11:30 AM </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [16873]",
+      "op": "CLICK",
+      "element": "16873",
+      "value": "",
+      "description": "[button] Get tickets -> CLICK",
+      "role": "button",
+      "label": "Get tickets",
+      "observation": "<html> <div> <button button> <div> <span> Trigger search event experience </span> <input id=17121 combobox search search events /> </div> </button> <div article> <div> <div> <time id=17248> Apr 22 </time> <h1> Hackney Clothes Swap - Earth Day </h1> <strong> LOANHOOD hosts a clothes swap supported by Hackney Council </strong> <section organizer profile> </section> </div> <div> <div> Free </div> <button id=16873 button> Get tickets </button> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20296]",
+      "op": "CLICK",
+      "element": "20296",
+      "value": "",
+      "description": "[button] Join Waitlist -> CLICK",
+      "role": "button",
+      "label": "Join Waitlist",
+      "observation": "<html> <body> <div article> <div> <div> Free </div> <button id=19819 button> Get tickets </button> </div> </div> <div dialog checkout hackney clothes swap -> <div> <div> <span> English (UK) </span> <select id=20246 listbox> <option de_de> Deutsch </option> <option de_ch> Deutsch (CH) </option> <option en_au> English (AU) </option> <option en_ca> English (CA) </option> <option en_dk> English (DK) </option> <option en_fi> English (FI) </option> <option en_gb true> English (UK) </option> <option en_us> English (US) </option> <option es_ar> Espaol (AR) </option> <option es_es> Espaol (ES) </option> <option es_mx> Espaol (MX) </option> <option fr_fr> Franais </option> <option fr_ca> Franais (CA) </option> <option fr_ch> Franais (CH) </option> <option it_it> Italiano </option> <option nl_nl> Nederlands </option> <option pt_pt> Portugus </option> <option pt_br> Portugus (BR) </option> <option sv> Svenska </option> </select> </div> <button id=20296 button> Join Waitlist </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [23081] [Joe]",
+      "op": "TYPE",
+      "element": "23081",
+      "value": "Joe",
+      "description": "[textbox] First Name * (required",
+      "role": "textbox",
+      "label": "First Name * (required",
+      "observation": "<html> <body> <div> <a id=22164> Create an event </a> <div menubar> </div> </div> <div dialog checkout hackney clothes swap -> <div> <input id=23081 textbox text /> <button id=23142 button> Join Waitlist </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [26118] [Bloggs]",
+      "op": "TYPE",
+      "element": "26118",
+      "value": "Bloggs",
+      "description": "[textbox] Surname * (required",
+      "role": "textbox",
+      "label": "Surname * (required",
+      "observation": "<html> <div dialog checkout hackney clothes swap -> <div> <div> <input id=26118 textbox text /> <input id=26133 textbox email buyer.n-email /> </div> <button id=24926 button> Join Waitlist </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [29154] [joe@bloggs.com]",
+      "op": "TYPE",
+      "element": "29154",
+      "value": "joe@bloggs.com",
+      "description": "[textbox] Email * (required",
+      "role": "textbox",
+      "label": "Email * (required",
+      "observation": "<html> <body> <div article> <div> <div> Free </div> <button id=28715 button> Get tickets </button> </div> </div> <div dialog checkout hackney clothes swap -> <div> <input id=29154 textbox email buyer.n-email /> <button id=29185 button> Join Waitlist </button> </div> </div> </body> </html>"
+    }
+  ]
+}

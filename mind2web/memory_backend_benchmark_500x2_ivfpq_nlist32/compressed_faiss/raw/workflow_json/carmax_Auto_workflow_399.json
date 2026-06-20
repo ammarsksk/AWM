@@ -1,0 +1,30 @@
+{
+  "name": "carmax / Auto workflow 399",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find the documents required to sell a car in New Jersey for which payments are being paid and it has single person on the title who can come to the store",
+  "steps": [
+    {
+      "action": "CLICK [119]",
+      "op": "CLICK",
+      "element": "119",
+      "value": "",
+      "description": "[link] Sell/Trade -> CLICK",
+      "role": "link",
+      "label": "Sell/Trade",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a> Shop </a> <a id=119> Sell/Trade </a> <a> Finance </a> </div> </nav> <form search> <button id=334 submit submit search by make, model,> <span> Search CarMax inventory </span> </button> </form> </header> <main main> <div> <input id=774 text $400 /> <label> Monthly Payment </label> </div> </main> </div> </html>"
+    },
+    {
+      "action": "SELECT [3688] [New Jersey]",
+      "op": "SELECT",
+      "element": "3688",
+      "value": "New Jersey",
+      "description": "[combobox] In what state are you selling the car? -> SELECT: New Jersey",
+      "role": "combobox",
+      "label": "In what state are you selling the car?",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=4004 text licenseplate /> <label> License plate number </label> </div> <div> <input id=4121 text zipcode /> <label> What's your zip code? </label> </div> </div> <main main> <div> <select id=3688> <option true /> <option al> Alabama </option> <option az> Arizona </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option fl> Florida </option> <option ga> Georgia </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> <option mi> Michigan </option> <option mn> Minnesota </option> <option ms> Mississippi </option> <option mo> Missouri </option> <option ne> Nebraska </option> <option nv> Nevada </option> <option nh> New Hampshire </option> </select> <label> In what state are you selling the car? </label> </div> </main> </div> </html>"
+    }
+  ]
+}

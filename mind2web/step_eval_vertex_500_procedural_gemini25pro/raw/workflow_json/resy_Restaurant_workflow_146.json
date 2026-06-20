@@ -1,0 +1,120 @@
+{
+  "name": "resy / Restaurant workflow 146",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find nearby top-rated restaurants in Chicago, save the restaurant, and then book a table for 7 people on April 20 for lunch at 2 pm.",
+  "steps": [
+    {
+      "action": "CLICK [121]",
+      "op": "CLICK",
+      "element": "121",
+      "value": "",
+      "description": "[link] Nearby Restaurants -> CLICK",
+      "role": "link",
+      "label": "Nearby Restaurants",
+      "observation": "<html> <div> <header banner main resy> <button id=246 button location toronto> <div> Toronto </div> </button> </header> <a id=500 button> Chicago </a> <a id=121> Nearby Restaurants </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [4958]",
+      "op": "CLICK",
+      "element": "4958",
+      "value": "",
+      "description": "[div] Toronto -> CLICK",
+      "role": "div",
+      "label": "Toronto",
+      "observation": "<html> <div> <header banner main resy> <button id=4958 button location toronto> <div> Toronto </div> </button> </header> <div> <div> <button button> </button> <button button> </button> <button button> </button> <button id=5164 button> <p> Top Rated </p> </button> <button button> </button> </div> <div> <a id=6165> <h3> PLANTA, Toronto </h3> </a> <div checkbox add planta, toronto to favorites /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12289]",
+      "op": "CLICK",
+      "element": "12289",
+      "value": "",
+      "description": "[button] Chicago -> CLICK",
+      "role": "button",
+      "label": "Chicago",
+      "observation": "<html> <div> <header banner main resy> <a id=12289 button> Chicago </a> </header> <div> <div> <button button> </button> <button button> </button> <button button> </button> <button id=12584 button> <p> Top Rated </p> </button> <button button> </button> </div> <div> <a id=13587> <h3> PLANTA, Toronto </h3> </a> <div checkbox add planta, toronto to favorites /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17638]",
+      "op": "CLICK",
+      "element": "17638",
+      "value": "",
+      "description": "[button] Today -> CLICK",
+      "role": "button",
+      "label": "Today",
+      "observation": "<html> <div> <header banner main resy> <button id=17729 button location chicago> <div> Chicago </div> </button> </header> <div> <div> <button id=17638 button> Today </button> <div> For </div> </div> <div> <a id=18446> <h3> Canal Street Eatery & Market </h3> </a> <div checkbox add canal street eatery & /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [26481]",
+      "op": "CLICK",
+      "element": "26481",
+      "value": "",
+      "description": "[button] April 20, 2023. -> CLICK",
+      "role": "button",
+      "label": "April 20, 2023.",
+      "observation": "<html> <div> <header banner main resy> <div dialog> <button id=26481 button april 20, 2023.> 20 </button> </div> </header> <div> <div> <a id=27640> <h3> Canal Street Eatery & Market </h3> </a> <div checkbox add canal street eatery & /> </div> <div> <a id=28205> <h3> Mei's Restaurant </h3> </a> <div checkbox add mei's restaurant to favorites /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [33419] [7 Guests]",
+      "op": "SELECT",
+      "element": "33419",
+      "value": "7 Guests",
+      "description": "[combobox] Party of 2 -> SELECT: 7 Guests",
+      "role": "combobox",
+      "label": "Party of 2",
+      "observation": "<html> <div> <div> <button button> </button> <button button> </button> <button button> </button> <button id=33788 button> <p> Top Rated </p> </button> <button button> </button> <button button> </button> <button button more collections> </button> </div> <div> <select id=33419 party_size> <option 1> 1 Guest </option> <option 2 true> 2 Guests </option> <option 3> 3 Guests </option> <option 4> 4 Guests </option> <option 5> 5 Guests </option> <option 6> 6 Guests </option> <option 7> 7 Guests </option> <option 8> 8 Guests </option> <option 9> 9 Guests </option> <option 10> 10 Guests </option> <option 11> 11 Guests </option> <option 12> 12 Guests </option> <option 13> 13 Guests </option> <option 14> 14 Guests </option> <option 15> 15 Guests </option> <option 16> 16 Guests </option> <option 17> 17 Guests </option> <option 18> 18 Guests </option> <option 19> 19 Guests </option> <option 20> 20 Guests </option> </select> <div> <a id=34812> <h3> Mei's Restaurant </h3> </a> <div checkbox add mei's restaurant to favorites /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [39965]",
+      "op": "CLICK",
+      "element": "39965",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <a id=40524> <h3> Canal Street Eatery & Market </h3> </a> <div checkbox add canal street eatery & /> </div> <div> <a id=40904> <h3> Mei's Restaurant </h3> </a> <div checkbox add mei's restaurant to favorites /> </div> </div> <svg id=39965 /> </html>"
+    },
+    {
+      "action": "CLICK [46301]",
+      "op": "CLICK",
+      "element": "46301",
+      "value": "",
+      "description": "[button] View more availability for Canal Street Eatery & M... -> CLICK",
+      "role": "button",
+      "label": "View more availability for Canal Street Eatery & M...",
+      "observation": "<html> <div> <header banner main resy> <button id=46392 button location chicago> <div> Chicago </div> </button> </header> <div> <div> <a id=46303> <h3> Canal Street Eatery & Market </h3> </a> <div checkbox add canal street eatery & /> </div> <div> <button button> </button> <button button> </button> <button button> </button> <button id=46301 button view more availability for canal /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57348]",
+      "op": "CLICK",
+      "element": "57348",
+      "value": "",
+      "description": "[button] 2:00 PM Eatery -> CLICK",
+      "role": "button",
+      "label": "2:00 PM Eatery",
+      "observation": "<html> <body> <header banner main resy> <button id=53703 button location chicago> <div> Chicago </div> </button> </header> <iframe dialog book with resy> <div> <button id=57333 button> <label> <p> Date </p> <div> Thu., Apr. 20 </div> </label> </button> <div> <button id=57348 button> <div> 2:00 PM </div> <div> Eatery </div> </button> <button button> </button> <button button> </button> <button button> </button> </div> </div> </iframe> </body> </html>"
+    },
+    {
+      "action": "CLICK [65446]",
+      "op": "CLICK",
+      "element": "65446",
+      "value": "",
+      "description": "[button] Reserve Now -> CLICK",
+      "role": "button",
+      "label": "Reserve Now",
+      "observation": "<html> <body> <header banner main resy> <div> <button id=61738 button location chicago> <div> Chicago </div> </button> <input id=61836 text search restaurants, cuisines, etc. /> </div> </header> <iframe dialog book with resy> <button id=65446 button> <span> Reserve Now </span> </button> </iframe> </body> </html>"
+    },
+    {
+      "action": "CLICK [73527]",
+      "op": "CLICK",
+      "element": "73527",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <body> <div> <header banner main resy> <button id=69656 button location chicago> <div> Chicago </div> </button> </header> <div> <button id=71770 button> Search Here </button> <button button current location /> </div> </div> <iframe dialog book with resy> <button id=73527 button> <span> Done </span> </button> </iframe> </body> </html>"
+    }
+  ]
+}

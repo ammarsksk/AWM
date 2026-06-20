@@ -1,0 +1,100 @@
+{
+  "name": "jetblue / Airlines workflow 358",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Check the status of flights from Los Angeles area to Boston area tomorrow",
+  "steps": [
+    {
+      "action": "CLICK [532]",
+      "op": "CLICK",
+      "element": "532",
+      "value": "",
+      "description": "[button] Travel Info -> CLICK",
+      "role": "button",
+      "label": "Travel Info",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <a id=532 button> <span> Travel Info </span> </a> </nav> </jb-header> <jb-tabs> <nav tablist> <div> <button id=804 tab button> <span> <jb-icon img /> <span> Flights </span> </span> </button> <button tab button> </button> <button tab button> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div combobox> <jb-type-ahead-input> <label> From </label> <input id=924 text new york city area (nyc) /> </jb-type-ahead-input> </div> </jb-tab-panel> </jb-tabs> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [5520]",
+      "op": "CLICK",
+      "element": "5520",
+      "value": "",
+      "description": "[link] Flight Tracker -> CLICK",
+      "role": "link",
+      "label": "Flight Tracker",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <div> <a id=5388> Destinations </a> <a id=5520> <jb-icon img /> <span> Flight Tracker </span> </a> </div> </nav> </jb-header> <nav tablist> <div> <button id=5610 tab button> <span> <jb-icon img /> <span> Flights </span> </span> </button> <button tab button> </button> <button tab button> </button> <button tab button> </button> </div> </nav> </jb-app> </html>"
+    },
+    {
+      "action": "TYPE [9084] [Los Angeles]",
+      "op": "TYPE",
+      "element": "9084",
+      "value": "Los Angeles",
+      "description": "[textbox] From -> TYPE: Los Angeles",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button id=9721 tab button> <span> By route </span> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div> <div combobox> <jb-type-ahead-input> <label> From </label> <input id=9084 text new york city area (nyc) /> </jb-type-ahead-input> </div> <div> <label> Departure Date </label> <button id=9774 button departure date> <div> Today, Tue Apr 11 </div> </button> </div> </div> </jb-tab-panel> </jb-tabs> </html>"
+    },
+    {
+      "action": "CLICK [13357]",
+      "op": "CLICK",
+      "element": "13357",
+      "value": "",
+      "description": "[option] Los Angeles area -> CLICK",
+      "role": "option",
+      "label": "Los Angeles area",
+      "observation": "<html> <jb-tab-panel tabpanel> <div> <div combobox> <jb-flyout-inner dialog> <ul listbox> <li id=13357 option> <div> <strong> Los Angeles </strong> area </div> </li> <li option> </li> <li id=13373 option> <div> <strong> Los Angeles </strong> , CA (LAX) </div> </li> <li option> </li> </ul> </jb-flyout-inner> </div> <div> <label> Departure Date </label> <button id=13431 button departure date> <div> Today, Tue Apr 11 </div> </button> </div> </div> </jb-tab-panel> </html>"
+    },
+    {
+      "action": "TYPE [16285] [Boston]",
+      "op": "TYPE",
+      "element": "16285",
+      "value": "Boston",
+      "description": "[textbox] To -> TYPE: Boston",
+      "role": "textbox",
+      "label": "To",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button id=16922 tab button> <span> By route </span> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=16285 text /> </jb-type-ahead-input> </div> <div> <label> Departure Date </label> <button id=16990 button departure date> <div> Today, Tue Apr 11 </div> </button> </div> </div> </jb-tab-panel> </jb-tabs> </html>"
+    },
+    {
+      "action": "CLICK [20611]",
+      "op": "CLICK",
+      "element": "20611",
+      "value": "",
+      "description": "[option] Boston area -> CLICK",
+      "role": "option",
+      "label": "Boston area",
+      "observation": "<html> <jb-tab-panel tabpanel> <div> <div combobox> <jb-flyout-inner dialog> <ul listbox> <li id=20611 option> <div> <strong> Boston </strong> area </div> </li> <li id=20619 option> <div> <strong> Boston </strong> , MA (BOS) </div> </li> <li option> </li> <li option> </li> </ul> </jb-flyout-inner> </div> <div> <label> Departure Date </label> <button id=20666 button departure date> <div> Today, Tue Apr 11 </div> </button> </div> </div> </jb-tab-panel> </html>"
+    },
+    {
+      "action": "CLICK [24195]",
+      "op": "CLICK",
+      "element": "24195",
+      "value": "",
+      "description": "[button] Today, Tue Apr 11 -> CLICK",
+      "role": "button",
+      "label": "Today, Tue Apr 11",
+      "observation": "<html> <jb-app> <jb-tab-panel tabpanel> <form> <div> <label> Departure Date </label> <button id=24195 button departure date> <div> Today, Tue Apr 11 </div> </button> </div> <button id=24203 button submit> <span> Check status </span> </button> </form> </jb-tab-panel> <div> <textarea text /> <div> 250 characters remaining </div> <button id=24630> Submit </button> </div> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [27763]",
+      "op": "CLICK",
+      "element": "27763",
+      "value": "",
+      "description": "[span] Tomorrow, Wed Apr 12 -> CLICK",
+      "role": "span",
+      "label": "Tomorrow, Wed Apr 12",
+      "observation": "<html> <jb-tab-panel tabpanel> <form> <div> <label> Departure Date </label> <button id=27742 button departure date> <div> Today, Tue Apr 11 </div> </button> <jb-flyout-inner dialog> <div listbox> <jb-select-option option> </jb-select-option> <jb-select-option option> </jb-select-option> <jb-select-option id=27763 option> <span> Tomorrow, Wed Apr 12 </span> </jb-select-option> </div> </jb-flyout-inner> </div> <button id=27769 button submit> <span> Check status </span> </button> </form> </jb-tab-panel> </html>"
+    },
+    {
+      "action": "CLICK [31298]",
+      "op": "CLICK",
+      "element": "31298",
+      "value": "",
+      "description": "[span] Check status -> CLICK",
+      "role": "span",
+      "label": "Check status",
+      "observation": "<html> <jb-app> <jb-tabs> <nav tablist> <div> <button id=31235 tab button> <span> By route </span> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <button id=31298 button submit> <span> Check status </span> </button> </jb-tab-panel> </jb-tabs> <div> <textarea text /> <div> 250 characters remaining </div> <button id=31724> Submit </button> </div> </jb-app> </html>"
+    }
+  ]
+}

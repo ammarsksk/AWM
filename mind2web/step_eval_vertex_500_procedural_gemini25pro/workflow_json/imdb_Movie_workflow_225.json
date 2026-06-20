@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "name": "imdb / Movie workflow 225",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Search the  actor who won the Oscars for best actor  in a suuporing role ine 1990, and add his upcoming movies to my watchlist.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "add",
+      "watchlist",
+      "actor",
+      "oscars",
+      "1990",
+      "upcoming",
+      "link",
+      "imdb",
+      "entertainment",
+      "movie",
+      "search",
+      "who",
+      "won",
+      "best",
+      "suuporing",
+      "role",
+      "ine",
+      "his",
+      "movies",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "open",
+      "navigation",
+      "drawer",
+      "span",
+      "denzel",
+      "washington",
+      "expand"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Open Navigation Drawer",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Navigation Drawer",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Oscars",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Oscars",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the 1990",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "1990",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Denzel Washington",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Denzel Washington",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Expand Upcoming",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Expand Upcoming",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the add to watchlist",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "add to watchlist",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the add to watchlist",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "add to watchlist",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "imdb / Movie workflow 225"
+}

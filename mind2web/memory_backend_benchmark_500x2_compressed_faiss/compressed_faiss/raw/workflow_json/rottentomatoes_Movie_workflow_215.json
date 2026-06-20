@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 215",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show me the latest news from rotten tomatoes.",
+  "steps": [
+    {
+      "action": "CLICK [132]",
+      "op": "CLICK",
+      "element": "132",
+      "value": "",
+      "description": "[link] NEWS -> HOVER",
+      "role": "link",
+      "label": "NEWS",
+      "observation": "<html> <rt-header navigation bar> <div> <slot logo> <img id=219 rotten tomatoes /> </slot> <slot desktop-search> <slot> <slot search-input> <input id=677 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <slot news> <slot link> <a id=132> News </a> </slot> </slot> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [32610]",
+      "op": "CLICK",
+      "element": "32610",
+      "value": "",
+      "description": "[link] VIEW ALL -> CLICK",
+      "role": "link",
+      "label": "VIEW ALL",
+      "observation": "<html> <div> <rt-header navigation bar> <div> <slot logo> <img id=32750 rotten tomatoes /> </slot> <slot nav-dropdowns> <slot news> <slot dropdown> <slot column> <slot view-all-link> <a id=32610> View All </a> </slot> </slot> </slot> </slot> </slot> </div> </rt-header> <a id=47127> About Rotten Tomatoes </a> </div> </html>"
+    }
+  ]
+}

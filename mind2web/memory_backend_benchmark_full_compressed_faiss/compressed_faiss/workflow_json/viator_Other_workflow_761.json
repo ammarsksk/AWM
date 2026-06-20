@@ -1,0 +1,51 @@
+{
+  "name": "viator / Other workflow 761",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "viator",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find ideas and recommendation for things to do in Cancun.",
+  "goal_pattern": "Find ideas and recommendation for things to do in Cancun.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Where to?",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Where to?",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the [circle] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "circle",
+      "target_description": "[circle] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [94] [cancun]",
+      "gold_element_id": "94",
+      "gold_value": "cancun"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5263]",
+      "gold_element_id": "5263",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "viator / Other workflow 761"
+}

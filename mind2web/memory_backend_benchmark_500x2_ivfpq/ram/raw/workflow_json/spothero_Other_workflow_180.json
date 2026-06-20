@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 180",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show the details for a monthly parking option in Ney York City near Street Taco to start on may 6 that i can self park",
+  "steps": [
+    {
+      "action": "CLICK [105]",
+      "op": "CLICK",
+      "element": "105",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=105 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=427 text search for parking search-input address, place, city or venue /> <button id=436 button> Search </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2076] [street taco]",
+      "op": "TYPE",
+      "element": "2076",
+      "value": "street taco",
+      "description": "[textbox] Search for parking -> TYPE: street taco",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=2388 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=2076 text search for parking search-input address, place, city or venue /> <button id=2408 button> Search </button> </div> </div> </html>"
+    }
+  ]
+}

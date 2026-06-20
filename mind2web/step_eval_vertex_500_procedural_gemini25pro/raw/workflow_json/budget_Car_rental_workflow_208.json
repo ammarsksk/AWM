@@ -1,0 +1,170 @@
+{
+  "name": "budget / Car rental workflow 208",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Book the cheapest long-term car rental with a fuel plan, GPS, and satellite radio from June 29 to July 28, pick up at 9 am at Orlando airport and dropping off at the same location.",
+  "steps": [
+    {
+      "action": "CLICK [126]",
+      "op": "CLICK",
+      "element": "126",
+      "value": "",
+      "description": "[link] Long-Term Car Rental -> CLICK",
+      "role": "link",
+      "label": "Long-Term Car Rental",
+      "observation": "<html> <div> <form resform> <div> <button button> Select My Car </button> <a id=1835> Continue </a> </div> </form> <section> <a id=126> Long-Term Car Rental </a> <a id=4109> Rental Car Fuel Plans </a> </section> </div> </html>"
+    },
+    {
+      "action": "TYPE [5115] [orlando]",
+      "op": "TYPE",
+      "element": "5115",
+      "value": "orlando",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: orlando",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=5115 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> <div> <button button> Select My Car </button> <a id=6807> Continue </a> </div> </div> </form> <a id=8991> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [15513]",
+      "op": "CLICK",
+      "element": "15513",
+      "value": "",
+      "description": "[span] Orlando Intl Airport -> CLICK",
+      "role": "span",
+      "label": "Orlando Intl Airport",
+      "observation": "<html> <div> <form resform> <angucomplete-alt enter your pick-up location or> <div> <span> <span id=15513> Orlando Intl Airport </span> <span> , Orlando </span> <span> , Florida </span> <span> , United States-(MCO) </span> </span> <span> <span id=16939> Orlando </span> <span> , Florida </span> <span> , United States </span> </span> </div> </angucomplete-alt> </form> <a id=20751> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [27394]",
+      "op": "CLICK",
+      "element": "27394",
+      "value": "",
+      "description": "[textbox] mm/dd/yyyy -> CLICK",
+      "role": "textbox",
+      "label": "mm/dd/yyyy",
+      "observation": "<html> <div> <a id=28091 button> Reservations </a> <form resform> <div> <input id=27394 text mm/dd/yyyy 06/01/2023 /> <button button> ... </button> </div> </form> <a id=32287> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [39031]",
+      "op": "CLICK",
+      "element": "39031",
+      "value": "",
+      "description": "[link] 29 -> CLICK",
+      "role": "link",
+      "label": "29",
+      "observation": "<html> <div> <tr> <a id=44499> 28 </a> <a id=39031> 29 </a> </tr> <a id=44641> 28 </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [50641]",
+      "op": "CLICK",
+      "element": "50641",
+      "value": "",
+      "description": "[link] 28 -> CLICK",
+      "role": "link",
+      "label": "28",
+      "observation": "<html> <body> <a id=55518> Rental Car Fuel Plans </a> <div> <td id=56108> <span> 28 </span> </td> <a id=50641> 28 </a> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [62258] [9 00 AM]",
+      "op": "SELECT",
+      "element": "62258",
+      "value": "9 00 AM",
+      "description": "[combobox] Pick Up Time -> SELECT: 9:00 AM",
+      "role": "combobox",
+      "label": "Pick Up Time",
+      "observation": "<html> <div> <a id=62940 button> Reservations </a> <form resform> <select id=62258 pick up time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am true> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm> noon </option> </select> </form> <a id=67135> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [73895] [9 00 AM]",
+      "op": "SELECT",
+      "element": "73895",
+      "value": "9 00 AM",
+      "description": "[combobox] Return Time -> SELECT: 9:00 AM",
+      "role": "combobox",
+      "label": "Return Time",
+      "observation": "<html> <div> <form resform> <div> <select id=73895 return time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am true> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm> noon </option> </select> <div> <button id=76036 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=78772> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [85532]",
+      "op": "CLICK",
+      "element": "85532",
+      "value": "",
+      "description": "[button] Select My Car -> CLICK",
+      "role": "button",
+      "label": "Select My Car",
+      "observation": "<html> <div> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=86730 text angupicloc enter your pick-up location or orlando intl airport, orlando, florida, /> <a> click here </a> </div> </angucomplete-alt> <div> <button id=85532 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=90408> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [97173]",
+      "op": "CLICK",
+      "element": "97173",
+      "value": "",
+      "description": "[link] Recommended -> CLICK",
+      "role": "link",
+      "label": "Recommended",
+      "observation": "<html> <div> <div> <form resform> <div> <span> Sort by: </span> <a id=97173> Recommended </a> </div> </form> <div> <a id=104771> Pay Now </a> <p> Pay Now & Save 132.23 </p> </div> </div> <a id=106782> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [118758]",
+      "op": "CLICK",
+      "element": "118758",
+      "value": "",
+      "description": "[link] Price (Low to High",
+      "role": "link",
+      "label": "Price (Low to High",
+      "observation": "<html> <div> <form resform> <a id=118758> Price (Low to High) </a> </form> <div> <div> <a id=126107> Pay Now </a> <p> Pay Now & Save 124.83 </p> </div> <div> <a id=126351> Pay Now </a> <p> Pay Now & Save 132.23 </p> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [140291]",
+      "op": "CLICK",
+      "element": "140291",
+      "value": "",
+      "description": "[link] Pay Now -> CLICK",
+      "role": "link",
+      "label": "Pay Now",
+      "observation": "<html> <div> <div> <div> <a id=140291> Pay Now </a> <p> Pay Now & Save 67.35 </p> </div> <a id=146692> Pay Now </a> </div> <a id=149848> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [161777]",
+      "op": "CLICK",
+      "element": "161777",
+      "value": "",
+      "description": "[checkbox] $16.99/Day$6.55/Day -> CLICK",
+      "role": "checkbox",
+      "label": "$16.99/Day$6.55/Day",
+      "observation": "<html> <section> <div> <h1> Recommended Extras </h1> <button id=165508 button> Continue </button> </div> <div> <input id=161777 checkbox group-gps on /> <button id=167872 submit> Continue </button> </div> </section> </html>"
+    },
+    {
+      "action": "CLICK [177802]",
+      "op": "CLICK",
+      "element": "177802",
+      "value": "",
+      "description": "[checkbox] $5.99/Day$1.38/Day -> CLICK",
+      "role": "checkbox",
+      "label": "$5.99/Day$1.38/Day",
+      "observation": "<html> <div> <section> <div> <h1> Recommended Extras </h1> <button id=181565 button> Continue </button> </div> <input id=177802 checkbox group-xmr on /> </section> <a id=184433> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [193882]",
+      "op": "CLICK",
+      "element": "193882",
+      "value": "",
+      "description": "[checkbox] MARKET -> CLICK",
+      "role": "checkbox",
+      "label": "MARKET",
+      "observation": "<html> <div> <section> <div> <h1> Recommended Extras </h1> <button id=197662 button> Continue </button> </div> <input id=193882 checkbox group-gso on /> </section> <a id=200537> Rental Car Fuel Plans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [210014]",
+      "op": "CLICK",
+      "element": "210014",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <div> <section> <div> <h1> Recommended Extras </h1> <button id=210014 button> Continue </button> </div> <button id=216182 submit> Continue </button> </section> <a id=216687> Rental Car Fuel Plans </a> </div> </html>"
+    }
+  ]
+}

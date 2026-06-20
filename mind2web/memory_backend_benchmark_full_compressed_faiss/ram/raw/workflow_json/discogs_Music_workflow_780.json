@@ -1,0 +1,30 @@
+{
+  "name": "discogs / Music workflow 780",
+  "source": "Mind2Web exemplar",
+  "website": "discogs",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find vinyl records at the lowest price.",
+  "steps": [
+    {
+      "action": "CLICK [111]",
+      "op": "CLICK",
+      "element": "111",
+      "value": "",
+      "description": "[button] Marketplace -> CLICK",
+      "role": "button",
+      "label": "Marketplace",
+      "observation": "<html> <header> <form search search discogs> <input combobox text search artists, albums and more... q /> <button id=215 submit search> <i img /> </button> <input type all /> </form> <nav main> <ul> <button id=231> Explore <i img /> </button> <button id=111> Marketplace <i img /> </button> </ul> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [5592]",
+      "op": "CLICK",
+      "element": "5592",
+      "value": "",
+      "description": "[link] Vinyl -> CLICK",
+      "role": "link",
+      "label": "Vinyl",
+      "observation": "<html> <header> <form search search discogs> <input combobox text search artists, albums and more... q /> <button id=5696 submit search> <i img /> </button> <input type all /> </form> <nav main> <ul> <button id=5712> Explore <i img /> </button> <a id=5592> Vinyl </a> </ul> </nav> </header> </html>"
+    }
+  ]
+}

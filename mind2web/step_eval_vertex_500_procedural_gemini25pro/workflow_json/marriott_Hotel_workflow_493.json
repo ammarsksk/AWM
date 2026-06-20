@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "name": "marriott / Hotel workflow 493",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "goal_pattern": "Find The Ritz-Carlton hotels in Washington DC that can hold a student social event from May 9 to May 12 and will require 7 guest rooms and an event space for 50",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "event",
+      "may",
+      "use",
+      "textbox",
+      "travel",
+      "specific",
+      "field",
+      "find",
+      "ritz",
+      "carlton",
+      "washington",
+      "social",
+      "guest",
+      "rooms",
+      "space",
+      "link",
+      "group",
+      "gridcell",
+      "2023",
+      "generic",
+      "marriott",
+      "hotel",
+      "hotels",
+      "can",
+      "hold",
+      "student",
+      "will",
+      "require",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "meetings",
+      "events",
+      "students",
+      "destination",
+      "menuitem",
+      "usa",
+      "start",
+      "date",
+      "tue",
+      "fri",
+      "div",
+      "purpose"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Meetings & Events",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Meetings & Events",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Group Travel",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Group Travel",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Group Travel for Students",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Group Travel for Students",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Destination",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Destination",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Washington D.C., DC, USA",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Washington D.C., DC, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Start Date",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Start Date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the \ue023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\ue023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Tue, May 9, 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Tue, May 9, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Fri, May 12, 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Fri, May 12, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Purpose of your event",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Purpose of your event",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Social",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Social",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "type the Guest rooms",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Guest rooms",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "type the Event space",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Event space",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Find",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Find",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Brand",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Brand",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the \ue914 The Ritz-Carlton (4",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "\ue914 The Ritz-Carlton (4",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 17
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 17.0
+  },
+  "raw_workflow_name": "marriott / Hotel workflow 493"
+}

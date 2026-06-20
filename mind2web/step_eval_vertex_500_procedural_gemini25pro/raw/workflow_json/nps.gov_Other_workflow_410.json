@@ -1,0 +1,70 @@
+{
+  "name": "nps.gov / Other workflow 410",
+  "source": "Mind2Web exemplar",
+  "website": "nps.gov",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a park in the National Park System that is related to the topics of Industry and also Laborer and Worker.",
+  "steps": [
+    {
+      "action": "CLICK [93]",
+      "op": "CLICK",
+      "element": "93",
+      "value": "",
+      "description": "[link] FIND A PARK -> CLICK",
+      "role": "link",
+      "label": "FIND A PARK",
+      "observation": "<html> <body> <div> <form search> <button id=206 button> Search </button> <input sitelimit / /> <input affiliate nps /> </form> <button id=238 button open menu> <span> <span> Open </span> Menu </span> <span> Close <span> Menu </span> </span> </button> </div> <div> <a id=93> Find a Park </a> <a> See All Parks & Search By Map </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [1582]",
+      "op": "CLICK",
+      "element": "1582",
+      "value": "",
+      "description": "[link] Search by Activity or Topic -> CLICK",
+      "role": "link",
+      "label": "Search by Activity or Topic",
+      "observation": "<html> <body> <button id=1724 button open menu> <span> <span> Open </span> Menu </span> <span> Close <span> Menu </span> </span> </button> <form> <label> Park Name </label> <input combobox text select a park /> <select findaparkname> </select> <a id=1582> Search by Activity or Topic </a> </form> <div main> <form> Select a State: <select id=3426 state> <option true> None Selected </option> <option al> Alabama </option> <option ak> Alaska </option> <option as> American Samoa </option> <option az> Arizona </option> <option ar> Arkansas </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option dc> District of Columbia </option> <option fl> Florida </option> <option ga> Georgia </option> <option gu> Guam </option> <option hi> Hawaii </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> </select> </form> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [4514]",
+      "op": "CLICK",
+      "element": "4514",
+      "value": "",
+      "description": "[button] Topic -> CLICK",
+      "role": "button",
+      "label": "Topic",
+      "observation": "<html> <div> <button id=4513 button activity> <span> Activity </span> </button> <div> <label id=6795> By Topic </label> <button id=4514 button topic> <span> Topic </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12110]",
+      "op": "CLICK",
+      "element": "12110",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <button button industry> <span> <input id=12110 checkbox 38 /> <label id=14854> Industry </label> </span> </button> <button button laborer and worker> <span> <input checkbox 44 /> <label id=14864> Laborer and Worker </label> </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [19702]",
+      "op": "CLICK",
+      "element": "19702",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <button id=19698 button industry> <span> Industry </span> </button> <div> <button button industry> <span> <input checkbox 38 true /> <label id=22447> Industry </label> </span> </button> <button button laborer and worker> <span> <input id=19702 checkbox 44 /> <label> Laborer and Worker </label> </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [27302]",
+      "op": "CLICK",
+      "element": "27302",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div> <button id=27294 button industry, laborer and worker> <span> Industry, Laborer and Worker </span> </button> <button button industry> <span> <input checkbox 38 true /> <label id=30047> Industry </label> </span> </button> </div> <div> <button id=27302 submit> Search </button> <a> Clear Filters </a> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "name": "booking / General workflow 417",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "goal_pattern": "Book a low-priced small air-conditioned car on rent in Mexico City Airport for under 100 dollars and book without insurance for next day.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "span",
+      "required",
+      "book",
+      "use",
+      "car",
+      "mexico",
+      "city",
+      "specific",
+      "field",
+      "booking",
+      "travel",
+      "general",
+      "low",
+      "priced",
+      "small",
+      "air",
+      "conditioned",
+      "rent",
+      "airport",
+      "under",
+      "100",
+      "dollars",
+      "without",
+      "insurance",
+      "next",
+      "day",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "rentals",
+      "searchbox",
+      "please",
+      "your",
+      "destination",
+      "option",
+      "benito",
+      "juarez",
+      "intl",
+      "mex",
+      "search",
+      "combobox",
+      "sort",
+      "div",
+      "view"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Car rentals",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Car rentals",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Please type your destination",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Please type your destination",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Mexico City - Benito Juarez Intl, MX (MEX",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Mexico City - Benito Juarez Intl, MX (MEX",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "select the Sort by",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Sort by",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the View deal",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "View deal",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Go to book",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Go to book",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 11
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 11.0
+  },
+  "raw_workflow_name": "booking / General workflow 417"
+}

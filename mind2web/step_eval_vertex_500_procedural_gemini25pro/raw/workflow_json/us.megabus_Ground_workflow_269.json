@@ -1,0 +1,70 @@
+{
+  "name": "us.megabus / Ground workflow 269",
+  "source": "Mind2Web exemplar",
+  "website": "us.megabus",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Track a bus leaving from Abbotsford.",
+  "steps": [
+    {
+      "action": "CLICK [119]",
+      "op": "CLICK",
+      "element": "119",
+      "value": "",
+      "description": "[button] Check my bus\ue911 -> CLICK",
+      "role": "button",
+      "label": "Check my bus\ue911",
+      "observation": "<html> <body> <li> <a id=119 button> Check my bus </a> <ul menu> </ul> </li> <div> <mb-typeahead-component startingat> <div> <input id=619 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <mb-typeahead-component goingto> <div> <input id=2178 text enter a town, city or /> <button button clear input box /> <div enter a town, city or> </div> </div> </mb-typeahead-component> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [5690]",
+      "op": "CLICK",
+      "element": "5690",
+      "value": "",
+      "description": "[link] Track my bus -> CLICK",
+      "role": "link",
+      "label": "Track my bus",
+      "observation": "<html> <body> <ul menu> <a id=5690> Track my bus </a> </ul> <div> <mb-typeahead-component startingat> <div> <input id=6186 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <mb-typeahead-component goingto> <div> <input id=7745 text enter a town, city or /> <button button clear input box /> <div enter a town, city or> </div> </div> </mb-typeahead-component> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [11287] [Abbotsford]",
+      "op": "TYPE",
+      "element": "11287",
+      "value": "Abbotsford",
+      "description": "[combobox] From -> TYPE: Abbotsford",
+      "role": "combobox",
+      "label": "From",
+      "observation": "<html> <div tabpanel> <form> <div> <input id=11287 combobox from /> <img location /> <img id=11284 change direction /> </div> <button id=11346 submit> Find my bus </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [11532]",
+      "op": "CLICK",
+      "element": "11532",
+      "value": "",
+      "description": "[div] Abbotsford -> CLICK",
+      "role": "div",
+      "label": "Abbotsford",
+      "observation": "<html> <div tabpanel> <div> <input id=11587 combobox abbotsford from /> <div id=11532> <span> <span id=11591> Abbotsford </span> , WI: </span> Super 39 Shell </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11767]",
+      "op": "CLICK",
+      "element": "11767",
+      "value": "",
+      "description": "[button] Find my bus -> CLICK",
+      "role": "button",
+      "label": "Find my bus",
+      "observation": "<html> <div tabpanel> <form> <div> <input id=11822 combobox abbotsford, wi: super 39 shell from /> <img clear input /> <img id=11764 change direction /> </div> <button id=11767 submit> Find my bus </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [12023]",
+      "op": "CLICK",
+      "element": "12023",
+      "value": "",
+      "description": "[div] WCL3 -> CLICK",
+      "role": "div",
+      "label": "WCL3",
+      "observation": "<html> <div tabpanel> <div> <div> <div> <div id=12023> WCL3 </div> <div> Milwaukee, WI </div> <div> Dep 12:26 pm </div> </div> <span id=12150> Track </span> </div> <span id=12173> Track </span> </div> </div> </html>"
+    }
+  ]
+}

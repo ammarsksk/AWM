@@ -1,0 +1,51 @@
+{
+  "name": "qatarairways / Airlines workflow 909",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a one-way flight ticket from Addis Ababa to Accra on April 14 and book the cheaper economy ticket.",
+  "goal_pattern": "Find a one-way flight ticket from Addis Ababa to Accra on April 14 and book the cheaper economy ticket.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the From Autocomplete selection. Enter your place.",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "From Autocomplete selection. Enter your place.",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Addis Ababa",
+      "operation": "CLICK",
+      "target_type": "strong",
+      "target_description": "Addis Ababa",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [112] [addis ababa]",
+      "gold_element_id": "112",
+      "gold_value": "addis ababa"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [21649]",
+      "gold_element_id": "21649",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "qatarairways / Airlines workflow 909"
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "name": "instacart / General workflow 47",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "instacart",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "Add 2 different flavor dog treats and one dog food with lowest price to cart from Safeway.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "span",
+      "add",
+      "dog",
+      "treats",
+      "lowest",
+      "price",
+      "cart",
+      "use",
+      "instacart",
+      "shopping",
+      "general",
+      "different",
+      "flavor",
+      "one",
+      "food",
+      "safeway",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "view",
+      "all",
+      "items",
+      "best",
+      "match",
+      "option",
+      "first",
+      "load",
+      "more"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the dog treats",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "dog treats",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the View all 20+ items",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "View all 20+ items",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Best match",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Best match",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Price: lowest first",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Price: lowest first",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Add",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Add",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Add",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Add",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Load more",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Load more",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Add to cart",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Add to cart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "instacart / General workflow 47"
+}

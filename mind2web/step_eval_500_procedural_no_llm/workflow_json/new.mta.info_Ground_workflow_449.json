@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "name": "new.mta.info / Ground workflow 449",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Find the subway station nearest to 07055",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "station",
+      "required",
+      "07055",
+      "use",
+      "searchbox",
+      "address",
+      "landmark",
+      "new",
+      "mta",
+      "info",
+      "travel",
+      "ground",
+      "find",
+      "subway",
+      "nearest",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "nearby",
+      "stations",
+      "stops",
+      "specific",
+      "field",
+      "listitem",
+      "passaic",
+      "usa"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Nearby Stations & Stops",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Nearby Stations & Stops",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Address, station, landmark",
+        "operation": "CLICK",
+        "target_type": "searchbox",
+        "target": "Address, station, landmark",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Address, station, landmark",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Address, station, landmark",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Passaic, NJ 07055, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Passaic, NJ 07055, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "new.mta.info / Ground workflow 449"
+}

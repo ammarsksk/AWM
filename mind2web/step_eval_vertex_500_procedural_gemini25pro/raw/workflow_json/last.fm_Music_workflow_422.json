@@ -1,0 +1,70 @@
+{
+  "name": "last.fm / Music workflow 422",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Play the top track for the top indie artist in the last 30 days",
+  "steps": [
+    {
+      "action": "CLICK [208]",
+      "op": "CLICK",
+      "element": "208",
+      "value": "",
+      "description": "[link] Music -> CLICK",
+      "role": "link",
+      "label": "Music",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=286> Play </button> </ul> </section> <div main> <div> <ul primary navigation> <a id=208> Music </a> </ul> <div> <a id=2052> Filter <span> (3:00) </span> </a> <a> BTS </a> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [10011]",
+      "op": "CLICK",
+      "element": "10011",
+      "value": "",
+      "description": "[link] indie -> CLICK",
+      "role": "link",
+      "label": "indie",
+      "observation": "<html> <div main> <div> <a id=10011> <span> indie </span> </a> <form> <label> Artist </label> <input id=13489 search seed enter an artist name /> <button submit> Get recommendations </button> </form> <a id=16015> <span> Top Artists </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [25687]",
+      "op": "CLICK",
+      "element": "25687",
+      "value": "",
+      "description": "[link] The Smiths -> CLICK",
+      "role": "link",
+      "label": "The Smiths",
+      "observation": "<html> <div main> <div> <nav secondary navigation> <a id=26617> Artists </a> </nav> <section> <a id=26780> Top Artists </a> <div> <a id=25687> The Smiths </a> <p> 3,217,288 </p> </div> <a> More artists </a> </section> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36710]",
+      "op": "CLICK",
+      "element": "36710",
+      "value": "",
+      "description": "[button] Sorted by: Last 7 days -> CLICK",
+      "role": "button",
+      "label": "Sorted by: Last 7 days",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=36775> Play </button> </ul> </section> <div main> <div> <div> <h3> Top Tracks </h3> <button play on youtube> Play all </button> <button id=36710> <span> Sorted by: </span> Last 7 days </button> </div> <div> <h3> Albums </h3> <button id=39572> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [59575]",
+      "op": "CLICK",
+      "element": "59575",
+      "value": "",
+      "description": "[link] Last 30 days -> CLICK",
+      "role": "link",
+      "label": "Last 30 days",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=59655> Play </button> </ul> </section> <div main> <div> <a id=59575> Last 30 days </a> <div> <h3> Albums </h3> <button id=62377> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [82444]",
+      "op": "CLICK",
+      "element": "82444",
+      "value": "",
+      "description": "[link] Play track -> CLICK",
+      "role": "link",
+      "label": "Play track",
+      "observation": "<html> <div main> <div> <button id=82512> Play artist </button> <div> <a id=82444 play on youtube> Play track </a> <div> <h3> Albums </h3> <button id=85243> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

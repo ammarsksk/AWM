@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "name": "kbb / Auto workflow 481",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find the fuel economy for a 2005 Toyota Corolla",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "required",
+      "combobox",
+      "specific",
+      "field",
+      "kbb",
+      "shopping",
+      "auto",
+      "find",
+      "fuel",
+      "economy",
+      "2005",
+      "toyota",
+      "corolla",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "price",
+      "new",
+      "used",
+      "year",
+      "make",
+      "model",
+      "next",
+      "close",
+      "dialog"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Price New/Used",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price New/Used",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "select the Year",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Year",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "select the Make",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Make",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "select the Model",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Model",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Close dialog",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Close dialog",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "kbb / Auto workflow 481"
+}

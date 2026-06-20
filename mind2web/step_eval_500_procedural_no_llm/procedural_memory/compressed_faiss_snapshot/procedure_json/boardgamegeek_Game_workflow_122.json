@@ -1,0 +1,120 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "game",
+      "ark",
+      "nova",
+      "boardgamegeek",
+      "entertainment",
+      "buy",
+      "number",
+      "ranked",
+      "board",
+      "geekmarket",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "browse",
+      "all",
+      "boardgames",
+      "span",
+      "english",
+      "edition",
+      "third",
+      "printing",
+      "message"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Entertainment",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Browse",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Browse",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the All Boardgames",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "All Boardgames",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Ark Nova",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Ark Nova",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Ark Nova (English edition, third printing",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Ark Nova (English edition, third printing",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the \uf0e0 Message",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "\uf0e0 Message",
+        "target_type": "link",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Buy the number 4 ranked board game on the geekmarket.",
+  "memory_type": "typed_procedure",
+  "name": "boardgamegeek / Game workflow 122",
+  "raw_workflow_name": "boardgamegeek / Game workflow 122",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 5.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Game",
+  "termination": {
+    "max_steps_hint": 5,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "boardgamegeek"
+}

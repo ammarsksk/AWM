@@ -1,0 +1,70 @@
+{
+  "name": "ikea / Speciality workflow 304",
+  "source": "Mind2Web exemplar",
+  "website": "ikea",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Add decorative LED Candles to the cart.",
+  "steps": [
+    {
+      "action": "CLICK [121]",
+      "op": "CLICK",
+      "element": "121",
+      "value": "",
+      "description": "[link] Products -> CLICK",
+      "role": "link",
+      "label": "Products",
+      "observation": "<html> <body> <ul> <a id=121> Products </a> <a id=480> Marketplace </a> </ul> <a id=1987> Lighting </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [7214]",
+      "op": "CLICK",
+      "element": "7214",
+      "value": "",
+      "description": "[button] Lighting -> CLICK",
+      "role": "button",
+      "label": "Lighting",
+      "observation": "<html> <body> <ul submenu for products> <li> <a id=7214 button> Lighting </a> <ul submenu for lighting> <a id=8449> Decorative lighting </a> </ul> </li> </ul> <a id=10324> Lighting </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [15547]",
+      "op": "CLICK",
+      "element": "15547",
+      "value": "",
+      "description": "[link] Decorative lighting -> CLICK",
+      "role": "link",
+      "label": "Decorative lighting",
+      "observation": "<html> <ul submenu for products> <ul submenu for home dcor> <a id=16669> Candle holders & candles </a> </ul> <ul submenu for lighting> <a id=15547> Decorative lighting </a> <a id=16801> LED lightbulbs </a> </ul> </ul> </html>"
+    },
+    {
+      "action": "CLICK [19733]",
+      "op": "CLICK",
+      "element": "19733",
+      "value": "",
+      "description": "[img] LED candles -> CLICK",
+      "role": "img",
+      "label": "LED candles",
+      "observation": "<html> <div> <nav navigation> <a id=20872> <img id=19733 led candles /> <span> LED candles </span> </a> </nav> <div> <button show sorting options modal> </button> <button filter products by in stock> </button> <button id=21137 show filter modal category> <span> Category </span> </button> <button show filter modal color> </button> <button filter products by buyable online> </button> <button show filter modal size> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [22521]",
+      "op": "CLICK",
+      "element": "22521",
+      "value": "",
+      "description": "[img] -> CLICK",
+      "role": "img",
+      "label": "",
+      "observation": "<html> <div> <button id=23642 show sorting options modal> <span> Sort </span> </button> <button show filter modal size> </button> <button show filter modal customer rating> </button> <button show filter modal price> </button> <button id=23662 show more filters modal> <span> All filters </span> </button> </div> <img id=22521 pip-image /> </html>"
+    },
+    {
+      "action": "CLICK [27264]",
+      "op": "CLICK",
+      "element": "27264",
+      "value": "",
+      "description": "[span] Add to bag -> HOVER",
+      "role": "span",
+      "label": "Add to bag",
+      "observation": "<html> <main main> <div> <button id=26989 button add to bag /> <div> <div> <input id=27251 text quantity input value 1 /> <span> Type in a number or use the up or down arrows to change the quantity </span> <button button increase quantity button /> <button button decrease quantity button /> </div> <button id=27264 button add to bag> <span> Add to bag </span> </button> </div> </div> </main> </html>"
+    }
+  ]
+}

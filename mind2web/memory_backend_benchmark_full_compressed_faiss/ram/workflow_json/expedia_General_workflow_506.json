@@ -1,0 +1,51 @@
+{
+  "name": "expedia / General workflow 506",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "expedia",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Search for car rentals in San Francisco for a weekend trip and filter the results by the rental company Avis and car type Economy.",
+  "goal_pattern": "Search for car rentals in San Francisco for a weekend trip and filter the results by the rental company Avis and car type Economy.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Cars",
+      "operation": "CLICK",
+      "target_type": "tab",
+      "target_description": "Cars",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the Pick-up",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Pick-up",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [484]",
+      "gold_element_id": "484",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [8813] [San Francisco]",
+      "gold_element_id": "8813",
+      "gold_value": "San Francisco"
+    }
+  ],
+  "raw_workflow_name": "expedia / General workflow 506"
+}

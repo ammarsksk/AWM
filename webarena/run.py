@@ -4,8 +4,12 @@ WARNING DEPRECATED WILL BE REMOVED SOON
 
 import os
 import argparse
+import json
+import sys
+from types import MethodType
 from pathlib import Path
 
+import gymnasium as gym
 from browsergym.experiments import ExpArgs, EnvArgs
 
 from agents.legacy.agent import GenericAgentArgs
@@ -29,7 +33,7 @@ def parse_args():
     parser.add_argument(
         "--model_name",
         type=str,
-        default="openai/gpt-4o",
+        default="openai/google/gemini-2.5-pro",
         help="Model name for the chat model.",
     )
     parser.add_argument(
@@ -101,17 +105,75 @@ def parse_args():
     parser.add_argument(
         "--max_steps",
         type=int,
-        default=10,
+        default=30,
         help="Maximum number of steps to take for each task.",
     )
+    parser.add_argument("--llm_retries", type=int, default=6)
+    parser.add_argument("--pre_observation_delay", type=float, default=1.25)
+    parser.add_argument("--extract_obs_retries", type=int, default=8)
     parser.add_argument(
         "--workflow_path",
         type=str,
         default=None,
         help="Path to the memory file to load for the agent.",
     )
+    parser.add_argument(
+        "--browser_proxy",
+        type=str,
+        default=None,
+        help="Proxy server for Playwright Chromium, e.g. http://host:port.",
+    )
+    parser.add_argument(
+        "--procedural_memory_path",
+        type=str,
+        default=None,
+        help="Path to the WebArena procedural memory directory.",
+    )
+    parser.add_argument("--procedural_site", type=str, default="shopping")
+    parser.add_argument("--procedural_top_k", type=int, default=4)
+    parser.add_argument("--procedural_min_score", type=float, default=0.42)
 
     return parser.parse_args()
+
+
+def attach_browser_runtime_options(
+    env_args: EnvArgs,
+    proxy_server: str | None,
+    pre_observation_delay: float,
+) -> None:
+    def make_env_with_proxy(self, action_mapping, exp_dir, exp_task_kwargs=None, use_raw_page_output=False):
+        if self.task_name.startswith("webarena"):
+            import browsergym.webarena  # noqa: F401
+
+        exp_task_kwargs = exp_task_kwargs or {}
+        extra_kwargs = {"pre_observation_delay": pre_observation_delay}
+        if proxy_server:
+            extra_kwargs["pw_chromium_kwargs"] = {"proxy": {"server": proxy_server}}
+        if self.record_video:
+            extra_kwargs["record_video_dir"] = exp_dir
+        if self.viewport:
+            extra_kwargs["viewport"] = self.viewport
+        if self.slow_mo is not None:
+            extra_kwargs["slow_mo"] = self.slow_mo
+        if self.storage_state:
+            extra_kwargs["pw_context_kwargs"] = {"storage_state": self.storage_state}
+        if self.task_kwargs is not None:
+            extra_kwargs["task_kwargs"] = self.task_kwargs
+        if exp_task_kwargs:
+            extra_kwargs["task_kwargs"] = extra_kwargs.get("task_kwargs", {}) | exp_task_kwargs
+
+        return gym.make(
+            f"browsergym/{self.task_name}",
+            disable_env_checker=True,
+            max_episode_steps=self.max_steps,
+            headless=self.headless,
+            wait_for_user_message=self.wait_for_user_message,
+            action_mapping=action_mapping,
+            use_raw_page_output=use_raw_page_output,
+            **extra_kwargs,
+        )
+
+    env_args.make_env = MethodType(make_env_with_proxy, env_args)
 
 
 def main():
@@ -136,6 +198,19 @@ WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at
     if args.task_name == "openended":
         env_args.wait_for_user_message = True
         env_args.task_kwargs = {"start_url": args.start_url}
+    try:
+        import browsergym.core.env as browsergym_env
+
+        browsergym_env.EXTRACT_OBS_MAX_TRIES = max(
+            int(args.extract_obs_retries), browsergym_env.EXTRACT_OBS_MAX_TRIES
+        )
+    except Exception:
+        pass
+    attach_browser_runtime_options(
+        env_args,
+        proxy_server=args.browser_proxy,
+        pre_observation_delay=args.pre_observation_delay,
+    )
 
     exp_args = ExpArgs(
         env_args=env_args,
@@ -164,14 +239,37 @@ WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at
                 enable_chat=True,
                 demo_mode="default" if args.demo_mode else "off",
                 workflow_path=args.workflow_path,
+                procedural_memory_path=args.procedural_memory_path,
+                procedural_site=args.procedural_site,
+                procedural_top_k=args.procedural_top_k,
+                procedural_min_score=args.procedural_min_score,
             ),
+            max_retry=args.llm_retries,
         ),
     )
 
     exp_args.prepare(Path("./results"))
     exp_args.run()
 
-    os.rename(exp_args.exp_dir, f"results/{args.task_name}")
+    final_dir = Path("results") / args.task_name
+    if final_dir.exists():
+        suffix = 0
+        while True:
+            archived = final_dir.with_name(
+                f"_{final_dir.name}" if suffix == 0 else f"_{final_dir.name}_{suffix}"
+            )
+            if not archived.exists():
+                final_dir.rename(archived)
+                break
+            suffix += 1
+    Path(exp_args.exp_dir).rename(final_dir)
+
+    summary_path = final_dir / "summary_info.json"
+    if summary_path.exists():
+        summary = json.loads(summary_path.read_text())
+        if summary.get("err_msg"):
+            print(summary["err_msg"], file=sys.stderr)
+            sys.exit(1)
 
 
 if __name__ == "__main__":

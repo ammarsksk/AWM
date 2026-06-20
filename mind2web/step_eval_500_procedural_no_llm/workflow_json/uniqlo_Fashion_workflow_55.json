@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "name": "uniqlo / Fashion workflow 55",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "uniqlo",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "goal_pattern": "Add two pairs of women's Pink sweet pants in XXL size to your cart and view your cart.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "cart",
+      "add",
+      "women",
+      "pink",
+      "pants",
+      "xxl",
+      "your",
+      "view",
+      "link",
+      "option",
+      "sweatpants",
+      "checkbox",
+      "uniqlo",
+      "shopping",
+      "fashion",
+      "two",
+      "pairs",
+      "sweet",
+      "size",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "bottoms",
+      "gridcell",
+      "category",
+      "heading"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the WOMEN",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "WOMEN",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Bottoms",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Bottoms",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Pants",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Pants",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Category",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Category",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "input",
+        "target": "[input] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Sweatpants",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Sweatpants",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Sweatpants",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Sweatpants",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the PINK",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "PINK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the XXL",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "XXL",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "input",
+        "target": "[input] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the 2",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "2",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the ADD TO CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "ADD TO CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the VIEW CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "VIEW CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 13
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 13.0
+  },
+  "raw_workflow_name": "uniqlo / Fashion workflow 55"
+}

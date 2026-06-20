@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "name": "rottentomatoes / Movie workflow 211",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Find the US box office revenue for the highest tomatometer rated movie that the actress playing Sam Carpenter in the most recent Scream movie has been in.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "movie",
+      "required",
+      "use",
+      "link",
+      "rottentomatoes",
+      "entertainment",
+      "find",
+      "box",
+      "office",
+      "revenue",
+      "highest",
+      "tomatometer",
+      "rated",
+      "actress",
+      "playing",
+      "sam",
+      "carpenter",
+      "most",
+      "recent",
+      "scream",
+      "has",
+      "been",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "neve",
+      "campbell",
+      "courteney",
+      "cox",
+      "david",
+      "arquette",
+      "melissa",
+      "barrera",
+      "heights"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Neve Campbell, Courteney Cox, David Arquette",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Neve Campbell, Courteney Cox, David Arquette",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Melissa Barrera",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Melissa Barrera",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the In the Heights",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "In the Heights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "rottentomatoes / Movie workflow 211"
+}

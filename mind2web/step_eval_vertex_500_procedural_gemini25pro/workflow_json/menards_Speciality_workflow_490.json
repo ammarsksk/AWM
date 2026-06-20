@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "name": "menards / Speciality workflow 490",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "menards",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Find tortillas bread in grocery stock near  zip 59901 and add 5 pieces of 12 pcs pack in the cart and view the cart.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "cart",
+      "increase",
+      "quantity",
+      "grocery",
+      "zip",
+      "tortillas",
+      "bread",
+      "stock",
+      "add",
+      "view",
+      "use",
+      "code",
+      "link",
+      "menards",
+      "shopping",
+      "speciality",
+      "find",
+      "near",
+      "59901",
+      "pieces",
+      "pcs",
+      "pack",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "columbus",
+      "textbox",
+      "specific",
+      "field",
+      "search",
+      "make",
+      "store",
+      "departments",
+      "home",
+      "label",
+      "today",
+      "checkbox"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the COLUMBUS, OH",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "COLUMBUS, OH",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Zip Code",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Zip Code",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Search By Zip Code",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search By Zip Code",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the MAKE MY STORE",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "MAKE MY STORE",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Departments",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Departments",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Grocery & Home",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Grocery & Home",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Grocery",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Grocery",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Bread",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Bread",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the In Stock Today",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "In Stock Today",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Tortillas (4",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Tortillas (4",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Increase Quantity",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Increase Quantity",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Increase Quantity",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Increase Quantity",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Increase Quantity",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Increase Quantity",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Increase Quantity",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Increase Quantity",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the ADD TO CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "ADD TO CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the VIEW CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "VIEW CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 16
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 16.0
+  },
+  "raw_workflow_name": "menards / Speciality workflow 490"
+}

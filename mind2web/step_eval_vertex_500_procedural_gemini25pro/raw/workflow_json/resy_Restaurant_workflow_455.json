@@ -1,0 +1,60 @@
+{
+  "name": "resy / Restaurant workflow 455",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Make a reservation for the next restaurant-related event, only 1 ticket is needed.",
+  "steps": [
+    {
+      "action": "CLICK [83]",
+      "op": "CLICK",
+      "element": "83",
+      "value": "",
+      "description": "[link] See more venues in the Special Events &amp; Experi... -> CLICK",
+      "role": "link",
+      "label": "See more venues in the Special Events &amp; Experi...",
+      "observation": "<html> <div> <header banner main resy> <input id=283 text search restaurants, cuisines, etc. /> </header> <div> <a id=83 see more venues in the> see more </a> <div> <div> Aria </div> <a id=1455 happy hour burger, aria, thursday,> <div> HAPPY HOUR BURGER </div> </a> <div> Thu, Apr 13, 2023 5:00 PM - 5:30 PM </div> <div> Buckhead Village </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7565]",
+      "op": "CLICK",
+      "element": "7565",
+      "value": "",
+      "description": "[link] HAPPY HOUR BURGER, Aria, Thursday, April 13, 2023 ... -> CLICK",
+      "role": "link",
+      "label": "HAPPY HOUR BURGER, Aria, Thursday, April 13, 2023 ...",
+      "observation": "<html> <div> <header banner main resy> <input id=7749 text search restaurants, cuisines, etc. /> </header> <div> <div> Aria </div> <a id=7565 happy hour burger, aria, thursday,> <div> HAPPY HOUR BURGER </div> </a> <div> Thu, Apr 13, 2023 5:00 PM - 5:30 PM </div> <div> Buckhead Village </div> </div> <a id=8485> Nearby Restaurants </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [9542] [1 Ticket]",
+      "op": "SELECT",
+      "element": "9542",
+      "value": "1 Ticket",
+      "description": "[combobox] 2 tickets for HAPPY HOUR BURGER -> SELECT: 1 Ticket",
+      "role": "combobox",
+      "label": "2 tickets for HAPPY HOUR BURGER",
+      "observation": "<html> <div> <header banner main resy> <input id=9725 text search restaurants, cuisines, etc. /> </header> <div> <select id=9542 2 tickets for happy hour tickets> <option 1 ticket 1> 1 Ticket </option> <option 2 tickets 2 true> 2 Tickets </option> <option 3 tickets 3> 3 Tickets </option> <option 4 tickets 4> 4 Tickets </option> <option 5 tickets 5> 5 Tickets </option> <option 6 tickets 6> 6 Tickets </option> <option 7 tickets 7> 7 Tickets </option> <option 8 tickets 8> 8 Tickets </option> <option 9 tickets 9> 9 Tickets </option> <option 10 tickets 10> 10 Tickets </option> <option 11 tickets 11> 11 Tickets </option> <option 12 tickets 12> 12 Tickets </option> <option 13 tickets 13> 13 Tickets </option> <option 14 tickets 14> 14 Tickets </option> <option 15 tickets 15> 15 Tickets </option> <option 16 tickets 16> 16 Tickets </option> <option 17 tickets 17> 17 Tickets </option> <option 18 tickets 18> 18 Tickets </option> <option 19 tickets 19> 19 Tickets </option> <option 20 tickets 20> 20 Tickets </option> <option 21 tickets 21> 21 Tickets </option> <option 22 tickets 22> 22 Tickets </option> <option 23 tickets 23> 23 Tickets </option> <option 24 tickets 24> 24 Tickets </option> <option 25 tickets 25> 25 Tickets </option> </select> <label> 2 Tickets </label> </div> <a id=10151> Nearby Restaurants </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [11957]",
+      "op": "CLICK",
+      "element": "11957",
+      "value": "",
+      "description": "[button] 5:00 PM -> CLICK",
+      "role": "button",
+      "label": "5:00 PM",
+      "observation": "<html> <div> <header banner main resy> <input id=11688 text search restaurants, cuisines, etc. /> </header> <div> <h2> RESERVATION - HAPPY HOUR BURGER </h2> <li> Reservation for Aria's Happy Hour Burger </li> <button id=11957 button> <div> 5:00 PM </div> </button> </div> <a id=12104> Nearby Restaurants </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [14569]",
+      "op": "CLICK",
+      "element": "14569",
+      "value": "",
+      "description": "[button] Reserve Now -> CLICK",
+      "role": "button",
+      "label": "Reserve Now",
+      "observation": "<html> <body> <div> <header banner main resy> <input id=13639 text search restaurants, cuisines, etc. /> </header> <div> <h2> RESERVATION - HAPPY HOUR BURGER </h2> <li> Reservation for Aria's Happy Hour Burger </li> <button id=13910 button> <div> 5:00 PM </div> </button> </div> </div> <iframe dialog book with resy> <button id=14569 button> <span> Reserve Now </span> </button> </iframe> </body> </html>"
+    }
+  ]
+}

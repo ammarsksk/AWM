@@ -1,0 +1,70 @@
+{
+  "name": "instacart / General workflow 46",
+  "source": "Mind2Web exemplar",
+  "website": "instacart",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Add a new address to the account. The address is 2983 Marietta Street,  APT 2. Business name is Buck.",
+  "steps": [
+    {
+      "action": "CLICK [278]",
+      "op": "CLICK",
+      "element": "278",
+      "value": "",
+      "description": "[span] 171 2nd street -> CLICK",
+      "role": "span",
+      "label": "171 2nd street",
+      "observation": "<html> <div> <div> <div search products, stores, and recipes> <form search> <p> Begin typing in the search field, and the app will offer suggestions. Use the arrow keys to navigate to a </p> <p> 3 entries </p> <input id=272 search search products, stores, and recipes /> <button submit search /> </form> </div> <div button> <button id=278 button current address: 171 2nd street.> <span> 171 2nd street </span> </button> </div> </div> <div main> <button id=506> Show more </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [1878] [2983 Marietta Street]",
+      "op": "TYPE",
+      "element": "1878",
+      "value": "2983 Marietta Street",
+      "description": "[textbox] Add a new address -> TYPE: 2983 Marietta Street",
+      "role": "textbox",
+      "label": "Add a new address",
+      "observation": "<html> <div dialog choose address> <div> <div> <input id=1878 text streetaddress /> <label id=2481> Add a new address </label> </div> <button id=2505> Edit </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4308]",
+      "op": "CLICK",
+      "element": "4308",
+      "value": "",
+      "description": "[span] 2983 Marietta Street -> CLICK",
+      "role": "span",
+      "label": "2983 Marietta Street",
+      "observation": "<html> <div dialog choose address> <ul> <div id=4308 button> <address> <span> 2983 Marietta Street </span> <span> Sarahsville, OH 43779 </span> </address> </div> <div id=4320 button> <address> <span> 2983 Marietta Street </span> <span> Point Pleasant, WV 25550 </span> </address> </div> <div id=4333 button> <address> <span> 2983 Marietta Street </span> <span> Chalmette, LA 70043 </span> </address> </div> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [5475] [2]",
+      "op": "TYPE",
+      "element": "5475",
+      "value": "2",
+      "description": "[textbox] Apt, floor, suite, etc (optional",
+      "role": "textbox",
+      "label": "Apt, floor, suite, etc (optional",
+      "observation": "<html> <div dialog choose address> <form form> <div> <input id=5475 text /> <label> Apt, floor, suite, etc (optional) </label> </div> <div> <input id=6122 text businessname /> <label> Business name (optional) </label> </div> <button id=6136 submit> <span> Save Address </span> </button> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [7272] [Buck]",
+      "op": "TYPE",
+      "element": "7272",
+      "value": "Buck",
+      "description": "[textbox] Business name (optional",
+      "role": "textbox",
+      "label": "Business name (optional",
+      "observation": "<html> <div dialog choose address> <form form> <div> <input id=7272 text businessname /> <label> Business name (optional) </label> </div> <div> <input id=7928 text postalcode 43779 /> <label> ZIP code </label> </div> <button id=7933 submit> <span> Save Address </span> </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [9730]",
+      "op": "CLICK",
+      "element": "9730",
+      "value": "",
+      "description": "[button] Save Address -> CLICK",
+      "role": "button",
+      "label": "Save Address",
+      "observation": "<html> <body> <div main> <button id=9384> Show more </button> </div> <div dialog choose address> <form form> <div> <input id=9725 text postalcode 43779 /> <label> ZIP code </label> </div> <button id=9730 submit> <span> Save Address </span> </button> </form> </div> </body> </html>"
+    }
+  ]
+}

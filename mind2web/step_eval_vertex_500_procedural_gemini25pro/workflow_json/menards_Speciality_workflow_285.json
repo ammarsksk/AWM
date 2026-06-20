@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "name": "menards / Speciality workflow 285",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "menards",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Find a multi-purpose painting tool available for pick up at zip 44240, if the brand Red Devil is available, add the cheapest one to the wishlist and view my complete wish list.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "list",
+      "use",
+      "checkbox",
+      "multi",
+      "purpose",
+      "painting",
+      "tool",
+      "available",
+      "red",
+      "devil",
+      "add",
+      "view",
+      "link",
+      "specific",
+      "field",
+      "menards",
+      "shopping",
+      "speciality",
+      "find",
+      "pick",
+      "zip",
+      "44240",
+      "brand",
+      "cheapest",
+      "one",
+      "wishlist",
+      "complete",
+      "wish",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "departments",
+      "paint",
+      "tools",
+      "43229",
+      "update",
+      "pickup",
+      "store",
+      "eligible",
+      "label",
+      "combobox",
+      "your"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Departments",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Departments",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Paint",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Paint",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Painting Tools",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Painting Tools",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the 43229",
+        "operation": "TYPE",
+        "target_type": "button",
+        "target": "43229",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the UPDATE",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "UPDATE",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Pickup at Store Eligible (86",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Pickup at Store Eligible (86",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Multi-Purpose Tool (11",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Multi-Purpose Tool (11",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Red Devil (2",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Red Devil (2",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Add",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Add",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "select the Select a list",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Select a list",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the VIEW YOUR LIST",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "VIEW YOUR LIST",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 11
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 11.0
+  },
+  "raw_workflow_name": "menards / Speciality workflow 285"
+}

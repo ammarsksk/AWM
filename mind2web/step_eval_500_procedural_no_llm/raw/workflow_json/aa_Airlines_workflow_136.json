@@ -1,0 +1,50 @@
+{
+  "name": "aa / Airlines workflow 136",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find jobs available in Texas for American Airlines.",
+  "steps": [
+    {
+      "action": "CLICK [130]",
+      "op": "CLICK",
+      "element": "130",
+      "value": "",
+      "description": "[link] We're hiring! Join our team , Opens another site i... -> CLICK",
+      "role": "link",
+      "label": "We're hiring! Join our team , Opens another site i...",
+      "observation": "<html> <body> <main main main content> <div tabpanel> <form> <div> <label> From <input id=1342 text originairport city or airport /> </label> <label> To <input id=1363 text city or airport /> </label> </div> </form> </div> </main> <footer contentinfo footer> <a id=130> We're hiring! Join our team <span> , Opens another site in a new window that may not meet accessibility guidelines. </span> </a> </footer> </body> </html>"
+    },
+    {
+      "action": "CLICK [5663]",
+      "op": "CLICK",
+      "element": "5663",
+      "value": "",
+      "description": "[link] Search open jobs -> CLICK",
+      "role": "link",
+      "label": "Search open jobs",
+      "observation": "<html> <div> <div region header> <a id=6270 button careers> Careers </a> </div> <div main> <div> <h2> FIND YOUR JOB </h2> <p> Were on a journey. Wont you join us? </p> <a id=5663 search all open jobs at> Search open jobs </a> </div> </div> <div navigation> <a id=7635 view all jobs> View All Jobs </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [8430] [TX]",
+      "op": "TYPE",
+      "element": "8430",
+      "value": "TX",
+      "description": "[input] -> TYPE: TX",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div main> <div> <form search keywordsearch> <input id=9244 text search by location locationsearch /> </form> <thead> <tr> <a button> Title </a> <a id=9497 button> Location </a> </tr> <input id=8430 text filter: location location /> </thead> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [13268]",
+      "op": "CLICK",
+      "element": "13268",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div main> <div> <form search keywordsearch> <input id=14082 text search by location locationsearch /> </form> <thead> <tr> <a button> Title </a> <a id=14335 button> Location </a> </tr> <form searchfilter> <input id=13268 submit filter /> <input q /> <input q2 /> <input alertid /> </form> </thead> </div> </div> </html>"
+    }
+  ]
+}

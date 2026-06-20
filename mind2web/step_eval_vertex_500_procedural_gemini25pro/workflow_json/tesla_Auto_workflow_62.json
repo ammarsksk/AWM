@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "name": "tesla / Auto workflow 62",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Show me the inventory of the Tesla Model S within 200 miles from 10001",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "tesla",
+      "inventory",
+      "model",
+      "within",
+      "link",
+      "required",
+      "specific",
+      "field",
+      "shopping",
+      "auto",
+      "show",
+      "200",
+      "miles",
+      "10001",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "view",
+      "textbox",
+      "registration",
+      "zip",
+      "code",
+      "where",
+      "you",
+      "will",
+      "register",
+      "combobox",
+      "search"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Model S",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Model S",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the View Inventory",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "View Inventory",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Registration Zip Code Where you will register the ...",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Registration Zip Code Where you will register the ...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "select the Search within",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Search within",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "tesla / Auto workflow 62"
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "name": "united / Airlines workflow 499",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "View the bag charges for the passenger James Son for the flight with the confirmation number 10000002",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "travel",
+      "view",
+      "bag",
+      "charges",
+      "confirmation",
+      "number",
+      "tab",
+      "info",
+      "link",
+      "baggage",
+      "textbox",
+      "specific",
+      "field",
+      "united",
+      "airlines",
+      "passenger",
+      "james",
+      "son",
+      "flight",
+      "10000002",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "fee",
+      "calculator",
+      "flights",
+      "last",
+      "name"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the TRAVEL INFO",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "TRAVEL INFO",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Baggage info",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Baggage info",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Baggage fee calculator",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Baggage fee calculator",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the My flights",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "My flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Confirmation number (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Confirmation number (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "type the Last name (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Last name (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the View my bag charges",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "View my bag charges",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "united / Airlines workflow 499"
+}

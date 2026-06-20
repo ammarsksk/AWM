@@ -1,0 +1,70 @@
+{
+  "name": "kayak / Airlines workflow 280",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find hotels in Las Vegas, NV that offer free airport shuttle service.",
+  "steps": [
+    {
+      "action": "CLICK [472]",
+      "op": "CLICK",
+      "element": "472",
+      "value": "",
+      "description": "[link] Search for hotels -> CLICK",
+      "role": "link",
+      "label": "Search for hotels",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a id=472 search for hotels> <svg hotels icon /> <div> Stays </div> </a> <a search for cars> </a> <a search for packages> </a> <a search for trains> </a> </div> <div> <button id=706 button submit search> <svg img c8lpf-icon /> </button> <h1> Search <a> Flights </a> , <a id=1405> Hotels </a> & <a> Rental Cars </a> </h1> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4478]",
+      "op": "CLICK",
+      "element": "4478",
+      "value": "",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> CLICK",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <div> <div> <input id=4478 text enter a city, hotel, airport, /> <button button submit search> <svg id=5078 img c8lpf-icon /> </button> </div> <a id=5799> Las Vegas Hotels </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [17284] [Las Vegas]",
+      "op": "TYPE",
+      "element": "17284",
+      "value": "Las Vegas",
+      "description": "[textbox] Enter a city, hotel, airport, address or landmark -> TYPE: Las Vegas",
+      "role": "textbox",
+      "label": "Enter a city, hotel, airport, address or landmark",
+      "observation": "<html> <div> <div> <input id=17284 text enter a city, hotel, airport, /> <button button submit search> <svg id=17884 img c8lpf-icon /> </button> </div> <a id=18605> Las Vegas Hotels </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [36443]",
+      "op": "CLICK",
+      "element": "36443",
+      "value": "",
+      "description": "[span] Las Vegas, Nevada, United States -> CLICK",
+      "role": "span",
+      "label": "Las Vegas, Nevada, United States",
+      "observation": "<html> <body> <a id=31513> Las Vegas Hotels </a> <ul listbox> <li id=36443 option las vegas, nevada, united states> <div> <img city:las vegas, nevada, united states /> <div> <span> Las Vegas, Nevada, United States </span> <span> City </span> </div> </div> </li> <li option the strip, las vegas, nevada,> </li> <li option las vegas, new mexico, united> </li> <li option las vegas, nevada, united states> </li> <li id=36498 option las vegas> <div> <svg img /> <div> <span> Las Vegas </span> <span> Las Vegas, Nevada, United States </span> </div> </div> </li> <li option las vegas, nevada, united states> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [43294]",
+      "op": "CLICK",
+      "element": "43294",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <body> <button id=43322 button submit search> <svg id=43294 img c8lpf-icon /> </button> <div dialog> <button id=48171 close /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [56303]",
+      "op": "CLICK",
+      "element": "56303",
+      "value": "",
+      "description": "[checkbox] Free airport shuttle -> CLICK",
+      "role": "checkbox",
+      "label": "Free airport shuttle",
+      "observation": "<html> <div hotel result filters> <div> <div region freebies> <span> <span> <input id=56303 checkbox false /> <svg img icon /> </span> <label id=66811> <div> Free airport shuttle </div> </label> </span> </div> <div region amenities> <div id=67083 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

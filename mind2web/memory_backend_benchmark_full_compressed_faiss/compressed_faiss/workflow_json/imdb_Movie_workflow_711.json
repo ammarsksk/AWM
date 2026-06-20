@@ -1,0 +1,51 @@
+{
+  "name": "imdb / Movie workflow 711",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find the movie which won the jury prize in Cannes 2022, add the director of the movie to the new list named director and add \"to watch\" in the description of that list.",
+  "goal_pattern": "Find the movie which won the jury prize in Cannes 2022, add the director of the movie to the new list named director and add \"to watch\" in the description of that list.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Open Navigation Drawer",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Open Navigation Drawer",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Cannes",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Cannes",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [182]",
+      "gold_element_id": "182",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5338]",
+      "gold_element_id": "5338",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "imdb / Movie workflow 711"
+}

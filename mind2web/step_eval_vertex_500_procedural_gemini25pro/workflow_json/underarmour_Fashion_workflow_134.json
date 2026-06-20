@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "name": "underarmour / Fashion workflow 134",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "underarmour",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "goal_pattern": "Find the Mens size guide for bottoms",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "link",
+      "value",
+      "required",
+      "size",
+      "guide",
+      "bottoms",
+      "underarmour",
+      "shopping",
+      "fashion",
+      "find",
+      "mens",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "men"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Size Guide",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Size Guide",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Men",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Men",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Bottoms",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Bottoms",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 3
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 3.0
+  },
+  "raw_workflow_name": "underarmour / Fashion workflow 134"
+}

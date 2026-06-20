@@ -1,0 +1,148 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "vitamin",
+      "add",
+      "buy",
+      "get",
+      "free",
+      "load",
+      "vitamins",
+      "menu",
+      "items",
+      "img",
+      "cvs",
+      "shopping",
+      "speciality",
+      "cart",
+      "bottles",
+      "are",
+      "new",
+      "arrival",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "shop",
+      "link",
+      "checkbox",
+      "sale",
+      "list",
+      "nature",
+      "bounty",
+      "immune",
+      "health",
+      "125mc"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Shop",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Shop",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the load Vitamins Menu",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "load Vitamins Menu",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the load Vitamins A-Z Menu",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "load Vitamins A-Z Menu",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Vitamin D",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Vitamin D",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Buy 1, Get 1 Free 33 items, On Sale list 3 items",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Buy 1, Get 1 Free 33 items, On Sale list 3 items",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [img] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[img] -> CLICK",
+        "target_type": "img",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Add Nature's Bounty Vitamin D3 Immune Health 125mc...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Add Nature's Bounty Vitamin D3 Immune Health 125mc...",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Add to cart 2 bottles of vitamin D that are buy 1 get 1 free and new arrival.",
+  "memory_type": "typed_procedure",
+  "name": "cvs / Speciality workflow 166",
+  "raw_workflow_name": "cvs / Speciality workflow 166",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 7.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Speciality",
+  "termination": {
+    "max_steps_hint": 7,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "cvs"
+}

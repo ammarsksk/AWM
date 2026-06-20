@@ -1,0 +1,50 @@
+{
+  "name": "nps.gov / Other workflow 412",
+  "source": "Mind2Web exemplar",
+  "website": "nps.gov",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find the alerts and conditions for the Alagnak Wild River.",
+  "steps": [
+    {
+      "action": "CLICK [82]",
+      "op": "CLICK",
+      "element": "82",
+      "value": "",
+      "description": "[link] FIND A PARK -> CLICK",
+      "role": "link",
+      "label": "FIND A PARK",
+      "observation": "<html> <body> <div> <form search> <button id=197 button> Search </button> <input sitelimit / /> <input affiliate nps /> </form> <button id=229 button open menu> <span> <span> Open </span> Menu </span> <span> Close <span> Menu </span> </span> </button> </div> <div> <a id=82> Find a Park </a> <a> See All Parks & Search By Map </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [1570] [Alagnak]",
+      "op": "TYPE",
+      "element": "1570",
+      "value": "Alagnak",
+      "description": "[combobox] Park Name -> TYPE: Alagnak",
+      "role": "combobox",
+      "label": "Park Name",
+      "observation": "<html> <body> <button id=1718 button open menu> <span> <span> Open </span> Menu </span> <span> Close <span> Menu </span> </span> </button> <form> <div> Plan Your Visit </div> <h1> Find a Park </h1> <label> Park Name </label> <input id=1570 combobox text select a park /> <select findaparkname> </select> <a id=3330> Search by Activity or Topic </a> </form> </body> </html>"
+    },
+    {
+      "action": "CLICK [7388]",
+      "op": "CLICK",
+      "element": "7388",
+      "value": "",
+      "description": "[option] Alagnak Wild River -> CLICK",
+      "role": "option",
+      "label": "Alagnak Wild River",
+      "observation": "<html> <body> <form> <label> Park Name </label> <ul listbox> <li id=7388 option> Alagnak Wild River </li> </ul> <select findaparkname> </select> <a id=9143> Search by Activity or Topic </a> </form> <div main> <form> Select a State: <select id=9234 state> <option true> None Selected </option> <option al> Alabama </option> <option ak> Alaska </option> <option as> American Samoa </option> <option az> Arizona </option> <option ar> Arkansas </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option dc> District of Columbia </option> <option fl> Florida </option> <option ga> Georgia </option> <option gu> Guam </option> <option hi> Hawaii </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> </select> </form> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [11099]",
+      "op": "CLICK",
+      "element": "11099",
+      "value": "",
+      "description": "[link] ALERTS -> CLICK",
+      "role": "link",
+      "label": "ALERTS",
+      "observation": "<html> <body> <div navigation> <a id=11090> <span> Alerts </span> <svg id=11099 icon> </svg> </a> </div> <div main> <div img aerial photo of alagnak river> <a id=11524> <span> <span> Weather </span> <span> Weather and Climate </span> </span> </a> </div> </div> </body> </html>"
+    }
+  ]
+}

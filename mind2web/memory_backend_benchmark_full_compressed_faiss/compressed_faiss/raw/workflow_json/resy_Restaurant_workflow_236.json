@@ -1,0 +1,30 @@
+{
+  "name": "resy / Restaurant workflow 236",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Search for restaurants near my location with pizza and for 6 customers.",
+  "steps": [
+    {
+      "action": "TYPE [112] [Pizza]",
+      "op": "TYPE",
+      "element": "112",
+      "value": "Pizza",
+      "description": "[textbox] Search restaurants, cuisines, etc. -> TYPE: Pizza",
+      "role": "textbox",
+      "label": "Search restaurants, cuisines, etc.",
+      "observation": "<html> <div> <header banner main resy> <div> <button id=240 button location columbus, oh> <div> Columbus, OH </div> </button> <input id=112 text search restaurants, cuisines, etc. /> </div> </header> <a id=1438> Nearby Restaurants </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [3878]",
+      "op": "CLICK",
+      "element": "3878",
+      "value": "",
+      "description": "[b] Pizza -> CLICK",
+      "role": "b",
+      "label": "Pizza",
+      "observation": "<html> <div> <header banner main resy> <div> <button id=3775 button location columbus, oh> <div> Columbus, OH </div> </button> <div combobox> <div listbox> <ul listbox suggested search results> <li id=3878 option> <b> Pizza </b> </li> </ul> </div> </div> </div> </header> <a id=5032> Nearby Restaurants </a> </div> </html>"
+    }
+  ]
+}

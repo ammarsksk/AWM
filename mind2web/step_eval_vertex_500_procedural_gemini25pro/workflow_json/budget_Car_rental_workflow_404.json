@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "name": "budget / Car rental workflow 404",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "goal_pattern": "Find a truck for 10001 zip code on Sunday 11:30 am with flexible dates.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "truck",
+      "budget",
+      "find",
+      "zip",
+      "code",
+      "use",
+      "link",
+      "textbox",
+      "span",
+      "travel",
+      "car",
+      "rental",
+      "10001",
+      "sunday",
+      "flexible",
+      "dates",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "reservations",
+      "city",
+      "state",
+      "specific",
+      "field",
+      "yyyy",
+      "your"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Reservations",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Reservations",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Budget Truck",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Budget Truck",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the US City,State or Zip Code",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "US City,State or Zip Code",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the mm/dd/yyyy",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "mm/dd/yyyy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the 23",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "23",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the [input] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "input",
+        "target": "[input] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Find Your Truck",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Find Your Truck",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Select Truck",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Select Truck",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "budget / Car rental workflow 404"
+}

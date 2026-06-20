@@ -1,0 +1,39 @@
+{
+  "description": "RAM FAISS vs LanceDB disk-backed workflow memory benchmark",
+  "runs": [
+    {
+      "backend": "memmap_exact",
+      "ingest_mode": "batch",
+      "tasks": 500,
+      "steps": 1000,
+      "accepted_retrievals": 1000,
+      "total_ms": 134237.6449460007,
+      "online_total_ms": 119319.84749600088,
+      "prep_ms": 3338.843048999479,
+      "batch_add_ms": 11578.20373800132,
+      "final_index_ms": 0.0,
+      "avg_retrieval_ms": 118.73928866998722,
+      "p95_retrieval_ms": 130.98545899993042,
+      "avg_add_ms": 23.15640747600264,
+      "p95_add_ms": 23.15640747600264,
+      "start_rss_mb": 870.41015625,
+      "end_rss_mb": 1018.12109375,
+      "peak_sampled_rss_mb": 1018.12109375,
+      "rss_growth_mb": 147.7109375,
+      "workflow_count": 500,
+      "python_vector_count": 0,
+      "python_vector_values": 0,
+      "python_vector_mb": 0.0,
+      "vector_dtype": "float32",
+      "candidate_k": 20,
+      "chunk_size": 8192,
+      "avg_batch_add_ms": 11578.20373800132,
+      "avg_retrieve_ms": 118.70992370496424,
+      "avg_text_load_ms": 0.4703867950011045,
+      "workflow_text_cache_items": 500,
+      "workflow_text_cache_hits": 19500,
+      "workflow_text_cache_misses": 500,
+      "disk_bytes": 13475445
+    }
+  ]
+}

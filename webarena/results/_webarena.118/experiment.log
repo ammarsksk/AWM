@@ -1,0 +1,54 @@
+2026-06-19 15:07:43,104 - 3384950 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.118_13 in:
+  results/2026-06-19_15-07-42_GenericAgentArgs_on_webarena.118_13
+2026-06-19 15:07:44,999 - 3384950 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 15:07:44,999 - 3384950 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 15:07:56,917 - 3384950 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:07:57,639 - 3384950 - browsergym.experiments.loop - INFO - The user is asking for a product to alleviate jaw bruxism. I need to search for a product related to "jaw bruxism" on the website. I will use the search bar to find relevant products. The search bar has a bid of '216'. I will fill the search bar with "jaw bruxism" and then click the search button. The search button has a bid of '221'.
+
+action:
+fill('216', 'jaw bruxism')
+click('221')
+
+2026-06-19 15:08:08,470 - 3384950 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.118.
+Error:
+Page.content: Unable to retrieve content because the page is navigating and changing the content.
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 441, in run
+    step_info.from_step(env, action, obs_preprocessor=agent.obs_preprocessor)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 190, in from_step
+    self.obs, self.reward, self.terminated, self.truncated, env_info = env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 124, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 392, in step
+    return super().step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 327, in step
+    return self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 465, in step
+    return self.post_step(info)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 511, in post_step
+    reward, done, user_message, task_info = self._task_validate()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 545, in _task_validate
+    reward, done, user_message, info = self.task.validate(self.page, self.chat.messages)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 201, in validate
+    score = self.evaluator(
+  File "<@beartype(webarena.evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x75b6f49f80d0>", line 115, in __call__
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 359, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "<@beartype(webarena.evaluation_harness.evaluators.HTMLContentEvaluator.__call__) at 0x75b6f49cfeb0>", line 115, in __call__
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 280, in __call__
+    selected_element = page.content()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 8582, in content
+    return mapping.from_maybe_impl(self._sync(self._impl_obj.content()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_page.py", line 502, in content
+    return await self._main_frame.content()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 416, in content
+    return await self._channel.send("content")
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+
+2026-06-19 15:08:08,477 - 3384950 - browsergym.experiments.loop - INFO - Saving summary info.

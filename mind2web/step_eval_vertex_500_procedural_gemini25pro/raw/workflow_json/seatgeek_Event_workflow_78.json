@@ -1,0 +1,40 @@
+{
+  "name": "seatgeek / Event workflow 78",
+  "source": "Mind2Web exemplar",
+  "website": "seatgeek",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Show me the page with information about the NBA Finals schedule.",
+  "steps": [
+    {
+      "action": "CLICK [112]",
+      "op": "CLICK",
+      "element": "112",
+      "value": "",
+      "description": "[div] Sports -> HOVER",
+      "role": "div",
+      "label": "Sports",
+      "observation": "<html> <div> <div> <div id=112> Sports </div> <div menu> <a> MLB </a> <a> MLS </a> <a id=706> NBA </a> <a> NFL </a> <a> NHL </a> <a> WNBA </a> </div> </div> <form search> <ul> <li option concerts> </li> <li option nfl> </li> <li option mlb> </li> <li id=1258 option nba> <p nba> NBA </p> </li> <li option nhl> </li> <li option mls> </li> <li option broadway> </li> </ul> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [10036]",
+      "op": "CLICK",
+      "element": "10036",
+      "value": "",
+      "description": "[link] NBA -> HOVER",
+      "role": "link",
+      "label": "NBA",
+      "observation": "<html> <div> <div> <div menu> <a> MLB </a> <a> MLS </a> <a id=10036> NBA </a> <a> NFL </a> <a> NHL </a> <a> WNBA </a> </div> <div> <a> NBA All-Star Game </a> <a id=10722> NBA Finals </a> <a> NBA Playoffs </a> <a> Atlanta Hawks </a> <a> Boston Celtics </a> </div> </div> <form search> <ul> <li option concerts> </li> <li option nfl> </li> <li option mlb> </li> <li id=11182 option nba> <p nba> NBA </p> </li> <li option nhl> </li> <li option mls> </li> <li option broadway> </li> </ul> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [19963]",
+      "op": "CLICK",
+      "element": "19963",
+      "value": "",
+      "description": "[link] NBA Finals -> CLICK",
+      "role": "link",
+      "label": "NBA Finals",
+      "observation": "<html> <div> <div> <a> MLB All-Star Game </a> <a> MLB Opening Day </a> <a id=20584> MLB Playoffs </a> <a> World Series </a> <a> Arizona Diamondbacks </a> <a> Atlanta Braves </a> </div> <div> <a> NBA All-Star Game </a> <a id=19963> NBA Finals </a> <a> NBA Playoffs </a> <a> Atlanta Hawks </a> <a> Boston Celtics </a> </div> <div> <a> NHL All-Star Game </a> <a> NHL Playoffs </a> <a> NHL Winter Classic </a> <a id=20720> Stanley Cup Finals </a> <a> Anaheim Ducks </a> <a> Arizona Coyotes </a> <a> Boston Bruins </a> </div> </div> </html>"
+    }
+  ]
+}

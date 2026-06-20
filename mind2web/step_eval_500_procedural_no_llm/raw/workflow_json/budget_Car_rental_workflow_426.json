@@ -1,0 +1,90 @@
+{
+  "name": "budget / Car rental workflow 426",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find the budget price for the vehicle with most seats availible at Roanoke Regional Airport from April 5-6.",
+  "steps": [
+    {
+      "action": "TYPE [106] [Roanoke]",
+      "op": "TYPE",
+      "element": "106",
+      "value": "Roanoke",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: Roanoke",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <a id=816 button> Reservations </a> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=106 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> <div> <button id=1812 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [10843]",
+      "op": "CLICK",
+      "element": "10843",
+      "value": "",
+      "description": "[span] Roanoke Regional Airport -> CLICK",
+      "role": "span",
+      "label": "Roanoke Regional Airport",
+      "observation": "<html> <form resform> <angucomplete-alt enter your pick-up location or> <div> <span> <span id=10843> Roanoke Regional Airport </span> <span id=12080> , Roanoke </span> <span> , Virginia </span> <span> , United States-(ROA) </span> </span> <span> <span id=12290> Roanoke </span> <span> , Texas </span> <span> , United States </span> </span> </div> </angucomplete-alt> </form> </html>"
+    },
+    {
+      "action": "CLICK [22956]",
+      "op": "CLICK",
+      "element": "22956",
+      "value": "",
+      "description": "[button] Select My Car -> CLICK",
+      "role": "button",
+      "label": "Select My Car",
+      "observation": "<html> <div> <a id=23665 button> Reservations </a> <form resform> <div> <div id=22946 vehicle type *> Vehicle Type * </div> <div> <button id=22956 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [34904]",
+      "op": "CLICK",
+      "element": "34904",
+      "value": "",
+      "description": "[link] Price (Low to High",
+      "role": "link",
+      "label": "Price (Low to High",
+      "observation": "<html> <form resform> <div> <div> <span> Showing: </span> <a id=34903> All Vehicles (9) </a> </div> <div> <span id=37562> Sort by: </span> <a id=34904> Price (Low to High) </a> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [50615]",
+      "op": "CLICK",
+      "element": "50615",
+      "value": "",
+      "description": "[div] Sort by: -> CLICK",
+      "role": "div",
+      "label": "Sort by:",
+      "observation": "<html> <div> <form resform> <div id=50615> <span> Sort by: </span> <a> Price (Low to High) </a> <ul> <a> Price (Low to High) </a> <a> Mileage (High to Low) </a> <a> Number of Seats (High to Low) </a> </ul> </div> </form> <div> <div> <a id=55271> Pay Now </a> <p> Pay Now & Save 14.85 </p> </div> <div> <a id=55991> Pay Now </a> <p> Pay Now & Save 13.30 </p> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [66313]",
+      "op": "CLICK",
+      "element": "66313",
+      "value": "",
+      "description": "[link] Number of Seats (High to Low",
+      "role": "link",
+      "label": "Number of Seats (High to Low",
+      "observation": "<html> <div> <form resform> <a id=66313> Number of Seats (High to Low) </a> </form> <div> <div> <span id=69928> 5 </span> <span> 1 </span> <span> 2 </span> </div> <div> <a id=70975> Pay Now </a> <p> Pay Now & Save 14.85 </p> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [82069]",
+      "op": "CLICK",
+      "element": "82069",
+      "value": "",
+      "description": "[link] Pay Now -> CLICK",
+      "role": "link",
+      "label": "Pay Now",
+      "observation": "<html> <div> <form resform> <div> <span> Showing: </span> <a id=82059> All Vehicles (9) </a> </div> </form> <div> <div> <a id=82069> Pay Now </a> <p> Pay Now & Save 15.10 </p> </div> <div> <a id=87005> Pay Now </a> <p> Pay Now & Save 14.85 </p> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [97868]",
+      "op": "CLICK",
+      "element": "97868",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <section> <div> <h1> Recommended Extras </h1> <button id=97868 button> Continue </button> </div> <div> <input id=102558 checkbox group-xmr on /> <button id=103526 submit> Continue </button> </div> </section> </html>"
+    }
+  ]
+}

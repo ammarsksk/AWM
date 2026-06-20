@@ -1,0 +1,15 @@
+digraph WebArenaMemory {
+  rankdir=LR;
+  node [shape=box, style=rounded];
+  "START" -> "click" [label="6"];
+  "START" -> "fill" [label="1"];
+  "START" -> "scroll" [label="1"];
+  "click" -> "SUCCESS" [label="2"];
+  "click" -> "click" [label="12"];
+  "click" -> "select_option" [label="1"];
+  "click" -> "send_msg_to_user" [label="4"];
+  "fill" -> "click" [label="1"];
+  "scroll" -> "send_msg_to_user" [label="1"];
+  "select_option" -> "send_msg_to_user" [label="1"];
+  "send_msg_to_user" -> "SUCCESS" [label="6"];
+}

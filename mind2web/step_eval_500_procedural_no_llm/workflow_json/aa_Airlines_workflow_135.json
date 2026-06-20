@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "name": "aa / Airlines workflow 135",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Find the lowest fare for JFK, NY to Heathrow, London and nearby airports for 1 adult on April 22, one way",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "textbox",
+      "specific",
+      "field",
+      "search",
+      "combobox",
+      "travel",
+      "jfk",
+      "heathrow",
+      "london",
+      "one",
+      "way",
+      "link",
+      "flights",
+      "span",
+      "depart",
+      "airlines",
+      "find",
+      "lowest",
+      "fare",
+      "nearby",
+      "airports",
+      "adult",
+      "april",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "plan",
+      "new",
+      "york",
+      "john",
+      "kennedy",
+      "intl",
+      "lhr",
+      "united",
+      "kingdom",
+      "number",
+      "passengers",
+      "passenger"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the PLAN TRAVEL",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "PLAN TRAVEL",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Flights",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Search flights one way",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Search flights one way",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the From , required.",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "From , required.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the From , required.",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "From , required.",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the JFK - New York John F Kennedy Intl, NY",
+        "operation": "CLICK",
+        "target_type": "a",
+        "target": "JFK - New York John F Kennedy Intl, NY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the To , required.",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "To , required.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "type the To , required.",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "To , required.",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the LHR - London Heathrow, United Kingdom",
+        "operation": "CLICK",
+        "target_type": "a",
+        "target": "LHR - London Heathrow, United Kingdom",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Depart , required.",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Depart , required.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "type the Depart , required.",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Depart , required.",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "select the Number of passengers",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Number of passengers",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "select the Passenger 1",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Passenger 1",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "select the Search by",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Search by",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 16
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 16.0
+  },
+  "raw_workflow_name": "aa / Airlines workflow 135"
+}

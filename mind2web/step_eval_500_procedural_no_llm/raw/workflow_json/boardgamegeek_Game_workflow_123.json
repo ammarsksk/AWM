@@ -1,0 +1,70 @@
+{
+  "name": "boardgamegeek / Game workflow 123",
+  "source": "Mind2Web exemplar",
+  "website": "boardgamegeek",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "task": "Send a message to Joe Bloggs who has the username 'boredcelt'.",
+  "steps": [
+    {
+      "action": "CLICK [400]",
+      "op": "CLICK",
+      "element": "400",
+      "value": "",
+      "description": "[button] Community -> CLICK",
+      "role": "button",
+      "label": "Community",
+      "observation": "<html> <div> <div> <button id=400 button> Community </button> <div> <input id=910 combobox search searchterm /> <button submit> </button> </div> </div> <div> <a id=2988> Gem Blenders: The Card Game </a> <p> Players build decks to battle using heroes who transform into blends using gems. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7330]",
+      "op": "CLICK",
+      "element": "7330",
+      "value": "",
+      "description": "[link] Find Users -> CLICK",
+      "role": "link",
+      "label": "Find Users",
+      "observation": "<html> <div> <div> <div> <a> GeekMod </a> <a id=7330> Find Users </a> <a> GeekExchange </a> </div> <div> <input id=7839 combobox search searchterm /> <button submit> </button> </div> </div> <div> <a id=9917> Gem Blenders: The Card Game </a> <p> Players build decks to battle using heroes who transform into blends using gems. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10679]",
+      "op": "CLICK",
+      "element": "10679",
+      "value": "",
+      "description": "[link] User Search -> CLICK",
+      "role": "link",
+      "label": "User Search",
+      "observation": "<html> <div> <div> <label> Search Site </label> <input id=12704 text search /> <button submit> </button> <button reset> </button> </div> <ul> <a id=10679> User Search </a> <a id=14114> Microbadge User Search </a> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [15071] [Joe Bloggs]",
+      "op": "TYPE",
+      "element": "15071",
+      "value": "Joe Bloggs",
+      "description": "[textbox] Enter First name, last name, and/or username: -> TYPE: Joe Bloggs",
+      "role": "textbox",
+      "label": "Enter First name, last name, and/or username:",
+      "observation": "<html> <div> <form> <label> Enter First name, last name, and/or username: </label> <input action search /> <input objecttype user /> <input id=15071 text q /> <input id=18501 submit b1 go /> </form> <a id=18551> Contact </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [23720]",
+      "op": "CLICK",
+      "element": "23720",
+      "value": "",
+      "description": "[button] Go -> CLICK",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div> <div> <button id=23917 button> Browse </button> <div> <label> Search Site </label> <input id=25746 text search /> <button submit> </button> <button reset> </button> </div> </div> <form> <input action search /> <input objecttype user /> <input text q joe bloggs /> <input id=23720 submit b1 go /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [28196]",
+      "op": "CLICK",
+      "element": "28196",
+      "value": "",
+      "description": "[img] msg -> CLICK",
+      "role": "img",
+      "label": "msg",
+      "observation": "<html> <div> <button id=28529 button> Browse </button> <div> <div> ( <a id=32321> boredcelt </a> ) </div> <img id=28196 msg /> </div> </div> </html>"
+    }
+  ]
+}

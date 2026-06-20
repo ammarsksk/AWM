@@ -1,0 +1,51 @@
+{
+  "name": "ryanair / Airlines workflow 154",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "ryanair",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Get a rental car to pick up at Paris Charles de Gaulle Airport CDG on april 13  at 10 am and drop off on april 18 at the same time",
+  "goal_pattern": "Get a rental car to pick up at Paris Charles de Gaulle Airport CDG on april 13  at 10 am and drop off on april 18 at the same time",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Car Hire",
+      "operation": "CLICK",
+      "target_type": "div",
+      "target_description": "Car Hire",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the I need a car in",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "I need a car in",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [373]",
+      "gold_element_id": "373",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [1958] [Paris Charles de Gaulle Airport (CDG)]",
+      "gold_element_id": "1958",
+      "gold_value": "Paris Charles de Gaulle Airport (CDG)"
+    }
+  ],
+  "raw_workflow_name": "ryanair / Airlines workflow 154"
+}

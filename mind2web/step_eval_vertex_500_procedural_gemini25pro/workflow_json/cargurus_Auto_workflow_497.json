@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "name": "cargurus / Auto workflow 497",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "See the price trends of used Tesla cars from August 1, 2022, to January 31, 2023, and compare the trend with the Cargurus index.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "generic",
+      "previous",
+      "month",
+      "checkbox",
+      "span",
+      "cargurus",
+      "price",
+      "trends",
+      "tesla",
+      "menuitem",
+      "gridcell",
+      "shopping",
+      "auto",
+      "see",
+      "used",
+      "cars",
+      "august",
+      "2022",
+      "january",
+      "2023",
+      "compare",
+      "trend",
+      "index",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "research",
+      "update",
+      "chart",
+      "chevrolet",
+      "ford",
+      "jeep",
+      "toyota"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Research",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Research",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Price Trends",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Price Trends",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Previous Month",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Previous Month",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Previous Month",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Previous Month",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the 1",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Previous Month",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Previous Month",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Previous Month",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Previous Month",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Previous Month",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Previous Month",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the 31",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "31",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Update Chart",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Update Chart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Chevrolet \ue066",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Chevrolet \ue066",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Ford \ue066",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Ford \ue066",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Jeep \ue066",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Jeep \ue066",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Toyota \ue066",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Toyota \ue066",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Tesla \ue066",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Tesla \ue066",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 17
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 17.0
+  },
+  "raw_workflow_name": "cargurus / Auto workflow 497"
+}

@@ -1,0 +1,170 @@
+{
+  "name": "menards / Speciality workflow 490",
+  "source": "Mind2Web exemplar",
+  "website": "menards",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find tortillas bread in grocery stock near  zip 59901 and add 5 pieces of 12 pcs pack in the cart and view the cart.",
+  "steps": [
+    {
+      "action": "CLICK [78]",
+      "op": "CLICK",
+      "element": "78",
+      "value": "",
+      "description": "[button] COLUMBUS, OH -> CLICK",
+      "role": "button",
+      "label": "COLUMBUS, OH",
+      "observation": "<html> <header> <button id=78 button> COLUMBUS, OH <title> View information on COLUMBUS, OH </title> </button> <button id=543 button> Departments <svg id=545> <title> Expand Departments menu </title> </svg> </button> </header> </html>"
+    },
+    {
+      "action": "TYPE [5645] [59901]",
+      "op": "TYPE",
+      "element": "5645",
+      "value": "59901",
+      "description": "[textbox] Zip Code -> TYPE: 59901",
+      "role": "textbox",
+      "label": "Zip Code",
+      "observation": "<html> <header> <div> <a> My Store's Details </a> <div> Change My Store </div> <div> <input id=5645 text zip code /> <button submit search by zip code> </button> </div> <a id=6032> Store Locator </a> </div> <button id=6114 button> Departments <title> Expand Departments menu </title> </button> </header> </html>"
+    },
+    {
+      "action": "CLICK [11249]",
+      "op": "CLICK",
+      "element": "11249",
+      "value": "",
+      "description": "[button] Search By Zip Code -> CLICK",
+      "role": "button",
+      "label": "Search By Zip Code",
+      "observation": "<html> <div> <a> My Store's Details </a> <div> Change My Store </div> <div> <input text zip code 59901 /> <button id=11627 submit search by zip code> </button> </div> <a id=11635> Store Locator </a> </div> <svg id=11249 svg-inline--fa fa-search fa-w-16 /> </html>"
+    },
+    {
+      "action": "CLICK [16862]",
+      "op": "CLICK",
+      "element": "16862",
+      "value": "",
+      "description": "[button] MAKE MY STORE -> CLICK",
+      "role": "button",
+      "label": "MAKE MY STORE",
+      "observation": "<html> <header> <div> <a> My Store's Details </a> <div> Change My Store </div> <div> <div> 405 32ND AVE W </div> <div> WILLISTON, ND 58801 </div> <button id=16862 button> Make My Store </button> </div> <a id=17310> Store Locator </a> </div> <button id=17392 button> Departments <title> Expand Departments menu </title> </button> </header> </html>"
+    },
+    {
+      "action": "CLICK [22541]",
+      "op": "CLICK",
+      "element": "22541",
+      "value": "",
+      "description": "[button] Departments -> HOVER",
+      "role": "button",
+      "label": "Departments",
+      "observation": "<html> <body> <header> <button id=22882 button> WILLISTON, ND <title> View information on WILLISTON, ND </title> </button> <button id=22541 button> Departments <title> Expand Departments menu </title> </button> </header> <div> <a> Doors, Windows & Millwork </a> <a> Electrical </a> <a> Flooring & Rugs </a> <a id=24844> Grocery & Home </a> <a> Hardware </a> <a> Heating & Cooling </a> <a> Kitchen </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [28055]",
+      "op": "CLICK",
+      "element": "28055",
+      "value": "",
+      "description": "[button] Grocery & Home -> HOVER",
+      "role": "button",
+      "label": "Grocery & Home",
+      "observation": "<html> <header> <button id=28396 button> WILLISTON, ND <title> View information on WILLISTON, ND </title> </button> <li> <button button> Departments <svg id=28484> <title> Expand Departments menu </title> </svg> </button> <div> <button> Doors, Windows & Millwork </button> <button> Electrical </button> <button> Flooring & Rugs </button> <button id=28055> Grocery & Home <svg/> </button> <button> Hardware </button> <button> Heating & Cooling </button> <button> Kitchen </button> </div> </li> </header> </html>"
+    },
+    {
+      "action": "CLICK [34384]",
+      "op": "CLICK",
+      "element": "34384",
+      "value": "",
+      "description": "[link] Grocery -> CLICK",
+      "role": "link",
+      "label": "Grocery",
+      "observation": "<html> <header> <div> <button id=34149 button> WILLISTON, ND <title> View information on WILLISTON, ND </title> </button> <button id=34168 button> 58801 <title> Menu to change delivery zip code </title> </button> </div> <a id=34384> <span> Grocery </span> </a> </header> </html>"
+    },
+    {
+      "action": "CLICK [36758]",
+      "op": "CLICK",
+      "element": "36758",
+      "value": "",
+      "description": "[link] Bread -> CLICK",
+      "role": "link",
+      "label": "Bread",
+      "observation": "<html> <div> <a id=37670> <span> Bread </span> </a> <span id=37679> Bread </span> </div> <img id=36758 none w-100 h-auto /> </html>"
+    },
+    {
+      "action": "CLICK [38581]",
+      "op": "CLICK",
+      "element": "38581",
+      "value": "",
+      "description": "[label] In Stock Today -> CLICK",
+      "role": "label",
+      "label": "In Stock Today",
+      "observation": "<html> <div> <div> <input checkbox on /> <label id=38581> In Stock Today </label> </div> <div> <input id=39499 checkbox on /> <label id=39501 checkbox> Tortillas (4) </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [44200]",
+      "op": "CLICK",
+      "element": "44200",
+      "value": "",
+      "description": "[checkbox] Tortillas (4",
+      "role": "checkbox",
+      "label": "Tortillas (4",
+      "observation": "<html> <div> <button id=44966 button> Sort By: <strong> Best Match </strong> </button> <div> <input id=45090 checkbox on /> <label id=44200 checkbox> Tortillas (4) </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [48836]",
+      "op": "CLICK",
+      "element": "48836",
+      "value": "",
+      "description": "[button] Increase Quantity -> CLICK",
+      "role": "button",
+      "label": "Increase Quantity",
+      "observation": "<html> <div> <nav breadcrumb> <a id=49574> Grocery </a> </nav> <button id=49594 button> Sort By: <strong> Best Match </strong> </button> </div> <svg id=48836 svg-inline--fa fa-plus fa-w-14 fa-1x /> </html>"
+    },
+    {
+      "action": "CLICK [53530]",
+      "op": "CLICK",
+      "element": "53530",
+      "value": "",
+      "description": "[button] Increase Quantity -> CLICK",
+      "role": "button",
+      "label": "Increase Quantity",
+      "observation": "<html> <div> <nav breadcrumb> <a id=54272> Bread </a> </nav> <div> <div> <input checkbox on /> <label id=54398 checkbox> Bread (2) </label> </div> <div> <button button decrease quantity> </button> <button id=53530 button increase quantity> <span> Increase Quantity </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [58224]",
+      "op": "CLICK",
+      "element": "58224",
+      "value": "",
+      "description": "[button] Increase Quantity -> CLICK",
+      "role": "button",
+      "label": "Increase Quantity",
+      "observation": "<html> <div> <nav breadcrumb> <a id=58966> Bread </a> </nav> <div> <input checkbox on /> <label id=59092 checkbox> Bread (2) </label> </div> </div> <svg id=58224 svg-inline--fa fa-plus fa-w-14 fa-1x /> </html>"
+    },
+    {
+      "action": "CLICK [62916]",
+      "op": "CLICK",
+      "element": "62916",
+      "value": "",
+      "description": "[button] Increase Quantity -> CLICK",
+      "role": "button",
+      "label": "Increase Quantity",
+      "observation": "<html> <div> <div> <input checkbox on /> <label id=63786 checkbox> Bread (2) </label> </div> <div> <input checkbox on true /> <label id=62904 checkbox> Tortillas (4) </label> </div> </div> <svg id=62916 svg-inline--fa fa-plus fa-w-14 fa-1x /> </html>"
+    },
+    {
+      "action": "CLICK [67603]",
+      "op": "CLICK",
+      "element": "67603",
+      "value": "",
+      "description": "[button] ADD TO CART -> CLICK",
+      "role": "button",
+      "label": "ADD TO CART",
+      "observation": "<html> <div> <div> <div> <input checkbox on /> <label id=68477 checkbox> Bread (2) </label> </div> <div> <input checkbox on true /> <label id=67589 checkbox> Tortillas (4) </label> </div> </div> <button id=67603 button> ADD TO CART </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [72291]",
+      "op": "CLICK",
+      "element": "72291",
+      "value": "",
+      "description": "[button] VIEW CART -> CLICK",
+      "role": "button",
+      "label": "VIEW CART",
+      "observation": "<html> <body> <div dialog> <div> <a id=72291 button> View Cart </a> <button button> Continue Shopping </button> </div> </div> <div> <div> <input checkbox on /> <label id=73429 checkbox> Bread (2) </label> </div> <div> <input checkbox on true /> <label id=72274 checkbox> Tortillas (4) </label> </div> </div> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "name": "resy / Restaurant workflow 273",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "goal_pattern": "Book an outdoor table for 3 people at a Los Angeles restaurant for 5:00 PM on April 7th",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "cha",
+      "restaurant",
+      "outdoor",
+      "table",
+      "los",
+      "angeles",
+      "april",
+      "use",
+      "resy",
+      "travel",
+      "book",
+      "people",
+      "7th",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "div",
+      "today",
+      "2023",
+      "combobox",
+      "guests",
+      "specific",
+      "field",
+      "reserve",
+      "now"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Los Angeles",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Los Angeles",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the La Cha Cha Cha",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "La Cha Cha Cha",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Today",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Today",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the April 7, 2023.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "April 7, 2023.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "select the Guests",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Guests",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the 5:00 PM Outdoor Table",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "5:00 PM Outdoor Table",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Reserve Now",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Reserve Now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "resy / Restaurant workflow 273"
+}

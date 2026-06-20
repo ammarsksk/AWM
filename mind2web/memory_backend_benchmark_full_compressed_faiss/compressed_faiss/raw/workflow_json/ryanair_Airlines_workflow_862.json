@@ -1,0 +1,30 @@
+{
+  "name": "ryanair / Airlines workflow 862",
+  "source": "Mind2Web exemplar",
+  "website": "ryanair",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Hire a large car with air conditioning for a small group to pick up from Berlin on May 15, 11:30 am, and drop off at the exact location on May 16, 11 am, book with full protection and payment with a credit card.",
+  "steps": [
+    {
+      "action": "CLICK [439]",
+      "op": "CLICK",
+      "element": "439",
+      "value": "",
+      "description": "[div] Car Hire -> CLICK",
+      "role": "div",
+      "label": "Car Hire",
+      "observation": "<html> <hp-home> <button id=380 plan> <span> Plan </span> </button> <div> <hp-search-widget-tabs-container> <button flights> </button> <button id=439 car hire> <div> Car Hire </div> </button> <button hotels> </button> <a events & activities> </a> </hp-search-widget-tabs-container> <div> <label> To </label> <input id=537 text destination /> </div> </div> </hp-home> </html>"
+    },
+    {
+      "action": "TYPE [2149] [berlin]",
+      "op": "TYPE",
+      "element": "2149",
+      "value": "berlin",
+      "description": "[textbox] I need a car in -> TYPE: berlin",
+      "role": "textbox",
+      "label": "I need a car in",
+      "observation": "<html> <hp-home> <button id=2376 plan> <span> Plan </span> </button> <div> <div> <label> I need a car in </label> <input id=2149 text type in city or airport /> </div> <button id=2542 let's go> <ry-spinner> Let's go </ry-spinner> </button> </div> </hp-home> </html>"
+    }
+  ]
+}

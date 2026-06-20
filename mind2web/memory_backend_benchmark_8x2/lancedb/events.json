@@ -1,0 +1,956 @@
+[
+  {
+    "task_index": 1,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 0.01749399962136522,
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "candidate_count": 0,
+        "top_candidates": [],
+        "rss_mb_after_retrieval": 913.3671875
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 0.005629000952467322,
+        "top_retrieved_workflow": null,
+        "accepted_workflow": null,
+        "candidate_count": 0,
+        "top_candidates": [],
+        "rss_mb_after_retrieval": 913.3671875
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 1",
+    "add_ms": 62.58850899939716,
+    "rss_mb_after_add": 987.50390625
+  },
+  {
+    "task_index": 2,
+    "website": "exploretock",
+    "domain": "Travel",
+    "subdomain": "Restaurant",
+    "goal": "Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup.",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 46.54050799945253,
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "candidate_count": 1,
+        "top_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.5004,
+            "semantic_score": 0.5006,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.1,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1006.1171875
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 50.03264500010118,
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 1",
+        "accepted_workflow": "exploretock / Restaurant workflow 1",
+        "candidate_count": 1,
+        "top_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.5143,
+            "semantic_score": 0.5204,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.1,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1012.76171875
+      }
+    ],
+    "added_workflow": "exploretock / Restaurant workflow 2",
+    "add_ms": 57.93258599987894,
+    "rss_mb_after_add": 1023.015625
+  },
+  {
+    "task_index": 3,
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 30.91791299993929,
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "candidate_count": 2,
+        "top_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.4114,
+            "semantic_score": 0.302,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2879,
+            "semantic_score": 0.3399,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1025.515625
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 28.811641001084354,
+        "top_retrieved_workflow": "exploretock / Restaurant workflow 2",
+        "accepted_workflow": null,
+        "candidate_count": 2,
+        "top_candidates": [
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3702,
+            "semantic_score": 0.2431,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2362,
+            "semantic_score": 0.266,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1025.9921875
+      }
+    ],
+    "added_workflow": "enterprise / Car rental workflow 3",
+    "add_ms": 51.91611999907764,
+    "rss_mb_after_add": 1026.87109375
+  },
+  {
+    "task_index": 4,
+    "website": "enterprise",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 35.101133000353,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": "enterprise / Car rental workflow 3",
+        "candidate_count": 3,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5802,
+            "semantic_score": 0.4003,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.1,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4189,
+            "semantic_score": 0.3685,
+            "bm25_score": 0.7395,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2629,
+            "semantic_score": 0.3042,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1027.7265625
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 41.83108600045671,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 3",
+        "accepted_workflow": "enterprise / Car rental workflow 3",
+        "candidate_count": 3,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.5208,
+            "semantic_score": 0.4471,
+            "bm25_score": 0.3851,
+            "same_website_boost": 0.1,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.5161,
+            "semantic_score": 0.4515,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3227,
+            "semantic_score": 0.3895,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1029.94140625
+      }
+    ],
+    "added_workflow": "enterprise / Car rental workflow 4",
+    "add_ms": 59.28432899963809,
+    "rss_mb_after_add": 1030.6875
+  },
+  {
+    "task_index": 5,
+    "website": "kohls",
+    "domain": "Shopping",
+    "subdomain": "Department",
+    "goal": "Find the highest rated dog collar under 10 dollar.",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 34.58092599976226,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "candidate_count": 4,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.3361,
+            "semantic_score": 0.2658,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2879,
+            "semantic_score": 0.2486,
+            "bm25_score": 0.7591,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.197,
+            "semantic_score": 0.2553,
+            "bm25_score": 0.1221,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.1492,
+            "semantic_score": 0.2132,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          }
+        ],
+        "rss_mb_after_retrieval": 1031.30859375
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 33.45599899876106,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "candidate_count": 4,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.3473,
+            "semantic_score": 0.2961,
+            "bm25_score": 0.9336,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3364,
+            "semantic_score": 0.2663,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2095,
+            "semantic_score": 0.2763,
+            "bm25_score": 0.1075,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.1672,
+            "semantic_score": 0.2389,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          }
+        ],
+        "rss_mb_after_retrieval": 1031.69921875
+      }
+    ],
+    "added_workflow": "kohls / Department workflow 5",
+    "add_ms": 94.1282420008065,
+    "rss_mb_after_add": 1032.1640625
+  },
+  {
+    "task_index": 6,
+    "website": "united",
+    "domain": "Travel",
+    "subdomain": "Airlines",
+    "goal": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 67.25994900079968,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "candidate_count": 5,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.505,
+            "semantic_score": 0.4357,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.3775,
+            "semantic_score": 0.4298,
+            "bm25_score": 0.1775,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3252,
+            "semantic_score": 0.341,
+            "bm25_score": 0.2434,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3059,
+            "semantic_score": 0.3655,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.2257,
+            "semantic_score": 0.3033,
+            "bm25_score": 0.0893,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. Abstract action pattern: CLICK intent=click the Shop by Category target_type=link target=Shop by Category value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Pet target_type=link target=Pet value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/kohls_Department_workflow_5.json",
+            "website": "kohls",
+            "domain": "Shopping",
+            "subdomain": "Department"
+          }
+        ],
+        "rss_mb_after_retrieval": 1033.390625
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 49.58066699873598,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "candidate_count": 5,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.5385,
+            "semantic_score": 0.4835,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.4038,
+            "semantic_score": 0.4892,
+            "bm25_score": 0.0757,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3488,
+            "semantic_score": 0.4269,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.3305,
+            "semantic_score": 0.3802,
+            "bm25_score": 0.0956,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.2518,
+            "semantic_score": 0.3569,
+            "bm25_score": 0.0128,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. Abstract action pattern: CLICK intent=click the Shop by Category target_type=link target=Shop by Category value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Pet target_type=link target=Pet value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/kohls_Department_workflow_5.json",
+            "website": "kohls",
+            "domain": "Shopping",
+            "subdomain": "Department"
+          }
+        ],
+        "rss_mb_after_retrieval": 1035.09765625
+      }
+    ],
+    "added_workflow": "united / Airlines workflow 6",
+    "add_ms": 66.75948999873071,
+    "rss_mb_after_add": 1035.4296875
+  },
+  {
+    "task_index": 7,
+    "website": "budget",
+    "domain": "Travel",
+    "subdomain": "Car rental",
+    "goal": "Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 40.83183900002041,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "candidate_count": 5,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.4726,
+            "semantic_score": 0.3894,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3431,
+            "semantic_score": 0.2823,
+            "bm25_score": 0.6364,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.2825,
+            "semantic_score": 0.2547,
+            "bm25_score": 0.3609,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 Abstract action pattern: TYPE intent=type the Enter your departing city, airport name, or airpor... target_type=combobox target=Enter your departing city, airport name, or airpor... value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Springfield, IL, US (SPI target_type=button target=Springfield, IL, US (SPI value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/united_Airlines_workflow_6.json",
+            "website": "united",
+            "domain": "Travel",
+            "subdomain": "Airlines"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2529,
+            "semantic_score": 0.256,
+            "bm25_score": 0.1578,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.25,
+            "semantic_score": 0.1965,
+            "bm25_score": 0.4168,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1036.05859375
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 37.48867699869152,
+        "top_retrieved_workflow": "enterprise / Car rental workflow 4",
+        "accepted_workflow": null,
+        "candidate_count": 5,
+        "top_candidates": [
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.4854,
+            "semantic_score": 0.4077,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.3332,
+            "semantic_score": 0.296,
+            "bm25_score": 0.5066,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "united / Airlines workflow 6",
+            "combined_score": 0.2604,
+            "semantic_score": 0.2635,
+            "bm25_score": 0.1729,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## united / Airlines workflow 6 Source: Mind2Web exemplar Website: united Domain: Travel Subdomain: Airlines Goal pattern: Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023 Abstract action pattern: TYPE intent=type the Enter your departing city, airport name, or airpor... target_type=combobox target=Enter your departing city, airport name, or airpor... value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Springfield, IL, US (SPI target_type=button target=Springfield, IL, US (SPI value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/united_Airlines_workflow_6.json",
+            "website": "united",
+            "domain": "Travel",
+            "subdomain": "Airlines"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2532,
+            "semantic_score": 0.271,
+            "bm25_score": 0.09,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2462,
+            "semantic_score": 0.2126,
+            "bm25_score": 0.3157,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1036.30859375
+      }
+    ],
+    "added_workflow": "budget / Car rental workflow 7",
+    "add_ms": 62.25466800060531,
+    "rss_mb_after_add": 1036.8828125
+  },
+  {
+    "task_index": 8,
+    "website": "underarmour",
+    "domain": "Shopping",
+    "subdomain": "Fashion",
+    "goal": "Find a men's UA outlet T-shirt of XL size and add to cart.",
+    "steps": [
+      {
+        "step": 1,
+        "retrieval_ms": 49.31612799919094,
+        "top_retrieved_workflow": "kohls / Department workflow 5",
+        "accepted_workflow": null,
+        "candidate_count": 5,
+        "top_candidates": [
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.4463,
+            "semantic_score": 0.3518,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. Abstract action pattern: CLICK intent=click the Shop by Category target_type=link target=Shop by Category value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Pet target_type=link target=Pet value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/kohls_Department_workflow_5.json",
+            "website": "kohls",
+            "domain": "Shopping",
+            "subdomain": "Department"
+          },
+          {
+            "workflow_name": "budget / Car rental workflow 7",
+            "combined_score": 0.2516,
+            "semantic_score": 0.2999,
+            "bm25_score": 0.278,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## budget / Car rental workflow 7 Source: Mind2Web exemplar Website: budget Domain: Travel Subdomain: Car rental Goal pattern: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly. Abstract action pattern: CLICK intent=click the Locations target_type=button target=Locations value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Find a Location target_type=link target=Find a Location value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/budget_Car_rental_workflow_7.json",
+            "website": "budget",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 2",
+            "combined_score": 0.2247,
+            "semantic_score": 0.2989,
+            "bm25_score": 0.1031,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 2 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Book a winery tour in Napa Valley in a winery which serves Mediterranean cuisine with wine testing for 4 guests on April 15, 10 am in a outdoor setup. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_2.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.2153,
+            "semantic_score": 0.263,
+            "bm25_score": 0.2082,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.2103,
+            "semantic_score": 0.3004,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1037.74609375
+      },
+      {
+        "step": 2,
+        "retrieval_ms": 35.236430001532426,
+        "top_retrieved_workflow": "kohls / Department workflow 5",
+        "accepted_workflow": null,
+        "candidate_count": 5,
+        "top_candidates": [
+          {
+            "workflow_name": "kohls / Department workflow 5",
+            "combined_score": 0.4479,
+            "semantic_score": 0.3542,
+            "bm25_score": 1.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.05,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## kohls / Department workflow 5 Source: Mind2Web exemplar Website: kohls Domain: Shopping Subdomain: Department Goal pattern: Find the highest rated dog collar under 10 dollar. Abstract action pattern: CLICK intent=click the Shop by Category target_type=link target=Shop by Category value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Pet target_type=link target=Pet value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/kohls_Department_workflow_5.json",
+            "website": "kohls",
+            "domain": "Shopping",
+            "subdomain": "Department"
+          },
+          {
+            "workflow_name": "budget / Car rental workflow 7",
+            "combined_score": 0.2556,
+            "semantic_score": 0.3054,
+            "bm25_score": 0.2788,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## budget / Car rental workflow 7 Source: Mind2Web exemplar Website: budget Domain: Travel Subdomain: Car rental Goal pattern: Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly. Abstract action pattern: CLICK intent=click the Locations target_type=button target=Locations value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Find a Location target_type=link target=Find a Location value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/budget_Car_rental_workflow_7.json",
+            "website": "budget",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 4",
+            "combined_score": 0.2034,
+            "semantic_score": 0.2489,
+            "bm25_score": 0.1943,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 4 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter. Abstract action pattern: TYPE intent=type the Pick-up & Return Location (ZIP, City or Airport target_type=searchbox target=Pick-up & Return Location (ZIP, City or Airport value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the Brooklyn, NY, US Select target_type=option target=Brooklyn, NY, US Select value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_4.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "enterprise / Car rental workflow 3",
+            "combined_score": 0.201,
+            "semantic_score": 0.2505,
+            "bm25_score": 0.1706,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## enterprise / Car rental workflow 3 Source: Mind2Web exemplar Website: enterprise Domain: Travel Subdomain: Car rental Goal pattern: Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001 Abstract action pattern: CLICK intent=click the [a] -> CLICK target_type=a target=[a] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: TYPE intent=type the First Name (required target_type=textbox target=First Name (required value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/enterprise_Car_rental_workflow_3.json",
+            "website": "enterprise",
+            "domain": "Travel",
+            "subdomain": "Car rental"
+          },
+          {
+            "workflow_name": "exploretock / Restaurant workflow 1",
+            "combined_score": 0.1918,
+            "semantic_score": 0.274,
+            "bm25_score": 0.0,
+            "same_website_boost": 0.0,
+            "same_domain_boost": 0.0,
+            "retrieval_backend": "lancedb_disk_ann",
+            "text_for_embedding": "## exploretock / Restaurant workflow 1 Source: Mind2Web exemplar Website: exploretock Domain: Travel Subdomain: Restaurant Goal pattern: Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest Abstract action pattern: SELECT intent=select the Reservation type target_type=combobox target=Reservation type value_policy=Use the task-specific value for this field. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value. Abstract action pattern: CLICK intent=click the [svg] -> CLICK target_type=svg target=[svg] -> CLICK value_policy=No value required. selection_rule=Choose the current visible candidate whose label, role, or nearby text best matches the target description. success=The page advances or the selected field reflects the intended value.",
+            "json_path": "mind2web/memory_backend_benchmark_8x2/lancedb/workflow_json/exploretock_Restaurant_workflow_1.json",
+            "website": "exploretock",
+            "domain": "Travel",
+            "subdomain": "Restaurant"
+          }
+        ],
+        "rss_mb_after_retrieval": 1038.078125
+      }
+    ],
+    "added_workflow": "underarmour / Fashion workflow 8",
+    "add_ms": 61.08484000105818,
+    "rss_mb_after_add": 1038.546875
+  }
+]

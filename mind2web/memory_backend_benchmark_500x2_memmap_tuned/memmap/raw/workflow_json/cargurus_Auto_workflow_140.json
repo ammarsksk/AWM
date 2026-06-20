@@ -1,0 +1,30 @@
+{
+  "name": "cargurus / Auto workflow 140",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "find offer for a black Honda with vin number 1HGCM66543A064159 with 155000 millage near 49102. The car should be in good condition with no damage, 2+ keys and paid off.",
+  "steps": [
+    {
+      "action": "CLICK [102]",
+      "op": "CLICK",
+      "element": "102",
+      "value": "",
+      "description": "[label] VIN -> CLICK",
+      "role": "label",
+      "label": "VIN",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=275 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <section> <section> <input radio smc tab vin /> <label id=102> VIN </label> </section> <label> <div> Enter license plate </div> <input id=953 text (ex.) c4r 6uru /> </label> </section> </body> </html>"
+    },
+    {
+      "action": "TYPE [15746] [1HGCM66543A064159]",
+      "op": "TYPE",
+      "element": "15746",
+      "value": "1HGCM66543A064159",
+      "description": "[textbox] Enter VIN (17 digits",
+      "role": "textbox",
+      "label": "Enter VIN (17 digits",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=15907 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <fieldset> <label> <div> Enter VIN (17 digits) </div> <input id=15746 text (ex.) /> <div> Where can I find the VIN </div> </label> <button id=16759 submit> Get your offer </button> </fieldset> </body> </html>"
+    }
+  ]
+}

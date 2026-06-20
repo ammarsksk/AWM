@@ -1,0 +1,113 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "weekly",
+      "deals",
+      "columbus",
+      "use",
+      "link",
+      "cvs",
+      "shopping",
+      "speciality",
+      "show",
+      "43215",
+      "store",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "locations",
+      "combobox",
+      "search",
+      "zip",
+      "code",
+      "city",
+      "state",
+      "specific",
+      "field",
+      "span",
+      "ohio",
+      "view"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Locations",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Locations",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Search by ZIP code, city, or state",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search by ZIP code, city, or state",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Columbus, Ohio",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Columbus, Ohio",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the View weekly deals",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "View weekly deals",
+        "target_type": "link",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Show weekly deals of Columbus, Oh 43215 store.",
+  "memory_type": "typed_procedure",
+  "name": "cvs / Speciality workflow 173",
+  "raw_workflow_name": "cvs / Speciality workflow 173",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 4.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Speciality",
+  "termination": {
+    "max_steps_hint": 4,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "cvs"
+}

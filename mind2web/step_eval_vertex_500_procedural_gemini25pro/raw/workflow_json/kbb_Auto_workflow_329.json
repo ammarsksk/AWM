@@ -1,0 +1,120 @@
+{
+  "name": "kbb / Auto workflow 329",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Browse used BWM cars made in 2010 and compare the four cheapest listings",
+  "steps": [
+    {
+      "action": "CLICK [1483]",
+      "op": "CLICK",
+      "element": "1483",
+      "value": "",
+      "description": "[div] BMW -> CLICK",
+      "role": "div",
+      "label": "BMW",
+      "observation": "<html> <div> <a id=730 unstyled> Price New/Used </a> <main> <a id=877> <span> Price New/Used </span> </a> <a id=1483> <div> BMW </div> </a> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [7503]",
+      "op": "CLICK",
+      "element": "7503",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div region> <div> <label new> </label> <label id=7503 used> <input checkbox intent on /> <div> Used </div> </label> <label cpo> </label> </div> </div> <div> <div bmw i4 2023> <label id=8907> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw i4 2022> <label id=9857> <input checkbox on /> <div> Compare </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [12645] [2010]",
+      "op": "SELECT",
+      "element": "12645",
+      "value": "2010",
+      "description": "[select] 1992 -> SELECT: 2010",
+      "role": "select",
+      "label": "1992",
+      "observation": "<html> <div> <div region> <select id=12645> <option 1992 true> 1992 </option> <option 1993> 1993 </option> <option 1994> 1994 </option> <option 1995> 1995 </option> <option 1996> 1996 </option> <option 1997> 1997 </option> <option 1998> 1998 </option> <option 1999> 1999 </option> <option 2000> 2000 </option> <option 2001> 2001 </option> <option 2002> 2002 </option> <option 2003> 2003 </option> <option 2004> 2004 </option> <option 2005> 2005 </option> <option 2006> 2006 </option> <option 2007> 2007 </option> <option 2008> 2008 </option> <option 2009> 2009 </option> <option 2010> 2010 </option> <option 2011> 2011 </option> <option 2012> 2012 </option> <option 2013> 2013 </option> <option 2014> 2014 </option> <option 2015> 2015 </option> <option 2016> 2016 </option> </select> </div> <div> <div bmw x5 2021> <label id=15304> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw x5 2022> <label id=15385> <input checkbox on /> <div> Compare </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19838]",
+      "op": "CLICK",
+      "element": "19838",
+      "value": "",
+      "description": "[button] Close dialog -> CLICK",
+      "role": "button",
+      "label": "Close dialog",
+      "observation": "<html> <div> <div bmw x5 2021> <label id=22474> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw x5 2022> <label id=22555> <input checkbox on /> <div> Compare </div> </label> </div> </div> <svg id=19838 fsrbutton /> </html>"
+    },
+    {
+      "action": "SELECT [28805] [2010]",
+      "op": "SELECT",
+      "element": "28805",
+      "value": "2010",
+      "description": "[select] 2024 -> SELECT: 2010",
+      "role": "select",
+      "label": "2024",
+      "observation": "<html> <div> <div region> <select id=28805> <option 2024 true> 2024 </option> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> <option 2020> 2020 </option> <option 2019> 2019 </option> <option 2018> 2018 </option> <option 2017> 2017 </option> <option 2016> 2016 </option> <option 2015> 2015 </option> <option 2014> 2014 </option> <option 2013> 2013 </option> <option 2012> 2012 </option> <option 2011> 2011 </option> <option 2010> 2010 </option> </select> </div> <div> <div bmw x5 2021> <label id=31437> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw x5 2022> <label id=31518> <input checkbox on /> <div> Compare </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [37723] [Price Low to High]",
+      "op": "SELECT",
+      "element": "37723",
+      "value": "Price Low to High",
+      "description": "[combobox] Sort By -> SELECT: Price: Low to High",
+      "role": "combobox",
+      "label": "Sort By",
+      "observation": "<html> <main> <div> <select id=37723 sort by> <option> Sort By </option> <option priceasc> Price: Low to High </option> <option pricedesc> Price: High to Low </option> <option expertratedesc> Expert Rating: High to Low </option> <option> Consumer Rating: High to Low </option> <option mpgdesc> MPG: High to Low </option> <option bestmatch true> Best Match </option> </select> <label> Sort By </label> </div> <div> <div bmw x5 2010> <label id=40026> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw z4 2010> <label id=40611> <input checkbox on /> <div> Compare </div> </label> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [46755]",
+      "op": "CLICK",
+      "element": "46755",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div bmw 5 series 2010> <label> <input id=46680 checkbox on /> <div> Compare </div> </label> </div> <div bmw 1 series 2010> <label id=46755> <input checkbox on /> <div> Compare </div> </label> </div> </div> <div bmw 7 series 2010> <label> <input id=47105 checkbox on /> <div> Compare </div> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [55066]",
+      "op": "CLICK",
+      "element": "55066",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div bmw x5 2010> <label id=55066> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw 7 series 2010> <label> <input id=55340 checkbox on /> <div> Compare </div> </label> </div> </div> <div> <h1> 1 of 4 Selected </h1> <a id=55955> <span> Compare </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [63085]",
+      "op": "CLICK",
+      "element": "63085",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div bmw 3 series 2010> <label id=63085> <input checkbox on /> <div> Compare </div> </label> </div> <div> <div bmw 7 series 2010> <label id=63587> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw m3 2010> <label id=63972> <input checkbox on /> <div> Compare </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [71410]",
+      "op": "CLICK",
+      "element": "71410",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div bmw 5 series 2010> <label id=71410> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw x6 2010> <label id=71714> <input checkbox on /> <div> Compare </div> </label> </div> </div> <div bmw z4 2010> <label id=72145> <input checkbox on /> <div> Compare </div> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [80708]",
+      "op": "CLICK",
+      "element": "80708",
+      "value": "",
+      "description": "[link] Compare -> CLICK",
+      "role": "link",
+      "label": "Compare",
+      "observation": "<html> <div> <div> <div bmw x6 2010> <label id=79969> <input checkbox on /> <div> Compare </div> </label> </div> <div bmw z4 2010> <label id=80400> <input checkbox on /> <div> Compare </div> </label> </div> </div> <div> <h1> 4 of 4 Selected </h1> <a id=80708> <span> Compare </span> </a> </div> </div> </html>"
+    }
+  ]
+}

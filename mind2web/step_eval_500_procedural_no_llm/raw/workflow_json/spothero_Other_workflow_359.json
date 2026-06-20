@@ -1,0 +1,40 @@
+{
+  "name": "spothero / Other workflow 359",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a parking spot near Dallas Love Field Airport.",
+  "steps": [
+    {
+      "action": "CLICK [103]",
+      "op": "CLICK",
+      "element": "103",
+      "value": "",
+      "description": "[tab] Airport -> CLICK",
+      "role": "tab",
+      "label": "Airport",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button tab button> Monthly </button> <button id=103 tab button> Airport </button> </div> <input id=420 text search for parking search-input address, place, city or venue /> <button id=431 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [2067] [Dallas Love Field]",
+      "op": "TYPE",
+      "element": "2067",
+      "value": "Dallas Love Field",
+      "description": "[searchbox] Airport Name, Code or City -> TYPE: Dallas Love Field",
+      "role": "searchbox",
+      "label": "Airport Name, Code or City",
+      "observation": "<html> <div> <input id=2067 search airport name, code or city /> <ul> <li> Miami International Airport, Northwest 42nd Avenue (MIA) </li> <li> Palm Springs International Airport (PSP) </li> <li> Bradley International Airport (BDL) </li> <li id=2402> Dallas/Fort Worth International Airport (DFW) </li> <li> MinneapolisSaint Paul International Airport (MSP) </li> <li> HartsfieldJackson Atlanta International Airport (ATL) </li> <li> John Wayne Airport (SNA) </li> <li> SeattleTacoma International Airport (SEA) </li> <li id=2411> Dallas Love Field (DAL) </li> <li> O'Hare International Airport (ORD) </li> <li> Burlington International Airport (BTV) </li> <li> George Bush Intercontinental Airport (IAH) </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [4188]",
+      "op": "CLICK",
+      "element": "4188",
+      "value": "",
+      "description": "[li] Dallas Love Field (DAL",
+      "role": "li",
+      "label": "Dallas Love Field (DAL",
+      "observation": "<html> <div> <div> <input id=4507 search dallas love field airport name, code or city /> <li id=4188> Dallas Love Field (DAL) </li> <button button /> </div> <button id=4517 button> Search </button> </div> </html>"
+    }
+  ]
+}

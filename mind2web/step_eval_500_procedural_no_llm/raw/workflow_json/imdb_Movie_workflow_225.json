@@ -1,0 +1,80 @@
+{
+  "name": "imdb / Movie workflow 225",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Search the  actor who won the Oscars for best actor  in a suuporing role ine 1990, and add his upcoming movies to my watchlist.",
+  "steps": [
+    {
+      "action": "CLICK [149]",
+      "op": "CLICK",
+      "element": "149",
+      "value": "",
+      "description": "[button] Open Navigation Drawer -> CLICK",
+      "role": "button",
+      "label": "Open Navigation Drawer",
+      "observation": "<html> <div> <div> <label id=224 button open navigation drawer> <svg id=149 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> </div> <div group> <div group> <div group> </div> <a id=2043> Daniel Day-Lewis </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [5381]",
+      "op": "CLICK",
+      "element": "5381",
+      "value": "",
+      "description": "[span] Oscars -> CLICK",
+      "role": "span",
+      "label": "Oscars",
+      "observation": "<html> <div> <div> <ul menu> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> <a id=5286 menuitem> <span> Browse Movies by Genre </span> </a> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> </ul> <ul menu> <a id=5381 menuitem> <span> Oscars </span> </a> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> </ul> </div> <div group> <div group> <div group> </div> <a id=7046> Daniel Day-Lewis </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7716]",
+      "op": "CLICK",
+      "element": "7716",
+      "value": "",
+      "description": "[link] 1990 -> CLICK",
+      "role": "link",
+      "label": "1990",
+      "observation": "<html> <body> <label button open navigation drawer> <svg id=7828 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <div> <a id=8454 winners> <span> WINNERS </span> </a> <div> <a> 1993 </a> <a> 1992 </a> <a> 1991 </a> <a id=7716> 1990 </a> <a> 1989 </a> <a> 1988 </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [13281]",
+      "op": "CLICK",
+      "element": "13281",
+      "value": "",
+      "description": "[link] Denzel Washington -> CLICK",
+      "role": "link",
+      "label": "Denzel Washington",
+      "observation": "<html> <div> <h3> <div> <a id=14094> Daniel Day-Lewis </a> <a> My Left Foot </a> <a> My Left Foot: The Story of Christy Brown (original title) </a> </div> <div> <a id=13281> Denzel Washington </a> <a> Glory </a> </div> </h3> <div> <div> Winner </div> <a id=16430> Howard W. Koch </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17751]",
+      "op": "CLICK",
+      "element": "17751",
+      "value": "",
+      "description": "[button] Expand Upcoming -> CLICK",
+      "role": "button",
+      "label": "Expand Upcoming",
+      "observation": "<html> <div> <label button open navigation drawer> <svg id=17756 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <main main> <section> <label id=17751 button expand upcoming> <ul> <li> Upcoming </li> <li> 2 </li> </ul> <svg ipc-icon /> </label> <label button expand upcoming> <ul> <li id=19802> Upcoming </li> <li> 2 </li> </ul> </label> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [26681]",
+      "op": "CLICK",
+      "element": "26681",
+      "value": "",
+      "description": "[button] add to watchlist -> CLICK",
+      "role": "button",
+      "label": "add to watchlist",
+      "observation": "<html> <div> <label button open navigation drawer> <svg id=26937 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <main main> <section> <a id=27498 button> Awards </a> <div button add to watchlist> <svg id=26681 ipc-icon ipc-icon--add /> </div> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [35628]",
+      "op": "CLICK",
+      "element": "35628",
+      "value": "",
+      "description": "[button] add to watchlist -> CLICK",
+      "role": "button",
+      "label": "add to watchlist",
+      "observation": "<html> <div> <label button open navigation drawer> <svg id=35887 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <main main> <section> <a id=36448 button> Awards </a> <div button add to watchlist> <svg id=35628 ipc-icon ipc-icon--add /> </div> </section> </main> </div> </html>"
+    }
+  ]
+}

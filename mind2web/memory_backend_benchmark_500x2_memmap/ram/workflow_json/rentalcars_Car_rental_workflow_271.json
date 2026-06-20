@@ -1,0 +1,51 @@
+{
+  "name": "rentalcars / Car rental workflow 271",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find cheapest cars available at San Francisco Airport for a day.",
+  "goal_pattern": "Find cheapest cars available at San Francisco Airport for a day.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the San Francisco Airport",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "San Francisco Airport",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Fri, Mar 31",
+      "operation": "CLICK",
+      "target_type": "div",
+      "target_description": "Fri, Mar 31",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [896]",
+      "gold_element_id": "896",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [2131]",
+      "gold_element_id": "2131",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "rentalcars / Car rental workflow 271"
+}

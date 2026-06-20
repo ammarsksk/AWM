@@ -1,0 +1,151 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "louis",
+      "use",
+      "wheelchair",
+      "accessible",
+      "parking",
+      "pittsburgh",
+      "pirates",
+      "cardinals",
+      "busch",
+      "stadium",
+      "specific",
+      "field",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "cheapest",
+      "event",
+      "apr",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "clark",
+      "avenue",
+      "usa",
+      "filter",
+      "checkbox",
+      "show",
+      "results",
+      "sort",
+      "distance"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search for parking",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Busch Stadium, Clark Avenue, St. Louis, MO, USA",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Busch Stadium, Clark Avenue, St. Louis, MO, USA",
+        "target_type": "li",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Pittsburgh Pirates at St. Louis Cardinals",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pittsburgh Pirates at St. Louis Cardinals",
+        "target_type": "p",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Filter",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Wheelchair Accessible (10",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Wheelchair Accessible (10",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Show 10 Results",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Show 10 Results",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the Sort by Distance",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Sort by Distance",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find the cheapest wheelchair accessible parking for the Pittsburgh Pirates at St. Louis Cardinals event in Busch Stadium on Apr 13.",
+  "memory_type": "typed_procedure",
+  "name": "spothero / Other workflow 462",
+  "raw_workflow_name": "spothero / Other workflow 462",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 7.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Other",
+  "termination": {
+    "max_steps_hint": 7,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "spothero"
+}

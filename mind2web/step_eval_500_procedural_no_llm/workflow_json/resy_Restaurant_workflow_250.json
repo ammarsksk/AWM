@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "name": "resy / Restaurant workflow 250",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "goal_pattern": "Book a table for 3 in Los angeles for diner at 09 PM on Mar 10",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "los",
+      "angeles",
+      "diner",
+      "svg",
+      "specific",
+      "field",
+      "resy",
+      "travel",
+      "restaurant",
+      "book",
+      "table",
+      "mar",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "restaurants",
+      "cuisines",
+      "etc",
+      "heading",
+      "spiral",
+      "bakery",
+      "fort",
+      "worth",
+      "combobox",
+      "guests",
+      "div",
+      "today",
+      "march",
+      "2023",
+      "dining",
+      "room"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Los Angeles",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Los Angeles",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Search restaurants, cuisines, etc.",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search restaurants, cuisines, etc.",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Spiral Diner & Bakery - Fort Worth",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Spiral Diner & Bakery - Fort Worth",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "select the Guests",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Guests",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Today",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Today",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the March 10, 2023.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "March 10, 2023.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 9:00 PM Dining Room",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "9:00 PM Dining Room",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "resy / Restaurant workflow 250"
+}

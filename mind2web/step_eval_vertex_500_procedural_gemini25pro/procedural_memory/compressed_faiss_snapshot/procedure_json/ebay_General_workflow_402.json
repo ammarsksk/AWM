@@ -1,0 +1,163 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "span",
+      "ireland",
+      "use",
+      "ebay",
+      "shopping",
+      "general",
+      "find",
+      "most",
+      "recently",
+      "posted",
+      "job",
+      "opening",
+      "customer",
+      "service",
+      "remote",
+      "working",
+      "option",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "careers",
+      "div",
+      "discover",
+      "jobs",
+      "around",
+      "world",
+      "ppc",
+      "content",
+      "flexible",
+      "workstyles",
+      "category",
+      "combobox",
+      "sort",
+      "specific",
+      "field"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Careers",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Careers",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Discover jobs around the world",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Discover jobs around the world",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Ireland",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Ireland",
+        "target_type": "ppc-content",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Flexible Workstyles",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Flexible Workstyles",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[span] -> CLICK",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Category",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Category",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[span] -> CLICK",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the Sort by",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Sort by",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find the most recently posted job opening in customer service in Ireland with a remote working option.",
+  "memory_type": "typed_procedure",
+  "name": "ebay / General workflow 402",
+  "raw_workflow_name": "ebay / General workflow 402",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 8.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "General",
+  "termination": {
+    "max_steps_hint": 8,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "ebay"
+}

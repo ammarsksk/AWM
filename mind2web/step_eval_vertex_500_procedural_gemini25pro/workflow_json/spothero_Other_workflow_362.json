@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "name": "spothero / Other workflow 362",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Find Wheelchair accessible parking for April 09 event in Barclays Center that allows entry after 10am",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "wheelchair",
+      "accessible",
+      "parking",
+      "event",
+      "barclays",
+      "center",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "brooklyn",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "april",
+      "allows",
+      "entry",
+      "after",
+      "10am",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "atlantic",
+      "avenue",
+      "date",
+      "gridcell",
+      "sun",
+      "apr",
+      "2023",
+      "philadelphia",
+      "76ers",
+      "nets",
+      "filter",
+      "checkbox",
+      "show",
+      "results",
+      "combobox",
+      "start",
+      "time",
+      "update"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search for parking",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Barclays Center, Atlantic Avenue, Brooklyn, NY, US...",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Barclays Center, Atlantic Avenue, Brooklyn, NY, US...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Select Event Date",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Select Event Date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Sun Apr 09 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Sun Apr 09 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Philadelphia 76ers at Brooklyn Nets",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Philadelphia 76ers at Brooklyn Nets",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Wheelchair Accessible (18",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Wheelchair Accessible (18",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Show 18 Results",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show 18 Results",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "select the Start Time",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Start Time",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Update Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Update Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "spothero / Other workflow 362"
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "name": "yelp / Restaurant workflow 376",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "goal_pattern": "Look for a best rated  Thai restaurant in Westminster, California, that provides takeout, and whose staff is fully vaccinated and accepts Apple pay.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "thai",
+      "span",
+      "checkbox",
+      "restaurant",
+      "rated",
+      "westminster",
+      "takeout",
+      "staff",
+      "fully",
+      "vaccinated",
+      "accepts",
+      "apple",
+      "pay",
+      "use",
+      "all",
+      "yelp",
+      "travel",
+      "look",
+      "best",
+      "california",
+      "provides",
+      "whose",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "restaurants",
+      "textbox",
+      "near",
+      "specific",
+      "field",
+      "offers",
+      "see",
+      "search",
+      "recommended",
+      "highest"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Restaurants",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Restaurants",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Thai",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Thai",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Near",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Near",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Westminster",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Westminster",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Offers Takeout",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Offers Takeout",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Thai",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Thai",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the See all",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "See all",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the All staff fully vaccinated",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "All staff fully vaccinated",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Accepts Apple Pay",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Accepts Apple Pay",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Recommended",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Recommended",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Highest Rated",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Highest Rated",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "yelp / Restaurant workflow 376"
+}

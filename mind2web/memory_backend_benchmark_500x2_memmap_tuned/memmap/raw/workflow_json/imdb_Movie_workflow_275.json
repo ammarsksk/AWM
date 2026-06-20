@@ -1,0 +1,30 @@
+{
+  "name": "imdb / Movie workflow 275",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Play a star wars movie trailer.",
+  "steps": [
+    {
+      "action": "TYPE [142] [Star Wars]",
+      "op": "TYPE",
+      "element": "142",
+      "value": "Star Wars",
+      "description": "[textbox] Search IMDb -> TYPE: Star Wars",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=213 button open navigation drawer> <svg id=216 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=142 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [5206]",
+      "op": "CLICK",
+      "element": "5206",
+      "value": "",
+      "description": "[button] Submit Search -> CLICK",
+      "role": "button",
+      "label": "Submit Search",
+      "observation": "<html> <div> <label id=5280 button open navigation drawer> <svg id=5283 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <button submit submit search> <svg id=5206 ipc-icon /> </button> </form> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "use",
+      "washington",
+      "airport",
+      "specific",
+      "field",
+      "location",
+      "textbox",
+      "car",
+      "rental",
+      "pick",
+      "regional",
+      "june",
+      "pay",
+      "same",
+      "combobox",
+      "time",
+      "return",
+      "checkbox",
+      "day",
+      "budget",
+      "travel",
+      "get",
+      "suv",
+      "additional",
+      "driver",
+      "wifi",
+      "any",
+      "near",
+      "drop",
+      "off",
+      "international",
+      "booking",
+      "instantly",
+      "tasks",
+      "similar",
+      "goal",
+      "site",
+      "area",
+      "locations",
+      "find",
+      "search",
+      "city",
+      "zip",
+      "address",
+      "attractio"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Locations",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Locations",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Find a Location",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Find a Location",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Search by Airport, City, Zip, Address or Attractio...",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search by Airport, City, Zip, Address or Attractio...",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Washington County Regional Apo",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Washington County Regional Apo",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Make a Reservation",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Make a Reservation",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the mm/dd/yyyy",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "mm/dd/yyyy",
+        "target_type": "textbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Next",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 1",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "1",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 2",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "2",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the Pick Up Time",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 10,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pick Up Time",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "select the Return Time",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 11,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Return Time",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "type the Return to same location",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 12,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Return to same location",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Washington Dulles Intl Airport",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 13,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Washington Dulles Intl Airport",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Vehicle Type *",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 14,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Vehicle Type *",
+        "target_type": "generic",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the SUVs & Wagons",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 15,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "SUVs & Wagons",
+        "target_type": "p",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Select My Car",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 16,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Select My Car",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Pay Now",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 17,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pay Now",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the $21.99/Day",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 18,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "$21.99/Day",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Get an SUV with an additional driver and wifi for pick up in  any rental location near Washington regional airport on June 1, 11 am, and drop off at Washington international airport on June 2, 11 am, and pay for the booking instantly.",
+  "memory_type": "typed_procedure",
+  "name": "budget / Car rental workflow 7",
+  "raw_workflow_name": "budget / Car rental workflow 7",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 20.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Car rental",
+  "termination": {
+    "max_steps_hint": 20,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "budget"
+}

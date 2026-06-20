@@ -1,0 +1,100 @@
+{
+  "name": "amtrak / Ground workflow 467",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find the schedule between New York and Washington DC sorted by shortest trip.",
+  "steps": [
+    {
+      "action": "TYPE [203] [New York]",
+      "op": "TYPE",
+      "element": "203",
+      "value": "New York",
+      "description": "[textbox] From -> TYPE: New York",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <ul> <a id=1280 button> Destinations </a> <a id=3168 schedules> <span> SCHEDULES </span> </a> </ul> </nav> </header> <main main> <mat-form-field combobox> <div> <input id=203 text /> <div listbox> </div> </div> </mat-form-field> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [12875]",
+      "op": "CLICK",
+      "element": "12875",
+      "value": "",
+      "description": "[option] New York, NY - Moynihan Train Hall at Penn Sta. (N... -> CLICK",
+      "role": "option",
+      "label": "New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=15846 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <mat-form-field combobox> <div listbox> <div> <div> <div> Stations </div> <div option> New York State Fair, NY (NYF) </div> <div id=12875 option> New York, NY - Moynihan Train Hall at Penn Sta. (NYP) </div> </div> <div> <div> Locations </div> <div option> New York, NY, USA (New York County) </div> <div id=16305 option> New York </div> <div option> New York, NY </div> <div option> New York Municipal Airport-LaGuardia Field, New York, NY </div> <div option> nyc, NY </div> </div> </div> </div> </mat-form-field> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [25600] [Washington]",
+      "op": "TYPE",
+      "element": "25600",
+      "value": "Washington",
+      "description": "[textbox] To -> TYPE: Washington",
+      "role": "textbox",
+      "label": "To",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=28573 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <div> <mat-form-field combobox> <input id=25600 text /> </mat-form-field> <div> <button id=29181 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [38454]",
+      "op": "CLICK",
+      "element": "38454",
+      "value": "",
+      "description": "[option] Washington, DC - Union Station (WAS",
+      "role": "option",
+      "label": "Washington, DC - Union Station (WAS",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=41396 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <mat-form-field combobox> <div listbox> <div> <div> <div> Stations </div> <div id=38454 option> Washington, DC - Union Station (WAS) </div> <div option> Washington, MO (WAH) </div> <div option> Lorton, VA - Auto Train Station (LOR) </div> </div> <div> <div> Locations </div> <div id=41924 option> Washington, DC, USA (District of Columbia) </div> <div option> Washington Monument, 2 15th St NW, Washington, DC, 20024 </div> <div option> Washington </div> <div option> Washington Twp, OH </div> </div> </div> </div> </mat-form-field> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [51280]",
+      "op": "CLICK",
+      "element": "51280",
+      "value": "",
+      "description": "[textbox] Depart Date -> CLICK",
+      "role": "textbox",
+      "label": "Depart Date",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=54245 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <div> <input id=51280 /> <div> <button id=54874 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [64434]",
+      "op": "CLICK",
+      "element": "64434",
+      "value": "",
+      "description": "[gridcell] Monday, April 17, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Monday, April 17, 2023",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=67403 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <div> <ngb-datepicker-month grid> <div row> <div gridcell monday, april 17, 2023> <span id=64434> 17 </span> </div> </div> </ngb-datepicker-month> <div> <button> Close </button> <button id=68312> Done </button> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [77882]",
+      "op": "CLICK",
+      "element": "77882",
+      "value": "",
+      "description": "[button] FIND TRAINS -> CLICK",
+      "role": "button",
+      "label": "FIND TRAINS",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=80852 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <div> <div> <button> Close </button> <button id=81762> Done </button> </div> <div> <button id=77882 find trains> FIND TRAINS </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [91058]",
+      "op": "CLICK",
+      "element": "91058",
+      "value": "",
+      "description": "[span] Sort/Filter -> CLICK",
+      "role": "span",
+      "label": "Sort/Filter",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <a id=93975 schedules> <span> SCHEDULES </span> </a> </nav> </header> <main main> <div> <span id=91058> Sort/Filter </span> <img open /> </div> <div> <button go back to previous page> Back </button> <button id=96147 continue to next page> Continue </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [107853]",
+      "op": "CLICK",
+      "element": "107853",
+      "value": "",
+      "description": "[span] Shortest Trip -> CLICK",
+      "role": "span",
+      "label": "Shortest Trip",
+      "observation": "<html> <main main> <div> <mat-radio-group radiogroup> <label id=107853> <input radio shortest trip /> <span> Shortest Trip </span> </label> </mat-radio-group> <mat-selection-list listbox> <mat-list-option id=107946 option> <div> First </div> </mat-list-option> </mat-selection-list> </div> <div> <button go back to previous page> Back </button> <button id=109316 continue to next page> Continue </button> </div> </main> </html>"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "imdb / Movie workflow 437",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Add Prometheus movie to watchlist.",
+  "steps": [
+    {
+      "action": "CLICK [81]",
+      "op": "CLICK",
+      "element": "81",
+      "value": "",
+      "description": "[textbox] Search IMDb -> CLICK",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=170 button open navigation drawer> <svg id=173 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=81 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [5015] [Prometheus]",
+      "op": "TYPE",
+      "element": "5015",
+      "value": "Prometheus",
+      "description": "[textbox] Search IMDb -> TYPE: Prometheus",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=5104 button open navigation drawer> <svg id=5107 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=5015 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [10398]",
+      "op": "CLICK",
+      "element": "10398",
+      "value": "",
+      "description": "[div] Prometheus -> CLICK",
+      "role": "div",
+      "label": "Prometheus",
+      "observation": "<html> <form search> <div combobox> <ul listbox> <li option> <a id=10398> <img prometheus /> <div> <div> Prometheus </div> <div> 2012 </div> <div> Noomi Rapace, Logan Marshall-Green </div> </div> </a> </li> <li option> <a id=10442> <img prometheus /> <div> <div> Prometheus </div> <div> 1998 </div> <div> Michael Feast, Walter Sparrow </div> </div> </a> </li> <li option> <a id=10479> <img prometheus /> <div> <div> Prometheus </div> <div> 2022 </div> <div> Abel Ferrara </div> </div> </a> </li> </ul> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [12642]",
+      "op": "CLICK",
+      "element": "12642",
+      "value": "",
+      "description": "[button] Add to Watchlist Added by 412K users -> CLICK",
+      "role": "button",
+      "label": "Add to Watchlist Added by 412K users",
+      "observation": "<html> <div> <label button open navigation drawer> <svg id=12662 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <main main> <section> <span id=13389> Prometheus </span> <div> <button id=12642 button> <svg ipc-icon ipc-icon--add ipc-btn__icon /> <div> <div> Add to Watchlist </div> <div> Added by 412K users </div> </div> </button> <button button add title to another list> </button> </div> </section> </main> </div> </html>"
+    }
+  ]
+}

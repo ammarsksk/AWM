@@ -1,0 +1,218 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "april",
+      "pickup",
+      "combobox",
+      "time",
+      "selected",
+      "find",
+      "car",
+      "book",
+      "miles",
+      "pick",
+      "caldwell",
+      "same",
+      "use",
+      "airport",
+      "2023",
+      "option",
+      "united",
+      "travel",
+      "airlines",
+      "ohio",
+      "return",
+      "noon",
+      "location",
+      "tasks",
+      "similar",
+      "goal",
+      "site",
+      "area",
+      "heading",
+      "label",
+      "labeltext",
+      "enter",
+      "city",
+      "name",
+      "code",
+      "specific",
+      "field",
+      "div",
+      "textbox",
+      "saturday",
+      "thursday",
+      "drop",
+      "off",
+      "cars"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the CAR",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "CAR",
+        "target_type": "heading",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Book with miles",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Book with miles",
+        "target_type": "label",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Enter pick up city, airport name, or airport code.",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Enter pick up city, airport name, or airport code.",
+        "target_type": "LabelText",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Caldwell",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Caldwell",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Pickup",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pickup",
+        "target_type": "textbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Saturday, April 8, 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Saturday, April 8, 2023",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Thursday, April 13, 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Thursday, April 13, 2023",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Pickup time Selected 10:00 a.m.",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pickup time Selected 10:00 a.m.",
+        "target_type": "combobox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Pickup time Selected 10:00 a.m.",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pickup time Selected 10:00 a.m.",
+        "target_type": "combobox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 8:00 a.m.",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 10,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "8:00 a.m.",
+        "target_type": "option",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Drop off time Selected 10:00 a.m.",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 11,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Drop off time Selected 10:00 a.m.",
+        "target_type": "combobox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 12:00 p.m.",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 12,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "12:00 p.m.",
+        "target_type": "option",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Find cars button.",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 13,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Find cars button.",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find a car to book with miles to pick up on Caldwell (Ohio) on april 8 at 8 am and return on april 13 on noon at the same location",
+  "memory_type": "typed_procedure",
+  "name": "united / Airlines workflow 364",
+  "raw_workflow_name": "united / Airlines workflow 364",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 13.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Airlines",
+  "termination": {
+    "max_steps_hint": 13,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "united"
+}

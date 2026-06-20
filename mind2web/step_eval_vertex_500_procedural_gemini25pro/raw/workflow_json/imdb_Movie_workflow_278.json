@@ -1,0 +1,40 @@
+{
+  "name": "imdb / Movie workflow 278",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find the list of critic reviews for the movie Creed III.",
+  "steps": [
+    {
+      "action": "TYPE [101] [creed III]",
+      "op": "TYPE",
+      "element": "101",
+      "value": "creed III",
+      "description": "[textbox] Search IMDb -> TYPE: creed III",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <div> <label id=176 button open navigation drawer> <svg ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=101 text search imdb q /> </div> </form> </div> <div group> <div group> <div group> </div> <a id=1822> Creed III </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4966]",
+      "op": "CLICK",
+      "element": "4966",
+      "value": "",
+      "description": "[div] Creed III -> CLICK",
+      "role": "div",
+      "label": "Creed III",
+      "observation": "<html> <div> <div> <label button open navigation drawer> <svg id=4628 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <form search> <div combobox> <ul listbox> <li option> <a id=4966> <img creed iii /> <div> <div> Creed III </div> <div> 2023 </div> <div> Michael B. Jordan, Tessa Thompson </div> </div> </a> </li> </ul> </div> </form> </div> <div group> <div group> <div group> </div> <a id=6446> Creed III </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8133]",
+      "op": "CLICK",
+      "element": "8133",
+      "value": "",
+      "description": "[span] Critic reviews -> CLICK",
+      "role": "span",
+      "label": "Critic reviews",
+      "observation": "<html> <div> <label button open navigation drawer> <svg id=7037 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <main main> <section> <a id=8133 button> <span> <span> 197 </span> <span> Critic reviews </span> </span> </a> <a id=9645 button review> <svg ipc-icon ipc-icon--add ipc-btn__icon /> <span> Review </span> </a> </section> </main> </div> </html>"
+    }
+  ]
+}

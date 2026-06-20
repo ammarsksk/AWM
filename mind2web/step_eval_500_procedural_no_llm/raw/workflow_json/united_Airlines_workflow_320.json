@@ -1,0 +1,90 @@
+{
+  "name": "united / Airlines workflow 320",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find deals for Honolulu from New York with budget of $1300 for premium economy.",
+  "steps": [
+    {
+      "action": "CLICK [1153]",
+      "op": "CLICK",
+      "element": "1153",
+      "value": "",
+      "description": "[tab] DEALS -> CLICK",
+      "role": "tab",
+      "label": "DEALS",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a tab> </a> <a id=1153 tab> <span> DEALS </span> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=1293 combobox text pune pnq from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> <div> <button submit> </button> <button id=1619 button> <span> Refine search </span> </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [10805]",
+      "op": "CLICK",
+      "element": "10805",
+      "value": "",
+      "description": "[link] Flights to popular destinations -> CLICK",
+      "role": "link",
+      "label": "Flights to popular destinations",
+      "observation": "<html> <div> <header banner> <nav navigation> <div dialog> <div tabpanel> <a id=10805> <span> Flights to popular destinations </span> </a> </div> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <button id=11098 combobox button cabintype 0> <div economy> Economy </div> </button> </div> </section> <div> <button submit> </button> <button id=11276 button> <span> Refine search </span> </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [19345] [New York]",
+      "op": "TYPE",
+      "element": "19345",
+      "value": "New York",
+      "description": "[textbox] Input departure airport -> TYPE: New York",
+      "role": "textbox",
+      "label": "Input departure airport",
+      "observation": "<html> <div> <div> <a> HELP </a> <a id=19570> SEARCH </a> </div> <div> <div combobox> <input id=19345 origin city /> </div> <div combobox> <input id=19896 destination city /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [66202] [Honolulu]",
+      "op": "TYPE",
+      "element": "66202",
+      "value": "Honolulu",
+      "description": "[textbox] Input arrival airport -> TYPE: Honolulu",
+      "role": "textbox",
+      "label": "Input arrival airport",
+      "observation": "<html> <div> <ul listbox> <div> <li option> New York/Newark, NJ, US (EWR) </li> <li id=66751 option> New York, NY, US (JFK) </li> <li option> New York, NY, US (LGA) </li> <li option> New York, NY, US (NYC - All Airports) </li> <li id=66757 option> New York, NY, US (NYS) </li> </div> </ul> <div combobox> <input id=66202 destination city /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [75561]",
+      "op": "CLICK",
+      "element": "75561",
+      "value": "",
+      "description": "[option] Honolulu, HI, US (HNL",
+      "role": "option",
+      "label": "Honolulu, HI, US (HNL",
+      "observation": "<html> <div> <div> <a> HELP </a> <a id=75791> SEARCH </a> </div> <div> <div combobox> <input id=76122 honolulu destination city /> </div> <ul listbox> <li id=75561 option> Honolulu, HI, US (HNL) </li> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [84913] [1300]",
+      "op": "TYPE",
+      "element": "84913",
+      "value": "1300",
+      "description": "[textbox] Budget. Please enter a numerical value -> TYPE: 1300",
+      "role": "textbox",
+      "label": "Budget. Please enter a numerical value",
+      "observation": "<html> <div> <div> <a> HELP </a> <a id=85144> SEARCH </a> </div> <div> <div> <div> $ </div> <input id=84913 text budget. please enter a numerical max budget /> </div> <div> <div id=85504> Economy </div> <input combobox select cabin class /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [94275]",
+      "op": "CLICK",
+      "element": "94275",
+      "value": "",
+      "description": "[div] Economy -> CLICK",
+      "role": "div",
+      "label": "Economy",
+      "observation": "<html> <div> <div> <a> HELP </a> <a id=94505> SEARCH </a> </div> <div> <button id=94710 button> Search flights </button> <div> <div id=94275> Economy </div> <input combobox select cabin class /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [103657]",
+      "op": "CLICK",
+      "element": "103657",
+      "value": "",
+      "description": "[div] Premium economy -> CLICK",
+      "role": "div",
+      "label": "Premium economy",
+      "observation": "<html> <div> <div> <a> HELP </a> <a id=103883> SEARCH </a> </div> <div> <div> <div id=104251> Economy </div> <input combobox select cabin class /> </div> <div> <div> Economy </div> <div id=103657> Premium economy </div> <div> Business </div> </div> </div> </div> </html>"
+    }
+  ]
+}

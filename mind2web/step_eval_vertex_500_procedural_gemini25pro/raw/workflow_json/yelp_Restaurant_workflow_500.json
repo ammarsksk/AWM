@@ -1,0 +1,130 @@
+{
+  "name": "yelp / Restaurant workflow 500",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find the fast responding highest-rated electrician, who is currently open for replacement of some light fixtures in Westminster, and request a quote.",
+  "steps": [
+    {
+      "action": "CLICK [406]",
+      "op": "CLICK",
+      "element": "406",
+      "value": "",
+      "description": "[link] Home Services -> HOVER",
+      "role": "link",
+      "label": "Home Services",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=312 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=324 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <a id=406> <span> Home Services </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8455]",
+      "op": "CLICK",
+      "element": "8455",
+      "value": "",
+      "description": "[span] Electricians -> CLICK",
+      "role": "span",
+      "label": "Electricians",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div combobox> <input text /> <input id=8358 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </form> <nav business categories> <div> <a id=8447 menuitem> <div> <span img /> <span> Contractors </span> </div> </a> <a id=8455 menuitem> <div> <span img /> <span> Electricians </span> </div> </a> <a menuitem> </a> <a menuitem> </a> </div> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [12549] [WESTMINSTER]",
+      "op": "TYPE",
+      "element": "12549",
+      "value": "WESTMINSTER",
+      "description": "[textbox] Near -> TYPE: WESTMINSTER",
+      "role": "textbox",
+      "label": "Near",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=12549 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </form> <div> <a id=13084 button> <span> Recommended </span> <span img /> </a> <button id=13244 button> <span> Lighting Fixtures & Equipment </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [22687]",
+      "op": "CLICK",
+      "element": "22687",
+      "value": "",
+      "description": "[span] Westminster -> CLICK",
+      "role": "span",
+      "label": "Westminster",
+      "observation": "<html> <div> <a id=23434 button> <span> Recommended </span> <span img /> </a> <span group filters> <button button> </button> <button button> </button> <button id=23495 button> <span> Fast-responding </span> </button> <button button> </button> <button button> </button> </span> </div> <span id=22687 css-qgunke> <text bounding_box_rect= 469,137,85,19>Westminster</text> </span> </html>"
+    },
+    {
+      "action": "CLICK [33596]",
+      "op": "CLICK",
+      "element": "33596",
+      "value": "",
+      "description": "[button] Recommended -> CLICK",
+      "role": "button",
+      "label": "Recommended",
+      "observation": "<html> <div> <div> <a id=33564> Westminster, CA </a> <a id=33596 button> <span> Recommended </span> <span img /> </a> </div> <span group filters> <button button> </button> <button button> </button> <button id=33624 button> <span> Fast-responding </span> </button> <button button> </button> <button button> </button> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [47524]",
+      "op": "CLICK",
+      "element": "47524",
+      "value": "",
+      "description": "[span] Highest Rated -> CLICK",
+      "role": "span",
+      "label": "Highest Rated",
+      "observation": "<html> <div> <a id=47510 button> <span> Recommended </span> <span img /> </a> <menu> <button submit> </button> <button id=47524 submit> <span> Highest Rated </span> </button> <button id=47529 submit> <span> Most Reviewed </span> </button> </menu> </div> </html>"
+    },
+    {
+      "action": "CLICK [60662]",
+      "op": "CLICK",
+      "element": "60662",
+      "value": "",
+      "description": "[button] Fast-responding -> CLICK",
+      "role": "button",
+      "label": "Fast-responding",
+      "observation": "<html> <div> <a id=61306 button> <span> Highest Rated </span> <span img /> </a> <span id=60684 img /> </div> <p id=60662 css-fohjg7> <text bounding_box_rect= -1,-1,-1,-1>Fast-responding</text> </p> </html>"
+    },
+    {
+      "action": "CLICK [73010]",
+      "op": "CLICK",
+      "element": "73010",
+      "value": "",
+      "description": "[button] Open Now -> CLICK",
+      "role": "button",
+      "label": "Open Now",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=73331 textbox text near westminster, ca address, neighborhood, city, state or /> </div> </form> <a id=73582> Westminster, CA </a> </div> <p id=73010 css-fohjg7> <text bounding_box_rect= -1,-1,-1,-1>Open Now</text> </p> </html>"
+    },
+    {
+      "action": "CLICK [86478]",
+      "op": "CLICK",
+      "element": "86478",
+      "value": "",
+      "description": "[button] Request a Quote -> CLICK",
+      "role": "button",
+      "label": "Request a Quote",
+      "observation": "<html> <div> <nav business categories> <a id=86845> <span> Home Services </span> <span img /> </a> </nav> <a id=87018> Westminster, CA </a> </div> <p id=86478 css-fohjg7> <text bounding_box_rect= -1,-1,-1,-1>Request a Quote</text> </p> </html>"
+    },
+    {
+      "action": "CLICK [100317]",
+      "op": "CLICK",
+      "element": "100317",
+      "value": "",
+      "description": "[radio] Installation or replacement -> CLICK",
+      "role": "radio",
+      "label": "Installation or replacement",
+      "observation": "<html> <div> <a id=100871> Westminster, CA </a> <a id=100903 button> <span> Highest Rated </span> <span img /> </a> </div> <input id=100317 radio job type /> </html>"
+    },
+    {
+      "action": "CLICK [113874]",
+      "op": "CLICK",
+      "element": "113874",
+      "value": "",
+      "description": "[radio] Light fixture -> CLICK",
+      "role": "radio",
+      "label": "Light fixture",
+      "observation": "<html> <div> <a id=114442> Westminster, CA </a> <a id=114474 button> <span> Highest Rated </span> <span img /> </a> </div> <input id=113874 radio items /> </html>"
+    },
+    {
+      "action": "CLICK [127543]",
+      "op": "CLICK",
+      "element": "127543",
+      "value": "",
+      "description": "[button] Request pricing -> CLICK",
+      "role": "button",
+      "label": "Request pricing",
+      "observation": "<html> <div> <div> <a id=128092> Westminster, CA </a> <a id=128124 button> <span> Highest Rated </span> <span img /> </a> </div> <button id=127543 submit> <span> Request pricing </span> </button> </div> </html>"
+    }
+  ]
+}

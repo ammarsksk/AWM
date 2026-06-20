@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "name": "soundcloud / Music workflow 98",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "soundcloud",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "goal_pattern": "Find a Ricky Kej track to listen and share which has been added in the last year and is between 2 to 10 minutes.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "link",
+      "required",
+      "ricky",
+      "kej",
+      "listen",
+      "share",
+      "added",
+      "year",
+      "use",
+      "search",
+      "any",
+      "soundcloud",
+      "entertainment",
+      "music",
+      "find",
+      "track",
+      "which",
+      "has",
+      "been",
+      "last",
+      "between",
+      "minutes",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "searchbox",
+      "specific",
+      "field",
+      "tracks",
+      "time",
+      "past",
+      "length",
+      "min"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Search",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Search for \u201cRicky Kej\u201d",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Search for \u201cRicky Kej\u201d",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Tracks",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Tracks",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Added any time",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Added any time",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Past year",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Past year",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Any length",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Any length",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the 2-10 min",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "2-10 min",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the To listen to",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "To listen to",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the To share",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "To share",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "soundcloud / Music workflow 98"
+}

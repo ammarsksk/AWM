@@ -1,0 +1,90 @@
+{
+  "name": "united / Airlines workflow 162",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Request a refund for the traveler Ian Lo and, his document number is 12345678912345 and email ian.lo@gmail.com",
+  "steps": [
+    {
+      "action": "CLICK [880]",
+      "op": "CLICK",
+      "element": "880",
+      "value": "",
+      "description": "[tab] MY TRIPS -> CLICK",
+      "role": "tab",
+      "label": "MY TRIPS",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a id=880 tab> <span> MY TRIPS </span> </a> <a id=882 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <button submit find flights> </button> <button id=1220 button> Find your travel credits </button> </div> </div> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [4457]",
+      "op": "CLICK",
+      "element": "4457",
+      "value": "",
+      "description": "[link] Request a refund -> CLICK",
+      "role": "link",
+      "label": "Request a refund",
+      "observation": "<html> <header banner> <nav navigation> <div dialog> <div tabpanel> <div> <ul> <a id=4453> <span> View travel credits </span> </a> <a id=4457> <span> Request a refund </span> </a> </ul> <a id=4476> <span> Refund/cancellation policy </span> </a> </div> </div> </div> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [6408]",
+      "op": "CLICK",
+      "element": "6408",
+      "value": "",
+      "description": "[button] Add trip -> CLICK",
+      "role": "button",
+      "label": "Add trip",
+      "observation": "<html> <div> <ul tablist> <a id=6328 tab> Request a refund </a> </ul> <div tabpanel request a refund> <div> <div> <button id=6408 button> <span> Add trip </span> </button> <button button> </button> </div> <button id=6464 submit> <span> Continue </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [8296] [Lo]",
+      "op": "TYPE",
+      "element": "8296",
+      "value": "Lo",
+      "description": "[textbox] Last Name* -> TYPE: Lo",
+      "role": "textbox",
+      "label": "Last Name*",
+      "observation": "<html> <body> <div tabpanel request a refund> <div> <div> <input id=9033 text email address * /> <label> Email address * </label> </div> <button id=9043 submit> <span> Continue </span> </button> </div> </div> <div dialog modal> <div> <input id=8296 text last name* lastname /> <label> Last Name* </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [10908] [12345678912345]",
+      "op": "TYPE",
+      "element": "10908",
+      "value": "12345678912345",
+      "description": "[textbox] Confirmation or ticket number* -> TYPE: 12345678912345",
+      "role": "textbox",
+      "label": "Confirmation or ticket number*",
+      "observation": "<html> <body> <div tabpanel request a refund> <div> <div> <input id=11646 text email address * /> <label> Email address * </label> </div> <button id=11656 submit> <span> Continue </span> </button> </div> </div> <div dialog modal> <div> <input id=10908 text confirmation or ticket number* /> <label> Confirmation or ticket number* </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [13518]",
+      "op": "CLICK",
+      "element": "13518",
+      "value": "",
+      "description": "[button] Add flight -> CLICK",
+      "role": "button",
+      "label": "Add flight",
+      "observation": "<html> <body> <div> <ul tablist> <a id=14127 tab> Request a refund </a> </ul> <div tabpanel request a refund> <button id=14266 submit> <span> Continue </span> </button> </div> </div> <div dialog modal> <div> <button id=13518 button> <span> Add flight </span> </button> <button button> </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [16089] [ian.lo@gmail.com]",
+      "op": "TYPE",
+      "element": "16089",
+      "value": "ian.lo@gmail.com",
+      "description": "[textbox] Email address * -> TYPE: ian.lo@gmail.com",
+      "role": "textbox",
+      "label": "Email address *",
+      "observation": "<html> <div> <ul tablist> <a id=16702 tab> Request a refund </a> </ul> <div tabpanel request a refund> <div> <div> <input id=16089 text email address * /> <label> Email address * </label> </div> <button id=16839 submit> <span> Continue </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19346]",
+      "op": "CLICK",
+      "element": "19346",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <div> <ul tablist> <a id=19208 tab> Request a refund </a> </ul> <div tabpanel request a refund> <div> <div> <button id=19290 button> <span> Add trip </span> </button> <button button> </button> </div> <button id=19346 submit> <span> Continue </span> </button> </div> </div> </div> </html>"
+    }
+  ]
+}

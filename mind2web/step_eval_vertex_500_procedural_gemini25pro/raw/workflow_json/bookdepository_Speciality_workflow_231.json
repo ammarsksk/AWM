@@ -1,0 +1,60 @@
+{
+  "name": "bookdepository / Speciality workflow 231",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find a book in Hindi with ISBN 1648926800.",
+  "steps": [
+    {
+      "action": "CLICK [108]",
+      "op": "CLICK",
+      "element": "108",
+      "value": "",
+      "description": "[link] Advanced Search -> CLICK",
+      "role": "link",
+      "label": "Advanced Search",
+      "observation": "<html> <div> <div> <div> <input id=324 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <a id=108> Advanced Search </a> </div> <div> <a id=1290> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19348]",
+      "op": "CLICK",
+      "element": "19348",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <input id=19550 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <div> <div> <label> ISBN </label> <input id=19348 text searchisbn /> </div> <div> <label id=20424> Language </label> <select searchlang> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [26559] [1648926800]",
+      "op": "TYPE",
+      "element": "26559",
+      "value": "1648926800",
+      "description": "[input] -> TYPE: 1648926800",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <label> ISBN </label> <input id=26559 text searchisbn /> </div> <div> <label id=27635> Language </label> <select id=27638 searchlang> <option all true> All </option> <option english 123> English </option> <option french 137> French </option> <option spanish 404> Spanish </option> <option german 150> German </option> <option latin 246> Latin </option> <option italian 202> Italian </option> <option chinese 79> Chinese </option> <option russian 365> Russian </option> <option japanese 205> Japanese </option> <option dutch; flemish 116> Dutch; Flemish </option> <option abkhaz 2> Abkhaz </option> <option achinese 3> Achinese </option> <option acoli 4> Acoli </option> <option adangme 5> Adangme </option> <option adygei 6> Adygei </option> <option afar 1> Afar </option> <option afrihili (artificial language) 8> Afrihili (Artificial language) </option> <option afrikaans 9> Afrikaans </option> <option afroasiatic languages 7> Afroasiatic languages </option> <option ainu 10> Ainu </option> <option akan 11> Akan </option> <option akkadian 12> Akkadian </option> <option albanian 13> Albanian </option> <option aleut 14> Aleut </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [33777] [Hindi]",
+      "op": "SELECT",
+      "element": "33777",
+      "value": "Hindi",
+      "description": "[select] All -> SELECT: Hindi",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <div> <label> Publisher </label> <input id=34835 text /> </div> <div> <label id=34854> Language </label> <select id=33777 searchlang> <option all true> All </option> <option english 123> English </option> <option french 137> French </option> <option spanish 404> Spanish </option> <option german 150> German </option> <option latin 246> Latin </option> <option italian 202> Italian </option> <option chinese 79> Chinese </option> <option russian 365> Russian </option> <option japanese 205> Japanese </option> <option dutch; flemish 116> Dutch; Flemish </option> <option abkhaz 2> Abkhaz </option> <option achinese 3> Achinese </option> <option acoli 4> Acoli </option> <option adangme 5> Adangme </option> <option adygei 6> Adygei </option> <option afar 1> Afar </option> <option afrihili (artificial language) 8> Afrihili (Artificial language) </option> <option afrikaans 9> Afrikaans </option> <option afroasiatic languages 7> Afroasiatic languages </option> <option ainu 10> Ainu </option> <option akan 11> Akan </option> <option akkadian 12> Akkadian </option> <option albanian 13> Albanian </option> <option aleut 14> Aleut </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [40989]",
+      "op": "CLICK",
+      "element": "40989",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <form> <div> <label id=42065> Language </label> <select id=42068 searchlang> <option all> All </option> <option english 123> English </option> <option french 137> French </option> <option spanish 404> Spanish </option> <option german 150> German </option> <option latin 246> Latin </option> <option italian 202> Italian </option> <option chinese 79> Chinese </option> <option russian 365> Russian </option> <option japanese 205> Japanese </option> <option dutch; flemish 116> Dutch; Flemish </option> <option abkhaz 2> Abkhaz </option> <option achinese 3> Achinese </option> <option acoli 4> Acoli </option> <option adangme 5> Adangme </option> <option adygei 6> Adygei </option> <option afar 1> Afar </option> <option afrihili (artificial language) 8> Afrihili (Artificial language) </option> <option afrikaans 9> Afrikaans </option> <option afroasiatic languages 7> Afroasiatic languages </option> <option ainu 10> Ainu </option> <option akan 11> Akan </option> <option akkadian 12> Akkadian </option> <option albanian 13> Albanian </option> <option aleut 14> Aleut </option> </select> </div> <div> <input advanced true /> <button id=40989 submit> Search </button> </div> </form> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 111",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Sell my parking space in Houston. Name: James Smith, Email: buckeye.foobar@gmail.com, phone: 8888888888. Address: 123rd st.",
+  "steps": [
+    {
+      "action": "CLICK [82]",
+      "op": "CLICK",
+      "element": "82",
+      "value": "",
+      "description": "[link] Rent My Parking Space -> CLICK",
+      "role": "link",
+      "label": "Rent My Parking Space",
+      "observation": "<html> <div> <div> <input id=409 text search for parking search-input address, place, city or venue /> <button id=420 button> Find Parking Near Me </button> </div> <ul list> <a id=82> Rent My Parking Space </a> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [1090] [James]",
+      "op": "TYPE",
+      "element": "1090",
+      "value": "James",
+      "description": "[textbox] First Name * -> TYPE: James",
+      "role": "textbox",
+      "label": "First Name *",
+      "observation": "<html> <form> <input returl /> <input lead_source independent sellers /> <label> First Name </label> <input id=1090 text first_name /> <label> Last Name </label> <input text last_name /> <label> Email </label> <label> Phone </label> <input text phone /> <label> Market: </label> <select id=1486 market name=> <option true> --None-- </option> <option atlanta> Atlanta </option> <option austin> Austin </option> <option baltimore> Baltimore </option> <option boston> Boston </option> <option calgary> Calgary </option> <option charlotte> Charlotte </option> <option chicago> Chicago </option> <option cincinnati> Cincinnati </option> <option cleveland> Cleveland </option> <option columbus> Columbus </option> <option dallas-fort worth> Dallas-Fort Worth </option> <option denver> Denver </option> <option detroit> Detroit </option> <option houston> Houston </option> <option indianapolis> Indianapolis </option> <option kansas city> Kansas City </option> <option las vegas> Las Vegas </option> <option los angeles> Los Angeles </option> <option miami> Miami </option> <option milwaukee> Milwaukee </option> <option minneapolis> Minneapolis </option> <option nyc> NYC </option> <option oakland> Oakland </option> <option orlando> Orlando </option> </select> <label> Spot Address: </label> <textarea id=1616 /> <input submit /> </form> </html>"
+    }
+  ]
+}

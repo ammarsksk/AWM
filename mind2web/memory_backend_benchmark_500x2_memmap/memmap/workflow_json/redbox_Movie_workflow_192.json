@@ -1,0 +1,51 @@
+{
+  "name": "redbox / Movie workflow 192",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "redbox",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Add 3 movies from At the Kiosk which are new to Wishlist.",
+  "goal_pattern": "Add 3 movies from At the Kiosk which are new to Wishlist.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Navigate to at-the kiosk",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Navigate to at-the kiosk",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Navigate to New Releases At The Kiosk See More",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Navigate to New Releases At The Kiosk See More",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [149]",
+      "gold_element_id": "149",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [6078]",
+      "gold_element_id": "6078",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "redbox / Movie workflow 192"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "new.mta.info / Ground workflow 433",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Plan a trip from Greenport to Oyster Bay Branch, starting with train and ending via bus with less than 1/2 mile walk.",
+  "steps": [
+    {
+      "action": "TYPE [248] [Greenport]",
+      "op": "TYPE",
+      "element": "248",
+      "value": "Greenport",
+      "description": "[searchbox] From -> TYPE: Greenport",
+      "role": "searchbox",
+      "label": "From",
+      "observation": "<html> <div main> <aside complementary> <div region> <div> <label> From </label> <input id=248 search address, station, landmark /> </div> <a button> Leave </a> <div region> </div> <a id=191 button open travel preferences modal.> Travel Preferences </a> <button id=1108 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [6462]",
+      "op": "CLICK",
+      "element": "6462",
+      "value": "",
+      "description": "[listitem] Greenport, NY, USA -> CLICK",
+      "role": "listitem",
+      "label": "Greenport, NY, USA",
+      "observation": "<html> <div main> <aside complementary> <div region> <ul> <div> <span> Stations </span> <li id=7042 greenport lirr> Greenport LIRR </li> </div> <div> <span> Addresses </span> <li id=6462 greenport, ny, usa> Greenport, NY, USA </li> <li greenport west, ny, usa> Greenport West, NY, USA </li> <li greenport harbor brewery and restaurant,> Greenport Harbor Brewery and Restaurant, Main Road, Peconic, NY, USA </li> <li greenporter hotel, front street, greenport,> Greenporter Hotel, Front Street, Greenport, NY, USA </li> </div> </ul> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=7357 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "TYPE [12652] [Oyster Bay]",
+      "op": "TYPE",
+      "element": "12652",
+      "value": "Oyster Bay",
+      "description": "[searchbox] To -> TYPE: Oyster Bay",
+      "role": "searchbox",
+      "label": "To",
+      "observation": "<html> <div main> <aside complementary> <div region> <div> <label> To </label> <input id=12652 search address, station, landmark /> </div> <a button> Leave </a> <div region> </div> <a id=12595 button open travel preferences modal.> Travel Preferences </a> <button id=13512 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [18865]",
+      "op": "CLICK",
+      "element": "18865",
+      "value": "",
+      "description": "[listitem] Oyster Bay, NY, USA -> CLICK",
+      "role": "listitem",
+      "label": "Oyster Bay, NY, USA",
+      "observation": "<html> <div main> <aside complementary> <div region> <ul> <div> <span> Stations </span> <li id=19455 oyster bay lirr> Oyster Bay LIRR </li> </div> <div> <span> Addresses </span> <li id=18865 oyster bay, ny, usa> Oyster Bay, NY, USA </li> <li id=19463 oyster bay cove, ny, usa> Oyster Bay Cove, NY, USA </li> <li oyster bay, al, usa> Oyster Bay, AL, USA </li> <li oyster bay golf links, lakeshore> Oyster Bay Golf Links, Lakeshore Drive, Sunset Beach, NC, USA </li> <li oyster bay, south sarasota, fl,> Oyster Bay, South Sarasota, FL, USA </li> </div> </ul> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [24997]",
+      "op": "CLICK",
+      "element": "24997",
+      "value": "",
+      "description": "[button] Open Travel Preferences modal. -> CLICK",
+      "role": "button",
+      "label": "Open Travel Preferences modal.",
+      "observation": "<html> <div main> <aside complementary> <div region> <div> <label> From </label> <input id=25620 search address, station, landmark greenport, ny, usa /> </div> <a button> Leave </a> <div region> </div> <a id=24997 button open travel preferences modal.> Travel Preferences </a> <button id=25913 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "SELECT [31191] [Train]",
+      "op": "SELECT",
+      "element": "31191",
+      "value": "Train",
+      "description": "[combobox] Start Journey -> SELECT: Train",
+      "role": "combobox",
+      "label": "Start Journey",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=32052 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> <div> <h2> Route Preferences </h2> <select id=31191> <option true> Select </option> <option train> Train </option> <option bus> Bus </option> <option xbus> Express Bus </option> </select> <button id=32213 button done button - press enter> Done </button> </div> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "SELECT [37460] [Bus]",
+      "op": "SELECT",
+      "element": "37460",
+      "value": "Bus",
+      "description": "[combobox] End Journey -> SELECT: Bus",
+      "role": "combobox",
+      "label": "End Journey",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=38319 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> <div> <h2> Route Preferences </h2> <select id=37460> <option true> Select </option> <option train> Train </option> <option bus> Bus </option> <option xbus> Express Bus </option> </select> <button id=38544 button done button - press enter> Done </button> </div> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [43934]",
+      "op": "CLICK",
+      "element": "43934",
+      "value": "",
+      "description": "[button] Done button - Press enter key to submit travel pre... -> CLICK",
+      "role": "button",
+      "label": "Done button - Press enter key to submit travel pre...",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=44794 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> <div> <select id=44856 minimize> <option x true> Transfers </option> <option t> Travel Time </option> <option w> Walking </option> </select> <h2> Route Preferences </h2> <button id=43934 button done button - press enter> Done </button> </div> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [50558]",
+      "op": "CLICK",
+      "element": "50558",
+      "value": "",
+      "description": "[link] Plan my Trip - Press enter key to submit the form ... -> CLICK",
+      "role": "link",
+      "label": "Plan my Trip - Press enter key to submit the form ...",
+      "observation": "<html> <div main> <aside complementary> <div region> <div> <label> From </label> <input id=51122 search address, station, landmark greenport, ny, usa /> </div> <a button> Leave </a> <div region> </div> <a id=50499 button open travel preferences modal.> Travel Preferences </a> <button id=50558 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    }
+  ]
+}

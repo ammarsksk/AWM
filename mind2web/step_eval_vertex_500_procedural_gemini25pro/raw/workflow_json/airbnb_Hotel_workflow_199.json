@@ -1,0 +1,130 @@
+{
+  "name": "airbnb / Hotel workflow 199",
+  "source": "Mind2Web exemplar",
+  "website": "airbnb",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Favorite a shared room in Belo Horizonte costing up to $100 to stay in a weekend in May",
+  "steps": [
+    {
+      "action": "CLICK [727]",
+      "op": "CLICK",
+      "element": "727",
+      "value": "",
+      "description": "[button] Location Anywhere -> CLICK",
+      "role": "button",
+      "label": "Location Anywhere",
+      "observation": "<html> <div> <div search> <span> Start your search </span> <button id=727 button> <span> Location </span> <div> Anywhere </div> </button> <button button> </button> <button button> </button> </div> <div> <div radiogroup airbnb categories> <div group> <label id=1283> <input radio on /> <span> Bed & breakfasts </span> </label> </div> </div> <button id=1537 button> <span> Filters </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [9690] [belo horizonte]",
+      "op": "TYPE",
+      "element": "9690",
+      "value": "belo horizonte",
+      "description": "[textbox] Where -> TYPE: belo horizonte",
+      "role": "textbox",
+      "label": "Where",
+      "observation": "<html> <div> <div> <div search> <span> Start your search </span> <button button> </button> <button id=9919 button> <span> Check in / Check out </span> <div> Any week </div> </button> <button button> </button> </div> <form search> <div tabpanel> <div> <div> Where </div> <input id=9690 query search destinations /> </div> </div> </form> </div> <button id=10721 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [19223]",
+      "op": "CLICK",
+      "element": "19223",
+      "value": "",
+      "description": "[div] Belo Horizonte, Minas Gerais, Brazil -> CLICK",
+      "role": "div",
+      "label": "Belo Horizonte, Minas Gerais, Brazil",
+      "observation": "<html> <div> <form search> <div tabpanel> <div> <div listbox search suggestions> <div> <div id=19223 option> <div> Belo Horizonte, Minas Gerais, Brazil </div> </div> <div option> </div> <div option> </div> <div option> </div> </div> </div> <div id=19262 button> <div> <div> Check in </div> <div> Add dates </div> </div> </div> </div> </div> </form> <button id=19914 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [28808]",
+      "op": "CLICK",
+      "element": "28808",
+      "value": "",
+      "description": "[tab] Flexible dates -> CLICK",
+      "role": "tab",
+      "label": "Flexible dates",
+      "observation": "<html> <div> <form search> <div tabpanel> <div tablist> <button id=29210 tab button> Choose dates </button> <button id=28808 tab button> Flexible dates </button> </div> </div> </form> <button id=30592 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [39516]",
+      "op": "CLICK",
+      "element": "39516",
+      "value": "",
+      "description": "[label] Weekend -> CLICK",
+      "role": "label",
+      "label": "Weekend",
+      "observation": "<html> <div> <form search> <div tabpanel> <div tabpanel> <div group> <div group> <label id=39516> <input radio on /> Weekend </label> <label id=40491> <input radio on /> Month </label> </div> </div> </div> </div> </form> <button id=41277 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [51209]",
+      "op": "CLICK",
+      "element": "51209",
+      "value": "",
+      "description": "[div] May -> CLICK",
+      "role": "div",
+      "label": "May",
+      "observation": "<html> <div> <form search> <div tabpanel> <div tabpanel> <div> <div group> <div group> <label id=51177> <input radio on /> Month </label> </div> </div> <div group> <div group> <button id=51209 button> <div> <div> May </div> <div> 2023 </div> </div> </button> </div> </div> </div> </div> </div> </form> <button id=51962 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [61892]",
+      "op": "CLICK",
+      "element": "61892",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <form search> <div tabpanel> <div> <div tabpanel> <div group> <div group> <label id=61730> <input radio on /> Month </label> </div> </div> </div> <div> <div button> </div> <button id=61892 button> <div> Search </div> </button> </div> </div> </div> </form> <button id=62516 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [67091]",
+      "op": "CLICK",
+      "element": "67091",
+      "value": "",
+      "description": "[span] Filters -> CLICK",
+      "role": "span",
+      "label": "Filters",
+      "observation": "<html> <div> <div> <div search> <span> Start your search </span> <button button> </button> <button id=66708 button> <span> Check in / Check out </span> <div> Weekend in May </div> </button> <button button> </button> </div> <form search> <div tabpanel> <div> <div> Where </div> <input id=66758 query belo horizonte, minas gerais, brazil search destinations /> </div> </div> </form> </div> <button id=67091 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [75208] [100]",
+      "op": "TYPE",
+      "element": "75208",
+      "value": "100",
+      "description": "[textbox] max price $ -> TYPE: 100",
+      "role": "textbox",
+      "label": "max price $",
+      "observation": "<html> <div dialog filters> <main> <div group> <div> <div> <button slider button minimum price /> <button id=79105 slider button maximum price /> </div> <div> <span> $ </span> <input id=75208 text 130+ /> </div> </div> </div> <div group> <label id=79181> <div> <input checkbox shared room on /> <div> <div> Shared room </div> <div> A sleeping space and common areas that may be shared with others </div> </div> </div> </label> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [89401]",
+      "op": "CLICK",
+      "element": "89401",
+      "value": "",
+      "description": "[div] Shared room -> CLICK",
+      "role": "div",
+      "label": "Shared room",
+      "observation": "<html> <body> <div search> <span> Start your search </span> <button button> </button> <button id=85656 button> <span> Check in / Check out </span> <div> Weekend in May </div> </button> <button button> </button> </div> <div dialog filters> <div> <div group> <label id=89401> <div> <input checkbox shared room on /> <div> <div> Shared room </div> <div> A sleeping space and common areas that may be shared with others </div> </div> </div> </label> </div> <footer> <button button> Clear all </button> <a id=89979> Show 1,000+ stays </a> </footer> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [95440]",
+      "op": "CLICK",
+      "element": "95440",
+      "value": "",
+      "description": "[link] Show 71 stays -> CLICK",
+      "role": "link",
+      "label": "Show 71 stays",
+      "observation": "<html> <body> <div> <form search> <div tabpanel> <div id=95833 button> <div> <div> When </div> <div> Weekend in May </div> </div> </div> </div> </form> <button id=96051 button> <span> Filters </span> </button> </div> <div dialog filters> <footer> <button button> Clear all </button> <a id=95440> Show 71 stays </a> </footer> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [103586]",
+      "op": "CLICK",
+      "element": "103586",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <form search> <div tabpanel> <div id=103977 button> <div> <div> When </div> <div> Weekend in May </div> </div> </div> </div> </form> <div> <button id=104195 button> <span> <span> Filters </span> <span> , 2 filters applied </span> </span> </button> <div> 2 </div> </div> </div> <path id=103586 /> </html>"
+    }
+  ]
+}

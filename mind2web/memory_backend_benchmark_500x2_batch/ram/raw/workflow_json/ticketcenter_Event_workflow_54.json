@@ -1,0 +1,30 @@
+{
+  "name": "ticketcenter / Event workflow 54",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Buy two tickets for the Boston Red Sox vs. New York Yankees game on August 18th, with a total cost of no more than $200.",
+  "steps": [
+    {
+      "action": "TYPE [103] [red sox vs yankees]",
+      "op": "TYPE",
+      "element": "103",
+      "value": "red sox vs yankees",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: red sox vs yankees",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=391 button> Sports </a> <div> <input id=103 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2591 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [10999]",
+      "op": "CLICK",
+      "element": "10999",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <a id=9036 button> Sports </a> <div> <input text query search for artists, teams or red sox vs yankees /> <ul listbox> </ul> <button id=10999 submit> <span> Search </span> </button> </div> <a id=12320> Boston Red Sox </a> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "rottentomatoes / Movie workflow 457",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "List upcoming animation and anime movies in theaters",
+  "steps": [
+    {
+      "action": "CLICK [93]",
+      "op": "CLICK",
+      "element": "93",
+      "value": "",
+      "description": "[link] MOVIES -> CLICK",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=404 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=93> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2442> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [18545]",
+      "op": "CLICK",
+      "element": "18545",
+      "value": "",
+      "description": "[button] IN THEATERS -> CLICK",
+      "role": "button",
+      "label": "IN THEATERS",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot showtimes> <slot link> <a id=21025> Showtimes </a> </slot> </slot> </slot> </rt-header> <div> <div> <button id=18545> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip button sort> </filter-chip> <filter-chip id=21599 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [41584]",
+      "op": "CLICK",
+      "element": "41584",
+      "value": "",
+      "description": "[link] COMING SOON -> CLICK",
+      "role": "link",
+      "label": "COMING SOON",
+      "observation": "<html> <div> <button id=41523> In Theaters </button> <dropdown-menu> <slot option> <a id=41562> <dropdown-option> <slot> In Theaters </slot> </dropdown-option> </a> <a id=41584> <dropdown-option> <slot> Coming Soon </slot> </dropdown-option> </a> </slot> </dropdown-menu> </div> </html>"
+    },
+    {
+      "action": "CLICK [89269]",
+      "op": "CLICK",
+      "element": "89269",
+      "value": "",
+      "description": "[span] Genre -> CLICK",
+      "role": "span",
+      "label": "Genre",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot showtimes> <slot link> <a id=88694> Showtimes </a> </slot> </slot> </slot> </rt-header> <div> <filter-chip button sort> </filter-chip> <filter-chip id=89269 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip id=89295 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [104933]",
+      "op": "CLICK",
+      "element": "104933",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <slot content> <select-checkbox-group group genres> <slot row> <div> <div id=104933> <slot label> <span> Animation </span> </slot> </div> <slot input> </slot> </div> <div> <slot label> <span id=108204> Anime </span> </slot> <slot input> <select-checkbox id=108211 checkbox anime /> </slot> </div> </slot> </select-checkbox-group> </slot> </html>"
+    },
+    {
+      "action": "CLICK [123678]",
+      "op": "CLICK",
+      "element": "123678",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <slot content> <select-checkbox-group group genres animation> <slot row> <slot label> <span id=126866> Animation </span> </slot> <div> <div id=123678> <slot label> <span> Anime </span> </slot> </div> <slot input> <select-checkbox id=126912 checkbox anime /> </slot> </div> </slot> </select-checkbox-group> </slot> </html>"
+    },
+    {
+      "action": "CLICK [142429]",
+      "op": "CLICK",
+      "element": "142429",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <slot content> <select-checkbox-group group genres> <slot row> <div> <slot label> <span id=145701> Anime </span> </slot> <slot input> <select-checkbox id=145708 checkbox anime /> </slot> </div> </slot> </select-checkbox-group> </slot> <slot cta2> <button id=142429> Apply </button> </slot> </div> </html>"
+    }
+  ]
+}

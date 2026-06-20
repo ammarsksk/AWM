@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "name": "agoda / General workflow 444",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "goal_pattern": "Find a cheapest flight from London to New York on 9th May.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "cheapest",
+      "london",
+      "new",
+      "york",
+      "flights",
+      "combobox",
+      "flying",
+      "specific",
+      "field",
+      "option",
+      "destination",
+      "span",
+      "agoda",
+      "travel",
+      "general",
+      "find",
+      "flight",
+      "9th",
+      "may",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "search",
+      "price",
+      "per",
+      "person",
+      "first",
+      "div",
+      "economy",
+      "light"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Flights",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Flying from",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Flying from",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Destination London",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Destination London",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Flying to",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Flying to",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Destination New York (NY",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Destination New York (NY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the 9",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "9",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the SEARCH FLIGHTS",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "SEARCH FLIGHTS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Price per person",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Price per person",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Cheapest first",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Cheapest first",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Economy Light",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Economy Light",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the SELECT",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "SELECT",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 11
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 11.0
+  },
+  "raw_workflow_name": "agoda / General workflow 444"
+}

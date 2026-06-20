@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "name": "airbnb / Hotel workflow 199",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "airbnb",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "goal_pattern": "Favorite a shared room in Belo Horizonte costing up to $100 to stay in a weekend in May",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "div",
+      "span",
+      "shared",
+      "room",
+      "belo",
+      "horizonte",
+      "weekend",
+      "may",
+      "textbox",
+      "specific",
+      "field",
+      "path",
+      "airbnb",
+      "travel",
+      "hotel",
+      "favorite",
+      "costing",
+      "100",
+      "stay",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "location",
+      "anywhere",
+      "where",
+      "minas",
+      "gerais",
+      "brazil",
+      "tab",
+      "flexible",
+      "dates",
+      "label",
+      "filters",
+      "max",
+      "price",
+      "link",
+      "show",
+      "stays"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Location Anywhere",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Location Anywhere",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Where",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Where",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Belo Horizonte, Minas Gerais, Brazil",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Belo Horizonte, Minas Gerais, Brazil",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Flexible dates",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Flexible dates",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Weekend",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Weekend",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the May",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "May",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Filters",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Filters",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "type the max price $",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "max price $",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Shared room",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Shared room",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Show 71 stays",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Show 71 stays",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "path",
+        "target": "[path] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "airbnb / Hotel workflow 199"
+}

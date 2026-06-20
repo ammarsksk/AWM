@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "name": "united / Airlines workflow 162",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Request a refund for the traveler Ian Lo and, his document number is 12345678912345 and email ian.lo@gmail.com",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "textbox",
+      "specific",
+      "field",
+      "request",
+      "refund",
+      "ian",
+      "number",
+      "email",
+      "add",
+      "united",
+      "travel",
+      "airlines",
+      "traveler",
+      "his",
+      "document",
+      "12345678912345",
+      "gmail",
+      "com",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "trips",
+      "link",
+      "trip",
+      "last",
+      "name",
+      "confirmation",
+      "ticket",
+      "flight",
+      "address",
+      "continue"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the MY TRIPS",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "MY TRIPS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Request a refund",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Request a refund",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Add trip",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add trip",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Last Name*",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Last Name*",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Confirmation or ticket number*",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Confirmation or ticket number*",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Add flight",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add flight",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "type the Email address *",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Email address *",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Continue",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Continue",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "united / Airlines workflow 162"
+}

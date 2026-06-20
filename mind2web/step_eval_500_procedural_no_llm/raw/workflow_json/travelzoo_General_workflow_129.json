@@ -1,0 +1,130 @@
+{
+  "name": "travelzoo / General workflow 129",
+  "source": "Mind2Web exemplar",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find highest rated romantic summer vacations in Spain",
+  "steps": [
+    {
+      "action": "CLICK [110]",
+      "op": "CLICK",
+      "element": "110",
+      "value": "",
+      "description": "[textbox] What type of deals? -> CLICK",
+      "role": "textbox",
+      "label": "What type of deals?",
+      "observation": "<html> <div> <form> <input homepage /> <h3> Show me: </h3> <div> <label> What type of deals? </label> <input id=110 text all deals e.g. hotels, beach, disney /> <input 0 /> <button button> x </button> </div> <button id=493 submit search> Search Deals </button> </form> <a id=694> <span> Vacations </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [8256]",
+      "op": "CLICK",
+      "element": "8256",
+      "value": "",
+      "description": "[div] Vacations -> CLICK",
+      "role": "div",
+      "label": "Vacations",
+      "observation": "<html> <body> <div> <form> <input homepage /> <h3> Show me: </h3> <button id=6718 submit search> Search Deals </button> </form> <a id=6919> <span> Vacations </span> </a> </div> <li id=8256> <div> Vacations </div> </li> </body> </html>"
+    },
+    {
+      "action": "CLICK [12607]",
+      "op": "CLICK",
+      "element": "12607",
+      "value": "",
+      "description": "[textbox] Where? -> CLICK",
+      "role": "textbox",
+      "label": "Where?",
+      "observation": "<html> <body> <form> <input homepage /> <h3> Show me: </h3> <div> <label> Where? </label> <input id=12607 text start typing or select a /> <button button> x </button> </div> <button id=12990 submit search> Search Deals </button> </form> <li id=14566> <div> Anywhere </div> </li> </body> </html>"
+    },
+    {
+      "action": "TYPE [18944] [Spain]",
+      "op": "TYPE",
+      "element": "18944",
+      "value": "Spain",
+      "description": "[textbox] Where? -> TYPE: Spain",
+      "role": "textbox",
+      "label": "Where?",
+      "observation": "<html> <body> <form> <input homepage /> <h3> Show me: </h3> <div> <label> Where? </label> <input id=18944 text start typing or select a /> <button button> x </button> </div> <button id=19328 submit search> Search Deals </button> </form> <li id=20904> <div> Anywhere </div> </li> </body> </html>"
+    },
+    {
+      "action": "CLICK [27255]",
+      "op": "CLICK",
+      "element": "27255",
+      "value": "",
+      "description": "[div] Spain -> CLICK",
+      "role": "div",
+      "label": "Spain",
+      "observation": "<html> <body> <form> <input homepage /> <h3> Show me: </h3> <button id=25679 submit search> Search Deals </button> </form> <a id=27052> Espaa </a> <li id=27255> <div> Spain </div> </li> </body> </html>"
+    },
+    {
+      "action": "CLICK [28677]",
+      "op": "CLICK",
+      "element": "28677",
+      "value": "",
+      "description": "[textbox] When? -> CLICK",
+      "role": "textbox",
+      "label": "When?",
+      "observation": "<html> <body> <div> <label> When? </label> <input id=28677 text all dates anytime... /> <input anytime /> </div> <section main> <div> <input/> <button id=29356 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> <a id=31894> Vacations </a> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [38917]",
+      "op": "CLICK",
+      "element": "38917",
+      "value": "",
+      "description": "[li] Summer -> CLICK",
+      "role": "li",
+      "label": "Summer",
+      "observation": "<html> <body> <div tablist> <div tabpanel> <ul> <li> This Weekend </li> <li> Next Month </li> <li> Spring </li> <li id=38917> Summer </li> <li> Fall </li> <li> Winter </li> </ul> </div> </div> <section main> <div> <input/> <button id=39595 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> <a id=42133> Vacations </a> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [49134]",
+      "op": "CLICK",
+      "element": "49134",
+      "value": "",
+      "description": "[button] SEARCH DEALS -> CLICK",
+      "role": "button",
+      "label": "SEARCH DEALS",
+      "observation": "<html> <body> <form> <input resultslist /> <button id=49134 submit search> Search Deals </button> </form> <section main> <div> <input/> <button id=49813 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> <a id=52351> Vacations </a> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [55042]",
+      "op": "CLICK",
+      "element": "55042",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <body> <form> <input resultslist /> <button id=54686 submit search> Search Deals </button> </form> <section main> <div> <input/> <button id=55042 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> <a id=57579> Vacations </a> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [64665]",
+      "op": "CLICK",
+      "element": "64665",
+      "value": "",
+      "description": "[button] Highest Rated -> CLICK",
+      "role": "button",
+      "label": "Highest Rated",
+      "observation": "<html> <div dialog> <div> <div> <div button> </div> <div id=64665 button> <span> Highest Rated </span> </div> <div button> </div> <div id=69570 button> <span> Price: High to Low </span> </div> <div button> </div> </div> <div> <button button> Outdoor Activities </button> <button button> Quick Getaways </button> <button button> Relaxing </button> <button id=69693 button> Romantic </button> <button button> Tours </button> <button button> Under $999 </button> <button button> Warm Weather </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [74988]",
+      "op": "CLICK",
+      "element": "74988",
+      "value": "",
+      "description": "[button] Romantic -> CLICK",
+      "role": "button",
+      "label": "Romantic",
+      "observation": "<html> <body> <section main> <a id=77946> <span> $2289 & up </span> <div> <span> <i vacations /> <i airfare included /> </span> <h2> <span go to site> 9-Nt. London, Paris & Barcelona w/Air & Hotels </span> <span go to site /> </h2> <h6> <span> TripMasters.com </span> <span> England, France & Spain </span> </h6> <h6> Priced for August; more dates available </h6> </div> </a> </section> <div dialog> <div> <div> <button button> Outdoor Activities </button> <button button> Quick Getaways </button> <button button> Relaxing </button> <button id=74988 button> Romantic </button> <button button> Tours </button> <button button> Under $999 </button> <button button> Warm Weather </button> </div> <div> <button id=80051 button> Done </button> <button button> Reset </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [84262]",
+      "op": "CLICK",
+      "element": "84262",
+      "value": "",
+      "description": "[button] DONE -> CLICK",
+      "role": "button",
+      "label": "DONE",
+      "observation": "<html> <body> <form> <input resultslist /> <button id=84587 submit search> Search Deals </button> </form> <section main> <div> <input/> <button id=84943 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> </section> <div dialog> <div> <button id=84262 button> Done </button> <button button> Reset </button> </div> </div> </body> </html>"
+    }
+  ]
+}

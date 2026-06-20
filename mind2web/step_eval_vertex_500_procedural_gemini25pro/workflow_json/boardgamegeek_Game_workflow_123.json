@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "name": "boardgamegeek / Game workflow 123",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "boardgamegeek",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "goal_pattern": "Send a message to Joe Bloggs who has the username 'boredcelt'.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "username",
+      "use",
+      "link",
+      "name",
+      "boardgamegeek",
+      "entertainment",
+      "game",
+      "send",
+      "message",
+      "joe",
+      "bloggs",
+      "who",
+      "has",
+      "boredcelt",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "community",
+      "find",
+      "users",
+      "user",
+      "search",
+      "textbox",
+      "enter",
+      "first",
+      "last",
+      "specific",
+      "field",
+      "img",
+      "msg"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Community",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Community",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Find Users",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Find Users",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the User Search",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "User Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Enter First name, last name, and/or username:",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Enter First name, last name, and/or username:",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Go",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Go",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the msg",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "msg",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "boardgamegeek / Game workflow 123"
+}

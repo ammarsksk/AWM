@@ -1,0 +1,130 @@
+{
+  "name": "ebay / General workflow 326",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find the cheapest new  trash can with automated lid that is under $60 and available for Buy It Now.",
+  "steps": [
+    {
+      "action": "TYPE [221] [trash can automatic lid]",
+      "op": "TYPE",
+      "element": "221",
+      "value": "trash can automatic lid",
+      "description": "[combobox] Search for anything -> TYPE: trash can automatic lid",
+      "role": "combobox",
+      "label": "Search for anything",
+      "observation": "<html> <header banner> <tr> <button id=422> Shop by category </button> <tr> <td> <input id=221 combobox text search for anything _nkw /> <ul listbox> </ul> </td> <input id=751 submit search /> </tr> </tr> </header> </html>"
+    },
+    {
+      "action": "CLICK [11459]",
+      "op": "CLICK",
+      "element": "11459",
+      "value": "",
+      "description": "[option] automatic trash can lid -> CLICK",
+      "role": "option",
+      "label": "automatic trash can lid",
+      "observation": "<html> <header banner> <tr> <td> <div> <input id=11449 combobox text search for anything _nkw trash can automatic lid /> <span status> 1 results available; to navigate, use up and down arrow keys or swipe left and right on touch devices. </span> </div> <ul listbox> <a id=11459 option automatic trash can lid> <b> automatic </b> <b> trash </b> <b> can </b> <b> lid </b> </a> </ul> </td> <input id=11545 submit search /> </tr> </header> </html>"
+    },
+    {
+      "action": "TYPE [16422] [60]",
+      "op": "TYPE",
+      "element": "16422",
+      "value": "60",
+      "description": "[textbox] Maximum Value in $ -> TYPE: 60",
+      "role": "textbox",
+      "label": "Maximum Value in $",
+      "observation": "<html> <li> <div id=18893 button> <h3> Price </h3> </div> <div> <span> to </span> <span> <label> Max </label> <input id=16422 text maximum value in $ /> </span> <button id=18981 button submit price range /> </div> </li> </html>"
+    },
+    {
+      "action": "CLICK [36575]",
+      "op": "CLICK",
+      "element": "36575",
+      "value": "",
+      "description": "[button] Submit price range -> CLICK",
+      "role": "button",
+      "label": "Submit price range",
+      "observation": "<html> <div> <li> <div id=39086 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=36575 button submit price range /> </div> </li> <div main> <button id=40303 button sort selector. best match selected.> <span> Best Match </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47086]",
+      "op": "CLICK",
+      "element": "47086",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <ul> <div id=49591 button> <h3> Price </h3> </div> <input id=47086 radio buy it now format on /> </ul> <div main> <div group> <a id=50933> <div> Under $60.00 <span> Remove filter </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [58045]",
+      "op": "CLICK",
+      "element": "58045",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <input id=58045 checkbox new on /> <div main> <button id=61707 button sort selector. best match selected.> <span> Best Match </span> </button> <div group> <a id=61829> <div> Under $60.00 <span> Remove filter </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [72763]",
+      "op": "CLICK",
+      "element": "72763",
+      "value": "",
+      "description": "[button] Sort selector. Best Match selected. -> CLICK",
+      "role": "button",
+      "label": "Sort selector. Best Match selected.",
+      "observation": "<html> <div> <div id=71607 button> <h3> Price </h3> </div> <div main> <button id=72763 button sort selector. best match selected.> <span> Best Match </span> </button> <span group> <button id=76941 button> <span> 60 </span> </button> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [92684]",
+      "op": "CLICK",
+      "element": "92684",
+      "value": "",
+      "description": "[button] Listing options selector. List View selected. -> CLICK",
+      "role": "button",
+      "label": "Listing options selector. List View selected.",
+      "observation": "<html> <div> <div id=91486 button> <h3> Price </h3> </div> <div main> <div> <a id=92666> <span> Price + Shipping: lowest first </span> </a> <button id=92684 button listing options selector. list view> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [112569]",
+      "op": "CLICK",
+      "element": "112569",
+      "value": "",
+      "description": "[link] Gallery View -> CLICK",
+      "role": "link",
+      "label": "Gallery View",
+      "observation": "<html> <div> <li> <div id=111365 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=111400 button submit price range /> </div> </li> <div main> <a id=112569> <span> Gallery View </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [119253]",
+      "op": "CLICK",
+      "element": "119253",
+      "value": "",
+      "description": "[button] Sort selector. Best Match selected. -> CLICK",
+      "role": "button",
+      "label": "Sort selector. Best Match selected.",
+      "observation": "<html> <div> <li> <div id=121676 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=121711 button submit price range /> </div> </li> <div main> <button id=119253 button sort selector. best match selected.> <span> Best Match </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [141629]",
+      "op": "CLICK",
+      "element": "141629",
+      "value": "",
+      "description": "[link] Price + Shipping: lowest first -> CLICK",
+      "role": "link",
+      "label": "Price + Shipping: lowest first",
+      "observation": "<html> <div> <li> <div id=140421 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=140456 button submit price range /> </div> </li> <div main> <a id=141629> <span> Price + Shipping: lowest first </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [154146]",
+      "op": "CLICK",
+      "element": "154146",
+      "value": "",
+      "description": "[heading] 3L Sensor Trash Can Automatic Mini Waste Basket wi... -> CLICK",
+      "role": "heading",
+      "label": "3L Sensor Trash Can Automatic Mini Waste Basket wi...",
+      "observation": "<html> <div> <li> <div id=150284 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=150319 button submit price range /> </div> </li> <div main> <div> <a id=154146> <span heading> 3L Sensor Trash Can Automatic Mini Waste Basket with Lid for Desk and Vehicle </span> <span> Opens in a new window or tab </span> </a> <span> Brand New </span> </div> </div> </div> </html>"
+    }
+  ]
+}

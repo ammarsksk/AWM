@@ -1,0 +1,60 @@
+{
+  "name": "rei / Speciality workflow 83",
+  "source": "Mind2Web exemplar",
+  "website": "rei",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Browse climbing courses within 50 miles of 90028.",
+  "steps": [
+    {
+      "action": "CLICK [130]",
+      "op": "CLICK",
+      "element": "130",
+      "value": "",
+      "description": "[link] Classes & Events -> CLICK",
+      "role": "link",
+      "label": "Classes & Events",
+      "observation": "<html> <header banner> <nav primary> <a id=130> <span> Classes & Events </span> </a> </nav> <nav navigation shop categories> <ul> <button id=1759 button> <span> Climb </span> </button> <a id=9480> Climbing </a> </ul> </nav> </header> </html>"
+    },
+    {
+      "action": "SELECT [13390] [Climbing]",
+      "op": "SELECT",
+      "element": "13390",
+      "value": "Climbing",
+      "description": "[combobox] Activity -> SELECT: Climbing",
+      "role": "combobox",
+      "label": "Activity",
+      "observation": "<html> <div main> <div> <select id=13390 activity> <option 0 true> All activities </option> <option 164> Camping & Hiking </option> <option 21> Climbing </option> <option 22> Cycling </option> <option 167> Fitness </option> <option 166> Outdoor Skills </option> <option 26> Snowsports </option> <option 84> Stewardship </option> <option 82> Travel </option> <option 165> Watersports </option> </select> <svg> </svg> </div> <a id=14858> <img climbing icon /> <p> Climbing </p> </a> <a id=15103> <img climbing icon /> <p> Climbing </p> </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [19245] [90028]",
+      "op": "TYPE",
+      "element": "19245",
+      "value": "90028",
+      "description": "[textbox] Location -> TYPE: 90028",
+      "role": "textbox",
+      "label": "Location",
+      "observation": "<html> <div main> <input id=19245 text zip code or city, state /> <a id=20717> <img climbing icon /> <p> Climbing </p> </a> <a id=20962> <img climbing icon /> <p> Climbing </p> </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [25107] [Within 50 miles]",
+      "op": "SELECT",
+      "element": "25107",
+      "value": "Within 50 miles",
+      "description": "[combobox] Distance -> SELECT: Within 50 miles",
+      "role": "combobox",
+      "label": "Distance",
+      "observation": "<html> <div main> <form> <input location 90028 /> <div> <label id=26504> Distance </label> <div> <select id=25107 distance> <option 25> Within 25 miles </option> <option 50> Within 50 miles </option> <option 100 true> Within 100 miles </option> <option 150> Within 150 miles </option> <option 200> Within 200 miles </option> </select> <svg> </svg> </div> </div> <button id=26522 submit> Search </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [30962]",
+      "op": "CLICK",
+      "element": "30962",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div main> <form> <div> <select activity> </select> <svg id=30964> </svg> </div> <input location 90028 /> <div> <select distance> </select> <svg id=30967> </svg> </div> <button id=30962 submit> Search </button> </form> </div> </html>"
+    }
+  ]
+}

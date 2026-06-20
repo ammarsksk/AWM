@@ -1,0 +1,80 @@
+{
+  "name": "ticketcenter / Event workflow 35",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Book a WWE ticket for price range between $50 to $100.",
+  "steps": [
+    {
+      "action": "CLICK [76]",
+      "op": "CLICK",
+      "element": "76",
+      "value": "",
+      "description": "[link] WWE Tickets -> CLICK",
+      "role": "link",
+      "label": "WWE Tickets",
+      "observation": "<html> <body> <div> <input id=2317 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2566 tab> Sports </a> </ul> <a id=76> WWE Tickets </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [9212]",
+      "op": "CLICK",
+      "element": "9212",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <body> <div> <input id=8773 text query search for artists, teams or /> <button id=8777 submit> <span> Search </span> </button> </div> <table grid> <tr row> <a id=9212> <span> Tickets </span> </a> </tr> </table> </body> </html>"
+    },
+    {
+      "action": "CLICK [13846]",
+      "op": "CLICK",
+      "element": "13846",
+      "value": "",
+      "description": "[p] $41 - $1,255 -> CLICK",
+      "role": "p",
+      "label": "$41 - $1,255",
+      "observation": "<html> <div> <div> <p id=16203> Price Range </p> <p id=13846> $41 - $1,255 </p> </div> <button id=17392 button> <span> $50 </span> <span> /ea </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [35796] [50]",
+      "op": "TYPE",
+      "element": "35796",
+      "value": "50",
+      "description": "[input] -> TYPE: 50",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <div> <p id=38160> Price Range </p> <p> $41 - $1,255 </p> </div> <div> <span> $ </span> <input id=35796 tel 41 /> <div> Min </div> </div> </div> <button id=39345 button> <span> $50 </span> <span> /ea </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [57756] [100]",
+      "op": "TYPE",
+      "element": "57756",
+      "value": "100",
+      "description": "[input] -> TYPE: 100",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <body> <a id=58084 button> Sports </a> <div> <div> <p id=60120> Price Range </p> <p> $41 - $1,255 </p> </div> <div> <input id=57756 tel 1,255 /> <span> $ </span> <div> Max </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [79730]",
+      "op": "CLICK",
+      "element": "79730",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <body> <a id=80057 button> Sports </a> <div> <div> <p> Price Range </p> <p id=82096> $50 - $1,255 </p> </div> <button id=79730> Done </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [103238]",
+      "op": "CLICK",
+      "element": "103238",
+      "value": "",
+      "description": "[button] $50/ea -> CLICK",
+      "role": "button",
+      "label": "$50/ea",
+      "observation": "<html> <div> <div> <p id=102918> Price Range </p> <p id=102921> $50 - $100 </p> </div> <button id=103238 button> <span> $50 </span> <span> /ea </span> </button> </div> </html>"
+    }
+  ]
+}

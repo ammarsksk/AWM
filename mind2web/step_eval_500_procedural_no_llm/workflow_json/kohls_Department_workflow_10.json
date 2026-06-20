@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "name": "kohls / Department workflow 10",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "goal_pattern": "Add the cheapest Women's Sweaters to my shopping cart.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "women",
+      "shopping",
+      "add",
+      "sweaters",
+      "cart",
+      "kohls",
+      "department",
+      "cheapest",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "shop",
+      "category",
+      "cardigans",
+      "sort",
+      "featured",
+      "price",
+      "low",
+      "high",
+      "sonoma",
+      "goods",
+      "life",
+      "all",
+      "over",
+      "stitch"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Shop by Category",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Shop by Category",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Women",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Women",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Sweaters & Cardigans",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Sweaters & Cardigans",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Sort by: Featured",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Sort by: Featured",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Price Low-High",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price Low-High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Women's Sonoma Goods For Life\u00ae All Over Stitch",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Women's Sonoma Goods For Life\u00ae All Over Stitch",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Add to Cart",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to Cart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "kohls / Department workflow 10"
+}

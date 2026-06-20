@@ -1,0 +1,50 @@
+{
+  "name": "qatarairways / Airlines workflow 232",
+  "source": "Mind2Web exemplar",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Retrieve booking for 123456 last name Smith.",
+  "steps": [
+    {
+      "action": "CLICK [101]",
+      "op": "CLICK",
+      "element": "101",
+      "value": "",
+      "description": "[tab] \ue90cMy Trips -> CLICK",
+      "role": "tab",
+      "label": "\ue90cMy Trips",
+      "observation": "<html> <body> <div dialog> <button id=826> Continue </button> </div> <div> <a id=3725 button> Book </a> <ul tablist> <a id=101 tab> My Trips </a> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [24946] [123456]",
+      "op": "TYPE",
+      "element": "24946",
+      "value": "123456",
+      "description": "[textbox] booking reference -> TYPE: 123456",
+      "role": "textbox",
+      "label": "booking reference",
+      "observation": "<html> <body> <div dialog> <button id=25666> Continue </button> </div> <div tabpanel> <div> <input e-ticket number /> <div> <input id=24946 text booking reference /> <span> Booking reference </span> </div> <button id=34416 submit> Retrieve booking </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [48068] [Smith]",
+      "op": "TYPE",
+      "element": "48068",
+      "value": "Smith",
+      "description": "[textbox] last name -> TYPE: Smith",
+      "role": "textbox",
+      "label": "last name",
+      "observation": "<html> <body> <div dialog> <button id=48785> Continue </button> </div> <div tabpanel> <div> <input e-ticket number /> <div> <input id=48068 text last name /> <span> Last name </span> </div> <button id=56265 submit> Retrieve booking </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [69476]",
+      "op": "CLICK",
+      "element": "69476",
+      "value": "",
+      "description": "[button] Retrieve booking -> CLICK",
+      "role": "button",
+      "label": "Retrieve booking",
+      "observation": "<html> <body> <div dialog> <button id=70196> Continue </button> </div> <div> <a id=72644 button searchicon> <span> Search </span> </a> <div tabpanel> <div> <input e-ticket number /> <button id=69476 submit> Retrieve booking </button> </div> </div> </div> </body> </html>"
+    }
+  ]
+}

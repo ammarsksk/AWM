@@ -1,0 +1,120 @@
+{
+  "name": "kayak / Airlines workflow 234",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the fastest single stop flight fron JFK airport in New York to Male in Maldives on March 13",
+  "steps": [
+    {
+      "action": "CLICK [133]",
+      "op": "CLICK",
+      "element": "133",
+      "value": "",
+      "description": "[span] Round-trip -> CLICK",
+      "role": "span",
+      "label": "Round-trip",
+      "observation": "<html> <div> <span id=133> Round-trip </span> <div> <input id=696 text flight origin input from? /> <input id=712 text flight destination input to? /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12030]",
+      "op": "CLICK",
+      "element": "12030",
+      "value": "",
+      "description": "[tab] One-way -> CLICK",
+      "role": "tab",
+      "label": "One-way",
+      "observation": "<html> <body> <input id=8731 text flight origin input from? /> <ul tablist> <li id=12030 tab one-way> <span> One-way </span> </li> <li id=12032 tab round-trip> <span> Round-trip </span> </li> <li tab multi-city> </li> <li tab trip builder> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [16204] [new york]",
+      "op": "TYPE",
+      "element": "16204",
+      "value": "new york",
+      "description": "[textbox] Flight origin input -> TYPE: new york",
+      "role": "textbox",
+      "label": "Flight origin input",
+      "observation": "<html> <div> <div> <svg id=16766 img tn7z-icon /> <input id=16204 text flight origin input from? /> </div> <button id=16808 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [28089]",
+      "op": "CLICK",
+      "element": "28089",
+      "value": "",
+      "description": "[div] John F Kennedy Intl -> CLICK",
+      "role": "div",
+      "label": "John F Kennedy Intl",
+      "observation": "<html> <ul listbox> <li id=28067 option new york, united states> <div> <img id=28074 city:new york, united states /> <div> <div> <span> New York, United States </span> <span> NYC </span> </div> <span> All airports </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> <li id=28089 option john f kennedy intl> <div> <svg img /> <svg img /> <div> <div> <span> John F Kennedy Intl </span> <span> JFK </span> </div> <span> New York, United States </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> <li option laguardia> </li> <li option newark> </li> <li option clear_history> </li> </ul> </html>"
+    },
+    {
+      "action": "TYPE [32334] [male]",
+      "op": "TYPE",
+      "element": "32334",
+      "value": "male",
+      "description": "[textbox] Flight destination input -> TYPE: male",
+      "role": "textbox",
+      "label": "Flight destination input",
+      "observation": "<html> <div> <input id=32334 text flight destination input to? /> <button id=32942 button submit search> <svg id=32945 img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [44183]",
+      "op": "CLICK",
+      "element": "44183",
+      "value": "",
+      "description": "[span] Mal\u00e9, Maldives -> CLICK",
+      "role": "span",
+      "label": "Mal\u00e9, Maldives",
+      "observation": "<html> <ul listbox> <li id=44183 option mal, maldives> <div> <img id=44190 city:mal, maldives /> <div> <div> <span> Mal, Maldives </span> <span> MLE </span> </div> <span> Male </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> <li option lamap, vanuatu> </li> <li option david, panama> </li> <li id=44247 option kaafu, maldives> <div> <img city:kaafu, maldives /> <div> <span> Kaafu, Maldives </span> <span> Region </span> </div> </div> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [48511]",
+      "op": "CLICK",
+      "element": "48511",
+      "value": "",
+      "description": "[button] Start date calendar input -> CLICK",
+      "role": "button",
+      "label": "Start date calendar input",
+      "observation": "<html> <div> <div button> <span id=48511 button start date calendar input> <svg img /> <span monday march 6th> Mon 3/6 </span> <span> <span button decrement date by one day> <svg img /> </span> <span button increment date by one day> <svg img /> </span> </span> </span> </div> <button id=49127 button submit search> <svg id=49130 img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [56981]",
+      "op": "CLICK",
+      "element": "56981",
+      "value": "",
+      "description": "[div] 13 -> CLICK",
+      "role": "div",
+      "label": "13",
+      "observation": "<html> <div menu> <div tab start date calendar input use> <button button previous month> </button> <div> <div> <div button friday march 10, 2023> 10 </div> <div button saturday march 11, 2023> 11 </div> <div button sunday march 12, 2023> 12 </div> <div id=56981 button monday march 13, 2023> 13 </div> <div button tuesday march 14, 2023> 14 </div> <div button wednesday march 15, 2023> 15 </div> <div button thursday march 16, 2023> 16 </div> </div> <div> <div button monday april 10, 2023> 10 </div> <div button tuesday april 11, 2023> 11 </div> <div button wednesday april 12, 2023> 12 </div> <div id=61121 button thursday april 13, 2023> 13 </div> <div button friday april 14, 2023> 14 </div> <div button saturday april 15, 2023> 15 </div> <div button sunday april 16, 2023> 16 </div> </div> </div> <button id=61170 button next month> <svg img /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [65452]",
+      "op": "CLICK",
+      "element": "65452",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div list> <div listitem> <div button remove> <svg id=66018 img vvtc-item-icon /> </div> </div> </div> <div list> <div listitem> <div button remove> <svg id=66041 img vvtc-item-icon /> </div> </div> </div> <button id=65452 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [73812]",
+      "op": "CLICK",
+      "element": "73812",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <div list> <li listitem> </li> <li listitem> <button id=75201 button 1 stop only> only </button> </li> <li id=73812 listitem> <div> <div> <div> <input checkbox 2 true /> <label> 2+ stops </label> </div> <button button 2+ stops only> only </button> </div> <div> <button 2+ stops /> <button> $620 </button> </div> </div> </li> </div> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div button best> </div> <div id=83234 button quickest> <div> <span> Quickest </span> <div> <span> $1,039 </span> <span> 18h 25m </span> </div> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [110916]",
+      "op": "CLICK",
+      "element": "110916",
+      "value": "",
+      "description": "[div] Quickest -> CLICK",
+      "role": "div",
+      "label": "Quickest",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <div region> <li listitem> <div> <input checkbox jfk true /> <label id=105563> JFK: John F Kennedy Intl </label> </div> </li> </div> </div> </div> </div> <div flight results section> <div> <div button cheapest> </div> <div id=110901 button best> <div> <div> <span> Best </span> <svg img /> </div> <div> <span> $478 </span> <span> 22h 25m </span> </div> </div> </div> <div id=110916 button quickest> <div> <span> Quickest </span> <div> <span> $1,039 </span> <span> 18h 25m </span> </div> </div> </div> </div> </div> </body> </html>"
+    }
+  ]
+}

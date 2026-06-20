@@ -1,0 +1,140 @@
+{
+  "name": "amazon / General workflow 325",
+  "source": "Mind2Web exemplar",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Look for an English language book on roman empire history in the Kindle store released in the last 90 days, it should be displayed according to its latest publication date, and add the top result to the shopping list.",
+  "steps": [
+    {
+      "action": "CLICK [830]",
+      "op": "CLICK",
+      "element": "830",
+      "value": "",
+      "description": "[button] Open Menu -> CLICK",
+      "role": "button",
+      "label": "Open Menu",
+      "observation": "<html> <div> <div navigation> <div> <a id=830 button open menu> <span> All </span> </a> <div> <a click to call our disability> Disability Customer Support </a> <a> Clinic </a> <a> Same-Day Delivery </a> <a id=856> Books </a> <a> Amazon Basics </a> <a> Pet Supplies </a> <a> Livestreams </a> </div> </div> </div> <div> <a id=3254 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [13595]",
+      "op": "CLICK",
+      "element": "13595",
+      "value": "",
+      "description": "[link] Kindle E-readers & Books -> CLICK",
+      "role": "link",
+      "label": "Kindle E-readers & Books",
+      "observation": "<html> <div> <ul> <a id=13595> <div> Kindle E-readers & Books </div> </a> <a id=13622> <div> Books </div> </a> </ul> <a id=14444> Books </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [22010]",
+      "op": "CLICK",
+      "element": "22010",
+      "value": "",
+      "description": "[link] Kindle Books -> CLICK",
+      "role": "link",
+      "label": "Kindle Books",
+      "observation": "<html> <body> <div> <a id=25128 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> <div> <a id=25899> Store </a> <a id=22010> Kindle Books </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [28069] [roman empire history]",
+      "op": "TYPE",
+      "element": "28069",
+      "value": "roman empire history",
+      "description": "[textbox] Search Amazon -> TYPE: roman empire history",
+      "role": "textbox",
+      "label": "Search Amazon",
+      "observation": "<html> <div> <div navigation> <form search site-search> <input id=28069 text search amazon field-keywords /> </form> <div> <a kindle unlimited> </a> <a prime reading> </a> <a best sellers & more> </a> <a id=28867 categories> <span> Categories </span> </a> <a kindle vella> </a> <a amazon book clubs> </a> <a kindle book deals> </a> </div> </div> <div> <a id=36194 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [45385]",
+      "op": "CLICK",
+      "element": "45385",
+      "value": "",
+      "description": "[button] Go -> CLICK",
+      "role": "button",
+      "label": "Go",
+      "observation": "<html> <div> <div navigation> <form search site-search> <span go> <input id=45385 submit go /> </span> </form> <div id=45796 button roman empire history> roman empire history </div> </div> <div> <a id=53583 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [59035]",
+      "op": "CLICK",
+      "element": "59035",
+      "value": "",
+      "description": "[link] Kindle eBooks -> CLICK",
+      "role": "link",
+      "label": "Kindle eBooks",
+      "observation": "<html> <div> <div> <a id=59035> <span> Kindle eBooks </span> </a> <a id=59240> <span> Last 90 days </span> </a> </div> <div> <a id=59734 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [65879]",
+      "op": "CLICK",
+      "element": "65879",
+      "value": "",
+      "description": "[link] English -> CLICK",
+      "role": "link",
+      "label": "English",
+      "observation": "<html> <div> <div> <a id=65860> <span> Last 90 days </span> </a> <li english> <a id=65879> <input checkbox /> <span> English </span> </a> </li> </div> <div> <a id=66437 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [72393]",
+      "op": "CLICK",
+      "element": "72393",
+      "value": "",
+      "description": "[link] Last 90 days -> CLICK",
+      "role": "link",
+      "label": "Last 90 days",
+      "observation": "<html> <div> <div navigation> <div> <a kindle unlimited> </a> <a prime reading> </a> <a best sellers & more> </a> <a id=67963 categories> <span> Categories </span> </a> <a kindle vella> </a> <a amazon book clubs> </a> <a kindle book deals> </a> </div> </div> <div> <span sort by:> <span> <span> Sort by: </span> <span id=68296> Featured </span> </span> </span> <a id=72393> <span> Last 90 days </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [75763]",
+      "op": "CLICK",
+      "element": "75763",
+      "value": "",
+      "description": "[span] Featured -> CLICK",
+      "role": "span",
+      "label": "Featured",
+      "observation": "<html> <div> <div navigation> <div> <a kindle unlimited> </a> <a prime reading> </a> <a best sellers & more> </a> <a id=76578 categories> <span> Categories </span> </a> <a kindle vella> </a> <a amazon book clubs> </a> <a kindle book deals> </a> </div> </div> <div> <span sort by:> <span> <span> Sort by: </span> <span id=75763> Featured </span> </span> </span> <a id=77664> <span> Roman Empire </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [87690]",
+      "op": "CLICK",
+      "element": "87690",
+      "value": "",
+      "description": "[option] Publication Date -> CLICK",
+      "role": "option",
+      "label": "Publication Date",
+      "observation": "<html> <body> <div> <a id=89791> <span> Roman Empire </span> </a> <a id=90318> <span> Roman Empire (5 minute reads) </span> </a> </div> <ul listbox> <li option> <a id=87690> Publication Date </a> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [97017]",
+      "op": "CLICK",
+      "element": "97017",
+      "value": "",
+      "description": "[img] Records of the Medieval Sword -> CLICK",
+      "role": "img",
+      "label": "Records of the Medieval Sword",
+      "observation": "<html> <div> <div> <img id=97017 records of the medieval sword /> <a id=100938> <span> Romance </span> </a> </div> <div> <a id=102475 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [103171]",
+      "op": "CLICK",
+      "element": "103171",
+      "value": "",
+      "description": "[button] Add to List -> CLICK",
+      "role": "button",
+      "label": "Add to List",
+      "observation": "<html> <div> <div main> <div> <div radiogroup> <span radio> <span> <input id=103171 submit add to list /> <span> Add to List </span> </span> </span> </div> <ol list> <li listitem> </li> <li id=105754 listitem> <div> <span> Language </span> <span> English </span> </div> </li> <li listitem> </li> <li listitem> </li> <li listitem> </li> </ol> </div> </div> <div> <a id=107087 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [112902]",
+      "op": "CLICK",
+      "element": "112902",
+      "value": "",
+      "description": "[button] Submit -> CLICK",
+      "role": "button",
+      "label": "Submit",
+      "observation": "<html> <div> <div main> <ol list> <li listitem> </li> <li id=115478 listitem> <div> <span> Language </span> <span> English </span> </div> </li> <li listitem> </li> <li listitem> </li> <li listitem> </li> </ol> </div> <div> <a id=116812 choose a language for shopping.> <span> English </span> </a> <a choose a country/region for shopping.> </a> </div> </div> <input id=112902 submit a-button-input a-declarative /> </html>"
+    }
+  ]
+}

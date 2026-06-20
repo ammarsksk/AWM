@@ -1,0 +1,80 @@
+{
+  "name": "spothero / Other workflow 463",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search and book the cheapest daytime only monthly parking option in Seattle near Stripe, 5th Avenue",
+  "steps": [
+    {
+      "action": "TYPE [84] [stripe, 5th avenue]",
+      "op": "TYPE",
+      "element": "84",
+      "value": "stripe, 5th avenue",
+      "description": "[textbox] Search for parking -> TYPE: stripe, 5th avenue",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=389 tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=84 text search for parking search-input address, place, city or venue /> </div> <ul list> <a id=698> Monthly Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [2071]",
+      "op": "CLICK",
+      "element": "2071",
+      "value": "",
+      "description": "[li] Stripe, 5th Avenue, Seattle, WA, USA -> CLICK",
+      "role": "li",
+      "label": "Stripe, 5th Avenue, Seattle, WA, USA",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=2375 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=2387 text search for parking search-input stripe, 5th avenue address, place, city or venue /> <li id=2071> Stripe, 5th Avenue, Seattle, WA, USA </li> <button button /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4118]",
+      "op": "CLICK",
+      "element": "4118",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=4118 tab button> Monthly </button> </div> <button id=5006 button> Filter </button> </div> <select id=5014> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "SELECT [6733] [Daytime Only Parking]",
+      "op": "SELECT",
+      "element": "6733",
+      "value": "Daytime Only Parking",
+      "description": "[select] All Parking Options -> SELECT: Daytime Only Parking",
+      "role": "select",
+      "label": "All Parking Options",
+      "observation": "<html> <div> <select id=6733> <option all true> All Parking Options </option> <option 247> 24/7 Regular Parking </option> <option daytime_only> Daytime Only Parking </option> </select> <select id=7478> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> <span id=7763> 335 Columbia St. - MOTORCYCLE PARKING ONLY </span> </div> </html>"
+    },
+    {
+      "action": "SELECT [10386] [Sort by Price]",
+      "op": "SELECT",
+      "element": "10386",
+      "value": "Sort by Price",
+      "description": "[select] Sort by Distance -> SELECT: Sort by Price",
+      "role": "select",
+      "label": "Sort by Distance",
+      "observation": "<html> <div> <button id=11124 button> Filter </button> <select id=10386> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> <span id=11416> 335 Columbia St. - MOTORCYCLE PARKING ONLY </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [14033]",
+      "op": "CLICK",
+      "element": "14033",
+      "value": "",
+      "description": "[heading] 335 Columbia St. - MOTORCYCLE PARKING ONLY -> CLICK",
+      "role": "heading",
+      "label": "335 Columbia St. - MOTORCYCLE PARKING ONLY",
+      "observation": "<html> <main> <div region map> <div> <div id=14514 img stripe, 5th avenue, seattle, wa, /> <div button 800 5th ave. (500 columbia /> <div button 310 madison st (1001 4th /> <div button 999 3rd ave. - garage /> </div> </div> <div> <button id=14768 button> Filter </button> <span id=14033> 335 Columbia St. - MOTORCYCLE PARKING ONLY </span> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [17638]",
+      "op": "CLICK",
+      "element": "17638",
+      "value": "",
+      "description": "[button] Proceed to Checkout -> CLICK",
+      "role": "button",
+      "label": "Proceed to Checkout",
+      "observation": "<html> <main> <div region map> <div> <div id=18120 img stripe, 5th avenue, seattle, wa, /> <div button 800 5th ave. (500 columbia /> <div button 310 madison st (1001 4th /> <div button 999 3rd ave. - garage /> </div> </div> <button id=18375 button> Filter </button> <button id=17638 button> Proceed to Checkout </button> </main> </html>"
+    }
+  ]
+}

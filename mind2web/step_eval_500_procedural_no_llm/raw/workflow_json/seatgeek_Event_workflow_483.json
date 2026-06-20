@@ -1,0 +1,80 @@
+{
+  "name": "seatgeek / Event workflow 483",
+  "source": "Mind2Web exemplar",
+  "website": "seatgeek",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "check 2 of WrestleMania single day Parking Passes on April 1st in California near LA.",
+  "steps": [
+    {
+      "action": "CLICK [137]",
+      "op": "CLICK",
+      "element": "137",
+      "value": "",
+      "description": "[div] Sports -> HOVER",
+      "role": "div",
+      "label": "Sports",
+      "observation": "<html> <div> <div id=137> Sports </div> <div> <div menu> <a> NCAA BB </a> <a> NCAA FB </a> <a> Tennis </a> <a id=751> WWE </a> <a> Playoff Tickets </a> <a> Sports by City </a> </div> <div> <a> WWE Raw </a> <a id=1006> Wrestlemania </a> <a> More WWE </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9940]",
+      "op": "CLICK",
+      "element": "9940",
+      "value": "",
+      "description": "[link] WWE -> HOVER",
+      "role": "link",
+      "label": "WWE",
+      "observation": "<html> <div> <div> <div menu> <a> NCAA BB </a> <a> NCAA FB </a> <a> Tennis </a> <a id=9940> WWE </a> <a> Playoff Tickets </a> <a> Sports by City </a> </div> <div> <a> WWE Raw </a> <a id=10809> Wrestlemania </a> <a> More WWE </a> </div> </div> <form search> <ul> <li option comedy> </li> <li option ncaa basketball> </li> <li option ncaa football> </li> <li id=11158 option wwe> <p wwe> WWE </p> </li> <li option tennis> </li> <li option fighting> </li> <li option golf> </li> </ul> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [19746]",
+      "op": "CLICK",
+      "element": "19746",
+      "value": "",
+      "description": "[link] Wrestlemania -> CLICK",
+      "role": "link",
+      "label": "Wrestlemania",
+      "observation": "<html> <body> <div> <div> <a> WWE Raw </a> <a id=19746> Wrestlemania </a> <a> More WWE </a> </div> <div> <a> Sports in Denver </a> <a> Sports in Houston </a> <a> Sports in Las Vegas </a> <a id=20548> Sports in Los Angeles </a> <a> Sports in Miami </a> <a> Sports in Nashville </a> <a> Sports in New York </a> </div> </div> <button id=21730> <span> <span> Filter by </span> Date </span> </button> </body> </html>"
+    },
+    {
+      "action": "CLICK [27303]",
+      "op": "CLICK",
+      "element": "27303",
+      "value": "",
+      "description": "[link] Parking -> CLICK",
+      "role": "link",
+      "label": "Parking",
+      "observation": "<html> <div> <nav> <a> Events </a> <a id=27303> Parking </a> </nav> <div> <button id=29628> <span> <span> Filter by </span> Date </span> </button> <button id=29740> <span> From $40 </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [32902]",
+      "op": "CLICK",
+      "element": "32902",
+      "value": "",
+      "description": "[span] From $62 -> CLICK",
+      "role": "span",
+      "label": "From $62",
+      "observation": "<html> <div> <button id=32823> <span> <span> Filter by </span> Date </span> </button> <ul> <button id=32902> <span> From $62 </span> </button> <button id=32932> <span> From $57 </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [36677]",
+      "op": "CLICK",
+      "element": "36677",
+      "value": "",
+      "description": "[button] Quantity -> CLICK",
+      "role": "button",
+      "label": "Quantity",
+      "observation": "<html> <div> <div region listings> <div> <div> <button all filters and accessible seating /> <button id=36677> <span> Quantity </span> </button> </div> <div> <h2> 17 listings </h2> <button id=36690> <span> <span> Sorted by </span> Price </span> </button> </div> </div> </div> <form email information> <div> <input email your email /> <button id=37018 submit> Submit </button> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [38701]",
+      "op": "CLICK",
+      "element": "38701",
+      "value": "",
+      "description": "[span] 2 Tickets -> CLICK",
+      "role": "span",
+      "label": "2 Tickets",
+      "observation": "<html> <div region listings> <div> <h1> Parking - <a> WWE </a> : <a id=38665> WrestleMania </a> 39 </h1> <span> <button id=38684> <span> Quantity </span> </button> <div listbox> <button id=38701> <span> 2 Tickets </span> </button> </div> </span> </div> </div> </html>"
+    }
+  ]
+}

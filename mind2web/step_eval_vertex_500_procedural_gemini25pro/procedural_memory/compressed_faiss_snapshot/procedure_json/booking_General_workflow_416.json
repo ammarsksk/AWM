@@ -1,0 +1,169 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "svg",
+      "aquarium",
+      "paris",
+      "may",
+      "use",
+      "div",
+      "booking",
+      "travel",
+      "general",
+      "show",
+      "ticket",
+      "price",
+      "adults",
+      "5th",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "attractions",
+      "searchbox",
+      "where",
+      "are",
+      "you",
+      "going",
+      "specific",
+      "field",
+      "your",
+      "dates",
+      "checkbox",
+      "2023",
+      "search",
+      "heading"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Attractions",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Attractions",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the Where are you going?",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Where are you going?",
+        "target_type": "searchbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Aquarium of Paris",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Aquarium of Paris",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Select your dates",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Select your dates",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 5 May 2023",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "5 May 2023",
+        "target_type": "checkbox",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Aquarium of Paris",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Aquarium of Paris",
+        "target_type": "heading",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[svg] -> CLICK",
+        "target_type": "svg",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 9,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[svg] -> CLICK",
+        "target_type": "svg",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Show ticket price for Aquarium of Paris for 2 adults on May 5th.",
+  "memory_type": "typed_procedure",
+  "name": "booking / General workflow 416",
+  "raw_workflow_name": "booking / General workflow 416",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 9.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "General",
+  "termination": {
+    "max_steps_hint": 9,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "booking"
+}

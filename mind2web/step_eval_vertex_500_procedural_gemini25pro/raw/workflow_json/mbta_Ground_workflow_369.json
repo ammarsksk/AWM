@@ -1,0 +1,150 @@
+{
+  "name": "mbta / Ground workflow 369",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Plan a trip from Braintree to Boston Airport on April 14, 12 pm, and see the fair calculator.",
+  "steps": [
+    {
+      "action": "CLICK [1855]",
+      "op": "CLICK",
+      "element": "1855",
+      "value": "",
+      "description": "[tab] Trip Planner -> CLICK",
+      "role": "tab",
+      "label": "Trip Planner",
+      "observation": "<html> <div navigation> <div tablist> <a id=1855 tab> <svg id=1860 img> <title> trip planner </title> </svg> <span> Trip Planner </span> </a> </div> <div tabpanel> <a id=70> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [8615] [brain]",
+      "op": "TYPE",
+      "element": "8615",
+      "value": "brain",
+      "description": "[combobox] From -> TYPE: brain",
+      "role": "combobox",
+      "label": "From",
+      "observation": "<html> <div> <div> <label> Search MBTA.com </label> <input id=9689 combobox text query search for routes, info, and /> <button search> </button> </div> <div navigation> <div tabpanel> <div> <div> <span> A </span> <input id=8615 combobox text plan[from] enter a location /> <input/> <input/> </div> <div> <span> B </span> <input id=10654 combobox text plan[to] enter a location /> <input/> <input/> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19174]",
+      "op": "CLICK",
+      "element": "19174",
+      "value": "",
+      "description": "[link] T red line bus commuter rail Zone 2 Braintree -> CLICK",
+      "role": "link",
+      "label": "T red line bus commuter rail Zone 2 Braintree",
+      "observation": "<html> <div navigation> <div tabpanel> <span listbox> <div option> <a id=19174> <svg img> <title> T </title> </svg> <span> <svg img> <title> red line </title> </svg> <svg img> <title> bus </title> </svg> <svg img> <title> commuter rail </title> </svg> <span> Zone 2 </span> </span> <span> <em> Brain </em> tree </span> </a> </div> <span> <div id=19335 option> <a id=19337> <span> <em> Braintree </em> , MA, United States </span> </a> </div> <div option> </div> <div option> </div> </span> </span> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [25932] [boston]",
+      "op": "TYPE",
+      "element": "25932",
+      "value": "boston",
+      "description": "[combobox] To -> TYPE: boston",
+      "role": "combobox",
+      "label": "To",
+      "observation": "<html> <div> <div> <label> Search MBTA.com </label> <input id=27006 combobox text query search for routes, info, and /> <button search> </button> </div> <div navigation> <div tabpanel> <form> <input _utf8 /> <div> <span> B </span> <input id=25932 combobox text plan[to] enter a location /> <input/> <input/> </div> <button id=28011 submit> Get trip suggestions </button> </form> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36677]",
+      "op": "CLICK",
+      "element": "36677",
+      "value": "",
+      "description": "[span] Boston -> CLICK",
+      "role": "span",
+      "label": "Boston",
+      "observation": "<html> <div navigation> <div tabpanel> <span listbox> <span> <div id=36675 option> <a id=36677> <span> <em> Boston </em> Logan Int'l Airport, 1 Harborside Dr, East <em> Boston </em> , MA 02128, United States </span> </a> </div> <div id=36691 option> <span> <em> Boston </em> , MA, United States </span> </div> <div option> </div> </span> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [43214]",
+      "op": "CLICK",
+      "element": "43214",
+      "value": "",
+      "description": "[button] Get trip suggestions -> CLICK",
+      "role": "button",
+      "label": "Get trip suggestions",
+      "observation": "<html> <div navigation> <div tablist> <a id=44999 tab> <svg id=45004 img> <title> trip planner </title> </svg> <span> Trip Planner </span> </a> </div> <div tabpanel> <form> <input _utf8 /> <button id=43214 submit> Get trip suggestions </button> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47679]",
+      "op": "CLICK",
+      "element": "47679",
+      "value": "",
+      "description": "[button] Depart at 8:40 AM, 4/10/23 \uf107 -> CLICK",
+      "role": "button",
+      "label": "Depart at 8:40 AM, 4/10/23 \uf107",
+      "observation": "<html> <div> <nav main navigation> <div plan your journey> <a id=48255> <div> Trip Planner </div> </a> </div> </nav> <div> <div heading> <button id=47679> <span> Depart at 8:40 AM, 4/10/23 </span> </button> </div> <div heading> <button id=50331 button> <span> Show fare calculator </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [54182]",
+      "op": "CLICK",
+      "element": "54182",
+      "value": "",
+      "description": "[LabelText] Monday, April 10, 2023, click or press the enter o... -> CLICK",
+      "role": "LabelText",
+      "label": "Monday, April 10, 2023, click or press the enter o...",
+      "observation": "<html> <div> <nav main navigation> <div plan your journey> <a id=54758> <div> Trip Planner </div> </a> </div> </nav> <div region> <div> <div> <label> Hour </label> <select id=54179> <option 1> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8 true> 8 </option> <option 9> 9 </option> <option 10> 10 </option> <option 11> 11 </option> <option 12> 12 </option> </select> <label> Minute </label> <select> </select> <label> AM or PM </label> </div> <label monday, april 10, 2023, click date> <div id=54182> <svg img /> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [60659]",
+      "op": "CLICK",
+      "element": "60659",
+      "value": "",
+      "description": "[gridcell] Friday, April 14, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Friday, April 14, 2023",
+      "observation": "<html> <div> <div region> <div> <div> <div id=62743 button go to next month /> <div button go to previous month /> <div heading click or press the enter> April 2023 </div> </div> <table grid> <tr row> <td gridcell tuesday, april 11, 2023> 11 </td> <td gridcell wednesday, april 12, 2023> 12 </td> <td gridcell thursday, april 13, 2023> 13 </td> <td id=60659 gridcell friday, april 14, 2023> 14 </td> <td gridcell saturday, april 15, 2023> 15 </td> </tr> </table> </div> </div> <div heading> <button id=63314 button> <span> Show fare calculator </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [67136] [12]",
+      "op": "TYPE",
+      "element": "67136",
+      "value": "12",
+      "description": "[combobox] Hour -> TYPE: 12",
+      "role": "combobox",
+      "label": "Hour",
+      "observation": "<html> <div> <div region> <div> <label> Hour </label> <select id=67136> <option 1> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8 true> 8 </option> <option 9> 9 </option> <option 10> 10 </option> <option 11> 11 </option> <option 12> 12 </option> </select> <label> Minute </label> <select> </select> <label> AM or PM </label> </div> </div> <div> <div heading> <button id=69792 button> <span> Show fare calculator </span> </button> </div> <div heading> <button id=69904 button> <span> Show fare calculator </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [73618] [00]",
+      "op": "TYPE",
+      "element": "73618",
+      "value": "00",
+      "description": "[combobox] Minute -> TYPE: 00",
+      "role": "combobox",
+      "label": "Minute",
+      "observation": "<html> <div> <div region> <div> <label> Hour </label> <select> </select> <label> Minute </label> <select id=73618> <option 00> 00 </option> <option 05> 05 </option> <option 10> 10 </option> <option 15> 15 </option> <option 20> 20 </option> <option 25> 25 </option> <option 30> 30 </option> <option 35> 35 </option> <option 40 true> 40 </option> <option 45> 45 </option> <option 50> 50 </option> <option 55> 55 </option> </select> <label> AM or PM </label> <select> </select> </div> </div> <div> <div heading> <button id=76273 button> <span> Show fare calculator </span> </button> </div> <div heading> <button id=76385 button> <span> Show fare calculator </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [80098] [PM]",
+      "op": "SELECT",
+      "element": "80098",
+      "value": "PM",
+      "description": "[combobox] AM or PM -> SELECT: PM",
+      "role": "combobox",
+      "label": "AM or PM",
+      "observation": "<html> <div> <div region> <div> <label> Minute </label> <select> </select> <label> AM or PM </label> <select id=80098> <option am true> AM </option> <option pm> PM </option> </select> </div> </div> <div> <div heading> <button id=82752 button> <span> Show fare calculator </span> </button> </div> <div heading> <button id=82864 button> <span> Show fare calculator </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [86576]",
+      "op": "CLICK",
+      "element": "86576",
+      "value": "",
+      "description": "[button] Get trip suggestions -> CLICK",
+      "role": "button",
+      "label": "Get trip suggestions",
+      "observation": "<html> <div> <form> <input _utf8 /> <div heading> <button id=88498> <span> Depart at 12:00 PM, 4/14/23 </span> </button> </div> <button id=86576 submit> Get trip suggestions </button> <a submit> Reset form </a> </form> <div heading> <button id=86577 button> <span> Show fare calculator </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [92501]",
+      "op": "CLICK",
+      "element": "92501",
+      "value": "",
+      "description": "[button] Show fare calculator \uf107 -> CLICK",
+      "role": "button",
+      "label": "Show fare calculator \uf107",
+      "observation": "<html> <div> <div heading> <button id=91770> <span> Depart at 12:00 PM, 4/14/23 </span> </button> </div> <div> <div heading> <button id=92501 button> <span> Show fare calculator </span> </button> </div> <div heading> <button id=92612 button> <span> Show fare calculator </span> </button> </div> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "name": "newegg / Digital workflow 176",
+  "source": "Mind2Web exemplar",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "task": "add a motherboard under $200 and a compatible processor at any price to the shopping cart.",
+  "steps": [
+    {
+      "action": "TYPE [134] [motherboard]",
+      "op": "TYPE",
+      "element": "134",
+      "value": "motherboard",
+      "description": "[searchbox] Search Site -> TYPE: motherboard",
+      "role": "searchbox",
+      "label": "Search Site",
+      "observation": "<html> <div> <input id=134 search search site /> <ul> <a id=9086 computer systems> <div> Computer Systems </div> </a> <a id=10468 electronics> <div> Electronics </div> </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [36500]",
+      "op": "CLICK",
+      "element": "36500",
+      "value": "",
+      "description": "[button] \uf002 -> CLICK",
+      "role": "button",
+      "label": "\uf002",
+      "observation": "<html> <div> <div> <input search search site motherboard /> <button id=36500> <span> Search </span> </button> </div> <div> <a id=44481 motherboard> <em> motherboard </em> </a> <a id=44539 motherboard> <em> motherboard </em> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [73082] [200]",
+      "op": "TYPE",
+      "element": "73082",
+      "value": "200",
+      "description": "[textbox] price to -> TYPE: 200",
+      "role": "textbox",
+      "label": "price to",
+      "observation": "<html> <div> <dl> <dt id=81968> Price </dt> <span> <input text price from /> <span> to </span> <input id=73082 text price to /> </span> </dl> <div> <a id=105062 amd motherboards> Lowest price </a> in <strong> 30 days </strong> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [140135]",
+      "op": "CLICK",
+      "element": "140135",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <div> <span> Show More </span> <button id=140135> Apply </button> </div> <div> <div> <a id=170116 intel motherboards> Lowest price </a> in <strong> 30 days </strong> </div> <div> <a id=172069 amd motherboards> Lowest price </a> in <strong> 30 days </strong> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [173638]",
+      "op": "CLICK",
+      "element": "173638",
+      "value": "",
+      "description": "[link] GIGABYTE B450M DS3H WIFI AM4 AMD B450 SATA 6Gb/s M... -> CLICK",
+      "role": "link",
+      "label": "GIGABYTE B450M DS3H WIFI AM4 AMD B450 SATA 6Gb/s M...",
+      "observation": "<html> <div> <dt id=184781> CPU Type </dt> <div> <div> <a id=173638 view details> GIGABYTE B450M DS3H WIFI AM4 AMD B450 SATA 6Gb/s Micro ATX AMD Motherboard </a> <a standard return policy(new window)> Standard Return Policy </a> </div> <div> <a id=191047 amd motherboards> Lowest price </a> in <strong> 30 days </strong> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [206022]",
+      "op": "CLICK",
+      "element": "206022",
+      "value": "",
+      "description": "[a] Processors - Desktops -> CLICK",
+      "role": "a",
+      "label": "Processors - Desktops",
+      "observation": "<html> <div> <a id=214183 motherboards> Motherboards </a> <div> <div> <a> All </a> <a id=206022> Processors - Desktops </a> <a> Computer Cases </a> <a> Power Supplies </a> <a> Antivirus & Internet Security - Download </a> </div> <button id=216507> Add Selected to Cart </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [262479]",
+      "op": "CLICK",
+      "element": "262479",
+      "value": "",
+      "description": "[div] AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Ze... -> CLICK",
+      "role": "div",
+      "label": "AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Ze...",
+      "observation": "<html> <div> <a id=270644 motherboards> Motherboards </a> <div> <div> <div id=262479> AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.5 GHz Socket AM4 65W None Integrated </div> <button add amd ryzen 5 5600> Add to cart </button> </div> <div id=274126> Price </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [290174]",
+      "op": "CLICK",
+      "element": "290174",
+      "value": "",
+      "description": "[button] ADD 2 ITEMS TO CART \uf0da -> CLICK",
+      "role": "button",
+      "label": "ADD 2 ITEMS TO CART \uf0da",
+      "observation": "<html> <div> <a id=298339 motherboards> Motherboards </a> <div> <button id=290174> Add 2 Items to Cart </button> <div id=301825> Price </div> </div> </div> </html>"
+    }
+  ]
+}

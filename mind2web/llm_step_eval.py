@@ -32,6 +32,7 @@ WEB_ARENA_DIR = ROOT / "webarena"
 sys.path.insert(0, str(WEB_ARENA_DIR))
 
 from local_awm_full_demo import WorkflowEmbeddingIndex  # noqa: E402
+from procedural_memory import ProceduralMemoryStore, prompt_procedure  # noqa: E402
 from real_data_awm_smoke import load_trajectories  # noqa: E402
 from utils.provider_config import get_openai_compatible_kwargs  # noqa: E402
 from workflow_abstraction import (  # noqa: E402
@@ -187,8 +188,10 @@ def choose_element(step: dict, observation: str) -> ElementCandidate | None:
     best_score = -1.0
     target_text = " ".join(
         [
+            step.get("intent", ""),
             step.get("step_intent", ""),
             step.get("target_type", ""),
+            step.get("target", ""),
             step.get("target_description", ""),
             step.get("selection_rule", ""),
             step.get("role", ""),
@@ -358,7 +361,11 @@ def accept_reuse(policy: str, traj, workflow_name: str | None) -> bool:
 def get_workflow_step(workflows, name: str | None, step_index: int) -> dict | None:
     if not name or name not in workflows:
         return None
-    steps = workflows[name].get("steps", [])
+    workflow = workflows[name]
+    if workflow.get("memory_type") == "typed_procedure":
+        steps = workflow.get("execution", {}).get("steps", [])
+    else:
+        steps = workflow.get("steps", [])
     return steps[step_index] if step_index < len(steps) else None
 
 
@@ -395,6 +402,8 @@ def workflow_for_prompt(workflows, name: str | None) -> dict | None:
     if not name or name not in workflows:
         return None
     workflow = dict(workflows[name])
+    if workflow.get("memory_type") == "typed_procedure":
+        return prompt_procedure(workflow)
     compact_steps = []
     for step in workflow.get("steps", [])[:12]:
         if workflow.get("abstraction_type"):
@@ -664,12 +673,91 @@ def percent_payload(metrics: dict) -> dict:
     return output
 
 
+def current_rss_mb() -> float:
+    try:
+        for line in Path("/proc/self/status").read_text().splitlines():
+            if line.startswith("VmRSS:"):
+                return float(line.split()[1]) / 1024.0
+    except Exception:
+        return 0.0
+    return 0.0
+
+
+def directory_bytes(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return sum(item.stat().st_size for item in path.rglob("*") if item.is_file())
+
+
+def save_runtime_stats(output_dir: Path, stats: dict) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / "runtime_stats.json").write_text(json.dumps(stats, indent=2))
+    lines = [
+        "# Runtime Stats",
+        "",
+        "| Metric | Value |",
+        "| --- | ---: |",
+        f"| Total wall time | {stats.get('total_wall_s', 0):.2f}s |",
+        f"| Build/retrieval-plan time | {stats.get('build_plan_s', 0):.2f}s |",
+        f"| Prediction time | {stats.get('prediction_s', 0):.2f}s |",
+        f"| Output size | {stats.get('output_mb', 0):.2f} MB |",
+        f"| RSS start | {stats.get('rss_start_mb', 0):.2f} MB |",
+        f"| RSS after build | {stats.get('rss_after_build_mb', 0):.2f} MB |",
+        f"| RSS end | {stats.get('rss_end_mb', 0):.2f} MB |",
+    ]
+    backend = stats.get("memory_backend", {})
+    if backend:
+        lines.extend(
+            [
+                "",
+                "## Memory Backend",
+                "",
+                "```json",
+                json.dumps(backend, indent=2),
+                "```",
+            ]
+        )
+    (output_dir / "runtime_stats.md").write_text("\n".join(lines) + "\n")
+
+
+def update_procedural_outcomes(memory, records: list[dict]) -> None:
+    if not isinstance(memory, ProceduralMemoryStore):
+        return
+    for record in records:
+        for step in record.get("steps", []):
+            procedure_name = step.get("accepted_workflow")
+            if not procedure_name:
+                continue
+            gold = parse_action_text(step.get("gold_action"))
+            pred = parse_action_text(step.get("predicted_action"))
+            success = bool(gold["element"]) and pred["element"] == gold["element"] and action_value_f1(pred, gold) >= 0.8
+            negative_pattern = None
+            if not success:
+                negative_pattern = " ".join(
+                    [
+                        record.get("website", ""),
+                        record.get("domain", ""),
+                        record.get("subdomain", ""),
+                        record.get("goal", ""),
+                        step.get("observation", "")[:500],
+                        step.get("predicted_action", ""),
+                    ]
+                )
+            memory.record_outcome(
+                procedure_name=procedure_name,
+                success=success,
+                steps=step.get("step"),
+                negative_pattern=negative_pattern,
+                evidence=f"gold={step.get('gold_action', '')} predicted={step.get('predicted_action', '')}",
+            )
+
+
 def save_outputs(
     output_dir: Path,
     records: list[dict],
     workflows,
     workflow_texts: list[str],
-    embedding_index: WorkflowEmbeddingIndex | None = None,
+    embedding_index: WorkflowEmbeddingIndex | ProceduralMemoryStore | None = None,
     raw_workflows=None,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -709,7 +797,13 @@ def save_outputs(
 
 
 def build_retrieval_plan(selected: list, args):
-    embedding_index = WorkflowEmbeddingIndex(args.output_dir / "workflow_embeddings.json")
+    if args.memory_architecture == "procedural":
+        embedding_index = ProceduralMemoryStore(
+            args.output_dir / "procedural_memory",
+            candidate_k=args.retrieval_candidate_k,
+        )
+    else:
+        embedding_index = WorkflowEmbeddingIndex(args.output_dir / "workflow_embeddings.json")
     workflows = make_workflow_container(args.output_dir, args.workflow_storage)
     raw_workflows = make_workflow_container(args.output_dir / "raw", args.workflow_storage)
     workflow_texts: list[str] = []
@@ -725,7 +819,20 @@ def build_retrieval_plan(selected: list, args):
         task_steps = []
         for step_index, gold_step in enumerate(structured_gold_steps):
             observation = gold_step.get("observation") or ""
-            retrieval = embedding_index.retrieve(query_text(traj, observation), top_k=args.top_k)
+            metadata = {
+                "website": traj.website,
+                "domain": traj.domain,
+                "subdomain": traj.subdomain,
+            }
+            if isinstance(embedding_index, ProceduralMemoryStore):
+                retrieval = embedding_index.retrieve(
+                    query_text(traj, observation),
+                    top_k=args.top_k,
+                    metadata=metadata,
+                    observation=observation,
+                )
+            else:
+                retrieval = embedding_index.retrieve(query_text(traj, observation), top_k=args.top_k)
             top_workflow = retrieval.workflow_name
             accepted_workflow = top_workflow if accept_reuse(args.reuse_policy, traj, top_workflow) else None
             task_steps.append(
@@ -751,9 +858,14 @@ def build_retrieval_plan(selected: list, args):
         )
         workflow_text = workflow_to_text(workflow)
         add_workflow_to_container(raw_workflows, raw_workflow)
-        add_workflow_to_container(workflows, workflow)
-        workflow_texts.append(workflow_text)
-        embedding_index.add_workflow(workflow_text, save=False)
+        if isinstance(embedding_index, ProceduralMemoryStore):
+            procedure = embedding_index.add_workflow(workflow, save=False)
+            add_workflow_to_container(workflows, procedure)
+            workflow_texts.append(embedding_index.procedure_to_text(procedure))
+        else:
+            add_workflow_to_container(workflows, workflow)
+            workflow_texts.append(workflow_text)
+            embedding_index.add_workflow(workflow_text, save=False)
 
         records.append(
             {
@@ -764,6 +876,7 @@ def build_retrieval_plan(selected: list, args):
                 "goal": traj.task,
                 "mode": args.mode,
                 "reuse_policy": args.reuse_policy,
+                "memory_architecture": args.memory_architecture,
                 "workflow_abstraction": args.workflow_abstraction,
                 "workflow_storage": args.workflow_storage,
                 "steps": task_steps,
@@ -828,15 +941,42 @@ def predict_record(record: dict, workflows, args) -> dict:
 
 
 def main() -> int:
+    run_start = time.perf_counter()
+    rss_start_mb = current_rss_mb()
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-path", type=Path, default=ROOT / "mind2web" / "data" / "memory" / "exemplars.json")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "mind2web" / "llm_step_eval_output")
     parser.add_argument("--mode", choices=["oracle", "heuristic", "llm"], default="heuristic")
-    parser.add_argument("--model", type=str, default="gemini-2.5-flash")
+    parser.add_argument("--model", type=str, default="google/gemini-2.5-pro")
     parser.add_argument("--max-tasks", type=int, default=25)
     parser.add_argument("--max-steps-per-task", type=int, default=None)
     parser.add_argument("--start-index", type=int, default=0)
     parser.add_argument("--reuse-policy", choices=["same-website", "same-subdomain", "threshold"], default="same-website")
+    parser.add_argument(
+        "--memory-architecture",
+        choices=["awm", "procedural"],
+        default="awm",
+        help=(
+            "awm uses the original workflow text retriever; procedural stores typed "
+            "activation/execution/termination memories, graph edges, outcome stats, "
+            "and compact prompt procedures."
+        ),
+    )
+    parser.add_argument(
+        "--retrieval-candidate-k",
+        type=int,
+        default=50,
+        help="Number of first-stage candidates reranked by procedural memory.",
+    )
+    parser.add_argument(
+        "--procedural-compressed-snapshot",
+        action="store_true",
+        help="After a procedural run, export a compressed FAISS SQ8/IVFPQ snapshot for storage/latency tests.",
+    )
+    parser.add_argument("--procedural-compressed-kind", choices=["auto", "sq8", "ivfpq"], default="auto")
+    parser.add_argument("--procedural-compressed-nlist", type=int, default=64)
+    parser.add_argument("--procedural-compressed-pq-m", type=int, default=16)
+    parser.add_argument("--procedural-compressed-pq-bits", type=int, default=8)
     parser.add_argument(
         "--workflow-abstraction",
         choices=["raw", "deterministic", "llm"],
@@ -901,7 +1041,10 @@ def main() -> int:
     if args.max_tasks is not None:
         selected = selected[: args.max_tasks]
 
+    build_start = time.perf_counter()
     planned_records, workflows, workflow_texts, embedding_index, raw_workflows = build_retrieval_plan(selected, args)
+    build_plan_s = time.perf_counter() - build_start
+    rss_after_build_mb = current_rss_mb()
     save_outputs(
         args.output_dir,
         [],
@@ -912,6 +1055,7 @@ def main() -> int:
     )
 
     records = []
+    prediction_start = time.perf_counter()
     if args.parallel_workers <= 1:
         for index, record in enumerate(planned_records, start=1):
             records.append(predict_record(record, workflows, args))
@@ -947,7 +1091,20 @@ def main() -> int:
                     )
                     print(f"processed {done_count}/{len(planned_records)} tasks")
         records = [completed[key] for key in sorted(completed)]
+    prediction_s = time.perf_counter() - prediction_start
 
+    update_procedural_outcomes(embedding_index, records)
+    compressed_snapshot_stats = None
+    if isinstance(embedding_index, ProceduralMemoryStore) and args.procedural_compressed_snapshot:
+        compressed_snapshot_stats = embedding_index.export_compressed_faiss(
+            candidate_k=args.retrieval_candidate_k,
+            index_kind=args.procedural_compressed_kind,
+            ivf_nlist=args.procedural_compressed_nlist,
+            pq_m=args.procedural_compressed_pq_m,
+            pq_bits=args.procedural_compressed_pq_bits,
+        )
+        print("compressed procedural snapshot:")
+        print(json.dumps(compressed_snapshot_stats, indent=2))
     save_outputs(
         args.output_dir,
         records,
@@ -956,6 +1113,45 @@ def main() -> int:
         embedding_index=embedding_index,
         raw_workflows=raw_workflows,
     )
+    memory_backend = {
+        "architecture": args.memory_architecture,
+        "workflow_abstraction": args.workflow_abstraction,
+        "workflow_storage": args.workflow_storage,
+        "top_k": args.top_k,
+        "retrieval_candidate_k": args.retrieval_candidate_k,
+    }
+    if isinstance(embedding_index, ProceduralMemoryStore):
+        manifest_path = args.output_dir / "procedural_memory" / "procedural_manifest.json"
+        if manifest_path.exists():
+            memory_backend["procedural_manifest"] = json.loads(manifest_path.read_text())
+        if compressed_snapshot_stats is not None:
+            memory_backend["compressed_snapshot"] = compressed_snapshot_stats
+    else:
+        memory_backend.update(
+            {
+                "embedding_backend": getattr(embedding_index, "backend", None),
+                "embedding_model": getattr(embedding_index, "model_name", None),
+                "workflow_count": len(getattr(embedding_index, "entries", [])),
+            }
+        )
+    runtime_stats = {
+        "tasks": len(records),
+        "steps": sum(len(record.get("steps", [])) for record in records),
+        "mode": args.mode,
+        "model": args.model,
+        "parallel_workers": args.parallel_workers,
+        "reuse_policy": args.reuse_policy,
+        "total_wall_s": time.perf_counter() - run_start,
+        "build_plan_s": build_plan_s,
+        "prediction_s": prediction_s,
+        "rss_start_mb": rss_start_mb,
+        "rss_after_build_mb": rss_after_build_mb,
+        "rss_end_mb": current_rss_mb(),
+        "output_bytes": directory_bytes(args.output_dir),
+        "output_mb": directory_bytes(args.output_dir) / (1024 * 1024),
+        "memory_backend": memory_backend,
+    }
+    save_runtime_stats(args.output_dir, runtime_stats)
     print(json.dumps(percent_payload(compute_metrics(records)), indent=2))
     return 0
 

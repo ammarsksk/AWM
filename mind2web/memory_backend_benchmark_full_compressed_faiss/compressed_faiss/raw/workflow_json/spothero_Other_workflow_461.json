@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 461",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find EV charging supported parking closest to Smithsonian museum on Apr 9 between 9am to 6pm",
+  "steps": [
+    {
+      "action": "TYPE [101] [Smithsonian]",
+      "op": "TYPE",
+      "element": "101",
+      "value": "Smithsonian",
+      "description": "[textbox] Search for parking -> TYPE: Smithsonian",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=101 text search for parking search-input address, place, city or venue /> <button id=432 button> Search </button> </div> <button id=434 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [2088]",
+      "op": "CLICK",
+      "element": "2088",
+      "value": "",
+      "description": "[li] Smithsonian National Air and Space Museum, Indepen... -> CLICK",
+      "role": "li",
+      "label": "Smithsonian National Air and Space Museum, Indepen...",
+      "observation": "<html> <ul> <li id=2088> Smithsonian National Air and Space Museum, Independence Avenue Southwest, Washington, DC, USA </li> <li> Smithsonian National Zoological Park, Connecticut Avenue Northwest, Washington, DC, USA </li> <li id=2417> Smithsonian National Museum of American History, Constitution Avenue Northwest, Washington, DC, USA </li> <li> Smithsonian National Museum of Natural History, Constitution Avenue Northwest, Washington, DC, USA </li> <li id=2421> Smithsonian American Art Museum, 8th Street Northwest, Washington, DC, USA </li> </ul> </html>"
+    }
+  ]
+}

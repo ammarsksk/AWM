@@ -1,0 +1,80 @@
+{
+  "name": "aa / Airlines workflow 138",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Check the status of a flight between San Antonio, Texas, and Bellingham, Washington  on April 8.",
+  "steps": [
+    {
+      "action": "CLICK [129]",
+      "op": "CLICK",
+      "element": "129",
+      "value": "",
+      "description": "[link] Flight status -> CLICK",
+      "role": "link",
+      "label": "Flight status",
+      "observation": "<html> <main main main content> <div> <ul tablist> <li tab> <a id=129> Flight status </a> </li> </ul> <div tabpanel> <form> <div> <label> From <input id=1192 text originairport cmh city or airport /> </label> <label> To <input id=1213 text city or airport /> </label> </div> </form> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [5706] [san antonio]",
+      "op": "TYPE",
+      "element": "5706",
+      "value": "san antonio",
+      "description": "[textbox] From , required. -> TYPE: san antonio",
+      "role": "textbox",
+      "label": "From , required.",
+      "observation": "<html> <main main main content> <div tabpanel> <form> <ul radiogroup> <li> <input radio searchby city true /> <label id=7114> <span> Search by cities </span> <span> Cities </span> </label> </li> </ul> <div> <label> From <span> , required. </span> <input id=5706 text originairport city or airport /> </label> <label> To <span> , required. </span> <input id=7196 text city or airport /> </label> </div> </form> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [11292]",
+      "op": "CLICK",
+      "element": "11292",
+      "value": "",
+      "description": "[a] SAT - San Antonio International, TX -> CLICK",
+      "role": "a",
+      "label": "SAT - San Antonio International, TX",
+      "observation": "<html> <body> <main main main content> <div tabpanel> <form> <ul radiogroup> <li> <input radio searchby city true /> <label id=12699> <span> Search by cities </span> <span> Cities </span> </label> </li> </ul> <label> To <span> , required. </span> <input id=12783 text city or airport /> </label> </form> </div> </main> <a id=11292> SAT - San Antonio International, TX </a> </body> </html>"
+    },
+    {
+      "action": "TYPE [16919] [washington]",
+      "op": "TYPE",
+      "element": "16919",
+      "value": "washington",
+      "description": "[textbox] To , required. -> TYPE: washington",
+      "role": "textbox",
+      "label": "To , required.",
+      "observation": "<html> <main main main content> <div tabpanel> <form> <ul radiogroup> <li> <input radio searchby city true /> <label id=18327> <span> Search by cities </span> <span> Cities </span> </label> </li> </ul> <label> To <span> , required. </span> <input id=16919 text city or airport /> </label> <input id=18465 submit search /> <input/> <input currentcalform /> <a> Create flight status notification </a> </form> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [22506]",
+      "op": "CLICK",
+      "element": "22506",
+      "value": "",
+      "description": "[a] WAS - Washington, DC -> CLICK",
+      "role": "a",
+      "label": "WAS - Washington, DC",
+      "observation": "<html> <body> <main main main content> <div tabpanel> <ul radiogroup> <li> <input radio searchby city true /> <label id=23913> <span> Search by cities </span> <span> Cities </span> </label> </li> </ul> </div> </main> <ul> <a id=22506> WAS - Washington, DC </a> <a id=24624> BLI - Bellingham, WA </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [28139]",
+      "op": "CLICK",
+      "element": "28139",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <main main main content> <div> <ul tablist> <li tab> <a id=29073> Flight status </a> </li> </ul> <div tabpanel> <form> <ul radiogroup> <li> <input radio searchby city true /> <label id=29547> <span> Search by cities </span> <span> Cities </span> </label> </li> </ul> <input id=28139 submit search /> <input/> <input currentcalform /> <a> Create flight status notification </a> </form> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [30972]",
+      "op": "CLICK",
+      "element": "30972",
+      "value": "",
+      "description": "[link] Check status \u00bb for flight, 1957 of American Airlin... -> CLICK",
+      "role": "link",
+      "label": "Check status \u00bb for flight, 1957 of American Airlin...",
+      "observation": "<html> <main main main content> <tbody> <td> <a id=30972> Check status <span> for flight,1957 of American Airlines,1241 of American Airlines,7559 of American Airlines </span> </a> <a> Check status </a> </td> <td> <a id=32296> Check status <span> for flight,1967 of American Airlines,1241 of American Airlines,7559 of American Airlines </span> </a> <a> Check status </a> </td> <td> <a id=32687> Check status <span> for flight,1961 of American Airlines,1241 of American Airlines,7559 of American Airlines </span> </a> <a> Check status </a> </td> </tbody> </main> </html>"
+    }
+  ]
+}

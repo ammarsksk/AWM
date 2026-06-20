@@ -1,0 +1,51 @@
+{
+  "name": "resy / Restaurant workflow 248",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Show the list of restaurants with reservations available for 04/11 with vegetarian food.",
+  "goal_pattern": "Show the list of restaurants with reservations available for 04/11 with vegetarian food.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search restaurants, cuisines, etc.",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Search restaurants, cuisines, etc.",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Vegetarian",
+      "operation": "CLICK",
+      "target_type": "b",
+      "target_description": "Vegetarian",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [89] [vegetarian]",
+      "gold_element_id": "89",
+      "gold_value": "vegetarian"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5041]",
+      "gold_element_id": "5041",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "resy / Restaurant workflow 248"
+}

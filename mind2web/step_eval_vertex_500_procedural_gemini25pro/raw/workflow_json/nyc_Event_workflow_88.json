@@ -1,0 +1,80 @@
+{
+  "name": "nyc / Event workflow 88",
+  "source": "Mind2Web exemplar",
+  "website": "nyc",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "check the lowest price ticket for All star stand up comedy event happen 6pm on the 25th March 2023.",
+  "steps": [
+    {
+      "action": "CLICK [93]",
+      "op": "CLICK",
+      "element": "93",
+      "value": "",
+      "description": "[link] concerts. -> CLICK",
+      "role": "link",
+      "label": "concerts.",
+      "observation": "<html> <body> <a id=93> concerts. </a> <a id=7255> <h3> Make Reservation Now </h3> </a> <a id=8632> concerts. </a> </body> </html>"
+    },
+    {
+      "action": "TYPE [8909] [all star stand up comedy]",
+      "op": "TYPE",
+      "element": "8909",
+      "value": "all star stand up comedy",
+      "description": "[textbox] Search by Name -> TYPE: all star stand up comedy",
+      "role": "textbox",
+      "label": "Search by Name",
+      "observation": "<html> <div> <span> <input text /> <input id=8909 text searchbyname search by name /> </span> <form> <input id=9429 text from /> <input id=9437 text to /> <input url /> <input submit search by date /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [16651]",
+      "op": "CLICK",
+      "element": "16651",
+      "value": "",
+      "description": "[p] All Star Stand Up Comedy -> CLICK",
+      "role": "p",
+      "label": "All Star Stand Up Comedy",
+      "observation": "<html> <span> <input text /> <input id=17143 text searchbyname search by name all star stand up comedy /> <pre id=17144> all star stand up comedy </pre> <p id=16651> All Star Stand Up Comedy </p> </span> </html>"
+    },
+    {
+      "action": "CLICK [22509]",
+      "op": "CLICK",
+      "element": "22509",
+      "value": "",
+      "description": "[link] View Tickets -> CLICK",
+      "role": "link",
+      "label": "View Tickets",
+      "observation": "<html> <div> <form> <input id=21139 text from /> <input id=21147 text to /> <input url /> <input submit search by date /> </form> <li id=22509> <div> <a> View Tickets </a> <div> Mar <strong> 25 </strong> Sat </div> <span> All Star Stand Up Comedy </span> <div> <strong> 6:00 PM </strong> at <span> Broadway Comedy Club </span> </div> <span> View Tickets </span> </div> </li> </div> </html>"
+    },
+    {
+      "action": "CLICK [25425]",
+      "op": "CLICK",
+      "element": "25425",
+      "value": "",
+      "description": "[span] Filters -> CLICK",
+      "role": "span",
+      "label": "Filters",
+      "observation": "<html> <div> <div> <span> Sat </span> <div id=25066> Mar 25, 2023 </div> <span id=25070> 6:00PM </span> </div> <div> <span> Ticket Types </span> <div tablist /> <div id=25425 button> <span> Filters <span> (0) </span> </span> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [28833]",
+      "op": "CLICK",
+      "element": "28833",
+      "value": "",
+      "description": "[listbox] Sort by Price - Low to High -> CLICK",
+      "role": "listbox",
+      "label": "Sort by Price - Low to High",
+      "observation": "<html> <div dialog> <div> <button id=28833 listbox> <span> Price - Low to High </span> </button> <div listbox> <button id=28843 option> Price - Low to High </button> <button id=28848 option> Price - High to Low </button> <button option> Section - Ascending </button> <button option> Section - Descending </button> <button option> Row - Ascending </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30521]",
+      "op": "CLICK",
+      "element": "30521",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <div dialog> <div> <div> <button id=31627 listbox> <span> Price - Low to High </span> </button> <div listbox> <button id=31638 option> Price - Low to High </button> <button option> Price - High to Low </button> <button option> Section - Ascending </button> <button option> Section - Descending </button> </div> </div> <button id=30521> Done </button> </div> </div> </html>"
+    }
+  ]
+}

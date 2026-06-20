@@ -1,0 +1,81 @@
+{
+  "name": "united / Airlines workflow 6",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "llm",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Compare the fare types to book a 1-adult ticket from Springfiels, IL to Austin, TX for April 29th 2023",
+  "goal_pattern": "Enter the departure airport for a flight search.",
+  "applicability": {
+    "when_to_use": "When starting a flight search and needing to specify the departure location.",
+    "when_not_to_use": "When the departure location is already populated or the flight search form is different."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "Enter the name of the departure city to trigger airport suggestions.",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Input field for the departing city, labeled 'From*'.",
+      "value_policy": "Use the city name from the specified departure location.",
+      "selection_rule": "",
+      "success_signal": "A dropdown list of matching airports appears."
+    },
+    {
+      "step": 2,
+      "step_intent": "Select the specific departure airport from the list of suggestions.",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "The airport suggestion button in the dropdown list.",
+      "value_policy": "",
+      "selection_rule": "Choose the button whose label contains the city, state, and airport code matching the specified departure location.",
+      "success_signal": "The 'From' input field is populated with the selected airport."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [127] [SPRINGFIELD]",
+      "gold_element_id": "127",
+      "gold_value": "SPRINGFIELD"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3634]",
+      "gold_element_id": "3634",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "united / Airlines workflow 6",
+  "llm_raw_abstraction": {
+    "name": "united / Airlines workflow 6",
+    "goal_pattern": "Enter the departure airport for a flight search.",
+    "applicability": {
+      "when_to_use": "When starting a flight search and needing to specify the departure location.",
+      "when_not_to_use": "When the departure location is already populated or the flight search form is different."
+    },
+    "steps": [
+      {
+        "step": 1,
+        "step_intent": "Enter the name of the departure city to trigger airport suggestions.",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target_description": "Input field for the departing city, labeled 'From*'.",
+        "value_policy": "Use the city name from the specified departure location.",
+        "selection_rule": "",
+        "success_signal": "A dropdown list of matching airports appears."
+      },
+      {
+        "step": 2,
+        "step_intent": "Select the specific departure airport from the list of suggestions.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target_description": "The airport suggestion button in the dropdown list.",
+        "value_policy": "",
+        "selection_rule": "Choose the button whose label contains the city, state, and airport code matching the specified departure location.",
+        "success_signal": "The 'From' input field is populated with the selected airport."
+      }
+    ]
+  }
+}

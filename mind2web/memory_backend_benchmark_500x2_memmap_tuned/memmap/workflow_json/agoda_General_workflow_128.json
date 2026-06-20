@@ -1,0 +1,51 @@
+{
+  "name": "agoda / General workflow 128",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Look for the highest reviewed for a 4-adults stay in Hollywood, USA, on April 19 to 23 with an option for free cancellation with a price range between 150 to 200 dollars.",
+  "goal_pattern": "Look for the highest reviewed for a 4-adults stay in Hollywood, USA, on April 19 to 23 with an option for free cancellation with a price range between 150 to 200 dollars.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Enter a destination or property",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Enter a destination or property",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Hollywood",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Hollywood",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [117] [HOLLYWOOD]",
+      "gold_element_id": "117",
+      "gold_value": "HOLLYWOOD"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4551]",
+      "gold_element_id": "4551",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "agoda / General workflow 128"
+}

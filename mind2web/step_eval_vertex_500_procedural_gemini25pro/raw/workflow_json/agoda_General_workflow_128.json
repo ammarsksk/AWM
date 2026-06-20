@@ -1,0 +1,130 @@
+{
+  "name": "agoda / General workflow 128",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Look for the highest reviewed for a 4-adults stay in Hollywood, USA, on April 19 to 23 with an option for free cancellation with a price range between 150 to 200 dollars.",
+  "steps": [
+    {
+      "action": "TYPE [117] [HOLLYWOOD]",
+      "op": "TYPE",
+      "element": "117",
+      "value": "HOLLYWOOD",
+      "description": "[combobox] Enter a destination or property -> TYPE: HOLLYWOOD",
+      "role": "combobox",
+      "label": "Enter a destination or property",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=117 combobox text enter a destination or property /> <button id=556> <span> SEARCH </span> </button> </div> </div> <button id=940> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [4551]",
+      "op": "CLICK",
+      "element": "4551",
+      "value": "",
+      "description": "[span] Hollywood -> CLICK",
+      "role": "span",
+      "label": "Hollywood",
+      "observation": "<html> <div> <div tabpanel> <div dialog> <ul listbox> <li option destination hollywood, fort lauderdale (fl)> </li> <li option destination west hollywood, los angeles> </li> <li id=4542 option destination hollywood, los angeles (ca)> <ul> <span> Destination </span> <li id=4551> <span> Hollywood </span> <span los angeles (ca)> Los Angeles (CA) </span> </li> <li area> <span> Area </span> </li> </ul> </li> <li option destination mooretown and hollywood heights,> </li> <li option destination hollywood, ruidoso (nm) (area)> </li> <li option destination hollywood, oxnard (ca) (area)> </li> </ul> </div> </div> <a id=4893> <span> Los Angeles (CA) </span> <span> 3,662 accommodations </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [8182]",
+      "op": "CLICK",
+      "element": "8182",
+      "value": "",
+      "description": "[button] 19 -> CLICK",
+      "role": "button",
+      "label": "19",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div grid> <div rowgroup> <div row> <div gridcell sun mar 19 2023> <span id=8694 button> 19 </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell wed apr 19 2023> <span id=8182 button> 19 </span> </div> <div gridcell sun apr 23 2023> <span id=8873 button> 23 </span> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12803]",
+      "op": "CLICK",
+      "element": "12803",
+      "value": "",
+      "description": "[button] 23 -> CLICK",
+      "role": "button",
+      "label": "23",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div> <span button previous month> </span> <span id=13205 button next month> <svg img /> </span> </div> <div> <div grid> <div rowgroup> <div row> <div gridcell thu mar 23 2023> <span id=13332 button> 23 </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell sun apr 23 2023> <span id=12803 button> 23 </span> </div> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17585]",
+      "op": "CLICK",
+      "element": "17585",
+      "value": "",
+      "description": "[img] Add -> CLICK",
+      "role": "img",
+      "label": "Add",
+      "observation": "<html> <div tabpanel> <div> <div dialog> <div> <div button> <svg id=17563 img add /> </div> <div button> <svg id=17585 img add> </svg> </div> </div> </div> <button id=17191> <span> SEARCH </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21242]",
+      "op": "CLICK",
+      "element": "21242",
+      "value": "",
+      "description": "[img] Add -> CLICK",
+      "role": "img",
+      "label": "Add",
+      "observation": "<html> <div tabpanel> <div> <div dialog> <div> <div button> <svg id=21242 img add /> </div> <div button> <svg id=21672 img add> </svg> </div> </div> </div> <button id=21284> <span> SEARCH </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [25367]",
+      "op": "CLICK",
+      "element": "25367",
+      "value": "",
+      "description": "[i] -> CLICK",
+      "role": "i",
+      "label": "",
+      "observation": "<html> <div tabpanel> <div> <div> <div button> </div> <div button> </div> <div id=25367 button> <div> <div button select number of guests and> <span button> 4 adults </span> </div> <div> 2 rooms </div> </div> </div> <div dialog> <div button> <svg id=25743 img add /> </div> </div> </div> <button id=25373> <span> SEARCH </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [29392]",
+      "op": "CLICK",
+      "element": "29392",
+      "value": "",
+      "description": "[span] SEARCH -> CLICK",
+      "role": "span",
+      "label": "SEARCH",
+      "observation": "<html> <div> <div tabpanel> <div> <div button> <div> <div id=29352 button select number of guests and> <span button> 4 adults </span> </div> <div> 2 rooms </div> </div> </div> <button id=29392> <span> SEARCH </span> </button> </div> </div> <button id=30154> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [31424] [150]",
+      "op": "TYPE",
+      "element": "31424",
+      "value": "150",
+      "description": "[textbox] Minimum price filter -> TYPE: 150",
+      "role": "textbox",
+      "label": "Minimum price filter",
+      "observation": "<html> <div> <div> <span> $ </span> <label> MIN </label> <input id=31424 text minimum price filter 0 /> </div> <div list> <div listitem> <div tablist> <span> Sort </span> <a tab> </a> <a id=33010 tab> <span> Lowest price first </span> </a> <a id=33014 tab> <div> Top reviewed </div> <div> <span> Best rated by: </span> <ul> <li option> <span> All guests </span> </li> <li option> <span> Business travelers </span> </li> <li option> <span> Couples </span> </li> <li option> <span> Solo travelers </span> </li> <li option> <span> Families with young children </span> </li> <li option> <span> Families with teens </span> </li> <li option> <span> Groups </span> </li> </ul> </div> </a> <a tab> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [37586] [200]",
+      "op": "TYPE",
+      "element": "37586",
+      "value": "200",
+      "description": "[textbox] Maximum price filter -> TYPE: 200",
+      "role": "textbox",
+      "label": "Maximum price filter",
+      "observation": "<html> <div> <div> <span> $ </span> <label> MAX </label> <input id=37586 text maximum price filter 3,570 /> </div> <div list> <div listitem> <div tablist> <span> Sort </span> <a tab> </a> <a id=39172 tab> <span> Lowest price first </span> </a> <a id=39176 tab> <div> Top reviewed </div> <div> <span> Best rated by: </span> <ul> <li option> <span> All guests </span> </li> <li option> <span> Business travelers </span> </li> <li option> <span> Couples </span> </li> <li option> <span> Solo travelers </span> </li> <li option> <span> Families with young children </span> </li> <li option> <span> Families with teens </span> </li> <li option> <span> Groups </span> </li> </ul> </div> </a> <a tab> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [43749]",
+      "op": "CLICK",
+      "element": "43749",
+      "value": "",
+      "description": "[checkbox] list-filter-item-label-4 -> CLICK",
+      "role": "checkbox",
+      "label": "list-filter-item-label-4",
+      "observation": "<html> <div> <div group> <span checkbox free cancellation> <span> <input checkbox on /> <span id=43749 checkbox /> </span> </span> </div> <div list> <div listitem> <div tablist> <span> Sort </span> <a id=45330 tab> <span> Best match </span> </a> <a tab> </a> <a id=45338 tab> <div> Top reviewed </div> <div> <span> Best rated by: </span> <ul> <li option> <span> All guests </span> </li> <li option> <span> Business travelers </span> </li> <li option> <span> Couples </span> </li> <li option> <span> Solo travelers </span> </li> <li option> <span> Families with young children </span> </li> <li option> <span> Families with teens </span> </li> <li option> <span> Groups </span> </li> </ul> </div> </a> <a tab> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [49708]",
+      "op": "CLICK",
+      "element": "49708",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div list> <div listitem> <div tablist> <span> Sort </span> <a id=50898 tab> <span> Best match </span> </a> <a tab> </a> <a id=50906 tab> <div> Top reviewed <svg id=49708 /> </div> <div> <span> Best rated by: </span> <ul> <li option> <span> All guests </span> </li> <li option> <span> Business travelers </span> </li> <li option> <span> Couples </span> </li> <li option> <span> Solo travelers </span> </li> <li option> <span> Families with young children </span> </li> <li option> <span> Families with teens </span> </li> <li option> <span> Groups </span> </li> </ul> </div> </a> <a tab> </a> </div> </div> </div> </html>"
+    }
+  ]
+}

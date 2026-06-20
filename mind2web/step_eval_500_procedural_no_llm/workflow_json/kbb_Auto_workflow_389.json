@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "name": "kbb / Auto workflow 389",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find value of 2016 Toyota Camry XLE Sedan 4D in black color with number plate AZXA46.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "specific",
+      "field",
+      "div",
+      "combobox",
+      "black",
+      "plate",
+      "next",
+      "xle",
+      "sedan",
+      "link",
+      "car",
+      "make",
+      "model",
+      "textbox",
+      "span",
+      "license",
+      "kbb",
+      "shopping",
+      "auto",
+      "find",
+      "2016",
+      "toyota",
+      "camry",
+      "color",
+      "number",
+      "azxa46",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "values",
+      "year",
+      "mileage",
+      "your",
+      "options",
+      "generic",
+      "image",
+      "state"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Car Values",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Car Values",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the My Car's Value",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "My Car's Value",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Make/Model",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Make/Model",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "select the Year",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Year",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "select the Make",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Make",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "select the Model",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Model",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "type the Mileage",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Mileage",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Go",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Go",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the XLE Sedan 4D",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "XLE Sedan 4D",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Select Your Options",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Select Your Options",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Black image Black",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Black image Black",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the License Plate",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "License Plate",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "type the License Plate",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "License Plate",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "select the State",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "State",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 19
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 19.0
+  },
+  "raw_workflow_name": "kbb / Auto workflow 389"
+}

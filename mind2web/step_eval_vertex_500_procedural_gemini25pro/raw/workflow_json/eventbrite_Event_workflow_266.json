@@ -1,0 +1,160 @@
+{
+  "name": "eventbrite / Event workflow 266",
+  "source": "Mind2Web exemplar",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Get 2 tickets for a free pet festival in English in Portland on april 15 to april 16",
+  "steps": [
+    {
+      "action": "CLICK [351]",
+      "op": "CLICK",
+      "element": "351",
+      "value": "",
+      "description": "[div] Search for events -> CLICK",
+      "role": "div",
+      "label": "Search for events",
+      "observation": "<html> <div> <button id=351 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <div> <div> <div> Popular in </div> <input id=499 combobox text locationpicker colorado /> </div> <button id=546 button> <span> Charity & Causes </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2060] [pet festival]",
+      "op": "TYPE",
+      "element": "2060",
+      "value": "pet festival",
+      "description": "[textbox] Search events -> TYPE: pet festival",
+      "role": "textbox",
+      "label": "Search events",
+      "observation": "<html> <div> <div> <div> Popular in </div> <input id=2448 combobox text locationpicker colorado /> </div> <div alertdialog> <main> <input id=2060 textbox search search for anything /> <input id=3322 combobox text colorado /> </main> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9484]",
+      "op": "CLICK",
+      "element": "9484",
+      "value": "",
+      "description": "[generic] Run Search -> CLICK",
+      "role": "generic",
+      "label": "Run Search",
+      "observation": "<html> <div alertdialog> <main> <div> <input id=10317 textbox search pet festival /> <button submit> <i run search> <svg id=9484 /> <span> Run Search </span> </i> </button> </div> <div> <a id=10337> <div> <div> Petaluma Music Festival </div> <div> Petaluma Music Festival </div> </div> </a> <div> Sat, Jul 29, 11:30 AM </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [10834]",
+      "op": "CLICK",
+      "element": "10834",
+      "value": "",
+      "description": "[label] -> CLICK",
+      "role": "label",
+      "label": "",
+      "observation": "<html> <div> <span id=11447> Language </span> <label id=11453> <input checkbox en /> <span> English </span> </label> </div> <label id=10834 /> </div> </span> </label> </html>"
+    },
+    {
+      "action": "CLICK [16563]",
+      "op": "CLICK",
+      "element": "16563",
+      "value": "",
+      "description": "[label] -> CLICK",
+      "role": "label",
+      "label": "",
+      "observation": "<html> <div> <span id=17175> Language </span> <label id=17181> <input checkbox en /> <span> English </span> </label> </div> <label id=16563 /> </div> </span> </label> </html>"
+    },
+    {
+      "action": "CLICK [22381]",
+      "op": "CLICK",
+      "element": "22381",
+      "value": "",
+      "description": "[label] -> CLICK",
+      "role": "label",
+      "label": "",
+      "observation": "<html> <div> <span id=22993> Language </span> <div> <a id=23258> <div> <div> Petaluma Music Festival </div> <div> Petaluma Music Festival </div> </div> </a> <div> Sat, Jul 29, 11:30 AM </div> </div> </div> <label id=22381 /> </div> </span> </label> </html>"
+    },
+    {
+      "action": "TYPE [28128] [portland]",
+      "op": "TYPE",
+      "element": "28128",
+      "value": "portland",
+      "description": "[combobox] autocomplete -> TYPE: portland",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <section> <input id=28128 combobox text locationpicker colorado /> <div> <span id=28742> Language </span> <div> <a id=29021> <div> <div> Petaluma Music Festival </div> <div> Petaluma Music Festival </div> </div> </a> <div> Sat, Jul 29, 11:30 AM </div> </div> </div> </section> </html>"
+    },
+    {
+      "action": "CLICK [36494]",
+      "op": "CLICK",
+      "element": "36494",
+      "value": "",
+      "description": "[div] Portland -> CLICK",
+      "role": "div",
+      "label": "Portland",
+      "observation": "<html> <section> <ul menu> <li menuitem> <button id=36494 button> <div> <div> Portland </div> <div> OR </div> </div> </button> </li> <li menuitem> <button id=36502 button> <div> <div> Portland </div> <div> ME </div> </div> </button> </li> </ul> <span id=36779> Language </span> </section> </html>"
+    },
+    {
+      "action": "CLICK [44564]",
+      "op": "CLICK",
+      "element": "44564",
+      "value": "",
+      "description": "[span] Pick a date... -> CLICK",
+      "role": "span",
+      "label": "Pick a date...",
+      "observation": "<html> <div> <div> <label id=44531> <input radio date_desktop today /> <span> Today </span> </label> <label id=44564> <input radio date_desktop custom_date /> <span> Pick a date... </span> </label> </div> <span id=44722> Language </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [52220]",
+      "op": "CLICK",
+      "element": "52220",
+      "value": "",
+      "description": "[button] 15 -> CLICK",
+      "role": "button",
+      "label": "15",
+      "observation": "<html> <div application calendar> <div region> <tbody> <tr> <td id=52826 button> 2 </td> <td button> 3 </td> <td button> 4 </td> <td button> 5 </td> </tr> <tr> <td button> 12 </td> <td button> 13 </td> <td button> 14 </td> <td id=52220 button> 15 </td> </tr> <tr> <td id=52855 button> 16 </td> <td button> 17 </td> <td button> 18 </td> <td button> 19 </td> </tr> </tbody> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [60911]",
+      "op": "CLICK",
+      "element": "60911",
+      "value": "",
+      "description": "[button] 16 -> CLICK",
+      "role": "button",
+      "label": "16",
+      "observation": "<html> <div> <div application calendar> <div region> <div> <tr> <td id=60911 button> 16 </td> <td button> 17 </td> <td button> 18 </td> <td button> 19 </td> </tr> <tr> <td button> 14 </td> <td button> 15 </td> <td id=61625 button> 16 </td> <td button> 17 </td> <td button> 18 </td> <td button> 19 </td> </tr> </div> </div> </div> <span id=61812> Language </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [67876]",
+      "op": "CLICK",
+      "element": "67876",
+      "value": "",
+      "description": "[div] Petaluma Music Festival -> CLICK",
+      "role": "div",
+      "label": "Petaluma Music Festival",
+      "observation": "<html> <div> <div> <label id=67391> <input radio date_desktop today /> <span> Today </span> </label> <span id=67583> Language </span> </div> <div> <a id=67876> <div> <div> Petaluma Music Festival </div> <div> Petaluma Music Festival </div> </div> </a> <div> Sat, Jul 29, 11:30 AM </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [71382]",
+      "op": "CLICK",
+      "element": "71382",
+      "value": "",
+      "description": "[button] Get tickets -> CLICK",
+      "role": "button",
+      "label": "Get tickets",
+      "observation": "<html> <div> <button button> <div> <span> Trigger search event experience </span> <input id=71632 combobox search search events /> </div> </button> <div> <div article> <div> <div> $55 $169 </div> <button id=71382 button> Get tickets </button> </div> </div> <a id=72091> Create Events </a> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [74544] [2]",
+      "op": "SELECT",
+      "element": "74544",
+      "value": "2",
+      "description": "[listbox] Select quantity: General Admission price: $60.00 -> SELECT: 2",
+      "role": "listbox",
+      "label": "Select quantity: General Admission price: $60.00",
+      "observation": "<html> <div dialog checkout petaluma music festival> <div> <ul> <div> <span> 0 </span> <select id=74544 listbox> <option 0 true> 0 </option> <option 1> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> </select> </div> <div> <span> 0 </span> <select id=74606 listbox> <option 0 true> 0 </option> <option 1> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> </select> </div> </ul> <button id=74789 button> Check out </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [76704]",
+      "op": "CLICK",
+      "element": "76704",
+      "value": "",
+      "description": "[button] Check out -> CLICK",
+      "role": "button",
+      "label": "Check out",
+      "observation": "<html> <body> <div article> <div> <div> $55 $169 </div> <button id=77400 button> Get tickets </button> </div> </div> <div dialog checkout petaluma music festival> <div> <div> <span> 2 </span> <select id=77814 listbox> <option 0> 0 </option> <option 1> 1 </option> <option 2 true> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> </select> </div> <button id=76704 button> Check out </button> </div> </div> </body> </html>"
+    }
+  ]
+}

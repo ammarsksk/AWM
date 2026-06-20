@@ -1,0 +1,160 @@
+{
+  "name": "delta / Airlines workflow 30",
+  "source": "Mind2Web exemplar",
+  "website": "delta",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Check for travel requirements when travelling from New York to Tokyo as US citizen.",
+  "steps": [
+    {
+      "action": "CLICK [142]",
+      "op": "CLICK",
+      "element": "142",
+      "value": "",
+      "description": "[tab] Travel Info -> CLICK",
+      "role": "tab",
+      "label": "Travel Info",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=142 tab> Travel Info </a> <a tab> Travel Info </a> </li> </ul> </nav> <div tabpanel> <div region> <form bookwidgetform> <ul listbox> <li option> Round Trip </li> <li id=366 option> One Way </li> <li id=368 option> Multi-City </li> </ul> </form> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [2723]",
+      "op": "CLICK",
+      "element": "2723",
+      "value": "",
+      "description": "[link] Travel Planning Center -> CLICK",
+      "role": "link",
+      "label": "Travel Planning Center",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=2835 tab> Travel Info </a> <div tabpanel> <a id=2723> Travel Planning Center </a> </div> <a tab> Travel Info </a> </li> </ul> </nav> <div tabpanel> <div region> <form bookwidgetform> <ul listbox> <li option> Round Trip </li> <li id=3027 option> One Way </li> <li option> Multi-City </li> </ul> </form> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4085]",
+      "op": "CLICK",
+      "element": "4085",
+      "value": "",
+      "description": "[button] Find Your Destination -> CLICK",
+      "role": "button",
+      "label": "Find Your Destination",
+      "observation": "<html> <div> <nav accessibility services> <a id=4085 button> Find Your Destination </a> </nav> <main main> <div> <a id=5667> Travel Requirements Guide </a> <p> Get an overview of requirements to make sure youve got everything covered before you fly. </p> </div> <div> <a id=5768> U.S. Entry Requirements </a> <p> Review the entry requirements to ensure you have what you need when traveling to or connecting through the U.S. </p> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [11271]",
+      "op": "CLICK",
+      "element": "11271",
+      "value": "",
+      "description": "[link] Explore Destinations & Travel Requirements -> CLICK",
+      "role": "link",
+      "label": "Explore Destinations & Travel Requirements",
+      "observation": "<html> <div> <nav accessibility services> <a id=11271> Explore Destinations & Travel Requirements </a> </nav> <main main> <div> <a id=12840> Travel Requirements Guide </a> <p> Get an overview of requirements to make sure youve got everything covered before you fly. </p> </div> <div> <a> YES </a> <a id=14370> NO </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [14918]",
+      "op": "CLICK",
+      "element": "14918",
+      "value": "",
+      "description": "[combobox] Origin -> CLICK",
+      "role": "combobox",
+      "label": "Origin",
+      "observation": "<html> <main main> <div region> <div> <div combobox city> <input id=14918 combobox text city /> <button id=16002 button <span dropdown /> </div> <div> <label id=16041> <span> Nationality </span> </label> <div combobox national of> </div> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [33955] [New York]",
+      "op": "TYPE",
+      "element": "33955",
+      "value": "New York",
+      "description": "[combobox] Origin -> TYPE: New York",
+      "role": "combobox",
+      "label": "Origin",
+      "observation": "<html> <main main> <div region> <div> <div combobox city> <input id=33955 combobox text city /> <button button <span dropdown /> </div> <ul listbox> <li option> </li> <li option> </li> <li option> </li> <li id=48399 option> <div> <p> Tokyo <span> (HND) </span> </p> <p> Japan </p> </div> </li> <li id=48419 option> <div> <p> Tokyo <span> (NRT) </span> </p> <p> Japan </p> </div> </li> <li option> </li> <li option> </li> <li option> </li> </ul> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [54127]",
+      "op": "CLICK",
+      "element": "54127",
+      "value": "",
+      "description": "[p] New York City -> CLICK",
+      "role": "p",
+      "label": "New York City",
+      "observation": "<html> <main main> <div region> <div> <ul listbox> <li id=54127 option> <div> <p> New York City <span> (JFK) </span> </p> <p> United States of America (USA) </p> </div> </li> <li id=54146 option> <div> <p> New York City <span> (LGA) </span> </p> <p> United States of America (USA) </p> </div> </li> </ul> <div> <label id=54194> <span> Nationality </span> </label> <div combobox national of> </div> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [57484]",
+      "op": "CLICK",
+      "element": "57484",
+      "value": "",
+      "description": "[combobox] Destination -> CLICK",
+      "role": "combobox",
+      "label": "Destination",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=57815 tab> Travel Info </a> <a tab> Travel Info </a> </li> </ul> </nav> <main main> <div region> <div> <div combobox to> <input id=57484 combobox text to everywhere /> <button button <span dropdown /> </div> <div> <label id=58599> <span> Nationality </span> </label> <div combobox national of> </div> <span> Required field </span> </div> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [76530] [Tokyo]",
+      "op": "TYPE",
+      "element": "76530",
+      "value": "Tokyo",
+      "description": "[combobox] Destination -> TYPE: Tokyo",
+      "role": "combobox",
+      "label": "Destination",
+      "observation": "<html> <main main> <div region> <div> <div combobox to> <input id=76530 combobox text to everywhere /> <button button <span dropdown /> </div> <ul listbox> <li option> </li> <li option> </li> <li option> </li> <li id=91008 option> <div> <p> Tokyo <span> (HND) </span> </p> <p> Japan </p> </div> </li> <li id=91028 option> <div> <p> Tokyo <span> (NRT) </span> </p> <p> Japan </p> </div> </li> <li option> </li> <li option> </li> <li option> </li> </ul> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [96739]",
+      "op": "CLICK",
+      "element": "96739",
+      "value": "",
+      "description": "[span] (HND",
+      "role": "span",
+      "label": "(HND",
+      "observation": "<html> <main main> <div region> <div> <ul listbox> <li id=96739 option> <div> <p> Tokyo <span> (HND) </span> </p> <p> Japan </p> </div> </li> <li id=96758 option> <div> <p> Tokyo <span> (NRT) </span> </p> <p> Japan </p> </div> </li> </ul> <div> <label id=96783> <span> Nationality </span> </label> <div combobox national of> </div> <span> Required field </span> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [100091]",
+      "op": "CLICK",
+      "element": "100091",
+      "value": "",
+      "description": "[combobox] Nationality -> CLICK",
+      "role": "combobox",
+      "label": "Nationality",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=100422 tab> Travel Info </a> <a tab> Travel Info </a> </li> </ul> </nav> <main main> <div region> <div> <div navigation> <ul tablist> <li tab button international> </li> <li id=101105 tab button u.s. domestic> <i img /> <span press return to view u.s.> U.S. Domestic </span> </li> </ul> </div> <div combobox national of> <input id=100091 combobox text national of /> <button button <span dropdown /> </div> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [105004]",
+      "op": "CLICK",
+      "element": "105004",
+      "value": "",
+      "description": "[option] United States of America (USA",
+      "role": "option",
+      "label": "United States of America (USA",
+      "observation": "<html> <main main> <div region> <div> <div navigation> <ul tablist> <li tab button international> </li> <li id=106017 tab button u.s. domestic> <i img /> <span press return to view u.s.> U.S. Domestic </span> </li> </ul> </div> <ul listbox> <li id=105004 option> United States of America (USA) </li> <li option> Canada </li> <li option> Afghanistan </li> <li option> Aland Islands </li> <li option> United Arab Emirates </li> <li option> United Kingdom </li> <li option> United States Minor Outlying Islands </li> <li id=106621 option> United States of America (USA) </li> <li option> Uruguay </li> <li option> Uzbekistan </li> <li option> Vanuatu </li> </ul> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [109931]",
+      "op": "CLICK",
+      "element": "109931",
+      "value": "",
+      "description": "[combobox] Vaccination status Vaccination status -> CLICK",
+      "role": "combobox",
+      "label": "Vaccination status Vaccination status",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=110262 tab> Travel Info </a> <a tab> Travel Info </a> </li> </ul> </nav> <main main> <div region> <div> <div combobox to> <input id=111030 combobox text to tokyo (hnd), japan /> <button button <span dropdown /> </div> <div combobox vaccination status> <input id=109931 combobox text vaccination status /> <button button <span status</span> <span tabindex=\"0\" status\" /> </div> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [114353]",
+      "op": "CLICK",
+      "element": "114353",
+      "value": "",
+      "description": "[option] Fully vaccinated -> CLICK",
+      "role": "option",
+      "label": "Fully vaccinated",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=114683 tab> Travel Info </a> <a tab> Travel Info </a> </li> </ul> </nav> <main main> <div region> <div> <div combobox to> <input id=115451 combobox text to tokyo (hnd), japan /> <button button <span dropdown /> </div> <ul listbox> <li id=114353 option> Fully vaccinated </li> <li option> NOT vaccinated / NOT fully vaccinated </li> </ul> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [119964]",
+      "op": "CLICK",
+      "element": "119964",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <nav main> <ul tablist> <li> <a id=119103 tab> Travel Info </a> <a tab> Travel Info </a> </li> </ul> </nav> <main main> <div region> <div> <div combobox to> <input id=119871 combobox text to tokyo (hnd), japan /> <button button <span dropdown /> </div> <button id=119964 search> <span> Search </span> <i img /> </button> </div> </div> </main> </div> </html>"
+    }
+  ]
+}

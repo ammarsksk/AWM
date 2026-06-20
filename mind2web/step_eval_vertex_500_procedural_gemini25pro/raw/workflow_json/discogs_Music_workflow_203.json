@@ -1,0 +1,70 @@
+{
+  "name": "discogs / Music workflow 203",
+  "source": "Mind2Web exemplar",
+  "website": "discogs",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find the address and store hours for the Armageddon Shop record store in Boston.",
+  "steps": [
+    {
+      "action": "CLICK [194]",
+      "op": "CLICK",
+      "element": "194",
+      "value": "",
+      "description": "[button] Community -> CLICK",
+      "role": "button",
+      "label": "Community",
+      "observation": "<html> <body> <nav main> <ul> <button id=313> Explore <i img /> </button> <button id=194> Community <i img /> </button> </ul> </nav> <nav footer> <a id=2368> Record Stores </a> </nav> </body> </html>"
+    },
+    {
+      "action": "CLICK [5641]",
+      "op": "CLICK",
+      "element": "5641",
+      "value": "",
+      "description": "[link] Record Stores -> CLICK",
+      "role": "link",
+      "label": "Record Stores",
+      "observation": "<html> <body> <nav main> <ul> <button id=5760> Explore <i img /> </button> <a id=5641> Record Stores </a> </ul> </nav> <nav footer> <a id=7815> Record Stores </a> </nav> </body> </html>"
+    },
+    {
+      "action": "CLICK [11059]",
+      "op": "CLICK",
+      "element": "11059",
+      "value": "",
+      "description": "[link] Explore the directory -> CLICK",
+      "role": "link",
+      "label": "Explore the directory",
+      "observation": "<html> <div> <nav main> <button id=11311> Explore <i img /> </button> </nav> <nav record stores> <a id=11968> Directory </a> </nav> <div> <h2> Explore the directory </h2> <p> Discogs new independent record directory is much more than just a map. Its a gateway to discovering record stores around </p> <a id=11059> Explore the directory </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [13456] [Boston]",
+      "op": "TYPE",
+      "element": "13456",
+      "value": "Boston",
+      "description": "[searchbox] Refine Location -> TYPE: Boston",
+      "role": "searchbox",
+      "label": "Refine Location",
+      "observation": "<html> <div> <form search search discogs> <input id=13688 combobox text search artists, albums and more... q /> <button id=13692 submit search> <i img /> </button> <input type all /> </form> <div> <button button keyboard shortcuts /> <div region map> </div> <input id=13456 search refine location /> <button button toggle fullscreen view /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17804]",
+      "op": "CLICK",
+      "element": "17804",
+      "value": "",
+      "description": "[span] MA, USA -> CLICK",
+      "role": "span",
+      "label": "MA, USA",
+      "observation": "<html> <div> <div> <span id=19715> Boston </span> <span id=17804> MA, USA </span> </div> <div> <span id=19739> Boston </span> <span> OH, USA </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [22993]",
+      "op": "CLICK",
+      "element": "22993",
+      "value": "",
+      "description": "[button] Armageddon Shop -> CLICK",
+      "role": "button",
+      "label": "Armageddon Shop",
+      "observation": "<html> <div> <form search search discogs> <input combobox text search artists, albums and more... q /> <button id=23228 submit search> <i img /> </button> <input type all /> </form> <ul list> <div> <button id=22993 show store details> Armageddon Shop </button> <div> 12b Eliot Street Cambridge, MA United States </div> <a> Store profile </a> </div> </ul> <nav footer> <a id=25640> Record Stores </a> </nav> </div> </html>"
+    }
+  ]
+}

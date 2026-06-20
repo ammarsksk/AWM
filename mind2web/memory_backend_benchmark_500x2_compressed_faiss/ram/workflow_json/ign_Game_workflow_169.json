@@ -1,0 +1,51 @@
+{
+  "name": "ign / Game workflow 169",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "ign",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "task": "Find a list of all movies that are being released in May 2023",
+  "goal_pattern": "Find a list of all movies that are being released in May 2023",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Reviews",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Reviews",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the HOME",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "HOME",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [156]",
+      "gold_element_id": "156",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [8082]",
+      "gold_element_id": "8082",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "ign / Game workflow 169"
+}

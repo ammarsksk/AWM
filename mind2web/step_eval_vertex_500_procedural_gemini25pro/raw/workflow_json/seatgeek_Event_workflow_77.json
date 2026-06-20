@@ -1,0 +1,60 @@
+{
+  "name": "seatgeek / Event workflow 77",
+  "source": "Mind2Web exemplar",
+  "website": "seatgeek",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Search for all Alternative Concerts taking place in New York City.",
+  "steps": [
+    {
+      "action": "CLICK [2039]",
+      "op": "CLICK",
+      "element": "2039",
+      "value": "",
+      "description": "[button] Change Location -> CLICK",
+      "role": "button",
+      "label": "Change Location",
+      "observation": "<html> <body> <a id=922> Music </a> <button id=2039> <span> Change Location </span> </button> <div group categories> <a id=2078> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [9606] [New York]",
+      "op": "TYPE",
+      "element": "9606",
+      "value": "New York",
+      "description": "[searchbox] Search by city... -> TYPE: New York",
+      "role": "searchbox",
+      "label": "Search by city...",
+      "observation": "<html> <body> <div combobox> <input id=9606 search search by city... /> </div> <div group categories> <a id=11583> <div> <div concerts> <img id=9614 concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [21061]",
+      "op": "CLICK",
+      "element": "21061",
+      "value": "",
+      "description": "[option] New York, NY -> CLICK",
+      "role": "option",
+      "label": "New York, NY",
+      "observation": "<html> <body> <ul listbox> <li id=21061 option> <p> New York, NY </p> </li> <li option> </li> <li option> </li> <li id=21069 option> <p> New York City, NY </p> </li> <li option> </li> <li option> </li> <li option> </li> </ul> <div group categories> <a id=21117> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [25775]",
+      "op": "CLICK",
+      "element": "25775",
+      "value": "",
+      "description": "[img] Concerts -> CLICK",
+      "role": "img",
+      "label": "Concerts",
+      "observation": "<html> <body> <a id=26580> Music </a> <div group categories> <a id=27721> <div> <div concerts> <img id=25775 concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [35337]",
+      "op": "CLICK",
+      "element": "35337",
+      "value": "",
+      "description": "[img] Alternative -> CLICK",
+      "role": "img",
+      "label": "Alternative",
+      "observation": "<html> <div group categories> <li id=37134> <a id=37135> <div> <div alternative> <img id=35337 alternative /> </div> <div> Alternative </div> </div> </a> </li> </div> </html>"
+    }
+  ]
+}

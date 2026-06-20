@@ -1,0 +1,51 @@
+{
+  "name": "ign / Game workflow 631",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "ign",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "task": "Show popular news which is at number one in comics.",
+  "goal_pattern": "Show popular news which is at number one in comics.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the News",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "News",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Comics",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Comics",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [121]",
+      "gold_element_id": "121",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4864]",
+      "gold_element_id": "4864",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "ign / Game workflow 631"
+}

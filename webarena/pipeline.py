@@ -44,19 +44,56 @@ def main():
     workflow_dir.mkdir(exist_ok=True)
     workflow_path = workflow_dir / f"{args.website}.txt"
     workflow_path.touch(exist_ok=True)
+    procedural_memory_path = ROOT / args.procedural_memory_dir
 
     task_ids = load_task_ids(args.website)
     if args.end_index is None:
         args.end_index = len(task_ids)
 
     for tid in task_ids[args.start_index: args.end_index]:
-        run_step([
+        run_cmd = [
             sys.executable, "run.py",
             "--task_name", f"webarena.{tid}",
             "--workflow_path", str(workflow_path.relative_to(ROOT)),
             "--model_name", args.model_name,
             "--headless", str(args.headless),
-        ])
+            "--max_steps", str(args.max_steps),
+            "--llm_retries", str(args.llm_retries),
+            "--pre_observation_delay", str(args.pre_observation_delay),
+            "--extract_obs_retries", str(args.extract_obs_retries),
+        ]
+        if args.memory_architecture == "procedural":
+            run_cmd.extend(
+                [
+                    "--procedural_memory_path",
+                    str(procedural_memory_path),
+                    "--procedural_site",
+                    args.website,
+                    "--procedural_top_k",
+                    str(args.procedural_top_k),
+                    "--procedural_min_score",
+                    str(args.procedural_min_score),
+                ]
+            )
+        run_step(run_cmd + (["--browser_proxy", args.browser_proxy] if args.browser_proxy else []))
+
+        if args.memory_architecture == "procedural":
+            run_step(
+                [
+                    sys.executable,
+                    "procedural_memory.py",
+                    "ingest-result",
+                    "--memory-dir",
+                    str(procedural_memory_path),
+                    "--result-dir",
+                    f"results/webarena.{tid}",
+                    "--config-dir",
+                    "config_files",
+                    "--abstraction-model",
+                    args.procedural_abstraction_model,
+                ]
+            )
+            continue
 
         if args.criteria == "autoeval":
             run_step([
@@ -89,7 +126,11 @@ if __name__ == "__main__":
     )
     parser.add_argument("--start_index", type=int, default=0)
     parser.add_argument("--end_index", type=int, default=None)
-    parser.add_argument("--model_name", type=str, default="openai/gpt-4o")
+    parser.add_argument("--model_name", type=str, default="openai/google/gemini-2.5-pro")
+    parser.add_argument("--max_steps", type=int, default=30)
+    parser.add_argument("--llm_retries", type=int, default=6)
+    parser.add_argument("--pre_observation_delay", type=float, default=1.25)
+    parser.add_argument("--extract_obs_retries", type=int, default=8)
     parser.add_argument(
         "--criteria",
         type=str,
@@ -107,9 +148,20 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_model",
         type=str,
-        default="gpt-4o",
+        default="google/gemini-2.5-pro",
     )
     parser.add_argument("--headless", action="store_true")
+    parser.add_argument("--browser_proxy", type=str, default=None)
+    parser.add_argument(
+        "--memory_architecture",
+        choices=["awm", "procedural"],
+        default="awm",
+        help="awm uses workflow text files; procedural uses SQLite/graph hybrid procedural memory.",
+    )
+    parser.add_argument("--procedural_memory_dir", default="memory/procedural")
+    parser.add_argument("--procedural_top_k", type=int, default=4)
+    parser.add_argument("--procedural_min_score", type=float, default=0.42)
+    parser.add_argument("--procedural_abstraction_model", default="openai/google/gemini-2.5-pro")
     args = parser.parse_args()
 
     main()

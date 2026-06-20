@@ -1,0 +1,30 @@
+{
+  "name": "mbta / Ground workflow 917",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find information about reduced bus fares.",
+  "steps": [
+    {
+      "action": "CLICK [63]",
+      "op": "CLICK",
+      "element": "63",
+      "value": "",
+      "description": "[button] Fares \uf0d7 -> CLICK",
+      "role": "button",
+      "label": "Fares \uf0d7",
+      "observation": "<html> <nav main navigation> <a button> Transit </a> <div modes of transit> <a id=615> <div> Bus </div> </a> </div> <a id=63 button> Fares </a> <div fares info> <a id=711> <div> Reduced Fares </div> </a> </div> <a button> Contact </a> </nav> </html>"
+    },
+    {
+      "action": "CLICK [9022]",
+      "op": "CLICK",
+      "element": "9022",
+      "value": "",
+      "description": "[link] Bus Fares -> CLICK",
+      "role": "link",
+      "label": "Bus Fares",
+      "observation": "<html> <nav main navigation> <a id=8883 button> Transit </a> <div modes of transit> <a id=8906> <div> Bus </div> </a> </div> <a button> Fares </a> <div fares by mode> <a id=9022> <div> Bus Fares </div> </a> </div> </nav> </html>"
+    }
+  ]
+}

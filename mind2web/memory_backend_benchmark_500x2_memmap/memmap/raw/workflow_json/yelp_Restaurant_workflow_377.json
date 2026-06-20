@@ -1,0 +1,30 @@
+{
+  "name": "yelp / Restaurant workflow 377",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Browse the highest rated spas that are $$ dollar signs and under.",
+  "steps": [
+    {
+      "action": "TYPE [156] [spa]",
+      "op": "TYPE",
+      "element": "156",
+      "value": "spa",
+      "description": "[textbox] Find -> TYPE: spa",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div> <div combobox> <input text /> <input id=156 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=297 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> <button id=302 submit search> <span img /> </button> </div> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8651]",
+      "op": "CLICK",
+      "element": "8651",
+      "value": "",
+      "description": "[span] Spa -> CLICK",
+      "role": "span",
+      "label": "Spa",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div combobox> <input text /> <input id=8784 textbox text near columbus, oh address, neighborhood, city, state or /> </div> <button id=8789 submit search> <span img /> </button> </div> </form> </div> </div> <span id=8651 css-qgunke> <text bounding_box_rect= 176,97,25,19>Spa</text> </span> </html>"
+    }
+  ]
+}

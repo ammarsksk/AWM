@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "name": "nyc / Event workflow 90",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "nyc",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "goal_pattern": "search for art galleries in midtown",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "art",
+      "galleries",
+      "midtown",
+      "nyc",
+      "entertainment",
+      "event",
+      "search",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "attractions",
+      "neighborhood"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the attractions.",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "attractions.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Neighborhood",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Neighborhood",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Midtown",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Midtown",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Art Galleries (5",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Art Galleries (5",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "nyc / Event workflow 90"
+}

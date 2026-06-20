@@ -1,0 +1,70 @@
+{
+  "name": "nps.gov / Other workflow 406",
+  "source": "Mind2Web exemplar",
+  "website": "nps.gov",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Locate a park that has a campground and is located in the state of Colorado.",
+  "steps": [
+    {
+      "action": "CLICK [95]",
+      "op": "CLICK",
+      "element": "95",
+      "value": "",
+      "description": "[link] FIND A PARK -> CLICK",
+      "role": "link",
+      "label": "FIND A PARK",
+      "observation": "<html> <body> <form search> <button id=208 button> Search </button> <input sitelimit / /> <input affiliate nps /> </form> <div> <a id=95> Find a Park </a> <button id=435 button find a park by state> By State... </button> <a> See All Parks & Search By Map </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [1585]",
+      "op": "CLICK",
+      "element": "1585",
+      "value": "",
+      "description": "[link] Search by Activity or Topic -> CLICK",
+      "role": "link",
+      "label": "Search by Activity or Topic",
+      "observation": "<html> <body> <form> <div> Plan Your Visit </div> <h1> Find a Park </h1> <label> Park Name </label> <input id=1579 combobox text select a park /> <select findaparkname> </select> <a id=1585> Search by Activity or Topic </a> </form> <div main> <form> Select a State: <select id=3428 state> <option true> None Selected </option> <option al> Alabama </option> <option ak> Alaska </option> <option as> American Samoa </option> <option az> Arizona </option> <option ar> Arkansas </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option dc> District of Columbia </option> <option fl> Florida </option> <option ga> Georgia </option> <option gu> Guam </option> <option hi> Hawaii </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> </select> </form> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [4511] [Colorado]",
+      "op": "SELECT",
+      "element": "4511",
+      "value": "Colorado",
+      "description": "[combobox] By State -> SELECT: Colorado",
+      "role": "combobox",
+      "label": "By State",
+      "observation": "<html> <div> <div> <label id=6272> By State </label> <select id=4511> <option true> State </option> <option al> Alabama </option> <option ak> Alaska </option> <option as> American Samoa </option> <option az> Arizona </option> <option ar> Arkansas </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option dc> District of Columbia </option> <option fl> Florida </option> <option ga> Georgia </option> <option gu> Guam </option> <option hi> Hawaii </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> </select> </div> <button id=4513 button topic> <span> Topic </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [12113]",
+      "op": "CLICK",
+      "element": "12113",
+      "value": "",
+      "description": "[button] Activity -> CLICK",
+      "role": "button",
+      "label": "Activity",
+      "observation": "<html> <div> <span> <select> <option 8> Auto and ATV </option> <option 15> Biking </option> <option 18> Boating </option> <option id=14079 23> Camping </option> <option 30> Canyoneering </option> <option 31> Caving </option> <option 32> Climbing </option> </select> <button id=12113 button activity> <span> Activity </span> </button> </span> <div> <button id=15079 submit> Search </button> <a> Clear Filters </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19715]",
+      "op": "CLICK",
+      "element": "19715",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <button button auto and atv> </button> <button button biking> </button> <button button boating> </button> <button id=21810 button camping> <span> <input id=19715 checkbox 23 /> <label id=21812> Camping </label> </span> </button> <button button canyoneering> </button> <button button caving> </button> <button button climbing> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [27310]",
+      "op": "CLICK",
+      "element": "27310",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div> <button id=27304 button camping> <span> Camping </span> </button> <button button camping> <span> <input checkbox 23 true /> <label id=29407> Camping </label> </span> </button> </div> <div> <button id=27310 submit> Search </button> <a> Clear Filters </a> </div> </div> </html>"
+    }
+  ]
+}

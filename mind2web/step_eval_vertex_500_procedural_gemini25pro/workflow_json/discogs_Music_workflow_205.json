@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "name": "discogs / Music workflow 205",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "discogs",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "goal_pattern": "Buy a pop rock album CD from the United Kingdom that was released in 2016, is between \u00a315 and \u00a320 and in perfect condition.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "album",
+      "pop",
+      "rock",
+      "united",
+      "kingdom",
+      "2016",
+      "condition",
+      "discogs",
+      "entertainment",
+      "music",
+      "buy",
+      "was",
+      "released",
+      "between",
+      "perfect",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "marketplace",
+      "958",
+      "222",
+      "246",
+      "685",
+      "122",
+      "512",
+      "show",
+      "more",
+      "342",
+      "phil",
+      "collins",
+      "both",
+      "sides",
+      "add",
+      "cart",
+      "checkbox",
+      "agree",
+      "sales",
+      "transaction",
+      "policy",
+      "seller",
+      "place"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Marketplace",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Marketplace",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Pop Rock",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Pop Rock",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the 958,222 United Kingdom",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "958,222 United Kingdom",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 246,685 CD",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "246,685 CD",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the 122,512 Album",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "122,512 Album",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Show more\u2026",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Show more\u2026",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the 1,342 2016",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "1,342 2016",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 98 \u00a315 - \u00a320",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "98 \u00a315 - \u00a320",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Condition",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Condition",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Phil Collins - Both Sides (CD, Album, RE + CD + Dl...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Phil Collins - Both Sides (CD, Album, RE + CD + Dl...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Add to Cart",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Add to Cart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the I agree to Sales & Transaction Policy and Seller ...",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "I agree to Sales & Transaction Policy and Seller ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Place order and pay now",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Place order and pay now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 13
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 13.0
+  },
+  "raw_workflow_name": "discogs / Music workflow 205"
+}

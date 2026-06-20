@@ -1,0 +1,60 @@
+{
+  "name": "spothero / Other workflow 460",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "View details for a Times Square parking lot that is wheelchair accessible.",
+  "steps": [
+    {
+      "action": "TYPE [128] [Times Square]",
+      "op": "TYPE",
+      "element": "128",
+      "value": "Times Square",
+      "description": "[textbox] Search for parking -> TYPE: Times Square",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=128 text search for parking search-input address, place, city or venue /> <button id=466 button> Search </button> </div> <button id=468 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [2149]",
+      "op": "CLICK",
+      "element": "2149",
+      "value": "",
+      "description": "[li] Times Square, New York, NY, USA -> CLICK",
+      "role": "li",
+      "label": "Times Square, New York, NY, USA",
+      "observation": "<html> <div> <input id=2479 text search for parking search-input times square address, place, city or venue /> <ul> <li id=2483> Times Square, Manhattan, NY, USA </li> <li> Times Square, Times Square Boulevard, Dublin, OH, USA </li> <li> Times Square Boulevard, Dublin, OH, USA </li> <li id=2149> Times Square, New York, NY, USA </li> <li> Times Square Theater, West 42nd Street, New York, NY, USA </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [4282]",
+      "op": "CLICK",
+      "element": "4282",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <div> <button id=4282 button> Filter </button> <div> <button id=5334 button> Details </button> <button button> Book Now </button> </div> </div> <button id=6112 button> Edit </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [8608]",
+      "op": "CLICK",
+      "element": "8608",
+      "value": "",
+      "description": "[checkbox] Wheelchair Accessible (12",
+      "role": "checkbox",
+      "label": "Wheelchair Accessible (12",
+      "observation": "<html> <body> <button id=9525 button> Filter </button> <div> <input id=8608 checkbox wheelchair on /> <label id=10677> Wheelchair Accessible <span> (12) </span> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [12917]",
+      "op": "CLICK",
+      "element": "12917",
+      "value": "",
+      "description": "[button] Show 12 Results -> CLICK",
+      "role": "button",
+      "label": "Show 12 Results",
+      "observation": "<html> <body> <div> <button id=13813 button> <span> 1 </span> Filter </button> <button id=14551 button> Edit </button> </div> <div> <button id=12917 button> Show 12 Results </button> <button button> Clear All </button> </div> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "instacart / General workflow 47",
+  "source": "Mind2Web exemplar",
+  "website": "instacart",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Add 2 different flavor dog treats and one dog food with lowest price to cart from Safeway.",
+  "steps": [
+    {
+      "action": "TYPE [171] [dog treats]",
+      "op": "TYPE",
+      "element": "171",
+      "value": "dog treats",
+      "description": "[textbox] Search -> TYPE: dog treats",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <div> <div search products, stores, and recipes> <form search> <p> Begin typing in the search field, and the app will offer suggestions. Use the arrow keys to navigate to a </p> <p> 3 entries </p> <input id=171 search search products, stores, and recipes /> <button submit search /> </form> </div> <div main> <div> <li> <img id=153 safeway /> <div> +5 </div> </li> <button id=475> Show more </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [2252]",
+      "op": "CLICK",
+      "element": "2252",
+      "value": "",
+      "description": "[span] dog treats -> CLICK",
+      "role": "span",
+      "label": "dog treats",
+      "observation": "<html> <div> <div search products, stores, and recipes> <ul listbox search> <li group> <ul listbox search> <li option> <a id=2252 dog treats> <img id=2130 dog treats /> <span> dog treats </span> </a> </li> </ul> </li> </ul> </div> <div main> <button id=2514> Show more </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4627]",
+      "op": "CLICK",
+      "element": "4627",
+      "value": "",
+      "description": "[span] View all 20+ items -> CLICK",
+      "role": "span",
+      "label": "View all 20+ items",
+      "observation": "<html> <div> <div> <div search products, stores, and recipes> </div> <div button> </div> <button id=4595 view cart. items in cart:> <span> 0 </span> </button> </div> <div main> <div> <h1> Results for dog treats </h1> <div> <a id=4627> <div> <span safeway show all 25 items> Safeway </span> <span> Delivery by 10:20pm </span> <div> <span> 4.7 (767K+) </span> <span> Accepts EBT </span> </div> </div> <span> View all 20+ items </span> </a> <div region item carousel> </div> </div> <button id=5642> <span> Load More </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8416]",
+      "op": "CLICK",
+      "element": "8416",
+      "value": "",
+      "description": "[span] Best match -> CLICK",
+      "role": "span",
+      "label": "Best match",
+      "observation": "<html> <div> <button id=8416 combobox> <div> <span> Sort by </span> <span> Best match </span> </div> </button> <div group product> <div button> <button id=7720 add 1 item purina beggin'> <span> Add </span> </button> </div> </div> <div group product> <div button> <button id=9244 add 1 item purina beggin'> <span> Add </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [13204]",
+      "op": "CLICK",
+      "element": "13204",
+      "value": "",
+      "description": "[option] Price: lowest first -> CLICK",
+      "role": "option",
+      "label": "Price: lowest first",
+      "observation": "<html> <div> <div> <button id=13924 combobox> <div> <span> Sort by </span> <span> Best match </span> </div> </button> <ul listbox> <li option> Best match </li> <li id=13204 option> Price: lowest first </li> <li option> Price: highest first </li> </ul> </div> <div group product> <div button> <button id=13228 add 1 item purina beggin'> <span> Add </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18325]",
+      "op": "CLICK",
+      "element": "18325",
+      "value": "",
+      "description": "[span] Add -> CLICK",
+      "role": "span",
+      "label": "Add",
+      "observation": "<html> <div> <button id=18251 combobox> <div> <span> Sort by </span> <span> Price: lowest first </span> </div> </button> <div group product> <div button> <button id=18325 add 1 item purina beggin'> <span> Add </span> </button> </div> </div> <button id=19839> <span> Load more </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [24285]",
+      "op": "CLICK",
+      "element": "24285",
+      "value": "",
+      "description": "[span] Add -> CLICK",
+      "role": "span",
+      "label": "Add",
+      "observation": "<html> <div> <div group product> <div button> <button id=24199 add 1 item milk-bone dog> <span> Add </span> </button> </div> </div> <div group product> <div button> <button id=24285 add 1 item open nature> <span> Add </span> </button> </div> </div> <button id=25661> <span> Load more </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [31475]",
+      "op": "CLICK",
+      "element": "31475",
+      "value": "",
+      "description": "[button] Load more -> CLICK",
+      "role": "button",
+      "label": "Load more",
+      "observation": "<html> <div> <div group product> <div button> <button id=30020 add 1 item milk-bone dog> <span> Add </span> </button> </div> </div> <div group product> <div button> <button id=30196 add 1 item open nature> <span> Add </span> </button> </div> </div> <button id=31475> <span> Load more </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [39505]",
+      "op": "CLICK",
+      "element": "39505",
+      "value": "",
+      "description": "[span] Add to cart -> CLICK",
+      "role": "span",
+      "label": "Add to cart",
+      "observation": "<html> <div> <button id=37238 combobox> <div> <span> Sort by </span> <span> Price: lowest first </span> </div> </button> <div group product> <div button> <button id=37372 add 1 item milk-bone dog> <span> Add </span> </button> </div> </div> <div group product> <div button> <button id=39505 add 1 item dogsters ice> <span> Add to cart </span> </button> </div> </div> </div> </html>"
+    }
+  ]
+}

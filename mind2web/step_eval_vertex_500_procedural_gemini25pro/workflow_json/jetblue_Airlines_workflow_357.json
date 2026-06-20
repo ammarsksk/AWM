@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "name": "jetblue / Airlines workflow 357",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Show route map and flight cost from Los Angeles to Miami on 12 April.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "div",
+      "textbox",
+      "route",
+      "map",
+      "los",
+      "angeles",
+      "miami",
+      "area",
+      "specific",
+      "field",
+      "flights",
+      "234",
+      "jetblue",
+      "travel",
+      "airlines",
+      "show",
+      "flight",
+      "cost",
+      "april",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "link",
+      "option",
+      "mint",
+      "explore",
+      "span",
+      "total",
+      "traveler",
+      "see"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the [div] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "[div] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Route Map",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Route Map",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the From",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "From",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Los Angeles",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Los Angeles",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Mint. Miami area",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Mint. Miami area",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Explore flights",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Explore flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the 234",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "234",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Total: $234.00 1 traveler See Flights",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Total: $234.00 1 traveler See Flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "jetblue / Airlines workflow 357"
+}

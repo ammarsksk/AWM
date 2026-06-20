@@ -1,0 +1,50 @@
+{
+  "name": "soundcloud / Music workflow 69",
+  "source": "Mind2Web exemplar",
+  "website": "soundcloud",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Delete the history of what i heard recently.",
+  "steps": [
+    {
+      "action": "CLICK [268]",
+      "op": "CLICK",
+      "element": "268",
+      "value": "",
+      "description": "[link] Library -> CLICK",
+      "role": "link",
+      "label": "Library",
+      "observation": "<html> <header banner> <div> <nav navigation> <a id=268> Library </a> </nav> <div search> <form> <input id=578 search q /> <button id=195 submit> Search </button> </form> </div> </div> </header> </html>"
+    },
+    {
+      "action": "CLICK [16471]",
+      "op": "CLICK",
+      "element": "16471",
+      "value": "",
+      "description": "[link] History -> CLICK",
+      "role": "link",
+      "label": "History",
+      "observation": "<html> <div> <header banner> <div search> <form> <input id=16800 search q /> <button id=16440 submit> Search </button> </form> </div> </header> <div main> <a id=16471> History </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20547]",
+      "op": "CLICK",
+      "element": "20547",
+      "value": "",
+      "description": "[button] Clear all history -> CLICK",
+      "role": "button",
+      "label": "Clear all history",
+      "observation": "<html> <div> <header banner> <div search> <form> <input id=20903 search q /> <button id=20516 submit> Search </button> </form> </div> </header> <div main> <div> <h2> Recently played: </h2> <button id=20547 button clear all history> Clear all history </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [25157]",
+      "op": "CLICK",
+      "element": "25157",
+      "value": "",
+      "description": "[button] Clear my history -> CLICK",
+      "role": "button",
+      "label": "Clear my history",
+      "observation": "<html> <body> <div> <header banner> <div search> <form> <input id=25507 search q /> <button submit> Search </button> </form> </div> </header> <div main> <div> <h2> Recently played: </h2> <button id=25676 button clear all history> Clear all history </button> </div> </div> </div> <div> <button id=25157 submit> Clear my history </button> <button reset> Cancel </button> </div> </body> </html>"
+    }
+  ]
+}

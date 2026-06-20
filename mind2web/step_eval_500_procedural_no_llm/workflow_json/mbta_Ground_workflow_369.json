@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "name": "mbta / Ground workflow 369",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Plan a trip from Braintree to Boston Airport on April 14, 12 pm, and see the fair calculator.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "combobox",
+      "specific",
+      "field",
+      "trip",
+      "april",
+      "braintree",
+      "boston",
+      "calculator",
+      "get",
+      "suggestions",
+      "2023",
+      "mbta",
+      "travel",
+      "ground",
+      "plan",
+      "airport",
+      "see",
+      "fair",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "planner",
+      "link",
+      "red",
+      "line",
+      "bus",
+      "commuter",
+      "rail",
+      "zone",
+      "span",
+      "depart",
+      "labeltext",
+      "monday",
+      "press",
+      "enter",
+      "gridcell",
+      "friday",
+      "hour",
+      "minute",
+      "show",
+      "fare"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Trip Planner",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Trip Planner",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the T red line bus commuter rail Zone 2 Braintree",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "T red line bus commuter rail Zone 2 Braintree",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Boston",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Boston",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Get trip suggestions",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Get trip suggestions",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Depart at 8:40 AM, 4/10/23 \uf107",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Depart at 8:40 AM, 4/10/23 \uf107",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Monday, April 10, 2023, click or press the enter o...",
+        "operation": "CLICK",
+        "target_type": "LabelText",
+        "target": "Monday, April 10, 2023, click or press the enter o...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Friday, April 14, 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Friday, April 14, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "type the Hour",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Hour",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "type the Minute",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Minute",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "select the AM or PM",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "AM or PM",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Get trip suggestions",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Get trip suggestions",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Show fare calculator \uf107",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show fare calculator \uf107",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 14
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 14.0
+  },
+  "raw_workflow_name": "mbta / Ground workflow 369"
+}

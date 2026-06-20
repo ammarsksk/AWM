@@ -1,0 +1,240 @@
+{
+  "name": "cargurus / Auto workflow 140",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "find offer for a black Honda with vin number 1HGCM66543A064159 with 155000 millage near 49102. The car should be in good condition with no damage, 2+ keys and paid off.",
+  "steps": [
+    {
+      "action": "CLICK [102]",
+      "op": "CLICK",
+      "element": "102",
+      "value": "",
+      "description": "[label] VIN -> CLICK",
+      "role": "label",
+      "label": "VIN",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=275 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <section> <section> <input radio smc tab vin /> <label id=102> VIN </label> </section> <label> <div> Enter license plate </div> <input id=953 text (ex.) c4r 6uru /> </label> </section> </body> </html>"
+    },
+    {
+      "action": "TYPE [15746] [1HGCM66543A064159]",
+      "op": "TYPE",
+      "element": "15746",
+      "value": "1HGCM66543A064159",
+      "description": "[textbox] Enter VIN (17 digits",
+      "role": "textbox",
+      "label": "Enter VIN (17 digits",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=15907 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <fieldset> <label> <div> Enter VIN (17 digits) </div> <input id=15746 text (ex.) /> <div> Where can I find the VIN </div> </label> <button id=16759 submit> Get your offer </button> </fieldset> </body> </html>"
+    },
+    {
+      "action": "CLICK [31400]",
+      "op": "CLICK",
+      "element": "31400",
+      "value": "",
+      "description": "[button] Get your offer -> CLICK",
+      "role": "button",
+      "label": "Get your offer",
+      "observation": "<html> <div> <input radio sell my car on true /> <fieldset> <label> <div> Enter VIN (17 digits) </div> <input id=32239 text (ex.) /> <div> Where can I find the VIN </div> </label> <button id=31400 submit> Get your offer </button> </fieldset> <input id=32451 radio buy used on /> <input radio buy new on /> </div> </html>"
+    },
+    {
+      "action": "TYPE [40640] [49102]",
+      "op": "TYPE",
+      "element": "40640",
+      "value": "49102",
+      "description": "[textbox] ZIP Code -> TYPE: 49102",
+      "role": "textbox",
+      "label": "ZIP Code",
+      "observation": "<html> <main main> <div> <form> <input id=40640 text zip code e.g. 02115 /> <button id=41426 submit> <div> Next </div> </button> </form> <button id=42294 submit> <div> Get my offer </div> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [46044]",
+      "op": "CLICK",
+      "element": "46044",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <main main> <div> <form> <input id=46042 text zip code 49102 e.g. 02115 /> <button id=46044 submit> <div> Next </div> </button> </form> <button id=46910 submit> <div> Get my offer </div> </button> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [49831] [155000]",
+      "op": "TYPE",
+      "element": "49831",
+      "value": "155000",
+      "description": "[textbox] Mileage -> TYPE: 155000",
+      "role": "textbox",
+      "label": "Mileage",
+      "observation": "<html> <main main> <form> <div> <select id=50628 make> <option> Select Make </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6 true> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <svg img /> </div> <input id=49831 mileage current mileage /> <button id=51448 submit> <div> Next </div> </button> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [56195]",
+      "op": "CLICK",
+      "element": "56195",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <main main> <form> <div> <select id=55374 make> <option> Select Make </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6 true> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <svg img /> </div> <div> <select id=56170 engine-select> <option> Select Engine </option> <option 757 true> 3.0L 240 hp V6 </option> </select> <svg img /> </div> <button id=56195 submit> <div> Next </div> </button> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [59298]",
+      "op": "CLICK",
+      "element": "59298",
+      "value": "",
+      "description": "[span] Black -> CLICK",
+      "role": "span",
+      "label": "Black",
+      "observation": "<html> <main main> <div> <form> <fieldset> <h3> Select your exterior color </h3> <label id=59298> <span> <input radio exteriorcolor black /> Black </span> </label> </fieldset> <button id=59396 submit> <div> Next </div> </button> </form> <button id=59583 submit> <div> Get my offer </div> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [62829]",
+      "op": "CLICK",
+      "element": "62829",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=62068 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <main main> <div> <button id=62829 submit> <div> Next </div> </button> <button id=63015 submit> <div> Get my offer </div> </button> </div> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [65281]",
+      "op": "CLICK",
+      "element": "65281",
+      "value": "",
+      "description": "[button] None -> CLICK",
+      "role": "button",
+      "label": "None",
+      "observation": "<html> <main main> <form> <div> <label id=66094 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> <label id=65281 button> None </label> <input radio on /> </div> <div radiogroup> <button id=66245 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "SELECT [68529] [Good]",
+      "op": "SELECT",
+      "element": "68529",
+      "value": "Good",
+      "description": "[combobox] CONDITION -> SELECT: Good",
+      "role": "combobox",
+      "label": "CONDITION",
+      "observation": "<html> <main main> <form> <div> <label id=69343 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <select id=68529 condition> <option true> Please select an option </option> <option amazing> Amazing </option> <option good> Good </option> <option rough> Rough </option> </select> <svg img /> </div> <div radiogroup> <button id=69494 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "SELECT [71761] [Good To Go]",
+      "op": "SELECT",
+      "element": "71761",
+      "value": "Good To Go",
+      "description": "[combobox] TIRE_CONDITION -> SELECT: Good To Go",
+      "role": "combobox",
+      "label": "TIRE_CONDITION",
+      "observation": "<html> <main main> <form> <div> <label id=72575 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <select id=71761 tire_condition> <option true> Please select an option </option> <option good to go> Good To Go </option> <option mismatched> Mismatched </option> <option needs replacement> Needs Replacement </option> </select> <svg img /> </div> <div> <label button> 1 </label> <input radio on /> <label id=72722 button> 2+ </label> <input radio on /> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [75004]",
+      "op": "CLICK",
+      "element": "75004",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=75817 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=75004 button> No </label> <input radio on /> </div> <h5> What's the ownership status of your vehicle? </h5> <div radiogroup> </div> <button id=75982 submit> <div> Next </div> </button> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [78262]",
+      "op": "CLICK",
+      "element": "78262",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=79075 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=78262 button> No </label> <input radio on /> </div> <div radiogroup> <button id=79230 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [81526]",
+      "op": "CLICK",
+      "element": "81526",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=82339 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=81526 button> No </label> <input radio on /> </div> <div radiogroup> <button id=82494 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [84786]",
+      "op": "CLICK",
+      "element": "84786",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=85599 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=84786 button> No </label> <input radio on /> </div> <div radiogroup> <button id=85754 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [88050]",
+      "op": "CLICK",
+      "element": "88050",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=88863 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=88050 button> No </label> <input radio on /> </div> <div radiogroup> <button id=89018 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [91314]",
+      "op": "CLICK",
+      "element": "91314",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=92127 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=91314 button> No </label> <input radio on /> </div> <div radiogroup> <button id=92282 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [94568]",
+      "op": "CLICK",
+      "element": "94568",
+      "value": "",
+      "description": "[button] No -> CLICK",
+      "role": "button",
+      "label": "No",
+      "observation": "<html> <main main> <form> <div> <label id=95381 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> Yes </label> <input radio on /> <label id=94568 button> No </label> <input radio on /> </div> <div radiogroup> <button id=95536 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [97822]",
+      "op": "CLICK",
+      "element": "97822",
+      "value": "",
+      "description": "[button] 2+ -> CLICK",
+      "role": "button",
+      "label": "2+",
+      "observation": "<html> <main main> <form> <div> <label id=98638 button> 2+ </label> <input radio on /> <label button> 1 </label> <input radio on /> </div> <div> <label button> 1 </label> <input radio on /> <label id=97822 button> 2+ </label> <input radio on /> </div> <div radiogroup> <button id=98793 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [102021]",
+      "op": "CLICK",
+      "element": "102021",
+      "value": "",
+      "description": "[radio] Owned -> CLICK",
+      "role": "radio",
+      "label": "Owned",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=101192 menuitem> <span> Buy </span> </button> <div menu> </div> </li> <li> <button id=101267 menuitem> <span> Sell </span> </button> <div menu> </div> </li> </ul> </nav> <main main> <form> <div radiogroup> <button id=102021 radio button> <div> Owned </div> </button> <button radio button> </button> <button radio button> </button> </div> </form> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [105288]",
+      "op": "CLICK",
+      "element": "105288",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=104449 menuitem> <span> Buy </span> </button> <div menu> </div> </li> <li> <button id=104524 menuitem> <span> Sell </span> </button> <div menu> </div> </li> </ul> </nav> <main main> <form> <h5> What's the ownership status of your vehicle? </h5> <div radiogroup> </div> <button id=105288 submit> <div> Next </div> </button> </form> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [113994]",
+      "op": "CLICK",
+      "element": "113994",
+      "value": "",
+      "description": "[button] Get my offer -> CLICK",
+      "role": "button",
+      "label": "Get my offer",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=113318 menuitem> <span> Buy </span> </button> <div menu> </div> </li> <li> <button id=113393 menuitem> <span> Sell </span> </button> <div menu> </div> </li> </ul> </nav> <main main> <button id=113994 submit> <div> Get my offer </div> </button> </main> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "carnival / Other workflow 316",
+  "source": "Mind2Web exemplar",
+  "website": "carnival",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show me all my offers for 2-5 day cruises",
+  "steps": [
+    {
+      "action": "CLICK [718]",
+      "op": "CLICK",
+      "element": "718",
+      "value": "",
+      "description": "[button] Plan -> HOVER",
+      "role": "button",
+      "label": "Plan",
+      "observation": "<html> <body> <nav main menu> <div> <a id=718 button plan> <span> Plan </span> </a> <a plan> Plan </a> <button> Plan </button> </div> </nav> <div main> <a id=1224 button> <span> SEARCH CRUISES </span> </a> <a id=1796> <span> EXPLORE AUSTRALIA CRUISES </span> <span> Sail from Sydney or Brisbane for Aussie adventures or to exotic South Pacific Islands. </span> <span> LEARN MORE </span> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [5725]",
+      "op": "CLICK",
+      "element": "5725",
+      "value": "",
+      "description": "[use] -> CLICK",
+      "role": "use",
+      "label": "",
+      "observation": "<html> <div main> <a id=6814 button> <span> SEARCH CRUISES </span> </a> <a id=7386> <span> EXPLORE AUSTRALIA CRUISES </span> <span> Sail from Sydney or Brisbane for Aussie adventures or to exotic South Pacific Islands. </span> <span> LEARN MORE </span> </a> </div> <use id=5725 /> </html>"
+    },
+    {
+      "action": "SELECT [8559] [2 - 5 Days]",
+      "op": "SELECT",
+      "element": "8559",
+      "value": "2 - 5 Days",
+      "description": "[select] DURATION -> SELECT: 2 - 5 Days",
+      "role": "select",
+      "label": "DURATION",
+      "observation": "<html> <div> <a id=9461> All Offers (8) </a> <div> <select id=8559> <option true> DURATION </option> <option d1> 2 - 5 Days </option> <option d2> 6 - 9 Days </option> <option d3> 10+ Days </option> </select> <button id=10086> Filter Results </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [14188]",
+      "op": "CLICK",
+      "element": "14188",
+      "value": "",
+      "description": "[button] Filter Results -> CLICK",
+      "role": "button",
+      "label": "Filter Results",
+      "observation": "<html> <div> <div> <div> <input vifp club # 9016467685 /> <button id=15092> Show My Deals </button> </div> <a id=15099> All Offers (8) </a> </div> <button id=14188> Filter Results </button> </div> </html>"
+    }
+  ]
+}

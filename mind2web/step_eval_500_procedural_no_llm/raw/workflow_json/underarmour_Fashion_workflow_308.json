@@ -1,0 +1,120 @@
+{
+  "name": "underarmour / Fashion workflow 308",
+  "source": "Mind2Web exemplar",
+  "website": "underarmour",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "task": "Shop for UA outlet clothing and find a outdoor sports jacket in size ymd.",
+  "steps": [
+    {
+      "action": "CLICK [4992]",
+      "op": "CLICK",
+      "element": "4992",
+      "value": "",
+      "description": "[menuitem] Outlet -> CLICK",
+      "role": "menuitem",
+      "label": "Outlet",
+      "observation": "<html> <ul menubar> <li> <a id=2586 menuitem> <span> Women </span> </a> <div women> </div> </li> <li> <a id=3567 menuitem> <span> Kids </span> </a> <div kids> </div> </li> <li> <a id=4992 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [8358]",
+      "op": "CLICK",
+      "element": "8358",
+      "value": "",
+      "description": "[link] Girls -> CLICK",
+      "role": "link",
+      "label": "Girls",
+      "observation": "<html> <div> <ul menubar> <li> <a id=10810 menuitem> <span> Women </span> </a> <div women> </div> </li> </ul> <main main> <div> <a id=8358> Girls </a> <div id=14872> Size </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [24691]",
+      "op": "CLICK",
+      "element": "24691",
+      "value": "",
+      "description": "[link] Jackets -> CLICK",
+      "role": "link",
+      "label": "Jackets",
+      "observation": "<html> <main main> <div> <a id=24691> Jackets </a> <div> <div id=30866> Sports </div> <div id=31075> Size </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [39418]",
+      "op": "CLICK",
+      "element": "39418",
+      "value": "",
+      "description": "[div] Product Category -> CLICK",
+      "role": "div",
+      "label": "Product Category",
+      "observation": "<html> <main main> <div> <div> <div id=39418> Product Category </div> <a refine by product category: clothing> Clothing </a> </div> <div> <div id=45418> Product Type </div> <a refine by product type: jackets> Jackets </a> </div> <div id=45556> Size </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [57768]",
+      "op": "CLICK",
+      "element": "57768",
+      "value": "",
+      "description": "[link] Clothing -> CLICK",
+      "role": "link",
+      "label": "Clothing",
+      "observation": "<html> <main main> <div> <a id=57768 refine by product category: clothing> Clothing </a> <div> <div id=63792> Product Type </div> <a refine by product type: jackets> Jackets </a> </div> <div id=63930> Size </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [76152]",
+      "op": "CLICK",
+      "element": "76152",
+      "value": "",
+      "description": "[div] Product Type -> CLICK",
+      "role": "div",
+      "label": "Product Type",
+      "observation": "<html> <div> <ul menubar> <li> <a id=81008 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <div> <div id=76152> Product Type </div> <a refine by product type: jackets> Jackets </a> </div> <div id=82312> Size </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [92914]",
+      "op": "CLICK",
+      "element": "92914",
+      "value": "",
+      "description": "[link] Jackets -> CLICK",
+      "role": "link",
+      "label": "Jackets",
+      "observation": "<html> <main main> <div> <a id=98801> Jackets </a> <div> <a id=92914 refine by product type: jackets> Jackets </a> <a id=99299 currently refined by silhouette: outerwear> Outerwear </a> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [109697]",
+      "op": "CLICK",
+      "element": "109697",
+      "value": "",
+      "description": "[div] Sports -> CLICK",
+      "role": "div",
+      "label": "Sports",
+      "observation": "<html> <div> <ul menubar> <li> <a id=114576 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <div id=109697> Sports </div> <div id=115902> Size </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [126445]",
+      "op": "CLICK",
+      "element": "126445",
+      "value": "",
+      "description": "[link] Outdoor -> CLICK",
+      "role": "link",
+      "label": "Outdoor",
+      "observation": "<html> <main main> <div> <a id=126445 refine by sports: outdoor> Outdoor </a> <div id=132652> Size </div> <a id=132839 currently refined by silhouette: outerwear> Outerwear </a> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [143217]",
+      "op": "CLICK",
+      "element": "143217",
+      "value": "",
+      "description": "[div] Size -> CLICK",
+      "role": "div",
+      "label": "Size",
+      "observation": "<html> <div> <ul menubar> <li> <a id=146647 menuitem> <span> Kids </span> </a> <div kids> </div> </li> <li> <a id=148072 menuitem> <span> Outlet </span> </a> <div outlet> </div> </li> </ul> <main main> <div> <div id=143217> Size </div> <a refine by size: ymd> YMD </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [157732]",
+      "op": "CLICK",
+      "element": "157732",
+      "value": "",
+      "description": "[link] YMD -> CLICK",
+      "role": "link",
+      "label": "YMD",
+      "observation": "<html> <div> <ul menubar> <li> <a id=161178 menuitem> <span> Kids </span> </a> <div kids> </div> </li> </ul> <main main> <div> <a id=163823 currently refined by product type:> Jackets </a> <a id=157732 refine by size: ymd> YMD </a> </div> </main> </div> </html>"
+    }
+  ]
+}

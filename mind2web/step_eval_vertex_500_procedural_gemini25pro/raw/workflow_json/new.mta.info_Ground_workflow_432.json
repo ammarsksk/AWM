@@ -1,0 +1,50 @@
+{
+  "name": "new.mta.info / Ground workflow 432",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "download pdf for list of accessible station in NYC.",
+  "steps": [
+    {
+      "action": "CLICK [342]",
+      "op": "CLICK",
+      "element": "342",
+      "value": "",
+      "description": "[span] Menu -> CLICK",
+      "role": "span",
+      "label": "Menu",
+      "observation": "<html> <div> <section navigation> <div> <input checkbox on /> <label id=342> <span> Menu </span> </label> <div region main menu region> </div> </div> </section> <div main> <aside complementary> <div region> <div> <label> To </label> <input id=747 search address, station, landmark /> </div> </div> </aside> </div> <div main> <a id=2215> <span> <span> Accessibility </span> <span> Paratransit, reduced fares, travel training, and more </span> </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [5942]",
+      "op": "CLICK",
+      "element": "5942",
+      "value": "",
+      "description": "[link] Accessibility -> CLICK",
+      "role": "link",
+      "label": "Accessibility",
+      "observation": "<html> <div> <section navigation> <div region main menu region> <a id=5942> Accessibility </a> </div> </section> <div main> <aside complementary> <div region> <div> <label> To </label> <input id=6577 search address, station, landmark /> </div> </div> </aside> </div> <div main> <a id=8045> <span> <span> Accessibility </span> <span> Paratransit, reduced fares, travel training, and more </span> </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9534]",
+      "op": "CLICK",
+      "element": "9534",
+      "value": "",
+      "description": "[div] List of Accessible Stations -> CLICK",
+      "role": "div",
+      "label": "List of Accessible Stations",
+      "observation": "<html> <div main> <article article> <div> <div> <a button> </a> <a id=9534 button> <div> List of Accessible Stations </div> </a> <a button> </a> <a button> </a> </div> <a id=9789> <span> Download Accessible Subways and Bus Travel Guide </span> </a> <p> Reduced fares are available for MTA subway, bus, and rail customers who are 65 or older or who have qualifying <a id=9885> Find out more about how and if you qualify </a> . </p> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [10999]",
+      "op": "CLICK",
+      "element": "10999",
+      "value": "",
+      "description": "[link] Download a PDF short list of accessible stations. -> CLICK",
+      "role": "link",
+      "label": "Download a PDF short list of accessible stations.",
+      "observation": "<html> <div main> <article article> <div> <p> <a id=10999> Download a PDF short list of accessible stations. </a> Continue scrolling for an expanded list including the location of the street elevator(s) or ramp entrance of each station, as </p> <p> Each of the following stations has ramp and/or elevator access. Additional accessibility features may also be present at these and <a id=16284> Stations </a> section for specific accessibility information. </p> <ul> <li> (For information about accessibility of stations in New Jersey, call New Jersey Transit at 800-772-2222.) </li> <li> Hoboken* (transfer to PATH, ferries) </li> <li> Secaucus Junction* (in-station transfer for direct service to Penn Station, New York) </li> <li id=17199> Penn Station, New York </li> </ul> </div> </article> </div> </html>"
+    }
+  ]
+}

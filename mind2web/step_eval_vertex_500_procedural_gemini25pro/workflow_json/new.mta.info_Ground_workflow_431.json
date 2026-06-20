@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "name": "new.mta.info / Ground workflow 431",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "find the next available subway train to Grand central station, NY departing from Queensboro plaza station, Long Island, NY.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "travel",
+      "station",
+      "use",
+      "label",
+      "new",
+      "grand",
+      "central",
+      "queensboro",
+      "plaza",
+      "long",
+      "island",
+      "searchbox",
+      "specific",
+      "field",
+      "listitem",
+      "bus",
+      "press",
+      "enter",
+      "key",
+      "submit",
+      "mta",
+      "info",
+      "ground",
+      "find",
+      "next",
+      "available",
+      "subway",
+      "train",
+      "departing",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "city",
+      "terminal",
+      "east",
+      "42nd",
+      "street",
+      "york",
+      "open",
+      "preferences",
+      "modal",
+      "express",
+      "rail"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Queensboro Plaza Station, Long Island City, NY, US...",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Queensboro Plaza Station, Long Island City, NY, US...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Grand Central Terminal, East 42nd Street, New York...",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Grand Central Terminal, East 42nd Street, New York...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Open Travel Preferences modal.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Travel Preferences modal.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Bus",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Bus",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Express Bus",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Express Bus",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Rail",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Rail",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Done button - Press enter key to submit travel pre...",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done button - Press enter key to submit travel pre...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Plan my Trip - Press enter key to submit the form ...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Plan my Trip - Press enter key to submit the form ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "new.mta.info / Ground workflow 431"
+}

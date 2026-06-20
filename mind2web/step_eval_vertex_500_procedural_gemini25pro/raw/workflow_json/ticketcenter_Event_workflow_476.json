@@ -1,0 +1,60 @@
+{
+  "name": "ticketcenter / Event workflow 476",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Find events in Lubbock, Texas during next 7 days",
+  "steps": [
+    {
+      "action": "CLICK [57]",
+      "op": "CLICK",
+      "element": "57",
+      "value": "",
+      "description": "[textbox] Search for artists, teams or venues... -> CLICK",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=2085 button> City Guides </a> <div> <input id=57 text query search for artists, teams or /> <button submit> </button> </div> <h2> Events Near Columbus, OH <div> <button id=2522 button> (Change Location) </button> <input text location /> </div> </h2> </body> </html>"
+    },
+    {
+      "action": "TYPE [8694] [Lubbock, Texas]",
+      "op": "TYPE",
+      "element": "8694",
+      "value": "Lubbock, Texas",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: Lubbock, Texas",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=10722 button> City Guides </a> <div> <input id=8694 text query search for artists, teams or /> <button submit> </button> </div> <h2> Events Near Columbus, OH <div> <button id=11159 button> (Change Location) </button> <input text location /> </div> </h2> </body> </html>"
+    },
+    {
+      "action": "CLICK [19638]",
+      "op": "CLICK",
+      "element": "19638",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div listbox> </div> <a button> </a> <a id=19574 button> <span> Next </span> </a> <div> <input id=19603 text query search for artists, teams or lubbock, texas /> <ul listbox> </ul> <button id=19638 submit> <span> Search </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21748]",
+      "op": "CLICK",
+      "element": "21748",
+      "value": "",
+      "description": "[button] All dates -> CLICK",
+      "role": "button",
+      "label": "All dates",
+      "observation": "<html> <div> <button id=23926 button> Days </button> <button id=24070 button> Months </button> <button id=21748 all dates /> </div> </html>"
+    },
+    {
+      "action": "CLICK [28442]",
+      "op": "CLICK",
+      "element": "28442",
+      "value": "",
+      "description": "[link] Next 7 days -> CLICK",
+      "role": "link",
+      "label": "Next 7 days",
+      "observation": "<html> <div> <button id=30620 button> Days </button> <ul> <a id=28442 next 7 days> Next 7 days </a> <a id=30822 next 30 days> Next 30 days </a> </ul> </div> </html>"
+    }
+  ]
+}

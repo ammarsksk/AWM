@@ -1,0 +1,51 @@
+{
+  "name": "new.mta.info / Ground workflow 82",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Plan a trip from Brooklyn, NY to Staten Island, NY on March 25th mainly using bus and subway terminal. The trip should arive at 9:45 AM.",
+  "goal_pattern": "Plan a trip from Brooklyn, NY to Staten Island, NY on March 25th mainly using bus and subway terminal. The trip should arive at 9:45 AM.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the From",
+      "operation": "TYPE",
+      "target_type": "searchbox",
+      "target_description": "From",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Brooklyn, NY, USA",
+      "operation": "CLICK",
+      "target_type": "listitem",
+      "target_description": "Brooklyn, NY, USA",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [275] [brooklyn]",
+      "gold_element_id": "275",
+      "gold_value": "brooklyn"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [6135]",
+      "gold_element_id": "6135",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "new.mta.info / Ground workflow 82"
+}

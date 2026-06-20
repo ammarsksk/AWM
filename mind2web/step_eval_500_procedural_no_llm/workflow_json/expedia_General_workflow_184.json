@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "name": "expedia / General workflow 184",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "expedia",
+  "domain": "Travel",
+  "subdomain": "General",
+  "goal_pattern": "Find the cheapest non-stop or 1 stop flight from JFK, New York to Changi, Singapore for 1 traveler on April 11 which includes seat selection and free cancellation",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "checkbox",
+      "stop",
+      "specific",
+      "field",
+      "jfk",
+      "new",
+      "york",
+      "changi",
+      "singapore",
+      "april",
+      "seat",
+      "tab",
+      "leaving",
+      "textbox",
+      "going",
+      "2023",
+      "expedia",
+      "travel",
+      "general",
+      "find",
+      "cheapest",
+      "non",
+      "flight",
+      "traveler",
+      "which",
+      "includes",
+      "selection",
+      "free",
+      "cancellation",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "flights",
+      "one",
+      "way",
+      "john",
+      "kennedy",
+      "intl",
+      "sin",
+      "departing",
+      "apr",
+      "done"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Flights",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Flights",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the One-way",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "One-way",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Leaving from",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Leaving from",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Leaving from",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Leaving from",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the New York (JFK - John F. Kennedy Intl.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "New York (JFK - John F. Kennedy Intl.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Going to",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Going to",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "type the Going to",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Going to",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Singapore (SIN - Changi",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Singapore (SIN - Changi",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Departing April 5, 2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Departing April 5, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Apr 11, 2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Apr 11, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Done : (Save changes and close the date picker.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done : (Save changes and close the date picker.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Nonstop (1",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Nonstop (1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the 1 Stop (49",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "1 Stop (49",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Seat choice included",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Seat choice included",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the No cancel fee",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "No cancel fee",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "select the Sort by",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Sort by",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 17
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 17.0
+  },
+  "raw_workflow_name": "expedia / General workflow 184"
+}

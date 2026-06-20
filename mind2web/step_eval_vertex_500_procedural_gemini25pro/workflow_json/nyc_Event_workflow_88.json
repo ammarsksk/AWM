@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "name": "nyc / Event workflow 88",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "nyc",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "goal_pattern": "check the lowest price ticket for All star stand up comedy event happen 6pm on the 25th March 2023.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "event",
+      "price",
+      "all",
+      "star",
+      "stand",
+      "comedy",
+      "use",
+      "link",
+      "nyc",
+      "entertainment",
+      "check",
+      "lowest",
+      "ticket",
+      "happen",
+      "6pm",
+      "25th",
+      "march",
+      "2023",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "concerts",
+      "textbox",
+      "search",
+      "name",
+      "specific",
+      "field",
+      "view",
+      "tickets",
+      "span",
+      "filters",
+      "listbox",
+      "sort",
+      "low",
+      "high",
+      "done"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the concerts.",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "concerts.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Search by Name",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search by Name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the All Star Stand Up Comedy",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "All Star Stand Up Comedy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the View Tickets",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "View Tickets",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Filters",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Filters",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Sort by Price - Low to High",
+        "operation": "CLICK",
+        "target_type": "listbox",
+        "target": "Sort by Price - Low to High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "nyc / Event workflow 88"
+}

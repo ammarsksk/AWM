@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "name": "spothero / Other workflow 222",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Find an hourly parking in New York City of lowest price.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "use",
+      "value",
+      "parking",
+      "new",
+      "york",
+      "city",
+      "specific",
+      "field",
+      "spothero",
+      "travel",
+      "other",
+      "find",
+      "hourly",
+      "lowest",
+      "price",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "usa",
+      "required",
+      "sort",
+      "distance"
+    ],
+    "operations": [
+      "TYPE",
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search for parking",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the New York City, NY, USA",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "New York City, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "select the Sort by Distance",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "Sort by Distance",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 3
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 3.0
+  },
+  "raw_workflow_name": "spothero / Other workflow 222"
+}

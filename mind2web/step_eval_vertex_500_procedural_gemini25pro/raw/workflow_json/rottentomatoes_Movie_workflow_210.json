@@ -1,0 +1,60 @@
+{
+  "name": "rottentomatoes / Movie workflow 210",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Browse certified fresh sci-fi films streaming at home.",
+  "steps": [
+    {
+      "action": "CLICK [162]",
+      "op": "CLICK",
+      "element": "162",
+      "value": "",
+      "description": "[link] MOVIES -> HOVER",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <div> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=604 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <slot movies> <slot link> <a id=162> Movies </a> </slot> </slot> </slot> </div> </rt-header> <div> <h2> New & Upcoming Movies </h2> <a id=3286> View all </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [31810]",
+      "op": "CLICK",
+      "element": "31810",
+      "value": "",
+      "description": "[link] Certified fresh movies -> CLICK",
+      "role": "link",
+      "label": "Certified fresh movies",
+      "observation": "<html> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot dropdown> <slot column> <slot links> <a id=32570> Certified fresh movies </a> </slot> <div> <slot title> <a id=32591> Movies at home </a> </slot> <slot links> <a id=31810> Certified fresh movies </a> </slot> </div> </slot> </slot> </slot> </slot> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [90153]",
+      "op": "CLICK",
+      "element": "90153",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <button id=93006> At Home </button> <dropdown-menu movies_at_home> </dropdown-menu> </div> <div> <filter-chip button sort> </filter-chip> <filter-chip id=93209 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> <svg id=90153 /> </html>"
+    },
+    {
+      "action": "CLICK [115536]",
+      "op": "CLICK",
+      "element": "115536",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <div> <button id=114192> At Home </button> <dropdown-menu movies_at_home> </dropdown-menu> </div> <div> <filter-chip button sort> </filter-chip> <filter-chip id=114395 button> <slot label> <span> Genre </span> </slot> </filter-chip> <slot content> <select-checkbox-group group> <slot row> <slot input> <select-checkbox id=115536 checkbox sci_fi> </select-checkbox> </slot> </slot> </select-checkbox-group> </slot> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [132704]",
+      "op": "CLICK",
+      "element": "132704",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <div> <button id=135437> At Home </button> <dropdown-menu movies_at_home> </dropdown-menu> </div> <div> <filter-chip button sort> </filter-chip> <filter-chip id=135640 button> <slot label> <span> Genre </span> </slot> </filter-chip> <slot cta2> <button id=132704> Apply </button> </slot> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "name": "jetblue / Airlines workflow 357",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Show route map and flight cost from Los Angeles to Miami on 12 April.",
+  "steps": [
+    {
+      "action": "CLICK [430]",
+      "op": "CLICK",
+      "element": "430",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <ul> <a id=430 button> <span> Book </span> </a> <a id=523 button> <span> Travel Info </span> </a> </ul> </nav> </jb-header> <jb-tab-panel tabpanel> <jb-select simple> <button id=879 button> <div> One-way </div> </button> </jb-select> </jb-tab-panel> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [4749]",
+      "op": "CLICK",
+      "element": "4749",
+      "value": "",
+      "description": "[link] Route Map -> CLICK",
+      "role": "link",
+      "label": "Route Map",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <ul> <a id=4749> <jb-icon img /> <span> Route Map </span> </a> <a id=4769 button> <span> Travel Info </span> </a> </ul> </nav> </jb-header> <jb-tab-panel tabpanel> <jb-select simple> <button id=5125 button> <div> One-way </div> </button> </jb-select> </jb-tab-panel> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [7833]",
+      "op": "CLICK",
+      "element": "7833",
+      "value": "",
+      "description": "[textbox] From -> CLICK",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <div combobox> <jb-type-ahead-input> <label> From </label> <input id=7833 text new york city area (nyc) /> </jb-type-ahead-input> </div> <div region map> <div> <div button jacksonville, fl (jax) /> <div button kingston, jamaica (kin) /> <div button las vegas, nv (las) /> <div id=8047 button los angeles, ca (lax) /> <div button uk (lgw) /> <div button uk (lhr) /> <div button lima, peru (lim) /> <div button kansas city, mo (mci) /> <div button orlando, fl (mco) /> <div button medellin, colombia (mde) /> <div id=8052 button miami, fl (mia) /> <div button milwaukee, wi (mke) /> <div button paul, mn (msp) /> <div button new orleans, la (msy) /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [14883] [Los Angeles]",
+      "op": "TYPE",
+      "element": "14883",
+      "value": "Los Angeles",
+      "description": "[textbox] From -> TYPE: Los Angeles",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <div combobox> <jb-type-ahead-input> <label> From </label> <input id=14883 text new york city area (nyc) /> </jb-type-ahead-input> </div> <div region map> <div> <div button jacksonville, fl (jax) /> <div button kingston, jamaica (kin) /> <div button las vegas, nv (las) /> <div id=15097 button los angeles, ca (lax) /> <div button uk (lgw) /> <div button uk (lhr) /> <div button lima, peru (lim) /> <div button kansas city, mo (mci) /> <div button orlando, fl (mco) /> <div button medellin, colombia (mde) /> <div id=15102 button miami, fl (mia) /> <div button milwaukee, wi (mke) /> <div button paul, mn (msp) /> <div button new orleans, la (msy) /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [22978]",
+      "op": "CLICK",
+      "element": "22978",
+      "value": "",
+      "description": "[div] Los Angeles -> CLICK",
+      "role": "div",
+      "label": "Los Angeles",
+      "observation": "<html> <div> <div combobox> <jb-flyout-inner dialog> <ul listbox> <li id=22978 option> <div> <strong> Los Angeles </strong> area </div> </li> <li option> </li> <li id=22994 option> <div> <strong> Los Angeles </strong> , CA (LAX) </div> </li> <li option> </li> </ul> </jb-flyout-inner> </div> <div region map> <div> <div button jacksonville, fl (jax) /> <div button kingston, jamaica (kin) /> <div button las vegas, nv (las) /> <div id=22229 button los angeles, ca (lax) /> <div button uk (lgw) /> <div button uk (lhr) /> <div button lima, peru (lim) /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [27618] [Miami]",
+      "op": "TYPE",
+      "element": "27618",
+      "value": "Miami",
+      "description": "[textbox] To -> TYPE: Miami",
+      "role": "textbox",
+      "label": "To",
+      "observation": "<html> <div> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=27618 text /> </jb-type-ahead-input> </div> <div region map> <div> <div button montego bay, jamaica (mbj) /> <div button orlando, fl (mco) /> <div button medellin, colombia (mde) /> <div id=28035 button miami, fl (mia) /> <div button martha's vineyard, ma (mvy) /> <div button nassau, bahamas (nas) /> <div button new york city area (nyc) /> <div button st. lucia (uvf) /> <div button washington d.c. area (was) /> <div button boston area /> <div id=28081 button miami area /> <div button san francisco area /> <div button los angeles area /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [35523]",
+      "op": "CLICK",
+      "element": "35523",
+      "value": "",
+      "description": "[option] Mint. Miami area -> CLICK",
+      "role": "option",
+      "label": "Mint. Miami area",
+      "observation": "<html> <div> <div combobox> <jb-flyout-inner dialog> <ul listbox> <li id=35523 option> <span> <jb-icon img mint. /> <div> <strong> Miami </strong> area </div> </span> </li> <li option> </li> <li id=35543 option> <span> <jb-icon img mint. /> <div> <strong> Miami </strong> , FL (MIA) </div> </span> </li> <li option> </li> </ul> </jb-flyout-inner> </div> <div region map> <div> <div button montego bay, jamaica (mbj) /> <div button orlando, fl (mco) /> <div button medellin, colombia (mde) /> <div id=34784 button miami, fl (mia) /> <div button martha's vineyard, ma (mvy) /> <div button nassau, bahamas (nas) /> <div button new york city area (nyc) /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [41770]",
+      "op": "CLICK",
+      "element": "41770",
+      "value": "",
+      "description": "[button] Explore flights -> CLICK",
+      "role": "button",
+      "label": "Explore flights",
+      "observation": "<html> <jb-app> <jb-header banner> <nav navigation> <a id=41353 button> <span> Book </span> </a> </nav> </jb-header> <div> <h3> Miami area </h3> <div> Los Angeles area to Miami area </div> <a id=41770 button> <span> Explore flights </span> </a> <a id=41772 button> <span> Explore flights + hotel </span> </a> </div> </jb-app> </html>"
+    },
+    {
+      "action": "CLICK [47178]",
+      "op": "CLICK",
+      "element": "47178",
+      "value": "",
+      "description": "[span] 234 -> CLICK",
+      "role": "span",
+      "label": "234",
+      "observation": "<html> <div> <tr> <td button depart sunday, april 9th, 2023> </td> <td button depart monday, april 10th, 2023> </td> <td button depart tuesday, april 11th, 2023> </td> <td id=47178 button depart wednesday, april 12th, 2023> <span> 12 </span> <span> <span> $ </span> <span> 234 </span> </span> </td> <td button depart thursday, april 13th, 2023> </td> <td button depart friday, april 14th, 2023> </td> <td button depart saturday, april 15th, 2023> </td> </tr> <tr> <td button depart sunday, june 11th, 2023> </td> <td id=48863 button depart monday, june 12th, 2023> <span> 12 </span> </td> <td button depart tuesday, june 13th, 2023> </td> <td button depart wednesday, june 14th, 2023> </td> <td button depart thursday, june 15th, 2023> </td> </tr> <tr> <td id=51825 button depart sunday, november 12th, 2023> <span> 12 </span> </td> <td button depart monday, november 13th, 2023> </td> <td button depart tuesday, november 14th, 2023> </td> <td button depart wednesday, november 15th, 2023> </td> </tr> </div> </html>"
+    },
+    {
+      "action": "CLICK [72929]",
+      "op": "CLICK",
+      "element": "72929",
+      "value": "",
+      "description": "[button] Total: $234.00 1 traveler See Flights -> CLICK",
+      "role": "button",
+      "label": "Total: $234.00 1 traveler See Flights",
+      "observation": "<html> <jb-bff> <div> <tr> <td button return sunday, june 11th, 2023> </td> <td id=67231 button return monday, june 12th, 2023> <span> 12 </span> </td> <td button return tuesday, june 13th, 2023> </td> <td button return wednesday, june 14th, 2023> </td> <td button return thursday, june 15th, 2023> </td> </tr> <tr> <td id=70193 button return sunday, november 12th, 2023> <span> 12 </span> </td> <td button return monday, november 13th, 2023> </td> <td button return tuesday, november 14th, 2023> </td> <td button return wednesday, november 15th, 2023> </td> </tr> </div> <div total: $234.00 1 traveler see> <button id=72929 button> <span> See flights </span> </button> </div> </jb-bff> </html>"
+    }
+  ]
+}

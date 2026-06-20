@@ -1,0 +1,30 @@
+{
+  "name": "soundcloud / Music workflow 725",
+  "source": "Mind2Web exemplar",
+  "website": "soundcloud",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Follow Taylor Swift and add a playlist to next up.",
+  "steps": [
+    {
+      "action": "CLICK [260]",
+      "op": "CLICK",
+      "element": "260",
+      "value": "",
+      "description": "[searchbox] Search -> CLICK",
+      "role": "searchbox",
+      "label": "Search",
+      "observation": "<html> <div> <header banner> <div search> <form> <input id=260 search q /> <button id=249 submit> Search </button> </form> </div> </header> <div main> <button id=273 button follow> Follow </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [16102] [Taylor Swift]",
+      "op": "TYPE",
+      "element": "16102",
+      "value": "Taylor Swift",
+      "description": "[searchbox] Search -> TYPE: Taylor Swift",
+      "role": "searchbox",
+      "label": "Search",
+      "observation": "<html> <div> <header banner> <div search> <form> <input id=16102 search q /> <button submit> Search </button> </form> </div> </header> <div main> <ul> <button id=16092 button follow> Follow </button> <button id=16096 button follow> Follow </button> </ul> </div> </div> </html>"
+    }
+  ]
+}

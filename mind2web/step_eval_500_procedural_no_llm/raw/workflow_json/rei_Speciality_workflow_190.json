@@ -1,0 +1,50 @@
+{
+  "name": "rei / Speciality workflow 190",
+  "source": "Mind2Web exemplar",
+  "website": "rei",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Search for kayaks and filter the results to show only those that are suitable for whitewater rapids.",
+  "steps": [
+    {
+      "action": "CLICK [99]",
+      "op": "CLICK",
+      "element": "99",
+      "value": "",
+      "description": "[searchbox] Search -> CLICK",
+      "role": "searchbox",
+      "label": "Search",
+      "observation": "<html> <header banner> <section> <form search psearch> <div combobox> <input id=99 searchbox text search input field q search for great gear & /> <button button clear search> </button> </div> </form> <nav navigation shop categories> <li> <a id=3244> Kayaking </a> <a id=3273> Kayaks </a> </li> </nav> </section> </header> </html>"
+    },
+    {
+      "action": "TYPE [26909] [Kayaks]",
+      "op": "TYPE",
+      "element": "26909",
+      "value": "Kayaks",
+      "description": "[searchbox] Search -> TYPE: Kayaks",
+      "role": "searchbox",
+      "label": "Search",
+      "observation": "<html> <header banner> <section> <form search psearch> <div combobox> <input id=26909 searchbox text search input field q search for great gear & /> <button button clear search> </button> </div> </form> <nav navigation shop categories> <li> <a id=30108> Kayaking </a> <a id=30137> Kayaks </a> </li> </nav> </section> </header> </html>"
+    },
+    {
+      "action": "CLICK [54211]",
+      "op": "CLICK",
+      "element": "54211",
+      "value": "",
+      "description": "[option] kayaks -> CLICK",
+      "role": "option",
+      "label": "kayaks",
+      "observation": "<html> <header banner> <section> <form search psearch> <div combobox> <ul listbox search suggestions> <li id=54211 option kayaks> <span> kayaks </span> </li> <li option kayak storage> torage </li> <li option kayaks - how to choose> how to choose </li> <li option kayak seats> eats </li> </ul> </div> </form> <nav navigation shop categories> <li> <a id=56951> Kayaking </a> <a id=56980> Kayaks </a> </li> </nav> </section> </header> </html>"
+    },
+    {
+      "action": "CLICK [67344]",
+      "op": "CLICK",
+      "element": "67344",
+      "value": "",
+      "description": "[link] Whitewater Kayaks (4",
+      "role": "link",
+      "label": "Whitewater Kayaks (4",
+      "observation": "<html> <div main> <div filter results> <ul> <div categories> <button id=77868> <div> <span> Filter by </span> Categories </div> <svg> </svg> </button> <span> <a id=67344 whitewater kayaks (4)> Whitewater Kayaks </a> <span> (4) </span> </span> </div> <div features> <button id=78479> <div> <span> Filter by </span> Features </div> <svg> </svg> </button> </div> </ul> </div> </div> </html>"
+    }
+  ]
+}

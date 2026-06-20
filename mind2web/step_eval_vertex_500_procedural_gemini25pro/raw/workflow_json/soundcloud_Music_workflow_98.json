@@ -1,0 +1,100 @@
+{
+  "name": "soundcloud / Music workflow 98",
+  "source": "Mind2Web exemplar",
+  "website": "soundcloud",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find a Ricky Kej track to listen and share which has been added in the last year and is between 2 to 10 minutes.",
+  "steps": [
+    {
+      "action": "TYPE [194] [Ricky Kej]",
+      "op": "TYPE",
+      "element": "194",
+      "value": "Ricky Kej",
+      "description": "[searchbox] Search -> TYPE: Ricky Kej",
+      "role": "searchbox",
+      "label": "Search",
+      "observation": "<html> <div> <header banner> <div search> <form> <input id=194 search q /> <button id=223 submit> Search </button> </form> </div> </header> <div main> <a id=5005> <span> Listening history </span> <span> View all </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12177]",
+      "op": "CLICK",
+      "element": "12177",
+      "value": "",
+      "description": "[link] Search for \u201cRicky Kej\u201d -> CLICK",
+      "role": "link",
+      "label": "Search for \u201cRicky Kej\u201d",
+      "observation": "<html> <body> <div> <header banner> <div search> <form> <input search q ricky kej /> <button id=12146 submit> Search </button> </form> </div> </header> <div main> <a id=16934> <span> Listening history </span> <span> View all </span> </a> </div> </div> <div listbox> <div option> <a id=12177> Search for <q> Ricky Kej </q> </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [19343]",
+      "op": "CLICK",
+      "element": "19343",
+      "value": "",
+      "description": "[link] Tracks -> CLICK",
+      "role": "link",
+      "label": "Tracks",
+      "observation": "<html> <div main> <div> <a id=19343> Tracks </a> <ul> <div> <a id=20161 visit ricky-kejs profile> Ricky-Kej </a> <div user stats> </div> <button button follow> Follow </button> </div> <div group playlist: shiva - ricky kej> <div> <button button repost> Repost </button> <button button share> Share </button> <button button copy link> Copy Link </button> <button id=20642 button add to next up> <span> <span> Add to Next up </span> <span> Add to Next up </span> <span> Add to Next up </span> <span> Added </span> </span> </button> </div> </div> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [23950]",
+      "op": "CLICK",
+      "element": "23950",
+      "value": "",
+      "description": "[link] Added any time -> CLICK",
+      "role": "link",
+      "label": "Added any time",
+      "observation": "<html> <div main> <div> <a id=23950> <span> Added any time </span> </a> <a id=23998> <span> Any length </span> </a> <a id=24041> <span> To listen to </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30283]",
+      "op": "CLICK",
+      "element": "30283",
+      "value": "",
+      "description": "[link] Past year -> CLICK",
+      "role": "link",
+      "label": "Past year",
+      "observation": "<html> <div main> <ul> <a id=30866> Past week </a> <a id=30872> Past month </a> <a id=30283> Past year </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [35963]",
+      "op": "CLICK",
+      "element": "35963",
+      "value": "",
+      "description": "[link] Any length -> CLICK",
+      "role": "link",
+      "label": "Any length",
+      "observation": "<html> <div main> <div> <a id=35914> <span> Added in the past year </span> </a> <a id=35963> <span> Any length </span> </a> <a id=36005> <span> To listen to </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [42104]",
+      "op": "CLICK",
+      "element": "42104",
+      "value": "",
+      "description": "[link] 2-10 min -> CLICK",
+      "role": "link",
+      "label": "2-10 min",
+      "observation": "<html> <div main> <div> <ul> <a id=42104> 2-10 min </a> <a id=42789> 10-30 min </a> </ul> <a id=42809> <span> To listen to </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47770]",
+      "op": "CLICK",
+      "element": "47770",
+      "value": "",
+      "description": "[link] To listen to -> CLICK",
+      "role": "link",
+      "label": "To listen to",
+      "observation": "<html> <div main> <div> <a id=47105> Tracks </a> <a id=47744> 2-10 min </a> <a id=47770> <span> To listen to </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [51605]",
+      "op": "CLICK",
+      "element": "51605",
+      "value": "",
+      "description": "[link] To share -> CLICK",
+      "role": "link",
+      "label": "To share",
+      "observation": "<html> <div main> <div> <a id=51564> Tracks </a> <a id=52156> <span> Added in the past year </span> </a> <a id=51605> To share </a> </div> </div> </html>"
+    }
+  ]
+}

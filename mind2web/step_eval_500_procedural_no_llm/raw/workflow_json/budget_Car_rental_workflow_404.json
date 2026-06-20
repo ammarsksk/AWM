@@ -1,0 +1,100 @@
+{
+  "name": "budget / Car rental workflow 404",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find a truck for 10001 zip code on Sunday 11:30 am with flexible dates.",
+  "steps": [
+    {
+      "action": "CLICK [125]",
+      "op": "CLICK",
+      "element": "125",
+      "value": "",
+      "description": "[button] Reservations -> CLICK",
+      "role": "button",
+      "label": "Reservations",
+      "observation": "<html> <div> <a id=125 button> Reservations </a> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=1323 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> <select id=1354 pick up time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm true> noon </option> </select> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [9778]",
+      "op": "CLICK",
+      "element": "9778",
+      "value": "",
+      "description": "[link] Budget Truck -> CLICK",
+      "role": "link",
+      "label": "Budget Truck",
+      "observation": "<html> <div> <ul> <a id=10502> View / Modify / Cancel </a> <a id=9778> Budget Truck </a> </ul> <form resform> <angucomplete-alt enter your pick-up location or> <div> <input id=10976 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [19433] [10001]",
+      "op": "TYPE",
+      "element": "19433",
+      "value": "10001",
+      "description": "[textbox] US City,State or Zip Code -> TYPE: 10001",
+      "role": "textbox",
+      "label": "US City,State or Zip Code",
+      "observation": "<html> <div> <div> <label> Where do you want to pick up your truck? </label> <input id=19433 text us city,state or zip code /> </div> <span> <a id=19451> <input/> </a> <label id=20109 flexible dates> Flexible Dates </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [28905]",
+      "op": "CLICK",
+      "element": "28905",
+      "value": "",
+      "description": "[textbox] mm/dd/yyyy -> CLICK",
+      "role": "textbox",
+      "label": "mm/dd/yyyy",
+      "observation": "<html> <div> <div> <label> When do you want to pick up your truck? </label> <input id=28905 text mm/dd/yyyy /> </div> <span> <a id=28922> <input/> </a> <label id=29582 flexible dates> Flexible Dates </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [38373]",
+      "op": "CLICK",
+      "element": "38373",
+      "value": "",
+      "description": "[link] 23 -> CLICK",
+      "role": "link",
+      "label": "23",
+      "observation": "<html> <body> <span> <a id=38390> <input/> </a> <label id=39055 flexible dates> Flexible Dates </label> </span> <a id=38373> 23 </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [47779]",
+      "op": "CLICK",
+      "element": "47779",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <input radio one-way-radio ow true /> <span> Yes </span> <input id=47779 radio one-way-radio lo /> <span> No </span> </div> <span> <a id=47796> <input/> </a> <label id=48455 flexible dates> Flexible Dates </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [57245]",
+      "op": "CLICK",
+      "element": "57245",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <span> <a id=57262> <input/> </a> <label id=57921 flexible dates> Flexible Dates </label> </span> <span id=57245> <input/> </span> </html>"
+    },
+    {
+      "action": "CLICK [66710]",
+      "op": "CLICK",
+      "element": "66710",
+      "value": "",
+      "description": "[button] Find Your Truck -> CLICK",
+      "role": "button",
+      "label": "Find Your Truck",
+      "observation": "<html> <div> <span> <a id=66728> <input/> </a> <label id=67388 flexible dates> Flexible Dates </label> </span> <input id=66710 button find your truck /> <a> www.budget.ca/truck </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [76175]",
+      "op": "CLICK",
+      "element": "76175",
+      "value": "",
+      "description": "[button] Select Truck -> CLICK",
+      "role": "button",
+      "label": "Select Truck",
+      "observation": "<html> <div> <div> <input 90412 /> <input cv /> <button id=77621> Select Truck </button> </div> <div> <input 90112 /> <input mini /> <button id=76175> Select Truck </button> </div> <div> <input 90115 /> <input mid /> <button id=78069> Select Truck </button> </div> </div> </html>"
+    }
+  ]
+}

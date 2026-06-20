@@ -1,0 +1,30 @@
+{
+  "name": "exploretock / Restaurant workflow 1",
+  "source": "Mind2Web exemplar",
+  "website": "exploretock",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+  "steps": [
+    {
+      "action": "SELECT [136] [Pickup]",
+      "op": "SELECT",
+      "element": "136",
+      "value": "Pickup",
+      "description": "[combobox] Reservation type -> SELECT: Pickup",
+      "role": "combobox",
+      "label": "Reservation type",
+      "observation": "<html> <div> <select id=136 type> <option reservations true> Dine in </option> <option pickup> Pickup </option> <option delivery> Delivery </option> <option events> Events </option> <option wineries> Wineries </option> <option all> Everything </option> </select> <div> <input id=753 text location columbus, oh /> <button id=755 button select location /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [3113]",
+      "op": "CLICK",
+      "element": "3113",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <input id=3721 text location columbus, oh /> <button id=3723 button select location> <svg id=3113 /> </button> </div> </html>"
+    }
+  ]
+}

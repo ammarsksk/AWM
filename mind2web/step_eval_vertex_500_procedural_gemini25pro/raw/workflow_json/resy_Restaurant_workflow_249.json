@@ -1,0 +1,70 @@
+{
+  "name": "resy / Restaurant workflow 249",
+  "source": "Mind2Web exemplar",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Notify me about availability for 2 guests on april 17 at the High Tide restaurant",
+  "steps": [
+    {
+      "action": "TYPE [86] [high tide]",
+      "op": "TYPE",
+      "element": "86",
+      "value": "high tide",
+      "description": "[textbox] Search restaurants, cuisines, etc. -> TYPE: high tide",
+      "role": "textbox",
+      "label": "Search restaurants, cuisines, etc.",
+      "observation": "<html> <div> <header banner main resy> <input id=86 text search restaurants, cuisines, etc. /> </header> <resy-home> <article main global dining access collection> <button id=1295 button notify> <span> Notify </span> </button> </article> <venue-list-container> <article main the best places to drink> <button id=2904 button notify> <span> Notify </span> </button> </article> </venue-list-container> </resy-home> </div> </html>"
+    },
+    {
+      "action": "CLICK [10569]",
+      "op": "CLICK",
+      "element": "10569",
+      "value": "",
+      "description": "[heading] High Tide -> CLICK",
+      "role": "heading",
+      "label": "High Tide",
+      "observation": "<html> <div> <header banner main resy> <div combobox> <div listbox> <ul listbox> <li id=10569 option> <div> <h3> High Tide </h3> <div> American </div> <div> <div> Dumbo </div> <span> , </span> <div> Brooklyn </div> </div> </div> </li> <li option> </li> </ul> </div> </div> </header> <resy-home> <article main global dining access collection> <button id=11489 button notify> <span> Notify </span> </button> </article> <venue-list-container> <article main the best places to drink> <button id=13098 button notify> <span> Notify </span> </button> </article> </venue-list-container> </resy-home> </div> </html>"
+    },
+    {
+      "action": "CLICK [17189]",
+      "op": "CLICK",
+      "element": "17189",
+      "value": "",
+      "description": "[div] Fri., Apr. 21 -> CLICK",
+      "role": "div",
+      "label": "Fri., Apr. 21",
+      "observation": "<html> <div> <button id=17189 button> <label> <p> Date </p> <div> Fri., Apr. 21 </div> </label> </button> <div> <div> Mo </div> <button id=17221 button april 17, 2023.> 17 </button> </div> <button id=17276 button notify for lunch> <span> Notify </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [21289]",
+      "op": "CLICK",
+      "element": "21289",
+      "value": "",
+      "description": "[button] April 17, 2023. -> CLICK",
+      "role": "button",
+      "label": "April 17, 2023.",
+      "observation": "<html> <div> <div> <button id=21289 button april 17, 2023.> 17 </button> <button id=22076 button may 17, 2023.> 17 </button> </div> <div> <div> Mo </div> <button id=22166 button april 17, 2023.> 17 </button> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [25974] [2 Guests]",
+      "op": "SELECT",
+      "element": "25974",
+      "value": "2 Guests",
+      "description": "[combobox] Guests -> SELECT: 2 Guests",
+      "role": "combobox",
+      "label": "Guests",
+      "observation": "<html> <div> <label> <p> Guests </p> <select id=25974 party_size> <option 1 guest 1> 1 Guest </option> <option 2 guests 2 true> 2 Guests </option> <option 3 guests 3> 3 Guests </option> <option 4 guests 4> 4 Guests </option> <option 5 guests 5> 5 Guests </option> <option 6 guests 6> 6 Guests </option> <option 7+ guests 7> 7+ Guests </option> </select> </label> <div> <div> Mo </div> <button id=26511 button april 17, 2023. selected date.> 17 </button> </div> <button id=26566 button notify for lunch> <span> Notify </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [30999]",
+      "op": "CLICK",
+      "element": "30999",
+      "value": "",
+      "description": "[button] Notify for Lunch -> CLICK",
+      "role": "button",
+      "label": "Notify for Lunch",
+      "observation": "<html> <div> <div> <div> Mo </div> <button id=30944 button april 17, 2023. selected date.> 17 </button> </div> <button id=30999 button notify for lunch> <span> Notify </span> </button> <button id=31008 button notify for dinner> <span> Notify </span> </button> </div> </html>"
+    }
+  ]
+}

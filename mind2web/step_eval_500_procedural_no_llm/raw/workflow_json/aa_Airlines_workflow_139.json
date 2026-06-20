@@ -1,0 +1,70 @@
+{
+  "name": "aa / Airlines workflow 139",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "View travel credits for the passenger Leon Sin with the record locator jcqnhd ans ticket number 1234567",
+  "steps": [
+    {
+      "action": "TYPE [102] [travel credit]",
+      "op": "TYPE",
+      "element": "102",
+      "value": "travel credit",
+      "description": "[searchbox] Search AA.com\u00ae -> TYPE: travel credit",
+      "role": "searchbox",
+      "label": "Search AA.com\u00ae",
+      "observation": "<html> <body> <header header> <label> <span> Search AA.com </span> <input id=102 search q search aa.com /> </label> </header> <main main main content> <div tabpanel> <form> <label> To <input id=1280 text city or airport /> </label> </form> </div> </main> <footer contentinfo footer> <a id=2090> Receipts and refunds </a> </footer> </body> </html>"
+    },
+    {
+      "action": "CLICK [5901]",
+      "op": "CLICK",
+      "element": "5901",
+      "value": "",
+      "description": "[searchbox] Search AA.com\u00ae -> ENTER",
+      "role": "searchbox",
+      "label": "Search AA.com\u00ae",
+      "observation": "<html> <body> <header header> <label> <span> Search AA.com </span> <input id=5901 search q search aa.com travel credit /> </label> </header> <main main main content> <div tabpanel> <form> <label> From <input id=7058 text originairport cmh city or airport /> </label> <div> <input id=7194 submit search /> <button button> Search </button> </div> </form> </div> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [9832]",
+      "op": "CLICK",
+      "element": "9832",
+      "value": "",
+      "description": "[heading] Find your trip - Find a reservation - American Air... -> CLICK",
+      "role": "heading",
+      "label": "Find your trip - Find a reservation - American Air...",
+      "observation": "<html> <body> <main main main content> <div> <button id=9783 submit> Search </button> <a id=9832 find your trip - find> <h2> Find your trip - Find a reservation - American Airlines </h2> <span> https://www.aa.com/reservation/view/find-travel-credit?sveLink=header </span> <p> Find your trip on aa.com to check in online, change or cancel your reservation, add special requests, and redeem Trip <b> Credit </b> . </p> </a> </div> </main> <footer contentinfo footer> <a id=10047> Receipts and refunds </a> </footer> </body> </html>"
+    },
+    {
+      "action": "TYPE [11870] [sin]",
+      "op": "TYPE",
+      "element": "11870",
+      "value": "sin",
+      "description": "[textbox] Last name -> TYPE: sin",
+      "role": "textbox",
+      "label": "Last name",
+      "observation": "<html> <main main main content> <slot> <adc-content-switch-panel tabpanel first> <form> <slot> <adc-text-input text lastname> <input id=11870 text lastname /> </adc-text-input> <adc-text-input text ticketnumber ex. 001234567890> <input id=12933 text ticketnumber ex. 001234567890 /> </adc-text-input> <adc-button submit> <button id=12954 submit> <slot leading-icon /> <slot> Find travel credit </slot> <slot trailing-icon /> </button> </adc-button> </slot> </form> </adc-content-switch-panel> </slot> </main> </html>"
+    },
+    {
+      "action": "TYPE [16532] [1234567]",
+      "op": "TYPE",
+      "element": "16532",
+      "value": "1234567",
+      "description": "[textbox] Trip Credit / Ticket number -> TYPE: 1234567",
+      "role": "textbox",
+      "label": "Trip Credit / Ticket number",
+      "observation": "<html> <main main main content> <slot> <adc-content-switch-panel tabpanel first> <form> <slot> <adc-text-input text ticketnumber ex. 001234567890> <label id=17623> <slot label> Trip Credit / Ticket number </slot> </label> <input id=16532 text ticketnumber ex. 001234567890 /> </adc-text-input> <adc-button submit> <button id=17652 submit> <slot leading-icon /> <slot> Find travel credit </slot> <slot trailing-icon /> </button> </adc-button> </slot> </form> </adc-content-switch-panel> </slot> </main> </html>"
+    },
+    {
+      "action": "CLICK [21223]",
+      "op": "CLICK",
+      "element": "21223",
+      "value": "",
+      "description": "[adc-button] Find travel credit -> CLICK",
+      "role": "adc-button",
+      "label": "Find travel credit",
+      "observation": "<html> <main main main content> <slot> <adc-content-switch-panel tabpanel first> <form> <slot> <adc-text-input text lastname sin> <input id=22263 text lastname sin /> </adc-text-input> <adc-text-input text ticketnumber 1234567 ex. 001234567890> <div> <input id=22293 text ticketnumber ex. 001234567890 1234567 /> <adc-button-icon button> </adc-button-icon> </div> </adc-text-input> <adc-button id=21223 submit> <button submit> <slot leading-icon /> <slot> Find travel credit </slot> <slot trailing-icon /> </button> </adc-button> </slot> </form> </adc-content-switch-panel> </slot> </main> </html>"
+    }
+  ]
+}

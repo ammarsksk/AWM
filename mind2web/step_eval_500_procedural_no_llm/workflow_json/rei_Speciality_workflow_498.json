@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "name": "rei / Speciality workflow 498",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "rei",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Order one TAHE inflatable stand up paddle board using my default account/shipping info.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "continue",
+      "link",
+      "tahe",
+      "inflatable",
+      "stand",
+      "paddle",
+      "cart",
+      "checkout",
+      "rei",
+      "shopping",
+      "speciality",
+      "order",
+      "one",
+      "board",
+      "using",
+      "default",
+      "account",
+      "shipping",
+      "info",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "water",
+      "boards",
+      "img",
+      "beach",
+      "sup",
+      "yak",
+      "tandem",
+      "padd",
+      "add",
+      "799",
+      "proceed",
+      "without",
+      "membership",
+      "address"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Water",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Water",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Paddle Boards",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Paddle Boards",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the TAHE Beach SUP-Yak Tandem Inflatable Stand Up Padd...",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "TAHE Beach SUP-Yak Tandem Inflatable Stand Up Padd...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Add to cart\u2014$799.95",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to cart\u2014$799.95",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Cart & Checkout",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Cart & Checkout",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Proceed to checkout",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Proceed to checkout",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Continue without membership",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Continue without membership",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Continue",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Continue",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Continue with this address",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Continue with this address",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Continue",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Continue",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "rei / Speciality workflow 498"
+}

@@ -1,0 +1,60 @@
+{
+  "name": "rentalcars / Car rental workflow 272",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Search for Premium Cars available to rent at LondonHeathrow Airport.",
+  "steps": [
+    {
+      "action": "CLICK [131]",
+      "op": "CLICK",
+      "element": "131",
+      "value": "",
+      "description": "[label] Pick-up location -> CLICK",
+      "role": "label",
+      "label": "Pick-up location",
+      "observation": "<html> <main> <div> <label id=131> Pick-up location </label> <input id=372 pick-up location /> </div> <button id=1138 button> <div> Airports </div> </button> </main> </html>"
+    },
+    {
+      "action": "TYPE [3104] [London]",
+      "op": "TYPE",
+      "element": "3104",
+      "value": "London",
+      "description": "[textbox] Pick-up location -> TYPE: London",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <main> <div> <div> <label> Pick-up location </label> <input id=3104 pick-up location /> </div> <button id=3623 button> <div> Search </div> </button> </div> <button id=4131 button> <div> Airports </div> </button> </main> </html>"
+    },
+    {
+      "action": "CLICK [6362]",
+      "op": "CLICK",
+      "element": "6362",
+      "value": "",
+      "description": "[div] London Heathrow Airport (LHR",
+      "role": "div",
+      "label": "London Heathrow Airport (LHR",
+      "observation": "<html> <ul listbox> <li id=6361 option> <div id=6362 button> <div> <span> Airport </span> <div> <div> London Heathrow Airport (LHR) </div> <div> London, Greater London, United Kingdom </div> </div> </div> </div> </li> <li option> </li> <li option> </li> <li option> </li> <li option> <div id=6405 button> <div> <span> Airport </span> <div> <div> London City Airport (LCY) </div> <div> London, Greater London, United Kingdom </div> </div> </div> </div> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [9666]",
+      "op": "CLICK",
+      "element": "9666",
+      "value": "",
+      "description": "[div] Search -> CLICK",
+      "role": "div",
+      "label": "Search",
+      "observation": "<html> <div> <select id=9436 pickup-time> <option 00:00> Midnight </option> <option 00:30> 12:30 AM </option> <option 01:00> 1:00 AM </option> <option 01:30> 1:30 AM </option> <option 02:00> 2:00 AM </option> <option 02:30> 2:30 AM </option> <option 03:00> 3:00 AM </option> <option 03:30> 3:30 AM </option> <option 04:00> 4:00 AM </option> <option 04:30> 4:30 AM </option> <option 05:00> 5:00 AM </option> <option 05:30> 5:30 AM </option> <option 06:00> 6:00 AM </option> <option 06:30> 6:30 AM </option> <option 07:00> 7:00 AM </option> <option 07:30> 7:30 AM </option> <option 08:00> 8:00 AM </option> <option 08:30> 8:30 AM </option> <option 09:00> 9:00 AM </option> <option 09:30> 9:30 AM </option> <option 10:00 true> 10:00 AM </option> <option 10:30> 10:30 AM </option> <option 11:00> 11:00 AM </option> <option 11:30> 11:30 AM </option> <option 12:00> Noon </option> </select> <select id=9561 dropoff-time> <option 00:00> Midnight </option> <option 00:30> 12:30 AM </option> <option 01:00> 1:00 AM </option> <option 01:30> 1:30 AM </option> <option 02:00> 2:00 AM </option> <option 02:30> 2:30 AM </option> <option 03:00> 3:00 AM </option> <option 03:30> 3:30 AM </option> <option 04:00> 4:00 AM </option> <option 04:30> 4:30 AM </option> <option 05:00> 5:00 AM </option> <option 05:30> 5:30 AM </option> <option 06:00> 6:00 AM </option> <option 06:30> 6:30 AM </option> <option 07:00> 7:00 AM </option> <option 07:30> 7:30 AM </option> <option 08:00> 8:00 AM </option> <option 08:30> 8:30 AM </option> <option 09:00> 9:00 AM </option> <option 09:30> 9:30 AM </option> <option 10:00 true> 10:00 AM </option> <option 10:30> 10:30 AM </option> <option 11:00> 11:00 AM </option> <option 11:30> 11:30 AM </option> <option 12:00> Noon </option> </select> <button id=9666 button> <div> Search </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [12164]",
+      "op": "CLICK",
+      "element": "12164",
+      "value": "",
+      "description": "[img] -> CLICK",
+      "role": "img",
+      "label": "",
+      "observation": "<html> <div> <div> <input checkbox premium /> <label id=12631> <div> Premium </div> </label> </div> <div region> <button id=12240 show premium cars> <div> Premium </div> </button> </div> </div> <img id=12164 /> </html>"
+    }
+  ]
+}

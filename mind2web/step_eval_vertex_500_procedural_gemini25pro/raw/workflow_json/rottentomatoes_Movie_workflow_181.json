@@ -1,0 +1,130 @@
+{
+  "name": "rottentomatoes / Movie workflow 181",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find the latest action tv shows which are rated fresh by both the audience and the rotten tomatoes",
+  "steps": [
+    {
+      "action": "CLICK [136]",
+      "op": "CLICK",
+      "element": "136",
+      "value": "",
+      "description": "[link] TV SHOWS -> CLICK",
+      "role": "link",
+      "label": "TV SHOWS",
+      "observation": "<html> <rt-header navigation bar> <div> <slot nav-links> <a id=731> What's the Tomatometer? </a> </slot> <slot nav-dropdowns> <nav> <slot tv> <slot link> <a id=136> Tv shows </a> </slot> </slot> <slot showtimes> <slot link> <a id=2638> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [21749]",
+      "op": "CLICK",
+      "element": "21749",
+      "value": "",
+      "description": "[span] Sort: Most popular -> CLICK",
+      "role": "span",
+      "label": "Sort: Most popular",
+      "observation": "<html> <div> <filter-chip id=21749 button sort: most popular> <slot label> <span> Sort: Most popular </span> </slot> </filter-chip> <filter-chip id=21775 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip id=21803 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [40038]",
+      "op": "CLICK",
+      "element": "40038",
+      "value": "",
+      "description": "[span] Newest -> CLICK",
+      "role": "span",
+      "label": "Newest",
+      "observation": "<html> <div> <filter-chip button sort: most popular> </filter-chip> <slot content> <select-radio-group radiogroup sort popular> <slot row> <div> <slot label> <span id=40038> Newest </span> </slot> <slot input> <select-radio id=43152 radio newest /> </slot> </div> </slot> </select-radio-group> </slot> <filter-chip button> </filter-chip> <filter-chip id=43342 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [64696]",
+      "op": "CLICK",
+      "element": "64696",
+      "value": "",
+      "description": "[span] Genre -> CLICK",
+      "role": "span",
+      "label": "Genre",
+      "observation": "<html> <div> <filter-chip button sort: newest> </filter-chip> <filter-chip id=64696 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip id=64722 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip id=64750 button> <slot label> <span> Audience score </span> </slot> </filter-chip> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [82791]",
+      "op": "CLICK",
+      "element": "82791",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <filter-chip button> </filter-chip> <slot content> <select-checkbox-group group genres> <slot row> <div> <div id=82791> <slot label> <span> Action </span> </slot> </div> <slot input> </slot> </div> </slot> </select-checkbox-group> </slot> <filter-chip id=87721 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip id=87749 button> <slot label> <span> Audience score </span> </slot> </filter-chip> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [104254]",
+      "op": "CLICK",
+      "element": "104254",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <filter-chip button> </filter-chip> <slot cta2> <button id=104254> Apply </button> </slot> <filter-chip id=109121 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip id=109149 button> <slot label> <span> Audience score </span> </slot> </filter-chip> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [130585]",
+      "op": "CLICK",
+      "element": "130585",
+      "value": "",
+      "description": "[span] Audience score -> CLICK",
+      "role": "span",
+      "label": "Audience score",
+      "observation": "<html> <div> <filter-chip id=128708 button sort: newest> <slot label> <span> Sort: Newest </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=130557 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip id=130585 button> <slot label> <span> Audience score </span> </slot> </filter-chip> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [151991]",
+      "op": "CLICK",
+      "element": "151991",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <filter-chip button> </filter-chip> <filter-chip id=151861 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <slot content> <select-checkbox-group group audience> <slot row> <div> <slot label> <span id=151982> Fresh </span> </slot> <slot input> <select-checkbox id=151991 checkbox upright> </select-checkbox> </slot> </div> </slot> </select-checkbox-group> </slot> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [168281]",
+      "op": "CLICK",
+      "element": "168281",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <filter-chip id=171298 button sort: newest> <slot label> <span> Sort: Newest </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=173147 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <slot cta2> <button id=168281> Apply </button> </slot> <filter-chip button> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [194731]",
+      "op": "CLICK",
+      "element": "194731",
+      "value": "",
+      "description": "[span] Tomatometer -> CLICK",
+      "role": "span",
+      "label": "Tomatometer",
+      "observation": "<html> <div> <filter-chip id=192657 button sort: newest> <slot label> <span> Sort: Newest </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=194506 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=194731 button> <slot label> <span> Tomatometer </span> </slot> </filter-chip> </div> </html>"
+    },
+    {
+      "action": "CLICK [216196]",
+      "op": "CLICK",
+      "element": "216196",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <filter-chip button> </filter-chip> <filter-chip id=215865 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <slot content> <select-checkbox-group group critics> <slot row> <slot input> <select-checkbox id=216196 checkbox fresh> </select-checkbox> </slot> <slot label> <span id=216239> Rotten </span> </slot> </slot> </select-checkbox-group> </slot> </div> </html>"
+    },
+    {
+      "action": "CLICK [232285]",
+      "op": "CLICK",
+      "element": "232285",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <slot content> <select-checkbox-group group critics fresh> <slot row> <slot label> <span id=237553> Fresh </span> </slot> <slot label> <span id=237607> Rotten </span> </slot> </slot> </select-checkbox-group> </slot> <slot cta2> <button id=232285> Apply </button> </slot> </div> </html>"
+    }
+  ]
+}

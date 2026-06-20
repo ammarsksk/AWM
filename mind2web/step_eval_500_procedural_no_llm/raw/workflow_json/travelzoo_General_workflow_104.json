@@ -1,0 +1,90 @@
+{
+  "name": "travelzoo / General workflow 104",
+  "source": "Mind2Web exemplar",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find the highest-rated adults-only romantic beach vacation deals and book the cheapest one.",
+  "steps": [
+    {
+      "action": "CLICK [667]",
+      "op": "CLICK",
+      "element": "667",
+      "value": "",
+      "description": "[link] Vacations -> CLICK",
+      "role": "link",
+      "label": "Vacations",
+      "observation": "<html> <div> <form> <input homepage /> <h3> Show me: </h3> <div> <label> What type of deals? </label> <input id=350 text all deals e.g. hotels, beach, disney /> <input 0 /> <button button> x </button> </div> <button id=466 submit search> Search Deals </button> </form> <a id=667> <span> Vacations </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [4636]",
+      "op": "CLICK",
+      "element": "4636",
+      "value": "",
+      "description": "[link] Beach Vacation Deals 95 DEALS -> CLICK",
+      "role": "link",
+      "label": "Beach Vacation Deals 95 DEALS",
+      "observation": "<html> <body> <form> <input collection /> <button id=3645 submit search> Search Deals </button> </form> <section main> <ul> <a id=4636 beach vacation deals> <span> Beach Vacation Deals </span> <div> 95 Deals </div> <div> 8 New </div> </a> <a id=4713 romantic vacations> <span> Romantic Vacations </span> <div> 76 Deals </div> </a> </ul> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [7657]",
+      "op": "CLICK",
+      "element": "7657",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <body> <form> <input collection /> <button id=7432 submit search> Search Deals </button> </form> <section main> <div> <input/> <button id=7657 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> <a $781 & up -- adults-only> <img id=8948 $781 & up -- adults-only /> </a> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [18914]",
+      "op": "CLICK",
+      "element": "18914",
+      "value": "",
+      "description": "[button] Highest Rated -> CLICK",
+      "role": "button",
+      "label": "Highest Rated",
+      "observation": "<html> <div dialog> <div> <div button> </div> <div id=18914 button> <span> Highest Rated </span> </div> <div id=24529 button> <span> Price: Low to High </span> </div> <div id=24539 button> <span> Price: High to Low </span> </div> <div button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [31420]",
+      "op": "CLICK",
+      "element": "31420",
+      "value": "",
+      "description": "[button] Adults-Only -> CLICK",
+      "role": "button",
+      "label": "Adults-Only",
+      "observation": "<html> <div dialog> <div> <div> <div button> </div> <div button> </div> <div id=37650 button> <span> Price: Low to High </span> </div> <div id=37659 button> <span> Price: High to Low </span> </div> <div button> </div> </div> <div> <button button> 10+ Night Trips </button> <button id=31420 button> Adults-Only </button> <button button> Adventure </button> <button button> Airfare Included </button> <button button> All-inclusive </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [41521]",
+      "op": "CLICK",
+      "element": "41521",
+      "value": "",
+      "description": "[button] Romantic -> CLICK",
+      "role": "button",
+      "label": "Romantic",
+      "observation": "<html> <div dialog> <div> <div> <div button> </div> <div button> </div> <div id=44760 button> <span> Price: Low to High </span> </div> <div id=44770 button> <span> Price: High to Low </span> </div> <div button> </div> </div> <div> <button button> Quick Getaways </button> <button button> Relaxing </button> <button button> Resort </button> <button id=41521 button> Romantic </button> <button button> Solo Travel </button> <button button> Spa Break </button> <button button> Tours </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47817]",
+      "op": "CLICK",
+      "element": "47817",
+      "value": "",
+      "description": "[button] DONE -> CLICK",
+      "role": "button",
+      "label": "DONE",
+      "observation": "<html> <div dialog> <div> <div> <div button> </div> <div button> </div> <div id=50256 button> <span> Price: Low to High </span> </div> <div id=50266 button> <span> Price: High to Low </span> </div> <div button> </div> </div> <div> <button id=47817 button> Done </button> <button button> Reset </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [53991]",
+      "op": "CLICK",
+      "element": "53991",
+      "value": "",
+      "description": "[generic] Go to Aspire Down Under site -> CLICK",
+      "role": "generic",
+      "label": "Go to Aspire Down Under site",
+      "observation": "<html> <section main> <div> <input/> <button id=53910 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> <div> <span> Sorted by: </span> <button id=53943> <span> Sort by </span> Highest Rated </button> <span> Filter: </span> <div button> Adults-Only </div> <div button> Romantic </div> </div> </div> <a id=53991 $4799 -- 5-star adults-only bungalow> <div> <div> <span> Book now at </span> <h3> Aspire Down Under </h3> </div> <img $4799 -- 5-star adults-only bungalow /> </div> <div> <span> $4799 </span> <div> <span go to aspire down under> 5-star adults-only bungalow w/plunge pool & flights </span> <span> Aspire Down Under Fiji </span> <span through march 31, 2024> Through March 31, 2024 </span> </div> </div> </a> </section> </html>"
+    }
+  ]
+}

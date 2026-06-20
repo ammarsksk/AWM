@@ -1,0 +1,300 @@
+{
+  "name": "marriott / Hotel workflow 324",
+  "source": "Mind2Web exemplar",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Find two rooms in a cheapest  hotel in Niagra Falls for three adults and one three year old  kid from May 17 to May 20, view only available hotels within 100 to 200 dollar range  with taxes and fees, and choose the cheapest hotel that offers free breakfast and a pool.",
+  "steps": [
+    {
+      "action": "TYPE [104] [NIAGRA FALLS]",
+      "op": "TYPE",
+      "element": "104",
+      "value": "NIAGRA FALLS",
+      "description": "[textbox] \ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR... -> TYPE: NIAGRA FALLS",
+      "role": "textbox",
+      "label": "\ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+      "observation": "<html> <form search> <div> <div combobox> <div> <input id=104 text where can we take you? /> <button button clear /> </div> </div> <button id=2067 button> <span> 1 Night </span> <span> Sun, Apr 09 - Mon, Apr 10 </span> </button> </div> <button id=2073 submit> Find Hotels </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [16976]",
+      "op": "CLICK",
+      "element": "16976",
+      "value": "",
+      "description": "[option] Niagara Falls, ON, Canada -> CLICK",
+      "role": "option",
+      "label": "Niagara Falls, ON, Canada",
+      "observation": "<html> <form search> <ul listbox> <li id=16976 option> <p> Niagara Falls <span> , ON, Canada </span> </p> </li> <li id=16980 option> <p> Niagara Falls <span> , NY, USA </span> </p> </li> <li id=16985 option> <p> Niagara Falls <span> , Niagara Falls, NY, USA </span> </p> </li> <li option> </li> <li option> </li> </ul> </form> </html>"
+    },
+    {
+      "action": "CLICK [29904]",
+      "op": "CLICK",
+      "element": "29904",
+      "value": "",
+      "description": "[button] \ue9571 NIGHT Sun, Apr 09 - Mon, Apr 10 -> CLICK",
+      "role": "button",
+      "label": "\ue9571 NIGHT Sun, Apr 09 - Mon, Apr 10",
+      "observation": "<html> <form search> <button id=29904 button> <span> 1 Night </span> <span> Sun, Apr 09 - Mon, Apr 10 </span> </button> <div> <button id=31881 button> 1 Room, 1 Guest </button> <button id=31886 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [45266]",
+      "op": "CLICK",
+      "element": "45266",
+      "value": "",
+      "description": "[span] 17 -> CLICK",
+      "role": "span",
+      "label": "17",
+      "observation": "<html> <form search> <div> <div grid> <div rowgroup> <div row> <div gridcell mon apr 17 2023> <span> <span id=47439> 17 </span> <input 3 /> <input 2023 /> </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell wed may 17 2023> <span> <span id=45266> 17 </span> <input 4 /> <input 2023 /> </span> </div> </div> </div> </div> </div> <div> <button button> 1 Room, 1 Guest </button> <button id=47771 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [61142]",
+      "op": "CLICK",
+      "element": "61142",
+      "value": "",
+      "description": "[span] 20 -> CLICK",
+      "role": "span",
+      "label": "20",
+      "observation": "<html> <form search> <div> <div grid> <div rowgroup> <div row> <div gridcell sat may 20 2023> <span> <span id=61142> 20 </span> <input 4 /> <input 2023 /> </span> </div> </div> </div> </div> <button id=63630 button> Done </button> </div> <div> <button button> 1 Room, 1 Guest </button> <button id=63638 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [77019]",
+      "op": "CLICK",
+      "element": "77019",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <form search> <button id=77019 button> Done </button> <div> <button id=79520 button> 1 Room, 1 Guest </button> <button id=79525 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [94411]",
+      "op": "CLICK",
+      "element": "94411",
+      "value": "",
+      "description": "[button] 1 Room, 1 Guest\ue932 -> CLICK",
+      "role": "button",
+      "label": "1 Room, 1 Guest\ue932",
+      "observation": "<html> <div> <form search> <div> <button id=94411 button> 1 Room, 1 Guest </button> <button id=94414 button> Lowest Regular Rate </button> </div> </form> <button id=97141> <span> Next </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [109378]",
+      "op": "CLICK",
+      "element": "109378",
+      "value": "",
+      "description": "[button] Add Rooms -> CLICK",
+      "role": "button",
+      "label": "Add Rooms",
+      "observation": "<html> <div> <form search> <div> <div dialog> <div> <button button> </button> <span> 1 </span> <button id=109378 button> <span> Add Rooms </span> </button> </div> </div> <button id=109420 button> Lowest Regular Rate </button> </div> </form> <button id=112147> <span> Next </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [124405]",
+      "op": "CLICK",
+      "element": "124405",
+      "value": "",
+      "description": "[button] Add Adults -> CLICK",
+      "role": "button",
+      "label": "Add Adults",
+      "observation": "<html> <form search> <div> <div> <button id=124366 button> 2 Rooms, 1 Guest </button> <div dialog> <div> <button button> </button> <span> 1 </span> <button id=124405 button> <span> Add Adults </span> </button> </div> </div> </div> <button id=124430 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [139415]",
+      "op": "CLICK",
+      "element": "139415",
+      "value": "",
+      "description": "[button] Add Adults -> CLICK",
+      "role": "button",
+      "label": "Add Adults",
+      "observation": "<html> <form search> <div> <div> <button id=139376 button> 2 Rooms, 2 Guests </button> <div dialog> <div> <button button> </button> <span> 2 </span> <button id=139415 button> <span> Add Adults </span> </button> </div> </div> </div> <button id=139440 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [154444]",
+      "op": "CLICK",
+      "element": "154444",
+      "value": "",
+      "description": "[button] Add Children -> CLICK",
+      "role": "button",
+      "label": "Add Children",
+      "observation": "<html> <form search> <div> <div> <button id=154386 button> 2 Rooms, 3 Guests </button> <div dialog> <div> <button button> </button> <span> 0 </span> <button id=154444 button> <span> Add Children </span> </button> </div> </div> </div> <button id=154450 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [169496]",
+      "op": "CLICK",
+      "element": "169496",
+      "value": "",
+      "description": "[button] Add Age -> CLICK",
+      "role": "button",
+      "label": "Add Age",
+      "observation": "<html> <form search> <div> <div> <button id=169417 button> 2 Rooms, 4 Guests </button> <div dialog> <div> <button button> </button> <button id=169496 button> <span> Add Age </span> </button> </div> </div> </div> <button id=169502 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [184548]",
+      "op": "CLICK",
+      "element": "184548",
+      "value": "",
+      "description": "[button] Add Less than 1 -> CLICK",
+      "role": "button",
+      "label": "Add Less than 1",
+      "observation": "<html> <form search> <div> <div> <button id=184469 button> 2 Rooms, 4 Guests </button> <div dialog> <div> <button button> </button> <button id=184548 button> <span> Add Less than 1 </span> </button> </div> </div> </div> <button id=184554 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [199600]",
+      "op": "CLICK",
+      "element": "199600",
+      "value": "",
+      "description": "[button] Add 1 -> CLICK",
+      "role": "button",
+      "label": "Add 1",
+      "observation": "<html> <form search> <div> <div> <button id=199521 button> 2 Rooms, 4 Guests </button> <div dialog> <div> <button button> </button> <button id=199600 button> <span> Add 1 </span> </button> </div> </div> </div> <button id=199606 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [214652]",
+      "op": "CLICK",
+      "element": "214652",
+      "value": "",
+      "description": "[button] Add 2 -> CLICK",
+      "role": "button",
+      "label": "Add 2",
+      "observation": "<html> <form search> <div> <div> <button id=214573 button> 2 Rooms, 4 Guests </button> <div dialog> <div> <button button> </button> <button id=214652 button> <span> Add 2 </span> </button> </div> </div> </div> <button id=214658 button> Lowest Regular Rate </button> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [227614]",
+      "op": "CLICK",
+      "element": "227614",
+      "value": "",
+      "description": "[button] Find Hotels -> CLICK",
+      "role": "button",
+      "label": "Find Hotels",
+      "observation": "<html> <form search> <div> <div> <button id=229616 button> 2 Rooms, 4 Guests </button> <div dialog> </div> </div> <button id=229703 button> Lowest Regular Rate </button> </div> <button id=227614 submit> Find Hotels </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [235154]",
+      "op": "CLICK",
+      "element": "235154",
+      "value": "",
+      "description": "[checkbox] Show rates with taxes and all fees -> CLICK",
+      "role": "checkbox",
+      "label": "Show rates with taxes and all fees",
+      "observation": "<html> <div> <div> <span> 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=236933> Price </span> <a id=235200> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> </a> </div> <fieldset> <input id=235154 checkbox on /> <label show rates with taxes and> </label> </fieldset> </div> </html>"
+    },
+    {
+      "action": "CLICK [249278]",
+      "op": "CLICK",
+      "element": "249278",
+      "value": "",
+      "description": "[checkbox] Show available hotels only -> CLICK",
+      "role": "checkbox",
+      "label": "Show available hotels only",
+      "observation": "<html> <div> <div> <span> 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=251038> Price </span> <a id=249316> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> </a> </div> <fieldset> <legend> Show available hotels only </legend> <input id=249278 checkbox show available hotels only [object object] /> <label show available hotels only> Show available hotels only </label> </fieldset> </div> </html>"
+    },
+    {
+      "action": "CLICK [266413]",
+      "op": "CLICK",
+      "element": "266413",
+      "value": "",
+      "description": "[link] Free breakfast (18",
+      "role": "link",
+      "label": "Free breakfast (18",
+      "observation": "<html> <div> <div> <span> 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=265172> Price </span> <a id=265177> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> </a> </div> <a id=266413> <span> Free breakfast (18) </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [281354]",
+      "op": "CLICK",
+      "element": "281354",
+      "value": "",
+      "description": "[link] Pool (18",
+      "role": "link",
+      "label": "Pool (18",
+      "observation": "<html> <div> <div> <span> 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=280233> Price </span> <a id=280238> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> <span> 1 </span> </a> </div> <a id=281354> <span> Pool (18) </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [287582]",
+      "op": "CLICK",
+      "element": "287582",
+      "value": "",
+      "description": "[generic] Price -> CLICK",
+      "role": "generic",
+      "label": "Price",
+      "observation": "<html> <section> <div> <span> Sort by: </span> <span id=289205 combobox> <span> Distance </span> </span> </div> <div> <span> 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=287582> Price </span> <a id=289262> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> <span> 2 </span> </a> </div> </section> </html>"
+    },
+    {
+      "action": "CLICK [305462]",
+      "op": "CLICK",
+      "element": "305462",
+      "value": "",
+      "description": "[label] 100 - 200 USD (6",
+      "role": "label",
+      "label": "100 - 200 USD (6",
+      "observation": "<html> <div> <span> 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=307131> Price </span> <a id=307136> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> <span> 2 </span> </a> <div region> <li> <input radio price 2 /> <label id=305462> 100 - 200 USD (6) </label> </li> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [323109]",
+      "op": "CLICK",
+      "element": "323109",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <div> <span> Filter by: </span> <span> Brand </span> <span> Price </span> <a id=324782> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> <span> 2 </span> </a> <form> <input rangefilter /> <input facets /> <input filter /> <button id=323109 submit> Apply </button> <button button> Clear All </button> </form> </div> <a id=325854> <span> Free breakfast (18) </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [333537]",
+      "op": "CLICK",
+      "element": "333537",
+      "value": "",
+      "description": "[combobox] Sort by: -> CLICK",
+      "role": "combobox",
+      "label": "Sort by:",
+      "observation": "<html> <div> <section> <div> <span> Sort by: </span> <span id=333537 combobox> <span> Distance </span> </span> </div> <div> <span> Filter by: </span> <span> Brand </span> <span> Price </span> <a id=333594> <span> All Filters </span> <span> Sort & Filter </span> <span> Sort & Filter </span> <span> 2 </span> </a> </div> </section> <a id=334652> <span> Free breakfast (6) </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [343728]",
+      "op": "CLICK",
+      "element": "343728",
+      "value": "",
+      "description": "[option] Price -> CLICK",
+      "role": "option",
+      "label": "Price",
+      "observation": "<html> <div> <ul listbox> <li option> Distance </li> <li id=343728 option> Price </li> <li option> City </li> <li option> Brand </li> <li option> Guest Rating </li> </ul> <ul> <a id=346457> <span> Free breakfast (6) </span> </a> <a id=346475> <span> Pool (6) </span> </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [352728]",
+      "op": "CLICK",
+      "element": "352728",
+      "value": "",
+      "description": "[link] VIEW RATES -> CLICK",
+      "role": "link",
+      "label": "VIEW RATES",
+      "observation": "<html> <div> <div> <span> Sort by: </span> <span id=351253 combobox> <span> Price </span> </span> </div> <div> <a id=352369> <span> Free breakfast (6) </span> </a> <a id=352728> <div> View Rates </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [355527]",
+      "op": "CLICK",
+      "element": "355527",
+      "value": "",
+      "description": "[button] Member Rate Prepay Non-refundable -> CLICK",
+      "role": "button",
+      "label": "Member Rate Prepay Non-refundable",
+      "observation": "<html> <form> <div tabpanel> <div> <div> <button id=355527 submit name> Select </button> <a> Select </a> <input/> <input qnqn /> </div> <div> <div> <button id=358257 submit name> Select </button> <a> Select </a> <input/> <input king /> </div> <div> <button id=358361 submit name> Select </button> <a> Select </a> <input/> <input king /> </div> </div> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [360094]",
+      "op": "CLICK",
+      "element": "360094",
+      "value": "",
+      "description": "[label] I have read the rate details and accept the cancel... -> CLICK",
+      "role": "label",
+      "label": "I have read the rate details and accept the cancel...",
+      "observation": "<html> <form> <div> <button id=360791 submit> Continue </button> <a> View other rates </a> </div> <div> <div> <input checkbox true /> <label id=360094> <p> I have read the rate details and accept the cancellation policy </p> </label> </div> <p> <button id=361380 submit> Continue </button> <input/> </p> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [365550]",
+      "op": "CLICK",
+      "element": "365550",
+      "value": "",
+      "description": "[button] CONTINUE -> CLICK",
+      "role": "button",
+      "label": "CONTINUE",
+      "observation": "<html> <form> <div> <button id=366250 submit> Continue </button> <a> View other rates </a> </div> <a id=366397> <span> Choose Room Features </span> </a> <p> <button id=365550 submit> Continue </button> <input/> </p> </form> </html>"
+    }
+  ]
+}

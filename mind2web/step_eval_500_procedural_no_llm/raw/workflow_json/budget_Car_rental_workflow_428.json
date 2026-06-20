@@ -1,0 +1,150 @@
+{
+  "name": "budget / Car rental workflow 428",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find the trip ideas for US travels and book small size or full-size pacific coast highway road trip for a Vietnamese from Los Angeles International Airport on July 7, 1 pm pick up and drop off at the same location on July 15, 2 pm.",
+  "steps": [
+    {
+      "action": "CLICK [127]",
+      "op": "CLICK",
+      "element": "127",
+      "value": "",
+      "description": "[link] Trip Ideas -> CLICK",
+      "role": "link",
+      "label": "Trip Ideas",
+      "observation": "<html> <div> <a id=840 button> Reservations </a> <form resform> <div> <button button> Select My Car </button> <a id=1840> Continue </a> </div> </form> <a id=127> Trip Ideas </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [6262]",
+      "op": "CLICK",
+      "element": "6262",
+      "value": "",
+      "description": "[div] Pacific Coast Highway Road Trip -> CLICK",
+      "role": "div",
+      "label": "Pacific Coast Highway Road Trip",
+      "observation": "<html> <div> <a id=5824 button> Reservations </a> <a id=6262> <img pacific coast highway road trip /> <div> <div> Pacific Coast Highway Road Trip </div> <div> Travel down California State Route 1 from San Francisco to San Diego, and hit up these 28 must-see destinations. </div> <button> Drive the PCH </button> </div> </a> <a id=6756> Trip Ideas </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [7483] [LOS ANGELES]",
+      "op": "TYPE",
+      "element": "7483",
+      "value": "LOS ANGELES",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: LOS ANGELES",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <a id=8164 button> Reservations </a> <form resform> <angucomplete-alt enter your pick-up location or> <div> <input id=7483 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> </form> <form myform> <select id=11639 country> <option ? true /> </select> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [18236]",
+      "op": "CLICK",
+      "element": "18236",
+      "value": "",
+      "description": "[span] Los Angeles Intl Airport -> CLICK",
+      "role": "span",
+      "label": "Los Angeles Intl Airport",
+      "observation": "<html> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <span> <span id=18236> Los Angeles Intl Airport </span> <span> , Los Angeles </span> <span> , California </span> <span> , United States-(LAX) </span> </span> <span> <span id=19607> Los Angeles </span> <span> , California </span> <span> , United States </span> </span> </div> </angucomplete-alt> <div id=20691 vehicle type *> Vehicle Type * </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [30551]",
+      "op": "CLICK",
+      "element": "30551",
+      "value": "",
+      "description": "[textbox] mm/dd/yyyy -> CLICK",
+      "role": "textbox",
+      "label": "mm/dd/yyyy",
+      "observation": "<html> <div> <a id=31247 button> Reservations </a> <form resform> <div> <div> <input id=30551 text mm/dd/yyyy 04/07/2023 /> <button button> ... </button> </div> <div id=30563 vehicle type *> Vehicle Type * </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [42568] [July 2023]",
+      "op": "SELECT",
+      "element": "42568",
+      "value": "July 2023",
+      "description": "[select] April 2023 -> SELECT: July 2023",
+      "role": "select",
+      "label": "April 2023",
+      "observation": "<html> <body> <form resform> <div id=42558 vehicle type *> Vehicle Type * </div> </form> <div> <a id=48155> 15 </a> <div> Jump to a new date: <select id=42568> <option 3|2023 true> April 2023 </option> <option 4|2023> May 2023 </option> <option 5|2023> June 2023 </option> <option 6|2023> July 2023 </option> <option 7|2023> August 2023 </option> <option 8|2023> September 2023 </option> <option 9|2023> October 2023 </option> <option 10|2023> November 2023 </option> <option 11|2023> December 2023 </option> <option 0|2024> January 2024 </option> <option 1|2024> February 2024 </option> <option 2|2024> March 2024 </option> </select> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [54534]",
+      "op": "CLICK",
+      "element": "54534",
+      "value": "",
+      "description": "[link] 7 -> CLICK",
+      "role": "link",
+      "label": "7",
+      "observation": "<html> <body> <form resform> <div id=54526 vehicle type *> Vehicle Type * </div> </form> <tbody> <a id=54534> 7 </a> <a id=60121> 15 </a> </tbody> </body> </html>"
+    },
+    {
+      "action": "CLICK [66500]",
+      "op": "CLICK",
+      "element": "66500",
+      "value": "",
+      "description": "[link] 15 -> CLICK",
+      "role": "link",
+      "label": "15",
+      "observation": "<html> <body> <form resform> <div id=66491 vehicle type *> Vehicle Type * </div> </form> <div> <a id=66500> 15 </a> <a id=72231> 15 </a> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [78458] [1 00 PM]",
+      "op": "SELECT",
+      "element": "78458",
+      "value": "1 00 PM",
+      "description": "[combobox] Pick Up Time -> SELECT: 1:00 PM",
+      "role": "combobox",
+      "label": "Pick Up Time",
+      "observation": "<html> <div> <a id=79137 button> Reservations </a> <form resform> <div> <select id=78458 pick up time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm true> noon </option> </select> <div id=78452 vehicle type *> Vehicle Type * </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [90415] [2 00 PM]",
+      "op": "SELECT",
+      "element": "90415",
+      "value": "2 00 PM",
+      "description": "[combobox] Return Time -> SELECT: 2:00 PM",
+      "role": "combobox",
+      "label": "Return Time",
+      "observation": "<html> <div> <a id=91096 button> Reservations </a> <form resform> <div> <select id=90415 return time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm true> noon </option> </select> <div id=90411 vehicle type *> Vehicle Type * </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [102376] [Vietnam]",
+      "op": "SELECT",
+      "element": "102376",
+      "value": "Vietnam",
+      "description": "[combobox] Select Residency -> SELECT: Vietnam",
+      "role": "combobox",
+      "label": "Select Residency",
+      "observation": "<html> <div> <a id=103055 button> Reservations </a> <form resform> <div> <select id=102376 select residency> <option afghanistan string:af> Afghanistan </option> <option albania string:al> Albania </option> <option algeria string:dz> Algeria </option> <option andorra string:ad> Andorra </option> <option angola string:ao> Angola </option> <option anguilla string:ai> Anguilla </option> <option antigua & barbuda string:ag> Antigua & Barbuda </option> <option argentina string:ar> Argentina </option> <option armenia string:am> Armenia </option> <option aruba string:ab> Aruba </option> <option australia string:au> Australia </option> <option austria string:at> Austria </option> <option azerbaijan string:az> Azerbaijan </option> <option bahamas string:bs> Bahamas </option> <option bahrain string:bh> Bahrain </option> <option bangladesh string:bl> Bangladesh </option> <option barbados string:bb> Barbados </option> <option belarus string:ba> Belarus </option> <option belgium string:be> Belgium </option> <option belize string:bz> Belize </option> <option benin string:bp> Benin </option> <option bermuda string:bm> Bermuda </option> <option bhutan string:bt> Bhutan </option> <option bolivia string:bo> Bolivia </option> <option bonaire string:ye> Bonaire </option> </select> <div id=102370 vehicle type *> Vehicle Type * </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [114329]",
+      "op": "CLICK",
+      "element": "114329",
+      "value": "",
+      "description": "[generic] Vehicle Type * -> CLICK",
+      "role": "generic",
+      "label": "Vehicle Type *",
+      "observation": "<html> <div> <a id=115013 button> Reservations </a> <form resform> <div> <div id=114329 vehicle type *> Vehicle Type * </div> <div> <button id=116452 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [126380]",
+      "op": "CLICK",
+      "element": "126380",
+      "value": "",
+      "description": "[p] Small to Full Size -> CLICK",
+      "role": "p",
+      "label": "Small to Full Size",
+      "observation": "<html> <form resform> <div> <div id=126375 vehicle type *> Vehicle Type * </div> <div> <img id=126370 small to full size /> <p id=126380> Small to Full Size </p> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [138405]",
+      "op": "CLICK",
+      "element": "138405",
+      "value": "",
+      "description": "[button] Select My Car -> CLICK",
+      "role": "button",
+      "label": "Select My Car",
+      "observation": "<html> <div> <a id=139085 button> Reservations </a> <form resform> <div> <div id=138401 small to full size> Small to Full Size </div> <div> <button id=138405 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </div> </html>"
+    }
+  ]
+}

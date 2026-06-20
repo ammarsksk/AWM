@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "name": "carmax / Auto workflow 354",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find a store in Los Angeles, California, and set Riverside as my store and add a card from that store to my favorites",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "store",
+      "find",
+      "set",
+      "link",
+      "stores",
+      "carmax",
+      "shopping",
+      "auto",
+      "los",
+      "angeles",
+      "california",
+      "riverside",
+      "add",
+      "card",
+      "favorites",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "see",
+      "all",
+      "shop",
+      "local",
+      "cars",
+      "img",
+      "car",
+      "not",
+      "saved"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Find a store",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Find a store",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the 31 stores",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "31 stores",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the see all stores",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "see all stores",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the SET AS MY STORE",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "SET AS MY STORE",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the SHOP LOCAL CARS",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "SHOP LOCAL CARS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Car not saved",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Car not saved",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "carmax / Auto workflow 354"
+}

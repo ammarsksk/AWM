@@ -2,6 +2,7 @@ import os
 import json
 import random
 import argparse
+import re
 from ast import literal_eval
 from provider_config import get_openai_compatible_kwargs
 
@@ -57,6 +58,33 @@ def remove_invalid_steps(actions: list[str]) -> list[str]:
 
 def extract_think_and_action(path: str) -> tuple[list[str], list[str]]:
     """Extract the task trajectory from the log file."""
+    entries, current = [], []
+    for line in open(path, "r"):
+        if re.match(r"^\d{4}-\d{2}-\d{2} ", line):
+            if current:
+                entries.append("".join(current).rstrip())
+            current = [line]
+        elif current:
+            current.append(line)
+    if current:
+        entries.append("".join(current).rstrip())
+
+    parsed_thinks, parsed_actions = [], []
+    marker = "browsergym.experiments.loop - INFO - "
+    for entry in entries:
+        if marker not in entry or "action:" not in entry:
+            continue
+        content = entry.split(marker, 1)[1].strip()
+        think, action_block = content.split("action:", 1)
+        actions = remove_invalid_steps(
+            [line.strip() for line in action_block.splitlines() if line.strip()]
+        )
+        if actions:
+            parsed_thinks.append(think.strip())
+            parsed_actions.append(actions)
+    if parsed_actions:
+        return parsed_thinks, parsed_actions
+
     blocks = load_blocks(path)
     think_list, action_list = [], []
     for i in range(1, len(blocks), 2):
@@ -189,7 +217,7 @@ if __name__ == "__main__":
     parser.add_argument("--criteria", type=str, default="autoeval", 
                         choices=["gt", "autoeval"],
                         help="'gt': only use examples with gold reward, 'autoeval': use examples with autoeval reward.")
-    parser.add_argument("--model", type=str, default="gpt-4o")
+    parser.add_argument("--model", type=str, default="google/gemini-2.5-pro")
     parser.add_argument("--num_samples", type=int, default=1, help="Max number of samples to input per template.")
     args = parser.parse_args()
 

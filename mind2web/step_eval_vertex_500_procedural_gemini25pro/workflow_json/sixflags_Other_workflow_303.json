@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "name": "sixflags / Other workflow 303",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "sixflags",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Show the balance sheet and cash flow statement for the fiscal year 2021 of Six Flags.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "balance",
+      "sheet",
+      "cash",
+      "flow",
+      "sixflags",
+      "travel",
+      "other",
+      "show",
+      "statement",
+      "fiscal",
+      "year",
+      "2021",
+      "six",
+      "flags",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "investors",
+      "financial",
+      "info",
+      "heading"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Investors",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Investors",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Financial Info",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Financial Info",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Balance Sheet",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Balance Sheet",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Cash Flow",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Cash Flow",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "sixflags / Other workflow 303"
+}

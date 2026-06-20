@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "name": "instacart / General workflow 46",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "instacart",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "Add a new address to the account. The address is 2983 Marietta Street,  APT 2. Business name is Buck.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "address",
+      "use",
+      "street",
+      "required",
+      "textbox",
+      "specific",
+      "field",
+      "add",
+      "new",
+      "2983",
+      "marietta",
+      "apt",
+      "business",
+      "name",
+      "span",
+      "optional",
+      "instacart",
+      "shopping",
+      "general",
+      "account",
+      "buck",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "171",
+      "2nd",
+      "floor",
+      "suite",
+      "etc",
+      "save"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the 171 2nd street",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "171 2nd street",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Add a new address",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Add a new address",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the 2983 Marietta Street",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "2983 Marietta Street",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Apt, floor, suite, etc (optional",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Apt, floor, suite, etc (optional",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Business name (optional",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Business name (optional",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Save Address",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Save Address",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "instacart / General workflow 46"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "espn / Sports workflow 101",
+  "source": "Mind2Web exemplar",
+  "website": "espn",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "Look up the scores for the previous day's NBA games",
+  "steps": [
+    {
+      "action": "CLICK [6959]",
+      "op": "CLICK",
+      "element": "6959",
+      "value": "",
+      "description": "[link] NBA -> HOVER",
+      "role": "link",
+      "label": "NBA",
+      "observation": "<html> <header> <div> <input id=5749 text search sports, teams or players... /> <input submit /> </div> <li> <a id=6959> <span> <span> NBA </span> <span> NBA </span> </span> </a> <button id=6972 nba /> </li> </header> </html>"
+    },
+    {
+      "action": "CLICK [46982]",
+      "op": "CLICK",
+      "element": "46982",
+      "value": "",
+      "description": "[link] Scores -> CLICK",
+      "role": "link",
+      "label": "Scores",
+      "observation": "<html> <div> <header> <div> <input id=45725 text search sports, teams or players... /> <input submit /> </div> <a id=46982> <span> <span> Scores </span> <span> Scores </span> </span> </a> </header> <a id=56784> Box Score </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [62559]",
+      "op": "CLICK",
+      "element": "62559",
+      "value": "",
+      "description": "[span] Mon -> CLICK",
+      "role": "span",
+      "label": "Mon",
+      "observation": "<html> <div> <section> <div> <select id=64155 sports dates datesdropdown> <option 20230402> Apr 2 </option> <option 20230404 true> Apr 4 </option> <option 20230405> Apr 5 </option> </select> <select> </select> </div> </section> <div main> <div> <div> <span id=62559> Mon </span> <span> Apr 3 </span> </div> <button id=65008 calendar /> </div> </div> </div> </html>"
+    }
+  ]
+}

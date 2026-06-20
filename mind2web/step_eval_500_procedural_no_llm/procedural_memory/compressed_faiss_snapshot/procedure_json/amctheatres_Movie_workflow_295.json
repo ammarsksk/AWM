@@ -1,0 +1,129 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "creed",
+      "iii",
+      "use",
+      "required",
+      "movie",
+      "zip",
+      "specific",
+      "field",
+      "search",
+      "amctheatres",
+      "entertainment",
+      "find",
+      "theaters",
+      "within",
+      "miles",
+      "code",
+      "90028",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "img",
+      "poster",
+      "link",
+      "get",
+      "tickets",
+      "amc",
+      "columbus",
+      "textbox",
+      "city",
+      "theatre",
+      "generic",
+      "submit"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Entertainment",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the movie poster for Creed III",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "movie poster for Creed III",
+        "target_type": "img",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the get tickets for Creed III",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "get tickets for Creed III",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the AMC Columbus 10",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "AMC Columbus 10",
+        "target_type": "select",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "type the Search by City, Zip or Theatre",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search by City, Zip or Theatre",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Submit Search",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Submit Search",
+        "target_type": "generic",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find theaters for Creed III within 20 miles of zip code 90028.",
+  "memory_type": "typed_procedure",
+  "name": "amctheatres / Movie workflow 295",
+  "raw_workflow_name": "amctheatres / Movie workflow 295",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 5.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Movie",
+  "termination": {
+    "max_steps_hint": 5,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "amctheatres"
+}

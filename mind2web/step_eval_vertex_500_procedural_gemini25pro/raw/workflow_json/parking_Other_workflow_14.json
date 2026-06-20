@@ -1,0 +1,180 @@
+{
+  "name": "parking / Other workflow 14",
+  "source": "Mind2Web exemplar",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Book parking spot for James SMith at Stewart Hotel in New York for 2 hours. The street address is 133 st avenue in New York. Zip code is 10001 and phone number is 888888888. The email address is buckeye.foobar@gmail.com. Employer's name is Gua AB.",
+  "steps": [
+    {
+      "action": "CLICK [663]",
+      "op": "CLICK",
+      "element": "663",
+      "value": "",
+      "description": "[span] Enter an Address or Venue to find parking -> CLICK",
+      "role": "span",
+      "label": "Enter an Address or Venue to find parking",
+      "observation": "<html> <div> <button id=631> Find parking near me </button> <form get> <span> <input id=655 combobox text search /> <label id=663> <span> Enter an Address or Venue to find parking </span> </label> </span> </form> <div dialog> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2939] [stewart hotel]",
+      "op": "TYPE",
+      "element": "2939",
+      "value": "stewart hotel",
+      "description": "[span] Enter an Address or Venue to find parking -> TYPE: stewart hotel",
+      "role": "span",
+      "label": "Enter an Address or Venue to find parking",
+      "observation": "<html> <form get> <span> <input id=2929 combobox text search /> <label id=2939> <span> Enter an Address or Venue to find parking </span> </label> </span> <div> <input id=3495 2023-03-20 /> <button button /> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [6255]",
+      "op": "CLICK",
+      "element": "6255",
+      "value": "",
+      "description": "[option] STEWART HOTEL 148 W 31st Street, New York Parking... -> CLICK",
+      "role": "option",
+      "label": "STEWART HOTEL 148 W 31st Street, New York Parking...",
+      "observation": "<html> <form get> <span> <input id=6249 combobox text search stewart hotel /> <pre id=6250> stewart hotel </pre> <span listbox> <div id=6255 option> <div> <em> STEWART </em> <em> HOTEL </em> <small> 148 W 31st Street, New York </small> <span> Parking Lot </span> </div> </div> </span> </span> </form> </html>"
+    },
+    {
+      "action": "CLICK [8512]",
+      "op": "CLICK",
+      "element": "8512",
+      "value": "",
+      "description": "[link] BOOK MONTHLY PARKING -> CLICK",
+      "role": "link",
+      "label": "BOOK MONTHLY PARKING",
+      "observation": "<html> <div> <div> <a id=14619> STEWART HOTEL </a> <a> Back to results </a> <a toggle map sidebar /> <a> STEWART HOTEL </a> </div> <h2 lot name> <a id=14644> STEWART HOTEL </a> </h2> <div> <a id=8512> Book Monthly Parking </a> <a> Book Monthly Parking </a> <div> Rates validfor new Monthly Parking customers only. </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [23843]",
+      "op": "CLICK",
+      "element": "23843",
+      "value": "",
+      "description": "[textbox] First Name -> CLICK",
+      "role": "textbox",
+      "label": "First Name",
+      "observation": "<html> <form aspnetform> <strong> <div> <div> <span> First Name </span> <span> * </span> <input id=23843 text first name /> <span> * </span> </div> <div> <span> Employer Name </span> <span> * </span> <input id=24699 text employer name /> <span> * </span> </div> </div> <div> <a id=24730> Add Parker </a> <span> This is where you enter the name(s) </span> </div> </strong> </form> </html>"
+    },
+    {
+      "action": "TYPE [26278] [James]",
+      "op": "TYPE",
+      "element": "26278",
+      "value": "James",
+      "description": "[textbox] First Name -> TYPE: James",
+      "role": "textbox",
+      "label": "First Name",
+      "observation": "<html> <form aspnetform> <div> <div> <span> First Name </span> <span> * </span> <input id=26278 text first name /> <span> * </span> </div> <div> <span> Address2 </span> <input id=26697 text suite#, apt.#, etc /> <span> * </span> </div> <div> <span> Zipcode </span> <span> * </span> <input id=27060 text zip code /> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [28706] [SMith]",
+      "op": "TYPE",
+      "element": "28706",
+      "value": "SMith",
+      "description": "[textbox] Last Name -> TYPE: SMith",
+      "role": "textbox",
+      "label": "Last Name",
+      "observation": "<html> <form aspnetform> <div> <div> <span> Last Name </span> <span> * </span> <input id=28706 text last name /> <span> * </span> </div> <div> <span> Address2 </span> <input id=29132 text suite#, apt.#, etc /> <span> * </span> </div> <div> <span> Zipcode </span> <span> * </span> <input id=29495 text zip code /> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [31148] [133 st avenue]",
+      "op": "TYPE",
+      "element": "31148",
+      "value": "133 st avenue",
+      "description": "[textbox] Address1 -> TYPE: 133 st avenue",
+      "role": "textbox",
+      "label": "Address1",
+      "observation": "<html> <form aspnetform> <div> <div> <div> <span> Street Address </span> <span> * </span> <input id=31148 text address1 /> <span> * </span> </div> <div> <span> City </span> <span> * </span> <input id=31583 text city name /> <span> * </span> </div> </div> <div> <span> Zipcode </span> <span> * </span> <input id=31930 text zip code /> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [33584] [New York]",
+      "op": "TYPE",
+      "element": "33584",
+      "value": "New York",
+      "description": "[textbox] City Name -> TYPE: New York",
+      "role": "textbox",
+      "label": "City Name",
+      "observation": "<html> <form aspnetform> <div> <div> <span> City </span> <span> * </span> <input id=33584 text city name /> <span> * </span> </div> <div> <span> Zipcode </span> <span> * </span> <input id=34374 text zip code /> </div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=34431 text email address /> </div> </div> </form> </html>"
+    },
+    {
+      "action": "SELECT [36026] [New York]",
+      "op": "SELECT",
+      "element": "36026",
+      "value": "New York",
+      "description": "[select] Alabama -> SELECT: New York",
+      "role": "select",
+      "label": "Alabama",
+      "observation": "<html> <form aspnetform> <div> <div> <div> <span> State/Territory/Province </span> <span> * </span> <select id=36026> <option al true> Alabama </option> <option ak> Alaska </option> <option as> American Samoa </option> <option az> Arizona </option> <option ar> Arkansas </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option dc> District of Columbia </option> <option fm> Federated States of Micronesia </option> <option fl> Florida </option> <option ga> Georgia </option> <option gu> Guam </option> <option hi> Hawaii </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option mh> Marshall Islands </option> <option md> Maryland </option> </select> </div> <div> <span> Zipcode </span> <span> * </span> <input id=36808 text zip code /> </div> </div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=36865 text email address /> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [38461] [10001]",
+      "op": "TYPE",
+      "element": "38461",
+      "value": "10001",
+      "description": "[textbox] Zip Code -> TYPE: 10001",
+      "role": "textbox",
+      "label": "Zip Code",
+      "observation": "<html> <form aspnetform> <div> <div> <span> Zipcode </span> <span> * </span> <input id=38461 text zip code /> </div> <div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=39300 text email address /> </div> <div> <span> Employer Name </span> <span> * </span> <input id=39317 text employer name /> <span> * </span> </div> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [40897] [888888888]",
+      "op": "TYPE",
+      "element": "40897",
+      "value": "888888888",
+      "description": "[textbox] (###",
+      "role": "textbox",
+      "label": "(###",
+      "observation": "<html> <form aspnetform> <div> <div> <span> Phone No </span> <span> * </span> <input id=40897 text (###) ###-#### /> </div> <div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=41743 text email address /> </div> <div> <span> Employer Name </span> <span> * </span> <input id=41760 text employer name /> <span> * </span> </div> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [43340] [buckeye.foobar@gmail.com]",
+      "op": "TYPE",
+      "element": "43340",
+      "value": "buckeye.foobar@gmail.com",
+      "description": "[textbox] Email Address -> TYPE: buckeye.foobar@gmail.com",
+      "role": "textbox",
+      "label": "Email Address",
+      "observation": "<html> <form aspnetform> <div> <div> <span> Email Address </span> <span> * </span> <input id=43340 text email address /> <span> Invalid Email Address (valid ex: test@test.com) </span> </div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=44186 text email address /> </div> <div> <span> Employer Name </span> <span> * </span> <input id=44203 text employer name /> <span> * </span> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [45783] [buckeye.foobar@gmail.com]",
+      "op": "TYPE",
+      "element": "45783",
+      "value": "buckeye.foobar@gmail.com",
+      "description": "[textbox] Email Address -> TYPE: buckeye.foobar@gmail.com",
+      "role": "textbox",
+      "label": "Email Address",
+      "observation": "<html> <form aspnetform> <div> <div> <span> Email Address </span> <span> * </span> <input id=46610 text email address /> <span> Invalid Email Address (valid ex: test@test.com) </span> </div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=45783 text email address /> </div> <div> <span> Employer Name </span> <span> * </span> <input id=46646 text employer name /> <span> * </span> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [48225]",
+      "op": "CLICK",
+      "element": "48225",
+      "value": "",
+      "description": "[textbox] Employer Name -> CLICK",
+      "role": "textbox",
+      "label": "Employer Name",
+      "observation": "<html> <form aspnetform> <div> <div> <span> Email Address </span> <span> * </span> <input id=49046 text email address /> <span> Invalid Email Address (valid ex: test@test.com) </span> </div> <div> <span> Confirm Email Address </span> <span> * </span> <input id=49066 text email address /> </div> <div> <span> Employer Name </span> <span> * </span> <input id=48225 text employer name /> <span> * </span> </div> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [50645] [Gua AB]",
+      "op": "TYPE",
+      "element": "50645",
+      "value": "Gua AB",
+      "description": "[textbox] Employer Name -> TYPE: Gua AB",
+      "role": "textbox",
+      "label": "Employer Name",
+      "observation": "<html> <form aspnetform> <strong> <div> <div> <span> Address2 </span> <input id=51072 text suite#, apt.#, etc /> <span> * </span> </div> <div> <span> Employer Name </span> <span> * </span> <input id=50645 text employer name /> <span> * </span> </div> </div> <h4> Parkers and Vehicles </h4> <td> No records to display. </td> <input id=50651 image /> </strong> </form> </html>"
+    },
+    {
+      "action": "CLICK [53088]",
+      "op": "CLICK",
+      "element": "53088",
+      "value": "",
+      "description": "[button] Submit -> CLICK",
+      "role": "button",
+      "label": "Submit",
+      "observation": "<html> <form aspnetform> <strong> <div> <div> <span> Address2 </span> <input id=53514 text suite#, apt.#, etc /> <span> * </span> </div> <div> <span> Email Address </span> <span> * </span> <input id=53914 text email address /> <span> Invalid Email Address (valid ex: test@test.com) </span> </div> </div> <h4> Parkers and Vehicles </h4> <td> No records to display. </td> <input id=53088 image /> </strong> </form> </html>"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "jetblue / Airlines workflow 94",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Book a flight + cruise for two flying from Atlanta in October for vacation starting on October 8 for 6 nights with Miami as the departure port, choose the cheapest flight, hotel, and room in the cruise for booking.",
+  "steps": [
+    {
+      "action": "CLICK [833]",
+      "op": "CLICK",
+      "element": "833",
+      "value": "",
+      "description": "[span] Flights + Cruise -> CLICK",
+      "role": "span",
+      "label": "Flights + Cruise",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button tab button> </button> <button id=818 tab button> <span> <jb-icon img /> <span> Flights + Hotel </span> </span> </button> <button id=833 tab button> <span> <jb-icon img /> <span> Flights + Cruise </span> </span> </button> <button tab button> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=943 text /> </jb-type-ahead-input> </div> </jb-tab-panel> </jb-tabs> </html>"
+    },
+    {
+      "action": "CLICK [4946]",
+      "op": "CLICK",
+      "element": "4946",
+      "value": "",
+      "description": "[button] Search flights + cruise External Link should open ... -> CLICK",
+      "role": "button",
+      "label": "Search flights + cruise External Link should open ...",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button tab button> </button> <button id=4888 tab button> <span> <jb-icon img /> <span> Flights + Hotel </span> </span> </button> <button tab button> </button> <button tab button> </button> <button id=4924 tab button> <span> <jb-icon img /> <span> Stays </span> </span> </button> </div> </nav> <jb-tab-panel tabpanel> <div> <div> Bundle flights, cruise and hotelall in one place. Plus, enjoy savings & perks from plane to port. </div> <a id=4946 button> <span> Search flights + cruise </span> <jb-icon img external link should open in /> </a> </div> </jb-tab-panel> </jb-tabs> </html>"
+    }
+  ]
+}

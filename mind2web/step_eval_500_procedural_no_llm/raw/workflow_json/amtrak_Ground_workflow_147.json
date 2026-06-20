@@ -1,0 +1,120 @@
+{
+  "name": "amtrak / Ground workflow 147",
+  "source": "Mind2Web exemplar",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Get a ten-ride ticket from Washington to New york starting from April 5",
+  "steps": [
+    {
+      "action": "CLICK [189]",
+      "op": "CLICK",
+      "element": "189",
+      "value": "",
+      "description": "[tab] Rail Passes -> CLICK",
+      "role": "tab",
+      "label": "Rail Passes",
+      "observation": "<html> <div> <header banner> <nav navigation primary> <ul> <a id=1244 button> Destinations </a> <a id=3071 button> DEALS </a> </ul> </nav> </header> <main main> <div tablist> <div> <button tab book trip> Book Trip </button> <button id=189 tab rail passes> Rail Passes </button> <a tab> Auto Train </a> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [6555]",
+      "op": "CLICK",
+      "element": "6555",
+      "value": "",
+      "description": "[link] EXPLORE MULTI-RIDE PASSES -> CLICK",
+      "role": "link",
+      "label": "EXPLORE MULTI-RIDE PASSES",
+      "observation": "<html> <div> <header banner> <div> <nav navigation primary> <a id=9451> <span> MULTI-RIDES & RAIL PASSES </span> <span> USA Rail passes, monthly passes and multi-ride tickets </span> </a> </nav> <a id=9558 button my trip> <span> MY TRIP </span> </a> </div> </header> <main main> <div> <h3> Multi-Ride Pass </h3> <a id=6555> EXPLORE MULTI-RIDE PASSES </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [11915] [WASHINGTON]",
+      "op": "TYPE",
+      "element": "11915",
+      "value": "WASHINGTON",
+      "description": "[textbox] From -> TYPE: WASHINGTON",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <header banner> <a id=14948 button my trip> <span> MY TRIP </span> </a> </header> <main main> <div> <mat-form-field combobox> <div> <input id=11915 text /> <div listbox> </div> </div> </mat-form-field> <div> <button id=15438 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [23572]",
+      "op": "CLICK",
+      "element": "23572",
+      "value": "",
+      "description": "[option] Washington, DC - Union Station (WAS",
+      "role": "option",
+      "label": "Washington, DC - Union Station (WAS",
+      "observation": "<html> <main main> <div> <mat-form-field combobox> <div listbox> <div> <div> <div> Stations </div> <div id=23572 option> Washington, DC - Union Station (WAS) </div> <div option> Washington, MO (WAH) </div> <div option> Lorton, VA - Auto Train Station (LOR) </div> </div> <div> <div> Locations </div> <div id=26991 option> Washington, DC, USA (District of Columbia) </div> <div option> Washington Monument, 2 15th St NW, Washington, DC, 20024 </div> <div option> Washington </div> <div option> Washington Twp, OH </div> </div> </div> </div> </mat-form-field> <div> <button id=27079 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [35190] [NEW YORK]",
+      "op": "TYPE",
+      "element": "35190",
+      "value": "NEW YORK",
+      "description": "[textbox] To -> TYPE: NEW YORK",
+      "role": "textbox",
+      "label": "To",
+      "observation": "<html> <main main> <div> <mat-form-field combobox> <input id=35190 text /> </mat-form-field> <input id=38722 select a trip start date /> <div> <button id=38737 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [46892]",
+      "op": "CLICK",
+      "element": "46892",
+      "value": "",
+      "description": "[option] New York, NY - Moynihan Train Hall at Penn Sta. (N... -> CLICK",
+      "role": "option",
+      "label": "New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+      "observation": "<html> <main main> <div> <mat-form-field combobox> <div listbox> <div> <div> <div> Stations </div> <div option> New York State Fair, NY (NYF) </div> <div id=46892 option> New York, NY - Moynihan Train Hall at Penn Sta. (NYP) </div> </div> <div> <div> Locations </div> <div option> New York, NY, USA (New York County) </div> <div option> New York </div> <div id=50386 option> New York, NY </div> <div option> New York Municipal Airport-LaGuardia Field, New York, NY </div> <div option> nyc, NY </div> <div option> Let me enter a station. </div> </div> </div> </div> </mat-form-field> <div> <button id=50435 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [58588]",
+      "op": "CLICK",
+      "element": "58588",
+      "value": "",
+      "description": "[textbox] Select a trip start date -> CLICK",
+      "role": "textbox",
+      "label": "Select a trip start date",
+      "observation": "<html> <div> <header banner> <a id=61621 button my trip> <span> MY TRIP </span> </a> </header> <main main> <div> <input id=58588 select a trip start date /> <div> <button id=62154 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [70588]",
+      "op": "CLICK",
+      "element": "70588",
+      "value": "",
+      "description": "[gridcell] Wednesday, April 5, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Wednesday, April 5, 2023",
+      "observation": "<html> <main main> <div> <ngb-datepicker-month grid> <div row> <div gridcell sunday, march 5, 2023> <span id=74221> 5 </span> </div> </div> </ngb-datepicker-month> <ngb-datepicker-month grid> <div row> <div gridcell sunday, april 2, 2023> </div> <div gridcell monday, april 3, 2023> </div> <div gridcell tuesday, april 4, 2023> </div> <div id=74349 gridcell wednesday, april 5, 2023> <span id=70588> 5 </span> </div> <div gridcell thursday, april 6, 2023> </div> <div gridcell friday, april 7, 2023> </div> <div gridcell saturday, april 8, 2023> </div> </div> </ngb-datepicker-month> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [82881]",
+      "op": "CLICK",
+      "element": "82881",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <main main> <div> <div> <ngb-datepicker-month grid> <div row> <div gridcell wednesday, april 5, 2023> <span id=86643> 5 </span> </div> </div> </ngb-datepicker-month> <div> <button> Close </button> <button id=82881> Done </button> </div> </div> <div> <button id=86736 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [94897]",
+      "op": "CLICK",
+      "element": "94897",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <main main> <section> <div> <button id=94897 continue> Continue </button> <button button /> <button button /> <button button /> </div> <ol> <a id=98500> <span> Multi-Ride & Rail Passes </span> </a> <a id=98511> <span> Multi-Ride Pass </span> </a> </ol> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [110278]",
+      "op": "CLICK",
+      "element": "110278",
+      "value": "",
+      "description": "[button] Ticket Price $662 -> CLICK",
+      "role": "button",
+      "label": "Ticket Price $662",
+      "observation": "<html> <main main> <div region> <div tab> <div> <button id=110148 continue> Continue </button> <button button /> <button button /> <button button /> </div> </div> </div> <button id=110278> <div> <p> Ticket Price </p> <span> $662 </span> </div> <div> <span> Ticket Price </span> <span> | </span> <span> $662 </span> </div> </button> <div> <button go back to previous page> Back </button> <button id=110302 continue to next page> Continue </button> </div> </main> </html>"
+    }
+  ]
+}

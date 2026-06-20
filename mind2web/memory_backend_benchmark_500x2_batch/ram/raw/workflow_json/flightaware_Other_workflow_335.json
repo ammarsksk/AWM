@@ -1,0 +1,30 @@
+{
+  "name": "flightaware / Other workflow 335",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search for flights available from Calgary (CYYC) to New York (ZNY).",
+  "steps": [
+    {
+      "action": "TYPE [128] [Calgary]",
+      "op": "TYPE",
+      "element": "128",
+      "value": "Calgary",
+      "description": "[textbox] Origin -> TYPE: Calgary",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <form> <input id=128 text origin kosu /> <div button> </div> <input id=2293 text destination /> <input submit /> </form> <input id=3023 text /> </div> </html>"
+    },
+    {
+      "action": "CLICK [10076]",
+      "op": "CLICK",
+      "element": "10076",
+      "value": "",
+      "description": "[div] Calgary -> CLICK",
+      "role": "div",
+      "label": "Calgary",
+      "observation": "<html> <div> <div id=10076> <strong> Calgary </strong> Int'l ( <strong> Calgary </strong> ) - YYC - CYYC </div> <div> <strong> Calgary </strong> /Springbank (Springbank) ( <strong id=14786> Calgary </strong> ) - YBW - CYBW </div> <div> /Airdrie (Airdrie) (Airdrie) - CEF4 </div> <div> Peter Lougheed Centre Heliport ( ) - CLC3 </div> <div> <strong> Calgary </strong> (Aerial Recon) Heliport ( <strong id=14825> Calgary </strong> ) - CAR3 </div> </div> </html>"
+    }
+  ]
+}

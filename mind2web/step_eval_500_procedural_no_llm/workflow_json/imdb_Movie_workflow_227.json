@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "name": "imdb / Movie workflow 227",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Find The Last of Us series and add it to my watch list.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "last",
+      "value",
+      "imdb",
+      "add",
+      "use",
+      "required",
+      "entertainment",
+      "movie",
+      "find",
+      "series",
+      "watch",
+      "list",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "search",
+      "specific",
+      "field",
+      "link",
+      "2023",
+      "pedro",
+      "pascal",
+      "div",
+      "watchlist"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search IMDb",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search IMDb",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the The Last of Us The Last of Us 2023 Pedro Pascal, B...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "The Last of Us The Last of Us 2023 Pedro Pascal, B...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Add to Watchlist",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Add to Watchlist",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 3
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 3.0
+  },
+  "raw_workflow_name": "imdb / Movie workflow 227"
+}

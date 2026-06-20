@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "name": "resy / Restaurant workflow 237",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "goal_pattern": "Make a reservation for 2 guests on april 21 at noon in a restaurant in Austin that is new on resy",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "resy",
+      "restaurant",
+      "april",
+      "austin",
+      "new",
+      "use",
+      "path",
+      "travel",
+      "make",
+      "reservation",
+      "guests",
+      "noon",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "heading",
+      "sat",
+      "apr",
+      "2023",
+      "combobox",
+      "party",
+      "specific",
+      "field",
+      "link",
+      "este",
+      "dining",
+      "reserve",
+      "now"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "path",
+        "target": "[path] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Austin",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Austin",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the New On Resy",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "New On Resy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Sat., Apr. 22",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sat., Apr. 22",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the April 21, 2023.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "April 21, 2023.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "select the Party of 2",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Party of 2",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Este",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Este",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 12:00 PM Dining",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "12:00 PM Dining",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Reserve Now",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Reserve Now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "resy / Restaurant workflow 237"
+}

@@ -156,7 +156,7 @@ if __name__ == "__main__":
     parser.add_argument("--result_dir", type=str, required=True,
                         help="Path to the result directory, e.g., 'webarena.0'.")
     # autoeval
-    parser.add_argument("--model", type=str, default="gpt-3.5-turbo")
+    parser.add_argument("--model", type=str, default="google/gemini-2.5-pro")
     parser.add_argument("--prompt", type=str, default="text",
                         choices=["text", "vision"])
 

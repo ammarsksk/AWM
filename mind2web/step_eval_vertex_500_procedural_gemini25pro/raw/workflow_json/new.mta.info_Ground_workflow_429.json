@@ -1,0 +1,80 @@
+{
+  "name": "new.mta.info / Ground workflow 429",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find out about planned service changes on the 4 Subway on 5/3/2023.",
+  "steps": [
+    {
+      "action": "CLICK [214]",
+      "op": "CLICK",
+      "element": "214",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div main> <div> <ul tablist> <a id=1172 tab> Subway </a> </ul> <div> <a id=1672 click to open planned service> Planned Service Changes </a> <a click to open elevator &> Elevator & Escalator Status </a> </div> </div> </div> <svg id=214 /> </html>"
+    },
+    {
+      "action": "CLICK [6023]",
+      "op": "CLICK",
+      "element": "6023",
+      "value": "",
+      "description": "[link] Planned Service Changes -> CLICK",
+      "role": "link",
+      "label": "Planned Service Changes",
+      "observation": "<html> <div> <section navigation> <div region main menu region> <a id=6023> Planned Service Changes </a> </div> </section> <div main> <div> <a id=7481 click to open planned service> Planned Service Changes </a> <a click to open elevator &> Elevator & Escalator Status </a> </div> </div> <div main> <a id=7563> <span> Look up planned service changes </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [9196] [4]",
+      "op": "TYPE",
+      "element": "9196",
+      "value": "4",
+      "description": "[searchbox] Search Routes -> TYPE: 4",
+      "role": "searchbox",
+      "label": "Search Routes",
+      "observation": "<html> <div main> <article article> <div> <div to select a route and> <input id=9196 search search routes /> </div> <button id=9760> Select routes </button> <div> <input id=12216 text select date (format date today 04/12/2023 /> <a button /> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [16869]",
+      "op": "CLICK",
+      "element": "16869",
+      "value": "",
+      "description": "[listitem] 4 -> CLICK",
+      "role": "listitem",
+      "label": "4",
+      "observation": "<html> <div main> <article article> <div> <div to select a route and> <input id=17428 search search routes 4 /> <li id=16869 4> 4 </li> </div> <div> <input id=19894 text select date (format date today 04/12/2023 /> <a button /> </div> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [24564]",
+      "op": "CLICK",
+      "element": "24564",
+      "value": "",
+      "description": "[button] 04/12/2023 -> CLICK",
+      "role": "button",
+      "label": "04/12/2023",
+      "observation": "<html> <div main> <article article> <div> <div to select a route and> <input id=25122 search search routes 4 /> </div> <div> <input id=27586 text select date (format date today 04/12/2023 /> <a button /> </div> </div> </article> </div> <a id=24564 button acccalendar /> </html>"
+    },
+    {
+      "action": "CLICK [35515]",
+      "op": "CLICK",
+      "element": "35515",
+      "value": "",
+      "description": "[button] Next Month -> CLICK",
+      "role": "button",
+      "label": "Next Month",
+      "observation": "<html> <div main> <article article> <div dialog calendar> <table application calendar> <tbody> <tr> <td button previous month /> <td id=35515 button next month> </td> </tr> <tr> <td 2, sunday april 2023 disabled> </td> <td id=35567 3, monday april 2023 disabled> <span> 3 </span> </td> <td 4, tuesday april 2023 disabled> </td> <td id=35573 5, wednesday april 2023 disabled> <span> 5 </span> </td> <td 6, thursday april 2023 disabled> </td> <td 7, friday april 2023 disabled> </td> <td 8, saturday april 2023 disabled> </td> </tr> </tbody> </table> </div> </article> </div> </html>"
+    },
+    {
+      "action": "CLICK [40519]",
+      "op": "CLICK",
+      "element": "40519",
+      "value": "",
+      "description": "[link] 3, Wednesday May 2023 -> CLICK",
+      "role": "link",
+      "label": "3, Wednesday May 2023",
+      "observation": "<html> <div main> <article article> <div dialog calendar> <table application calendar> <tbody> <tr> <td button previous month /> <td id=43574 button next month /> </tr> <tr> <td 1, monday may 2023> </td> <td 2, tuesday may 2023> </td> <td id=40519 3, wednesday may 2023> <span> 3 </span> </td> <td 4, thursday may 2023> </td> <td id=43616 5, friday may 2023> <span> 5 </span> </td> <td 6, saturday may 2023> </td> </tr> </tbody> </table> </div> </article> </div> </html>"
+    }
+  ]
+}

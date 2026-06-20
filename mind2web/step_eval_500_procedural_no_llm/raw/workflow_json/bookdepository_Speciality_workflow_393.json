@@ -1,0 +1,120 @@
+{
+  "name": "bookdepository / Speciality workflow 393",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Search for a non-fiction children's book for ages 9-11 on the topic of history in the Hindi language, and add the top book to the cart, if not available choose notify me option and also add the book to new wishlist must buy.",
+  "steps": [
+    {
+      "action": "CLICK [107]",
+      "op": "CLICK",
+      "element": "107",
+      "value": "",
+      "description": "[link] Shop by category\u2228 -> HOVER",
+      "role": "link",
+      "label": "Shop by category\u2228",
+      "observation": "<html> <div> <li> <a id=107> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <div> <div> <a id=1291> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> <p> Looking for your new favourite book? Browse some of our top categories such as <a id=16319> Children's Books </a> , <a> Fiction </a> , <a> Graphic Novels, Anime & Manga </a> , <a> Food & Drink books </a> , , , , and . Our editors have created lovely features for you to explore: , , , , , , and more. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [34788]",
+      "op": "CLICK",
+      "element": "34788",
+      "value": "",
+      "description": "[link] Children's Books -> CLICK",
+      "role": "link",
+      "label": "Children's Books",
+      "observation": "<html> <div> <ul> <a id=34788> Children's Books </a> <a id=35108> Fiction </a> </ul> <a id=44420> <div> Fiction </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [52176]",
+      "op": "CLICK",
+      "element": "52176",
+      "value": "",
+      "description": "[link] Non-Fiction -> CLICK",
+      "role": "link",
+      "label": "Non-Fiction",
+      "observation": "<html> <div> <ul> <a id=53276> Fiction </a> <a id=52176> Non-Fiction </a> </ul> <a id=53555> <div> By Age Range </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [73710]",
+      "op": "CLICK",
+      "element": "73710",
+      "value": "",
+      "description": "[link] History -> CLICK",
+      "role": "link",
+      "label": "History",
+      "observation": "<html> <div> <a id=73710> History </a> <form> <div> <label id=74872> Age range </label> <select agerange> </select> </div> <div> <label id=74938> Language </label> <select searchlang> </select> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [81505] [Ages 9-11 (13,217)]",
+      "op": "SELECT",
+      "element": "81505",
+      "value": "Ages 9-11 (13,217)",
+      "description": "[select] All -> SELECT: Ages 9-11 (13,217",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <form> <div> <label id=82573> Age range </label> <select id=81505 agerange> <option all true> All </option> <option ages 0-2 (1,162) 1> Ages 0-2 (1,162) </option> <option ages 3-5 (1,626) 2> Ages 3-5 (1,626) </option> <option ages 6-8 (3,442) 3> Ages 6-8 (3,442) </option> <option ages 9-11 (13,217) 4> Ages 9-11 (13,217) </option> <option teen & young adult (44,871) 5> Teen & young adult (44,871) </option> </select> </div> <div> <label id=82638> Language </label> <select searchlang> </select> </div> </form> </html>"
+    },
+    {
+      "action": "SELECT [92503] [Hindi (59)]",
+      "op": "SELECT",
+      "element": "92503",
+      "value": "Hindi (59)",
+      "description": "[select] All -> SELECT: Hindi (59",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <li> <a id=92777> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <div> <label id=93639> Language </label> <select id=92503 searchlang> <option all true> All </option> <option english (70,437) 123> English (70,437) </option> <option french (222) 137> French (222) </option> <option spanish (13,208) 404> Spanish (13,208) </option> <option german (621) 150> German (621) </option> <option latin (7) 246> Latin (7) </option> <option italian (56) 202> Italian (56) </option> <option chinese (181) 79> Chinese (181) </option> <option russian (43) 365> Russian (43) </option> <option japanese (25) 205> Japanese (25) </option> <option dutch; flemish (10) 116> Dutch; Flemish (10) </option> <option maori (4) 270> Maori (4) </option> <option marathi (1) 272> Marathi (1) </option> <option scottish gaelic (7) 153> Scottish Gaelic (7) </option> <option wolof (1) 471> Wolof (1) </option> <option galician (101) 155> Galician (101) </option> <option xhosa (1) 473> Xhosa (1) </option> <option irish (14) 154> Irish (14) </option> <option korean (50) 231> Korean (50) </option> <option yiddish (1) 476> Yiddish (1) </option> <option tigrinya (1) 431> Tigrinya (1) </option> <option valencian (10) 354> Valencian (10) </option> <option inuktitut (3) 191> Inuktitut (3) </option> <option basque (30) 44> Basque (30) </option> <option greek, modern (1453-) (1) 164> Greek, Modern (1453-) (1) </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [103492]",
+      "op": "CLICK",
+      "element": "103492",
+      "value": "",
+      "description": "[button] Refine results -> CLICK",
+      "role": "button",
+      "label": "Refine results",
+      "observation": "<html> <div> <a id=104521> Non-Fiction </a> <form> <div> <label id=104627> Language </label> <select searchlang> </select> </div> <button id=103492 submit> Refine results </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [108982]",
+      "op": "CLICK",
+      "element": "108982",
+      "value": "",
+      "description": "[link] Notify me -> CLICK",
+      "role": "link",
+      "label": "Notify me",
+      "observation": "<html> <div> <li> <a id=109245> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <div> <a id=110001> Non-Fiction </a> <a id=108982> Notify me </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [111413]",
+      "op": "CLICK",
+      "element": "111413",
+      "value": "",
+      "description": "[link] Add to wishlist -> CLICK",
+      "role": "link",
+      "label": "Add to wishlist",
+      "observation": "<html> <div> <li> <a id=111680> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <div> <a id=112444> History Books for Kids </a> <div> <a id=111413> Add to wishlist </a> <p> AbeBooks may have this title (opens in new window). </p> <a> Try AbeBooks </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [124495] [Must buy]",
+      "op": "TYPE",
+      "element": "124495",
+      "value": "Must buy",
+      "description": "[textbox] Wishlist name -> TYPE: Must buy",
+      "role": "textbox",
+      "label": "Wishlist name",
+      "observation": "<html> <body> <div> <li> <a id=124761> Shop by category </a> <a> Categories </a> <a> Children's Age Ranges </a> </li> <a id=125590> Hindi </a> </div> <div> <label> Create new wishlist </label> <input id=124495 text wishlistlabel wishlist name /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [137742]",
+      "op": "CLICK",
+      "element": "137742",
+      "value": "",
+      "description": "[button] Add -> CLICK",
+      "role": "button",
+      "label": "Add",
+      "observation": "<html> <body> <div> <a id=138771> History Books for Kids </a> <a id=138836> Hindi </a> </div> <form> <input isbn13 9788174831019 /> <input mainaction createwishlist /> <button id=137742 submit> Add </button> </form> </body> </html>"
+    }
+  ]
+}

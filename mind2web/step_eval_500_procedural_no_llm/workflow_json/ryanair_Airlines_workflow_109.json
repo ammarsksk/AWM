@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "name": "ryanair / Airlines workflow 109",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "ryanair",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Find a fully electric car pickup at Athens Airport (ATH) Sat, Apr 1, 2023 and return to the same palce at Mon, Apr 3, 2023.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "car",
+      "apr",
+      "athens",
+      "airport",
+      "ath",
+      "2023",
+      "same",
+      "use",
+      "div",
+      "generic",
+      "span",
+      "ryanair",
+      "travel",
+      "airlines",
+      "find",
+      "fully",
+      "electric",
+      "pickup",
+      "sat",
+      "return",
+      "palce",
+      "mon",
+      "tasks",
+      "similar",
+      "goal",
+      "site",
+      "area",
+      "hire",
+      "textbox",
+      "need",
+      "specific",
+      "field",
+      "let"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Car Hire",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Car Hire",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the I need a car in",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "I need a car in",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Athens Airport (ATH",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Athens Airport (ATH",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Apr",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Apr",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the 1",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the 3",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "3",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Let's go",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Let's go",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the [span] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "[span] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "ryanair / Airlines workflow 109"
+}

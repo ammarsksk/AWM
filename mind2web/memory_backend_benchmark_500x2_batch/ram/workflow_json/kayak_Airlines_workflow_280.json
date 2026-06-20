@@ -1,0 +1,51 @@
+{
+  "name": "kayak / Airlines workflow 280",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find hotels in Las Vegas, NV that offer free airport shuttle service.",
+  "goal_pattern": "Find hotels in Las Vegas, NV that offer free airport shuttle service.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Search for hotels",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Search for hotels",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Enter a city, hotel, airport, address or landmark",
+      "operation": "CLICK",
+      "target_type": "textbox",
+      "target_description": "Enter a city, hotel, airport, address or landmark",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [472]",
+      "gold_element_id": "472",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [4478]",
+      "gold_element_id": "4478",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "kayak / Airlines workflow 280"
+}

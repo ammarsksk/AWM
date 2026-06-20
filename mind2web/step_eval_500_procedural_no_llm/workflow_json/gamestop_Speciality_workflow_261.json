@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "name": "gamestop / Speciality workflow 261",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "gamestop",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Show me RPG video games.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "rpg",
+      "video",
+      "games",
+      "link",
+      "gamestop",
+      "shopping",
+      "speciality",
+      "show",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "main",
+      "menu",
+      "chevron_right",
+      "shop",
+      "all",
+      "filter",
+      "genre",
+      "view",
+      "more",
+      "checkbox",
+      "done"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Main Menu",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Main Menu",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Video Games chevron_right",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Video Games chevron_right",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Shop all",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Shop all",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Genre",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Genre",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the View More",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "View More",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the RPG RPG",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "RPG RPG",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "gamestop / Speciality workflow 261"
+}

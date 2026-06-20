@@ -1,0 +1,30 @@
+{
+  "name": "parking / Other workflow 730",
+  "source": "Mind2Web exemplar",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search for parking near Sofi stadium that allows to pay with phone.",
+  "steps": [
+    {
+      "action": "TYPE [125] [sofi stadium]",
+      "op": "TYPE",
+      "element": "125",
+      "value": "sofi stadium",
+      "description": "[combobox] \uf002 Enter an Address or Venue to find parking -> TYPE: sofi stadium",
+      "role": "combobox",
+      "label": "\uf002 Enter an Address or Venue to find parking",
+      "observation": "<html> <div> <button id=633> Find parking near me </button> <form get> <span> <input id=125 combobox text search /> <label id=664> <span> Enter an Address or Venue to find parking </span> </label> </span> </form> <div dialog> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [2965]",
+      "op": "CLICK",
+      "element": "2965",
+      "value": "",
+      "description": "[span] SoFi Stadium -> CLICK",
+      "role": "span",
+      "label": "SoFi Stadium",
+      "observation": "<html> <div> <div> <span id=2965> SoFi Stadium </span> <span> Stadium Drive, Inglewood, CA, USA </span> </div> <span> <span id=4326> SoFi Stadium </span> Parking - Pink Zone </span> <span> <span id=4340> SoFi Stadium </span> Parking - Blue Zone </span> </div> </html>"
+    }
+  ]
+}

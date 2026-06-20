@@ -1,0 +1,80 @@
+{
+  "name": "kbb / Auto workflow 197",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Check reviews for best electric SUV and find the 1 star rated review and mark it helpful.",
+  "steps": [
+    {
+      "action": "CLICK [171]",
+      "op": "CLICK",
+      "element": "171",
+      "value": "",
+      "description": "[link] Car Reviews -> HOVER",
+      "role": "link",
+      "label": "Car Reviews",
+      "observation": "<html> <div> <a id=171 unstyled> Car Reviews </a> <main> <a id=1095> <div> Best SUVs </div> </a> <a id=1156> <span> Shop Electric </span> </a> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [6648]",
+      "op": "CLICK",
+      "element": "6648",
+      "value": "",
+      "description": "[link] Best Cars -> CLICK",
+      "role": "link",
+      "label": "Best Cars",
+      "observation": "<html> <div> <a id=6648 unstyled> Best Cars </a> <div> <a id=7564> <div> Best Cars </div> </a> <a id=7572> <div> Best SUVs </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [13580]",
+      "op": "CLICK",
+      "element": "13580",
+      "value": "",
+      "description": "[img] Best SUVs image -> CLICK",
+      "role": "img",
+      "label": "Best SUVs image",
+      "observation": "<html> <label id=14424> <input radio category /> <a id=14426> <div> <img id=13580 best suvs image /> <div> Best SUVs </div> </div> </a> </label> </html>"
+    },
+    {
+      "action": "CLICK [20573]",
+      "op": "CLICK",
+      "element": "20573",
+      "value": "",
+      "description": "[div] SUVs -> CLICK",
+      "role": "div",
+      "label": "SUVs",
+      "observation": "<html> <main> <label id=19849> <input radio category /> <a id=19851> <div> <img best evs image /> <div> Best EVs </div> </div> </a> </label> <a id=20573> <div> <div> See All Electric </div> <div> SUVs </div> </div> </a> </main> </html>"
+    },
+    {
+      "action": "CLICK [26750]",
+      "op": "CLICK",
+      "element": "26750",
+      "value": "",
+      "description": "[link] See Details -> CLICK",
+      "role": "link",
+      "label": "See Details",
+      "observation": "<html> <main> <div> <div> <a> Home </a> <a id=26625> Best Electrics </a> <div> Best Electric SUVs </div> </div> <div> | <a id=26656> <div> <div> See All Best </div> <div> Electrics </div> </div> </a> </div> </div> <div hyundai ioniq 5 2023> <div> <span> The Hyundai Ioniq 5 is our Electric Vehicle Best Buy of 2023. An excellent all-electric compact SUV capable of running </span> <a id=26750> <span> See Details </span> </a> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [34431]",
+      "op": "CLICK",
+      "element": "34431",
+      "value": "",
+      "description": "[span] 11% -> CLICK",
+      "role": "span",
+      "label": "11%",
+      "observation": "<html> <div> <div> <span> 1 </span> <span id=34431> 11% </span> </div> <div> <div> <span> Was this review helpful? </span> <button helpful> </button> <span id=37146> 1 </span> <button nothelpful> </button> <span> 0 </span> </div> <div> <span> Was this review helpful? </span> <button helpful> </button> <span id=37657> 1 </span> <button nothelpful> </button> <span> 0 </span> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47843]",
+      "op": "CLICK",
+      "element": "47843",
+      "value": "",
+      "description": "[button] helpful -> CLICK",
+      "role": "button",
+      "label": "helpful",
+      "observation": "<html> <div> <div> <span id=49956> 1 </span> <span id=49968> 11% </span> </div> <div> <span> Was this review helpful? </span> <button id=47843 helpful> </button> <span> 0 </span> <button nothelpful> </button> <span> 4 </span> </div> </div> </html>"
+    }
+  ]
+}

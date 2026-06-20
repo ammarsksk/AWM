@@ -1,0 +1,51 @@
+{
+  "name": "tvguide / Movie workflow 676",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "tvguide",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show latest documentaries on Netflix and add the one with 70+ metascore.",
+  "goal_pattern": "Show latest documentaries on Netflix and add the one with 70+ metascore.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the What to Watch on Netflix",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "What to Watch on Netflix",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Filter",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Filter",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [128]",
+      "gold_element_id": "128",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [9296]",
+      "gold_element_id": "9296",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "tvguide / Movie workflow 676"
+}

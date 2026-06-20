@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "name": "viator / Other workflow 38",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "viator",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Book the cheapest likely to sell out activity in Los Angeles on April 2",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "likely",
+      "sell",
+      "out",
+      "los",
+      "angeles",
+      "use",
+      "circle",
+      "link",
+      "svg",
+      "viator",
+      "travel",
+      "other",
+      "book",
+      "cheapest",
+      "activity",
+      "april",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "where",
+      "specific",
+      "field",
+      "next",
+      "gridcell",
+      "sun",
+      "apr",
+      "2023",
+      "span",
+      "price",
+      "low",
+      "high",
+      "hollywood",
+      "sign",
+      "hiking",
+      "tour",
+      "griffith",
+      "observatory"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Where to?",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Where to?",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Los Angeles",
+        "operation": "CLICK",
+        "target_type": "b",
+        "target": "Los Angeles",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Sun Apr 02 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Sun Apr 02 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [circle] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "circle",
+        "target": "[circle] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Likely To Sell Out",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Likely To Sell Out",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Price (Low to High",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Price (Low to High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Hollywood Sign Hiking Tour to Griffith Observatory",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Hollywood Sign Hiking Tour to Griffith Observatory",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "viator / Other workflow 38"
+}

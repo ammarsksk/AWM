@@ -1,0 +1,195 @@
+{
+  "name": "exploretock / Restaurant workflow 1",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "llm_failed_fallback",
+  "website": "exploretock",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+  "goal_pattern": "Check for pickup restaurant available in Boston, NY on March 18, 5pm with just one guest",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "select the Reservation type",
+      "operation": "SELECT",
+      "target_type": "combobox",
+      "target_description": "Reservation type",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the [svg] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "svg",
+      "target_description": "[svg] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 3,
+      "step_intent": "type the Find a location",
+      "operation": "TYPE",
+      "target_type": "searchbox",
+      "target_description": "Find a location",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 4,
+      "step_intent": "click the Boston",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Boston",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 5,
+      "step_intent": "click the [svg] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "svg",
+      "target_description": "[svg] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 6,
+      "step_intent": "click the 18",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "18",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 7,
+      "step_intent": "select the Time",
+      "operation": "SELECT",
+      "target_type": "combobox",
+      "target_description": "Time",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 8,
+      "step_intent": "click the [svg] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "svg",
+      "target_description": "[svg] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 9,
+      "step_intent": "click the 2 guests",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "2 guests",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 10,
+      "step_intent": "select the Size",
+      "operation": "SELECT",
+      "target_type": "combobox",
+      "target_description": "Size",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 11,
+      "step_intent": "click the Update search",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Update search",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "SELECT [136] [Pickup]",
+      "gold_element_id": "136",
+      "gold_value": "Pickup"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3113]",
+      "gold_element_id": "3113",
+      "gold_value": ""
+    },
+    {
+      "step": 3,
+      "gold_action": "TYPE [6068] [Boston]",
+      "gold_element_id": "6068",
+      "gold_value": "Boston"
+    },
+    {
+      "step": 4,
+      "gold_action": "CLICK [10413]",
+      "gold_element_id": "10413",
+      "gold_value": ""
+    },
+    {
+      "step": 5,
+      "gold_action": "CLICK [12210]",
+      "gold_element_id": "12210",
+      "gold_value": ""
+    },
+    {
+      "step": 6,
+      "gold_action": "CLICK [18663]",
+      "gold_element_id": "18663",
+      "gold_value": ""
+    },
+    {
+      "step": 7,
+      "gold_action": "SELECT [28709] [5 00 PM]",
+      "gold_element_id": "28709",
+      "gold_value": "5 00 PM"
+    },
+    {
+      "step": 8,
+      "gold_action": "CLICK [31817]",
+      "gold_element_id": "31817",
+      "gold_value": ""
+    },
+    {
+      "step": 9,
+      "gold_action": "CLICK [34711]",
+      "gold_element_id": "34711",
+      "gold_value": ""
+    },
+    {
+      "step": 10,
+      "gold_action": "SELECT [36974] [1 guest]",
+      "gold_element_id": "36974",
+      "gold_value": "1 guest"
+    },
+    {
+      "step": 11,
+      "gold_action": "CLICK [41495]",
+      "gold_element_id": "41495",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "exploretock / Restaurant workflow 1"
+}

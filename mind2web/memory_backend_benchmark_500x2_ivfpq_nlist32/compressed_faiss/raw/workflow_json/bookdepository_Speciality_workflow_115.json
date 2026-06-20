@@ -1,0 +1,30 @@
+{
+  "name": "bookdepository / Speciality workflow 115",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Check the French best sellers under $40 available in digital that are currently in stock.",
+  "steps": [
+    {
+      "action": "CLICK [113]",
+      "op": "CLICK",
+      "element": "113",
+      "value": "",
+      "description": "[link] Bestsellers -> CLICK",
+      "role": "link",
+      "label": "Bestsellers",
+      "observation": "<html> <div> <div> <input id=325 text search for books by keyword searchterm /> <input search find book /> <button id=329 submit search> <span> Search </span> </button> </div> <a id=113> Bestsellers </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [18111] [US$20 to US$40]",
+      "op": "SELECT",
+      "element": "18111",
+      "value": "US$20 to US$40",
+      "description": "[select] All -> SELECT: US$20 to US$40",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <form> <div> <label> Price range </label> <select id=18111 price> <option all true> All </option> <option under us$20 low> Under US$20 </option> <option us$20 to us$40 med> US$20 to US$40 </option> <option us$40 + high> US$40 + </option> </select> </div> <div> <label id=19168> Language </label> <select id=19171 searchlang> <option all true> All </option> <option english (51114) 123> English (51114) </option> <option french (299) 137> French (299) </option> <option spanish (1137) 404> Spanish (1137) </option> <option german (822) 150> German (822) </option> <option latin (14) 246> Latin (14) </option> <option italian (126) 202> Italian (126) </option> <option chinese (202) 79> Chinese (202) </option> <option russian (11) 365> Russian (11) </option> <option japanese (35) 205> Japanese (35) </option> <option dutch; flemish (8) 116> Dutch; Flemish (8) </option> <option afrikaans (2) 9> Afrikaans (2) </option> <option albanian (4) 13> Albanian (4) </option> <option arabic (26) 21> Arabic (26) </option> <option basque (1) 44> Basque (1) </option> <option catalan (9) 71> Catalan (9) </option> <option coptic (1) 90> Coptic (1) </option> <option croatian (2) 181> Croatian (2) </option> <option czech (2) 101> Czech (2) </option> <option english, middle (1100-1500) (1) 124> English, Middle (1100-1500) (1) </option> <option esperanto (2) 125> Esperanto (2) </option> <option finnish (23) 134> Finnish (23) </option> <option greek, ancient (to 1453) (3) 163> Greek, Ancient (to 1453) (3) </option> <option greek, modern (1453-) (6) 164> Greek, Modern (1453-) (6) </option> <option hebrew (6) 173> Hebrew (6) </option> </select> </div> </form> </html>"
+    }
+  ]
+}

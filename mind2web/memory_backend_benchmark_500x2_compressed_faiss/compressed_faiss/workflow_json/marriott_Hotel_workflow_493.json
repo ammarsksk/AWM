@@ -1,0 +1,51 @@
+{
+  "name": "marriott / Hotel workflow 493",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Find The Ritz-Carlton hotels in Washington DC that can hold a student social event from May 9 to May 12 and will require 7 guest rooms and an event space for 50",
+  "goal_pattern": "Find The Ritz-Carlton hotels in Washington DC that can hold a student social event from May 9 to May 12 and will require 7 guest rooms and an event space for 50",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Meetings & Events",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Meetings & Events",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Group Travel",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Group Travel",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [1332]",
+      "gold_element_id": "1332",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [15082]",
+      "gold_element_id": "15082",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "marriott / Hotel workflow 493"
+}

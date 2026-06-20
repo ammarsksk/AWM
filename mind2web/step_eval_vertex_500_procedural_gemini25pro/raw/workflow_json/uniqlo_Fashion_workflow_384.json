@@ -1,0 +1,210 @@
+{
+  "name": "uniqlo / Fashion workflow 384",
+  "source": "Mind2Web exemplar",
+  "website": "uniqlo",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "task": "See in the Men's sale if any L-sized t-shirt in blue color is available or not, if available, add one to the cart choose pick in store for zip 10005.",
+  "steps": [
+    {
+      "action": "CLICK [213]",
+      "op": "CLICK",
+      "element": "213",
+      "value": "",
+      "description": "[link] MEN -> HOVER",
+      "role": "link",
+      "label": "MEN",
+      "observation": "<html> <div> <div> <nav navigation left> <a id=213> <span> MEN </span> </a> </nav> <nav navigation right> <button> <svg id=225 fr-ec-icon /> <span> Search </span> </button> </nav> </div> <a id=917> <div> <img men's denim shirts /> <div> <h2> Men's Denim Shirts </h2> <span> High-quality denim for authentic style that gets better wear after wear. </span> <div> <div price is $29.90> <p> $29.90 </p> </div> <p> Sale </p> </div> </div> </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [5054]",
+      "op": "CLICK",
+      "element": "5054",
+      "value": "",
+      "description": "[link] Sale -> CLICK",
+      "role": "link",
+      "label": "Sale",
+      "observation": "<html> <div> <a id=5191 men top> <span> MEN TOP </span> </a> <div> <div tablist> <button tab> </button> <button id=5208 tab> <span> Tops </span> </button> <button tab> </button> <button tab> </button> <button tab> </button> </div> <a id=5054> <p> Sale </p> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8924]",
+      "op": "CLICK",
+      "element": "8924",
+      "value": "",
+      "description": "[heading] Category -> CLICK",
+      "role": "heading",
+      "label": "Category",
+      "observation": "<html> <div> <div cell> <h4 id=8924 category> Category </h4> <svg fr-ec-icon /> </div> <div cell> <h4 id=10963 size> Size </h4> <svg fr-ec-icon /> </div> <div cell> <h4 id=10970 color> Color </h4> <svg fr-ec-icon /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [24055]",
+      "op": "CLICK",
+      "element": "24055",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <div> <div cell> <h4 id=26098 size> Size </h4> <svg fr-ec-icon /> </div> <div cell> <h4 id=26105 color> Color </h4> <svg fr-ec-icon /> </div> </div> <div dialog> <div> <input id=24055 all /> <svg fr-ec-icon /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [39222]",
+      "op": "CLICK",
+      "element": "39222",
+      "value": "",
+      "description": "[option] Tops -> CLICK",
+      "role": "option",
+      "label": "Tops",
+      "observation": "<html> <div> <div> <div cell> <h4 id=41264 size> Size </h4> <svg fr-ec-icon /> </div> <div cell> <h4 id=41271 color> Color </h4> <svg fr-ec-icon /> </div> </div> <div dialog> <ul listbox> <li option> </li> <li option 23304> </li> <li id=39222 option 23305> <span> Tops </span> </li> <li option 23306> </li> <li option 23307> </li> <li option 23308> </li> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [53255]",
+      "op": "CLICK",
+      "element": "53255",
+      "value": "",
+      "description": "[heading] Size -> CLICK",
+      "role": "heading",
+      "label": "Size",
+      "observation": "<html> <div> <div> <div cell> <h4 id=53255 size> Size </h4> <svg fr-ec-icon /> </div> <div cell> <h4 id=53309 color> Color </h4> <svg fr-ec-icon /> </div> </div> <div dialog> <ul listbox> <li option> </li> <li id=55634 option 23386> <span> T-Shirts </span> </li> <li option 23389> </li> <li option 23385> </li> <li option 23388> </li> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [67926]",
+      "op": "CLICK",
+      "element": "67926",
+      "value": "",
+      "description": "[label] L -> CLICK",
+      "role": "label",
+      "label": "L",
+      "observation": "<html> <div> <div cell> <h4 id=67981 color> Color </h4> <svg id=67982 fr-ec-icon /> </div> <div dialog> <div> <input checkbox l /> <label id=67926> <span> L </span> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [82657]",
+      "op": "CLICK",
+      "element": "82657",
+      "value": "",
+      "description": "[heading] Color -> CLICK",
+      "role": "heading",
+      "label": "Color",
+      "observation": "<html> <div> <div tablist> <a tab> </a> <a id=82851 tab> <span> MEN </span> </a> <a tab> </a> <a tab> </a> </div> <div cell> <h4 id=82657 color> Color </h4> <svg id=84711 fr-ec-icon /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [96815]",
+      "op": "CLICK",
+      "element": "96815",
+      "value": "",
+      "description": "[label] BLACK -> CLICK",
+      "role": "label",
+      "label": "BLACK",
+      "observation": "<html> <div> <div cell> <h4 color> Color </h4> <svg id=98871 fr-ec-icon /> </div> <div dialog> <div> <div> <input checkbox black /> <label id=96815> <span> BLACK </span> </label> </div> <div> <input checkbox blue /> <label id=98969> <span> BLUE </span> </label> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [108163]",
+      "op": "CLICK",
+      "element": "108163",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div tablist> <a tab> </a> <a id=108336 tab> <span> MEN </span> </a> <a tab> </a> <a tab> </a> </div> <div dialog> <button> <svg id=108163 fr-ec-icon /> <span> Close </span> </button> <div> <input checkbox blue /> <label id=110299> <span> BLUE </span> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [118803]",
+      "op": "CLICK",
+      "element": "118803",
+      "value": "",
+      "description": "[heading] Supima\u00ae Cotton V-Neck Short-Sleeve T-Shirt (2022 E... -> CLICK",
+      "role": "heading",
+      "label": "Supima\u00ae Cotton V-Neck Short-Sleeve T-Shirt (2022 E...",
+      "observation": "<html> <div> <a id=116804 sale> Sale </a> <div> <div dialog> <div> <input checkbox blue /> <label id=118784> <span> BLUE </span> </label> </div> </div> <a id=118803> <div> <div> <img supima cotton v-neck short-sleeve t-shirt /> <svg fr-ec-icon /> </div> <div> <div> <svg fr-ec-icon> <title> See more chips. </title> </svg> <fieldset> <legend> Supima Cotton V-Neck Short-Sleeve T-Shirt (2022 Edition)-chipgroup </legend> <div> <img default image /> <input radio 00 0 true /> </div> <div> <img default image /> <input radio 07 1 /> </div> <div> <img default image /> <input radio 09 2 /> </div> <div> <img default image /> <input radio 64 3 /> </div> <div> <img default image /> <input radio 69 4 /> </div> </fieldset> </div> <p> MEN, XXS-3XL </p> </div> </div> <div> <h3> Supima Cotton V-Neck Short-Sleeve T-Shirt (2022 Edition) </h3> <div> <div> <div price is $14.90> <p> $14.90 </p> </div> <p> Sale </p> </div> <div supima cotton v-neck short-sleeve t-shirt> <svg fr-ec-icon /> <svg fr-ec-icon /> <svg fr-ec-icon /> <svg fr-ec-icon /> <svg fr-ec-icon /> <button (84)> <span> (84) </span> </button> </div> </div> </div> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [122633]",
+      "op": "CLICK",
+      "element": "122633",
+      "value": "",
+      "description": "[checkbox] L -> CLICK",
+      "role": "checkbox",
+      "label": "L",
+      "observation": "<html> <fieldset> <legend> <label id=123654> Size: </label> <label> MEN S </label> </legend> <div> <input id=122633 checkbox l checkbox-group 005 /> <label id=123697> <p> L </p> </label> </div> </fieldset> </html>"
+    },
+    {
+      "action": "CLICK [128593]",
+      "op": "CLICK",
+      "element": "128593",
+      "value": "",
+      "description": "[button] ADD TO CART -> CLICK",
+      "role": "button",
+      "label": "ADD TO CART",
+      "observation": "<html> <div> <legend> <label id=129558> Color: </label> <label> 09 BLACK </label> </legend> <legend> <label id=129604> Size: </label> <label> MEN L </label> </legend> <button id=128593> Add to cart </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [134757]",
+      "op": "CLICK",
+      "element": "134757",
+      "value": "",
+      "description": "[button] VIEW CART -> CLICK",
+      "role": "button",
+      "label": "VIEW CART",
+      "observation": "<html> <div> <div dialog> <div> <button id=134757> View cart </button> <button> Continue shopping </button> </div> </div> <div> <legend> <label id=138065> Color: </label> <label> 09 BLACK </label> </legend> <legend> <label id=138111> Size: </label> <label> MEN L </label> </legend> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [140213]",
+      "op": "CLICK",
+      "element": "140213",
+      "value": "",
+      "description": "[button] CHECKOUT -> CLICK",
+      "role": "button",
+      "label": "CHECKOUT",
+      "observation": "<html> <section> <div> <input id=140386 1 /> <svg fr-ec-icon /> </div> <div> <p> Click Checkout to reserve Cart contents for 60 minutes. </p> <button id=140213> Checkout </button> </div> <button id=143240> Continue shopping </button> </section> </html>"
+    },
+    {
+      "action": "CLICK [148073]",
+      "op": "CLICK",
+      "element": "148073",
+      "value": "",
+      "description": "[button] Pick up in store Shipping: Free -> CLICK",
+      "role": "button",
+      "label": "Pick up in store Shipping: Free",
+      "observation": "<html> <section> <div> <button id=148073 button> <div> <p> Pick up in store </p> <p> Shipping: <span> Free </span> </p> </div> </button> <svg id=148203 fr-ec-icon /> </div> <svg id=148271 fr-ec-icon /> </section> </html>"
+    },
+    {
+      "action": "TYPE [150486] [10005]",
+      "op": "TYPE",
+      "element": "150486",
+      "value": "10005",
+      "description": "[searchbox] City, State, or ZIP code -> TYPE: 10005",
+      "role": "searchbox",
+      "label": "City, State, or ZIP code",
+      "observation": "<html> <div> <button id=150599 button> <div> <p> Pick up in store </p> <p> Shipping: <span> Free </span> </p> </div> </button> <form search> <input id=150486 search city, state, or zip code /> <button id=150619 submit> <svg fr-ec-icon /> </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [152896]",
+      "op": "CLICK",
+      "element": "152896",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <button id=153008 button> <div> <p> Pick up in store </p> <p> Shipping: <span> Free </span> </p> </div> </button> <form search> <button submit> <svg id=152896 fr-ec-icon /> </button> <button button> <svg id=153034 fr-ec-icon /> </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [155312]",
+      "op": "CLICK",
+      "element": "155312",
+      "value": "",
+      "description": "[label] UNIQLO SOHO -> CLICK",
+      "role": "label",
+      "label": "UNIQLO SOHO",
+      "observation": "<html> <div> <label> <svg id=155772 fr-ec-icon /> <span> Set this store as your default </span> </label> <button id=155776> Pick up in this store </button> </div> <label id=155312 /> </html>"
+    },
+    {
+      "action": "CLICK [158366]",
+      "op": "CLICK",
+      "element": "158366",
+      "value": "",
+      "description": "[button] PICK UP IN THIS STORE -> CLICK",
+      "role": "button",
+      "label": "PICK UP IN THIS STORE",
+      "observation": "<html> <div> <button id=158480 button> <div> <p> Pick up in store </p> <p> Shipping: <span> Free </span> </p> </div> </button> <div> <label> <svg id=158829 fr-ec-icon /> <span> Set this store as your default </span> </label> <button id=158366> Pick up in this store </button> </div> </div> </html>"
+    }
+  ]
+}

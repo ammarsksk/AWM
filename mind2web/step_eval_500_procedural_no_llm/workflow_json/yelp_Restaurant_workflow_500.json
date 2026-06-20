@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "name": "yelp / Restaurant workflow 500",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "goal_pattern": "Find the fast responding highest-rated electrician, who is currently open for replacement of some light fixtures in Westminster, and request a quote.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "request",
+      "span",
+      "fast",
+      "responding",
+      "highest",
+      "rated",
+      "open",
+      "replacement",
+      "light",
+      "westminster",
+      "quote",
+      "use",
+      "radio",
+      "yelp",
+      "travel",
+      "restaurant",
+      "find",
+      "electrician",
+      "who",
+      "currently",
+      "some",
+      "fixtures",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "home",
+      "services",
+      "electricians",
+      "textbox",
+      "near",
+      "specific",
+      "field",
+      "recommended",
+      "now",
+      "installation",
+      "fixture",
+      "pricing"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Home Services",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Home Services",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Electricians",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Electricians",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Near",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Near",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Westminster",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Westminster",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Recommended",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Recommended",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Highest Rated",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Highest Rated",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Fast-responding",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Fast-responding",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Open Now",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Request a Quote",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Request a Quote",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Installation or replacement",
+        "operation": "CLICK",
+        "target_type": "radio",
+        "target": "Installation or replacement",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Light fixture",
+        "operation": "CLICK",
+        "target_type": "radio",
+        "target": "Light fixture",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Request pricing",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Request pricing",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "yelp / Restaurant workflow 500"
+}

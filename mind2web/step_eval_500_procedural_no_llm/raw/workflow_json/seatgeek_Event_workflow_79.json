@@ -1,0 +1,90 @@
+{
+  "name": "seatgeek / Event workflow 79",
+  "source": "Mind2Web exemplar",
+  "website": "seatgeek",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Search for concerts taking place in Los Angeles, CA in the next month.",
+  "steps": [
+    {
+      "action": "CLICK [2098]",
+      "op": "CLICK",
+      "element": "2098",
+      "value": "",
+      "description": "[button] Change Location -> CLICK",
+      "role": "button",
+      "label": "Change Location",
+      "observation": "<html> <body> <div> <div> <a> Concerts in Denver </a> <a> Concerts in Houston </a> <a> Concerts in Las Vegas </a> <a id=1151> Concerts in Los Angeles </a> <a> Concerts in Miami </a> <a> Concerts in Nashville </a> <a> Concerts in New York </a> </div> <form search> <ul> <li id=1254 option concerts> <p concerts> Concerts </p> </li> <li option nfl> </li> <li option mlb> </li> <li option nba> </li> </ul> </form> </div> <button id=2098> <span> Change Location </span> </button> </body> </html>"
+    },
+    {
+      "action": "TYPE [9793] [Los Angeles]",
+      "op": "TYPE",
+      "element": "9793",
+      "value": "Los Angeles",
+      "description": "[searchbox] Search by city... -> TYPE: Los Angeles",
+      "role": "searchbox",
+      "label": "Search by city...",
+      "observation": "<html> <body> <div> <div combobox> <input id=9793 search search by city... /> </div> <button id=11720> <span> <span> Filter by </span> Date </span> </button> </div> <div group categories> <a id=11754> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [21232]",
+      "op": "CLICK",
+      "element": "21232",
+      "value": "",
+      "description": "[option] Los Angeles, CA -> CLICK",
+      "role": "option",
+      "label": "Los Angeles, CA",
+      "observation": "<html> <body> <div> <p> Browse Events </p> <p id=21213> Los Angeles, CA </p> <ul listbox> <li id=21232 option> <p> Los Angeles, CA </p> </li> <li option> </li> </ul> </div> <div group categories> <a id=21273> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [30722]",
+      "op": "CLICK",
+      "element": "30722",
+      "value": "",
+      "description": "[span] Filter by -> CLICK",
+      "role": "span",
+      "label": "Filter by",
+      "observation": "<html> <body> <div menu> <a> Trending </a> <a> Genres </a> <a> Festivals </a> <a id=29633> Concerts by City </a> </div> <button id=30722> <span> <span> Filter by </span> Date </span> </button> <div group categories> <a id=30755> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [38557]",
+      "op": "CLICK",
+      "element": "38557",
+      "value": "",
+      "description": "[div] 16 -> CLICK",
+      "role": "div",
+      "label": "16",
+      "observation": "<html> <body> <div> <div> <div> 13 </div> <div> 14 </div> <div> 15 </div> <div id=38557> 16 </div> <div> 17 </div> <div> 18 </div> </div> <div> <button previous month /> <h4> April 2023 </h4> <button id=40624 next month /> </div> </div> <div group categories> <a id=40781> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [48588]",
+      "op": "CLICK",
+      "element": "48588",
+      "value": "",
+      "description": "[div] 16 -> CLICK",
+      "role": "div",
+      "label": "16",
+      "observation": "<html> <body> <div> <div> <button previous month /> <h4> April 2023 </h4> <button id=50658 next month /> </div> <div> <div id=48588> 16 </div> <div> 17 </div> <div> 18 </div> <div> 19 </div> </div> </div> <div group categories> <a id=50817> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [60900]",
+      "op": "CLICK",
+      "element": "60900",
+      "value": "",
+      "description": "[button] Apply -> CLICK",
+      "role": "button",
+      "label": "Apply",
+      "observation": "<html> <body> <div> <div> <button previous month /> <h4> April 2023 </h4> <button id=60752 next month /> </div> <button id=60900> <span> Apply </span> </button> </div> <div group categories> <a id=60928> <div> <div concerts> <img concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [65532]",
+      "op": "CLICK",
+      "element": "65532",
+      "value": "",
+      "description": "[img] Concerts -> CLICK",
+      "role": "img",
+      "label": "Concerts",
+      "observation": "<html> <body> <button id=67445> <span> Change Location </span> </button> <div group categories> <a id=67482> <div> <div concerts> <img id=65532 concerts /> </div> <div> Concerts </div> </div> </a> </div> </body> </html>"
+    }
+  ]
+}

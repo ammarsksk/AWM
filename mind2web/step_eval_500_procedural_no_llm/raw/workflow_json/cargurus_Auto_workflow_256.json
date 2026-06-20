@@ -1,0 +1,100 @@
+{
+  "name": "cargurus / Auto workflow 256",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Check the lowest price for a white 2017 certified pre owned Lexus Rx350 near 90012.",
+  "steps": [
+    {
+      "action": "CLICK [947]",
+      "op": "CLICK",
+      "element": "947",
+      "value": "",
+      "description": "[LabelText] Certified Pre-Owned -> CLICK",
+      "role": "LabelText",
+      "label": "Certified Pre-Owned",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=328 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <div> <label id=947> <span> Certified Pre-Owned </span> </label> <input radio sell my car on true /> <label> <div> Enter license plate </div> <input id=1005 text (ex.) c4r 6uru /> </label> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [15827] [Lexus]",
+      "op": "SELECT",
+      "element": "15827",
+      "value": "Lexus",
+      "description": "[combobox] Select Make -> SELECT: Lexus",
+      "role": "combobox",
+      "label": "Select Make",
+      "observation": "<html> <form> <fieldset> <input cpoview true /> <select id=15827 select make> <option -1> All Makes </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6 true> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <span> near </span> <input id=20526 tel zip /> <input id=20530 submit search /> </fieldset> </form> </html>"
+    },
+    {
+      "action": "SELECT [31469] [RX]",
+      "op": "SELECT",
+      "element": "31469",
+      "value": "RX",
+      "description": "[combobox] Select Model -> SELECT: RX",
+      "role": "combobox",
+      "label": "Select Model",
+      "observation": "<html> <form> <fieldset> <input cpoview true /> <select id=31469 select model> <option -1 true> All Models </option> <optgroup popular models> <option d2115> CT Hybrid </option> <option d2720> ES </option> <option d2721> ES Hybrid </option> <option d2822> GS </option> <option d2063> GX </option> <option d2038> HS 250h </option> <option d2824> IS </option> <option d2400> LC </option> <option d2409> LC Hybrid </option> <option d3040> LS </option> <option d3041> LS Hybrid </option> <option d3042> LX </option> <option d2616> NX </option> <option d2294> NX Hybrid </option> <option d2827> RC </option> <option d2297> RC F </option> <option d2647> RX </option> <option d2053> RX Hybrid </option> <option d3289> RZ </option> <option d3043> SC </option> <option d2682> UX </option> <option d2722> UX Hybrid </option> </optgroup> <optgroup other models> <option d2366> GS F </option> </optgroup> </select> <span> near </span> <input id=36129 tel zip /> <input id=36133 submit search /> </fieldset> </form> </html>"
+    },
+    {
+      "action": "TYPE [47073] [90012]",
+      "op": "TYPE",
+      "element": "47073",
+      "value": "90012",
+      "description": "[textbox] Zip -> TYPE: 90012",
+      "role": "textbox",
+      "label": "Zip",
+      "observation": "<html> <div> <form> <fieldset> <input cpoview true /> <span> near </span> <input id=47073 tel zip /> <input id=51737 submit search /> </fieldset> </form> <div> <a button> </a> <a id=53130 button> <span> Next </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [62674]",
+      "op": "CLICK",
+      "element": "62674",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <label id=63469> <span> Certified Pre-Owned </span> </label> <input radio sell my car on /> <form> <fieldset> <select id=67264 select model> <option -1> All Models </option> <optgroup popular models> <option d2115> CT Hybrid </option> <option d2720> ES </option> <option d2721> ES Hybrid </option> <option d2822> GS </option> <option d2063> GX </option> <option d2038> HS 250h </option> <option d2824> IS </option> <option d2400> LC </option> <option d2409> LC Hybrid </option> <option d3040> LS </option> <option d3041> LS Hybrid </option> <option d3042> LX </option> <option d2616> NX </option> <option d2294> NX Hybrid </option> <option d2827> RC </option> <option d2297> RC F </option> <option d2647 true> RX </option> <option d2053> RX Hybrid </option> <option d3289> RZ </option> <option d3043> SC </option> <option d2682> UX </option> <option d2722> UX Hybrid </option> </optgroup> <optgroup other models> <option d2366> GS F </option> </optgroup> </select> <span> near </span> <input tel zip 90012 /> <input id=62674 submit search /> </fieldset> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [73331] [2017]",
+      "op": "SELECT",
+      "element": "73331",
+      "value": "2017",
+      "description": "[combobox] Select Minimum Year -> SELECT: 2017",
+      "role": "combobox",
+      "label": "Select Minimum Year",
+      "observation": "<html> <div> <div> <select id=73331 select minimum year> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> <option 2020> 2020 </option> <option 2019> 2019 </option> <option 2018> 2018 </option> <option 2017> 2017 </option> <option 2016> 2016 </option> <option 2015> 2015 </option> <option 2014> 2014 </option> <option 2013> 2013 </option> <option 2012> 2012 </option> <option 2011> 2011 </option> <option 2010> 2010 </option> <option 2009> 2009 </option> <option 2008> 2008 </option> <option 2007> 2007 </option> <option 2006> 2006 </option> <option 2005> 2005 </option> <option 2004> 2004 </option> <option 2003> 2003 </option> <option 2002> 2002 </option> <option 2001> 2001 </option> <option 2000> 2000 </option> <option 1999 true> 1999 </option> </select> <svg img /> </div> <label> <input id=75117 checkbox white /> <span> White </span> <span> (25) </span> </label> <label id=75223> <input checkbox white /> <p> White <span> (11) </span> </p> </label> </div> </html>"
+    },
+    {
+      "action": "SELECT [93156] [2017]",
+      "op": "SELECT",
+      "element": "93156",
+      "value": "2017",
+      "description": "[combobox] Select Maximum Year -> SELECT: 2017",
+      "role": "combobox",
+      "label": "Select Maximum Year",
+      "observation": "<html> <div> <div> <select id=93156 select maximum year> <option 2023 true> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> <option 2020> 2020 </option> <option 2019> 2019 </option> <option 2018> 2018 </option> <option 2017> 2017 </option> <option 2016> 2016 </option> <option 2015> 2015 </option> <option 2014> 2014 </option> <option 2013> 2013 </option> <option 2012> 2012 </option> <option 2011> 2011 </option> <option 2010> 2010 </option> <option 2009> 2009 </option> <option 2008> 2008 </option> <option 2007> 2007 </option> <option 2006> 2006 </option> <option 2005> 2005 </option> <option 2004> 2004 </option> <option 2003> 2003 </option> <option 2002> 2002 </option> <option 2001> 2001 </option> <option 2000> 2000 </option> <option 1999> 1999 </option> </select> <svg img /> </div> <label> <input id=94947 checkbox white /> <span> White </span> <span> (25) </span> </label> <label id=95053> <input checkbox white /> <p> White <span> (11) </span> </p> </label> </div> </html>"
+    },
+    {
+      "action": "CLICK [115183]",
+      "op": "CLICK",
+      "element": "115183",
+      "value": "",
+      "description": "[div] White -> CLICK",
+      "role": "div",
+      "label": "White",
+      "observation": "<html> <div> <label id=115183> <input id=115184 checkbox white /> <span> White </span> <span> (2) </span> </label> <label id=115284> <input checkbox white /> <p> White <span> (2) </span> </p> </label> </div> </html>"
+    },
+    {
+      "action": "SELECT [128432] [Lowest price first]",
+      "op": "SELECT",
+      "element": "128432",
+      "value": "Lowest price first",
+      "description": "[combobox] Select Sort Order -> SELECT: Lowest price first",
+      "role": "combobox",
+      "label": "Select Sort Order",
+      "observation": "<html> <div> <div> <label> <input id=130313 checkbox white /> <p> White </p> </label> <label id=130517> <input checkbox used /> <p> Used <span> (7) </span> </p> </label> </div> <div> <select id=128432 select sort order> <option true> Best deals first </option> <option> Worst deals first </option> <option price_asc> Lowest price first </option> <option price_desc> Highest price first </option> <option mileage_asc> Lowest mileage first </option> <option mileage_desc> Highest mileage first </option> <option proximity_asc> Closest first </option> <option> Newest first (by car year) </option> <option> Oldest first (by car year) </option> <option> Newest listings first </option> <option> Oldest listings first </option> </select> <svg img /> </div> </div> </html>"
+    }
+  ]
+}

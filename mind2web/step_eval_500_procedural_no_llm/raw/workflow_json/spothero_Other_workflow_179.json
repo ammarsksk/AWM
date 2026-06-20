@@ -1,0 +1,70 @@
+{
+  "name": "spothero / Other workflow 179",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a monthly parking with valet service at the New York University.",
+  "steps": [
+    {
+      "action": "CLICK [131]",
+      "op": "CLICK",
+      "element": "131",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=131 tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=458 text search for parking search-input address, place, city or venue /> </div> <ul list> <a id=754> Monthly Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [2124] [New York University]",
+      "op": "TYPE",
+      "element": "2124",
+      "value": "New York University",
+      "description": "[textbox] Search for parking -> TYPE: New York University",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=2124 text search for parking search-input address, place, city or venue /> <button id=2460 button> Search </button> </div> <ul list> <a id=2747> Monthly Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [4141]",
+      "op": "CLICK",
+      "element": "4141",
+      "value": "",
+      "description": "[li] New York University, New York, NY, USA -> CLICK",
+      "role": "li",
+      "label": "New York University, New York, NY, USA",
+      "observation": "<html> <div> <div> <input id=4469 text search for parking search-input new york university address, place, city or venue /> <ul> <li id=4141> New York University, New York, NY, USA </li> <li> New York University Tandon School of Engineering, MetroTech Center, Brooklyn, NY, USA </li> <li> University at Buffalo, Buffalo, New York, USA </li> <li> University of Rochester, Rochester, New York, USA </li> </ul> </div> <button id=4490 button> Search </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [6274]",
+      "op": "CLICK",
+      "element": "6274",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <input id=7031 text monthly start date mar 28, 2023 /> <div> <select id=7037> <option all true> All Parking Options </option> <option 247> 24/7 Regular Parking </option> <option daytime_only> Daytime Only Parking </option> </select> <button id=6274 button> Filter </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10147]",
+      "op": "CLICK",
+      "element": "10147",
+      "value": "",
+      "description": "[checkbox] Valet (15",
+      "role": "checkbox",
+      "label": "Valet (15",
+      "observation": "<html> <body> <div tablist> <button tab button> Hourly </button> <button id=10846 tab button> Monthly </button> </div> <div> <input id=10147 checkbox valet on /> <label id=11951> Valet <span> (15) </span> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [14248]",
+      "op": "CLICK",
+      "element": "14248",
+      "value": "",
+      "description": "[button] Show 15 Results -> CLICK",
+      "role": "button",
+      "label": "Show 15 Results",
+      "observation": "<html> <body> <div tablist> <button tab button> Hourly </button> <button id=14946 tab button> Monthly </button> </div> <div> <div> <input checkbox no-contract on /> <label id=16103> Month to Month <span> (15) </span> </label> </div> <div> <button id=14248 button> Show 15 Results </button> <button button> Clear All </button> </div> </div> </body> </html>"
+    }
+  ]
+}

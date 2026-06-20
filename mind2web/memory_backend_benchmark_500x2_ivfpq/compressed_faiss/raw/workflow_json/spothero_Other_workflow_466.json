@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 466",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Book the closest parking spot to the Orlando Magic at Brooklyn Nets event, happening in Barclays Center, to enter after 3 pm and exit after 5 pm",
+  "steps": [
+    {
+      "action": "TYPE [88] [barclays center]",
+      "op": "TYPE",
+      "element": "88",
+      "value": "barclays center",
+      "description": "[textbox] Search for parking -> TYPE: barclays center",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=88 text search for parking search-input address, place, city or venue /> <button id=415 button> Search </button> </div> <button id=417 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [2083]",
+      "op": "CLICK",
+      "element": "2083",
+      "value": "",
+      "description": "[li] Barclays Center, Atlantic Avenue, Brooklyn, NY, US... -> CLICK",
+      "role": "li",
+      "label": "Barclays Center, Atlantic Avenue, Brooklyn, NY, US...",
+      "observation": "<html> <div> <div> <input id=2401 text search for parking search-input barclays center address, place, city or venue /> <ul> <li id=2083> Barclays Center, Atlantic Avenue, Brooklyn, NY, USA </li> <li> Barclays Center Parking Lots, South Elliott Place, Brooklyn, NY, USA </li> <li> GGMC Parking - Barclays Center, Atlantic Center, Atlantic Avenue, Brooklyn, NY, USA </li> <li> American Express Box Office, Atlantic Avenue, Brooklyn, NY, USA </li> </ul> </div> <button id=2424 button> Find Parking Near Me </button> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "name": "cargurus / Auto workflow 420",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find the newest silver-colored Lexus SUV with a black interior and backup camera to purchase which has been made between 2022-2023 and is within 50 miles of zip 10017.",
+  "steps": [
+    {
+      "action": "CLICK [298]",
+      "op": "CLICK",
+      "element": "298",
+      "value": "",
+      "description": "[menuitem] Buy -> HOVER",
+      "role": "menuitem",
+      "label": "Buy",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=298 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <div> <label> <div> Enter license plate </div> <input id=975 text (ex.) c4r 6uru /> </label> <a id=6702> Lexus </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [16070]",
+      "op": "CLICK",
+      "element": "16070",
+      "value": "",
+      "description": "[menuitem] New Cars -> CLICK",
+      "role": "menuitem",
+      "label": "New Cars",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <div menu> <div> <ul menu> <a id=16070 menuitem> <span> New Cars </span> </a> </ul> <ul menu> <a id=16091 menuitem> <span> New </span> <span> Start Your Purchase Online </span> </a> </ul> </div> </div> </ul> </nav> <div> <label id=16658> <span> Buy New </span> </label> <input radio sell my car on true /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [27938]",
+      "op": "CLICK",
+      "element": "27938",
+      "value": "",
+      "description": "[p] SUV / Crossover -> CLICK",
+      "role": "p",
+      "label": "SUV / Crossover",
+      "observation": "<html> <li id=27936> <a id=27938> <div> <img id=27944 suv / crossover /> <p> SUV / Crossover </p> </div> </a> </li> </html>"
+    },
+    {
+      "action": "TYPE [33648] [10017]",
+      "op": "TYPE",
+      "element": "33648",
+      "value": "10017",
+      "description": "[textbox] ZIP -> TYPE: 10017",
+      "role": "textbox",
+      "label": "ZIP",
+      "observation": "<html> <div> <div tabpanel> <div tabpanel> <div> <label> ZIP </label> <input id=33648 tel zip 10017 /> </div> </div> </div> <ul> <label id=34795> <input checkbox black /> <p> Black <span> (24,600) </span> </p> </label> <label id=34858> <input checkbox silver /> <p> Silver <span> (2) </span> </p> </label> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [46399]",
+      "op": "CLICK",
+      "element": "46399",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div tabpanel> <div tabpanel> <form> <label> Body Style </label> <select bodytypegroup> </select> <button id=46399 submit> Search </button> </form> </div> </div> <ul> <label id=47590> <input checkbox black /> <p> Black <span> (24,600) </span> </p> </label> <label id=47653> <input checkbox silver /> <p> Silver <span> (2) </span> </p> </label> </ul> </div> </html>"
+    },
+    {
+      "action": "SELECT [52833] [2022]",
+      "op": "SELECT",
+      "element": "52833",
+      "value": "2022",
+      "description": "[combobox] Select Minimum Year -> SELECT: 2022",
+      "role": "combobox",
+      "label": "Select Minimum Year",
+      "observation": "<html> <div> <div> <select id=52833 select minimum year> <option 2024> 2024 </option> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021 true> 2021 </option> </select> <svg img /> </div> <ul> <label id=54025> <input checkbox black /> <p> Black <span> (24,600) </span> </p> </label> <label id=54088> <input checkbox silver /> <p> Silver <span> (2) </span> </p> </label> </ul> </div> </html>"
+    },
+    {
+      "action": "SELECT [65240] [2023]",
+      "op": "SELECT",
+      "element": "65240",
+      "value": "2023",
+      "description": "[combobox] Select Maximum Year -> SELECT: 2023",
+      "role": "combobox",
+      "label": "Select Maximum Year",
+      "observation": "<html> <div> <div> <select id=65240 select maximum year> <option 2024 true> 2024 </option> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> </select> <svg img /> </div> <ul> <label> <input id=66374 checkbox black /> <p> Black </p> </label> <label id=66436> <input checkbox silver /> <p> Silver <span> (2) </span> </p> </label> </ul> </div> </html>"
+    },
+    {
+      "action": "SELECT [77639] [50 mi]",
+      "op": "SELECT",
+      "element": "77639",
+      "value": "50 mi",
+      "description": "[combobox] select-filter -> SELECT: 50 mi",
+      "role": "combobox",
+      "label": "select-filter",
+      "observation": "<html> <div> <div> <select id=77639 select-filter> <option 10> 10 mi </option> <option 25> 25 mi </option> <option 50 true> 50 mi </option> <option 75> 75 mi </option> <option 100> 100 mi </option> <option 150> 150 mi </option> <option 200> 200 mi </option> </select> <svg img /> </div> <ul> <label> <input id=78861 checkbox black /> <p> Black </p> </label> <label id=78923> <input checkbox silver /> <p> Silver <span> (2) </span> </p> </label> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [91056]",
+      "op": "CLICK",
+      "element": "91056",
+      "value": "",
+      "description": "[span] Silver -> CLICK",
+      "role": "span",
+      "label": "Silver",
+      "observation": "<html> <div> <label id=91056> <input checkbox silver /> <p> <span> Silver </span> <span> (2,947) </span> </p> </label> <ul> <label> <input id=91121 checkbox black /> <p> Black </p> </label> <label id=91183> <input checkbox silver /> <p> Silver <span> (2) </span> </p> </label> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [103574]",
+      "op": "CLICK",
+      "element": "103574",
+      "value": "",
+      "description": "[p] Black -> CLICK",
+      "role": "p",
+      "label": "Black",
+      "observation": "<html> <div> <label id=103389> <input checkbox black /> <p> <span> Black </span> <span> (8,894) </span> </p> </label> <label id=103574> <input id=103575 checkbox black /> <p> Black <span> (2,002) </span> </p> </label> </div> </html>"
+    },
+    {
+      "action": "CLICK [116091]",
+      "op": "CLICK",
+      "element": "116091",
+      "value": "",
+      "description": "[p] Lexus -> CLICK",
+      "role": "p",
+      "label": "Lexus",
+      "observation": "<html> <div> <ul tablist> <li tab> Search Used </li> <li id=115382 tab> Search New </li> </ul> <div> <label id=116091> <input checkbox 37 /> <p> Lexus <span> (24) </span> </p> </label> <label id=116467> <input checkbox 121 /> <p> Backup Camera <span> (1,514) </span> </p> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [128989]",
+      "op": "CLICK",
+      "element": "128989",
+      "value": "",
+      "description": "[p] Backup Camera -> CLICK",
+      "role": "p",
+      "label": "Backup Camera",
+      "observation": "<html> <div> <div> <ul tablist> <li tab> Search Used </li> <li id=127956 tab> Search New </li> </ul> <label id=128989> <input checkbox 121 /> <p> Backup Camera <span> (24) </span> </p> </label> </div> <div> <button id=129965> <span> Year </span> <svg img /> </button> <span> ( ) </span> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [139170] [Newest first (by car year)]",
+      "op": "SELECT",
+      "element": "139170",
+      "value": "Newest first (by car year)",
+      "description": "[combobox] Select Sort Order -> SELECT: Newest first (by car year",
+      "role": "combobox",
+      "label": "Select Sort Order",
+      "observation": "<html> <div> <label id=140377> <input id=140378 checkbox silver /> <p> Silver </p> </label> <div> <select id=139170 select sort order> <option price_asc true> Lowest price first </option> <option price_desc> Highest price first </option> <option mileage_asc> Lowest mileage first </option> <option mileage_desc> Highest mileage first </option> <option proximity_asc> Closest first </option> <option> Newest first (by car year) </option> <option> Oldest first (by car year) </option> <option> Newest listings first </option> <option> Oldest listings first </option> </select> <svg img /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [154382]",
+      "op": "CLICK",
+      "element": "154382",
+      "value": "",
+      "description": "[heading] New 2023 Lexus NX 350 AWD -> CLICK",
+      "role": "heading",
+      "label": "New 2023 Lexus NX 350 AWD",
+      "observation": "<html> <div> <label id=152709> <input id=152710 checkbox silver /> <p> Silver </p> </label> <a id=154382> <div> <img 2023 lexus nx 350 awd /> <span> Save this listing </span> <button> <svg img /> <span> Learn more about this 2023 Lexus NX 350 AWD </span> </button> </div> <div> <div> <h4 new 2023 lexus nx 350> New 2023 Lexus NX 350 AWD </h4> <span> $45,490 </span> <div> <span> MSRP </span> <span> $45,490 </span> </div> <span> Whippany, NJ (23 mi) </span> </div> <button submit> <div> Request Info </div> </button> <span> Authorized Lexus Dealer </span> </div> <dl> <dt> Year: </dt> <dd> 2023 </dd> <dt> Make: </dt> <dd> Lexus </dd> <dt> Model: </dt> <dd> NX </dd> <dt> Body type: </dt> <dd> SUV / Crossover </dd> <dt> Doors: </dt> <dd> 4 doors </dd> <dt> Drivetrain: </dt> </dl> </a> </div> </html>"
+    }
+  ]
+}

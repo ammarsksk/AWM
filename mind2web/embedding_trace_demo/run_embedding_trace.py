@@ -535,7 +535,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-steps-per-task", type=int, default=2)
     parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--use-llm", action="store_true")
-    parser.add_argument("--model", type=str, default="gemini-2.5-flash")
+    parser.add_argument("--model", type=str, default="google/gemini-2.5-pro")
     parser.add_argument("--retrieval-backend", choices=["ram", "lancedb"], default="ram")
     parser.add_argument("--lancedb-candidate-k", type=int, default=50)
     parser.add_argument("--lancedb-index-type", type=str, default="IVF_SQ")

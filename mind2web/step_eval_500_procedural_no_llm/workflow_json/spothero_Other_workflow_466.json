@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "name": "spothero / Other workflow 466",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Book the closest parking spot to the Orlando Magic at Brooklyn Nets event, happening in Barclays Center, to enter after 3 pm and exit after 5 pm",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "specific",
+      "field",
+      "required",
+      "brooklyn",
+      "book",
+      "parking",
+      "orlando",
+      "magic",
+      "nets",
+      "barclays",
+      "center",
+      "after",
+      "search",
+      "combobox",
+      "time",
+      "spothero",
+      "travel",
+      "other",
+      "closest",
+      "spot",
+      "event",
+      "happening",
+      "enter",
+      "exit",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "atlantic",
+      "avenue",
+      "sort",
+      "distance",
+      "start",
+      "end",
+      "update",
+      "now"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search for parking",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Search for parking",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Barclays Center, Atlantic Avenue, Brooklyn, NY, US...",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Barclays Center, Atlantic Avenue, Brooklyn, NY, US...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Orlando Magic at Brooklyn Nets",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Orlando Magic at Brooklyn Nets",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "select the Sort by Distance",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "Sort by Distance",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "select the Start Time",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Start Time",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "select the End Time",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "End Time",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Update Search",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Update Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Book Now",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Book Now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "spothero / Other workflow 466"
+}

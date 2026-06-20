@@ -1,0 +1,12 @@
+2026-06-19 15:29:10,315 - 3400388 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.118_21 in:
+  results/2026-06-19_15-29-09_GenericAgentArgs_on_webarena.118_21
+2026-06-19 15:29:16,226 - 3400388 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 15:29:16,227 - 3400388 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 15:29:28,845 - 3400388 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:29:29,675 - 3400388 - browsergym.experiments.loop - INFO - The user is asking for a product to alleviate jaw bruxism. I will use the search bar to find relevant products. The search bar has a bid of '206'. I will type "jaw bruxism" into the search bar and then click the search button. The search button has a bid of '211'.
+
+action:
+fill('206', 'jaw bruxism')
+click('211')
+
+2026-06-19 15:29:42,073 - 3400388 - browsergym.experiments.loop - INFO - Saving summary info.

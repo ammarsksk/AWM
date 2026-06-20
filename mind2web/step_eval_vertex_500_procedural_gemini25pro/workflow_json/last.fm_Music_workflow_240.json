@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "name": "last.fm / Music workflow 240",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "goal_pattern": "Find the weekly chart-topper artist and play the number 1 track of that artist after liking the track.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "track",
+      "link",
+      "weekly",
+      "artist",
+      "play",
+      "last",
+      "entertainment",
+      "music",
+      "find",
+      "chart",
+      "topper",
+      "number",
+      "after",
+      "liking",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "charts",
+      "weeknd",
+      "love"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Charts",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Charts",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Weekly",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Weekly",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the The Weeknd",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "The Weeknd",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Love this track",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Love this track",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Play track",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Play track",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "last.fm / Music workflow 240"
+}

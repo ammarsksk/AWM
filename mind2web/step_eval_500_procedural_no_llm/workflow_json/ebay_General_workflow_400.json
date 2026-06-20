@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "name": "ebay / General workflow 400",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "Find an foldable over-ear headphone under 35 USD in certified refurbished condition with lowest price + shipping.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "ear",
+      "price",
+      "foldable",
+      "over",
+      "under",
+      "certified",
+      "refurbished",
+      "condition",
+      "lowest",
+      "shipping",
+      "ebay",
+      "shopping",
+      "general",
+      "find",
+      "headphone",
+      "usd",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "electronics",
+      "headphones",
+      "cup",
+      "sort",
+      "best",
+      "match",
+      "first",
+      "features"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Electronics",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Electronics",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Headphones",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Headphones",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Ear-Cup (Over the Ear",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Ear-Cup (Over the Ear",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Price",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Price",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Under $35.00",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Under $35.00",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Condition",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Condition",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Certified - Refurbished",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Certified - Refurbished",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Sort: Best Match",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sort: Best Match",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Price + Shipping: lowest first",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price + Shipping: lowest first",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Features",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Features",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Foldable",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Foldable",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 11
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 11.0
+  },
+  "raw_workflow_name": "ebay / General workflow 400"
+}

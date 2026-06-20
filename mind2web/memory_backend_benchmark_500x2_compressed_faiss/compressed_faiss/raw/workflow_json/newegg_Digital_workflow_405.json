@@ -1,0 +1,30 @@
+{
+  "name": "newegg / Digital workflow 405",
+  "source": "Mind2Web exemplar",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "task": "Find the cheapest unused wireless Logitech Keyboard under $70.",
+  "steps": [
+    {
+      "action": "TYPE [112] [wireless keyboard]",
+      "op": "TYPE",
+      "element": "112",
+      "value": "wireless keyboard",
+      "description": "[searchbox] Search Site -> TYPE: wireless keyboard",
+      "role": "searchbox",
+      "label": "Search Site",
+      "observation": "<html> <div> <input id=112 search search site /> <ul> <a id=9937 computer peripherals> <div> Computer Peripherals </div> </a> <a id=10448 electronics> <div> Electronics </div> </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [33735]",
+      "op": "CLICK",
+      "element": "33735",
+      "value": "",
+      "description": "[button] \uf002 -> CLICK",
+      "role": "button",
+      "label": "\uf002",
+      "observation": "<html> <div> <div> <input search search site wireless keyboard /> <button id=33735> <span> Search </span> </button> </div> <div> <a id=44212 electronics> <div> Electronics </div> </a> <a id=49626 lowest-price> <img lowest-price /> </a> </div> </div> </html>"
+    }
+  ]
+}

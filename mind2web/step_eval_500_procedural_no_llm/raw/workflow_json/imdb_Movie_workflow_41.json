@@ -1,0 +1,60 @@
+{
+  "name": "imdb / Movie workflow 41",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Get the most popular documentary tv series sorted by IMDB rating, see the details of the top result.",
+  "steps": [
+    {
+      "action": "CLICK [166]",
+      "op": "CLICK",
+      "element": "166",
+      "value": "",
+      "description": "[button] Open Navigation Drawer -> CLICK",
+      "role": "button",
+      "label": "Open Navigation Drawer",
+      "observation": "<html> <div> <div> <label id=166 button open navigation drawer> <svg ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <ul menu> <a menuitem> </a> <a menuitem> </a> <a id=259 menuitem> <span> Most Popular TV Shows </span> </a> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> </ul> <a home /> </div> <main main> <div> <a button> </a> <a id=1751 button> <span> Most Popular </span> </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [5293]",
+      "op": "CLICK",
+      "element": "5293",
+      "value": "",
+      "description": "[span] Browse TV Shows by Genre -> CLICK",
+      "role": "span",
+      "label": "Browse TV Shows by Genre",
+      "observation": "<html> <div> <ul menu> <a menuitem> </a> <a menuitem> </a> <a id=5290 menuitem> <span> Most Popular TV Shows </span> </a> <a id=5293 menuitem> <span> Browse TV Shows by Genre </span> </a> <a menuitem> </a> <a menuitem> </a> </ul> <main main> <div> <a button> </a> <a id=6763 button> <span> Most Popular </span> </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [7740]",
+      "op": "CLICK",
+      "element": "7740",
+      "value": "",
+      "description": "[link] Documentary -> CLICK",
+      "role": "link",
+      "label": "Documentary",
+      "observation": "<html> <div> <div> <a id=8858> Documentary </a> <a> Drama </a> <a> Family </a> <a> Fantasy </a> </div> <div> <a> Biography </a> <a> Comedy </a> <a> Crime </a> <a id=7740> Documentary </a> </div> <div> <a> Animation </a> <a> Comedy </a> <a> Crime </a> <a id=9661> Documentary </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11130]",
+      "op": "CLICK",
+      "element": "11130",
+      "value": "",
+      "description": "[link] User Rating -> CLICK",
+      "role": "link",
+      "label": "User Rating",
+      "observation": "<html> <div> Sort by: <a id=11872> <strong> Popularity </strong> </a> <span> | </span> <a> A-Z </a> <span> | </span> <a id=11130> User Rating </a> <span> | </span> <a> Number of Votes </a> <span> | </span> <span> | </span> <a> Date of Your Rating </a> <span> | </span> <a id=11927> Your Rating </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [21333]",
+      "op": "CLICK",
+      "element": "21333",
+      "value": "",
+      "description": "[link] Going Postal -> CLICK",
+      "role": "link",
+      "label": "Going Postal",
+      "observation": "<html> <div> <div> Sort by: <a id=22075> Popularity </a> <span id=22078> | </span> <a> A-Z </a> <span> | </span> </div> <h3> <span> 1. </span> <a id=21333> Going Postal </a> <span> (2016 ) </span> </h3> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "name": "ultimate-guitar / Music workflow 32",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "ultimate-guitar",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "goal_pattern": "Find the most popular guitar tab for Absolute Beginners.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "guitar",
+      "most",
+      "popular",
+      "absolute",
+      "svg",
+      "ultimate",
+      "entertainment",
+      "music",
+      "find",
+      "tab",
+      "beginners",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tabs",
+      "all",
+      "time",
+      "beginner",
+      "138",
+      "you",
+      "belong",
+      "ver"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Tabs",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Tabs",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Most popular of all time",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Most popular of all time",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Absolute Beginner 91,138",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Absolute Beginner 91,138",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the You Belong With Me (ver 2",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "You Belong With Me (ver 2",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "ultimate-guitar / Music workflow 32"
+}

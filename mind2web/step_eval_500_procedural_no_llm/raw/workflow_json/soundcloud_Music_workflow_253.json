@@ -1,0 +1,50 @@
+{
+  "name": "soundcloud / Music workflow 253",
+  "source": "Mind2Web exemplar",
+  "website": "soundcloud",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Repost on my feed a rock playlist.",
+  "steps": [
+    {
+      "action": "TYPE [264] [rock]",
+      "op": "TYPE",
+      "element": "264",
+      "value": "rock",
+      "description": "[searchbox] Search -> TYPE: rock",
+      "role": "searchbox",
+      "label": "Search",
+      "observation": "<html> <header banner> <div> <nav navigation> <a id=599> Feed </a> </nav> <div search> <form> <input id=264 search q /> <button id=233 submit> Search </button> </form> </div> </div> </header> </html>"
+    },
+    {
+      "action": "CLICK [16582]",
+      "op": "CLICK",
+      "element": "16582",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <div> <header banner> <div search> <form> <input search q rock /> <button id=16582 submit> Search </button> </form> </div> </header> <div main> <div> <span> Based on your listening history </span> <a id=21044> Go to playlist </a> </div> </div> </div> <div listbox> <div option> <a id=24619> <h2> rockstar </h2> </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [33018]",
+      "op": "CLICK",
+      "element": "33018",
+      "value": "",
+      "description": "[link] Playlists -> CLICK",
+      "role": "link",
+      "label": "Playlists",
+      "observation": "<html> <div main> <div> <a id=33018> Playlists </a> <ul> <div group playlist: lovers rock by tv> <div> <button button like> 121K </button> <button id=34326 button repost> 2,121 </button> <button button share> Share </button> <button button copy link> Copy Link </button> <button button more> More </button> </div> </div> <div group playlist: _ _ - _> <div> <button button like> 113K </button> <button id=34668 button repost> 632 </button> <button button share> Share </button> <button button copy link> Copy Link </button> <button button more> More </button> </div> </div> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36630]",
+      "op": "CLICK",
+      "element": "36630",
+      "value": "",
+      "description": "[button] Repost -> CLICK",
+      "role": "button",
+      "label": "Repost",
+      "observation": "<html> <div main> <ul> <div group playlist: new rap rock: revved> <div> <button button like> 4,171 </button> <button id=36630 button repost> 177 </button> <button button share> Share </button> <button button copy link> Copy Link </button> <button button add to next up> </button> </div> </div> <div group playlist: alternative rock by abel> <div> <button button like> 1,441 </button> <button id=39334 button repost> 86 </button> <button button share> Share </button> <button button copy link> Copy Link </button> <button button add to next up> </button> </div> </div> <div group playlist: 90&#x27;s rock &#x27;n&#x27; roll> <div> <button button like> 3,219 </button> <button id=40226 button repost> 308 </button> <button button share> Share </button> <button button copy link> Copy Link </button> <button button add to next up> </button> </div> </div> </ul> </div> </html>"
+    }
+  ]
+}

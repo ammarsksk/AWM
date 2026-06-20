@@ -1,0 +1,51 @@
+{
+  "name": "sports.yahoo / Sports workflow 985",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "sports.yahoo",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "find the score of the latest nfl game played by the las vegas raiders.",
+  "goal_pattern": "find the score of the latest nfl game played by the las vegas raiders.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search query",
+      "operation": "TYPE",
+      "target_type": "combobox",
+      "target_description": "Search query",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Las Vegas",
+      "operation": "CLICK",
+      "target_type": "img",
+      "target_description": "Las Vegas",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [100] [las vegas raiders]",
+      "gold_element_id": "100",
+      "gold_value": "las vegas raiders"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [11660]",
+      "gold_element_id": "11660",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "sports.yahoo / Sports workflow 985"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "yellowpages / Restaurant workflow 395",
+  "source": "Mind2Web exemplar",
+  "website": "yellowpages",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find a person by phone number 123456789.",
+  "steps": [
+    {
+      "action": "CLICK [128]",
+      "op": "CLICK",
+      "element": "128",
+      "value": "",
+      "description": "[link] Find People -> CLICK",
+      "role": "link",
+      "label": "Find People",
+      "observation": "<html> <body> <form> <input id=238 text search_terms what are you looking for? /> <button id=293 submit find> <span> Find </span> </button> </form> <a id=128 find people> Find People </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [892]",
+      "op": "CLICK",
+      "element": "892",
+      "value": "",
+      "description": "[link] BY PHONE NUMBER -> CLICK",
+      "role": "link",
+      "label": "BY PHONE NUMBER",
+      "observation": "<html> <div> <nav> <a> BY NAME </a> <a> BY ADDRESS </a> <a id=892> BY PHONE </a> </nav> <form> <input id=1537 text areacode area code /> <input id=1538 submit search /> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [2495] [123456789]",
+      "op": "TYPE",
+      "element": "2495",
+      "value": "123456789",
+      "description": "[input] -> TYPE: 123456789",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <form> <div> Please verify captcha before searching. </div> <input id=2495 text phone phone (required) /> <input id=2540 submit search by phone /> </form> <form> <input id=3026 text areacode area code /> <input submit search /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [5443]",
+      "op": "CLICK",
+      "element": "5443",
+      "value": "",
+      "description": "[button] Search by Phone -> CLICK",
+      "role": "button",
+      "label": "Search by Phone",
+      "observation": "<html> <div> <form> <div> Please verify captcha before searching. </div> <input id=5443 submit search by phone /> </form> <form> <input id=5974 text areacode area code /> <input id=5975 submit search /> </form> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "imdb / Movie workflow 42",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show top 50 Movies and TV shows by Sci fi genre.",
+  "goal_pattern": "Show top 50 Movies and TV shows by Sci fi genre.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the [path] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "path",
+      "target_description": "[path] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Top 250 Movies",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Top 250 Movies",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [209]",
+      "gold_element_id": "209",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [5184]",
+      "gold_element_id": "5184",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "imdb / Movie workflow 42"
+}

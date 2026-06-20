@@ -1,0 +1,90 @@
+{
+  "name": "rottentomatoes / Movie workflow 349",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Locate the list of movies \"at home\", sorted by most recent.",
+  "steps": [
+    {
+      "action": "CLICK [186]",
+      "op": "CLICK",
+      "element": "186",
+      "value": "",
+      "description": "[link] MOVIES -> CLICK",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=186> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2489> Showtimes </a> </slot> </slot> </nav> </slot> </rt-header> <div> <h2> Popular In Theaters </h2> <a id=9167> View all </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [35270]",
+      "op": "CLICK",
+      "element": "35270",
+      "value": "",
+      "description": "[button] IN THEATERS -> CLICK",
+      "role": "button",
+      "label": "IN THEATERS",
+      "observation": "<html> <div> <div> <button id=35270> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip id=38181 button sort> <slot label> <span> Sort </span> </slot> </filter-chip> <filter-chip id=38209 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57856]",
+      "op": "CLICK",
+      "element": "57856",
+      "value": "",
+      "description": "[link] AT HOME -> CLICK",
+      "role": "link",
+      "label": "AT HOME",
+      "observation": "<html> <div> <div> <button id=57806> In Theaters </button> <dropdown-menu> <slot option> <a id=57856> <dropdown-option movies_at_home> <slot> At Home </slot> </dropdown-option> </a> </slot> </dropdown-menu> </div> <div> <filter-chip id=57979 button sort> <slot label> <span> Sort </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [67917]",
+      "op": "CLICK",
+      "element": "67917",
+      "value": "",
+      "description": "[span] Genre -> CLICK",
+      "role": "span",
+      "label": "Genre",
+      "observation": "<html> <div> <div> <button id=67714> At Home </button> <dropdown-menu movies_at_home> </dropdown-menu> </div> <div> <filter-chip id=67889 button sort> <slot label> <span> Sort </span> </slot> </filter-chip> <filter-chip id=67917 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [89710]",
+      "op": "CLICK",
+      "element": "89710",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot link> <a id=86893> Movies </a> </slot> </slot> </slot> </rt-header> <div> <slot content> <select-checkbox-group group> <slot row> <slot input> <select-checkbox id=89710 checkbox fantasy> </select-checkbox> </slot> </slot> </select-checkbox-group> </slot> <slot cta2> <button id=90757> Apply </button> </slot> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [107545]",
+      "op": "CLICK",
+      "element": "107545",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot link> <a id=108171> Movies </a> </slot> </slot> </slot> </rt-header> <div> <filter-chip id=110443 button sort> <slot label> <span> Sort </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <slot cta2> <button id=107545> Apply </button> </slot> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [131722]",
+      "op": "CLICK",
+      "element": "131722",
+      "value": "",
+      "description": "[span] Sort -> CLICK",
+      "role": "span",
+      "label": "Sort",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot link> <a id=129450> Movies </a> </slot> </slot> </slot> </rt-header> <div> <div> <button id=131547> At Home </button> <dropdown-menu movies_at_home> </dropdown-menu> </div> <div> <filter-chip id=131722 button sort> <slot label> <span> Sort </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [150218]",
+      "op": "CLICK",
+      "element": "150218",
+      "value": "",
+      "description": "[span] Newest -> CLICK",
+      "role": "span",
+      "label": "Newest",
+      "observation": "<html> <slot content> <select-radio-group radiogroup> <slot row> <slot label> <span id=153154> Most popular </span> </slot> <div> <slot label> <span id=150218> Newest </span> </slot> <slot input> <select-radio id=153187 radio newest /> </slot> </div> </slot> </select-radio-group> </slot> </html>"
+    }
+  ]
+}

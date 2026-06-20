@@ -1,0 +1,30 @@
+{
+  "name": "sports.yahoo / Sports workflow 985",
+  "source": "Mind2Web exemplar",
+  "website": "sports.yahoo",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "find the score of the latest nfl game played by the las vegas raiders.",
+  "steps": [
+    {
+      "action": "TYPE [100] [las vegas raiders]",
+      "op": "TYPE",
+      "element": "100",
+      "value": "las vegas raiders",
+      "description": "[combobox] Search query -> TYPE: las vegas raiders",
+      "role": "combobox",
+      "label": "Search query",
+      "observation": "<html> <div banner> <div> <form search> <input id=100 combobox text p /> <input fr sports /> <input fr2 p:sprt,m:sb /> </form> <ul> <a id=626> Sports </a> <a id=718> NFL </a> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11660]",
+      "op": "CLICK",
+      "element": "11660",
+      "value": "",
+      "description": "[img] Las Vegas -> CLICK",
+      "role": "img",
+      "label": "Las Vegas",
+      "observation": "<html> <div banner> <form search> <input id=12129 combobox text p las vegas raiders /> <input fr sports /> <input fr2 p:sprt,m:sb /> <li id=12148 las vegas> <img id=11660 las vegas /> <div> <h5> Las Vegas </h5> <span> NFL </span> </div> </li> </form> </div> </html>"
+    }
+  ]
+}

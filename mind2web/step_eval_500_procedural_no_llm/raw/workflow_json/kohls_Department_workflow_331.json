@@ -1,0 +1,80 @@
+{
+  "name": "kohls / Department workflow 331",
+  "source": "Mind2Web exemplar",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "task": "Add 10 of the cheapest green shirt to my cart",
+  "steps": [
+    {
+      "action": "TYPE [192] [shirt]",
+      "op": "TYPE",
+      "element": "192",
+      "value": "shirt",
+      "description": "[textbox] Search by keyword or web id -> TYPE: shirt",
+      "role": "textbox",
+      "label": "Search by keyword or web id",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=198 submit submit-search /> <input id=192 text search hi james, what are you /> </fieldset> <a id=512> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [7886]",
+      "op": "CLICK",
+      "element": "7886",
+      "value": "",
+      "description": "[textbox] Search by keyword or web id -> ENTER",
+      "role": "textbox",
+      "label": "Search by keyword or web id",
+      "observation": "<html> <div> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input submit submit-search /> <input id=7886 text search hi james, what are you shirt /> </fieldset> <a id=8276> <svg img /> <span> Shop by Category </span> </a> </div> <p> <span id=8624> 10 </span> <svg img /> </p> </div> </html>"
+    },
+    {
+      "action": "CLICK [11853]",
+      "op": "CLICK",
+      "element": "11853",
+      "value": "",
+      "description": "[link] Sort by: Featured -> CLICK",
+      "role": "link",
+      "label": "Sort by: Featured",
+      "observation": "<html> <div> <div> <a menu expandable> </a> <a id=11853> Featured <span> undefined </span> </a> <ul list> </ul> </div> <div> <span id=30004> Price </span> <a id=11802 button price> <span> Price </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [50666]",
+      "op": "CLICK",
+      "element": "50666",
+      "value": "",
+      "description": "[link] Price Low-High -> CLICK",
+      "role": "link",
+      "label": "Price Low-High",
+      "observation": "<html> <div> <ul list> <li listitem> <a id=50666> Price Low-High <span> undefined </span> </a> </li> <li listitem> <a id=51451> Price High-Low <span> undefined </span> </a> </li> </ul> <div> <span id=68865> Price </span> <a button price> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [89777]",
+      "op": "CLICK",
+      "element": "89777",
+      "value": "",
+      "description": "[img] Women's Sonoma Goods For Life\u00ae Everyday V-Neck Tee -> CLICK",
+      "role": "img",
+      "label": "Women's Sonoma Goods For Life\u00ae Everyday V-Neck Tee",
+      "observation": "<html> <div> <p> <span id=90494> 10 </span> <svg img /> </p> <div> <img id=89777 women's sonoma goods for life /> <div> <span id=106908> Color </span> <a button color> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [108763] [10]",
+      "op": "TYPE",
+      "element": "108763",
+      "value": "10",
+      "description": "[textbox] Product quantity -> TYPE: 10",
+      "role": "textbox",
+      "label": "Product quantity",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input submit submit-search /> <input id=109100 text search hi james, what are you /> </fieldset> <div> <div> Only </div> <input id=108763 text product quantity 1 /> <input id=108847 button add to cart pdp-addtobag /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [128349]",
+      "op": "CLICK",
+      "element": "128349",
+      "value": "",
+      "description": "[button] Add to Cart -> CLICK",
+      "role": "button",
+      "label": "Add to Cart",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=128672 submit submit-search /> <input id=128674 text search hi james, what are you /> </fieldset> <input id=128349 button add to cart pdp-addtobag /> </div> </html>"
+    }
+  ]
+}

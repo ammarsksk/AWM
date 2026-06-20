@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "name": "kayak / Airlines workflow 235",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Find the cheapest Hawaii package for two adults from June 18 to 21, and the hotel must be near a beach, have a beachfront, hot tub, and pool, and provides towels.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "checkbox",
+      "june",
+      "hawaii",
+      "beach",
+      "beachfront",
+      "hot",
+      "tub",
+      "pool",
+      "towels",
+      "link",
+      "search",
+      "packages",
+      "next",
+      "gridcell",
+      "div",
+      "kayak",
+      "travel",
+      "airlines",
+      "find",
+      "cheapest",
+      "package",
+      "two",
+      "adults",
+      "hotel",
+      "must",
+      "near",
+      "have",
+      "provides",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "vacations",
+      "generic",
+      "departure",
+      "date",
+      "month",
+      "amenities",
+      "property",
+      "style",
+      "recommended",
+      "tab",
+      "price"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Search for packages",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Search for packages",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Hawaii Vacations",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Hawaii Vacations",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Departure date input",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Departure date input",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Next month",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next month",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the June 18",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "June 18",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the June 21",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "June 21",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Search packages",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Search packages",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Amenities",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Amenities",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Beachfront",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Beachfront",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Hot tub",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Hot tub",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Pool",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Pool",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Towels",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Towels",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Property style",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Property style",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Beach",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Beach",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Recommended",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Recommended",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Price (low to high",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Price (low to high",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the View Deal",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "View Deal",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the Next: Final details",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next: Final details",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 18
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 18.0
+  },
+  "raw_workflow_name": "kayak / Airlines workflow 235"
+}

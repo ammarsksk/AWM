@@ -1,0 +1,51 @@
+{
+  "name": "rottentomatoes / Movie workflow 348",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find comedy tv shows on netflix sorted by audience score.",
+  "goal_pattern": "Find comedy tv shows on netflix sorted by audience score.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the TV SHOWS",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "TV SHOWS",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the netflix",
+      "operation": "CLICK",
+      "target_type": "img",
+      "target_description": "netflix",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [179]",
+      "gold_element_id": "179",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [15896]",
+      "gold_element_id": "15896",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "rottentomatoes / Movie workflow 348"
+}

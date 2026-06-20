@@ -1,0 +1,37 @@
+2026-06-19 15:29:55,097 - 3401352 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.124_5 in:
+  results/2026-06-19_15-29-54_GenericAgentArgs_on_webarena.124_5
+2026-06-19 15:29:57,363 - 3401352 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 15:29:57,363 - 3401352 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 15:30:08,398 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:30:09,075 - 3401352 - browsergym.experiments.loop - INFO - action:
+fill('204', 'wireless earphone')
+click('209')
+
+2026-06-19 15:30:18,145 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 15:30:27,482 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:30:27,847 - 3401352 - browsergym.experiments.loop - INFO - The user wants to know the price range of wireless earphones. I have already searched for "wireless earphone" and the results are displayed on the page. To find the price range, I need to find the minimum and maximum prices. I can do this by sorting the results by price.
+
+First, I will sort the results by price in ascending order to find the minimum price. I will select the "Price" option from the "Sort By" combobox (bid '1231'). Then, I will click the "Set Ascending Direction" link (bid '1235') to ensure the order is ascending. The lowest price will then be the price of the first item in the list.
+
+Next, I will sort the results by price in descending order to find the maximum price. I will click the "Set Ascending Direction" link again, which will toggle the sort order to descending. The highest price will then be the price of the first item in the list.
+
+Finally, I will provide the user with the minimum and maximum prices.
+
+action:
+select_option('1231', 'Price')
+
+2026-06-19 15:30:31,257 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 15:30:44,261 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:30:44,695 - 3401352 - browsergym.experiments.loop - INFO - action:
+click('1141')
+
+2026-06-19 15:30:49,398 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 15:31:01,169 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:31:01,574 - 3401352 - browsergym.experiments.loop - INFO - action:
+click('1237')
+
+2026-06-19 15:31:06,193 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')

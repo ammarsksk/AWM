@@ -1,0 +1,10 @@
+{
+    "n_steps": 0,
+    "cum_reward": 0,
+    "cum_raw_reward": 0,
+    "err_msg": "Exception uncaught by agent or environment in task webarena.22.\nKeyError:\n'Could not automatically map gemini-2.5-pro to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'",
+    "stack_trace": "Traceback (most recent call last):\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py\", line 418, in run\n    action = step_info.from_action(agent)\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py\", line 206, in from_action\n    self.action, self.agent_info = agent.get_action(self.obs.copy())\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py\", line 110, in get_action\n    prompt = dynamic_prompting.fit_tokens(\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/dynamic_prompting.py\", line 212, in fit_tokens\n    n_token = count_tokens(prompt_str, model=model_name)\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/llm_utils.py\", line 184, in count_tokens\n    enc = get_tokenizer(model)\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/llm_utils.py\", line 178, in get_tokenizer\n    return tiktoken.encoding_for_model(model_name.split(\"/\")[-1])\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/tiktoken/model.py\", line 118, in encoding_for_model\n    return get_encoding(encoding_name_for_model(model_name))\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/tiktoken/model.py\", line 105, in encoding_name_for_model\n    raise KeyError(\nKeyError: 'Could not automatically map gemini-2.5-pro to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'\n",
+    "stats.cum_steps": 1,
+    "terminated": false,
+    "truncated": false
+}

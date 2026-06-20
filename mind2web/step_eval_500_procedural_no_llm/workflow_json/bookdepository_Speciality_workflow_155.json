@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "name": "bookdepository / Speciality workflow 155",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Cancel an order with order number X123456 of Harry Potter Box Set as not available at address.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "order",
+      "value",
+      "use",
+      "specific",
+      "field",
+      "textbox",
+      "cancel",
+      "number",
+      "address",
+      "required",
+      "your",
+      "bookdepository",
+      "shopping",
+      "speciality",
+      "x123456",
+      "harry",
+      "potter",
+      "box",
+      "set",
+      "not",
+      "available",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "james",
+      "smith",
+      "email",
+      "used",
+      "place",
+      "date",
+      "you",
+      "received",
+      "please",
+      "following",
+      "products",
+      "reason",
+      "cancellation",
+      "optional"
+    ],
+    "operations": [
+      "TYPE",
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Cancel my order",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Cancel my order",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the [input] -> TYPE: James Smith",
+        "operation": "TYPE",
+        "target_type": "input",
+        "target": "[input] -> TYPE: James Smith",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Email address used to place your order *",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Email address used to place your order *",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Order number *",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Order number *",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Date you received your order (DD/MM/YY",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Date you received your order (DD/MM/YY",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "type the Please cancel my order for the following products ...",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Please cancel my order for the following products ...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "type the Reason for cancellation (optional",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Reason for cancellation (optional",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Cancel order",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Cancel order",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "bookdepository / Speciality workflow 155"
+}

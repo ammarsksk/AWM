@@ -1,0 +1,90 @@
+{
+  "name": "ebay / General workflow 402",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find the most recently posted job opening in customer service in Ireland with a remote working option.",
+  "steps": [
+    {
+      "action": "CLICK [129]",
+      "op": "CLICK",
+      "element": "129",
+      "value": "",
+      "description": "[link] Careers -> CLICK",
+      "role": "link",
+      "label": "Careers",
+      "observation": "<html> <body> <header banner> <tr> <input id=615 combobox text search for anything _nkw /> <input id=698 submit search /> </tr> </header> <footer contentinfo> <a id=129> Careers </a> </footer> </body> </html>"
+    },
+    {
+      "action": "CLICK [5666]",
+      "op": "CLICK",
+      "element": "5666",
+      "value": "",
+      "description": "[div] Discover jobs around the world -> CLICK",
+      "role": "div",
+      "label": "Discover jobs around the world",
+      "observation": "<html> <div> <section static> <div static> <nav navigation section> <a id=5155> Jobs by Category </a> </nav> </div> </section> <section static> <div static> <div list> <div listitem> <a id=5666 discover jobs around the world> <div> Discover jobs around the world </div> </a> </div> <div listitem> <a id=6295 discover jobs around the world> <div> Get the details </div> </a> </div> </div> </div> </section> </div> </html>"
+    },
+    {
+      "action": "CLICK [11209]",
+      "op": "CLICK",
+      "element": "11209",
+      "value": "",
+      "description": "[ppc-content] Ireland -> CLICK",
+      "role": "ppc-content",
+      "label": "Ireland",
+      "observation": "<html> <div> <section static> <div static> <div list> <div listitem> <form job search> <div> <a button back /> <label> Search job title or location </label> <input id=10383 text typehead search job title or location /> <a button clear text> </a> </div> </form> </div> </div> </div> </section> <section static> <div static> <div list> <div listitem> <a id=11209 ireland> <ppc-content> Ireland </ppc-content> </a> </div> </div> </div> </section> <section static> <div static> <a id=11827 search for remote jobs remote> <ppc-content> Search for remote jobs </ppc-content> </a> </div> </section> </div> </html>"
+    },
+    {
+      "action": "CLICK [13655]",
+      "op": "CLICK",
+      "element": "13655",
+      "value": "",
+      "description": "[button] Flexible Workstyles -> CLICK",
+      "role": "button",
+      "label": "Flexible Workstyles",
+      "observation": "<html> <div main> <div> <div region refine your search> <div> <span heading> <button id=13655 flexible workstyles> Flexible Workstyles </button> </span> <span heading> <button id=13954 category> Category </button> </span> </div> </div> <div region facet results block> <select id=14338 sort by> <option most relevant true> Most relevant </option> <option most recent> Most recent </option> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21153]",
+      "op": "CLICK",
+      "element": "21153",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div main> <div> <div region refine your search> <div> <label id=21153> <input checkbox remote 10 jobs remote_phs_1 on /> <span text> <span> Remote </span> <span> <span> ( </span> 10 <span> ) </span> <span> jobs </span> </span> </span> </label> <span heading> <button id=21385 category> Category </button> </span> </div> </div> <div region facet results block> <select id=21769 sort by> <option most relevant true> Most relevant </option> <option most recent> Most recent </option> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [28825]",
+      "op": "CLICK",
+      "element": "28825",
+      "value": "",
+      "description": "[button] Category -> CLICK",
+      "role": "button",
+      "label": "Category",
+      "observation": "<html> <div main> <section static> <div static> <nav navigation site> <a id=27842> Careers </a> </nav> </div> </section> <div> <div region refine your search> <span heading> <button id=28825 category> Category </button> </span> </div> <div region facet results block> <select id=29192 sort by> <option most relevant true> Most relevant </option> <option most recent> Most recent </option> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36248]",
+      "op": "CLICK",
+      "element": "36248",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div main> <div> <div region refine your search> <div> <span heading> <button id=36042 country> Country </button> </span> <label id=36248> <input checkbox customer service 6 jobs category_phs_0 on /> <span text> <span> Customer Service </span> <span> <span> ( </span> 6 <span> ) </span> <span> jobs </span> </span> </span> </label> </div> </div> <div region facet results block> <select id=36575 sort by> <option most relevant true> Most relevant </option> <option most recent> Most recent </option> </select> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [42174] [Most recent]",
+      "op": "SELECT",
+      "element": "42174",
+      "value": "Most recent",
+      "description": "[combobox] Sort by -> SELECT: Most recent",
+      "role": "combobox",
+      "label": "Sort by",
+      "observation": "<html> <div main> <div> <div region refine your search> <div> <span heading> <button id=43298 flexible workstyles> Flexible Workstyles </button> </span> <span heading> <button id=43406 country> Country </button> </span> </div> </div> <div region facet results block> <select id=42174 sort by> <option most relevant true> Most relevant </option> <option most recent> Most recent </option> </select> </div> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "name": "kohls / Department workflow 29",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "goal_pattern": "Get the lowest priced plus size one piece active swimsuit in color black.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "plus",
+      "active",
+      "color",
+      "black",
+      "women",
+      "div",
+      "kohls",
+      "shopping",
+      "department",
+      "get",
+      "lowest",
+      "priced",
+      "size",
+      "one",
+      "piece",
+      "swimsuit",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "shop",
+      "category",
+      "swimwear",
+      "294",
+      "sort",
+      "featured",
+      "price",
+      "low",
+      "high",
+      "occasion"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Shop by Category",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Shop by Category",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Women",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Women",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Swimwear",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Swimwear",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Women's Plus",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Women's Plus",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Color",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Color",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Black (294",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Black (294",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Sort by: Featured",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Sort by: Featured",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Price Low-High",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price Low-High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Occasion",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Occasion",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Active (6",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Active (6",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 10
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 10.0
+  },
+  "raw_workflow_name": "kohls / Department workflow 29"
+}

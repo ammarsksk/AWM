@@ -1,0 +1,30 @@
+{
+  "name": "qatarairways / Airlines workflow 909",
+  "source": "Mind2Web exemplar",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a one-way flight ticket from Addis Ababa to Accra on April 14 and book the cheaper economy ticket.",
+  "steps": [
+    {
+      "action": "TYPE [112] [addis ababa]",
+      "op": "TYPE",
+      "element": "112",
+      "value": "addis ababa",
+      "description": "[textbox] From Autocomplete selection. Enter your place. -> TYPE: addis ababa",
+      "role": "textbox",
+      "label": "From Autocomplete selection. Enter your place.",
+      "observation": "<html> <body> <div dialog> <button id=832> Continue </button> </div> <div tabpanel> <a id=6670> Flights </a> <span> <input id=112 text chicago ord /> <pre> Chicago ORD </pre> <ul tablist> </ul> </span> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [21649]",
+      "op": "CLICK",
+      "element": "21649",
+      "value": "",
+      "description": "[strong] Addis Ababa -> CLICK",
+      "role": "strong",
+      "label": "Addis Ababa",
+      "observation": "<html> <body> <div dialog> <button id=22371> Continue </button> </div> <div> <div tabpanel> <div> <h3> All Airports </h3> <div id=21649 menuitem> <strong> Addis Ababa </strong> <span> Ethiopia </span> <strong> ADD </strong> <span> Bole International Airport </span> </div> </div> </div> <div> <input id=30927 text /> <span> Preferred city of departure </span> <div> Please select the preferred departure airport. </div> </div> </div> </body> </html>"
+    }
+  ]
+}

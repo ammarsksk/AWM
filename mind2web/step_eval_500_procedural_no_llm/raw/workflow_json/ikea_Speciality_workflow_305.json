@@ -1,0 +1,90 @@
+{
+  "name": "ikea / Speciality workflow 305",
+  "source": "Mind2Web exemplar",
+  "website": "ikea",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find wall mirrors for under $20.",
+  "steps": [
+    {
+      "action": "CLICK [103]",
+      "op": "CLICK",
+      "element": "103",
+      "value": "",
+      "description": "[link] Products -> CLICK",
+      "role": "link",
+      "label": "Products",
+      "observation": "<html> <body> <ul> <a id=103> Products </a> <a id=454> Marketplace </a> </ul> <p> Welcome to IKEA, where you will always find affordable <a> furniture </a> , stylish <a id=2658> home dcor </a> and innovative modern home solutions, as well as <a> design inspiration </a> and unique home ideas! If you are online furniture shopping or if you are visiting a local IKEA store near </p> </body> </html>"
+    },
+    {
+      "action": "CLICK [5845]",
+      "op": "CLICK",
+      "element": "5845",
+      "value": "",
+      "description": "[button] Home d\u00e9cor -> CLICK",
+      "role": "button",
+      "label": "Home d\u00e9cor",
+      "observation": "<html> <ul submenu for products> <li> <a id=5845 button> Home dcor </a> <ul submenu for home dcor> <a id=6968> Wall dcor </a> <a id=6972> Mirrors </a> </ul> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [14064]",
+      "op": "CLICK",
+      "element": "14064",
+      "value": "",
+      "description": "[link] Mirrors -> CLICK",
+      "role": "link",
+      "label": "Mirrors",
+      "observation": "<html> <div> <ul submenu for products> <ul submenu for home dcor> <a id=15190> Wall dcor </a> <a id=14064> Mirrors </a> </ul> </ul> <ul submenu for deals> <a id=16263> New Lower Price </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [19377]",
+      "op": "CLICK",
+      "element": "19377",
+      "value": "",
+      "description": "[link] Wall mirrors -> CLICK",
+      "role": "link",
+      "label": "Wall mirrors",
+      "observation": "<html> <div> <nav navigation> <a id=19377> <img wall mirrors /> <span> Wall mirrors </span> </a> </nav> <div> <div> <button id=20115 show sorting options modal> <span> Sort </span> </button> <button show filter modal size> </button> <button show filter modal color> </button> <button filter products by in stock> </button> </div> <a id=21238 button> <span> See all wall mirrors </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21761]",
+      "op": "CLICK",
+      "element": "21761",
+      "value": "",
+      "description": "[button] Show more filters modal -> CLICK",
+      "role": "button",
+      "label": "Show more filters modal",
+      "observation": "<html> <div> <div> <button id=22995 show sorting options modal> <span> Sort </span> </button> <button show filter modal size> </button> <button show filter modal shape> </button> <button show filter modal color> </button> <button filter products by top seller> </button> <button filter products by last chance> </button> <button filter products by new products> </button> <button id=21761 show more filters modal> <span> All filters </span> </button> </div> <div> <a id=25271 button> Show all categories </a> <span> (+1) </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30922]",
+      "op": "CLICK",
+      "element": "30922",
+      "value": "",
+      "description": "[span] Price -> CLICK",
+      "role": "span",
+      "label": "Price",
+      "observation": "<html> <div dialog sort and filter> <ul> <div region> <fieldset> <legend> Sort </legend> <label id=30511> <span> Price: low to high </span> <input radio radioname on /> </label> <label id=30518> <span> Price: high to low </span> <input radio radioname on /> </label> </fieldset> </div> <div heading> <button id=30922 button> <span> Price </span> </button> </div> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [40251]",
+      "op": "CLICK",
+      "element": "40251",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <body> <button id=38862 button /> <div dialog sort and filter> <li> <div heading> <button id=40241 button> <span> Price </span> </button> </div> <div region> <fieldset> <legend> Price </legend> <label id=40251> <span> <span> $0.00 - 19.99 </span> <span 13 products> 13 </span> </span> <input checkbox price_0_2000 /> </label> </fieldset> </div> </li> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [48268]",
+      "op": "CLICK",
+      "element": "48268",
+      "value": "",
+      "description": "[span] View -> CLICK",
+      "role": "span",
+      "label": "View",
+      "observation": "<html> <div dialog sort and filter> <div> <button button close /> <span id=47469> Filter and sort </span> </div> <div heading> <button id=47909 button> <span> Price </span> </button> </div> <div> <button id=48268 button view 13> <span> View <span> 13 </span> </span> </button> <button button clear all> </button> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "name": "budget / Car rental workflow 243",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Select the mystery vehicle to pick up at Bradenton in Mahattan, Florida  on april 20 at 3 pm and return at 6pm",
+  "steps": [
+    {
+      "action": "TYPE [138] [Manhattan]",
+      "op": "TYPE",
+      "element": "138",
+      "value": "Manhattan",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: Manhattan",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <ul> <a id=847 button> Reservations </a> <a id=995 button> Locations </a> </ul> <form resform> <angucomplete-alt enter your pick-up location or> <div> <input id=138 text angupicloc enter your pick-up location or /> <a> click here </a> </div> </angucomplete-alt> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [11912]",
+      "op": "CLICK",
+      "element": "11912",
+      "value": "",
+      "description": "[div] Manhattan -> CLICK",
+      "role": "div",
+      "label": "Manhattan",
+      "observation": "<html> <form resform> <div> <div> <angucomplete-alt enter your pick-up location or> <div id=11912> <span> <span> Manhattan </span> <span> , Florida </span> <span> , United States </span> </span> </div> </angucomplete-alt> <angucomplete-alt return to same location> <div> <input id=13634 text angudroploc return to same location /> <a> click here </a> </div> </angucomplete-alt> </div> <div> <button id=14446 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [24051]",
+      "op": "CLICK",
+      "element": "24051",
+      "value": "",
+      "description": "[textbox] mm/dd/yyyy -> CLICK",
+      "role": "textbox",
+      "label": "mm/dd/yyyy",
+      "observation": "<html> <form resform> <div> <div> <div> <input id=24051 text mm/dd/yyyy 04/09/2023 /> <button button> ... </button> </div> <div id=26155 vehicle type *> Vehicle Type * </div> </div> <div> <button id=26279 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [35991]",
+      "op": "CLICK",
+      "element": "35991",
+      "value": "",
+      "description": "[link] 20 -> CLICK",
+      "role": "link",
+      "label": "20",
+      "observation": "<html> <div> <a id=35991> 20 </a> <tbody> <a id=41605> 3 </a> <a id=41658> 20 </a> </tbody> </div> </html>"
+    },
+    {
+      "action": "CLICK [47893]",
+      "op": "CLICK",
+      "element": "47893",
+      "value": "",
+      "description": "[link] 20 -> CLICK",
+      "role": "link",
+      "label": "20",
+      "observation": "<html> <div> <a id=47893> 20 </a> <tbody> <a id=53514> 3 </a> <a id=53567> 20 </a> </tbody> </div> </html>"
+    },
+    {
+      "action": "SELECT [59802] [3 00 PM]",
+      "op": "SELECT",
+      "element": "59802",
+      "value": "3 00 PM",
+      "description": "[combobox] Pick Up Time -> SELECT: 3:00 PM",
+      "role": "combobox",
+      "label": "Pick Up Time",
+      "observation": "<html> <div> <a id=60511 button> Reservations </a> <form resform> <div> <select id=59802 pick up time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm true> noon </option> </select> <div> <button id=62011 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [71726] [6 00 PM]",
+      "op": "SELECT",
+      "element": "71726",
+      "value": "6 00 PM",
+      "description": "[combobox] Return Time -> SELECT: 6:00 PM",
+      "role": "combobox",
+      "label": "Return Time",
+      "observation": "<html> <form resform> <div> <div> <select id=71726 return time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm true> noon </option> </select> <div id=73813 vehicle type *> Vehicle Type * </div> </div> <div> <button id=73937 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [83635]",
+      "op": "CLICK",
+      "element": "83635",
+      "value": "",
+      "description": "[button] Select My Car -> CLICK",
+      "role": "button",
+      "label": "Select My Car",
+      "observation": "<html> <form resform> <div> <div> <select id=85062 return time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm> noon </option> </select> <div id=85720 vehicle type *> Vehicle Type * </div> </div> <div> <button id=83635 button> Select My Car </button> <a> Continue </a> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [95570]",
+      "op": "CLICK",
+      "element": "95570",
+      "value": "",
+      "description": "[link] Close -> CLICK",
+      "role": "link",
+      "label": "Close",
+      "observation": "<html> <div> <form resform> <div id=97657 vehicle type *> Vehicle Type * </div> </form> <div dialog> <div document> <ul> <div> <p> (1) 941-746-2130 </p> <p> Sun 9:00 AM - 12:00 PM; Mon - Fri 8:00 AM - 6:00 PM; Sat 9:00 AM - 1:00 PM </p> <a id=95570 close> Select This Location </a> </div> <div> <p> (1) 941-806-6093 </p> <p> Sun 9:00 AM - 12:00 PM; Mon - Fri 8:00 AM - 6:00 PM; Sat 8:00 AM - 2:00 PM </p> <a id=101168 close> Select This Location </a> </div> </ul> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [145501]",
+      "op": "CLICK",
+      "element": "145501",
+      "value": "",
+      "description": "[link] Pay Now -> CLICK",
+      "role": "link",
+      "label": "Pay Now",
+      "observation": "<html> <div> <form resform> <div> <span> Sort by: </span> <a id=145494> Price (Low to High) </a> </div> </form> <div> <a id=145501> Pay Now </a> <div> <a id=151951> Pay Now </a> <p> Pay Now & Save 14.10 </p> </div> </div> </div> </html>"
+    }
+  ]
+}

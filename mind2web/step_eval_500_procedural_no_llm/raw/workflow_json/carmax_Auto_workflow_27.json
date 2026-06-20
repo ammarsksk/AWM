@@ -1,0 +1,110 @@
+{
+  "name": "carmax / Auto workflow 27",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Search for used Jaguar XFs with no black exterior color and save the search as Jaguar  to get a notification daily.",
+  "steps": [
+    {
+      "action": "TYPE [120] [jaguar xf]",
+      "op": "TYPE",
+      "element": "120",
+      "value": "jaguar xf",
+      "description": "[searchbox] Search make, model, or keyword -> TYPE: jaguar xf",
+      "role": "searchbox",
+      "label": "Search make, model, or keyword",
+      "observation": "<html> <header banner> <nav primary> <div> <a id=255> Shop </a> <a id=258> Sell/Trade </a> <a> Finance </a> </div> </nav> <form search> <div> <label> Search make, model, or keyword </label> <input id=120 search search by make, model, or /> </div> </form> </header> </html>"
+    },
+    {
+      "action": "CLICK [5446]",
+      "op": "CLICK",
+      "element": "5446",
+      "value": "",
+      "description": "[link] Jaguar XF -> CLICK",
+      "role": "link",
+      "label": "Jaguar XF",
+      "observation": "<html> <header banner> <ul menu> <li id=5695 menuitem> <a id=5446> <div> Jaguar XF </div> </a> </li> <li menuitem> </li> <li menuitem> </li> <li id=5709 menuitem> <div> Jaguar XJ </div> </li> <li menuitem> </li> <li menuitem> </li> <li menuitem> </li> </ul> </header> </html>"
+    },
+    {
+      "action": "CLICK [8321]",
+      "op": "CLICK",
+      "element": "8321",
+      "value": "",
+      "description": "[button] Advanced Search -> CLICK",
+      "role": "button",
+      "label": "Advanced Search",
+      "observation": "<html> <main search cars> <div> <aside region search filters> <div> <button id=9061 button exterior color> <h4> Exterior Color </h4> </button> <button id=8321 button advanced search> <h4> Advanced Search </h4> </button> </div> </aside> <section search results> <section search refinements> <div> <a> Turbo Charged Engine </a> <a> Technology Package </a> <a> 20 Inch Plus Wheels </a> <a id=10215> Black <span> (4) </span> </a> <a> A/C Seat(s) </a> <a> Panoramic Sunroof </a> <a> Gray </a> </div> </section> </section> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [15308] [black]",
+      "op": "TYPE",
+      "element": "15308",
+      "value": "black",
+      "description": "[textbox] Ex. Black exterior -> TYPE: black",
+      "role": "textbox",
+      "label": "Ex. Black exterior",
+      "observation": "<html> <main search cars> <div> <aside region search filters> <div> <button id=16056 button exterior color> <h4> Exterior Color </h4> </button> <div button> <input id=15308 text ex. black exterior /> </div> </div> </aside> <section search results> <section search refinements> <div> <a> Turbo Charged Engine </a> <a> Technology Package </a> <a> 20 Inch Plus Wheels </a> <a id=17273> Black <span> (4) </span> </a> <a> A/C Seat(s) </a> <a> Panoramic Sunroof </a> <a> Gray </a> </div> </section> </section> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [22479]",
+      "op": "CLICK",
+      "element": "22479",
+      "value": "",
+      "description": "[button] Black (Exterior Color",
+      "role": "button",
+      "label": "Black (Exterior Color",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=23108 button sort by> <div> <h4> Sort by </h4> <div> Best match </div> </div> </button> <button id=23228 button exterior color> <h4> Exterior Color </h4> </button> </div> <div button> <ul suggested refinements> <span id=22479 button> Black (Exterior Color) </span> </ul> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [29610]",
+      "op": "CLICK",
+      "element": "29610",
+      "value": "",
+      "description": "[button] SAVE SEARCH -> CLICK",
+      "role": "button",
+      "label": "SAVE SEARCH",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <div> <button button> </button> <button id=30223 button> <span> XF </span> </button> <button button> </button> </div> <div> <span> Pick up where you left off or get notified when new inventory arrives. </span> <button id=29610 button> Save search </button> </div> </div> <button id=30380 button exterior color> <h4> Exterior Color </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "TYPE [35596] [Jaguar]",
+      "op": "TYPE",
+      "element": "35596",
+      "value": "Jaguar",
+      "description": "[textbox] Custom name your search -> TYPE: Jaguar",
+      "role": "textbox",
+      "label": "Custom name your search",
+      "observation": "<html> <body> <main search cars> <aside region search filters> <div> <button id=36299 button make> <h4> Make </h4> </button> <button id=36308 button model> <h4> Model </h4> </button> </div> </aside> </main> <div dialog save your search> <div> <input id=35596 text /> <label> Custom name your search </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [41692]",
+      "op": "CLICK",
+      "element": "41692",
+      "value": "",
+      "description": "[button] CONTINUE -> CLICK",
+      "role": "button",
+      "label": "CONTINUE",
+      "observation": "<html> <body> <main search cars> <aside region search filters> <div> <button id=42396 button make> <h4> Make </h4> </button> <button id=42405 button model> <h4> Model </h4> </button> </div> </aside> </main> <div dialog save your search> <button id=41692 button> Continue </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [47785]",
+      "op": "CLICK",
+      "element": "47785",
+      "value": "",
+      "description": "[radio] Daily summary -> CLICK",
+      "role": "radio",
+      "label": "Daily summary",
+      "observation": "<html> <body> <main search cars> <aside region search filters> <div> <button id=48488 button make> <h4> Make </h4> </button> <button id=48587 button exterior color> <h4> Exterior Color </h4> </button> </div> </aside> </main> <div dialog save your search> <div> <input id=47785 radio email-options daily /> <label> Daily summary </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [53878]",
+      "op": "CLICK",
+      "element": "53878",
+      "value": "",
+      "description": "[button] CONTINUE -> CLICK",
+      "role": "button",
+      "label": "CONTINUE",
+      "observation": "<html> <body> <main search cars> <aside region search filters> <div> <div> <button button> </button> <button button> </button> <button id=54530 button> <span> <svg> <title> nofinement </title> </svg> <span> Black </span> </span> </button> </div> <button id=54680 button exterior color> <h4> Exterior Color </h4> </button> </div> </aside> </main> <div dialog save your search> <button id=53878 button> Continue </button> </div> </body> </html>"
+    }
+  ]
+}

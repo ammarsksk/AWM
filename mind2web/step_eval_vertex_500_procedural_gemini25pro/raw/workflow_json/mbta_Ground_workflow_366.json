@@ -1,0 +1,90 @@
+{
+  "name": "mbta / Ground workflow 366",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "View the upcoming schedule from Otis St@Summer St to City Point of the transit near South Station for today.",
+  "steps": [
+    {
+      "action": "CLICK [1848]",
+      "op": "CLICK",
+      "element": "1848",
+      "value": "",
+      "description": "[tab] Schedules -> CLICK",
+      "role": "tab",
+      "label": "Schedules",
+      "observation": "<html> <div> <nav main navigation> <a id=609 button> Transit </a> <a button> Fares </a> </nav> <div navigation> <div tablist> <a id=1848 tab> <svg img> <title> map </title> </svg> <span> Schedules </span> </a> </div> <div tabpanel> <a id=1960> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11088]",
+      "op": "CLICK",
+      "element": "11088",
+      "value": "",
+      "description": "[span] Transit Near Me -> CLICK",
+      "role": "span",
+      "label": "Transit Near Me",
+      "observation": "<html> <div> <nav main navigation> <a id=8958 button> Transit </a> <a button> Fares </a> </nav> <div> <div navigation> <div tabpanel> <a id=10310> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> <a id=11088> <span> Transit Near Me </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [16819] [South Station]",
+      "op": "TYPE",
+      "element": "16819",
+      "value": "South Station",
+      "description": "[input] -> TYPE: South Station",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <nav main navigation> <div modes of transit> <a id=17348> <div> Bus </div> </a> </div> </nav> <main> <div> <input id=16819 combobox text enter a location /> <button search> </button> </div> <div> <button button add filter by subway> Subway </button> <button id=18644 button add filter by bus> <svg img /> Bus </button> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [21338]",
+      "op": "CLICK",
+      "element": "21338",
+      "value": "",
+      "description": "[option] South Station, 700 Atlantic Ave, Boston, MA 02110,... -> CLICK",
+      "role": "option",
+      "label": "South Station, 700 Atlantic Ave, Boston, MA 02110,...",
+      "observation": "<html> <span listbox> <span> <div id=23138 option> <a id=21338> <span> <em> South </em> <em> Station </em> , 700 Atlantic Ave, Boston, MA 02110, United States </span> </a> </div> <div id=23154 option> <span> <em> South </em> <em> Station </em> Bus Terminal, Atlantic Ave, Boston, MA 02111, United States </span> </div> <div option> </div> <div option> </div> <div option> </div> </span> </span> </html>"
+    },
+    {
+      "action": "CLICK [25951]",
+      "op": "CLICK",
+      "element": "25951",
+      "value": "",
+      "description": "[link] Go to route -> CLICK",
+      "role": "link",
+      "label": "Go to route",
+      "observation": "<html> <div> <a id=25951> <span> Go to route </span> </a> <a id=27897> <span> Go to route </span> </a> <a id=27941> <span> Go to route </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [30037]",
+      "op": "CLICK",
+      "element": "30037",
+      "value": "",
+      "description": "[button] City Point -> CLICK",
+      "role": "button",
+      "label": "City Point",
+      "observation": "<html> <div> <div id=30037 button> City Point <svg img /> </div> <ol> <button id=32112 button> View schedule </button> <header> <a id=32976> <span> E 1st St @ City Point Bus Terminal </span> </a> <svg img /> </header> </ol> </div> </html>"
+    },
+    {
+      "action": "CLICK [39148]",
+      "op": "CLICK",
+      "element": "39148",
+      "value": "",
+      "description": "[menuitem] City Point typical route -> CLICK",
+      "role": "menuitem",
+      "label": "City Point typical route",
+      "observation": "<html> <div> <nav main navigation> <a id=37792 button> Transit </a> <a button> Fares </a> </nav> <div> <div menu> <div id=39148 menuitem> <div> <svg img /> City Point </div> <div> typical route </div> </div> <div menuitem> </div> <div menuitem click for additional routes> </div> </div> <button id=39349 button> View schedule </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [44486]",
+      "op": "CLICK",
+      "element": "44486",
+      "value": "",
+      "description": "[button] View schedule -> CLICK",
+      "role": "button",
+      "label": "View schedule",
+      "observation": "<html> <ol> <button id=44486 button> View schedule </button> <button id=46626 button> View schedule </button> <button id=46677 button> View schedule </button> </ol> </html>"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "sports.yahoo / Sports workflow 220",
+  "source": "Mind2Web exemplar",
+  "website": "sports.yahoo",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "Search for the latest news and rumors about the NBA team the Los Angeles Lakers.",
+  "steps": [
+    {
+      "action": "CLICK [98]",
+      "op": "CLICK",
+      "element": "98",
+      "value": "",
+      "description": "[link] NBA . -> CLICK",
+      "role": "link",
+      "label": "NBA .",
+      "observation": "<html> <div banner> <div> <nav navigation> <a id=421> NEWS </a> </nav> <ul> <a id=596> Sports </a> <a id=98> NBA </a> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [5672]",
+      "op": "CLICK",
+      "element": "5672",
+      "value": "",
+      "description": "[link] Teams -> CLICK",
+      "role": "link",
+      "label": "Teams",
+      "observation": "<html> <div> <div banner> <nav navigation> <ul> <a id=5907> NEWS </a> <a id=5949> SEARCH </a> </ul> </nav> </div> <div navigation> <a id=5672 teams> Teams </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10210]",
+      "op": "CLICK",
+      "element": "10210",
+      "value": "",
+      "description": "[link] Los Angeles Lakers -> CLICK",
+      "role": "link",
+      "label": "Los Angeles Lakers",
+      "observation": "<html> <div> <div banner> <nav navigation> <a id=10496> NEWS </a> </nav> </div> <div> <div> <a los angeles lakers /> <a id=10210 los angeles lakers> Los Angeles Lakers </a> </div> <div complementary> <a id=14167 la lakers> <span> LA Lakers </span> </a> </div> </div> </div> </html>"
+    }
+  ]
+}

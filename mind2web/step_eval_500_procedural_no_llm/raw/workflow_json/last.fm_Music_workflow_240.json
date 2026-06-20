@@ -1,0 +1,60 @@
+{
+  "name": "last.fm / Music workflow 240",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find the weekly chart-topper artist and play the number 1 track of that artist after liking the track.",
+  "steps": [
+    {
+      "action": "CLICK [218]",
+      "op": "CLICK",
+      "element": "218",
+      "value": "",
+      "description": "[link] Charts -> CLICK",
+      "role": "link",
+      "label": "Charts",
+      "observation": "<html> <div main> <div> <ul primary navigation> <a id=218> Charts </a> </ul> <nav secondary navigation> <ul> <a id=1123> Artists </a> <a id=1129> Tracks </a> </ul> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11193]",
+      "op": "CLICK",
+      "element": "11193",
+      "value": "",
+      "description": "[link] Weekly -> CLICK",
+      "role": "link",
+      "label": "Weekly",
+      "observation": "<html> <div main> <div> <nav secondary navigation> <a id=11193> Weekly </a> </nav> <div> <a id=12392> Taylor Swift </a> <a id=13371> Kendrick Lamar </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [23777]",
+      "op": "CLICK",
+      "element": "23777",
+      "value": "",
+      "description": "[link] The Weeknd -> CLICK",
+      "role": "link",
+      "label": "The Weeknd",
+      "observation": "<html> <div main> <tbody> <a id=23777> The Weeknd </a> <a id=24670> Taylor Swift </a> <a id=24786> Kendrick Lamar </a> </tbody> </div> </html>"
+    },
+    {
+      "action": "CLICK [34598]",
+      "op": "CLICK",
+      "element": "34598",
+      "value": "",
+      "description": "[button] Love this track -> CLICK",
+      "role": "button",
+      "label": "Love this track",
+      "observation": "<html> <div main> <div> <section> <div> <h3> Top Tracks </h3> <button play on youtube> Play all </button> <button id=34643> <span> Sorted by: </span> Last 7 days </button> </div> <form> <input/> <button id=34598 submit> Love this track </button> <input action love /> <input track die for you - remix /> <input artist the weeknd /> </form> </section> <div> <h3> Albums </h3> <button id=34691> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57844]",
+      "op": "CLICK",
+      "element": "57844",
+      "value": "",
+      "description": "[link] Play track -> CLICK",
+      "role": "link",
+      "label": "Play track",
+      "observation": "<html> <div main> <div> <section> <div> <h3> Top Tracks </h3> <button play on youtube> Play all </button> <button id=57886> <span> Sorted by: </span> Last 7 days </button> </div> <a id=57844 play on youtube> Play track </a> </section> <div> <h3> Albums </h3> <button id=57919> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </html>"
+    }
+  ]
+}

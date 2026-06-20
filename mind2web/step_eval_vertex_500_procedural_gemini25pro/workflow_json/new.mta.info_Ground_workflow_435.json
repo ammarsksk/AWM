@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "name": "new.mta.info / Ground workflow 435",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Get details of the fastest trip between 52nd Street,Brooklyn and 74th Street, Brooklyn, leaving now, that is accessible for a disabled person.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "street",
+      "brooklyn",
+      "fastest",
+      "trip",
+      "use",
+      "52nd",
+      "74th",
+      "accessible",
+      "searchbox",
+      "specific",
+      "field",
+      "listitem",
+      "usa",
+      "tab",
+      "new",
+      "mta",
+      "info",
+      "travel",
+      "ground",
+      "get",
+      "details",
+      "between",
+      "leaving",
+      "now",
+      "disabled",
+      "person",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "label",
+      "link",
+      "plan",
+      "press",
+      "enter",
+      "key",
+      "submit",
+      "form"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the 52nd Street, Brooklyn, NY, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "52nd Street, Brooklyn, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 74th Street, Brooklyn, NY, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "74th Street, Brooklyn, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Accessible Trip",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Accessible Trip",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Plan my Trip - Press enter key to submit the form ...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Plan my Trip - Press enter key to submit the form ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Fastest",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Fastest",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Fastest",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Fastest",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "new.mta.info / Ground workflow 435"
+}

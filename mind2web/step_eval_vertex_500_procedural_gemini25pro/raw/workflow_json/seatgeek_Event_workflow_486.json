@@ -1,0 +1,80 @@
+{
+  "name": "seatgeek / Event workflow 486",
+  "source": "Mind2Web exemplar",
+  "website": "seatgeek",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Find out if Coldplay is playing any events in Columbus, OH on May 17.",
+  "steps": [
+    {
+      "action": "CLICK [134]",
+      "op": "CLICK",
+      "element": "134",
+      "value": "",
+      "description": "[textbox] Search by team, artist, event or venue -> CLICK",
+      "role": "textbox",
+      "label": "Search by team, artist, event or venue",
+      "observation": "<html> <body> <div> <a id=946> Music </a> <form search> <div combobox> <input id=134 text search by team, artist, event search search by team, artist, event, /> </div> </form> </div> <button id=2071> <span> <span> Filter by </span> Date </span> </button> </body> </html>"
+    },
+    {
+      "action": "TYPE [9669] [Coldplay]",
+      "op": "TYPE",
+      "element": "9669",
+      "value": "Coldplay",
+      "description": "[textbox] Search by team, artist, event or venue -> TYPE: Coldplay",
+      "role": "textbox",
+      "label": "Search by team, artist, event or venue",
+      "observation": "<html> <body> <div> <a id=10480> Music </a> <form search> <div combobox> <input id=9669 text search by team, artist, event search search by team, artist, event, /> </div> </form> </div> <button id=11605> <span> <span> Filter by </span> Date </span> </button> </body> </html>"
+    },
+    {
+      "action": "CLICK [20268]",
+      "op": "CLICK",
+      "element": "20268",
+      "value": "",
+      "description": "[paragraph] Coldplay -> CLICK",
+      "role": "paragraph",
+      "label": "Coldplay",
+      "observation": "<html> <body> <form search> <ul> <li option coldplay> <a id=20268> <p coldplay> Coldplay </p> </a> </li> <li option coldplay> <a id=20278> <p coldplay> Coldplay </p> </a> </li> </ul> </form> <button id=21087> <span> <span> Filter by </span> Date </span> </button> </body> </html>"
+    },
+    {
+      "action": "CLICK [29250]",
+      "op": "CLICK",
+      "element": "29250",
+      "value": "",
+      "description": "[button] Filter by Date -> CLICK",
+      "role": "button",
+      "label": "Filter by Date",
+      "observation": "<html> <div> <div> <button id=29245> <span> Columbus, OH </span> </button> <button id=29250> <span> <span> Filter by </span> Date </span> </button> </div> <h2> No concerts near <button id=29261> Columbus, OH </button> </h2> </div> </html>"
+    },
+    {
+      "action": "CLICK [35173]",
+      "op": "CLICK",
+      "element": "35173",
+      "value": "",
+      "description": "[button] Next month -> CLICK",
+      "role": "button",
+      "label": "Next month",
+      "observation": "<html> <div> <div> <div> 14 </div> <div> 15 </div> <div> 16 </div> <div id=37624> 17 </div> <div> 18 </div> </div> <div> <div> 16 </div> <div id=37760> 17 </div> <div> 18 </div> <div> 19 </div> <div> 20 </div> </div> </div> <svg id=35173 /> </html>"
+    },
+    {
+      "action": "CLICK [43720]",
+      "op": "CLICK",
+      "element": "43720",
+      "value": "",
+      "description": "[div] 17 -> CLICK",
+      "role": "div",
+      "label": "17",
+      "observation": "<html> <div> <div> <div> <div> 16 </div> <div id=46178> 17 </div> <div> 18 </div> <div> 19 </div> <div> 20 </div> </div> <div> <div> 14 </div> <div> 15 </div> <div> 16 </div> <div id=43720> 17 </div> <div> 18 </div> <div> 19 </div> <div> 20 </div> </div> </div> <button id=46347> <span> Apply </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [54902]",
+      "op": "CLICK",
+      "element": "54902",
+      "value": "",
+      "description": "[button] Apply -> CLICK",
+      "role": "button",
+      "label": "Apply",
+      "observation": "<html> <div> <div> <div> <div> 16 </div> <div id=54727> 17 </div> <div> 18 </div> <div> 19 </div> <div> 20 </div> </div> <div> <div> 14 </div> <div> 15 </div> <div> 16 </div> <div id=54851> 17 </div> <div> 18 </div> <div> 19 </div> <div> 20 </div> </div> </div> <button id=54902> <span> Apply </span> </button> </div> </html>"
+    }
+  ]
+}

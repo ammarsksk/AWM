@@ -1,0 +1,30 @@
+{
+  "name": "spothero / Other workflow 463",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search and book the cheapest daytime only monthly parking option in Seattle near Stripe, 5th Avenue",
+  "steps": [
+    {
+      "action": "TYPE [84] [stripe, 5th avenue]",
+      "op": "TYPE",
+      "element": "84",
+      "value": "stripe, 5th avenue",
+      "description": "[textbox] Search for parking -> TYPE: stripe, 5th avenue",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=389 tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=84 text search for parking search-input address, place, city or venue /> </div> <ul list> <a id=698> Monthly Parking </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [2071]",
+      "op": "CLICK",
+      "element": "2071",
+      "value": "",
+      "description": "[li] Stripe, 5th Avenue, Seattle, WA, USA -> CLICK",
+      "role": "li",
+      "label": "Stripe, 5th Avenue, Seattle, WA, USA",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=2375 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=2387 text search for parking search-input stripe, 5th avenue address, place, city or venue /> <li id=2071> Stripe, 5th Avenue, Seattle, WA, USA </li> <button button /> </div> </div> </html>"
+    }
+  ]
+}

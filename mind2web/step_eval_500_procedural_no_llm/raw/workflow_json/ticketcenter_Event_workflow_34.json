@@ -1,0 +1,70 @@
+{
+  "name": "ticketcenter / Event workflow 34",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Find the most expensive ticket for New York Knicks game on April 9",
+  "steps": [
+    {
+      "action": "CLICK [85]",
+      "op": "CLICK",
+      "element": "85",
+      "value": "",
+      "description": "[textbox] Search for artists, teams or venues... -> CLICK",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=373 button> Sports </a> <div> <input id=85 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2573 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [8722] [New york knicks]",
+      "op": "TYPE",
+      "element": "8722",
+      "value": "New york knicks",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: New york knicks",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=9010 button> Sports </a> <div> <input id=8722 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=11210 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [19608]",
+      "op": "CLICK",
+      "element": "19608",
+      "value": "",
+      "description": "[option] New York Knicks -> CLICK",
+      "role": "option",
+      "label": "New York Knicks",
+      "observation": "<html> <body> <a id=17653 button> Sports </a> <ul listbox> <a id=19608 option> <strong> New York Knicks </strong> </a> </ul> <ul tablist> <a id=19858 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [21723]",
+      "op": "CLICK",
+      "element": "21723",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <table grid> <tbody> <tr row> <a id=21723> <span> Tickets </span> </a> </tr> <tr row> <a id=24218> <span> Tickets </span> </a> </tr> <tr row> <a id=24244> <span> Tickets </span> </a> </tr> </tbody> </table> </html>"
+    },
+    {
+      "action": "CLICK [26506]",
+      "op": "CLICK",
+      "element": "26506",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <body> <a id=26828 button> Sports </a> <div> <div id=29054> Sort by </div> <input radio options priceasc /> <input radio options pricedesc /> <input radio options sectionasc /> </div> </body> <span id=26506 cm-down-arrow /> </html>"
+    },
+    {
+      "action": "CLICK [52674]",
+      "op": "CLICK",
+      "element": "52674",
+      "value": "",
+      "description": "[div] Price - High to Low -> CLICK",
+      "role": "div",
+      "label": "Price - High to Low",
+      "observation": "<html> <div> <div> <input radio options priceasc /> <div id=55245> Price - Low to High </div> </div> <div> <input id=55255 radio options pricedesc /> <div id=52674> Price - High to Low </div> </div> </div> </html>"
+    }
+  ]
+}

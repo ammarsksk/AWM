@@ -1,0 +1,80 @@
+{
+  "name": "rottentomatoes / Movie workflow 13",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find a comedy movie streaming on Netflix and add to watchlist.",
+  "steps": [
+    {
+      "action": "CLICK [148]",
+      "op": "CLICK",
+      "element": "148",
+      "value": "",
+      "description": "[link] MOVIES -> HOVER",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <div> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=625 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <slot movies> <slot link> <a id=148> Movies </a> </slot> </slot> </slot> </div> </rt-header> <slot> <div> <a> Vudu </a> | <a id=5619> Netflix </a> | <a> Amazon </a> | <a> HBO </a> | <a> More... </a> </div> </slot> </div> </html>"
+    },
+    {
+      "action": "CLICK [32073]",
+      "op": "CLICK",
+      "element": "32073",
+      "value": "",
+      "description": "[link] Netflix streaming -> CLICK",
+      "role": "link",
+      "label": "Netflix streaming",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot dropdown> <slot column> <slot links> <ul> <a id=32073> Netflix streaming </a> <a id=32932> Most popular streaming movies </a> </ul> </slot> </slot> </slot> </slot> </slot> </rt-header> <slot> <div> <a> Vudu </a> | <a id=37554> Netflix </a> | <a> Amazon </a> | <a> HBO </a> | <a> More... </a> </div> </slot> </div> </html>"
+    },
+    {
+      "action": "CLICK [48112]",
+      "op": "CLICK",
+      "element": "48112",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <filter-chip button sort> </filter-chip> <filter-chip id=51036 button> <slot label> <span> Genre </span> </slot> </filter-chip> <filter-chip id=51063 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> <svg id=48112 /> </html>"
+    },
+    {
+      "action": "CLICK [72464]",
+      "op": "CLICK",
+      "element": "72464",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <slot content> <select-checkbox-group group> <slot row> <select-label id=72445> <div> <slot label> <span id=72457> COMEDY </span> </slot> <slot input> <select-checkbox id=72464 checkbox comedy> </select-checkbox> </slot> </div> </select-label> </slot> </select-checkbox-group> </slot> </html>"
+    },
+    {
+      "action": "CLICK [90436]",
+      "op": "CLICK",
+      "element": "90436",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot link> <a id=91017> Movies </a> </slot> </slot> </slot> </rt-header> <div> <slot content> <select-checkbox-group group comedy> <slot row> <slot input> <select-checkbox id=93600 checkbox comedy> </select-checkbox> </slot> </slot> </select-checkbox-group> </slot> <slot cta2> <button id=90436> Apply </button> </slot> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [111600]",
+      "op": "CLICK",
+      "element": "111600",
+      "value": "",
+      "description": "[img] Chris Rock: Selective Outrage -> CLICK",
+      "role": "img",
+      "label": "Chris Rock: Selective Outrage",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot link> <a id=112190> Movies </a> </slot> </slot> </slot> </rt-header> <div> <div> <filter-chip button sort> </filter-chip> <filter-chip id=114490 button> <div> <slot label> <span> Genre </span> </slot> <span> 1 </span> </div> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> </div> <slot image> <img id=111600 chris rock: selective outrage /> </slot> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [122094]",
+      "op": "CLICK",
+      "element": "122094",
+      "value": "",
+      "description": "[button] WANT TO SEE -> CLICK",
+      "role": "button",
+      "label": "WANT TO SEE",
+      "observation": "<html> <section> <slot tabbar> <discovery-sidebar-tab> <button id=124919> <slot> Streaming movies </slot> </button> </discovery-sidebar-tab> </slot> <div> <slot bubble> <affiliate-icon image netflix> <img id=122206 netflix /> </affiliate-icon> </slot> <div> <button> Submit review </button> <button id=122094 button +> Want to see </button> </div> </div> </section> </html>"
+    }
+  ]
+}

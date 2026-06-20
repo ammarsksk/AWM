@@ -1,0 +1,60 @@
+{
+  "name": "newegg / Digital workflow 65",
+  "source": "Mind2Web exemplar",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "task": "Find the cheapest power supply unit with at least 600W power output.",
+  "steps": [
+    {
+      "action": "TYPE [123] [600w power supply]",
+      "op": "TYPE",
+      "element": "123",
+      "value": "600w power supply",
+      "description": "[searchbox] Search Site -> TYPE: 600w power supply",
+      "role": "searchbox",
+      "label": "Search Site",
+      "observation": "<html> <div> <div> <i id=323 site menu /> <input id=123 search search site /> </div> <a id=10460 electronics> <div> Electronics </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [33741]",
+      "op": "CLICK",
+      "element": "33741",
+      "value": "",
+      "description": "[button] \uf002 -> CLICK",
+      "role": "button",
+      "label": "\uf002",
+      "observation": "<html> <div> <div> <input search search site 600w power supply /> <button id=33741> <span> Search </span> </button> </div> <div> <div> <a 850 w> 850 W </a> <a 650 w> 650 W </a> <a id=41697 600 w> 600 W </a> </div> <a id=41707 600w power supply> <em> 600w power supply </em> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [79281]",
+      "op": "CLICK",
+      "element": "79281",
+      "value": "",
+      "description": "[generic] 600 W -> CLICK",
+      "role": "generic",
+      "label": "600 W",
+      "observation": "<html> <div> <a id=79281 600 w> <div> 600 W </div> </a> <div> <span> Sort By: </span> <label id=67653> <select> <option 0 true> Featured Items </option> <option 1> Lowest Price </option> <option 2> Highest Price </option> <option 3> Best Selling </option> <option 4> Best Rating </option> <option 5> Most Reviews </option> </select> <span> Featured Items </span> </label> </div> <div> <a id=79862 power supplies> Lowest price </a> in <strong> 30 days </strong> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [95786] [Lowest Price]",
+      "op": "SELECT",
+      "element": "95786",
+      "value": "Lowest Price",
+      "description": "[combobox] Featured Items \uf0d7 -> SELECT: Lowest Price",
+      "role": "combobox",
+      "label": "Featured Items \uf0d7",
+      "observation": "<html> <div> <div> <span> Sort By: </span> <label id=95786> <select> <option 0 true> Featured Items </option> <option 1> Lowest Price </option> <option 2> Highest Price </option> <option 3> Best Selling </option> <option 4> Best Rating </option> <option 5> Most Reviews </option> </select> <span> Featured Items </span> </label> </div> <div> <div> <a id=107426 power supplies> Lowest price </a> in <strong> 30 days </strong> </div> <div> <a id=107532 power supplies> Lowest price </a> in <strong> 30 days </strong> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [122508]",
+      "op": "CLICK",
+      "element": "122508",
+      "value": "",
+      "description": "[img] Hercules DUAL FAN 600w-Max ATX Power Supply SATA, ... -> CLICK",
+      "role": "img",
+      "label": "Hercules DUAL FAN 600w-Max ATX Power Supply SATA, ...",
+      "observation": "<html> <div> <input id=130783 checkbox on /> <div> <div> <label> Search Within: </label> <input search /> <button id=122590 button> GO </button> </div> <a> <img id=122508 hercules dual fan 600w-max atx /> <div> Quick View </div> <button add this item to my /> </a> </div> </div> </html>"
+    }
+  ]
+}

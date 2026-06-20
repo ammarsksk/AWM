@@ -1,0 +1,100 @@
+{
+  "name": "agoda / General workflow 127",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Show activities in Miami with lowest price and minimum 4 star rated.",
+  "steps": [
+    {
+      "action": "CLICK [109]",
+      "op": "CLICK",
+      "element": "109",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <div> <ul tablist> <li tab> <p> New! </p> <svg id=109> </svg> <h6> Activities </h6> </li> </ul> <div tabpanel> <button id=129> <span> SEARCH </span> </button> </div> </div> <button id=973> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [4354] [Miami]",
+      "op": "TYPE",
+      "element": "4354",
+      "value": "Miami",
+      "description": "[combobox] Search by city or activity -> TYPE: Miami",
+      "role": "combobox",
+      "label": "Search by city or activity",
+      "observation": "<html> <div> <div tabpanel> <div combobox> <input id=4354 combobox text search by city or activity /> </div> <button id=4384> <span> SEARCH </span> </button> </div> <button id=5065> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [8844]",
+      "op": "CLICK",
+      "element": "8844",
+      "value": "",
+      "description": "[generic] United States -> CLICK",
+      "role": "generic",
+      "label": "United States",
+      "observation": "<html> <div tabpanel> <div dialog> <ul listbox> <li option icon miami (fl), united states> <ul> <svg img /> <li id=8844> <span> <span> Miami </span> (FL) </span> <span united states> United States </span> </li> <li city> </li> </ul> </li> <li option icon miami (fl), miami (fl),> <ul> <svg img /> <li id=8963> <span> Speedboat Sightseeing Tour | <span> Miami </span> </span> <span miami (fl), united states> Miami (FL), United States </span> </li> <li activity> </li> </ul> </li> <li option icon miami (fl), miami (fl),> <ul> <svg img /> <li id=9039> <span> Vizcaya Museum and Gardens with transportation </span> <span miami (fl), united states> Miami (FL), United States </span> </li> <li activity> </li> </ul> </li> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12812]",
+      "op": "CLICK",
+      "element": "12812",
+      "value": "",
+      "description": "[button] SEARCH -> CLICK",
+      "role": "button",
+      "label": "SEARCH",
+      "observation": "<html> <div> <div tabpanel> <div combobox> <input id=13176 combobox text search by city or activity miami (fl) /> </div> <button id=12812> <span> SEARCH </span> </button> </div> <button id=13521> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [15193]",
+      "op": "CLICK",
+      "element": "15193",
+      "value": "",
+      "description": "[span] Sort and filter -> CLICK",
+      "role": "span",
+      "label": "Sort and filter",
+      "observation": "<html> <body> <div> <button id=15193 sort and filter> <span> Sort and filter </span> </button> <a id=15284> <div> <span> 4 hours (approx.) </span> <h2> Everglades Wildlife Airboat Tour | Miami </h2> <div> <div> <svg img /> <svg img /> <svg img /> <svg img /> <svg img /> </div> <span> 5.0 </span> <span> (1) </span> </div> <div> <div> <div> $ 48.00 </div> <span> $ 41.63 </span> </div> <div> Cancellable </div> </div> </div> </a> </div> <div id=15933 heading> Sort and filter </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [17163]",
+      "op": "CLICK",
+      "element": "17163",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <div radiogroup> <label id=18153> <input id=18156 radio lowest price first sort /> <p> Lowest price first </p> </label> </div> <div id=17163> <div slider price /> <div slider price /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19486]",
+      "op": "CLICK",
+      "element": "19486",
+      "value": "",
+      "description": "[checkbox] 4 stars rating -> CLICK",
+      "role": "checkbox",
+      "label": "4 stars rating",
+      "observation": "<html> <div> <div radiogroup> <label id=20476> <input id=20479 radio lowest price first sort /> <p> Lowest price first </p> </label> </div> <div group star rating> <input id=19486 checkbox 4 stars rating /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21812]",
+      "op": "CLICK",
+      "element": "21812",
+      "value": "",
+      "description": "[radio] Lowest price first -> CLICK",
+      "role": "radio",
+      "label": "Lowest price first",
+      "observation": "<html> <div> <div radiogroup> <label id=22802> <input id=21812 radio lowest price first sort /> <p> Lowest price first </p> </label> </div> <p id=22818 heading> Price </p> </div> </html>"
+    },
+    {
+      "action": "CLICK [24138]",
+      "op": "CLICK",
+      "element": "24138",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <body> <div> <span id=24288 button /> <button id=24365 sort and filter> <span> Sort and filter </span> </button> </div> <div> <button button clear> </button> <button id=24138 button filter> <span> Filter </span> </button> </div> </body> </html>"
+    }
+  ]
+}

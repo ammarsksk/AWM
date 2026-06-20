@@ -1,0 +1,51 @@
+{
+  "name": "amtrak / Ground workflow 147",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Get a ten-ride ticket from Washington to New york starting from April 5",
+  "goal_pattern": "Get a ten-ride ticket from Washington to New york starting from April 5",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Rail Passes",
+      "operation": "CLICK",
+      "target_type": "tab",
+      "target_description": "Rail Passes",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the EXPLORE MULTI-RIDE PASSES",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "EXPLORE MULTI-RIDE PASSES",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [189]",
+      "gold_element_id": "189",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [6555]",
+      "gold_element_id": "6555",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "amtrak / Ground workflow 147"
+}

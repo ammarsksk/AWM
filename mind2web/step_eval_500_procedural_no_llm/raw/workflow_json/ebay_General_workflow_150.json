@@ -1,0 +1,130 @@
+{
+  "name": "ebay / General workflow 150",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Get a Hasbro Hulk action figure manufactured in 1990 with the lowest price + shipping.",
+  "steps": [
+    {
+      "action": "CLICK [218]",
+      "op": "CLICK",
+      "element": "218",
+      "value": "",
+      "description": "[link] Toys -> HOVER",
+      "role": "link",
+      "label": "Toys",
+      "observation": "<html> <div main> <ul> <li> <a id=982> Collectibles </a> <button> Expand: Collectibles </button> </li> <li> <a id=218> Toys </a> <button> Expand: Toys </button> </li> <li> <a id=1285> Sporting Goods </a> <button> Expand: Sporting Goods </button> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [7938]",
+      "op": "CLICK",
+      "element": "7938",
+      "value": "",
+      "description": "[link] Action Figures -> CLICK",
+      "role": "link",
+      "label": "Action Figures",
+      "observation": "<html> <div main> <ul> <li> <a id=8627> Electronics </a> <button> Expand: Electronics </button> </li> <li> <a id=8703> Collectibles </a> <button> Expand: Collectibles </button> </li> <nav top categories> <a id=7938> Action Figures </a> </nav> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [11926]",
+      "op": "CLICK",
+      "element": "11926",
+      "value": "",
+      "description": "[img] Hasbro -> CLICK",
+      "role": "img",
+      "label": "Hasbro",
+      "observation": "<html> <div main> <div group> <a> <img id=11926 hasbro /> <p> Hasbro </p> </a> </div> <button id=12844 button sort: best match> <span> Best Match </span> </button> <div> <a mcdonald's> McDonald's </a> <a sanrio> Sanrio </a> <a brio> BRIO </a> <a id=16097 hasbro> Hasbro </a> <a mcfarlane toys> McFarlane Toys </a> <a schleich> Schleich </a> <a bandai> Bandai </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17029]",
+      "op": "CLICK",
+      "element": "17029",
+      "value": "",
+      "description": "[button] All Filters -> CLICK",
+      "role": "button",
+      "label": "All Filters",
+      "observation": "<html> <div main> <section> <button id=17783 button sort: best match> <span> Best Match </span> </button> <ul> <button id=17873 button> <span> Year Manufactured </span> </button> <button id=17029 button all filters> All Filters </button> </ul> </section> </div> </html>"
+    },
+    {
+      "action": "CLICK [25031]",
+      "op": "CLICK",
+      "element": "25031",
+      "value": "",
+      "description": "[tab] Character -> CLICK",
+      "role": "tab",
+      "label": "Character",
+      "observation": "<html> <body> <section> <button id=25967 button sort: best match> <span> Best Match </span> </button> <button id=26373 button> <span> Year Manufactured </span> </button> </section> <div dialog> <div document> <div tablist> <div tab> </div> <div id=25031 tab> <span> Character </span> </div> <div tab> </div> <div tab> </div> <div tab> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [40146]",
+      "op": "CLICK",
+      "element": "40146",
+      "value": "",
+      "description": "[checkbox] Hulk -> CLICK",
+      "role": "checkbox",
+      "label": "Hulk",
+      "observation": "<html> <body> <section> <button id=41053 button sort: best match> <span> Best Match </span> </button> <button id=41459 button> <span> Year Manufactured </span> </button> </section> <div dialog> <div document> <div tabpanel> <input id=40146 checkbox on /> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [86922]",
+      "op": "CLICK",
+      "element": "86922",
+      "value": "",
+      "description": "[tab] Year Manufactured -> CLICK",
+      "role": "tab",
+      "label": "Year Manufactured",
+      "observation": "<html> <body> <section> <button id=83675 button sort: best match> <span> Best Match </span> </button> <button id=84081 button> <span> Year Manufactured </span> </button> </section> <div dialog> <div document> <div tablist> <div tab> </div> <div tab> </div> <div id=86922 tab> <span> Year Manufactured </span> </div> <div tab> </div> <div tab> </div> <div tab> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [108647]",
+      "op": "CLICK",
+      "element": "108647",
+      "value": "",
+      "description": "[checkbox] 1990 -> CLICK",
+      "role": "checkbox",
+      "label": "1990",
+      "observation": "<html> <body> <button id=109413 button sort: best match> <span> Best Match </span> </button> <div dialog> <div document> <div tabpanel> <span> <input id=108647 checkbox on /> <label id=113050> <span> 1990 </span> </label> </span> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [118877]",
+      "op": "CLICK",
+      "element": "118877",
+      "value": "",
+      "description": "[button] Apply -> CLICK",
+      "role": "button",
+      "label": "Apply",
+      "observation": "<html> <body> <section> <button id=119643 button sort: best match> <span> Best Match </span> </button> <button id=120426 button> <span> Price </span> </button> </section> <div dialog> <div document> <div> <button button cancel> Cancel </button> <button id=118877 button apply> Apply </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [129099]",
+      "op": "CLICK",
+      "element": "129099",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <li brand> <a id=129239> <div> <input id=129099 checkbox hasbro on /> <div> <span> Hasbro <span> (46) Items </span> </span> <span> (46) </span> </div> </div> </a> </li> <div main> <button id=132027 button sort selector. best match selected.> <span> Best Match </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [141039]",
+      "op": "CLICK",
+      "element": "141039",
+      "value": "",
+      "description": "[button] Sort selector. Best Match selected. -> CLICK",
+      "role": "button",
+      "label": "Sort selector. Best Match selected.",
+      "observation": "<html> <div> <ul> <div id=139366 button> <h3> Year Manufactured </h3> </div> <div id=140314 button> <h3> Price </h3> </div> </ul> <div main> <button id=141039 button sort selector. best match selected.> <span> Best Match </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [156674]",
+      "op": "CLICK",
+      "element": "156674",
+      "value": "",
+      "description": "[link] Price + Shipping: lowest first -> CLICK",
+      "role": "link",
+      "label": "Price + Shipping: lowest first",
+      "observation": "<html> <div> <div id=154977 button> <h3> Year Manufactured </h3> </div> <div main> <ul> <a id=156674> <span> Price + Shipping: lowest first </span> </a> <a id=156679> <span> Price + Shipping: highest first </span> </a> </ul> </div> </div> </html>"
+    }
+  ]
+}

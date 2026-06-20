@@ -1,0 +1,30 @@
+{
+  "name": "sports.yahoo / Sports workflow 441",
+  "source": "Mind2Web exemplar",
+  "website": "sports.yahoo",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "task": "search for news about the latest news about Lebron James' injury and share the article on twitter.",
+  "steps": [
+    {
+      "action": "TYPE [87] [lebron james]",
+      "op": "TYPE",
+      "element": "87",
+      "value": "lebron james",
+      "description": "[combobox] Search query -> TYPE: lebron james",
+      "role": "combobox",
+      "label": "Search query",
+      "observation": "<html> <div banner> <div> <nav navigation> <a id=556> NEWS </a> </nav> <form search> <input id=87 combobox text p /> <input fr sports /> <input fr2 p:sprt,m:sb /> </form> <a id=730> Sports </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12188]",
+      "op": "CLICK",
+      "element": "12188",
+      "value": "",
+      "description": "[img] LeBron James -> CLICK",
+      "role": "img",
+      "label": "LeBron James",
+      "observation": "<html> <div banner> <div> <nav navigation> <a id=12481> NEWS </a> </nav> <form search> <li id=12618 lebron james> <img id=12188 lebron james /> <div> <h5> LeBron James </h5> <span> NBA - LA Lakers </span> </div> </li> </form> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "name": "mbta / Ground workflow 367",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Show me the planned service alerts for the subway red line",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "alerts",
+      "value",
+      "required",
+      "subway",
+      "link",
+      "planned",
+      "service",
+      "red",
+      "line",
+      "mbta",
+      "travel",
+      "ground",
+      "show",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "lines",
+      "span"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the subway Subway Lines",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "subway Subway Lines",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Red Line",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Red Line",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Alerts 8 alerts",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Alerts 8 alerts",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Planned Service Alerts",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Planned Service Alerts",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "mbta / Ground workflow 367"
+}

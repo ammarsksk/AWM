@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "name": "newegg / Digital workflow 40",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "goal_pattern": "Add Western Digital internal SSD with 1TB storage and 8GB Ram DDR to the cart.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "site",
+      "digital",
+      "add",
+      "cart",
+      "use",
+      "searchbox",
+      "search",
+      "western",
+      "1tb",
+      "8gb",
+      "specific",
+      "field",
+      "thanks",
+      "newegg",
+      "shopping",
+      "internal",
+      "ssd",
+      "storage",
+      "ram",
+      "ddr",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "area",
+      "link",
+      "wd_black",
+      "sn770",
+      "2280",
+      "pcie",
+      "close",
+      "img",
+      "1x8gb"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Search Site",
+        "operation": "CLICK",
+        "target_type": "searchbox",
+        "target": "Search Site",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Search Site",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Search Site",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the \uf002",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\uf002",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Western Digital WD_BLACK SN770 M.2 2280 1TB PCIe G...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Western Digital WD_BLACK SN770 M.2 2280 1TB PCIe G...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the ADD TO CART \uf0da",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "ADD TO CART \uf0da",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the NO, THANKS",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "NO, THANKS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Close",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Close",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "type the Search Site",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Search Site",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the \uf002",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\uf002",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the 8GB (1x8GB",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "8GB (1x8GB",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the ADD TO CART \uf0da",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "ADD TO CART \uf0da",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the NO, THANKS",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "NO, THANKS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "newegg / Digital workflow 40"
+}

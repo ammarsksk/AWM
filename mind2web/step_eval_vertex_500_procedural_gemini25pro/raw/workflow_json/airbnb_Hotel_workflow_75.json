@@ -1,0 +1,100 @@
+{
+  "name": "airbnb / Hotel workflow 75",
+  "source": "Mind2Web exemplar",
+  "website": "airbnb",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Search for Castles in Europe for a week next month and price below $1000 per night.",
+  "steps": [
+    {
+      "action": "CLICK [899]",
+      "op": "CLICK",
+      "element": "899",
+      "value": "",
+      "description": "[button] Location Anywhere -> CLICK",
+      "role": "button",
+      "label": "Location Anywhere",
+      "observation": "<html> <div> <div> <div search> <span> Start your search </span> <button id=899 button> <span> Location </span> <div> Anywhere </div> </button> <button button> </button> <button button> </button> </div> <form search> <div tabpanel> <div dialog search suggestions> <div radiogroup> <div> <label id=1014> <input radio on /> <span> Europe </span> </label> <div> Europe </div> </div> </div> </div> </div> </form> </div> <div radiogroup airbnb categories> <div group> <label id=1277> <input radio on /> <span> Castles </span> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10247]",
+      "op": "CLICK",
+      "element": "10247",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <form search> <div tabpanel> <div dialog search suggestions> <div radiogroup> <div> <label id=10247> <input radio on /> <span> Europe </span> </label> <div> Europe </div> </div> </div> </div> </div> </form> <div> <div radiogroup airbnb categories> <div group> <label id=10508> <input radio on /> <span> Castles </span> </label> </div> </div> <button id=10933 button> <span> Filters </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20568]",
+      "op": "CLICK",
+      "element": "20568",
+      "value": "",
+      "description": "[button] 1, Saturday, April 2023. Available. Select as chec... -> CLICK",
+      "role": "button",
+      "label": "1, Saturday, April 2023. Available. Select as chec...",
+      "observation": "<html> <div> <form search> <div tabpanel> <div> <div dialog search suggestions> <div radiogroup> <div> <label id=20210> <input radio on true /> <span> Europe </span> </label> <div> Europe </div> </div> </div> </div> <div tabpanel> <div application calendar> <td id=20568 button 1, saturday, april 2023. available.> <div> 1 </div> </td> </div> </div> </div> </div> </form> <div radiogroup airbnb categories> <div group> <label id=21223> <input radio on /> <span> Castles </span> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [31330]",
+      "op": "CLICK",
+      "element": "31330",
+      "value": "",
+      "description": "[button] 8, Saturday, April 2023. Available. Select as chec... -> CLICK",
+      "role": "button",
+      "label": "8, Saturday, April 2023. Available. Select as chec...",
+      "observation": "<html> <div> <form search> <div tabpanel> <div> <div dialog search suggestions> <div radiogroup> <div> <label id=30934> <input radio on true /> <span> Europe </span> </label> <div> Europe </div> </div> </div> </div> <div tabpanel> <div application calendar> <tr> <td button 5, wednesday, april 2023. available.> </td> <td button 6, thursday, april 2023. available.> </td> <td button 7, friday, april 2023. available.> </td> <td id=31330 button 8, saturday, april 2023. available.> <div> 8 </div> </td> </tr> </div> </div> </div> </div> </form> <div radiogroup airbnb categories> <div group> <label id=31954> <input radio on /> <span> Castles </span> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [42409]",
+      "op": "CLICK",
+      "element": "42409",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <form search> <div tabpanel> <div> <div button> </div> <button id=42409 button> <div> Search </div> </button> </div> </div> </form> <div> <div radiogroup airbnb categories> <div group> <label id=42601> <input radio on /> <span> Castles </span> </label> </div> </div> <button id=43026 button> <span> Filters </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47448]",
+      "op": "CLICK",
+      "element": "47448",
+      "value": "",
+      "description": "[span] Castles -> CLICK",
+      "role": "span",
+      "label": "Castles",
+      "observation": "<html> <div> <form search> <div tabpanel> <div dialog search suggestions> <div radiogroup> <div> <label id=47267> <input radio on true /> <span> Europe </span> </label> <div> Europe </div> </div> </div> </div> </div> </form> <div> <div radiogroup airbnb categories> <div group> <label id=47448> <input radio on /> <span> Castles </span> </label> </div> </div> <button id=47953 button> <span> Filters </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [55460]",
+      "op": "CLICK",
+      "element": "55460",
+      "value": "",
+      "description": "[button] Filters -> CLICK",
+      "role": "button",
+      "label": "Filters",
+      "observation": "<html> <div> <form search> <div tabpanel> <div> <div> <div> Where </div> <input id=54715 query europe search destinations /> </div> <div> <div button> </div> <button id=54872 button> <div> Search </div> </button> </div> </div> </div> </form> <button id=55460 button> <span> Filters </span> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [64169] [1000]",
+      "op": "TYPE",
+      "element": "64169",
+      "value": "1000",
+      "description": "[textbox] max price $ -> TYPE: 1000",
+      "role": "textbox",
+      "label": "max price $",
+      "observation": "<html> <body> <button id=65191 button> <span> Filters </span> </button> <div dialog filters> <div> <div group> <div> <span> $ </span> <input id=64169 text 1200+ /> </div> </div> <footer> <button button> Clear all </button> <a id=69196> Show 673 stays </a> </footer> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [75427]",
+      "op": "CLICK",
+      "element": "75427",
+      "value": "",
+      "description": "[link] Show 673 stays -> CLICK",
+      "role": "link",
+      "label": "Show 673 stays",
+      "observation": "<html> <body> <div> <form search> <div tabpanel> <div> <div button> </div> <button id=75862 button> <div> Search </div> </button> </div> </div> </form> <button id=76450 button> <span> Filters </span> </button> </div> <div dialog filters> <footer> <button button> Clear all </button> <a id=75427> Show 673 stays </a> </footer> </div> </body> </html>"
+    }
+  ]
+}

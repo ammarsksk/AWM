@@ -1,0 +1,142 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "marriott",
+      "use",
+      "apr",
+      "span",
+      "travel",
+      "hotel",
+      "look",
+      "room",
+      "bonvoy",
+      "resort",
+      "caribbean",
+      "day",
+      "stay",
+      "starting",
+      "may",
+      "5th",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "destination",
+      "where",
+      "can",
+      "take",
+      "you",
+      "search",
+      "cur",
+      "specific",
+      "field",
+      "night",
+      "wed",
+      "thu",
+      "done",
+      "find",
+      "hotels"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the \ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "\ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the \ue9571 NIGHT Wed, Apr 19 - Thu, Apr 20",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "\ue9571 NIGHT Wed, Apr 19 - Thu, Apr 20",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 5",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "5",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the 15",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "15",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Done",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Find Hotels",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Find Hotels",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Look for a room at the Marriott Bonvoy resort in the Caribbean for a 10-day stay starting on May 5th.",
+  "memory_type": "typed_procedure",
+  "name": "marriott / Hotel workflow 323",
+  "raw_workflow_name": "marriott / Hotel workflow 323",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 6.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Hotel",
+  "termination": {
+    "max_steps_hint": 6,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "marriott"
+}

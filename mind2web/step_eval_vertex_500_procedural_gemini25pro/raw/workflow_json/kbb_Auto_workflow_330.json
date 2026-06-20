@@ -1,0 +1,100 @@
+{
+  "name": "kbb / Auto workflow 330",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find the cheapest new electric car with highest ev mile range per charge, see the details of the top result.",
+  "steps": [
+    {
+      "action": "CLICK [144]",
+      "op": "CLICK",
+      "element": "144",
+      "value": "",
+      "description": "[link] Cars for Sale -> HOVER",
+      "role": "link",
+      "label": "Cars for Sale",
+      "observation": "<html> <div> <nav> <a id=726 unstyled> Price New/Used </a> <a id=144 unstyled> Cars for Sale </a> </nav> <a id=874> <span> Price New/Used </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [6652]",
+      "op": "CLICK",
+      "element": "6652",
+      "value": "",
+      "description": "[link] Cars for Sale -> CLICK",
+      "role": "link",
+      "label": "Cars for Sale",
+      "observation": "<html> <div> <nav> <a id=7234 unstyled> Price New/Used </a> <a id=6652 unstyled> Cars for Sale </a> </nav> <a id=7382> <span> Price New/Used </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [17253]",
+      "op": "CLICK",
+      "element": "17253",
+      "value": "",
+      "description": "[checkbox] New (9,776",
+      "role": "checkbox",
+      "label": "New (9,776",
+      "observation": "<html> <div> <a id=16339 unstyled> Price New/Used </a> <div main> <div> <div listingtypes> <label id=17253 checkbox> <input checkbox new /> <div> New <span> (9,776) </span> </div> </label> <label checkbox> </label> <label checkbox> </label> <label checkbox> </label> </div> <div id=17515 button> <h4> Fuel Type </h4> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [45370]",
+      "op": "CLICK",
+      "element": "45370",
+      "value": "",
+      "description": "[heading] Fuel Type -> CLICK",
+      "role": "heading",
+      "label": "Fuel Type",
+      "observation": "<html> <div main> <div> <div id=45152 button> <h4> Drive Type </h4> </div> <div id=45370 button> <h4> Fuel Type </h4> </div> <div id=46191 button> <h4> Price Rating </h4> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [59170]",
+      "op": "CLICK",
+      "element": "59170",
+      "value": "",
+      "description": "[checkbox] Electric (175",
+      "role": "checkbox",
+      "label": "Electric (175",
+      "observation": "<html> <div> <a id=58024 unstyled> Price New/Used </a> <div main> <div> <div> <label checkbox> </label> <label id=59170 checkbox> <input checkbox ele /> <div> Electric <span> (175) </span> </div> </label> <label checkbox> </label> <label checkbox> </label> <label checkbox> </label> </div> <div id=59985 button> <h4> Price Rating </h4> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [69521]",
+      "op": "CLICK",
+      "element": "69521",
+      "value": "",
+      "description": "[heading] Electric Mile Range -> CLICK",
+      "role": "heading",
+      "label": "Electric Mile Range",
+      "observation": "<html> <div> <a id=68367 unstyled> Price New/Used </a> <div main> <div> <div id=69521 button> <h4> Electric Mile Range </h4> </div> <div id=70279 button> <h4> Price Rating </h4> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [83249]",
+      "op": "CLICK",
+      "element": "83249",
+      "value": "",
+      "description": "[checkbox] 300+ Miles (12",
+      "role": "checkbox",
+      "label": "300+ Miles (12",
+      "observation": "<html> <div> <a id=82058 unstyled> Price New/Used </a> <div main> <div> <div listingtypes> <label id=82910 checkbox> <input checkbox new true /> <div> New <span> (175) </span> </div> </label> <label checkbox> </label> <label checkbox> </label> <label checkbox> </label> </div> <div> <label checkbox> </label> <label checkbox> </label> <label checkbox> </label> <label id=83249 checkbox> <input checkbox 300- /> <div> 300+ Miles <span> (12) </span> </div> </label> <label checkbox> </label> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [92228] [Price - Lowest]",
+      "op": "SELECT",
+      "element": "92228",
+      "value": "Price - Lowest",
+      "description": "[combobox] Sort By: -> SELECT: Price - Lowest",
+      "role": "combobox",
+      "label": "Sort By:",
+      "observation": "<html> <div> <a id=92447 unstyled> Price New/Used </a> <div main> <div> <div listingtypes> <label id=93239 checkbox> <input checkbox new true /> <div> New <span> (12) </span> </div> </label> <label checkbox> </label> <label checkbox> </label> <label checkbox> </label> </div> <div> <label> Sort By: </label> <select id=92228 sortby> <option relevance true> Relevance </option> <option price - lowest> Price - Lowest </option> <option price - highest> Price - Highest </option> <option distance - closest distanceasc> Distance - Closest </option> <option date - oldest datelistedasc> Date - Oldest </option> <option date - newest datelisteddesc> Date - Newest </option> <option mileage - lowest mileageasc> Mileage - Lowest </option> <option mileage - highest mileagedesc> Mileage - Highest </option> <option year - oldest yearasc> Year - Oldest </option> <option year - newest yeardesc> Year - Newest </option> </select> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [104753]",
+      "op": "CLICK",
+      "element": "104753",
+      "value": "",
+      "description": "[heading] New 2023 BMW i4 eDrive40 -> CLICK",
+      "role": "heading",
+      "label": "New 2023 BMW i4 eDrive40",
+      "observation": "<html> <div> <a id=102463 unstyled> Price New/Used </a> <div main> <div> <div listingtypes> <label id=103259 checkbox> <input checkbox new true /> <div> New <span> (12) </span> </div> </label> <label checkbox> </label> <label checkbox> </label> <label checkbox> </label> </div> <div> <a id=104753> <h3> New 2023 BMW i4 eDrive40 </h3> </a> <div> Premium Pkg </div> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

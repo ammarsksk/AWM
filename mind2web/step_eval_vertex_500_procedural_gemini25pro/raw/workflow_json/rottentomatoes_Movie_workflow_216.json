@@ -1,0 +1,70 @@
+{
+  "name": "rottentomatoes / Movie workflow 216",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Browse movie trailers currently in theaters with \"fresh\" rating.",
+  "steps": [
+    {
+      "action": "CLICK [152]",
+      "op": "CLICK",
+      "element": "152",
+      "value": "",
+      "description": "[link] MOVIES -> HOVER",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <rt-header navigation bar> <div> <slot nav-links> <a id=732> What's the Tomatometer? </a> </slot> <slot nav-dropdowns> <nav> <slot movies> <slot link> <a id=152> Movies </a> </slot> </slot> <slot showtimes> <slot link> <a id=2603> Showtimes </a> </slot> </slot> </nav> </slot> </div> </rt-header> </html>"
+    },
+    {
+      "action": "CLICK [30913]",
+      "op": "CLICK",
+      "element": "30913",
+      "value": "",
+      "description": "[link] Trailers -> CLICK",
+      "role": "link",
+      "label": "Trailers",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot dropdown> <slot column> <slot title> <a id=31576> Movies in theaters </a> </slot> <slot links> <a id=30913> Trailers </a> </slot> </slot> </slot> </slot> </slot> </rt-header> <div> <h2> Trailers & Videos </h2> <a id=44822> View all </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [46344]",
+      "op": "CLICK",
+      "element": "46344",
+      "value": "",
+      "description": "[link] VIEW ALL -> CLICK",
+      "role": "link",
+      "label": "VIEW ALL",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-links> <a id=46819> What's the Tomatometer? </a> </slot> </rt-header> <div> <h2> Popular In Theaters </h2> <a id=46344> View all </a> </div> <a id=59219> What's the Tomatometer ? </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [63217]",
+      "op": "CLICK",
+      "element": "63217",
+      "value": "",
+      "description": "[span] Tomatometer -> CLICK",
+      "role": "span",
+      "label": "Tomatometer",
+      "observation": "<html> <div> <div> <button id=62930> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip button sort: most popular> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=63161 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=63217 button> <slot label> <span> Tomatometer </span> </slot> </filter-chip> <filter-chip button> </filter-chip> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [82964]",
+      "op": "CLICK",
+      "element": "82964",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <div> <button id=82518> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <filter-chip button sort: most popular> </filter-chip> <filter-chip button> </filter-chip> <filter-chip id=82749 button> <slot label> <span> Rating </span> </slot> </filter-chip> <filter-chip button> </filter-chip> <filter-chip button> </filter-chip> <slot content> <select-checkbox-group group> <slot row> <slot input> <select-checkbox id=82964 checkbox fresh> </select-checkbox> </slot> </slot> </select-checkbox-group> </slot> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [99316]",
+      "op": "CLICK",
+      "element": "99316",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <div> <button id=102109> In Theaters </button> <dropdown-menu> </dropdown-menu> </div> <div> <slot content> <select-checkbox-group group fresh> <slot row> <slot label> <span id=102600> Rotten </span> </slot> </slot> </select-checkbox-group> </slot> <slot cta2> <button id=99316> Apply </button> </slot> </div> </div> </html>"
+    }
+  ]
+}

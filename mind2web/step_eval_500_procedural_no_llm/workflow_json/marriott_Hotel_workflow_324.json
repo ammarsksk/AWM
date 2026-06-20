@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "name": "marriott / Hotel workflow 324",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "goal_pattern": "Find two rooms in a cheapest  hotel in Niagra Falls for three adults and one three year old  kid from May 17 to May 20, view only available hotels within 100 to 200 dollar range  with taxes and fees, and choose the cheapest hotel that offers free breakfast and a pool.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "add",
+      "hotel",
+      "adults",
+      "hotels",
+      "link",
+      "find",
+      "rooms",
+      "cheapest",
+      "falls",
+      "three",
+      "may",
+      "view",
+      "only",
+      "available",
+      "100",
+      "200",
+      "taxes",
+      "fees",
+      "free",
+      "breakfast",
+      "pool",
+      "use",
+      "option",
+      "apr",
+      "span",
+      "checkbox",
+      "show",
+      "rates",
+      "price",
+      "label",
+      "rate",
+      "marriott",
+      "travel",
+      "two",
+      "niagra",
+      "one",
+      "year",
+      "old",
+      "kid",
+      "within",
+      "dollar",
+      "range",
+      "choose",
+      "offers",
+      "tasks",
+      "similar"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the \ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "\ue900DESTINATION WHERE CAN WE TAKE YOU?SEARCH FROM CUR...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Niagara Falls, ON, Canada",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Niagara Falls, ON, Canada",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the \ue9571 NIGHT Sun, Apr 09 - Mon, Apr 10",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\ue9571 NIGHT Sun, Apr 09 - Mon, Apr 10",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 17",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "17",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the 20",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "20",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the 1 Room, 1 Guest\ue932",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "1 Room, 1 Guest\ue932",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Add Rooms",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Rooms",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Add Adults",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Adults",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Add Adults",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Adults",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Add Children",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Children",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Add Age",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Age",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Add Less than 1",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Less than 1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Add 1",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add 1",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Add 2",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add 2",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Find Hotels",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Find Hotels",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Show rates with taxes and all fees",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Show rates with taxes and all fees",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the Show available hotels only",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Show available hotels only",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 29
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 29.0
+  },
+  "raw_workflow_name": "marriott / Hotel workflow 324"
+}

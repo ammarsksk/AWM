@@ -1,0 +1,168 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "shopping",
+      "add",
+      "price",
+      "cart",
+      "site",
+      "specific",
+      "field",
+      "amd",
+      "ryzen",
+      "newegg",
+      "digital",
+      "motherboard",
+      "under",
+      "200",
+      "compatible",
+      "processor",
+      "any",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "area",
+      "searchbox",
+      "search",
+      "textbox",
+      "apply",
+      "link",
+      "gigabyte",
+      "b450m",
+      "ds3h",
+      "wifi",
+      "am4",
+      "b450",
+      "sata",
+      "6gb",
+      "processors",
+      "desktops",
+      "div",
+      "5600",
+      "5000",
+      "series",
+      "vermeer",
+      "items"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the Search Site",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search Site",
+        "target_type": "searchbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the \uf002",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "\uf002",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the price to",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "price to",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "APPLY",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the GIGABYTE B450M DS3H WIFI AM4 AMD B450 SATA 6Gb/s M...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "GIGABYTE B450M DS3H WIFI AM4 AMD B450 SATA 6Gb/s M...",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Processors - Desktops",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Processors - Desktops",
+        "target_type": "a",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Ze...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Ze...",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the ADD 2 ITEMS TO CART \uf0da",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "ADD 2 ITEMS TO CART \uf0da",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "add a motherboard under $200 and a compatible processor at any price to the shopping cart.",
+  "memory_type": "typed_procedure",
+  "name": "newegg / Digital workflow 176",
+  "raw_workflow_name": "newegg / Digital workflow 176",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 8.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Digital",
+  "termination": {
+    "max_steps_hint": 8,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "newegg"
+}

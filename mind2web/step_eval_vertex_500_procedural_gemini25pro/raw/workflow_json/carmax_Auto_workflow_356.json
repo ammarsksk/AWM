@@ -1,0 +1,300 @@
+{
+  "name": "carmax / Auto workflow 356",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Search for an automatic grey sports car with the lowest price, gas fuel and free shipping manufactured between 2018 to 2022, compare the top two results and compare photos.",
+  "steps": [
+    {
+      "action": "CLICK [119]",
+      "op": "CLICK",
+      "element": "119",
+      "value": "",
+      "description": "[link] Shop -> CLICK",
+      "role": "link",
+      "label": "Shop",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a id=119> Shop </a> <a> Sell/Trade </a> <a> Finance </a> </div> </nav> <form search> <div> <label> Search make, model, or keyword </label> <input id=330 search /> </div> </form> </header> <main main> <div tablist> <div> <button tab> </button> <button tab> </button> <button tab> </button> <button id=1393 tab> <span> <span> Browse By </span> Year </span> </button> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3231]",
+      "op": "CLICK",
+      "element": "3231",
+      "value": "",
+      "description": "[img] Sports car icon -> CLICK",
+      "role": "img",
+      "label": "Sports car icon",
+      "observation": "<html> <main main> <div button> <a> <img id=3231 sports car icon /> <div> Sports Cars </div> </a> </div> <div year quicklinks> <div> <a> 2015 </a> <a> 2016 </a> <a> 2017 </a> <a id=5662> 2018 </a> <a> 2019 </a> <a> 2020 </a> <a> 2021 </a> <a id=5670> 2022 </a> <a> 2023 </a> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [7935]",
+      "op": "CLICK",
+      "element": "7935",
+      "value": "",
+      "description": "[button] Sort by -> CLICK",
+      "role": "button",
+      "label": "Sort by",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=7935 button sort by> <div> <h4> Sort by </h4> <div> Lowest mileage </div> </div> </button> <button id=8622 button year> <h4> Year </h4> </button> <button id=8631 button price> <h4> Price </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [25605]",
+      "op": "CLICK",
+      "element": "25605",
+      "value": "",
+      "description": "[label] Lowest price -> CLICK",
+      "role": "label",
+      "label": "Lowest price",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=26292 button year> <h4> Year </h4> </button> <button id=26301 button price> <h4> Price </h4> </button> </div> <div> <input radio lowest-price /> <label id=25605> Lowest price </label> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [43394]",
+      "op": "CLICK",
+      "element": "43394",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=44073 button fuel type> <h4> Fuel Type </h4> </button> <button id=44082 button year> <h4> Year </h4> </button> </div> </aside> </main> <svg id=43394 /> </html>"
+    },
+    {
+      "action": "CLICK [60403]",
+      "op": "CLICK",
+      "element": "60403",
+      "value": "",
+      "description": "[button] Fuel Type -> CLICK",
+      "role": "button",
+      "label": "Fuel Type",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=60403 button fuel type> <h4> Fuel Type </h4> </button> <button id=61090 button year> <h4> Year </h4> </button> <button id=61126 button exterior color> <h4> Exterior Color </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [77170]",
+      "op": "CLICK",
+      "element": "77170",
+      "value": "",
+      "description": "[listitem] Gas (45",
+      "role": "listitem",
+      "label": "Gas (45",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=77858 button year> <h4> Year </h4> </button> <button id=77894 button exterior color> <h4> Exterior Color </h4> </button> </div> <li id=77170> <input checkbox gas (45) on /> <span> Gas <span> (45) </span> </span> </li> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [94030]",
+      "op": "CLICK",
+      "element": "94030",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=94692 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=94758 button price> <h4> Price </h4> </button> </div> <button id=94030 button back to all categories> Back to all filters </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [109799]",
+      "op": "CLICK",
+      "element": "109799",
+      "value": "",
+      "description": "[button] Year -> CLICK",
+      "role": "button",
+      "label": "Year",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=110462 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=109799 button year> <h4> Year </h4> </button> <button id=110527 button price> <h4> Price </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [126361]",
+      "op": "CLICK",
+      "element": "126361",
+      "value": "",
+      "description": "[button] 2010 -> CLICK",
+      "role": "button",
+      "label": "2010",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=126159 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=126216 button year> <h4> Year </h4> </button> </div> <div button from has 14 options to> <div button> <button id=126361 button> <span> 2010 </span> </button> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [141430]",
+      "op": "CLICK",
+      "element": "141430",
+      "value": "",
+      "description": "[menuitem] 2018 -> CLICK",
+      "role": "menuitem",
+      "label": "2018",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=142096 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=142153 button year> <h4> Year </h4> </button> </div> <div button from has 14 options to> <div button> <ul menu> <button id=141430 menuitem button 2018> 2018 </button> </ul> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [158140]",
+      "op": "CLICK",
+      "element": "158140",
+      "value": "",
+      "description": "[button] 2023 -> CLICK",
+      "role": "button",
+      "label": "2023",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=157897 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=157963 button price> <h4> Price </h4> </button> </div> <div button to has 14 options to> <div button> <button id=158140 button> <span> 2023 </span> </button> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [168001]",
+      "op": "CLICK",
+      "element": "168001",
+      "value": "",
+      "description": "[menuitem] 2022 -> CLICK",
+      "role": "menuitem",
+      "label": "2022",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=168561 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=168618 button year> <h4> Year </h4> </button> </div> <div button to has 14 options to> <div button> <ul menu> <button id=168001 menuitem button 2022> 2022 </button> </ul> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [178626]",
+      "op": "CLICK",
+      "element": "178626",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=179218 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=179284 button price> <h4> Price </h4> </button> </div> <button id=178626 button back to all categories> Back to all filters </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [189226]",
+      "op": "CLICK",
+      "element": "189226",
+      "value": "",
+      "description": "[button] Exterior Color -> CLICK",
+      "role": "button",
+      "label": "Exterior Color",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=189815 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=189872 button year> <h4> Year </h4> </button> <button id=189226 button exterior color> <h4> Exterior Color </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [199642]",
+      "op": "CLICK",
+      "element": "199642",
+      "value": "",
+      "description": "[listitem] Gray (5",
+      "role": "listitem",
+      "label": "Gray (5",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=200201 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=200267 button price> <h4> Price </h4> </button> </div> <li id=199642> <input checkbox gray (5) on /> <span> Gray <span> (5) </span> </span> </li> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [210214]",
+      "op": "CLICK",
+      "element": "210214",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=210832 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=210889 button year> <h4> Year </h4> </button> </div> </aside> </main> <svg id=210214 /> </html>"
+    },
+    {
+      "action": "CLICK [218311]",
+      "op": "CLICK",
+      "element": "218311",
+      "value": "",
+      "description": "[button] Transmission -> CLICK",
+      "role": "button",
+      "label": "Transmission",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=218929 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=218986 button year> <h4> Year </h4> </button> <button id=218311 button transmission> <h4> Transmission </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [226964]",
+      "op": "CLICK",
+      "element": "226964",
+      "value": "",
+      "description": "[span] Automatic -> CLICK",
+      "role": "span",
+      "label": "Automatic",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=226797 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=226845 button fuel type> <h4> Fuel Type </h4> </button> </div> <li id=226964> <input checkbox automatic (3) on /> <span> Automatic <span> (3) </span> </span> </li> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [234145]",
+      "op": "CLICK",
+      "element": "234145",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=234792 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=234849 button year> <h4> Year </h4> </button> </div> <button id=234145 button back to all categories> Back to all filters </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [241767]",
+      "op": "CLICK",
+      "element": "241767",
+      "value": "",
+      "description": "[heading] Distance & Shipping -> CLICK",
+      "role": "heading",
+      "label": "Distance & Shipping",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=241755 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=241767 button distance & shipping> <h4> Distance & Shipping </h4> </button> <button id=241820 button price> <h4> Price </h4> </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [249092]",
+      "op": "CLICK",
+      "element": "249092",
+      "value": "",
+      "description": "[button] $99 Or Less -> CLICK",
+      "role": "button",
+      "label": "$99 Or Less",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=248859 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=248916 button year> <h4> Year </h4> </button> </div> <div button max shipping fee has 8> <div button> <button id=249092 button> <span> $99 or less </span> </button> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [255608]",
+      "op": "CLICK",
+      "element": "255608",
+      "value": "",
+      "description": "[menuitem] Free to home or store -> CLICK",
+      "role": "menuitem",
+      "label": "Free to home or store",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=256258 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=256306 button fuel type> <h4> Fuel Type </h4> </button> </div> <div button max shipping fee has 8> <div button> <ul menu> <button id=255608 menuitem button free to home or store> Free to home or store </button> </ul> </div> </div> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [263005]",
+      "op": "CLICK",
+      "element": "263005",
+      "value": "",
+      "description": "[button] Back to all categories -> CLICK",
+      "role": "button",
+      "label": "Back to all categories",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <div> <button id=263653 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=263710 button year> <h4> Year </h4> </button> </div> <button id=263005 button back to all categories> Back to all filters </button> </div> </aside> </main> </html>"
+    },
+    {
+      "action": "CLICK [269909]",
+      "op": "CLICK",
+      "element": "269909",
+      "value": "",
+      "description": "[switch] COMPARE -> CLICK",
+      "role": "switch",
+      "label": "COMPARE",
+      "observation": "<html> <main search cars> <div> <aside region search filters> <div> <button id=270553 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=270610 button year> <h4> Year </h4> </button> </div> </aside> <section search results> <div> <label> COMPARE </label> <input id=269909 switch checkbox on /> </div> </section> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [275932]",
+      "op": "CLICK",
+      "element": "275932",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=276583 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=276649 button price> <h4> Price </h4> </button> </div> </aside> </main> <path id=275932 /> </html>"
+    },
+    {
+      "action": "CLICK [281593]",
+      "op": "CLICK",
+      "element": "281593",
+      "value": "",
+      "description": "[button] Add to Compare -> CLICK",
+      "role": "button",
+      "label": "Add to Compare",
+      "observation": "<html> <main search cars> <aside region search filters> <div> <button id=282245 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=282311 button price> <h4> Price </h4> </button> </div> </aside> </main> <svg id=281593 /> </html>"
+    },
+    {
+      "action": "CLICK [287249]",
+      "op": "CLICK",
+      "element": "287249",
+      "value": "",
+      "description": "[button] Go button to Compare the Selected Car's -> CLICK",
+      "role": "button",
+      "label": "Go button to Compare the Selected Car's",
+      "observation": "<html> <main search cars> <div> <aside region search filters> <div> <button id=287900 button sort by> <div> <h4> Sort by </h4> <div> Lowest price </div> </div> </button> <button id=287966 button price> <h4> Price </h4> </button> </div> </aside> <section search results> <button id=287249 button go button to compare the> Go </button> </section> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [292841]",
+      "op": "CLICK",
+      "element": "292841",
+      "value": "",
+      "description": "[button] COMPARE PHOTOS -> CLICK",
+      "role": "button",
+      "label": "COMPARE PHOTOS",
+      "observation": "<html> <main main> <div> <button id=292841 button> Compare Photos </button> <div> <span> Fuel Type </span> <div id=295227> Gas </div> <div id=295230> Gas </div> </div> </div> </main> </html>"
+    }
+  ]
+}

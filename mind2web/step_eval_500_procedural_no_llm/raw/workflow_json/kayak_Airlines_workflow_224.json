@@ -1,0 +1,100 @@
+{
+  "name": "kayak / Airlines workflow 224",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Get the cheapest direct flight from Madurai to Chennai on 20/3/23 booking through Air India.com",
+  "steps": [
+    {
+      "action": "CLICK [116]",
+      "op": "CLICK",
+      "element": "116",
+      "value": "",
+      "description": "[link] Search for flights -> CLICK",
+      "role": "link",
+      "label": "Search for flights",
+      "observation": "<html> <div> <div> <a id=116 search for flights> <svg flights icon /> <div> Flights </div> </a> <a search for hotels> </a> <a search for cars> </a> <a search for packages> </a> </div> <div> <input id=641 text chennai, tamil nadu, india enter a city, hotel, airport, /> <button id=684 button submit search> <svg img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [16053] [madurai]",
+      "op": "TYPE",
+      "element": "16053",
+      "value": "madurai",
+      "description": "[textbox] Flight origin input -> TYPE: madurai",
+      "role": "textbox",
+      "label": "Flight origin input",
+      "observation": "<html> <div> <div> <div list> <div listitem> <div button remove> <svg id=16622 img vvtc-item-icon /> </div> </div> </div> <input id=16053 text flight origin input from? /> </div> <div list> <div listitem> <div button remove> <svg id=16637 img vvtc-item-icon /> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [25331]",
+      "op": "CLICK",
+      "element": "25331",
+      "value": "",
+      "description": "[div] Madurai, Tamil Nadu, India -> CLICK",
+      "role": "div",
+      "label": "Madurai, Tamil Nadu, India",
+      "observation": "<html> <body> <div> <div list> <div listitem> <div button remove> <svg id=25899 img vvtc-item-icon /> </div> </div> </div> <button button submit search> <svg id=25964 img c8lpf-icon /> </button> </div> <div id=25331> <ul listbox> <li option madurai, tamil nadu, india> <div> <img city:madurai, tamil nadu, india /> <div> <div> <span> Madurai, Tamil Nadu, India </span> <span> IXM </span> </div> <span> Madurai </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [35093]",
+      "op": "CLICK",
+      "element": "35093",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <div list> <div listitem> <div button remove> <svg id=35093 img vvtc-item-icon> </svg> </div> </div> <div listitem> <div button remove> <svg id=35099 img vvtc-item-icon /> </div> </div> </div> <div list> <div listitem> <div button remove> <svg id=35115 img vvtc-item-icon /> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [43679]",
+      "op": "CLICK",
+      "element": "43679",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <div list> <div listitem> <div button remove> <svg id=44246 img vvtc-item-icon> </svg> </div> </div> </div> <div list> <div listitem> <div button remove> <svg id=44262 img vvtc-item-icon /> </div> </div> </div> <button id=43679 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [52834]",
+      "op": "CLICK",
+      "element": "52834",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <body> <div form flight result filters> <div tabpanel> <div region> <div region airlines> <ul list airlines> <li listitem> <div> <input checkbox ai true /> <label id=55309> Air India </label> </div> </li> </ul> </div> </div> </div> </div> <div flight results section> <div> <div id=57841 button cheapest> <div> <span> Cheapest </span> <div> <span> $115 </span> <span> 1h 10m </span> </div> </div> </div> <div button best> </div> <div button quickest> </div> </div> </div> </body> <svg id=52834 /> </html>"
+    },
+    {
+      "action": "CLICK [71903]",
+      "op": "CLICK",
+      "element": "71903",
+      "value": "",
+      "description": "[label] Air India -> HOVER",
+      "role": "label",
+      "label": "Air India",
+      "observation": "<html> <body> <div> <div form flight result filters> <div tabpanel> <div region> <div region airlines> <ul list airlines> <li listitem> <div> <input checkbox ai true /> <label id=74509> Air India </label> </div> </li> </ul> </div> </div> </div> </div> <div region> <div list booking sites> <li listitem> <div> <input checkbox ai true /> <label id=71903> Air India </label> </div> </li> </div> </div> </div> <div flight results section> <div> <div id=77037 button cheapest> <div> <span> Cheapest </span> <div> <span> $115 </span> <span> 1h 10m </span> </div> </div> </div> <div button best> </div> <div button quickest> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [90987]",
+      "op": "CLICK",
+      "element": "90987",
+      "value": "",
+      "description": "[button] Air India only -> CLICK",
+      "role": "button",
+      "label": "Air India only",
+      "observation": "<html> <body> <div region> <div list booking sites> <li listitem> <button id=90987 button air india only> only </button> </li> </div> </div> <div flight results section> <div> <div id=95973 button cheapest> <div> <span> Cheapest </span> <div> <span> $115 </span> <span> 1h 10m </span> </div> </div> </div> <div id=95985 button best> <div> <div> <span> Best </span> <svg img /> </div> <div> <span> $115 </span> <span> 1h 10m </span> </div> </div> </div> <div button quickest> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [114989]",
+      "op": "CLICK",
+      "element": "114989",
+      "value": "",
+      "description": "[button] Cheapest -> CLICK",
+      "role": "button",
+      "label": "Cheapest",
+      "observation": "<html> <body> <div region> <div list booking sites> <li listitem> <div> <input id=114540 checkbox bookingflights /> <label> Booking.com </label> </div> </li> </div> </div> <div flight results section> <div> <div id=114989 button cheapest> <div> <span> Cheapest </span> <div> <span> $438 </span> <span> 1h 10m </span> </div> </div> </div> <div id=115000 button best> <div> <span> Best </span> <svg img /> </div> </div> <div button quickest> </div> </div> </div> </body> </html>"
+    }
+  ]
+}

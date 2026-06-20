@@ -1,0 +1,70 @@
+{
+  "name": "carmax / Auto workflow 399",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find the documents required to sell a car in New Jersey for which payments are being paid and it has single person on the title who can come to the store",
+  "steps": [
+    {
+      "action": "CLICK [119]",
+      "op": "CLICK",
+      "element": "119",
+      "value": "",
+      "description": "[link] Sell/Trade -> CLICK",
+      "role": "link",
+      "label": "Sell/Trade",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a> Shop </a> <a id=119> Sell/Trade </a> <a> Finance </a> </div> </nav> <form search> <button id=334 submit submit search by make, model,> <span> Search CarMax inventory </span> </button> </form> </header> <main main> <div> <input id=774 text $400 /> <label> Monthly Payment </label> </div> </main> </div> </html>"
+    },
+    {
+      "action": "SELECT [3688] [New Jersey]",
+      "op": "SELECT",
+      "element": "3688",
+      "value": "New Jersey",
+      "description": "[combobox] In what state are you selling the car? -> SELECT: New Jersey",
+      "role": "combobox",
+      "label": "In what state are you selling the car?",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=4004 text licenseplate /> <label> License plate number </label> </div> <div> <input id=4121 text zipcode /> <label> What's your zip code? </label> </div> </div> <main main> <div> <select id=3688> <option true /> <option al> Alabama </option> <option az> Arizona </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option fl> Florida </option> <option ga> Georgia </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> <option mi> Michigan </option> <option mn> Minnesota </option> <option ms> Mississippi </option> <option mo> Missouri </option> <option ne> Nebraska </option> <option nv> Nevada </option> <option nh> New Hampshire </option> </select> <label> In what state are you selling the car? </label> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [7096]",
+      "op": "CLICK",
+      "element": "7096",
+      "value": "",
+      "description": "[radio] Yes -> CLICK",
+      "role": "radio",
+      "label": "Yes",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=7533 text zipcode /> <label> What's your zip code? </label> </div> </div> <main main> <fieldset> <div> <input id=7096 radio yes /> <label> Yes </label> </div> <div> <input id=7826 radio no /> <label> No </label> </div> </fieldset> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [10489]",
+      "op": "CLICK",
+      "element": "10489",
+      "value": "",
+      "description": "[radio] No -> CLICK",
+      "role": "radio",
+      "label": "No",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=10804 text licenseplate /> <label> License plate number </label> </div> <div> <input id=10925 text zipcode /> <label> What's your zip code? </label> </div> </div> <main main> <div> <input id=10489 radio no /> <label> No </label> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [13882]",
+      "op": "CLICK",
+      "element": "13882",
+      "value": "",
+      "description": "[radio] Yes -> CLICK",
+      "role": "radio",
+      "label": "Yes",
+      "observation": "<html> <main main> <div> <div> <input id=14611 radio no /> <label> No </label> </div> <fieldset> <div> <input id=13882 radio yes /> <label> Yes </label> </div> <div> <input id=14660 radio no /> <label> No </label> </div> </fieldset> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [17286]",
+      "op": "CLICK",
+      "element": "17286",
+      "value": "",
+      "description": "[button] WHAT TO BRING WITH YOU -> CLICK",
+      "role": "button",
+      "label": "WHAT TO BRING WITH YOU",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a> Shop </a> <a id=17395> Sell/Trade </a> <a> Finance </a> </div> </nav> </header> <div tabpanel> <div> <input id=17722 text zipcode /> <label> What's your zip code? </label> </div> </div> <main main> <button id=17286 submit> WHAT TO BRING WITH YOU </button> </main> </div> </html>"
+    }
+  ]
+}

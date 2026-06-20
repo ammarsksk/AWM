@@ -1,0 +1,51 @@
+{
+  "name": "carmax / Auto workflow 482",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find estimated monthly payments for a $10,000 vehicle with $500 down payment, 72 month term length and challenged credit score in the state of New Jersey",
+  "goal_pattern": "Find estimated monthly payments for a $10,000 vehicle with $500 down payment, 72 month term length and challenged credit score in the state of New Jersey",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Finance",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Finance",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Car payment calculator",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Car payment calculator",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [125]",
+      "gold_element_id": "125",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [3403]",
+      "gold_element_id": "3403",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "carmax / Auto workflow 482"
+}

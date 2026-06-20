@@ -1,0 +1,51 @@
+{
+  "name": "enterprise / Car rental workflow 570",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Browse a list of rental vehicles for Brooklyn, OH, US for 18 year old renter.",
+  "goal_pattern": "Browse a list of rental vehicles for Brooklyn, OH, US for 18 year old renter.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Pick-up & Return Location (ZIP, City or Airport",
+      "operation": "TYPE",
+      "target_type": "searchbox",
+      "target_description": "Pick-up & Return Location (ZIP, City or Airport",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Brooklyn, OH, US Select",
+      "operation": "CLICK",
+      "target_type": "option",
+      "target_description": "Brooklyn, OH, US Select",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [161] [Brooklyn]",
+      "gold_element_id": "161",
+      "gold_value": "Brooklyn"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [17211]",
+      "gold_element_id": "17211",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "enterprise / Car rental workflow 570"
+}

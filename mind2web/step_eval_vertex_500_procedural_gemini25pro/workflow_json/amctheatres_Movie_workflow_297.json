@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "name": "amctheatres / Movie workflow 297",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "amctheatres",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Show me the movies playing today at the theater closest to zip code 10001",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "use",
+      "find",
+      "theatre",
+      "amctheatres",
+      "entertainment",
+      "movie",
+      "show",
+      "movies",
+      "playing",
+      "today",
+      "theater",
+      "closest",
+      "zip",
+      "code",
+      "10001",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "visit",
+      "our",
+      "theatres",
+      "page",
+      "textbox",
+      "specific",
+      "field",
+      "generic",
+      "submit",
+      "search",
+      "showtimes"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Visit the Our Theatres page",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Visit the Our Theatres page",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Find a Theatre",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Find a Theatre",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Find A Theatre",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Find A Theatre",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Submit Search",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Submit Search",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Showtimes",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Showtimes",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "amctheatres / Movie workflow 297"
+}

@@ -1,0 +1,180 @@
+{
+  "name": "marriott / Hotel workflow 493",
+  "source": "Mind2Web exemplar",
+  "website": "marriott",
+  "domain": "Travel",
+  "subdomain": "Hotel",
+  "task": "Find The Ritz-Carlton hotels in Washington DC that can hold a student social event from May 9 to May 12 and will require 7 guest rooms and an event space for 50",
+  "steps": [
+    {
+      "action": "CLICK [1332]",
+      "op": "CLICK",
+      "element": "1332",
+      "value": "",
+      "description": "[button] Meetings & Events -> CLICK",
+      "role": "button",
+      "label": "Meetings & Events",
+      "observation": "<html> <body> <a id=1332 button> <span> Meetings & Events </span> </a> <div> <div region> <a id=5348> <span> The Ritz-Carlton </span> <span> Opens a new window </span> </a> </div> <a id=5937> Social Events </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [15082]",
+      "op": "CLICK",
+      "element": "15082",
+      "value": "",
+      "description": "[link] Group Travel -> CLICK",
+      "role": "link",
+      "label": "Group Travel",
+      "observation": "<html> <body> <ul> <a id=16597> Social Events </a> <a id=15082> Group Travel </a> </ul> <a id=21129> Social Events </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [22691]",
+      "op": "CLICK",
+      "element": "22691",
+      "value": "",
+      "description": "[link] Group Travel for Students -> CLICK",
+      "role": "link",
+      "label": "Group Travel for Students",
+      "observation": "<html> <div> <a id=22691> Group Travel for Students </a> <div> <input todate /> <input false /> <input checkbox true /> <input id=23969 text start date /> <label> Start Date </label> <div> Start Date </div> <span> - </span> </div> <div> <a> Planning Group Travel </a> <a> Team Travel </a> <a id=25401> Student Travel </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [26974] [washington]",
+      "op": "TYPE",
+      "element": "26974",
+      "value": "washington",
+      "description": "[textbox] Destination -> TYPE: washington",
+      "role": "textbox",
+      "label": "Destination",
+      "observation": "<html> <div> <div> <div> <label> Destination </label> <input id=26974 text where do you want to /> </div> <div> <input todate /> <input false /> <input checkbox true /> <input id=28241 text start date /> <label> Start Date </label> <div> Start Date </div> <span> - </span> </div> </div> <div> <input/> <a id=29692> Accommodations </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [35919]",
+      "op": "CLICK",
+      "element": "35919",
+      "value": "",
+      "description": "[menuitem] Washington D.C., DC, USA -> CLICK",
+      "role": "menuitem",
+      "label": "Washington D.C., DC, USA",
+      "observation": "<html> <ul> <li menuitem> <a id=35919> <strong> <strong> Washington </strong> D.C. </strong> , DC, USA </a> </li> <li menuitem> <a id=37147> <strong> Washington </strong> , USA </a> </li> <li menuitem> <a id=37153> <strong> <strong> Washington </strong> , D.C. </strong> , USA </a> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [44871]",
+      "op": "CLICK",
+      "element": "44871",
+      "value": "",
+      "description": "[textbox] Start Date -> CLICK",
+      "role": "textbox",
+      "label": "Start Date",
+      "observation": "<html> <div> <div> <div> <input todate /> <input false /> <input checkbox true /> <input id=44871 text start date /> <label> Start Date </label> <div> Start Date </div> <span> - </span> </div> <div> <label> Guest rooms </label> <input id=47012 text # of rooms /> </div> </div> <a id=47700> Social Events </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [53850]",
+      "op": "CLICK",
+      "element": "53850",
+      "value": "",
+      "description": "[button] \ue023 -> CLICK",
+      "role": "button",
+      "label": "\ue023",
+      "observation": "<html> <div> <div> <div> April </div> <div> 2023 </div> <div button previous month /> <div id=53850 button next month /> </div> <table grid> <tr> <td id=55287> <div gridcell sun, apr 9, 2023> 9 </div> </td> <td id=55296> <div gridcell wed, apr 12, 2023> 12 </div> </td> </tr> </table> </div> </html>"
+    },
+    {
+      "action": "CLICK [64256]",
+      "op": "CLICK",
+      "element": "64256",
+      "value": "",
+      "description": "[gridcell] Tue, May 9, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Tue, May 9, 2023",
+      "observation": "<html> <div> <div> <div> May </div> <div> 2023 </div> <div button previous month /> <div id=64199 button next month /> </div> <table grid> <tr> <td id=64256> <div gridcell tue, may 9, 2023> 9 </div> </td> <td id=64263> <div gridcell fri, may 12, 2023> 12 </div> </td> </tr> </table> </div> </html>"
+    },
+    {
+      "action": "CLICK [73251]",
+      "op": "CLICK",
+      "element": "73251",
+      "value": "",
+      "description": "[gridcell] Fri, May 12, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Fri, May 12, 2023",
+      "observation": "<html> <div> <a id=72879> Group Travel for Students </a> <div> <div> <div> May </div> <div> 2023 </div> <div button previous month /> <div id=73184 button next month /> </div> <table grid> <td id=73251> <div gridcell fri, may 12, 2023> 12 </div> </td> </table> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [82913]",
+      "op": "CLICK",
+      "element": "82913",
+      "value": "",
+      "description": "[div] Purpose of your event -> CLICK",
+      "role": "div",
+      "label": "Purpose of your event",
+      "observation": "<html> <div> <a id=81865> Group Travel for Students </a> <div> <select eventtype> </select> <label id=82913> Purpose of your event </label> <input purpose of your event /> </div> <a id=83630> Social Events </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [89771]",
+      "op": "CLICK",
+      "element": "89771",
+      "value": "",
+      "description": "[li] Social -> CLICK",
+      "role": "li",
+      "label": "Social",
+      "observation": "<html> <div> <a id=90830> Group Travel for Students </a> <ul listbox> <li option> Purpose of your event </li> <li option> Business </li> <li option> Wedding </li> <li id=89771 option> Social </li> </ul> <div> <input/> <a id=92341> Meeting Size </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [98730] [7]",
+      "op": "TYPE",
+      "element": "98730",
+      "value": "7",
+      "description": "[textbox] Guest rooms -> TYPE: 7",
+      "role": "textbox",
+      "label": "Guest rooms",
+      "observation": "<html> <div> <a id=99790> Group Travel for Students </a> <div> <label> Guest rooms </label> <input id=98730 text # of rooms /> </div> <div> <input/> <a id=101301> Meeting Size </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [107707] [50]",
+      "op": "TYPE",
+      "element": "107707",
+      "value": "50",
+      "description": "[textbox] Event space -> TYPE: 50",
+      "role": "textbox",
+      "label": "Event space",
+      "observation": "<html> <div> <a id=108767> Group Travel for Students </a> <div> <div> <label> Event space </label> <input id=107707 text # of attendees /> </div> <input id=109870 submit find /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [116670]",
+      "op": "CLICK",
+      "element": "116670",
+      "value": "",
+      "description": "[button] Find -> CLICK",
+      "role": "button",
+      "label": "Find",
+      "observation": "<html> <div> <a id=117734> Group Travel for Students </a> <div> <div> <input todate 05/12/2023 /> <input false /> <input checkbox true /> <input id=117981 text start date tue, may 9, 2023 /> <label> Start Date </label> <div> Start Date </div> <span> - </span> </div> <input id=116670 submit find /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [121174]",
+      "op": "CLICK",
+      "element": "121174",
+      "value": "",
+      "description": "[generic] Brand -> CLICK",
+      "role": "generic",
+      "label": "Brand",
+      "observation": "<html> <div> <div> <span> SELECT FROM 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span id=121174> Brand </span> <span id=122812> Distance </span> </div> <a id=126128 the ritz-carlton, washington, d.c.> <h2> <span> The Ritz-Carlton, Washington, D.C. </span> <span> Open in a different browser tab </span> </h2> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [139772]",
+      "op": "CLICK",
+      "element": "139772",
+      "value": "",
+      "description": "[generic] \ue914 The Ritz-Carlton (4",
+      "role": "generic",
+      "label": "\ue914 The Ritz-Carlton (4",
+      "observation": "<html> <div> <div region> <ul> <a id=139772 the ritz-carlton (4)> <span> The Ritz-Carlton (4) </span> </a> <a id=139781 the luxury collection (0)> <span> The Luxury Collection (0) </span> </a> </ul> </div> <form> <input rangefilter /> <input facets /> <input filter /> <button id=140948 submit> Apply </button> <button button> Clear All </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [154260]",
+      "op": "CLICK",
+      "element": "154260",
+      "value": "",
+      "description": "[button] APPLY -> CLICK",
+      "role": "button",
+      "label": "APPLY",
+      "observation": "<html> <div> <span> SELECT FROM 30 UNIQUE BRANDS </span> <span> Filter by: </span> <span> Brand </span> <span id=155895> Distance </span> <div> <div region> <a id=156227 the ritz-carlton (4)> <span> The Ritz-Carlton (4) </span> </a> </div> <form> <input rangefilter /> <input facets /> <input filter /> <button id=154260 submit> Apply </button> <button button> Clear All </button> </form> </div> </div> </html>"
+    }
+  ]
+}

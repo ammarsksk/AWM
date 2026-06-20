@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "name": "kayak / Airlines workflow 280",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Find hotels in Las Vegas, NV that offer free airport shuttle service.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "airport",
+      "hotels",
+      "las",
+      "vegas",
+      "free",
+      "shuttle",
+      "use",
+      "textbox",
+      "enter",
+      "city",
+      "hotel",
+      "address",
+      "landmark",
+      "svg",
+      "kayak",
+      "travel",
+      "airlines",
+      "find",
+      "offer",
+      "service",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "search",
+      "specific",
+      "field",
+      "span",
+      "nevada",
+      "united",
+      "states",
+      "checkbox"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Search for hotels",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Search for hotels",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Enter a city, hotel, airport, address or landmark",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Enter a city, hotel, airport, address or landmark",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Enter a city, hotel, airport, address or landmark",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Enter a city, hotel, airport, address or landmark",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Las Vegas, Nevada, United States",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Las Vegas, Nevada, United States",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Free airport shuttle",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Free airport shuttle",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "kayak / Airlines workflow 280"
+}

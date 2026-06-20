@@ -1,0 +1,30 @@
+{
+  "name": "rottentomatoes / Movie workflow 13",
+  "source": "Mind2Web exemplar",
+  "website": "rottentomatoes",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find a comedy movie streaming on Netflix and add to watchlist.",
+  "steps": [
+    {
+      "action": "CLICK [148]",
+      "op": "CLICK",
+      "element": "148",
+      "value": "",
+      "description": "[link] MOVIES -> HOVER",
+      "role": "link",
+      "label": "MOVIES",
+      "observation": "<html> <div> <rt-header navigation bar> <div> <slot desktop-search> <slot> <slot search-input> <input id=625 text search search movies, tv, actors, more... /> </slot> </slot> </slot> <slot nav-dropdowns> <slot movies> <slot link> <a id=148> Movies </a> </slot> </slot> </slot> </div> </rt-header> <slot> <div> <a> Vudu </a> | <a id=5619> Netflix </a> | <a> Amazon </a> | <a> HBO </a> | <a> More... </a> </div> </slot> </div> </html>"
+    },
+    {
+      "action": "CLICK [32073]",
+      "op": "CLICK",
+      "element": "32073",
+      "value": "",
+      "description": "[link] Netflix streaming -> CLICK",
+      "role": "link",
+      "label": "Netflix streaming",
+      "observation": "<html> <div> <rt-header navigation bar> <slot nav-dropdowns> <slot movies> <slot dropdown> <slot column> <slot links> <ul> <a id=32073> Netflix streaming </a> <a id=32932> Most popular streaming movies </a> </ul> </slot> </slot> </slot> </slot> </slot> </rt-header> <slot> <div> <a> Vudu </a> | <a id=37554> Netflix </a> | <a> Amazon </a> | <a> HBO </a> | <a> More... </a> </div> </slot> </div> </html>"
+    }
+  ]
+}

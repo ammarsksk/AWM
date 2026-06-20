@@ -1,0 +1,51 @@
+{
+  "name": "resy / Restaurant workflow 454",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Book the tables at Chianti - MG Road restaurant on March 30,1:30 PM for 4 Guests.",
+  "goal_pattern": "Book the tables at Chianti - MG Road restaurant on March 30,1:30 PM for 4 Guests.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search restaurants, cuisines, etc.",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Search restaurants, cuisines, etc.",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "select the Guests",
+      "operation": "SELECT",
+      "target_type": "combobox",
+      "target_description": "Guests",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [101] [CHIANTI]",
+      "gold_element_id": "101",
+      "gold_value": "CHIANTI"
+    },
+    {
+      "step": 2,
+      "gold_action": "SELECT [5124] [4 Guests]",
+      "gold_element_id": "5124",
+      "gold_value": "4 Guests"
+    }
+  ],
+  "raw_workflow_name": "resy / Restaurant workflow 454"
+}

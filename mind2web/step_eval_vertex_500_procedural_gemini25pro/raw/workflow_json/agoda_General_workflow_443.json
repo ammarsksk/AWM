@@ -1,0 +1,100 @@
+{
+  "name": "agoda / General workflow 443",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find a hotel with lowest price in Tokyo for 2 adults and 1 child for 10 May and checkout on 12.",
+  "steps": [
+    {
+      "action": "TYPE [89] [Tokyo]",
+      "op": "TYPE",
+      "element": "89",
+      "value": "Tokyo",
+      "description": "[combobox] Enter a destination or property -> TYPE: Tokyo",
+      "role": "combobox",
+      "label": "Enter a destination or property",
+      "observation": "<html> <div> <div tabpanel> <div> <input id=89 combobox text enter a destination or property /> <button id=501> <span> SEARCH </span> </button> </div> </div> <button id=850> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [4564]",
+      "op": "CLICK",
+      "element": "4564",
+      "value": "",
+      "description": "[option] Top destination Tokyo, Japan (City",
+      "role": "option",
+      "label": "Top destination Tokyo, Japan (City",
+      "observation": "<html> <div> <div tabpanel> <div dialog> <ul listbox> <li id=4564 option top destination tokyo, japan (city)> <ul> <span> Top destination </span> <li> <span> Tokyo </span> <div> <span japan> Japan </span> <span> Popular </span> </div> </li> <li city> <span> City </span> </li> </ul> </li> <li option destination hachioji, japan (city)> </li> <li id=5015 option destination tokyo station, tokyo (area)> <ul> <span> Destination </span> <li> <span> <span> Tokyo </span> Station </span> <span tokyo> Tokyo </span> </li> <li area> <span> Area </span> </li> </ul> </li> <li option destination tokyo disney resort, tokyo> </li> <li option destination tokyo narita international airport,> </li> <li option destination chofu, japan (city)> </li> </ul> </div> </div> <a id=6155 tokyo hotels> Tokyo Hotels </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [9662]",
+      "op": "CLICK",
+      "element": "9662",
+      "value": "",
+      "description": "[div] 10 -> CLICK",
+      "role": "div",
+      "label": "10",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div grid> <div rowgroup> <div row> <div gridcell wed may 10 2023> <span id=9662> 10 </span> <p> 111 </p> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell wed jun 07 2023> </div> <div gridcell thu jun 08 2023> </div> <div gridcell fri jun 09 2023> </div> <div id=9914 gridcell sat jun 10 2023> <span id=9917> 10 </span> </div> <div gridcell sun jun 11 2023> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [14605]",
+      "op": "CLICK",
+      "element": "14605",
+      "value": "",
+      "description": "[span] 12 -> CLICK",
+      "role": "span",
+      "label": "12",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div grid> <div rowgroup> <div row> <div gridcell wed may 10 2023> <span id=15125> 10 </span> <p> 111 </p> </div> <div gridcell fri may 12 2023> <span id=14605> 12 </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell mon jun 12 2023> <span id=15391> 12 </span> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19626]",
+      "op": "CLICK",
+      "element": "19626",
+      "value": "",
+      "description": "[img] Add -> CLICK",
+      "role": "img",
+      "label": "Add",
+      "observation": "<html> <div tabpanel> <div> <div dialog> <div> <div> <div button> </div> <h3> 2 </h3> <div id=20079 button> <svg img add /> </div> </div> <div button> <svg id=19626 img add /> </div> </div> </div> <button id=19669> <span> SEARCH </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [24320]",
+      "op": "CLICK",
+      "element": "24320",
+      "value": "",
+      "description": "[span] SEARCH -> CLICK",
+      "role": "span",
+      "label": "SEARCH",
+      "observation": "<html> <div tabpanel> <div> <div dialog> <div> <div> <div button> </div> <h3> 1 </h3> <div id=24711 button> <svg img add /> </div> </div> <div> <div button> </div> <h3> 2 </h3> <div id=24728 button> <svg img add /> </div> </div> </div> </div> <button id=24320> <span> SEARCH </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [28913]",
+      "op": "CLICK",
+      "element": "28913",
+      "value": "",
+      "description": "[span] SEARCH -> CLICK",
+      "role": "span",
+      "label": "SEARCH",
+      "observation": "<html> <div> <div tabpanel> <div> <div button> <div> <div id=29276 button select number of guests and> <span button> 2 adults </span> , <span button> 1 child </span> </div> <div> 1 room </div> </div> </div> <button id=28913> <span> SEARCH </span> </button> </div> </div> <button id=29644> <span> Explore hotels </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [34126]",
+      "op": "CLICK",
+      "element": "34126",
+      "value": "",
+      "description": "[tab] Lowest price first -> CLICK",
+      "role": "tab",
+      "label": "Lowest price first",
+      "observation": "<html> <div> <div group> <span id=32175 checkbox hotel> <span> <input checkbox on /> <span checkbox /> </span> <span> <span> Hotel </span> <span> (1039) </span> </span> </span> </div> <div list> <div listitem> <div tablist> <span> Sort </span> <a id=34122 tab> <span> Best match </span> </a> <a id=34126 tab> <span> Lowest price first </span> </a> <a tab> </a> <a tab> </a> <a tab> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [42566]",
+      "op": "CLICK",
+      "element": "42566",
+      "value": "",
+      "description": "[heading] Nice Hostel Kameari -> CLICK",
+      "role": "heading",
+      "label": "Nice Hostel Kameari",
+      "observation": "<html> <div> <div group> <span id=40543 checkbox hotel> <span> <input checkbox on /> <span checkbox /> </span> <span> <span> Hotel </span> <span> (1039) </span> </span> </span> </div> <div list> <div listitem> <div tablist> <span> Sort </span> <a id=39980 tab> <span> Best match </span> </a> <a tab> </a> <a tab> </a> <a tab> </a> </div> <a id=42566 nice hostel kameari> <div> <div> <img button guestroom /> <img button /> <img button /> <img button bathroom /> <span> <img button /> <div button select all images> See all </div> </span> </div> <div> <header> <h3> Nice Hostel Kameari </h3> <div> <div> <svg img /> <svg img /> </div> <span> <svg img /> Katsushika, Tokyo - 8.1 km to center </span> </div> </header> <span> Free WiFi </span> <div> <svg img /> <span> Travel sustainable </span> </div> <span> Easy Transit </span> </div> <div> <div> <div> <span> Very good </span> <span> 20 reviews </span> </div> <p> 7.2 </p> </div> <div> <p> ONLY 1 LEFT </p> <div> 70 </div> </div> </div> </div> </a> </div> </div> </div> </html>"
+    }
+  ]
+}

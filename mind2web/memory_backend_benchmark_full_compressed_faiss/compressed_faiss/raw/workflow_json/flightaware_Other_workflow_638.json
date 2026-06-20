@@ -1,0 +1,30 @@
+{
+  "name": "flightaware / Other workflow 638",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Show the list of countries with the highest number of seen aircrafts.",
+  "steps": [
+    {
+      "action": "CLICK [1678]",
+      "op": "CLICK",
+      "element": "1678",
+      "value": "",
+      "description": "[link] ADS-B -> HOVER",
+      "role": "link",
+      "label": "ADS-B",
+      "observation": "<html> <div> <header banner> <div> <input id=1330 text search for flight, tail, airport, /> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1678> <span> ADS-B </span> </a> <ul menu> </ul> </li> </ul> </nav> </div> </header> <form> <input text origin kosu /> <div button> </div> <input id=2263 text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [10736]",
+      "op": "CLICK",
+      "element": "10736",
+      "value": "",
+      "description": "[link] Statistics -> CLICK",
+      "role": "link",
+      "label": "Statistics",
+      "observation": "<html> <form> <input id=12893 text origin kosu /> <div button> </div> <input id=12900 text destination /> <input submit /> </form> <span id=10736> <text bounding_box_rect= -1,-1,-1,-1>Statistics</text> </span> </html>"
+    }
+  ]
+}

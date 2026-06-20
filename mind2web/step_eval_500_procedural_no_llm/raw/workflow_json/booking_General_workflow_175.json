@@ -1,0 +1,190 @@
+{
+  "name": "booking / General workflow 175",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book the cheapest 3-star hotel or resort for two within a budget of 50 to 100 dollars for four days starting from April 25, near the beach in goa that offers breakfast, wifi, a swimming pool, and free cancellation.",
+  "steps": [
+    {
+      "action": "TYPE [409] [GOA]",
+      "op": "TYPE",
+      "element": "409",
+      "value": "GOA",
+      "description": "[textbox] Where are you going? -> TYPE: GOA",
+      "role": "textbox",
+      "label": "Where are you going?",
+      "observation": "<html> <body> <div> <input id=409 ss new york where are you going? /> <button button> 2 adults 0 children 1 room </button> <button submit> </button> </div> <div main> <div region> <ul> <a id=1406> <div> <div> <div> Grand Hyatt Washington </div> <div> Washington DC (District Columbia), United States </div> </div> <div> <span> Starting from </span> <span> US$409 </span> </div> </div> </a> <a id=1478> <div> <div> <div> The Fairmont Washington DC </div> <div> Washington, D.C. (District Of Columbia), United States </div> </div> <div> <span> Starting from </span> <span> US$412 </span> </div> </div> </a> </ul> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [13040]",
+      "op": "CLICK",
+      "element": "13040",
+      "value": "",
+      "description": "[div] Goa -> CLICK",
+      "role": "div",
+      "label": "Goa",
+      "observation": "<html> <body> <div id=13040 button> <div> <div> Goa </div> <div> India </div> </div> </div> <div main> <div region> <a id=13602> <div> <div> <div> The Fairmont Washington DC </div> <div> Washington, D.C. (District Of Columbia), United States </div> </div> <div> <span> Starting from </span> <span> US$412 </span> </div> </div> </a> </div> <div region> <a id=14118> <div> <div> Hotels </div> <div> 950,739 hotels </div> </div> </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [24938]",
+      "op": "CLICK",
+      "element": "24938",
+      "value": "",
+      "description": "[checkbox] 25 April 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "25 April 2023",
+      "observation": "<html> <div> <table grid> <td gridcell> <span id=24907 checkbox 25 march 2023> <span> 25 </span> </span> </td> </table> <table grid> <tr> <td gridcell> </td> <td gridcell> </td> <td id=25756 gridcell> <span id=24938 checkbox 25 april 2023> <span> 25 </span> </span> </td> <td gridcell> </td> <td gridcell> </td> <td gridcell> </td> </tr> </table> </div> </html>"
+    },
+    {
+      "action": "CLICK [37607]",
+      "op": "CLICK",
+      "element": "37607",
+      "value": "",
+      "description": "[checkbox] 29 April 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "29 April 2023",
+      "observation": "<html> <div> <table grid> <tr> <td gridcell> <span id=37603 checkbox 25 april 2023> <span> 25 </span> </span> </td> <td gridcell> <span id=37607 checkbox 29 april 2023> <span> 29 </span> </span> </td> </tr> </table> <div region> <label id=37617> <input checkbox 3 /> <div> 3 days </div> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [50235]",
+      "op": "CLICK",
+      "element": "50235",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <div> <input ss goa, india where are you going? /> <button button> 2 adults 0 children 1 room </button> <button id=50235 submit> <span> Search </span> </button> </div> <div main> <div region> <a id=50710> <div> <div> <div> The Fairmont Washington DC </div> <div> Washington, D.C. (District Of Columbia), United States </div> </div> <div> <span> Starting from </span> <span> US$412 </span> </div> </div> </a> </div> <ul tablist> <button id=50999 tab button> <span> Beach </span> </button> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [60181]",
+      "op": "CLICK",
+      "element": "60181",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox 3: 761 properties class=3 /> <label id=60181> <div> <div> 3 stars </div> <span> 761 </span> </div> </label> </div> <div> <input checkbox beach: 792 properties /> <label id=60266> <div> <div> Beach </div> <span> 792 </span> </div> </label> </div> </div> <div> <input checkbox beach: 792 properties /> <label id=61978> <div> <div> Beach </div> <span> (792) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [80862]",
+      "op": "CLICK",
+      "element": "80862",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox beach: 286 properties /> <label id=80573> <div> <div> Beach </div> <span> 286 </span> </div> </label> </div> <div> <input checkbox hotels: 289 properties ht_id=204 /> <label id=80862> <div> <div> Hotels </div> <span> 289 </span> </div> </label> </div> </div> <div> <input checkbox beach: 286 properties /> <label id=82123> <div> <div> Beach </div> <span> (286) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [100791]",
+      "op": "CLICK",
+      "element": "100791",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox beach: 69 properties /> <label id=100489> <div> <div> Beach </div> <span> 69 </span> </div> </label> </div> <div> <input checkbox resorts: 110 properties ht_id=206 /> <label id=100791> <div> <div> Resorts </div> <span> 110 </span> </div> </label> </div> </div> <div> <input checkbox beach: 69 properties /> <label id=102068> <div> <div> Beach </div> <span> (69) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [120224]",
+      "op": "CLICK",
+      "element": "120224",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox free cancellation: 318 properties fc=2 /> <label id=120224> <div> <div> Free cancellation </div> <span> 318 </span> </div> </label> </div> <div> <input checkbox beach: 124 properties /> <label id=120388> <div> <div> Beach </div> <span> 124 </span> </div> </label> </div> </div> <div> <input checkbox beach: 124 properties /> <label id=122105> <div> <div> Beach </div> <span> (124) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [140251]",
+      "op": "CLICK",
+      "element": "140251",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox free wifi: 224 properties /> <label id=140251> <div> <div> Free WiFi </div> <span> 224 </span> </div> </label> </div> <div> <input checkbox beach: 97 properties /> <label id=140607> <div> <div> Beach </div> <span> 97 </span> </div> </label> </div> </div> <div> <input checkbox beach: 97 properties /> <label id=142253> <div> <div> Beach </div> <span> (97) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [160573]",
+      "op": "CLICK",
+      "element": "160573",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox beach: 79 properties /> <label id=160528> <div> <div> Beach </div> <span> 79 </span> </div> </label> </div> <div> <input checkbox indoor pool: 26 properties /> <label id=160573> <div> <div> Indoor pool </div> <span> 26 </span> </div> </label> </div> </div> <div> <input checkbox beach: 79 properties /> <label id=162293> <div> <div> Beach </div> <span> (79) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [180664]",
+      "op": "CLICK",
+      "element": "180664",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <div> <input checkbox beach: 4 properties /> <label id=180664> <div> <div> Beach </div> <span> 4 </span> </div> </label> </div> <div> <input checkbox beach: 4 properties /> <label id=180833> <div> <div> Beach </div> <span> 4 </span> </div> </label> </div> </div> <div> <input checkbox beach: 4 properties /> <label id=182174> <div> <div> Beach </div> <span> (4) </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [196402]",
+      "op": "CLICK",
+      "element": "196402",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div complementary> <div> <div> <input checkbox us$50 - us$100: 4 properties pri=2 /> <label id=196402> <div> <div> US$50 - US$100 </div> <span> 4 </span> </div> </label> </div> <div> <input checkbox beach: 4 properties true /> <label id=196536> <div> <div> Beach </div> <span> 4 </span> </div> </label> </div> <div> <input checkbox swimming pool: 4 properties /> <label id=197320> <div> <div> Swimming Pool </div> <span> 4 </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [207149]",
+      "op": "CLICK",
+      "element": "207149",
+      "value": "",
+      "description": "[button] Sort by:Our top picks -> CLICK",
+      "role": "button",
+      "label": "Sort by:Our top picks",
+      "observation": "<html> <div> <div main> <button id=207149 button> <span> Sort by: Our top picks </span> </button> </div> <div complementary> <div> <div> <input checkbox beach: 4 properties true /> <label id=208238> <div> <div> Beach </div> <span> 4 </span> </div> </label> </div> <div> <input checkbox swimming pool: 4 properties /> <label id=208964> <div> <div> Swimming Pool </div> <span> 4 </span> </div> </label> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [223221]",
+      "op": "CLICK",
+      "element": "223221",
+      "value": "",
+      "description": "[div] Price (lowest first",
+      "role": "div",
+      "label": "Price (lowest first",
+      "observation": "<html> <body> <div complementary> <div> <input checkbox swimming pool: 4 properties /> <label id=220423> <div> <div> Swimming Pool </div> <span> 4 </span> </div> </label> </div> </div> <div menu> <ul> <button id=223221 button> <span> Price (lowest first) </span> </button> <button id=223227 button> <span> Best reviewed and lowest price </span> </button> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [230125]",
+      "op": "CLICK",
+      "element": "230125",
+      "value": "",
+      "description": "[link] See availability -> CLICK",
+      "role": "link",
+      "label": "See availability",
+      "observation": "<html> <div> <div main> <div> <button id=229983 button> <span> Sort by: Price (lowest first) </span> </button> <a id=230125> <span> See availability </span> </a> </div> </div> <div complementary> <div> <input checkbox swimming pool: 4 properties /> <label id=231734> <div> <div> Swimming Pool </div> <span> 4 </span> </div> </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [240484]",
+      "op": "CLICK",
+      "element": "240484",
+      "value": "",
+      "description": "[button] Reserve -> CLICK",
+      "role": "button",
+      "label": "Reserve",
+      "observation": "<html> <div main> <div> <form> <input interval 4 /> <input checkin 2023-04-25 /> <input nr_rooms_ /> <button id=240484 button> <span> Reserve </span> </button> <button button add property to your lists> </button> <button button> </button> </form> <form search> <span> <svg bk-icon /> <i id=244004> 25 </i> </span> </form> <div id=250829> View </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [267457]",
+      "op": "CLICK",
+      "element": "267457",
+      "value": "",
+      "description": "[button] Reserve with Genius discount -> CLICK",
+      "role": "button",
+      "label": "Reserve with Genius discount",
+      "observation": "<html> <div main> <div> <div> <form search> <span> <svg bk-icon /> <i id=271074> 25 </i> </span> </form> <div> <div> 1 room for </div> <button id=267457 submit> <span> Reserve with Genius discount </span> </button> </div> </div> <div id=277783> View </div> </div> </div> </html>"
+    }
+  ]
+}

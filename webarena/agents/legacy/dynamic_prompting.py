@@ -54,6 +54,10 @@ class Flags:
     extract_visible_elements_only: bool = False
     demo_mode: Literal["off", "default", "only_visible_elements"] = "off"
     workflow_path: str = None
+    procedural_memory_path: str = None
+    procedural_site: str = "shopping"
+    procedural_top_k: int = 4
+    procedural_min_score: float = 0.18
 
     def copy(self):
         return deepcopy(self)

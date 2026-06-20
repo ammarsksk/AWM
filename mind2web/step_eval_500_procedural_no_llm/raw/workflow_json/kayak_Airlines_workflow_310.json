@@ -1,0 +1,170 @@
+{
+  "name": "kayak / Airlines workflow 310",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "check cheap flights from NYC to London on 23rd of April for students over 18 years.",
+  "steps": [
+    {
+      "action": "CLICK [423]",
+      "op": "CLICK",
+      "element": "423",
+      "value": "",
+      "description": "[link] Search for flights -> CLICK",
+      "role": "link",
+      "label": "Search for flights",
+      "observation": "<html> <div> <div> <a id=423 search for flights> <svg id=424 flights icon /> <div> Flights </div> </a> <a search for hotels> </a> <a search for cars> </a> <a search for packages> </a> </div> <input id=519 text pick-up location from? /> </div> </html>"
+    },
+    {
+      "action": "CLICK [2983]",
+      "op": "CLICK",
+      "element": "2983",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div list> <div listitem> <div button remove> <svg id=3548 img vvtc-item-icon /> </div> </div> </div> <input id=3565 text flight destination input to? /> </div> <svg id=2983 img wiih-chevron /> </html>"
+    },
+    {
+      "action": "CLICK [14882]",
+      "op": "CLICK",
+      "element": "14882",
+      "value": "",
+      "description": "[tab] One-way -> CLICK",
+      "role": "tab",
+      "label": "One-way",
+      "observation": "<html> <body> <div list> <div listitem> <div button remove> <svg id=11587 img vvtc-item-icon /> </div> </div> </div> <ul tablist> <li id=14882 tab one-way> <span> One-way </span> </li> <li id=14884 tab round-trip> <span> Round-trip </span> </li> <li tab multi-city> </li> <li tab trip builder> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [19057]",
+      "op": "CLICK",
+      "element": "19057",
+      "value": "",
+      "description": "[button] 1 adult -> CLICK",
+      "role": "button",
+      "label": "1 adult",
+      "observation": "<html> <div> <div id=19057 button> <span> 1 adult </span> <svg img /> </div> <div> <div list> <div listitem> <div button remove> <svg id=19622 img vvtc-item-icon /> </div> </div> </div> <button button submit search> <svg id=19665 img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [27144]",
+      "op": "CLICK",
+      "element": "27144",
+      "value": "",
+      "description": "[button] Increment -> CLICK",
+      "role": "button",
+      "label": "Increment",
+      "observation": "<html> <div travelers> <div> <label id=30989> <span> Adults </span> <span> 18-64 </span> </label> <div> <label id=31003> <span> Students </span> <span> over 18 </span> </label> <div> <button decrement> </button> <input spinbutton students 0 /> <button id=27144 increment> <svg img /> </button> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [35342]",
+      "op": "CLICK",
+      "element": "35342",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div travelers> <div> <label id=39200> <span> Students </span> <span> over 18 </span> </label> <div> <button decrement> </button> <input id=39209 spinbutton students 1 /> <button increment> </button> </div> </div> </div> <path id=35342 /> </html>"
+    },
+    {
+      "action": "CLICK [43547]",
+      "op": "CLICK",
+      "element": "43547",
+      "value": "",
+      "description": "[textbox] Flight destination input -> CLICK",
+      "role": "textbox",
+      "label": "Flight destination input",
+      "observation": "<html> <body> <input id=43547 text flight destination input to? /> <div travelers> <div> <label id=47406> <span> Students </span> <span> over 18 </span> </label> <div> <button decrement> </button> <input id=47415 spinbutton students 1 /> <button increment> </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [51905] [new york]",
+      "op": "TYPE",
+      "element": "51905",
+      "value": "new york",
+      "description": "[textbox] Flight origin input -> TYPE: new york",
+      "role": "textbox",
+      "label": "Flight origin input",
+      "observation": "<html> <body> <div> <div> <div list> </div> <input id=51905 text flight origin input /> </div> <button id=52513 button submit search> <svg img c8lpf-icon /> </button> </div> <ul listbox> <li option las vegas, nevada, united states> <span> <input id=55813 checkbox false /> <svg img icon /> </span> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [60195]",
+      "op": "CLICK",
+      "element": "60195",
+      "value": "",
+      "description": "[button] Remove -> CLICK",
+      "role": "button",
+      "label": "Remove",
+      "observation": "<html> <body> <div list> <div listitem> <div button remove> <svg id=60195 img vvtc-item-icon /> </div> </div> </div> <ul listbox> <li id=64036 option new york, united states> <div> <img id=64043 city:new york, united states /> <div> <div> <span> New York, United States </span> <span> NYC </span> </div> <span> All airports </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> <li option john f kennedy intl> </li> <li option laguardia> </li> <li option newark> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [72336]",
+      "op": "CLICK",
+      "element": "72336",
+      "value": "",
+      "description": "[span] New York, United States -> CLICK",
+      "role": "span",
+      "label": "New York, United States",
+      "observation": "<html> <body> <button id=69099 button submit search> <svg img c8lpf-icon /> </button> <ul listbox> <li id=72336 option new york, united states> <div> <img city:new york, united states /> <div> <div> <span> New York, United States </span> <span> NYC </span> </div> <span> All airports </span> </div> <span> <input id=72354 checkbox false /> <svg img icon /> </span> </div> </li> <li option john f kennedy intl> </li> <li option laguardia> </li> <li option newark> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [76634] [london]",
+      "op": "TYPE",
+      "element": "76634",
+      "value": "london",
+      "description": "[textbox] Flight destination input -> TYPE: london",
+      "role": "textbox",
+      "label": "Flight destination input",
+      "observation": "<html> <div> <div list> <div listitem> <div button remove> <svg id=77202 img vvtc-item-icon /> </div> </div> </div> <input id=76634 text flight destination input to? /> <button id=77238 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [88488]",
+      "op": "CLICK",
+      "element": "88488",
+      "value": "",
+      "description": "[span] All airports -> CLICK",
+      "role": "span",
+      "label": "All airports",
+      "observation": "<html> <body> <a id=86159> London Flights </a> <ul listbox> <li id=88488 option london, england, united kingdom> <div> <img id=88495 city:london, england, united kingdom /> <div> <div> <span> London, England, United Kingdom </span> <span> LON </span> </div> <span> All airports </span> </div> <span> <input checkbox false /> <svg img icon /> </span> </div> </li> <li option heathrow> </li> <li option gatwick> </li> <li option london city> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [93367]",
+      "op": "CLICK",
+      "element": "93367",
+      "value": "",
+      "description": "[generic] Thursday April 20th -> CLICK",
+      "role": "generic",
+      "label": "Thursday April 20th",
+      "observation": "<html> <div> <div> <div list> <div listitem> <div id=93355> London, England, United Kingdom (LON) </div> </div> </div> <div button> <span id=93367 button start date calendar input> <svg img /> <span thursday april 20th> Thu 4/20 </span> <span> <span button decrement date by one day> <svg img /> </span> <span button increment date by one day> <svg img /> </span> </span> </span> </div> </div> <a id=94401> London Flights </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [101245]",
+      "op": "CLICK",
+      "element": "101245",
+      "value": "",
+      "description": "[div] 23 -> CLICK",
+      "role": "div",
+      "label": "23",
+      "observation": "<html> <div menu> <div tab start date calendar input use> <div> <div> <div button saturday april 15, 2023> 15 </div> <div button sunday april 16, 2023> 16 </div> <div button monday april 17, 2023> 17 </div> <div id=105321 button tuesday april 18, 2023> 18 </div> <div button wednesday april 19, 2023> 19 </div> <div button thursday april 20, 2023> 20 </div> <div button friday april 21, 2023> 21 </div> <div button saturday april 22, 2023> 22 </div> <div id=101245 button sunday april 23, 2023> 23 </div> <div button monday april 24, 2023> 24 </div> <div button tuesday april 25, 2023> 25 </div> <div button wednesday april 26, 2023> 26 </div> </div> <div> <div button monday may 15, 2023> 15 </div> <div button tuesday may 16, 2023> 16 </div> <div button wednesday may 17, 2023> 17 </div> <div id=105411 button thursday may 18, 2023> 18 </div> <div button friday may 19, 2023> 19 </div> <div button saturday may 20, 2023> 20 </div> <div button sunday may 21, 2023> 21 </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [110339]",
+      "op": "CLICK",
+      "element": "110339",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <div list> <div listitem> <div button remove> <svg id=110289 img vvtc-item-icon /> </div> </div> </div> <button id=110336 button submit search> <svg id=110339 img c8lpf-icon> </svg> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [127206]",
+      "op": "CLICK",
+      "element": "127206",
+      "value": "",
+      "description": "[span] Cheapest -> CLICK",
+      "role": "span",
+      "label": "Cheapest",
+      "observation": "<html> <body> <div> <div alert> <span> Your results haven't been updated with your new search criteria </span> <button id=118617> Update </button> <button close /> </div> <div form flight result filters> <div tabpanel> <div region> <div region airlines> <div> <a id=120823> Select all </a> <span> | </span> <a> Clear all </a> </div> </div> </div> </div> </div> </div> <div flight results section> <div> <div id=127206 button cheapest> <div> <span> Cheapest </span> <div> <span> $225 </span> <span> 7h 00m </span> </div> </div> </div> <div button best> </div> <div button quickest> </div> </div> </div> </body> </html>"
+    }
+  ]
+}

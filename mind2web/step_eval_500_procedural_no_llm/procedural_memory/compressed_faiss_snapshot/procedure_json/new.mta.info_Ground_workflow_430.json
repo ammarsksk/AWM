@@ -1,0 +1,100 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "buy",
+      "booth",
+      "div",
+      "new",
+      "mta",
+      "info",
+      "travel",
+      "ground",
+      "find",
+      "information",
+      "about",
+      "how",
+      "metro",
+      "card",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "fares",
+      "tolls",
+      "where",
+      "metrocard",
+      "station"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Fares & Tolls",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Fares & Tolls",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Where to buy a MetroCard",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Where to buy a MetroCard",
+        "target_type": "div",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the At a station booth",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "At a station booth",
+        "target_type": "div",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Find information about how to buy metro card on booth.",
+  "memory_type": "typed_procedure",
+  "name": "new.mta.info / Ground workflow 430",
+  "raw_workflow_name": "new.mta.info / Ground workflow 430",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 3.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Ground",
+  "termination": {
+    "max_steps_hint": 3,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "new.mta.info"
+}

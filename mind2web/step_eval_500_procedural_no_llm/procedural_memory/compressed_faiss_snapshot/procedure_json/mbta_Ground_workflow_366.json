@@ -1,0 +1,161 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "city",
+      "point",
+      "south",
+      "station",
+      "view",
+      "schedule",
+      "transit",
+      "near",
+      "use",
+      "route",
+      "mbta",
+      "travel",
+      "ground",
+      "upcoming",
+      "otis",
+      "summer",
+      "today",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "schedules",
+      "span",
+      "specific",
+      "field",
+      "option",
+      "700",
+      "atlantic",
+      "ave",
+      "boston",
+      "02110",
+      "link",
+      "menuitem",
+      "typical"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Schedules",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Schedules",
+        "target_type": "tab",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Transit Near Me",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Transit Near Me",
+        "target_type": "span",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "type the [input] -> TYPE: South Station",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "[input] -> TYPE: South Station",
+        "target_type": "input",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the South Station, 700 Atlantic Ave, Boston, MA 02110,...",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "South Station, 700 Atlantic Ave, Boston, MA 02110,...",
+        "target_type": "option",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Go to route",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Go to route",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the City Point",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 6,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "City Point",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the City Point typical route",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 7,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "City Point typical route",
+        "target_type": "menuitem",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the View schedule",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 8,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "View schedule",
+        "target_type": "button",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "View the upcoming schedule from Otis St@Summer St to City Point of the transit near South Station for today.",
+  "memory_type": "typed_procedure",
+  "name": "mbta / Ground workflow 366",
+  "raw_workflow_name": "mbta / Ground workflow 366",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 8.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Ground",
+  "termination": {
+    "max_steps_hint": 8,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "mbta"
+}

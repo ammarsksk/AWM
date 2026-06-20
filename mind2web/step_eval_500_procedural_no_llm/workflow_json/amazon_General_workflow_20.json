@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "name": "amazon / General workflow 20",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "amazon",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "Find Metformin 1000mg tablet price and details.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "amazon",
+      "metformin",
+      "tablet",
+      "link",
+      "1000mg",
+      "use",
+      "shopping",
+      "general",
+      "find",
+      "price",
+      "details",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "open",
+      "menu",
+      "see",
+      "all",
+      "health",
+      "pharmacy",
+      "span",
+      "your",
+      "medication",
+      "name",
+      "specific",
+      "field",
+      "img",
+      "generic",
+      "glucophage",
+      "oral"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Open Menu",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Menu",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the See All",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "See All",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Amazon Health",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Amazon Health",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Amazon Pharmacy",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Amazon Pharmacy",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Type your medication name",
+        "operation": "TYPE",
+        "target_type": "span",
+        "target": "Type your medication name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the metformin 1000mg tablet",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "metformin 1000mg tablet",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Metformin (Generic for Glucophage, Oral Tablet",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Metformin (Generic for Glucophage, Oral Tablet",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "amazon / General workflow 20"
+}

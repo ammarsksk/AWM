@@ -1,0 +1,15 @@
+2026-06-19 13:52:58,352 - 3309563 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.21_11 in:
+  results/2026-06-19_13-52-57_GenericAgentArgs_on_webarena.21_11
+2026-06-19 13:53:00,763 - 3309563 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.21.
+ModuleNotFoundError:
+No module named 'browsergym.webarenalite'
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 402, in run
+    env = self.env_args.make_env(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/run.py", line 144, in make_env_with_proxy
+    _get_env_name(self.task_name),
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 939, in _get_env_name
+    import browsergym.webarenalite
+ModuleNotFoundError: No module named 'browsergym.webarenalite'
+
+2026-06-19 13:53:00,763 - 3309563 - browsergym.experiments.loop - INFO - Saving summary info.

@@ -1,0 +1,50 @@
+{
+  "name": "ticketcenter / Event workflow 478",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Get tickets for the Buckeyes football game on April 15th for a group of 5 people.",
+  "steps": [
+    {
+      "action": "CLICK [2762]",
+      "op": "CLICK",
+      "element": "2762",
+      "value": "",
+      "description": "[link] BUY TICKETS -> CLICK",
+      "role": "link",
+      "label": "BUY TICKETS",
+      "observation": "<html> <body> <div> <ul tablist> <a id=2567 tab> Sports </a> </ul> <div tabpanel> <a id=2762> <span> Buy Tickets </span> </a> </div> </div> <a id=3580> Sports Tickets </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [6517]",
+      "op": "CLICK",
+      "element": "6517",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <body> <a id=6840 button> Sports </a> <div> <p> Quantity </p> <p id=8857> Any Quantity </p> </div> </body> <span id=6517 cm-down-arrow sea-angle /> </html>"
+    },
+    {
+      "action": "CLICK [27880]",
+      "op": "CLICK",
+      "element": "27880",
+      "value": "",
+      "description": "[label] 5 -> CLICK",
+      "role": "label",
+      "label": "5",
+      "observation": "<html> <body> <a id=28202 button> Sports </a> <div> <div> <p id=30216> Quantity </p> <p> Any Quantity </p> </div> <div> <label> 2 </label> <label> 3 </label> <label> 4 </label> <label id=27880> <input radio options 5 /> 5 </label> <label> 6+ </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [43909]",
+      "op": "CLICK",
+      "element": "43909",
+      "value": "",
+      "description": "[button] $28/ea -> CLICK",
+      "role": "button",
+      "label": "$28/ea",
+      "observation": "<html> <body> <a id=44210 button> Sports </a> <tbody> <button id=43909 button> <span> $28 </span> <span> /ea </span> </button> <button id=47144 button> <span> $77 </span> <span> /ea </span> </button> </tbody> </body> </html>"
+    }
+  ]
+}

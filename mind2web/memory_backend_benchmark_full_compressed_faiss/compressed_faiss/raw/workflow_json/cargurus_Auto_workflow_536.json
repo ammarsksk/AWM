@@ -1,0 +1,30 @@
+{
+  "name": "cargurus / Auto workflow 536",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Browse listings for a used Toyota Corolla near 10019 and sort by cheapest.",
+  "steps": [
+    {
+      "action": "CLICK [945]",
+      "op": "CLICK",
+      "element": "945",
+      "value": "",
+      "description": "[LabelText] Buy Used -> CLICK",
+      "role": "LabelText",
+      "label": "Buy Used",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=337 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <div> <label id=945> <span> Buy Used </span> </label> <label> <div> Enter license plate </div> <input id=1015 text (ex.) c4r 6uru /> </label> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [15707] [Toyota]",
+      "op": "SELECT",
+      "element": "15707",
+      "value": "Toyota",
+      "description": "[combobox] Select Make -> SELECT: Toyota",
+      "role": "combobox",
+      "label": "Select Make",
+      "observation": "<html> <div> <label id=16804> <span> By Price </span> </label> <input radio by make/model on true /> <form dealfinderform> <fieldset> <select id=15707 select make> <option -1> All Makes </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6 true> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <span> near </span> <input tel zip /> <input id=17403 submit search /> </fieldset> </form> <input radio by body style on /> </div> </html>"
+    }
+  ]
+}

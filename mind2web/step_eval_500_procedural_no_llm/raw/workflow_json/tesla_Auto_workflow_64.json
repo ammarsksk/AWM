@@ -1,0 +1,90 @@
+{
+  "name": "tesla / Auto workflow 64",
+  "source": "Mind2Web exemplar",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Schedule a demo drive for Model Y for Roy Adams with phone number 123-999-0000, email address RA@gmail.com and zip code 90001 in the United States.",
+  "steps": [
+    {
+      "action": "CLICK [3619]",
+      "op": "CLICK",
+      "element": "3619",
+      "value": "",
+      "description": "[link] Demo Drive -> CLICK",
+      "role": "link",
+      "label": "Demo Drive",
+      "observation": "<html> <div> <button id=3574 button menu> <span> Menu </span> </button> <main main> <section> <a id=3613 custom order> <span> Custom Order </span> </a> <a id=3619 demo drive> <span> Demo Drive </span> </a> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [4556]",
+      "op": "CLICK",
+      "element": "4556",
+      "value": "",
+      "description": "[button] Model Y -> CLICK",
+      "role": "button",
+      "label": "Model Y",
+      "observation": "<html> <div> <div> <button> Model S </button> <button> Model 3 </button> <button> Model X </button> <button id=4556> Model Y </button> </div> <div> <div> <label> Email Address </label> <input id=7134 email /> </div> <div> <label> Zip Code </label> <input id=7648 zip /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [18660] [Adams]",
+      "op": "TYPE",
+      "element": "18660",
+      "value": "Adams",
+      "description": "[textbox] Last Name -> TYPE: Adams",
+      "role": "textbox",
+      "label": "Last Name",
+      "observation": "<html> <form> <div> <div> <label> Last Name </label> <input id=18660 lastname /> </div> <div> <label> Zip Code </label> <input id=21751 zip /> </div> </div> <p> By clicking Submit & Continue I agree to share the provided information with Tesla to be contacted with more details </p> <button id=21774 submit> Submit and Continue </button> </form> </html>"
+    },
+    {
+      "action": "TYPE [25741] [Roy]",
+      "op": "TYPE",
+      "element": "25741",
+      "value": "Roy",
+      "description": "[textbox] First Name -> TYPE: Roy",
+      "role": "textbox",
+      "label": "First Name",
+      "observation": "<html> <div> <form> <div> <label> First Name </label> <input id=25741 firstname /> <div alert> </div> </div> <p> By clicking Submit & Continue I agree to share the provided information with Tesla to be contacted with more details </p> <button id=28861 submit> Submit and Continue </button> </form> <a id=29033 contact> Contact </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [39849] [123-999-0000]",
+      "op": "TYPE",
+      "element": "39849",
+      "value": "123-999-0000",
+      "description": "[textbox] Phone Number -> TYPE: 123-999-0000",
+      "role": "textbox",
+      "label": "Phone Number",
+      "observation": "<html> <div> <div> <input id=39849 phone (201) 555-0123 /> <div> <label> Zip Code </label> <input id=42942 zip /> </div> </div> <a id=43137 contact> Contact </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [46896] [RA@gmail.com]",
+      "op": "TYPE",
+      "element": "46896",
+      "value": "RA@gmail.com",
+      "description": "[textbox] Email Address -> TYPE: RA@gmail.com",
+      "role": "textbox",
+      "label": "Email Address",
+      "observation": "<html> <body> <div> <div> <label> Email Address </label> <input id=46896 email /> </div> <div> <label> Zip Code </label> <input id=49987 zip /> </div> </div> <div> <a> Help With Previous Purchases </a> <button> Buying Tesla Products </button> <button> Questions About Delivery </button> <a id=50340> Schedule Demo Drive </a> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [61015] [90001]",
+      "op": "TYPE",
+      "element": "61015",
+      "value": "90001",
+      "description": "[textbox] Zip Code -> TYPE: 90001",
+      "role": "textbox",
+      "label": "Zip Code",
+      "observation": "<html> <body> <form> <div> <label> Zip Code </label> <input id=61015 zip /> </div> <p> By clicking Submit & Continue I agree to share the provided information with Tesla to be contacted with more details </p> <button id=64135 submit> Submit and Continue </button> </form> <div> <a> Help With Previous Purchases </a> <button> Buying Tesla Products </button> <button> Questions About Delivery </button> <a id=64465> Schedule Demo Drive </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [68089]",
+      "op": "CLICK",
+      "element": "68089",
+      "value": "",
+      "description": "[button] Submit and Continue -> HOVER",
+      "role": "button",
+      "label": "Submit and Continue",
+      "observation": "<html> <body> <div> <div> <button> Model S </button> <button> Model 3 </button> <button> Model X </button> <button id=68381> Model Y </button> </div> <form> <p> By clicking Submit & Continue I agree to share the provided information with Tesla to be contacted with more details </p> <button id=68089 submit> Submit and Continue </button> </form> </div> <div> <a> Help With Previous Purchases </a> <button> Buying Tesla Products </button> <button> Questions About Delivery </button> <a id=71536> Schedule Demo Drive </a> </div> </body> </html>"
+    }
+  ]
+}

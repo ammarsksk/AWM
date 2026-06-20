@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "name": "underarmour / Fashion workflow 110",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "underarmour",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "goal_pattern": "Browse for trending women sports bras and add 3 trending black bras to Wishlist.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "add",
+      "bras",
+      "wish",
+      "list",
+      "trending",
+      "women",
+      "sports",
+      "black",
+      "link",
+      "color",
+      "underarmour",
+      "shopping",
+      "fashion",
+      "browse",
+      "wishlist",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "menuitem",
+      "div",
+      "refine"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Women",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Women",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Sports Bras",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Sports Bras",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Color",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Color",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Refine by color: Black",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Refine by color: Black",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Add to Wish List",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to Wish List",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Add to Wish List",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to Wish List",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Add to Wish List",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to Wish List",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "underarmour / Fashion workflow 110"
+}

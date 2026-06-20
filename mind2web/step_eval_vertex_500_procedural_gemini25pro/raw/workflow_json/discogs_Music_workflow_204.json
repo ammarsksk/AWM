@@ -1,0 +1,60 @@
+{
+  "name": "discogs / Music workflow 204",
+  "source": "Mind2Web exemplar",
+  "website": "discogs",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Buy a copy of the Gorillaz first studio album.",
+  "steps": [
+    {
+      "action": "TYPE [114] [gorillaz]",
+      "op": "TYPE",
+      "element": "114",
+      "value": "gorillaz",
+      "description": "[combobox] Search artists, albums and more... -> TYPE: gorillaz",
+      "role": "combobox",
+      "label": "Search artists, albums and more...",
+      "observation": "<html> <header> <form search search discogs> <input id=114 combobox text search artists, albums and more... q /> <button id=204 submit search> <i img /> </button> <input type all /> </form> <nav main> <button id=350> Marketplace <i img /> </button> </nav> </header> </html>"
+    },
+    {
+      "action": "CLICK [3299]",
+      "op": "CLICK",
+      "element": "3299",
+      "value": "",
+      "description": "[link] Gorillaz Gorillaz Artist -> CLICK",
+      "role": "link",
+      "label": "Gorillaz Gorillaz Artist",
+      "observation": "<html> <form search search discogs> <div listbox search suggestions> <a> <img id=3140 gorillaz /> <span> Gorillaz </span> <span> Gorillaz </span> </a> <a id=3299> <img gorillaz /> <span> <span 0 in collection> <span> 0 </span> </span> <span 0 in inventory> <span> 0 </span> </span> <span 0 in wantlist> <span> 0 </span> </span> </span> <span> Gorillaz </span> <span> Artist </span> </a> <a> <img id=3142 gorillaz /> <span> Gorillaz </span> <span> Gorillaz </span> </a> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [5084]",
+      "op": "CLICK",
+      "element": "5084",
+      "value": "",
+      "description": "[link] Gorillaz -> CLICK",
+      "role": "link",
+      "label": "Gorillaz",
+      "observation": "<html> <div main> <div> <span> Viewing All </span> | <a id=5961> Gorillaz </a> </div> <table> <td> <a id=5084> Gorillaz </a> <button show 105 versions> 105 versions </button> </td> <span> <a id=9770> Gorillaz </a> / <a> Standfast </a> - </span> </table> </div> </html>"
+    },
+    {
+      "action": "CLICK [13886]",
+      "op": "CLICK",
+      "element": "13886",
+      "value": "",
+      "description": "[link] Buy a copy -> CLICK",
+      "role": "link",
+      "label": "Buy a copy",
+      "observation": "<html> <div> <nav main> <button id=14188 button> Marketplace <svg img icon_21nej /> </button> </nav> <div main> <div> <h1> <a id=14418> Gorillaz </a> Gorillaz </h1> <div> <a id=13886> Buy a copy </a> <a> Sell a copy </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [17669]",
+      "op": "CLICK",
+      "element": "17669",
+      "value": "",
+      "description": "[link] Add to Cart -> CLICK",
+      "role": "link",
+      "label": "Add to Cart",
+      "observation": "<html> <div> <div complementary> <ul list> <ul list> <a id=18844> <span> 868 </span> <span> Album </span> </a> </ul> </ul> </div> <div main> <tbody> <a id=17669> Add to Cart </a> <td> <a id=20530> Gorillaz - Gorillaz (2xLP, Album) </a> <p> , </p> <p> Open, but both LPs look very clean. </p> </td> </tbody> </div> </div> </html>"
+    }
+  ]
+}

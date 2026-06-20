@@ -1,0 +1,80 @@
+{
+  "name": "mbta / Ground workflow 102",
+  "source": "Mind2Web exemplar",
+  "website": "mbta",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Calculate the fare options to go from the south station to the north station",
+  "steps": [
+    {
+      "action": "CLICK [46]",
+      "op": "CLICK",
+      "element": "46",
+      "value": "",
+      "description": "[button] Fares \uf0d7 -> CLICK",
+      "role": "button",
+      "label": "Fares \uf0d7",
+      "observation": "<html> <div> <nav main navigation> <a button> Transit </a> <div find a location> <a id=649> <div> MBTA Stations </div> </a> </div> <a id=46 button> Fares </a> <a button> Contact </a> </nav> <div navigation> <div tabpanel> <a id=1918> <svg img> <title> bus </title> </svg> <div> Bus <span> Routes </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8987]",
+      "op": "CLICK",
+      "element": "8987",
+      "value": "",
+      "description": "[link] Fares Overview -> CLICK",
+      "role": "link",
+      "label": "Fares Overview",
+      "observation": "<html> <div> <nav main navigation> <a button> Transit </a> <a id=8967 button> Fares </a> <div fares info> <a id=8987> <div> Fares Overview </div> </a> </div> <a button> Contact </a> </nav> <a id=11821> <svg img> <title> commuter rail </title> </svg> <div> MBTA Board of Directors Awards Contract for Major Track and Signal Upgrades at South Station <div> <span> Mar </span> <span> 23 </span> </div> </div> </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [16991] [south station]",
+      "op": "TYPE",
+      "element": "16991",
+      "value": "south station",
+      "description": "[combobox] Enter a location -> TYPE: south station",
+      "role": "combobox",
+      "label": "Enter a location",
+      "observation": "<html> <form> <input _utf8 /> <div> <div> <span> A </span> <input id=16991 combobox text plan[from] enter a location /> <input/> <input/> </div> <div> <span> B </span> <input id=21290 combobox text plan[to] enter a location /> <input/> <input/> </div> </div> <button id=21327 submit> Calculate my fare </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [26409]",
+      "op": "CLICK",
+      "element": "26409",
+      "value": "",
+      "description": "[link] T red line silver line commuter rail Zone 1A Sout... -> CLICK",
+      "role": "link",
+      "label": "T red line silver line commuter rail Zone 1A Sout...",
+      "observation": "<html> <span listbox> <div option> <a id=26409> <svg img> <title> T </title> </svg> <span> <svg img> <title> red line </title> </svg> <svg img> <title> silver line </title> </svg> <svg img> <title> commuter rail </title> </svg> <span> Zone 1A </span> </span> <span> <em> South </em> <em> Station </em> </span> </a> </div> <span> <div id=30855 option> <span> <em> South </em> <em> Station </em> , 700 Atlantic Ave, Boston, MA 02110, United States </span> </div> <div id=30872 option> <span> <em> South </em> <em> Station </em> Bus Terminal, Atlantic Ave, Boston, MA 02111, United States </span> </div> <div option> </div> </span> </span> </html>"
+    },
+    {
+      "action": "TYPE [36059] [north station]",
+      "op": "TYPE",
+      "element": "36059",
+      "value": "north station",
+      "description": "[combobox] Enter a location -> TYPE: north station",
+      "role": "combobox",
+      "label": "Enter a location",
+      "observation": "<html> <div> <div> <label> Search MBTA.com </label> <input id=37130 combobox text query search for routes, info, and /> <button search> </button> </div> <form> <input _utf8 /> <div> <span> B </span> <input id=36059 combobox text plan[to] enter a location /> <input/> <input/> </div> <button id=40399 submit> Calculate my fare </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [45484]",
+      "op": "CLICK",
+      "element": "45484",
+      "value": "",
+      "description": "[link] T orange line green line D green line E commuter ... -> CLICK",
+      "role": "link",
+      "label": "T orange line green line D green line E commuter ...",
+      "observation": "<html> <span listbox> <div option> <a id=45484> <svg img> <title> T </title> </svg> <span> <svg img> <title> orange line </title> </svg> <svg img> <title> green line D </title> </svg> <svg img> <title> green line E </title> </svg> <svg img> <title> commuter rail </title> </svg> <span> Zone 1A </span> </span> <span> <em> North </em> <em> Station </em> </span> </a> </div> <span> <div id=50005 option> <span> MBTA- <em> North </em> <em> Station </em> , 135 Causeway St, Boston, MA 02114, United States </span> </div> <div option> </div> <div id=50040 option> <span> <em> North </em> <em> Station </em> Garage, 121 Nashua St, Boston, MA 02114, United States </span> </div> </span> </span> </html>"
+    },
+    {
+      "action": "CLICK [55161]",
+      "op": "CLICK",
+      "element": "55161",
+      "value": "",
+      "description": "[button] Calculate my fare -> CLICK",
+      "role": "button",
+      "label": "Calculate my fare",
+      "observation": "<html> <div> <nav main navigation> <a button> Transit </a> <a id=55774 button> Fares </a> <a button> Contact </a> </nav> <form> <input _utf8 /> <div> <span> B </span> <input combobox text plan[to] enter a location north station /> <pre id=59466> north station </pre> <input 42.365577 /> <input -71.06129 /> <div> 6 results </div> </div> <button id=55161 submit> Calculate my fare </button> </form> </div> </html>"
+    }
+  ]
+}

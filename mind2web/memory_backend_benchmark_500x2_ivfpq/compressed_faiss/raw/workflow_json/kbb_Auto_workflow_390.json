@@ -1,0 +1,30 @@
+{
+  "name": "kbb / Auto workflow 390",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find cheapest 2018 Honda Civic for sale within 100 miles of 07055",
+  "steps": [
+    {
+      "action": "CLICK [113]",
+      "op": "CLICK",
+      "element": "113",
+      "value": "",
+      "description": "[link] Cars for Sale -> CLICK",
+      "role": "link",
+      "label": "Cars for Sale",
+      "observation": "<html> <nav> <a id=672 unstyled> Price New/Used </a> <div> <a id=113 unstyled> Cars for Sale </a> <a id=684 unstyled> Cars for Sale </a> </div> </nav> </html>"
+    },
+    {
+      "action": "TYPE [5171] [07055]",
+      "op": "TYPE",
+      "element": "5171",
+      "value": "07055",
+      "description": "[textbox] ZIP Code -> TYPE: 07055",
+      "role": "textbox",
+      "label": "ZIP Code",
+      "observation": "<html> <div main> <div> <div> <div> <label> ZIP Code </label> <input id=5171 tel zip 43085 /> </div> <div id=7240 button> <span> Make </span> </div> </div> <div> <label> Sort By: </label> <select id=5153 sortby> <option relevance true> Relevance </option> <option price - lowest> Price - Lowest </option> <option price - highest> Price - Highest </option> <option distance - closest distanceasc> Distance - Closest </option> <option date - oldest datelistedasc> Date - Oldest </option> <option date - newest datelisteddesc> Date - Newest </option> <option mileage - lowest mileageasc> Mileage - Lowest </option> <option mileage - highest mileagedesc> Mileage - Highest </option> <option year - oldest yearasc> Year - Oldest </option> <option year - newest yeardesc> Year - Newest </option> </select> </div> </div> </div> </html>"
+    }
+  ]
+}

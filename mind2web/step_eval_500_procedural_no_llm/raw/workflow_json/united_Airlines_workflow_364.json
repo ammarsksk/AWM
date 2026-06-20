@@ -1,0 +1,140 @@
+{
+  "name": "united / Airlines workflow 364",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a car to book with miles to pick up on Caldwell (Ohio) on april 8 at 8 am and return on april 13 on noon at the same location",
+  "steps": [
+    {
+      "action": "CLICK [1017]",
+      "op": "CLICK",
+      "element": "1017",
+      "value": "",
+      "description": "[heading] CAR -> CLICK",
+      "role": "heading",
+      "label": "CAR",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a id=911 tab> <span> BOOK </span> </a> <a tab> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div> <ul tablist> <li tab heading level 3 search and> </li> <li tab heading level 3 search and> </li> <li id=1017 tab heading level 3 search and> <span> Car </span> </li> <li tab heading level 3 search and> </li> </ul> <div tabpanel> <div> <input id=1074 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> </div> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3986]",
+      "op": "CLICK",
+      "element": "3986",
+      "value": "",
+      "description": "[label] Book with miles -> CLICK",
+      "role": "label",
+      "label": "Book with miles",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a id=4797 tab> <span> BOOK </span> </a> <a tab> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <form> <div> <input id=4925 combobox text pickup location* /> <label enter pick up city, airport> Pickup location* </label> </div> <div> <input checkbox book with miles awardcartravel on /> <label id=3986> <span> Book with miles </span> </label> </div> </form> </div> </section> </main> </div> </html>"
+    },
+    {
+      "action": "TYPE [8117] [caldwell]",
+      "op": "TYPE",
+      "element": "8117",
+      "value": "caldwell",
+      "description": "[LabelText] Enter pick up city, airport name, or airport code. -> TYPE: caldwell",
+      "role": "LabelText",
+      "label": "Enter pick up city, airport name, or airport code.",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <form> <div> <input id=9054 combobox text pickup location* /> <label id=8117 enter pick up city, airport> Pickup location* </label> </div> <div> <button id=9513 submit find cars button.> Find cars </button> <span> MileagePlus members get special savings on rentals and earn miles. </span> </div> </form> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [13189]",
+      "op": "CLICK",
+      "element": "13189",
+      "value": "",
+      "description": "[div] Caldwell -> CLICK",
+      "role": "div",
+      "label": "Caldwell",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div tooltip> <ul listbox> <li option> <button id=13189 button caldwell (ohio), us> <div> <span> Caldwell </span> (Ohio), US </div> </button> </li> <li option> <button id=13204 button caldwell (nj), us> <div> <span> Caldwell </span> (NJ), US </div> </button> </li> <li option> <button id=13218 button caldwell, us> <div> <span> Caldwell </span> , US </div> </button> </li> </ul> </div> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [16412]",
+      "op": "CLICK",
+      "element": "16412",
+      "value": "",
+      "description": "[textbox] Pickup -> CLICK",
+      "role": "textbox",
+      "label": "Pickup",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <form> <div> <input id=16412 text pickup /> <p> , Youre on a date field. Either type in the date you want in the format month/day/year or press the </p> </div> <div> <button id=17397 combobox button pickup time selected 10:00 a.m. pickuptime 10|0> <div 10:00 a.m.> 10:00 a.m. </div> </button> <label pickup time> Pickup time </label> </div> <div> <button id=17809 submit find cars button.> Find cars </button> <span> MileagePlus members get special savings on rentals and earn miles. </span> </div> </form> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [20923]",
+      "op": "CLICK",
+      "element": "20923",
+      "value": "",
+      "description": "[button] Saturday, April 8, 2023 -> CLICK",
+      "role": "button",
+      "label": "Saturday, April 8, 2023",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div application calendar> <div> <tr> <td button not available. wednesday, april 5,> 5 </td> <td button not available. thursday, april 6,> 6 </td> <td button friday, april 7, 2023> 7 </td> <td id=20923 button saturday, april 8, 2023> 8 </td> </tr> <tr> <td button sunday, may 7, 2023> 7 </td> <td id=22134 button monday, may 8, 2023> 8 </td> <td button tuesday, may 9, 2023> 9 </td> <td button wednesday, may 10, 2023> 10 </td> <td button thursday, may 11, 2023> 11 </td> </tr> <tr> <td button monday, june 5, 2023> 5 </td> <td button tuesday, june 6, 2023> 6 </td> <td button wednesday, june 7, 2023> 7 </td> <td id=22215 button thursday, june 8, 2023> 8 </td> <td button friday, june 9, 2023> 9 </td> <td button saturday, june 10, 2023> 10 </td> </tr> </div> </div> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [25815]",
+      "op": "CLICK",
+      "element": "25815",
+      "value": "",
+      "description": "[button] Thursday, April 13, 2023 -> CLICK",
+      "role": "button",
+      "label": "Thursday, April 13, 2023",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div application calendar> <div> <tr> <td button monday, april 10, 2023> 10 </td> <td button tuesday, april 11, 2023> 11 </td> <td button wednesday, april 12, 2023> 12 </td> <td id=25815 button thursday, april 13, 2023> 13 </td> <td button friday, april 14, 2023> 14 </td> <td button saturday, april 15, 2023> 15 </td> </tr> <tr> <td button sunday, may 7, 2023> 7 </td> <td id=27023 button monday, may 8, 2023> 8 </td> <td button tuesday, may 9, 2023> 9 </td> <td button wednesday, may 10, 2023> 10 </td> <td button thursday, may 11, 2023> 11 </td> </tr> <tr> <td button monday, june 5, 2023> 5 </td> <td button tuesday, june 6, 2023> 6 </td> <td button wednesday, june 7, 2023> 7 </td> <td id=27104 button thursday, june 8, 2023> 8 </td> <td button friday, june 9, 2023> 9 </td> <td button saturday, june 10, 2023> 10 </td> </tr> </div> </div> </div> </section> </main> </html>"
+    },
+    {
+      "action": "CLICK [30325]",
+      "op": "CLICK",
+      "element": "30325",
+      "value": "",
+      "description": "[combobox] Pickup time Selected 10:00 a.m. -> CLICK",
+      "role": "combobox",
+      "label": "Pickup time Selected 10:00 a.m.",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a id=31134 tab> <span> BOOK </span> </a> <a tab> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <form> <div> <input id=31262 combobox text caldwell (ohio), us pickup location* /> <label enter pick up city, airport> Pickup location* </label> </div> <div> <button id=30325 combobox button pickup time selected 10:00 a.m. pickuptime 10|0> <div 10:00 a.m.> 10:00 a.m. </div> </button> <label pickup time> Pickup time </label> </div> </form> </div> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [34543]",
+      "op": "CLICK",
+      "element": "34543",
+      "value": "",
+      "description": "[combobox] Pickup time Selected 10:00 a.m. -> CLICK",
+      "role": "combobox",
+      "label": "Pickup time Selected 10:00 a.m.",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div> <button id=34543 combobox button pickup time selected 10:00 a.m. pickuptime 10|0> <div 10:00 a.m.> 10:00 a.m. </div> </button> <label pickup time> Pickup time </label> </div> </div> </section> <div> <div group> <button id=36424 button> <span> Continue booking </span> </button> </div> <div> <button submit> </button> <button id=36505 button> <span> Refine search </span> </button> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [43995]",
+      "op": "CLICK",
+      "element": "43995",
+      "value": "",
+      "description": "[option] 8:00 a.m. -> CLICK",
+      "role": "option",
+      "label": "8:00 a.m.",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <ul listbox> <li option 7:15 a.m.> 7:15 a.m. </li> <li option 7:30 a.m.> 7:30 a.m. </li> <li option 7:45 a.m.> 7:45 a.m. </li> <li id=43995 option 8:00 a.m.> 8:00 a.m. </li> <li option 8:15 a.m.> 8:15 a.m. </li> <li option 8:30 a.m.> 8:30 a.m. </li> <li option 8:45 a.m.> 8:45 a.m. </li> <li option 7:15 p.m.> 7:15 p.m. </li> <li option 7:30 p.m.> 7:30 p.m. </li> <li option 7:45 p.m.> 7:45 p.m. </li> <li id=45504 option 8:00 p.m.> 8:00 p.m. </li> <li option 8:15 p.m.> 8:15 p.m. </li> <li option 8:30 p.m.> 8:30 p.m. </li> <li option 8:45 p.m.> 8:45 p.m. </li> </ul> </div> </section> <div group> <button id=45876 button> <span> Continue booking </span> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [53442]",
+      "op": "CLICK",
+      "element": "53442",
+      "value": "",
+      "description": "[combobox] Drop off time Selected 10:00 a.m. -> CLICK",
+      "role": "combobox",
+      "label": "Drop off time Selected 10:00 a.m.",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div> <div> <button id=54839 combobox button pickup time selected 8:00 a.m. pickuptime 8|0> <div 8:00 a.m.> 8:00 a.m. </div> </button> <label pickup time> Pickup time </label> <ul listbox> </ul> </div> <div> <button id=53442 combobox button drop off time selected 10:00 dropofftime 10|0> <div 10:00 a.m.> 10:00 a.m. </div> </button> <label drop off time> Drop off time </label> </div> </div> </div> </section> <div group> <button id=55322 button> <span> Continue booking </span> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [62893]",
+      "op": "CLICK",
+      "element": "62893",
+      "value": "",
+      "description": "[option] 12:00 p.m. -> CLICK",
+      "role": "option",
+      "label": "12:00 p.m.",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <div> <div> <button id=64292 combobox button pickup time selected 8:00 a.m. pickuptime 8|0> <div 8:00 a.m.> 8:00 a.m. </div> </button> <label pickup time> Pickup time </label> <ul listbox> </ul> </div> <ul listbox> <li option 11:15 a.m.> 11:15 a.m. </li> <li option 11:30 a.m.> 11:30 a.m. </li> <li option 11:45 a.m.> 11:45 a.m. </li> <li id=62893 option 12:00 p.m.> 12:00 p.m. </li> <li option 12:15 p.m.> 12:15 p.m. </li> <li option 12:30 p.m.> 12:30 p.m. </li> <li option 12:45 p.m.> 12:45 p.m. </li> </ul> </div> </div> </section> <div group> <button id=64775 button> <span> Continue booking </span> </button> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [72346]",
+      "op": "CLICK",
+      "element": "72346",
+      "value": "",
+      "description": "[button] Find cars button. -> CLICK",
+      "role": "button",
+      "label": "Find cars button.",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <form> <div> <div> <button id=73744 combobox button pickup time selected 8:00 a.m. pickuptime 8|0> <div 8:00 a.m.> 8:00 a.m. </div> </button> <label pickup time> Pickup time </label> <ul listbox> </ul> </div> <div> <button id=73946 combobox button drop off time selected 12:00 dropofftime 12|0> <div 12:00 p.m.> 12:00 p.m. </div> </button> <label drop off time> Drop off time </label> <ul listbox> </ul> </div> </div> <div> <button id=72346 submit find cars button.> Find cars </button> <span> MileagePlus members get special savings on rentals and earn miles. </span> </div> </form> </div> </section> </main> </html>"
+    }
+  ]
+}

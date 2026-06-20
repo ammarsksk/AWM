@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "name": "cargurus / Auto workflow 140",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "find offer for a black Honda with vin number 1HGCM66543A064159 with 155000 millage near 49102. The car should be in good condition with no damage, 2+ keys and paid off.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "specific",
+      "field",
+      "next",
+      "offer",
+      "vin",
+      "textbox",
+      "black",
+      "condition",
+      "get",
+      "combobox",
+      "cargurus",
+      "shopping",
+      "auto",
+      "find",
+      "honda",
+      "number",
+      "1hgcm66543a064159",
+      "155000",
+      "millage",
+      "near",
+      "49102",
+      "car",
+      "should",
+      "good",
+      "damage",
+      "keys",
+      "paid",
+      "off",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "label",
+      "enter",
+      "digits",
+      "your",
+      "zip",
+      "code",
+      "mileage",
+      "span",
+      "none",
+      "tire_condition",
+      "radio"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the VIN",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "VIN",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Enter VIN (17 digits",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Enter VIN (17 digits",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Get your offer",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Get your offer",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the ZIP Code",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "ZIP Code",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "type the Mileage",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Mileage",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Black",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Black",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Next",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Next",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the None",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "None",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "select the CONDITION",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "CONDITION",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "select the TIRE_CONDITION",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "TIRE_CONDITION",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the No",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "No",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 23
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 23.0
+  },
+  "raw_workflow_name": "cargurus / Auto workflow 140"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ticketcenter / Event workflow 156",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Check if there are tickets availabe for the  Hamilton musical in Richmond, VA.",
+  "steps": [
+    {
+      "action": "TYPE [78] [Hamilton]",
+      "op": "TYPE",
+      "element": "78",
+      "value": "Hamilton",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: Hamilton",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=2030 button> Theatre </a> <div> <input id=78 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=152 tab> Theatre </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [10992]",
+      "op": "CLICK",
+      "element": "10992",
+      "value": "",
+      "description": "[option] Hamilton -> CLICK",
+      "role": "option",
+      "label": "Hamilton",
+      "observation": "<html> <body> <a id=10636 button> Theatre </a> <ul listbox> <a id=10992 option> <strong> Hamilton </strong> </a> </ul> <h2> Events Near Columbus, OH <div> <button id=11246 button> (Change Location) </button> <input text location /> </div> </h2> </body> </html>"
+    }
+  ]
+}

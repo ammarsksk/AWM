@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "name": "uniqlo / Fashion workflow 257",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "uniqlo",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "goal_pattern": "Add to my cart a women's T-shirt priced under 10 dollars",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "add",
+      "cart",
+      "women",
+      "shirt",
+      "link",
+      "heading",
+      "polygon",
+      "uniqlo",
+      "shopping",
+      "fashion",
+      "priced",
+      "under",
+      "dollars",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "tab",
+      "tops",
+      "shirts",
+      "price",
+      "label",
+      "mini",
+      "short",
+      "sleeve"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the WOMEN",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "WOMEN",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Tops",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Tops",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the T-Shirts",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "T-Shirts",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Price",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Price",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the $0-$10",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "$0-$10",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the [polygon] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "polygon",
+        "target": "[polygon] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Mini Short-Sleeve T-Shirt",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Mini Short-Sleeve T-Shirt",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the ADD TO CART",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "ADD TO CART",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 8
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 8.0
+  },
+  "raw_workflow_name": "uniqlo / Fashion workflow 257"
+}

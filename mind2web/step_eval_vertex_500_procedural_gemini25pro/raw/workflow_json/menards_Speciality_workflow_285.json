@@ -1,0 +1,120 @@
+{
+  "name": "menards / Speciality workflow 285",
+  "source": "Mind2Web exemplar",
+  "website": "menards",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find a multi-purpose painting tool available for pick up at zip 44240, if the brand Red Devil is available, add the cheapest one to the wishlist and view my complete wish list.",
+  "steps": [
+    {
+      "action": "CLICK [81]",
+      "op": "CLICK",
+      "element": "81",
+      "value": "",
+      "description": "[button] Departments -> CLICK",
+      "role": "button",
+      "label": "Departments",
+      "observation": "<html> <body> <button id=509 button> Departments <svg id=81> <title> Expand Departments menu </title> </svg> </button> <div> <a> Kitchen </a> <a> Lighting & Ceiling Fans </a> <a> Outdoors </a> <a id=2405> Paint </a> <a> Pet & Wildlife </a> <a> Plumbing </a> <a> Storage & Organization </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [5687]",
+      "op": "CLICK",
+      "element": "5687",
+      "value": "",
+      "description": "[button] Paint -> CLICK",
+      "role": "button",
+      "label": "Paint",
+      "observation": "<html> <body> <div> <button> Kitchen </button> <button> Lighting & Ceiling Fans </button> <button> Outdoors </button> <button id=5687> Paint <svg/> </button> <button> Pet & Wildlife </button> <button> Plumbing </button> <button> Storage & Organization </button> <button> Brands <svg id=6223 /> </button> </div> <div> <a> Kitchen </a> <a> Lighting & Ceiling Fans </a> <a> Outdoors </a> <a id=8129> Paint </a> <a> Pet & Wildlife </a> <a> Plumbing </a> <a> Storage & Organization </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [12054]",
+      "op": "CLICK",
+      "element": "12054",
+      "value": "",
+      "description": "[link] Painting Tools -> CLICK",
+      "role": "link",
+      "label": "Painting Tools",
+      "observation": "<html> <div> <div> <a> Gift Cards </a> <a> New At Menards </a> <a> Ray's List Clearance & Bargains </a> <button id=12000> Brands <svg id=12002 /> </button> <a> Shop All Departments </a> </div> <a id=12054> <span> Painting Tools </span> </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [14443] [44240]",
+      "op": "TYPE",
+      "element": "14443",
+      "value": "44240",
+      "description": "[button] 43229 -> TYPE: 44240",
+      "role": "button",
+      "label": "43229",
+      "observation": "<html> <body> <button id=14443 button> 43229 <title> Menu to change delivery zip code </title> </button> <div> <div> <input checkbox on /> <label id=15463 checkbox> Multi-Purpose Tool (11) </label> </div> <div> <input checkbox on /> <label id=15683 checkbox> Red Devil (55) </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [29529]",
+      "op": "CLICK",
+      "element": "29529",
+      "value": "",
+      "description": "[button] UPDATE -> CLICK",
+      "role": "button",
+      "label": "UPDATE",
+      "observation": "<html> <body> <form> <label> Enter delivery ZIP Code </label> <input text zip code 44240 /> <button id=29529 submit> update </button> </form> <div> <div> <input checkbox on /> <label id=30565 checkbox> Multi-Purpose Tool (11) </label> </div> <div> <input checkbox on /> <label id=30785 checkbox> Red Devil (55) </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [44623]",
+      "op": "CLICK",
+      "element": "44623",
+      "value": "",
+      "description": "[checkbox] Pickup at Store Eligible (86",
+      "role": "checkbox",
+      "label": "Pickup at Store Eligible (86",
+      "observation": "<html> <div> <div> <input checkbox on /> <label id=44623 checkbox> Pickup at Store Eligible (86) </label> </div> <div> <input checkbox on /> <label id=45643 checkbox> Multi-Purpose Tool (11) </label> </div> <div> <input checkbox on /> <label id=45863 checkbox> Red Devil (55) </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [53960]",
+      "op": "CLICK",
+      "element": "53960",
+      "value": "",
+      "description": "[checkbox] Multi-Purpose Tool (11",
+      "role": "checkbox",
+      "label": "Multi-Purpose Tool (11",
+      "observation": "<html> <div> <button id=54719 button> Sort By: <strong> Best Match </strong> </button> <div> <div> <input checkbox on /> <label id=53960 checkbox> Multi-Purpose Tool (11) </label> </div> <div> <input checkbox on /> <label id=55032 checkbox> Red Devil (51) </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [63239]",
+      "op": "CLICK",
+      "element": "63239",
+      "value": "",
+      "description": "[checkbox] Red Devil (2",
+      "role": "checkbox",
+      "label": "Red Devil (2",
+      "observation": "<html> <div> <button id=63995 button> Sort By: <strong> Best Match </strong> </button> <div> <input id=64261 checkbox on /> <label id=63239 checkbox> Red Devil (2) </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [68398]",
+      "op": "CLICK",
+      "element": "68398",
+      "value": "",
+      "description": "[label] Add -> CLICK",
+      "role": "label",
+      "label": "Add",
+      "observation": "<html> <div> <button id=69153 button> Sort By: <strong> Best Match </strong> </button> <div> <button id=69411 button> <span> <span heading> Price </span> <svg img> <title> collapse </title> </svg> </span> </button> <div> <input button /> <label id=68398> Add <span> Red Devil 1-1/2 Dual-Purpose Window Tool </span> To List </label> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [72413] [Wish List]",
+      "op": "SELECT",
+      "element": "72413",
+      "value": "Wish List",
+      "description": "[combobox] Select a list -> SELECT: Wish List",
+      "role": "combobox",
+      "label": "Select a list",
+      "observation": "<html> <body> <div dialog> <div> <label> Select a list </label> <select id=72413> <option true> Select List </option> <option 175853162> Wish List </option> <option 176699809> Bathroom Remodeling </option> <option 176699841> College Supply List </option> <option -1> Create New List </option> </select> </div> </div> <div> <button id=73222 button> Sort By: <strong> Best Match </strong> </button> <button id=73480 button> <span> <span heading> Price </span> <svg img> <title> collapse </title> </svg> </span> </button> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [76543]",
+      "op": "CLICK",
+      "element": "76543",
+      "value": "",
+      "description": "[link] VIEW YOUR LIST -> CLICK",
+      "role": "link",
+      "label": "VIEW YOUR LIST",
+      "observation": "<html> <body> <div dialog> <div> <a id=76543> View Your List </a> <button button> Continue Shopping </button> </div> </div> <div> <button id=77335 button> Sort By: <strong> Best Match </strong> </button> <div> <input checkbox on true /> <label id=76534 checkbox> Multi-Purpose Tool (2) </label> </div> </div> </body> </html>"
+    }
+  ]
+}

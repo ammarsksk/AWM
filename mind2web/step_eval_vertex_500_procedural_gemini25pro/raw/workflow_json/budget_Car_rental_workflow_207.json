@@ -1,0 +1,70 @@
+{
+  "name": "budget / Car rental workflow 207",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "What is the cheapest luxury car to pickup on the second closest nearby location to New York, United States, 100",
+  "steps": [
+    {
+      "action": "CLICK [115]",
+      "op": "CLICK",
+      "element": "115",
+      "value": "",
+      "description": "[link] Luxury Car Rental -> CLICK",
+      "role": "link",
+      "label": "Luxury Car Rental",
+      "observation": "<html> <div> <a id=971 button> Locations </a> <form resform> <div> <button button> Select My Car </button> <a id=1823> Continue </a> </div> </form> <a id=115> Luxury Car Rental </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [5219] [New York, United States, 100]",
+      "op": "TYPE",
+      "element": "5219",
+      "value": "New York, United States, 100",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: New York, United States, 100",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <a id=6045 button> Locations </a> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=5219 text angupicloc enter your pick-up location or st. john's airport terminal, st. /> <a> click here </a> </div> </angucomplete-alt> <div> <button button> Select My Car </button> <a id=8254> Continue </a> </div> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [16544]",
+      "op": "CLICK",
+      "element": "16544",
+      "value": "",
+      "description": "[textbox] Enter your pick-up location or zip code -> ENTER",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <form resform> <div> <div> <angucomplete-alt enter your pick-up location or> <input id=16544 text angupicloc enter your pick-up location or new york, united states, 100 /> </angucomplete-alt> <angucomplete-alt return to same location> <div> <input id=19485 text angudroploc return to same location /> <a> click here </a> </div> </angucomplete-alt> </div> <div> <button button> Select My Car </button> <a id=20307> Continue </a> </div> </div> </form> </html>"
+    },
+    {
+      "action": "CLICK [29099]",
+      "op": "CLICK",
+      "element": "29099",
+      "value": "",
+      "description": "[link] Close -> CLICK",
+      "role": "link",
+      "label": "Close",
+      "observation": "<html> <div> <a id=29934 button> Locations </a> <form resform> <div> <button button> Select My Car </button> <a id=32600> Continue </a> </div> </form> <div dialog> <div document> <div> <p> (1) 212-289-3920 </p> <p> Sun - Sat 7:00 AM - 11:00 PM </p> <a id=29099 close> Select This Location </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [42592]",
+      "op": "CLICK",
+      "element": "42592",
+      "value": "",
+      "description": "[div] Sort by: -> CLICK",
+      "role": "div",
+      "label": "Sort by:",
+      "observation": "<html> <div> <form resform> <div id=42592> <span> Sort by: </span> <a> Price (Low to High) </a> <ul> <a> Price (Low to High) </a> <a> Mileage (High to Low) </a> <a> Number of Seats (High to Low) </a> </ul> </div> </form> <div> <div> <a id=49159> Pay Now </a> <p> Pay Now & Save 16.50 </p> </div> <div> <a id=50079> Pay Now </a> <p> Pay Now & Save 27.50 </p> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [61947]",
+      "op": "CLICK",
+      "element": "61947",
+      "value": "",
+      "description": "[link] Price (Low to High",
+      "role": "link",
+      "label": "Price (Low to High",
+      "observation": "<html> <form resform> <div> <span id=64594> Sort by: </span> <a id=64597> Price (Low to High) </a> <a id=61947> Price (Low to High) </a> </div> </form> </html>"
+    }
+  ]
+}

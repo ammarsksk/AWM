@@ -1,0 +1,51 @@
+{
+  "name": "redbox / Movie workflow 84",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "redbox",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find $1 movie night film and rent blockers",
+  "goal_pattern": "Find $1 movie night film and rent blockers",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Navigate to deals",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Navigate to deals",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Navigate to 1-Night Kiosk Rentals See More",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Navigate to 1-Night Kiosk Rentals See More",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [110]",
+      "gold_element_id": "110",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [8431]",
+      "gold_element_id": "8431",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "redbox / Movie workflow 84"
+}

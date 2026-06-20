@@ -1,0 +1,30 @@
+{
+  "name": "united / Airlines workflow 741",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a round trip economy flight from Pune to New York in June and select the fully refundable.",
+  "steps": [
+    {
+      "action": "TYPE [136] [Pune]",
+      "op": "TYPE",
+      "element": "136",
+      "value": "Pune",
+      "description": "[combobox] Enter your departing city, airport name, or airpor... -> TYPE: Pune",
+      "role": "combobox",
+      "label": "Enter your departing city, airport name, or airpor...",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a id=949 tab> <span> BOOK </span> </a> <a tab> </a> <a id=955 tab> <span> TRAVEL INFO </span> </a> <a tab> </a> <a tab> </a> </div> </nav> </header> <main main> <section tabpanel> <div tabpanel> <div> <input id=136 combobox text columbus cmh from* /> <label enter your departing city, airport> From* </label> </div> </div> </section> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3730]",
+      "op": "CLICK",
+      "element": "3730",
+      "value": "",
+      "description": "[button] Pune, IN (PNQ",
+      "role": "button",
+      "label": "Pune, IN (PNQ",
+      "observation": "<html> <main main> <section tabpanel> <div tabpanel> <form> <div> <div tooltip> <div listbox> <ul listbox> <li option> <button id=3730 button> <span> <strong> Pune </strong> , IN (PNQ) </span> </button> </li> </ul> </div> </div> <div> <input id=4703 combobox text to* /> <label enter your destination city, airport> To* </label> </div> </div> <div> <button id=4880 submit find flights> <span> Find flights </span> </button> <button button> Find your travel credits </button> </div> </form> </div> </section> </main> </html>"
+    }
+  ]
+}

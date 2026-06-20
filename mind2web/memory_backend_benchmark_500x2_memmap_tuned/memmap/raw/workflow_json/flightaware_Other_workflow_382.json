@@ -1,0 +1,30 @@
+{
+  "name": "flightaware / Other workflow 382",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a flights between SFO and EWR using the Boeing 787-9 aircraft",
+  "steps": [
+    {
+      "action": "CLICK [123]",
+      "op": "CLICK",
+      "element": "123",
+      "value": "",
+      "description": "[textbox] Origin -> CLICK",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <header banner> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1415> <span> Products </span> </a> </li> <li menuitem> <a id=2076> <span> Company </span> </a> <ul menu> </ul> </li> </ul> </nav> </header> <form> <input id=123 text origin kosu /> <div button> </div> <input text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [10438] [SFO]",
+      "op": "TYPE",
+      "element": "10438",
+      "value": "SFO",
+      "description": "[textbox] Origin -> TYPE: SFO",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <header banner> <div> <span> All </span> <select id=11647 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <form> <input id=10438 text origin kosu /> <div button> </div> <input id=12603 text destination /> <input submit /> </form> </div> </html>"
+    }
+  ]
+}

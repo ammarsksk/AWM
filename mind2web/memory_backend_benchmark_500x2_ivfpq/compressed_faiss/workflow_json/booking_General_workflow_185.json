@@ -1,0 +1,51 @@
+{
+  "name": "booking / General workflow 185",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book fasted flexible direct flights from New York to Tokyo on June 1, between 6 to 12 pm departure, and from Tokyo to New Delhi on June 5.",
+  "goal_pattern": "Book fasted flexible direct flights from New York to Tokyo on June 1, between 6 to 12 pm departure, and from Tokyo to New Delhi on June 5.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Flights",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Flights",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the Columbus",
+      "operation": "TYPE",
+      "target_type": "b",
+      "target_description": "Columbus",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [760]",
+      "gold_element_id": "760",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [6192] [NEW YORK]",
+      "gold_element_id": "6192",
+      "gold_value": "NEW YORK"
+    }
+  ],
+  "raw_workflow_name": "booking / General workflow 185"
+}

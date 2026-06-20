@@ -1,0 +1,30 @@
+{
+  "name": "last.fm / Music workflow 239",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find the all time most popular solo track by ArianaGrande",
+  "steps": [
+    {
+      "action": "CLICK [134]",
+      "op": "CLICK",
+      "element": "134",
+      "value": "",
+      "description": "[link] Search -> CLICK",
+      "role": "link",
+      "label": "Search",
+      "observation": "<html> <div main> <div> <div> <a> Last.fm </a> <a id=134> Search </a> <ul primary navigation> <a id=596> Music </a> </ul> </div> <nav secondary navigation> <a id=807> Tracks </a> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [9416] [Ariana Grande]",
+      "op": "TYPE",
+      "element": "9416",
+      "value": "Ariana Grande",
+      "description": "[textbox] Search -> TYPE: Ariana Grande",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <div main> <div> <div> <div> <input id=9416 text q search for music /> <button submit> Search </button> </div> <ul primary navigation> <a id=9868> Music </a> </ul> </div> <nav secondary navigation> <a id=10079> Tracks </a> </nav> </div> </div> </html>"
+    }
+  ]
+}

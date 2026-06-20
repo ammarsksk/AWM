@@ -1,0 +1,80 @@
+{
+  "name": "yelp / Restaurant workflow 341",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Browse barbershops that have private lot parking.",
+  "steps": [
+    {
+      "action": "TYPE [159] [barbershop]",
+      "op": "TYPE",
+      "element": "159",
+      "value": "barbershop",
+      "description": "[textbox] Find -> TYPE: barbershop",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=159 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=291 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <a id=373> <span> Home Services </span> <span img /> </a> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8685]",
+      "op": "CLICK",
+      "element": "8685",
+      "value": "",
+      "description": "[span] Barbershop -> CLICK",
+      "role": "span",
+      "label": "Barbershop",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div combobox> <input text /> <input id=8817 textbox text near columbus, oh address, neighborhood, city, state or /> </div> <button id=8822 submit search> <span img /> </button> </div> </form> </div> </div> <span id=8685 css-qgunke> <text bounding_box_rect= 176,97,79,19>Barbershop</text> </span> </html>"
+    },
+    {
+      "action": "CLICK [16122]",
+      "op": "CLICK",
+      "element": "16122",
+      "value": "",
+      "description": "[button] All -> CLICK",
+      "role": "button",
+      "label": "All",
+      "observation": "<html> <div> <form search> <div> <div combobox> <input text /> <input id=15733 textbox text near columbus, oh address, neighborhood, city, state or /> </div> <button id=15738 submit search> <span img /> </button> </div> </form> <span group filters> <button id=16122 button> <span img /> <span> All </span> </button> <button button> </button> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [22607]",
+      "op": "CLICK",
+      "element": "22607",
+      "value": "",
+      "description": "[button] See all -> CLICK",
+      "role": "button",
+      "label": "See all",
+      "observation": "<html> <div> <div> <div group> <p> Category </p> <a id=25560 button> See all </a> </div> <div group> <p> Features </p> <a id=22607 button> See all </a> </div> </div> <div> <button submit> </button> <button id=22634 submit> <span> Apply filters </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [33489]",
+      "op": "CLICK",
+      "element": "33489",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <div> <div group> <p> Features </p> <a id=33266 button> See all </a> </div> <div> <button submit> </button> <button id=33393 submit> <span> Apply filters </span> </button> </div> </div> <div dialog> <button id=33489 submit> <div> <span> Parking </span> <span img /> </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [37982]",
+      "op": "CLICK",
+      "element": "37982",
+      "value": "",
+      "description": "[checkbox] Private Lot -> CLICK",
+      "role": "checkbox",
+      "label": "Private Lot",
+      "observation": "<html> <div dialog> <div> <button id=41304 submit> <div> <span> Parking </span> <span img /> </div> </button> <label id=41357> <div> <input id=37982 checkbox feature /> <span> Private Lot </span> </div> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [45925]",
+      "op": "CLICK",
+      "element": "45925",
+      "value": "",
+      "description": "[button] Add -> CLICK",
+      "role": "button",
+      "label": "Add",
+      "observation": "<html> <yelp-react-root> <a id=46471 button> <span> Recommended </span> <span img /> </a> <div> <div> <button submit> </button> <button id=45917 submit> <span> Apply filters </span> </button> </div> <div dialog> <button id=45925 submit> <span> Add </span> </button> </div> </div> </yelp-react-root> </html>"
+    }
+  ]
+}

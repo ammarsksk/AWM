@@ -1,0 +1,51 @@
+{
+  "name": "travelzoo / General workflow 1007",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find hotel deals in Las Vegas for four adults starting on May 17 and ending on May 20, and if deal is not available, set an alert for the same.",
+  "goal_pattern": "Find hotel deals in Las Vegas for four adults starting on May 17 and ending on May 20, and if deal is not available, set an alert for the same.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the What type of deals?",
+      "operation": "CLICK",
+      "target_type": "textbox",
+      "target_description": "What type of deals?",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Hotels",
+      "operation": "CLICK",
+      "target_type": "div",
+      "target_description": "Hotels",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [93]",
+      "gold_element_id": "93",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [8218]",
+      "gold_element_id": "8218",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "travelzoo / General workflow 1007"
+}

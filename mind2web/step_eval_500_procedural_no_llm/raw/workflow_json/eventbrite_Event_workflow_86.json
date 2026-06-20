@@ -1,0 +1,80 @@
+{
+  "name": "eventbrite / Event workflow 86",
+  "source": "Mind2Web exemplar",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Contact Yeah You Right Events who are the organisers of the Food Fight 2023 event being held in New Orleans on May 25th to ask a question about the event",
+  "steps": [
+    {
+      "action": "TYPE [106] [New Orleans]",
+      "op": "TYPE",
+      "element": "106",
+      "value": "New Orleans",
+      "description": "[combobox] autocomplete -> TYPE: New Orleans",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <div> <div> <div> Popular in </div> <input id=106 combobox text locationpicker columbus /> </div> <ul> <button id=529 button> <span> Food & Drink </span> </button> <button id=533 button> <span> Charity & Causes </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [4686]",
+      "op": "CLICK",
+      "element": "4686",
+      "value": "",
+      "description": "[div] LA, USA -> CLICK",
+      "role": "div",
+      "label": "LA, USA",
+      "observation": "<html> <div> <ul menu> <li menuitem> <button id=4686 button> <div> <div> New Orleans </div> <div> LA, USA </div> </div> </button> </li> <li menuitem> <button id=4703 button> <div> <div> New Orleans </div> <div> Campbeltown, UK </div> </div> </button> </li> </ul> <button id=4752 button> <span> Food & Drink </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [8454]",
+      "op": "CLICK",
+      "element": "8454",
+      "value": "",
+      "description": "[button] Food & Drink -> CLICK",
+      "role": "button",
+      "label": "Food & Drink",
+      "observation": "<html> <div> <button id=8690 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <ul> <button id=8454 button> <span> Food & Drink </span> </button> <button id=8885 button> <span> Charity & Causes </span> </button> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [11807]",
+      "op": "CLICK",
+      "element": "11807",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <div> <button id=11595 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <div region> <article> <a id=11807> <img food fight 2023 /> </a> <div> <a id=11815> <div> <div> Food Fight 2023 </div> <div> Food Fight 2023 </div> </div> </a> <div> Thu, May 25, 6:00 PM </div> </div> </article> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [13789]",
+      "op": "CLICK",
+      "element": "13789",
+      "value": "",
+      "description": "[button] Contact -> CLICK",
+      "role": "button",
+      "label": "Contact",
+      "observation": "<html> <div article> <div> <img id=13788 food fight 2023 /> <div> <p> Yeah You Right Events first-ever <a id=14288> <strong> Food Fight </strong> </a> at Crescent Park was a huge success. 2,500 foodies and fans celebrated New Orleans food, cocktails, and culture on the <strong> Top Creative Dish, Top Traditional Dish, Top Vegetarian Dish, Top Classic Cocktail, and Top Creative Cocktail. </strong> </p> <section organizer profile> <button id=13789 button> Contact </button> </section> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18744]",
+      "op": "CLICK",
+      "element": "18744",
+      "value": "",
+      "description": "[button] Contact the organizer -> CLICK",
+      "role": "button",
+      "label": "Contact the organizer",
+      "observation": "<html> <body> <div article> <div> <p> Yeah You Right Events first-ever <a id=19251> <strong> Food Fight </strong> </a> at Crescent Park was a huge success. 2,500 foodies and fans celebrated New Orleans food, cocktails, and culture on the <strong> Top Creative Dish, Top Traditional Dish, Top Vegetarian Dish, Top Classic Cocktail, and Top Creative Cocktail. </strong> </p> <section organizer profile> <button id=18763 button> Contact </button> </section> </div> </div> <div alertdialog> <section> <p> Have a question for the organizer? </p> <div> Check the event page for more information or </div> <button id=18744 button> Contact the organizer </button> </section> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [23780] [Question about the event]",
+      "op": "SELECT",
+      "element": "23780",
+      "value": "Question about the event",
+      "description": "[listbox] Contact reason * (required",
+      "role": "listbox",
+      "label": "Contact reason * (required",
+      "observation": "<html> <div alertdialog> <div> <form> <div> <span> Select one </span> <select id=23780 listbox reason> <option true> Select one </option> <option> Question about the event </option> <option> Question about my ticket </option> </select> </div> <textarea id=25991 textbox text message /> </form> <div> <button button> Back </button> <button id=26005 button> Continue </button> </div> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "agoda / General workflow 96",
+  "source": "Mind2Web exemplar",
+  "website": "agoda",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Find the cheapest motel for 2 adults in Seattle from 11 May to 18 May",
+  "steps": [
+    {
+      "action": "TYPE [97] [seattle]",
+      "op": "TYPE",
+      "element": "97",
+      "value": "seattle",
+      "description": "[combobox] Enter a destination or property -> TYPE: seattle",
+      "role": "combobox",
+      "label": "Enter a destination or property",
+      "observation": "<html> <div> <ul tablist> <li id=423 tab> <h6> Hotels & Homes </h6> </li> <li tab> </li> <li tab> </li> <li tab> </li> </ul> <div tabpanel> <div> <input id=97 combobox text enter a destination or property /> <button id=509> <span> SEARCH </span> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4572]",
+      "op": "CLICK",
+      "element": "4572",
+      "value": "",
+      "description": "[option] Seattle (WA",
+      "role": "option",
+      "label": "Seattle (WA",
+      "observation": "<html> <div tabpanel> <div> <div> <div button> <div button select number of guests and> <span id=4966 button> 1 adult </span> </div> </div> <div dialog> <ul listbox> <li id=4572 option seattle (wa), united states (city)> <ul> <span top destination /> <li> <span> <span> Seattle </span> (WA) </span> <div> <span united states> United States </span> <span> Popular </span> </div> </li> <li city> <span> City </span> </li> </ul> </li> <li option stay in the heart of> </li> <li option pioneer square, seattle (wa), united> </li> <li option greater seattle (wa), united states> </li> </ul> </div> </div> <button id=4587> <span> SEARCH </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9629]",
+      "op": "CLICK",
+      "element": "9629",
+      "value": "",
+      "description": "[button] Next Month -> CLICK",
+      "role": "button",
+      "label": "Next Month",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div> <span button previous month /> <span id=9629 button next month /> </div> <div grid> <div rowgroup> <div row> <div gridcell tue apr 11 2023> <span id=10360> 11 </span> </div> </div> <div row> <div gridcell tue apr 18 2023> <span id=10403> 18 </span> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15023]",
+      "op": "CLICK",
+      "element": "15023",
+      "value": "",
+      "description": "[span] 11 -> CLICK",
+      "role": "span",
+      "label": "11",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div grid> <div rowgroup> <div row> <div gridcell tue apr 11 2023> <span id=15533> 11 </span> </div> </div> <div row> <div gridcell tue apr 18 2023> <span id=15576> 18 </span> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell thu may 11 2023> <span id=15023> 11 </span> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20418]",
+      "op": "CLICK",
+      "element": "20418",
+      "value": "",
+      "description": "[span] 18 -> CLICK",
+      "role": "span",
+      "label": "18",
+      "observation": "<html> <div tabpanel> <div dialog> <div> <div grid> <div rowgroup> <div row> <div gridcell mon apr 17 2023> </div> <div id=20968 gridcell tue apr 18 2023> <span id=20971> 18 </span> </div> <div gridcell wed apr 19 2023> </div> <div gridcell thu apr 20 2023> </div> <div gridcell fri apr 21 2023> </div> </div> </div> </div> <div grid> <div rowgroup> <div row> <div gridcell thu may 18 2023> <span id=20418> 18 </span> </div> </div> </div> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30043]",
+      "op": "CLICK",
+      "element": "30043",
+      "value": "",
+      "description": "[span] SEARCH -> CLICK",
+      "role": "span",
+      "label": "SEARCH",
+      "observation": "<html> <div> <div tabpanel> <div> <div dialog> <div> <div button> </div> <h3> 2 </h3> <div id=30468 button> <svg img add /> </div> </div> </div> <button id=30043> <span> SEARCH </span> </button> </div> </div> <div> <button 1 /> <button id=30712 2 /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [34994]",
+      "op": "CLICK",
+      "element": "34994",
+      "value": "",
+      "description": "[span] SEARCH -> CLICK",
+      "role": "span",
+      "label": "SEARCH",
+      "observation": "<html> <div> <div tabpanel> <div> <div button> <div button select number of guests and> <span id=34972 button> 2 adults </span> </div> </div> <button id=34994> <span> SEARCH </span> </button> </div> </div> <div> <button 1 /> <button id=35206 2 /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [37822]",
+      "op": "CLICK",
+      "element": "37822",
+      "value": "",
+      "description": "[checkbox] Motel -> CLICK",
+      "role": "checkbox",
+      "label": "Motel",
+      "observation": "<html> <div> <div> <div group> <span id=37695 checkbox motel> <span> <input checkbox on /> <span checkbox /> </span> <span> Motel </span> </span> </div> <div group> <span id=37822 checkbox motel> <span> <input checkbox on /> <span checkbox /> </span> <span> <span> Motel </span> <span> (9) </span> </span> </span> </div> </div> <div group> <span id=38708 checkbox motel> <span> <input checkbox on /> <span checkbox /> </span> <span> Motel </span> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [44554]",
+      "op": "CLICK",
+      "element": "44554",
+      "value": "",
+      "description": "[tab] Lowest price first -> CLICK",
+      "role": "tab",
+      "label": "Lowest price first",
+      "observation": "<html> <div list> <div listitem> <div tablist> <span> Sort </span> <a id=44550 tab> <span> Best match </span> </a> <a id=44554 tab> <span> Lowest price first </span> </a> <a tab> </a> <a tab> </a> </div> <a columbus motor inn> <button id=45393> <span> Select room </span> </button> </a> </div> </div> </html>"
+    }
+  ]
+}

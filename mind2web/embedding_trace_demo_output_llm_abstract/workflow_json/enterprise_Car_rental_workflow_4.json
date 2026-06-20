@@ -1,0 +1,195 @@
+{
+  "name": "enterprise / Car rental workflow 4",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "llm_failed_fallback",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+  "goal_pattern": "Find a mini van at Brooklyn City from April 5th to April 8th for a 22 year old renter.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Pick-up & Return Location (ZIP, City or Airport",
+      "operation": "TYPE",
+      "target_type": "searchbox",
+      "target_description": "Pick-up & Return Location (ZIP, City or Airport",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Brooklyn, NY, US Select",
+      "operation": "CLICK",
+      "target_type": "option",
+      "target_description": "Brooklyn, NY, US Select",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 3,
+      "step_intent": "click the Selected Pick-Up Date 03/19/2023",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Selected Pick-Up Date 03/19/2023",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 4,
+      "step_intent": "click the 04/05/2023",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "04/05/2023",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 5,
+      "step_intent": "click the [svg] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "svg",
+      "target_description": "[svg] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 6,
+      "step_intent": "click the 04/08/2023",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "04/08/2023",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 7,
+      "step_intent": "select the Renter Age",
+      "operation": "SELECT",
+      "target_type": "combobox",
+      "target_description": "Renter Age",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 8,
+      "step_intent": "click the Vehicle Class",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Vehicle Class",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 9,
+      "step_intent": "click the Minivans",
+      "operation": "CLICK",
+      "target_type": "radio",
+      "target_description": "Minivans",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 10,
+      "step_intent": "click the Apply Filter",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Apply Filter",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 11,
+      "step_intent": "click the Browse Vehicles",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Browse Vehicles",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [198] [Brooklyn]",
+      "gold_element_id": "198",
+      "gold_value": "Brooklyn"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [13927]",
+      "gold_element_id": "13927",
+      "gold_value": ""
+    },
+    {
+      "step": 3,
+      "gold_action": "CLICK [27698]",
+      "gold_element_id": "27698",
+      "gold_value": ""
+    },
+    {
+      "step": 4,
+      "gold_action": "CLICK [45881]",
+      "gold_element_id": "45881",
+      "gold_value": ""
+    },
+    {
+      "step": 5,
+      "gold_action": "CLICK [55556]",
+      "gold_element_id": "55556",
+      "gold_value": ""
+    },
+    {
+      "step": 6,
+      "gold_action": "CLICK [73248]",
+      "gold_element_id": "73248",
+      "gold_value": ""
+    },
+    {
+      "step": 7,
+      "gold_action": "SELECT [83266] [22]",
+      "gold_element_id": "83266",
+      "gold_value": "22"
+    },
+    {
+      "step": 8,
+      "gold_action": "CLICK [96751]",
+      "gold_element_id": "96751",
+      "gold_value": ""
+    },
+    {
+      "step": 9,
+      "gold_action": "CLICK [110393]",
+      "gold_element_id": "110393",
+      "gold_value": ""
+    },
+    {
+      "step": 10,
+      "gold_action": "CLICK [124183]",
+      "gold_element_id": "124183",
+      "gold_value": ""
+    },
+    {
+      "step": 11,
+      "gold_action": "CLICK [137873]",
+      "gold_element_id": "137873",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "enterprise / Car rental workflow 4"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "seatgeek / Event workflow 485",
+  "source": "Mind2Web exemplar",
+  "website": "seatgeek",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Find tickets for the next pop concert.",
+  "steps": [
+    {
+      "action": "CLICK [114]",
+      "op": "CLICK",
+      "element": "114",
+      "value": "",
+      "description": "[link] Music -> HOVER",
+      "role": "link",
+      "label": "Music",
+      "observation": "<html> <div> <a id=114> Music </a> <div menu> <a id=929> Trending </a> <a id=931> Genres </a> <a> Festivals </a> <a> Concerts by City </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9801]",
+      "op": "CLICK",
+      "element": "9801",
+      "value": "",
+      "description": "[a] Genres -> HOVER",
+      "role": "a",
+      "label": "Genres",
+      "observation": "<html> <div> <a id=10612> Music </a> <div menu> <a id=10618> Trending </a> <a id=9801> Genres </a> <a> Festivals </a> <a> Concerts by City </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19489]",
+      "op": "CLICK",
+      "element": "19489",
+      "value": "",
+      "description": "[link] Pop -> CLICK",
+      "role": "link",
+      "label": "Pop",
+      "observation": "<html> <body> <div> <div menu> <a id=20307> Trending </a> <a> Genres </a> <a> Festivals </a> <a> Concerts by City </a> </div> <div> <a> Rap </a> <a> Country </a> <a> Latin </a> <a id=19489> Pop </a> <a> Folk </a> <a> Classic Rock </a> <a> Alternative </a> </div> </div> <div group categories> <div concerts> <img id=21476 concerts /> </div> </div> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "name": "carnival / Other workflow 319",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "carnival",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Shop 2-5  day cruises to the Caribbean from Miami during August 2023.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "day",
+      "cruises",
+      "caribbean",
+      "miami",
+      "august",
+      "sail",
+      "svg",
+      "carnival",
+      "travel",
+      "other",
+      "shop",
+      "during",
+      "2023",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "get",
+      "big",
+      "savings",
+      "check",
+      "out",
+      "div"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the 2-5 DAY CRUISES Get big savings! Check out 2-5 day...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "2-5 DAY CRUISES Get big savings! Check out 2-5 day...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Sail To",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sail To",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Caribbean",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Caribbean",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Sail From",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Sail From",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Miami, FL",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Miami, FL",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the August",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "August",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "carnival / Other workflow 319"
+}

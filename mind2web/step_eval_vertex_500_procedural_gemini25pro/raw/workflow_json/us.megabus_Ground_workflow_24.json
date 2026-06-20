@@ -1,0 +1,110 @@
+{
+  "name": "us.megabus / Ground workflow 24",
+  "source": "Mind2Web exemplar",
+  "website": "us.megabus",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Find a ticket from Abbotsford to Sheboygan on March 26, 2023.",
+  "steps": [
+    {
+      "action": "CLICK [134]",
+      "op": "CLICK",
+      "element": "134",
+      "value": "",
+      "description": "[button] Explore\ue911 -> CLICK",
+      "role": "button",
+      "label": "Explore\ue911",
+      "observation": "<html> <body> <li> <a id=134 button> Explore </a> <ul menu> </ul> </li> <form> <mb-typeahead-component startingat> <div> <input id=649 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <button id=2302 submit findtickets> Find tickets </button> </form> </body> </html>"
+    },
+    {
+      "action": "CLICK [5718]",
+      "op": "CLICK",
+      "element": "5718",
+      "value": "",
+      "description": "[link] Route map -> CLICK",
+      "role": "link",
+      "label": "Route map",
+      "observation": "<html> <body> <ul menu> <a id=5718> Route map </a> </ul> <form> <div> <input id=7824 pick a date /> <label> Pick a date </label> </div> <button id=7890 submit findtickets> Find tickets </button> </form> </body> </html>"
+    },
+    {
+      "action": "TYPE [24480] [Abbotsford]",
+      "op": "TYPE",
+      "element": "24480",
+      "value": "Abbotsford",
+      "description": "[textbox] Pick an origin Pick a destination -> TYPE: Abbotsford",
+      "role": "textbox",
+      "label": "Pick an origin Pick a destination",
+      "observation": "<html> <form> <mb-typeahead-component startingat> <div> <input id=24480 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <mb-typeahead-component goingto> <div> <input id=26480 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <button id=26492> Search </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [37610]",
+      "op": "CLICK",
+      "element": "37610",
+      "value": "",
+      "description": "[span] Abbotsford, WI -> CLICK",
+      "role": "span",
+      "label": "Abbotsford, WI",
+      "observation": "<html> <form> <mb-typeahead-component startingat> <div enter a town, city or> <div id=38062> <span> Megabus cities </span> <span id=37610> Abbotsford, WI </span> </div> </div> </mb-typeahead-component> <button id=38085> Search </button> </form> </html>"
+    },
+    {
+      "action": "TYPE [44028] [Sheboygan]",
+      "op": "TYPE",
+      "element": "44028",
+      "value": "Sheboygan",
+      "description": "[textbox] Enter a town, city or zipcode -> TYPE: Sheboygan",
+      "role": "textbox",
+      "label": "Enter a town, city or zipcode",
+      "observation": "<html> <body> <form> <mb-typeahead-component goingto> <div> <input id=44028 text enter a town, city or /> <button button clear input box /> </div> </mb-typeahead-component> <button id=44566> Search </button> </form> <div dialog> <div> <button reset> Continue without low fares </button> <button id=45156 submit> Yes, I want to learn about low fares </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [46809]",
+      "op": "CLICK",
+      "element": "46809",
+      "value": "",
+      "description": "[span] Sheboygan, WI -> CLICK",
+      "role": "span",
+      "label": "Sheboygan, WI",
+      "observation": "<html> <body> <form> <mb-typeahead-component goingto> <div enter a town, city or> <div> <span> Megabus cities </span> <span id=46809> Sheboygan, WI </span> </div> </div> </mb-typeahead-component> <button id=47298> Search </button> </form> <div dialog> <div> <button id=47885 reset> Continue without low fares </button> <button submit> Yes, I want to learn about low fares </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [49479]",
+      "op": "CLICK",
+      "element": "49479",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <button id=49479> Search </button> <div dialog> <div> <button id=50547 reset> Continue without low fares </button> <button id=50550 submit> Yes, I want to learn about low fares </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [52108]",
+      "op": "CLICK",
+      "element": "52108",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <body> <li> <a id=52369 button> Explore </a> <ul menu> </ul> </li> <form> <div> <input id=52108 pick a date today /> <label> Pick a date </label> </div> <button id=52697 submit findtickets> Find tickets </button> </form> </body> </html>"
+    },
+    {
+      "action": "CLICK [55057]",
+      "op": "CLICK",
+      "element": "55057",
+      "value": "",
+      "description": "[gridcell] March 26, 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "March 26, 2023",
+      "observation": "<html> <div dialog> <mat-calendar> <div> <button id=54935 button choose month and year> <span> MAR 2023 </span> </button> <button button previous month /> <button id=54947 button next month /> </div> <tbody grid> <tr row> <td id=55057 gridcell march 26, 2023> <div> 26 </div> </td> <td gridcell march 27, 2023> </td> <td gridcell march 28, 2023> </td> <td gridcell march 29, 2023> </td> </tr> </tbody> </mat-calendar> </div> </html>"
+    },
+    {
+      "action": "CLICK [56317]",
+      "op": "CLICK",
+      "element": "56317",
+      "value": "",
+      "description": "[button] Find tickets -> CLICK",
+      "role": "button",
+      "label": "Find tickets",
+      "observation": "<html> <form> <div> <mb-typeahead-component startingat> <div> <input id=56825 text enter a town, city or abbotsford, wi /> <button button clear input box /> </div> </mb-typeahead-component> <div> <input id=56869 pick a date today /> <label> Pick a date </label> </div> </div> <button id=56317 submit findtickets> Find tickets </button> </form> </html>"
+    }
+  ]
+}

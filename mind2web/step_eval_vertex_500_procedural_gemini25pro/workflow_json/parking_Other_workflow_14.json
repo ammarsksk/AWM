@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "name": "parking / Other workflow 14",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "goal_pattern": "Book parking spot for James SMith at Stewart Hotel in New York for 2 hours. The street address is 133 st avenue in New York. Zip code is 10001 and phone number is 888888888. The email address is buckeye.foobar@gmail.com. Employer's name is Gua AB.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "specific",
+      "field",
+      "textbox",
+      "name",
+      "parking",
+      "address",
+      "required",
+      "new",
+      "york",
+      "email",
+      "employer",
+      "book",
+      "stewart",
+      "hotel",
+      "street",
+      "zip",
+      "code",
+      "span",
+      "enter",
+      "venue",
+      "find",
+      "first",
+      "travel",
+      "other",
+      "spot",
+      "james",
+      "smith",
+      "hours",
+      "133",
+      "avenue",
+      "10001",
+      "phone",
+      "number",
+      "888888888",
+      "buckeye",
+      "foobar",
+      "gmail",
+      "com",
+      "gua",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "option"
+    ],
+    "operations": [
+      "TYPE",
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Enter an Address or Venue to find parking",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Enter an Address or Venue to find parking",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the Enter an Address or Venue to find parking",
+        "operation": "TYPE",
+        "target_type": "span",
+        "target": "Enter an Address or Venue to find parking",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the STEWART HOTEL 148 W 31st Street, New York Parking...",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "STEWART HOTEL 148 W 31st Street, New York Parking...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the BOOK MONTHLY PARKING",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "BOOK MONTHLY PARKING",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the First Name",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "First Name",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "type the First Name",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "First Name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "type the Last Name",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Last Name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "type the Address1",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Address1",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "type the City Name",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "City Name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "select the Alabama",
+        "operation": "SELECT",
+        "target_type": "select",
+        "target": "Alabama",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "type the Zip Code",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Zip Code",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "type the (###",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "(###",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "type the Email Address",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Email Address",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "type the Email Address",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Email Address",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Employer Name",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Employer Name",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "type the Employer Name",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Employer Name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Submit",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Submit",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 17
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 17.0
+  },
+  "raw_workflow_name": "parking / Other workflow 14"
+}

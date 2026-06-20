@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "name": "target / General workflow 131",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "target",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "goal_pattern": "Find multi-colored fillable eggs for easter eggs made from polypropylene priced between 5 to 10 dollars for pick-up from Barboursville, zip 25504.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "div",
+      "eggs",
+      "easter",
+      "use",
+      "close",
+      "barboursville",
+      "span",
+      "textbox",
+      "specific",
+      "field",
+      "pick",
+      "zip",
+      "heading",
+      "store",
+      "path",
+      "target",
+      "shopping",
+      "general",
+      "find",
+      "multi",
+      "colored",
+      "fillable",
+      "made",
+      "polypropylene",
+      "priced",
+      "between",
+      "dollars",
+      "25504",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "charleston",
+      "city",
+      "state",
+      "look",
+      "link",
+      "more",
+      "info",
+      "about",
+      "make",
+      "price",
+      "color",
+      "material"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Charleston",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Charleston",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the zip or city, state",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "zip or city, state",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Look up",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Look up",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Barboursville",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Barboursville",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the More info about Barboursville store",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "More info about Barboursville store",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the make it my store",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "make it my store",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the [path] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "path",
+        "target": "[path] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Easter",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Easter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Easter Eggs",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Easter Eggs",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Type",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Type",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the [div] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "[div] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the close",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "close",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Price",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Price",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "type the $",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "$",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "type the $$$",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "$$$",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the close",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "close",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Color",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Color",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the [div] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "[div] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 25
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 25.0
+  },
+  "raw_workflow_name": "target / General workflow 131"
+}

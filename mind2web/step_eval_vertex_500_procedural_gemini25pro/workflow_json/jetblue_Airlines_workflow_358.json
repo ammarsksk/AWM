@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "name": "jetblue / Airlines workflow 358",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Check the status of flights from Los Angeles area to Boston area tomorrow",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "area",
+      "use",
+      "travel",
+      "check",
+      "status",
+      "los",
+      "angeles",
+      "boston",
+      "tomorrow",
+      "textbox",
+      "specific",
+      "field",
+      "option",
+      "apr",
+      "span",
+      "jetblue",
+      "airlines",
+      "flights",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "info",
+      "link",
+      "flight",
+      "tracker",
+      "today",
+      "tue",
+      "wed"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Travel Info",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Travel Info",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Flight Tracker",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Flight Tracker",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Los Angeles area",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Los Angeles area",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Boston area",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Boston area",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Today, Tue Apr 11",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Today, Tue Apr 11",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Tomorrow, Wed Apr 12",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Tomorrow, Wed Apr 12",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Check status",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Check status",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "jetblue / Airlines workflow 358"
+}

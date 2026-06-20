@@ -1,0 +1,241 @@
+2026-06-19 18:03:05,756 - 3526618 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.148_32 in:
+  results/2026-06-19_18-03-05_GenericAgentArgs_on_webarena.148_32
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-19 18:03:08,215 - 3526618 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:03:08,216 - 3526618 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:03:18,977 - 3526618 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:03:18,997 - 3526618 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:03:19,267 - 3526618 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:03:19,268 - 3526618 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:03:23,789 - 3526618 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:03:24,506 - 3526618 - browsergym.experiments.loop - INFO - action:
+click('171')
+
+2026-06-19 18:03:37,142 - 3526618 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:03:37,456 - 3526618 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of a picture frame purchased in September 2022. I am on the "My Account" page, which shows recent orders. To find an older order, I need to view all orders. I will click the "View All" link to navigate to the complete order history. The previous action failed because I was already on the "My Account" page. I will now proceed with the correct action.
+
+action:
+click('1412')
+
+2026-06-19 18:03:51,125 - 3526618 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:03:51,470 - 3526618 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of a picture frame purchased in September 2022. I am currently on the "My Orders" page, which lists orders in reverse chronological order. The current page displays orders from 2023. To find the order from September 2022, I need to navigate to older pages of the order history. I will click on the link for "Page 2" to view older orders.
+
+action:
+click('1488')
+
+2026-06-19 18:04:03,498 - 3526618 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:04:03,791 - 3526618 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of a picture frame they bought in September 2022. I am currently on the "My Orders" page, viewing page 2 of the order history. The orders on this page are from October 2022 to January 2023. I need to find an order from September 2022, so I will navigate to the next page of the order history. I will click on the link for "Page 3". The bid for this link is '1348'.
+
+action:
+click('1348')
+
+2026-06-19 18:04:17,533 - 3526618 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:04:17,854 - 3526618 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of a picture frame they bought in September 2022.
+I am on the "My Orders" page, which lists past orders.
+I can see two orders from September 2022:
+- Order `000000179` on `9/29/22`
+- Order `000000175` on `9/1/22`
+
+I will start by checking the order from 9/1/22 to see if it contains the picture frame.
+The "View Order" link for order `000000175` has bid `1417`. I will click this link to view the order details.
+
+action:
+click('1417')
+
+2026-06-19 18:04:32,528 - 3526618 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:04:32,856 - 3526618 - browsergym.experiments.loop - INFO - The user is asking for the color configuration of a picture frame purchased in September 2022.
+The current page displays the details of an order from September 1, 2022.
+I need to examine the items in this order to find the picture frame and its color.
+I can see an item named "Forest Canvas Wall Art Print...". This is likely the picture frame.
+The details for this item show "Color: Mist 16*24".
+This is the information the user requested.
+I will now provide this information to the user.
+
+action:
+send_msg_to_user('The color configuration of the picture frame is Mist 16*24.')
+
+2026-06-19 18:04:35,755 - 3526618 - browsergym.experiments.loop - INFO - Saving summary info.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+skipped:no_llm_abstraction
+2026-06-19 18:05:12,634 - 3529482 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.149_15 in:
+  results/2026-06-19_18-05-12_GenericAgentArgs_on_webarena.149_15
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-19 18:05:14,802 - 3529482 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:05:14,802 - 3529482 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:05:24,797 - 3529482 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:05:24,817 - 3529482 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:05:25,134 - 3529482 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:05:25,136 - 3529482 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:05:29,286 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:05:29,302 - 3529482 - root - INFO - Query failed. Retrying 1/6.
+[LLM]:
+<think>
+The user wants to find the color configuration of an item they bought in February 2023. To do this, I need to access their order history. The most logical first step is to go to the "My Account" section of the website. I can see a link with the text "My Account" and `bid` 177. I will click this link to proceed. <action>
+click('177')
+[User]:
+Missing the key <action> in the answer.
+2026-06-19 18:05:31,091 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:05:31,882 - 3529482 - browsergym.experiments.loop - INFO - action:
+click('177')
+
+2026-06-19 18:05:43,722 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:05:44,111 - 3529482 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of the artificial plants they bought in February 2023. I am currently on the "My Account" page, which shows recent orders. The recent orders table does not show any orders from February 2023. I need to view all orders to find the one from February 2023. I will click the "View All" link to see the complete order history. The bid for the "View All" link is '1416'. After that, I will need to find the order from February 2023 and view its details to find the color configuration.
+
+action:
+click('1416')
+
+2026-06-19 18:05:58,300 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:05:58,614 - 3529482 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of the artificial plants they bought in February 2023. I am on the "My Orders" page, which lists all the user's past orders. I need to find the order from February 2023 that contains artificial plants.
+
+I can see the following orders from February 2023:
+- Order on 2/27/23 (bid 1437 for 'View Order')
+- Order on 2/24/23 (bid 1448 for 'View Order')
+- Order on 2/11/23 (bid 1459 for 'View Order')
+- Order on 2/9/23 (bid 1470 for 'View Order')
+
+I will start by examining the order from 2/27/23 to see if it contains the artificial plants. I will click the "View Order" link for that order.
+
+action:
+click('1437')
+
+2026-06-19 18:06:11,840 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:06:12,220 - 3529482 - browsergym.experiments.loop - INFO - The user wants to know the color of the artificial plants they bought in February 2023. I am currently on an order detail page from February 2023, but none of the items are artificial plants. I need to go back to the list of all orders to find the correct one. I will click on the "My Orders" link to navigate back to the order history page. The bid for this link is '1527'.
+
+action:
+click('1527')
+
+2026-06-19 18:06:33,126 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:06:33,373 - 3529482 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of the artificial plants they bought in February 2023. I am on the "My Orders" page and can see a list of orders. I need to find the relevant order from February 2023.
+
+I see the following orders from February 2023:
+- Order #000000161, Date: 2/27/23, Status: Complete.
+- Order #000000156, Date: 2/24/23, Status: Canceled.
+- Order #000000158, Date: 2/11/23, Status: Canceled.
+- Order #000000157, Date: 2/9/23, Status: Complete.
+
+Since the user bought the item, I should focus on the "Complete" orders. I will start by examining the order from 2/27/23, as it's the most recent one in February. I will click the "View Order" link for order #000000161. The corresponding bid is '1267'.
+
+action:
+click('1267')
+
+2026-06-19 18:06:47,109 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:06:47,466 - 3529482 - browsergym.experiments.loop - INFO - The user is asking for the color of the artificial plants they bought in February 2023. I am currently on an order detail page, but it does not contain any artificial plants. I need to go back to the list of all orders to find the correct one. I will click on the "My Orders" link in the left navigation menu. The bid for this link is '1527'.
+
+action:
+click('1527')
+
+2026-06-19 18:07:04,886 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:07:05,338 - 3529482 - browsergym.experiments.loop - INFO - The user wants to find the color configuration of the artificial plants they bought in February 2023. I am on the "My Orders" page and can see a list of orders. I need to find the order from February 2023 that contains artificial plants.
+
+I see several orders from February 2023:
+- 2/27/23 (Order 000000161)
+- 2/24/23 (Order 000000156)
+- 2/11/23 (Order 000000158)
+- 2/9/23 (Order 000000157)
+
+I will start by examining the order from 2/9/23 (Order 000000157) to see if it contains the artificial plants. I will click the "View Order" link associated with this order. The bid for this link is '1471'.
+
+action:
+click('1471')
+
+2026-06-19 18:07:20,988 - 3529482 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:07:21,293 - 3529482 - browsergym.experiments.loop - INFO - The user is asking for the color configuration of the artificial plants they bought in February 2023.
+I am on the order details page for an order placed on February 9, 2023.
+The page lists the items ordered.
+I can see an item named "Artificial Plants Boston Fern Fake Greenery...".
+Under this item, there is a "Color" attribute with the value "Green-vines".
+This is the information the user is looking for.
+I will send this information to the user.
+
+action:
+send_msg_to_user('Green-vines')
+
+2026-06-19 18:07:24,831 - 3529482 - browsergym.experiments.loop - INFO - Saving summary info.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+skipped:no_llm_abstraction
+2026-06-19 18:08:06,137 - 3533074 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.150_2 in:
+  results/2026-06-19_18-08-05_GenericAgentArgs_on_webarena.150_2
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-19 18:08:08,023 - 3533074 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:08:08,024 - 3533074 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:08:17,512 - 3533074 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:08:17,527 - 3533074 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:08:17,767 - 3533074 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:08:17,768 - 3533074 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:08:21,602 - 3533074 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:08:21,616 - 3533074 - root - INFO - Query failed. Retrying 1/6.
+[LLM]:
+<think>
+The user wants to find the price configuration of a fake tree they bought in January 2023. To do this, I need to access their order history. I will start by clicking on the "My Account" link. The bid for "My Account" is 178. <action>
+click('178')
+[User]:
+Missing the key <action> in the answer.
+2026-06-19 18:08:23,741 - 3533074 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:08:24,557 - 3533074 - browsergym.experiments.loop - INFO - The user wants to find the price configuration of a fake tree they bought in January 2023. To do this, I need to access their order history. I will start by clicking on the "My Account" link. The bid for "My Account" is 178.
+
+action:
+click('178')
+
+2026-06-19 18:08:35,206 - 3533074 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:08:35,515 - 3533074 - browsergym.experiments.loop - INFO - action:
+click('1295')
+
+2026-06-19 18:08:47,225 - 3533074 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:08:47,579 - 3533074 - browsergym.experiments.loop - INFO - The user wants to find the price configuration of a fake tree they bought in January 2023. I am currently on the "My Orders" page, viewing the first page of orders. The orders on this page are from May, March, and February 2023. I need to find an order from January 2023. Since the orders are sorted by date in descending order, I need to go to the next page to find older orders. I will click on the "Page 2" link to navigate to the next page of orders.
+
+action:
+click('1408')
+
+2026-06-19 18:08:59,220 - 3533074 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:08:59,530 - 3533074 - browsergym.experiments.loop - INFO - The user wants to find the price configuration of a fake tree they bought in January 2023.
+I am on the "My Orders" page. I can see two orders from January 2023.
+- Order `000000148` on `1/29/23` for `$440.64`
+- Order `000000163` on `1/16/23` for `$132.24`
+
+I will start by checking the first order from January 2023 to see if it contains the fake tree. I will click on the "View Order" link for order `000000148`. The bid for this link is `1227`.
+
+action:
+click('1227')
+
+2026-06-19 18:09:12,361 - 3533074 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:09:12,727 - 3533074 - browsergym.experiments.loop - INFO - The user is asking for the price configuration of a fake tree purchased in January 2023.
+I am currently on the order details page for an order placed on January 29, 2023.
+This order contains an item named "Bornbridge Artificial Spiral Topiary Tree...".
+The details for this item are:
+- Color: 4' Boxwood
+- Size: 2 Pack
+- Price: $260.69
+
+I have found the information requested by the user. I will now provide the answer.
+
+action:
+send_msg_to_user("The price configuration for the fake tree is: Color: 4' Boxwood, Size: 2 Pack, Price: $260.69")
+
+2026-06-19 18:09:15,997 - 3533074 - browsergym.experiments.loop - INFO - Saving summary info.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+skipped:no_llm_abstraction
+2026-06-19 18:09:56,601 - 3536720 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.158_12 in:
+  results/2026-06-19_18-09-56_GenericAgentArgs_on_webarena.158_12
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-19 18:09:58,667 - 3536720 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:09:58,667 - 3536720 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.

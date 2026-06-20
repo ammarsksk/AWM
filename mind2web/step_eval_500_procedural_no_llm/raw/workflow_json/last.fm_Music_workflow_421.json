@@ -1,0 +1,40 @@
+{
+  "name": "last.fm / Music workflow 421",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Give a like to the #1 track of the Real Time Top Chart",
+  "steps": [
+    {
+      "action": "CLICK [253]",
+      "op": "CLICK",
+      "element": "253",
+      "value": "",
+      "description": "[link] Charts -> CLICK",
+      "role": "link",
+      "label": "Charts",
+      "observation": "<html> <div main> <div> <ul primary navigation> <a id=811> Music </a> <a id=253> Charts </a> </ul> <nav secondary navigation> <a id=1011> Tracks </a> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12224]",
+      "op": "CLICK",
+      "element": "12224",
+      "value": "",
+      "description": "[gridcell] Like Crazy -> CLICK",
+      "role": "gridcell",
+      "label": "Like Crazy",
+      "observation": "<html> <div main> <div> <a id=13071> 1 </a> <a id=13187> Most Loved </a> </div> </div> <a id=12224 /> </html>"
+    },
+    {
+      "action": "CLICK [24150]",
+      "op": "CLICK",
+      "element": "24150",
+      "value": "",
+      "description": "[button] LOVE THIS TRACK -> CLICK",
+      "role": "button",
+      "label": "LOVE THIS TRACK",
+      "observation": "<html> <div main> <div> <a id=24803> 1 </a> <div> <a id=24898> #1 </a> <form> <input/> <button id=24150 submit> Love this track </button> <input action love /> <input track like crazy /> <input artist jimin /> </form> </div> </div> </div> </html>"
+    }
+  ]
+}

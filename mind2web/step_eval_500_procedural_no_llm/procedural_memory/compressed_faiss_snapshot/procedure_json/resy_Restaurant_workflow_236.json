@@ -1,0 +1,98 @@
+{
+  "activation": {
+    "operations": [
+      "TYPE",
+      "CLICK",
+      "SELECT"
+    ],
+    "ui_terms": [
+      "use",
+      "value",
+      "search",
+      "restaurants",
+      "pizza",
+      "specific",
+      "field",
+      "resy",
+      "travel",
+      "restaurant",
+      "near",
+      "location",
+      "customers",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "textbox",
+      "cuisines",
+      "etc",
+      "required",
+      "combobox",
+      "party"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Travel",
+  "execution": {
+    "steps": [
+      {
+        "intent": "type the Search restaurants, cuisines, etc.",
+        "operation": "TYPE",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Search restaurants, cuisines, etc.",
+        "target_type": "textbox",
+        "value_policy": "Use the task-specific value for this field."
+      },
+      {
+        "intent": "click the Pizza",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Pizza",
+        "target_type": "b",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "select the Party of 2",
+        "operation": "SELECT",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Party of 2",
+        "target_type": "combobox",
+        "value_policy": "Use the task-specific value for this field."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Search for restaurants near my location with pizza and for 6 customers.",
+  "memory_type": "typed_procedure",
+  "name": "resy / Restaurant workflow 236",
+  "raw_workflow_name": "resy / Restaurant workflow 236",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 3.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Restaurant",
+  "termination": {
+    "max_steps_hint": 3,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "resy"
+}

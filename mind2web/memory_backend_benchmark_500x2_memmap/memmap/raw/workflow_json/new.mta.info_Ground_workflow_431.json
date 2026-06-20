@@ -1,0 +1,30 @@
+{
+  "name": "new.mta.info / Ground workflow 431",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "find the next available subway train to Grand central station, NY departing from Queensboro plaza station, Long Island, NY.",
+  "steps": [
+    {
+      "action": "TYPE [201] [Queensboro plaza]",
+      "op": "TYPE",
+      "element": "201",
+      "value": "Queensboro plaza",
+      "description": "[searchbox] From -> TYPE: Queensboro plaza",
+      "role": "searchbox",
+      "label": "From",
+      "observation": "<html> <div main> <aside complementary> <div region> <div> <label> From </label> <input id=201 search address, station, landmark /> </div> <a button> Leave </a> <div region> </div> <a id=144 button open travel preferences modal.> Travel Preferences </a> <button id=1061 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [6365]",
+      "op": "CLICK",
+      "element": "6365",
+      "value": "",
+      "description": "[listitem] Queensboro Plaza Station, Long Island City, NY, US... -> CLICK",
+      "role": "listitem",
+      "label": "Queensboro Plaza Station, Long Island City, NY, US...",
+      "observation": "<html> <div main> <aside complementary> <div region> <ul> <div> <span> Recent Searches </span> <li id=6365 queensboro plaza station, long island> Queensboro Plaza Station, Long Island City, NY, USA </li> </div> <div> <span> Stations </span> <li id=7011 queensboro plaza [7]> Queensboro Plaza [7] </li> <li id=7014 queensboro plaza [n/w]> Queensboro Plaza [N/W] </li> </div> </ul> </div> </aside> </div> </html>"
+    }
+  ]
+}

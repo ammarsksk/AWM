@@ -1,0 +1,51 @@
+{
+  "name": "ebay / General workflow 525",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find a newly listed pre-owned man Nike shoe in size 9 with free local pickup under 75 dollars.",
+  "goal_pattern": "Find a newly listed pre-owned man Nike shoe in size 9 with free local pickup under 75 dollars.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Fashion",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Fashion",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Men's Shoes",
+      "operation": "CLICK",
+      "target_type": "link",
+      "target_description": "Men's Shoes",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [151]",
+      "gold_element_id": "151",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [9422]",
+      "gold_element_id": "9422",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "ebay / General workflow 525"
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "name": "kayak / Airlines workflow 11",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Find a cheapest SUV in Brooklyn for 1 day.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "suv",
+      "brooklyn",
+      "use",
+      "same",
+      "textbox",
+      "pick",
+      "location",
+      "span",
+      "drop",
+      "off",
+      "svg",
+      "div",
+      "kayak",
+      "travel",
+      "airlines",
+      "find",
+      "cheapest",
+      "day",
+      "tasks",
+      "similar",
+      "goal",
+      "site",
+      "area",
+      "link",
+      "search",
+      "cars",
+      "specific",
+      "field",
+      "new",
+      "york",
+      "united",
+      "states",
+      "different",
+      "tab",
+      "end",
+      "date",
+      "may",
+      "2023",
+      "img",
+      "view",
+      "deal"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Search for cars",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Search for cars",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Pick-up location",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Pick-up location",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Pick-up location",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Pick-up location",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Brooklyn, New York, United States",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Brooklyn, New York, United States",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Different drop-off",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Different drop-off",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Same drop-off",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "Same drop-off",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the End date",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "End date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the May 22, 2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "May 22, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the [svg] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "svg",
+        "target": "[svg] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the SUV",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "SUV",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the $75",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "$75",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the View Deal",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "View Deal",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "kayak / Airlines workflow 11"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "tesla / Auto workflow 59",
+  "source": "Mind2Web exemplar",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "View inventory of Tesla Model S that are blue and new with 19\" wheels within 50 miles of zip code 60602.",
+  "steps": [
+    {
+      "action": "CLICK [3566]",
+      "op": "CLICK",
+      "element": "3566",
+      "value": "",
+      "description": "[link] Model S -> CLICK",
+      "role": "link",
+      "label": "Model S",
+      "observation": "<html> <div> <header> <a id=3566 model s> <span> Model S </span> </a> <button id=3602 button menu> <span> Menu </span> </button> </header> <main main> <div> <span id=3678 button next /> <span> Next </span> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [8194]",
+      "op": "CLICK",
+      "element": "8194",
+      "value": "",
+      "description": "[link] View Inventory -> CLICK",
+      "role": "link",
+      "label": "View Inventory",
+      "observation": "<html> <div> <button id=8071 button menu> <span> Menu </span> </button> <main main> <div> <section> <a id=8194 view inventory> <span> View Inventory </span> </a> <a order now> </a> </section> <section> <a order now> </a> <a id=8856 view inventory> <span> View Inventory </span> </a> </section> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [11425]",
+      "op": "CLICK",
+      "element": "11425",
+      "value": "",
+      "description": "[image] -> CLICK",
+      "role": "image",
+      "label": "",
+      "observation": "<html> <body> <div> <input checkbox on /> <label id=11891> <span> Blue </span> </label> </div> <div> <label id=15157> <span> Zip code </span> </label> <input text zip /> </div> </body> <img id=11425 /> </html>"
+    },
+    {
+      "action": "CLICK [19196]",
+      "op": "CLICK",
+      "element": "19196",
+      "value": "",
+      "description": "[checkbox] 19\" Wheels -> CLICK",
+      "role": "checkbox",
+      "label": "19\" Wheels",
+      "observation": "<html> <body> <div> <div> <input checkbox on true /> <label id=19642> <span> Blue </span> </label> </div> <input id=19196 checkbox nineteen on /> </div> <div> <label id=21228> <span> Zip code </span> </label> <input text zip /> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [23557] [60602]",
+      "op": "TYPE",
+      "element": "23557",
+      "value": "60602",
+      "description": "[textbox] Registration Zip Code Where you will register the ... -> TYPE: 60602",
+      "role": "textbox",
+      "label": "Registration Zip Code Where you will register the ...",
+      "observation": "<html> <body> <div> <input id=23557 zip 43235 enter zip /> <div> <input checkbox on true /> <label id=24021> <span> Blue </span> </label> </div> </div> <div> <label id=25299> <span> Zip code </span> </label> <input text zip /> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [31161] [50 miles]",
+      "op": "SELECT",
+      "element": "31161",
+      "value": "50 miles",
+      "description": "[combobox] Search within -> SELECT: 50 miles",
+      "role": "combobox",
+      "label": "Search within",
+      "observation": "<html> <div> <input id=31497 zip 60602 enter zip /> <select id=31161 select range> <option 25> 25 miles </option> <option 50 true> 50 miles </option> <option 100> 100 miles </option> <option 200> 200 miles </option> </select> <div> <input checkbox on true /> <label id=31606> <span> Blue </span> </label> </div> </div> </html>"
+    }
+  ]
+}

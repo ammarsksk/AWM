@@ -1,0 +1,170 @@
+{
+  "name": "aa / Airlines workflow 135",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find the lowest fare for JFK, NY to Heathrow, London and nearby airports for 1 adult on April 22, one way",
+  "steps": [
+    {
+      "action": "CLICK [115]",
+      "op": "CLICK",
+      "element": "115",
+      "value": "",
+      "description": "[button] PLAN TRAVEL -> CLICK",
+      "role": "button",
+      "label": "PLAN TRAVEL",
+      "observation": "<html> <body> <header header> <nav navigation main navigation> <button id=115> Plan Travel </button> </nav> </header> <main main main content> <div tabpanel> <form> <div> <label> From <input id=1272 text originairport cmh city or airport /> </label> <label> To <input id=1293 text city or airport /> </label> </div> </form> </div> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [5950]",
+      "op": "CLICK",
+      "element": "5950",
+      "value": "",
+      "description": "[link] Flights -> CLICK",
+      "role": "link",
+      "label": "Flights",
+      "observation": "<html> <body> <header header> <nav navigation main navigation> <a id=5950> Flights </a> </nav> </header> <main main main content> <div tabpanel> <form> <div> <label> From <input id=7117 text originairport cmh city or airport /> </label> <label> To <input id=7138 text city or airport /> </label> </div> </form> </div> </main> </body> </html>"
+    },
+    {
+      "action": "CLICK [9908]",
+      "op": "CLICK",
+      "element": "9908",
+      "value": "",
+      "description": "[link] Search flights one way -> CLICK",
+      "role": "link",
+      "label": "Search flights one way",
+      "observation": "<html> <main main main content> <form> <ul tablist> <li tab> <a id=9908> <span> Search flights one way </span> <span> One way </span> </a> </li> <li tab> <a id=9919> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <div> <select> </select> <label id=10564> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [14832]",
+      "op": "CLICK",
+      "element": "14832",
+      "value": "",
+      "description": "[textbox] From , required. -> CLICK",
+      "role": "textbox",
+      "label": "From , required.",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=15862> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label> From <span> , required. </span> <input id=14832 text city or airport cmh /> </label> </section> <div> <select> </select> <label id=16500> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "TYPE [20764] [JFK]",
+      "op": "TYPE",
+      "element": "20764",
+      "value": "JFK",
+      "description": "[textbox] From , required. -> TYPE: JFK",
+      "role": "textbox",
+      "label": "From , required.",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=21794> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label> From <span> , required. </span> <input id=20764 text city or airport cmh /> </label> </section> <div> <select> </select> <label id=22432> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [26704]",
+      "op": "CLICK",
+      "element": "26704",
+      "value": "",
+      "description": "[a] JFK - New York John F Kennedy Intl, NY -> CLICK",
+      "role": "a",
+      "label": "JFK - New York John F Kennedy Intl, NY",
+      "observation": "<html> <body> <main main main content> <form> <ul tablist> <li tab> <a id=27733> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <div> <select> </select> <label id=28373> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> <a id=26704> JFK - New York John F Kennedy Intl, NY </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [33830]",
+      "op": "CLICK",
+      "element": "33830",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=33673> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <div> <input checkbox true /> <input on /> <label id=33830> <span> Include nearby airports </span> <span> Flight 1, For the destination location, include nearby airports </span> </label> </div> </section> <div> <select> </select> <label id=34311> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [38584]",
+      "op": "CLICK",
+      "element": "38584",
+      "value": "",
+      "description": "[textbox] To , required. -> CLICK",
+      "role": "textbox",
+      "label": "To , required.",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=39614> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label> To <span> , required. </span> <input id=38584 text city or airport /> </label> </section> <div> <select> </select> <label id=40253> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "TYPE [44526] [Heathrow]",
+      "op": "TYPE",
+      "element": "44526",
+      "value": "Heathrow",
+      "description": "[textbox] To , required. -> TYPE: Heathrow",
+      "role": "textbox",
+      "label": "To , required.",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=45556> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label> To <span> , required. </span> <input id=44526 text city or airport /> </label> </section> <div> <select> </select> <label id=46195> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [50475]",
+      "op": "CLICK",
+      "element": "50475",
+      "value": "",
+      "description": "[a] LHR - London Heathrow, United Kingdom -> CLICK",
+      "role": "a",
+      "label": "LHR - London Heathrow, United Kingdom",
+      "observation": "<html> <body> <main main main content> <form> <ul tablist> <li tab> <a id=51504> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <div> <select> </select> <label id=52145> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> <a id=50475> LHR - London Heathrow, United Kingdom </a> </body> </html>"
+    },
+    {
+      "action": "CLICK [56424]",
+      "op": "CLICK",
+      "element": "56424",
+      "value": "",
+      "description": "[textbox] Depart , required. -> CLICK",
+      "role": "textbox",
+      "label": "Depart , required.",
+      "observation": "<html> <main main main content> <form> <label> Depart <span> , required. </span> <input id=56424 text mm/dd/yyyy /> </label> <div> <select> </select> <label id=58093> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> <button id=58170 submit> Search </button> </form> </main> </html>"
+    },
+    {
+      "action": "TYPE [62372] [04/22/2023]",
+      "op": "TYPE",
+      "element": "62372",
+      "value": "04/22/2023",
+      "description": "[textbox] Depart , required. -> TYPE: 04/22/2023",
+      "role": "textbox",
+      "label": "Depart , required.",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=63402> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label> Depart <span> , required. </span> <input id=62372 text mm/dd/yyyy /> </label> </section> <div> <select> </select> <label id=64041> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "SELECT [69678] [1]",
+      "op": "SELECT",
+      "element": "69678",
+      "value": "1",
+      "description": "[combobox] Number of passengers -> SELECT: 1",
+      "role": "combobox",
+      "label": "Number of passengers",
+      "observation": "<html> <main main main content> <form> <ul tablist> <li tab> <a id=69356> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label id=69678> Number of passengers <select passengercount> <option 1 true> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> </select> </label> <div> <select> </select> <label id=69996> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "SELECT [75658] [Adult (16-64)]",
+      "op": "SELECT",
+      "element": "75658",
+      "value": "Adult (16-64)",
+      "description": "[combobox] Passenger 1 -> SELECT: Adult (16-64",
+      "role": "combobox",
+      "label": "Passenger 1",
+      "observation": "<html> <main main main content> <form> <ul tablist> <li tab> <a id=75311> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <label id=75658> Passenger 1 <select> <option adult true> Adult (16-64) </option> <option senior> Senior (65+) </option> <option youth> Young adult (12-15) </option> <option child> Child (2-11) </option> <option infant_seat> Infant in seat (under 2) </option> </select> </label> <div> <select> </select> <label id=75951> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "SELECT [81929] [Lowest fare]",
+      "op": "SELECT",
+      "element": "81929",
+      "value": "Lowest fare",
+      "description": "[combobox] Search by -> SELECT: Lowest fare",
+      "role": "combobox",
+      "label": "Search by",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=81287> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <div> <input checkbox true /> <input on /> <label id=81401> <span> Include nearby airports </span> <span> Flight 1, For the departure location, include nearby airports </span> </label> </div> </section> <div> <select> </select> <label id=81929> Search by <select> <option lowest true> Lowest fare </option> <option refundable> Flexible fare </option> </select> </label> </div> </form> </main> </html>"
+    },
+    {
+      "action": "CLICK [86230]",
+      "op": "CLICK",
+      "element": "86230",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <main main main content> <form> <section> <ul tablist> <li tab> <a id=87257> <span> Search flights multiple cities </span> <span> Multi city </span> </a> </li> </ul> <div> <input checkbox true /> <input on /> <label id=87371> <span> Include nearby airports </span> <span> Flight 1, For the departure location, include nearby airports </span> </label> </div> </section> <button id=86230 submit> Search </button> </form> </main> </html>"
+    }
+  ]
+}

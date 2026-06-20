@@ -1,0 +1,180 @@
+{
+  "name": "booking / General workflow 116",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Book a flight for two adults from Shanghai to Seoul on May 10, and return on May 12 also book a hotel with it, with maximum bundled savings and if top hotel not available book the next one.",
+  "steps": [
+    {
+      "action": "CLICK [775]",
+      "op": "CLICK",
+      "element": "775",
+      "value": "",
+      "description": "[span] Flight + Hotel -> CLICK",
+      "role": "span",
+      "label": "Flight + Hotel",
+      "observation": "<html> <body> <nav what are you looking for?> <a id=775> <span> Flight + Hotel </span> </a> </nav> <div main> <div region> <a id=1881> <div> <div> Hotels </div> <div> 950,739 hotels </div> </div> </a> </div> </div> <div contentinfo> <div navigation> <a id=4935> Hotels </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [6189] [SHANGHAI]",
+      "op": "TYPE",
+      "element": "6189",
+      "value": "SHANGHAI",
+      "description": "[textbox] Where from? -> TYPE: SHANGHAI",
+      "role": "textbox",
+      "label": "Where from?",
+      "observation": "<html> <div> <input id=6189 destination where from? /> <input id=7034 destination where to? /> <span> Sun 26 Mar - Sun 2 Apr </span> <span> 2 adults 0 children 1 room </span> <button id=7057 button> <span> Search </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [11434]",
+      "op": "CLICK",
+      "element": "11434",
+      "value": "",
+      "description": "[div] Shanghai, China -> CLICK",
+      "role": "div",
+      "label": "Shanghai, China",
+      "observation": "<html> <ul> <div id=11434 button> <div> <div> Shanghai, China </div> <div> Shanghai, Shanghai, CHINA </div> </div> </div> <div id=11444 button> <div> <div> Pudong Intl Airport (PVG), China </div> <div> Shanghai, Shanghai, CHINA </div> </div> </div> <div id=11455 button> <div> <div> Hongqiao Intl Airport (SHA), China </div> <div> Shanghai, Shanghai, CHINA </div> </div> </div> </ul> </html>"
+    },
+    {
+      "action": "TYPE [15028] [SEOUL]",
+      "op": "TYPE",
+      "element": "15028",
+      "value": "SEOUL",
+      "description": "[textbox] Where to? -> TYPE: SEOUL",
+      "role": "textbox",
+      "label": "Where to?",
+      "observation": "<html> <div> <input id=15862 destination shanghai, china where from? /> <input id=15028 destination where to? /> <span> Sun 26 Mar - Sun 2 Apr </span> <span> 2 adults 0 children 1 room </span> <button id=15896 button> <span> Search </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [20282]",
+      "op": "CLICK",
+      "element": "20282",
+      "value": "",
+      "description": "[div] Seoul, Republic Of Korea -> CLICK",
+      "role": "div",
+      "label": "Seoul, Republic Of Korea",
+      "observation": "<html> <ul> <div id=20282 button> <div> <div> Seoul, Republic Of Korea </div> <div> Seoul, Seoul, South Korea </div> </div> </div> <div id=20292 button> <div> <div> Incheon Intl Airport (ICN), Republic Of Korea </div> <div> Seoul, Seoul, South Korea </div> </div> </div> <div id=20303 button> <div> <div> Gimpo Intl Airport (GMP), Republic Of Korea </div> <div> Seoul, Seoul, South Korea </div> </div> </div> </ul> </html>"
+    },
+    {
+      "action": "CLICK [28265]",
+      "op": "CLICK",
+      "element": "28265",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <body> <div> <input radio package_type ah true /> <label id=29053> <div> Hotel + Flight </div> </label> </div> <div contentinfo> <div navigation> <a id=29682> Hotels </a> </div> </div> </body> <svg id=28265> <path/> </svg> </html>"
+    },
+    {
+      "action": "CLICK [32993]",
+      "op": "CLICK",
+      "element": "32993",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <table grid> <tr> <td gridcell> <span id=35178 checkbox 10 mar 2023> <span> 10 </span> </span> </td> <td gridcell> <span id=35186 checkbox 12 mar 2023> <span> 12 </span> </span> </td> </tr> </table> <path id=32993 /> </html>"
+    },
+    {
+      "action": "CLICK [40404]",
+      "op": "CLICK",
+      "element": "40404",
+      "value": "",
+      "description": "[checkbox] 10 May 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "10 May 2023",
+      "observation": "<html> <body> <div contentinfo> <div navigation> <a id=39474> Hotels </a> </div> </div> <table grid> <tr> <td gridcell> <span id=40404 checkbox 10 may 2023> <span> 10 </span> </span> </td> <td gridcell> <span id=40411 checkbox 12 may 2023> <span> 12 </span> </span> </td> </tr> </table> </body> </html>"
+    },
+    {
+      "action": "CLICK [45478]",
+      "op": "CLICK",
+      "element": "45478",
+      "value": "",
+      "description": "[checkbox] 12 May 2023 -> CLICK",
+      "role": "checkbox",
+      "label": "12 May 2023",
+      "observation": "<html> <body> <div> <input radio package_type ah true /> <label id=43911> <div> Hotel + Flight </div> </label> </div> <div> <table grid> <td gridcell> <span id=45326 checkbox 12 apr 2023> <span> 12 </span> </span> </td> </table> <table grid> <td gridcell> <span id=45478 checkbox 12 may 2023> <span> 12 </span> </span> </td> </table> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [49056]",
+      "op": "CLICK",
+      "element": "49056",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <div> <div> <input radio package_type ah true /> <label id=48977> <div> Hotel + Flight </div> </label> </div> <div> <input destination seoul, republic of korea where to? /> <span> Wed 10 May - Fri 12 May </span> <span> 2 adults 0 children 1 room </span> <button id=49056 button> <span> Search </span> </button> </div> </div> <div contentinfo> <div navigation> <a id=49605> Hotels </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [54126]",
+      "op": "CLICK",
+      "element": "54126",
+      "value": "",
+      "description": "[button] Choose your room -> CLICK",
+      "role": "button",
+      "label": "Choose your room",
+      "observation": "<html> <div> <div> <div> <span> Sort by </span> <button id=53403> <div> <div> Recommended </div> <svg img /> </div> </button> </div> <label id=53794> <div> <div> <input checkbox htls&&hotels /> <svg img /> </div> <div hotels> <span> Hotels </span> </div> <span> (352) </span> </div> </label> </div> <div book hotel president> <button id=54126> <div> Choose your room </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [56494]",
+      "op": "CLICK",
+      "element": "56494",
+      "value": "",
+      "description": "[link] Choose Another Hotel -> CLICK",
+      "role": "link",
+      "label": "Choose Another Hotel",
+      "observation": "<html> <div> <div> <svg id=56544 img /> <div> <h2> Sorry! </h2> <div> Looks like this hotel is no longer available. </div> <div> No worries though, we have plenty of other great hotels for you. </div> <a id=56494> Choose Another Hotel </a> </div> </div> <div> <div> Support </div> <a id=56559 find my trip> Find my trip </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [57989]",
+      "op": "CLICK",
+      "element": "57989",
+      "value": "",
+      "description": "[button] Choose your room -> CLICK",
+      "role": "button",
+      "label": "Choose your room",
+      "observation": "<html> <div> <div> <div> <span> Sort by </span> <button id=57020> <div> <div> Recommended </div> <svg img /> </div> </button> </div> <div> <h2> Amenities </h2> <button id=57399> <div> Show 10 more </div> <svg img /> </button> </div> </div> <div book hotel president> <button id=57989> <div> Choose your room </div> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [59102]",
+      "op": "CLICK",
+      "element": "59102",
+      "value": "",
+      "description": "[button] Book Double Bed - Standard Room -> CLICK",
+      "role": "button",
+      "label": "Book Double Bed - Standard Room",
+      "observation": "<html> <div> <div> <span> Filter by </span> <button id=59728> <div> All Rooms </div> </button> </div> <div> <button id=59102> Book <span> Double Bed - Standard Room </span> </button> <button id=60068> Book <span> Double Room </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [61931]",
+      "op": "CLICK",
+      "element": "61931",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <section> <div> <div> - </div> <button id=62915> Choose </button> </div> <div> <div> - </div> <button id=63083> Choose </button> </div> </section> <svg id=61931 img frqmup hxrycj /> </html>"
+    },
+    {
+      "action": "CLICK [71197]",
+      "op": "CLICK",
+      "element": "71197",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <section> <div> <div> + </div> <button id=72030> Choose </button> </div> <div> <div> + </div> <button id=72559> Choose </button> </div> </section> <svg id=71197 img frqmup hxrycj /> </html>"
+    },
+    {
+      "action": "CLICK [80471]",
+      "op": "CLICK",
+      "element": "80471",
+      "value": "",
+      "description": "[button] Choose -> CLICK",
+      "role": "button",
+      "label": "Choose",
+      "observation": "<html> <section> <div> <div> + </div> <button id=80471> Choose </button> </div> <div> <div> - </div> <button id=81473> Choose </button> </div> <div> <div> - </div> <button id=81641> Choose </button> </div> </section> </html>"
+    }
+  ]
+}

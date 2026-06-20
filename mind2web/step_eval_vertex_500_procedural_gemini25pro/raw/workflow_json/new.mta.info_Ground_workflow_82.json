@@ -1,0 +1,200 @@
+{
+  "name": "new.mta.info / Ground workflow 82",
+  "source": "Mind2Web exemplar",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "task": "Plan a trip from Brooklyn, NY to Staten Island, NY on March 25th mainly using bus and subway terminal. The trip should arive at 9:45 AM.",
+  "steps": [
+    {
+      "action": "TYPE [275] [brooklyn]",
+      "op": "TYPE",
+      "element": "275",
+      "value": "brooklyn",
+      "description": "[searchbox] From -> TYPE: brooklyn",
+      "role": "searchbox",
+      "label": "From",
+      "observation": "<html> <div main> <div> <aside complementary> <div region> <div> <label> From </label> <input id=275 search address, station, landmark /> </div> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=1134 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> <ul tablist> <a id=1249 tab> Rail </a> </ul> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [6135]",
+      "op": "CLICK",
+      "element": "6135",
+      "value": "",
+      "description": "[listitem] Brooklyn, NY, USA -> CLICK",
+      "role": "listitem",
+      "label": "Brooklyn, NY, USA",
+      "observation": "<html> <div main> <aside complementary> <div region> <div> <span> Addresses </span> <li id=6135 brooklyn, ny, usa> Brooklyn, NY, USA </li> <li id=6790 brooklyn, oh, usa> Brooklyn, OH, USA </li> <li brooklyn, mi, usa> Brooklyn, MI, USA </li> <li id=6796 brooklyn bridge, new york, ny,> Brooklyn Bridge, New York, NY, USA </li> <li brooklyn park, mn, usa> Brooklyn Park, MN, USA </li> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "TYPE [12029] [staten island]",
+      "op": "TYPE",
+      "element": "12029",
+      "value": "staten island",
+      "description": "[searchbox] To -> TYPE: staten island",
+      "role": "searchbox",
+      "label": "To",
+      "observation": "<html> <div main> <div> <aside complementary> <div region> <div> <label> To </label> <input id=12029 search address, station, landmark /> </div> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=12949 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> <div tabpanel> <div list> <a id=13250 button click to open a modal> <span> SI </span> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18008]",
+      "op": "CLICK",
+      "element": "18008",
+      "value": "",
+      "description": "[listitem] Staten Island, NY, USA -> CLICK",
+      "role": "listitem",
+      "label": "Staten Island, NY, USA",
+      "observation": "<html> <div main> <div> <aside complementary> <div region> <div> <span> Addresses </span> <li id=18008 staten island, ny, usa> Staten Island, NY, USA </li> <li staten island ferry, staten island,> Staten Island Ferry, Staten Island, NY, USA </li> <li staten island mall, richmond avenue,> Staten Island Mall, Richmond Avenue, Staten Island, NY, USA </li> <li staten island zoo, broadway, staten> Staten Island Zoo, Broadway, Staten Island, NY, USA </li> </div> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=18906 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> <div tabpanel> <div list> <a id=19214 button click to open a modal> <span> SI </span> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [23821]",
+      "op": "CLICK",
+      "element": "23821",
+      "value": "",
+      "description": "[button] Leave now Change Time -> CLICK",
+      "role": "button",
+      "label": "Leave now Change Time",
+      "observation": "<html> <div main> <aside complementary> <div region> <a id=23821 button> Leave <span> now </span> <span> Change Time </span> </a> <div region> </div> <a id=23822 button open travel preferences modal.> Travel Preferences </a> <button id=24738 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [29682]",
+      "op": "CLICK",
+      "element": "29682",
+      "value": "",
+      "description": "[textbox] Select date (format month/day/year",
+      "role": "textbox",
+      "label": "Select date (format month/day/year",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Leave </a> <div region> <div> <input id=29682 text select date (format date today 03/18/2023 /> <a button /> </div> </div> <a id=29691 button open travel preferences modal.> Travel Preferences </a> <button id=30605 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [36226]",
+      "op": "CLICK",
+      "element": "36226",
+      "value": "",
+      "description": "[button] 03/18/2023 -> CLICK",
+      "role": "button",
+      "label": "03/18/2023",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Leave </a> <div region> <div> <input text select date (format date today 03/18/2023 /> <a id=36226 button> </a> </div> </div> <a id=35556 button open travel preferences modal.> Travel Preferences </a> <button id=36471 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [42402]",
+      "op": "CLICK",
+      "element": "42402",
+      "value": "",
+      "description": "[link] 25, Saturday March 2023 -> CLICK",
+      "role": "link",
+      "label": "25, Saturday March 2023",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> <div dialog calendar> <table application calendar> <tbody> <tr> <td button previous month /> <td id=42290 button next month /> </tr> <tr> <td 22, wednesday march 2023> </td> <td 23, thursday march 2023> </td> <td 24, friday march 2023> </td> <td id=42402 25, saturday march 2023> <span> 25 </span> </td> </tr> </tbody> </table> </div> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=42671 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [47683]",
+      "op": "CLICK",
+      "element": "47683",
+      "value": "",
+      "description": "[radio] Arrive by -> CLICK",
+      "role": "radio",
+      "label": "Arrive by",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Leave </a> <div region> <div radiogroup time options> <div> <input id=47683 radio leave_arr true /> <label> Arrive by </label> </div> </div> </div> <a id=47624 button open travel preferences modal.> Travel Preferences </a> <button id=48539 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "SELECT [53489] [9]",
+      "op": "SELECT",
+      "element": "53489",
+      "value": "9",
+      "description": "[select] 1 -> SELECT: 9",
+      "role": "select",
+      "label": "1",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Arrive </a> <div region> <select id=53489 number> <option true> 1 </option> <option> 2 </option> <option> 3 </option> <option> 4 </option> <option> 5 </option> <option> 6 </option> <option> 7 </option> <option> 8 </option> <option> 9 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> </select> </div> <a id=53492 button open travel preferences modal.> Travel Preferences </a> <button id=54408 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "SELECT [59395] [45]",
+      "op": "SELECT",
+      "element": "59395",
+      "value": "45",
+      "description": "[select] 00 -> SELECT: 45",
+      "role": "select",
+      "label": "00",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Arrive </a> <div region> <select id=59395 number> <option 0> 00 </option> <option 1> 01 </option> <option 2> 02 </option> <option 3> 03 </option> <option 4> 04 </option> <option 5> 05 </option> <option 6> 06 </option> <option 7> 07 </option> <option 8> 08 </option> <option 9> 09 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> <option> 13 </option> <option> 14 </option> <option> 15 </option> <option> 16 </option> <option> 17 </option> <option> 18 </option> <option> 19 </option> <option> 20 </option> <option> 21 </option> <option> 22 </option> <option> 23 </option> <option> 24 </option> </select> </div> <a id=59397 button open travel preferences modal.> Travel Preferences </a> <button id=60313 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "SELECT [65301] [AM]",
+      "op": "SELECT",
+      "element": "65301",
+      "value": "AM",
+      "description": "[select] AM -> SELECT: AM",
+      "role": "select",
+      "label": "AM",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> <div> <input text select date (format date today 3/25/2023 /> <a id=65971 button> </a> </div> <select id=65301> <option true> AM </option> <option> PM </option> </select> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=66218 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [71877]",
+      "op": "CLICK",
+      "element": "71877",
+      "value": "",
+      "description": "[button] 3/25/2023 -> CLICK",
+      "role": "button",
+      "label": "3/25/2023",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Arrive </a> <div region> <div> <input text select date (format date today 3/25/2023 /> <a id=71877 button> </a> </div> </div> <a id=71207 button open travel preferences modal.> Travel Preferences </a> <button id=72122 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [78054]",
+      "op": "CLICK",
+      "element": "78054",
+      "value": "",
+      "description": "[link] 25, Saturday March 2023 -> CLICK",
+      "role": "link",
+      "label": "25, Saturday March 2023",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> <div dialog calendar> <table application calendar> <tbody> <tr> <td button previous month /> <td id=77942 button next month /> </tr> <tr> <td 22, wednesday march 2023> </td> <td 23, thursday march 2023> </td> <td 24, friday march 2023> </td> <td id=78054 25, saturday march 2023> <span> 25 </span> </td> </tr> </tbody> </table> </div> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=78323 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [83276]",
+      "op": "CLICK",
+      "element": "83276",
+      "value": "",
+      "description": "[button] Open Travel Preferences modal. -> CLICK",
+      "role": "button",
+      "label": "Open Travel Preferences modal.",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Arrive </a> <div region> <select id=83274 number> <option 0> 00 </option> <option 1> 01 </option> <option 2> 02 </option> <option 3> 03 </option> <option 4> 04 </option> <option 5> 05 </option> <option 6> 06 </option> <option 7> 07 </option> <option 8> 08 </option> <option 9> 09 </option> <option> 10 </option> <option> 11 </option> <option> 12 </option> <option> 13 </option> <option> 14 </option> <option> 15 </option> <option> 16 </option> <option> 17 </option> <option> 18 </option> <option> 19 </option> <option> 20 </option> <option> 21 </option> <option> 22 </option> <option> 23 </option> <option> 24 </option> </select> </div> <a id=83276 button open travel preferences modal.> Travel Preferences </a> <button id=84191 button plan my trip - press op plan my trip> Plan My Trip </button> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [89350]",
+      "op": "CLICK",
+      "element": "89350",
+      "value": "",
+      "description": "[label] Rail -> CLICK",
+      "role": "label",
+      "label": "Rail",
+      "observation": "<html> <div main> <div> <aside complementary> <div region> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=90209 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> <div> <input checkbox on true /> <label id=89350> Rail </label> </div> </div> </div> </aside> <div tabpanel> <div list> <a id=90678 button click to open a modal> <span> SI </span> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [95546]",
+      "op": "CLICK",
+      "element": "95546",
+      "value": "",
+      "description": "[label] Express Bus -> CLICK",
+      "role": "label",
+      "label": "Express Bus",
+      "observation": "<html> <div main> <aside complementary> <div region> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=96407 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> <div> <div> <input checkbox on true /> <label id=96442> Bus </label> </div> <div> <input checkbox on true /> <label id=95546> Express Bus </label> </div> </div> </div> </div> </aside> </div> </html>"
+    },
+    {
+      "action": "CLICK [101744]",
+      "op": "CLICK",
+      "element": "101744",
+      "value": "",
+      "description": "[button] Done button - Press enter key to submit travel pre... -> CLICK",
+      "role": "button",
+      "label": "Done button - Press enter key to submit travel pre...",
+      "observation": "<html> <div main> <div> <aside complementary> <div region> <div region> </div> <a button open travel preferences modal.> Travel Preferences </a> <button id=102603 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> <div> <h2> Route Preferences </h2> <button id=101744 button done button - press enter> Done </button> </div> </div> </div> </aside> <div tabpanel> <div list> <a id=103074 button click to open a modal> <span> SI </span> </a> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [107908]",
+      "op": "CLICK",
+      "element": "107908",
+      "value": "",
+      "description": "[link] Plan my Trip - Press enter key to submit the form ... -> CLICK",
+      "role": "link",
+      "label": "Plan my Trip - Press enter key to submit the form ...",
+      "observation": "<html> <div main> <aside complementary> <div region> <a button> Arrive </a> <div region> <div> <input text select date (format date today 3/25/2023 /> <a id=108520 button> </a> </div> </div> <a id=107851 button open travel preferences modal.> Travel Preferences </a> <button id=107908 button plan my trip - press op plan my trip> Plan My Trip </button> <div dialog> </div> </div> </aside> </div> </html>"
+    }
+  ]
+}

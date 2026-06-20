@@ -1,0 +1,50 @@
+{
+  "name": "ticketcenter / Event workflow 52",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Go to the list of ballet event for the next 30 days.",
+  "steps": [
+    {
+      "action": "TYPE [87] [Ballet]",
+      "op": "TYPE",
+      "element": "87",
+      "value": "Ballet",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: Ballet",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <div> <input id=87 text query search for artists, teams or /> <button id=2330 submit> <span> Search </span> </button> </div> <h2> Events Near Columbus, OH <div> <button id=2552 button> (Change Location) </button> <input text location /> </div> </h2> </body> </html>"
+    },
+    {
+      "action": "CLICK [11043]",
+      "op": "CLICK",
+      "element": "11043",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <div> <input id=11005 text query search for artists, teams or ballet /> <ul listbox> <a id=11008 option> <strong> Ballet </strong> met Dance Center </a> </ul> <button id=11043 submit> <span> Search </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [18352]",
+      "op": "CLICK",
+      "element": "18352",
+      "value": "",
+      "description": "[button] All dates -> CLICK",
+      "role": "button",
+      "label": "All dates",
+      "observation": "<html> <div> <button id=17620 button> Days </button> <button id=17986 button> Months </button> <button id=18352 all dates> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [23452]",
+      "op": "CLICK",
+      "element": "23452",
+      "value": "",
+      "description": "[link] Next 30 days -> CLICK",
+      "role": "link",
+      "label": "Next 30 days",
+      "observation": "<html> <div> <button id=25818 button> Days </button> <ul> <a id=26561 next 7 days> Next 7 days </a> <a id=23452 next 30 days> Next 30 days </a> </ul> </div> </html>"
+    }
+  ]
+}

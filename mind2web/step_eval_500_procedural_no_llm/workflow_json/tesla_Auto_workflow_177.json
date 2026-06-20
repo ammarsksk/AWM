@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "name": "tesla / Auto workflow 177",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Check the price of Tesla Model Y Performance for the 10001 zip code.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "tesla",
+      "model",
+      "10001",
+      "use",
+      "link",
+      "shopping",
+      "auto",
+      "check",
+      "price",
+      "performance",
+      "zip",
+      "code",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "order",
+      "now",
+      "div",
+      "dual",
+      "motor",
+      "all",
+      "wheel",
+      "drive",
+      "43235",
+      "specific",
+      "field",
+      "confirm"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Model Y",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Model Y",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Order Now",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Order Now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Dual Motor All-Wheel Drive",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Dual Motor All-Wheel Drive",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 43235",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "43235",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the [input] -> TYPE: 10001",
+        "operation": "TYPE",
+        "target_type": "input",
+        "target": "[input] -> TYPE: 10001",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Confirm",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Confirm",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "tesla / Auto workflow 177"
+}

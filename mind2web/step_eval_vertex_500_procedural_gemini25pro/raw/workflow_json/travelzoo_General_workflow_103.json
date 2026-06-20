@@ -1,0 +1,60 @@
+{
+  "name": "travelzoo / General workflow 103",
+  "source": "Mind2Web exemplar",
+  "website": "travelzoo",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Show me hotels in New York city to stay in during spring",
+  "steps": [
+    {
+      "action": "TYPE [120] [New York City]",
+      "op": "TYPE",
+      "element": "120",
+      "value": "New York City",
+      "description": "[textbox] Where? -> TYPE: New York City",
+      "role": "textbox",
+      "label": "Where?",
+      "observation": "<html> <body> <form> <input homepage /> <h3> Show me: </h3> <div> <label> Where? </label> <input id=120 text anywhere... /> <button button> x </button> </div> <button id=506 submit search> Search Deals </button> </form> <footer contentinfo> <a id=1607> Hotels </a> </footer> </body> </html>"
+    },
+    {
+      "action": "CLICK [8226]",
+      "op": "CLICK",
+      "element": "8226",
+      "value": "",
+      "description": "[div] New York City, NY -> CLICK",
+      "role": "div",
+      "label": "New York City, NY",
+      "observation": "<html> <body> <form> <input homepage /> <h3> Show me: </h3> <button id=6700 submit search> Search Deals </button> </form> <footer contentinfo> <a id=7801> Hotels </a> </footer> <li id=8226> <div> New York City, NY </div> </li> </body> </html>"
+    },
+    {
+      "action": "CLICK [9606]",
+      "op": "CLICK",
+      "element": "9606",
+      "value": "",
+      "description": "[textbox] When? -> CLICK",
+      "role": "textbox",
+      "label": "When?",
+      "observation": "<html> <body> <div> <label> When? </label> <input id=9606 text all dates anytime... /> <input anytime /> </div> <section main> <div> <input/> <button id=9602 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> </section> <footer contentinfo> <a id=15433> Hotels </a> </footer> </body> </html>"
+    },
+    {
+      "action": "CLICK [24447]",
+      "op": "CLICK",
+      "element": "24447",
+      "value": "",
+      "description": "[li] Spring -> CLICK",
+      "role": "li",
+      "label": "Spring",
+      "observation": "<html> <body> <div tablist> <h3 tab> Upcoming Dates </h3> <div tabpanel> <ul> <li> All Dates </li> <li> This Weekend </li> <li> Next Month </li> <li id=24447> Spring </li> <li> Summer </li> <li> Fall </li> <li> Winter </li> </ul> </div> <h3 id=24811 tab> Select a Month </h3> <div tabpanel> </div> </div> <section main> <div> <input/> <button id=24443 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> </section> </body> </html>"
+    },
+    {
+      "action": "CLICK [39241]",
+      "op": "CLICK",
+      "element": "39241",
+      "value": "",
+      "description": "[button] SEARCH DEALS -> CLICK",
+      "role": "button",
+      "label": "SEARCH DEALS",
+      "observation": "<html> <body> <form> <input resultslist /> <div> <label> When? </label> <input id=39509 text all dates anytime... spring /> <input spring /> </div> <button id=39241 submit search> Search Deals </button> </form> <section main> <div> <input/> <button id=39245 button> <span> Filter <span> : <b> ON </b> </span> </span> <span> Filter </span> </button> </div> </section> </body> </html>"
+    }
+  ]
+}

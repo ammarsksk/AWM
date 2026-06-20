@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "name": "last.fm / Music workflow 200",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "goal_pattern": "Find events starting from April 1, 2023 within 100 miles of New York and see who are going in the top listed event and follow all of them who are going.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "going",
+      "specific",
+      "field",
+      "events",
+      "new",
+      "york",
+      "who",
+      "are",
+      "link",
+      "search",
+      "apply",
+      "date",
+      "last",
+      "entertainment",
+      "music",
+      "find",
+      "starting",
+      "april",
+      "2023",
+      "within",
+      "100",
+      "miles",
+      "see",
+      "top",
+      "listed",
+      "event",
+      "follow",
+      "all",
+      "them",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "near",
+      "you",
+      "textbox",
+      "location",
+      "span",
+      "combobox",
+      "radius",
+      "today"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Events",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Events",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Near you",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Near you",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Location search",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Location search",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the New York",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "New York",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "select the SEARCH RADIUS",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "SEARCH RADIUS",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the From today",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "From today",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the FROM",
+        "operation": "CLICK",
+        "target_type": "Date",
+        "target": "FROM",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "type the FROM",
+        "operation": "TYPE",
+        "target_type": "Date",
+        "target": "FROM",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the APPLY",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "APPLY",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the 3 going",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "3 going",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the [button] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "[button] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the [button] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "[button] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the [button] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "[button] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 14
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 14.0
+  },
+  "raw_workflow_name": "last.fm / Music workflow 200"
+}

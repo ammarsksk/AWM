@@ -433,7 +433,7 @@ class DeterministicDemoAgent:
         self,
         memory: WorkflowMemory,
         use_real_llm: bool = False,
-        model: str = "moonshotai/kimi-k2.6",
+        model: str = "google/gemini-2.5-pro",
     ) -> None:
         self.memory = memory
         self.use_real_llm = use_real_llm
@@ -885,7 +885,7 @@ def main() -> int:
     parser.add_argument(
         "--model",
         type=str,
-        default="moonshotai/kimi-k2.6",
+        default="google/gemini-2.5-pro",
         help="OpenAI-compatible model name to use with --use-real-llm.",
     )
     parser.add_argument(

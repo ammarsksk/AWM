@@ -1,0 +1,180 @@
+{
+  "name": "budget / Car rental workflow 403",
+  "source": "Mind2Web exemplar",
+  "website": "budget",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Book the cheapest cab with GPS and unlimited e-toll, and pay now for an option for a military veteran with pick up from the nearest location to  Nevada City, California, on June 6, 11 am, and drop off at the exact location on June 10, 1 pm.",
+  "steps": [
+    {
+      "action": "CLICK [122]",
+      "op": "CLICK",
+      "element": "122",
+      "value": "",
+      "description": "[link] Military & Veterans -> CLICK",
+      "role": "link",
+      "label": "Military & Veterans",
+      "observation": "<html> <div> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=1318 text angupicloc enter your pick-up location or los angeles intl airport, los /> <a> click here </a> </div> </angucomplete-alt> <div> <button button> Select My Car </button> <a id=1830> Continue </a> </div> </div> </form> <a id=122> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [5234] [nevada city]",
+      "op": "TYPE",
+      "element": "5234",
+      "value": "nevada city",
+      "description": "[textbox] Enter your pick-up location or zip code -> TYPE: nevada city",
+      "role": "textbox",
+      "label": "Enter your pick-up location or zip code",
+      "observation": "<html> <div> <ul> <a id=5911 button> Reservations </a> <a id=6059 button> Locations </a> </ul> <form resform> <angucomplete-alt enter your pick-up location or> <div> <input id=5234 text angupicloc enter your pick-up location or los angeles intl airport, los /> <a> click here </a> </div> </angucomplete-alt> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [14423]",
+      "op": "CLICK",
+      "element": "14423",
+      "value": "",
+      "description": "[span] Nevada City -> CLICK",
+      "role": "span",
+      "label": "Nevada City",
+      "observation": "<html> <form resform> <angucomplete-alt enter your pick-up location or> <div> <span> <span id=14423> Nevada City </span> <span> , United States </span> </span> <span> <span id=15691> Nevada City </span> <span> , United States </span> </span> <span> <span id=15705> Nevada City </span> <span> , United States </span> </span> </div> </angucomplete-alt> </form> </html>"
+    },
+    {
+      "action": "CLICK [24733]",
+      "op": "CLICK",
+      "element": "24733",
+      "value": "",
+      "description": "[span] 4831 Granite Dr -> CLICK",
+      "role": "span",
+      "label": "4831 Granite Dr",
+      "observation": "<html> <div> <ul> <a id=25409 button> Reservations </a> <a id=25557 button> Locations </a> </ul> <form resform> <angucomplete-alt enter your pick-up location or> <div> <span id=24733> 4831 Granite Dr </span> <span> , Rocklin </span> <span> , California </span> <span> , United States-(RK3) </span> </div> </angucomplete-alt> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [35006]",
+      "op": "CLICK",
+      "element": "35006",
+      "value": "",
+      "description": "[textbox] mm/dd/yyyy -> CLICK",
+      "role": "textbox",
+      "label": "mm/dd/yyyy",
+      "observation": "<html> <div> <form resform> <div> <div> <input id=35006 text mm/dd/yyyy 07/07/2023 /> <button button> ... </button> </div> <div> <button id=37187 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=39117> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [45192] [June 2023]",
+      "op": "SELECT",
+      "element": "45192",
+      "value": "June 2023",
+      "description": "[select] April 2023 -> SELECT: June 2023",
+      "role": "select",
+      "label": "April 2023",
+      "observation": "<html> <body> <a id=49289> Military & Veterans </a> <div> <a id=49868> 10 </a> <div> Jump to a new date: <select id=45192> <option 3|2023> April 2023 </option> <option 4|2023> May 2023 </option> <option 5|2023> June 2023 </option> <option 6|2023 true> July 2023 </option> <option 7|2023> August 2023 </option> <option 8|2023> September 2023 </option> <option 9|2023> October 2023 </option> <option 10|2023> November 2023 </option> <option 11|2023> December 2023 </option> <option 0|2024> January 2024 </option> <option 1|2024> February 2024 </option> <option 2|2024> March 2024 </option> </select> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [55347]",
+      "op": "CLICK",
+      "element": "55347",
+      "value": "",
+      "description": "[link] 6 -> CLICK",
+      "role": "link",
+      "label": "6",
+      "observation": "<html> <body> <a id=59441> Military & Veterans </a> <div> <a id=55347> 6 </a> <a id=60146> 6 </a> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [65475] [11 00 AM]",
+      "op": "SELECT",
+      "element": "65475",
+      "value": "11 00 AM",
+      "description": "[combobox] Pick Up Time -> SELECT: 11:00 AM",
+      "role": "combobox",
+      "label": "Pick Up Time",
+      "observation": "<html> <div> <form resform> <div> <select id=65475 pick up time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm> noon </option> </select> <div> <button id=67639 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=69569> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [75628]",
+      "op": "CLICK",
+      "element": "75628",
+      "value": "",
+      "description": "[textbox] mm/dd/yyyy -> CLICK",
+      "role": "textbox",
+      "label": "mm/dd/yyyy",
+      "observation": "<html> <div> <form resform> <div> <div> <input id=75628 text mm/dd/yyyy 07/15/2023 /> <button button> ... </button> </div> <div> <button id=77807 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=79737> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [85805] [June 2023]",
+      "op": "SELECT",
+      "element": "85805",
+      "value": "June 2023",
+      "description": "[select] June 2023 -> SELECT: June 2023",
+      "role": "select",
+      "label": "June 2023",
+      "observation": "<html> <body> <a id=89903> Military & Veterans </a> <div> <a id=90480> 10 </a> <div> Jump to a new date: <select id=85805> <option 5|2023> June 2023 </option> <option 6|2023 true> July 2023 </option> <option 7|2023> August 2023 </option> <option 8|2023> September 2023 </option> <option 9|2023> October 2023 </option> <option 10|2023> November 2023 </option> <option 11|2023> December 2023 </option> <option 0|2024> January 2024 </option> <option 1|2024> February 2024 </option> <option 2|2024> March 2024 </option> <option 3|2024> April 2024 </option> <option 4|2024> May 2024 </option> </select> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [95979]",
+      "op": "CLICK",
+      "element": "95979",
+      "value": "",
+      "description": "[link] 10 -> CLICK",
+      "role": "link",
+      "label": "10",
+      "observation": "<html> <body> <a id=100074> Military & Veterans </a> <tr> <a id=95971> 6 </a> <a id=95979> 10 </a> </tr> </body> </html>"
+    },
+    {
+      "action": "SELECT [106091] [1 00 PM]",
+      "op": "SELECT",
+      "element": "106091",
+      "value": "1 00 PM",
+      "description": "[combobox] Return Time -> SELECT: 1:00 PM",
+      "role": "combobox",
+      "label": "Return Time",
+      "observation": "<html> <div> <form resform> <div> <select id=106091 return time> <option midnight string:12:00 am> midnight </option> <option 12:30 am string:12:30 am> 12:30 AM </option> <option 1:00 am string:1:00 am> 1:00 AM </option> <option 1:30 am string:1:30 am> 1:30 AM </option> <option 2:00 am string:2:00 am> 2:00 AM </option> <option 2:30 am string:2:30 am> 2:30 AM </option> <option 3:00 am string:3:00 am> 3:00 AM </option> <option 3:30 am string:3:30 am> 3:30 AM </option> <option 4:00 am string:4:00 am> 4:00 AM </option> <option 4:30 am string:4:30 am> 4:30 AM </option> <option 5:00 am string:5:00 am> 5:00 AM </option> <option 5:30 am string:5:30 am> 5:30 AM </option> <option 6:00 am string:6:00 am> 6:00 AM </option> <option 6:30 am string:6:30 am> 6:30 AM </option> <option 7:00 am string:7:00 am> 7:00 AM </option> <option 7:30 am string:7:30 am> 7:30 AM </option> <option 8:00 am string:8:00 am> 8:00 AM </option> <option 8:30 am string:8:30 am> 8:30 AM </option> <option 9:00 am string:9:00 am> 9:00 AM </option> <option 9:30 am string:9:30 am> 9:30 AM </option> <option 10:00 am string:10:00 am> 10:00 AM </option> <option 10:30 am string:10:30 am> 10:30 AM </option> <option 11:00 am string:11:00 am> 11:00 AM </option> <option 11:30 am string:11:30 am> 11:30 AM </option> <option noon string:12:00 pm> noon </option> </select> <div> <button id=108255 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=110185> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [116231]",
+      "op": "CLICK",
+      "element": "116231",
+      "value": "",
+      "description": "[button] Select My Car -> CLICK",
+      "role": "button",
+      "label": "Select My Car",
+      "observation": "<html> <div> <form resform> <div> <angucomplete-alt enter your pick-up location or> <div> <input id=117451 text angupicloc enter your pick-up location or 4831 granite dr, rocklin, california, /> <a> click here </a> </div> </angucomplete-alt> <div> <button id=116231 button> Select My Car </button> <a> Continue </a> </div> </div> </form> <a id=120324> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [126367]",
+      "op": "CLICK",
+      "element": "126367",
+      "value": "",
+      "description": "[link] Pay Now -> CLICK",
+      "role": "link",
+      "label": "Pay Now",
+      "observation": "<html> <div> <div> <form resform> <div> <span> Sort by: </span> <a id=126356> Price (Low to High) </a> </div> </form> <div> <a id=126367> Pay Now </a> <p> Pay Now & Save 33.24 </p> </div> </div> <a id=132156> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [140038]",
+      "op": "CLICK",
+      "element": "140038",
+      "value": "",
+      "description": "[checkbox] $14.45/Day$13.95/Day -> CLICK",
+      "role": "checkbox",
+      "label": "$14.45/Day$13.95/Day",
+      "observation": "<html> <div> <section> <div> <h1> Recommended Extras </h1> <button id=143836 button> Continue </button> </div> <input id=140038 checkbox group-gps on /> </section> <a id=146534> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [155576]",
+      "op": "CLICK",
+      "element": "155576",
+      "value": "",
+      "description": "[checkbox] $12.99/Day -> CLICK",
+      "role": "checkbox",
+      "label": "$12.99/Day",
+      "observation": "<html> <div> <section> <div> <h1> Recommended Extras </h1> <button id=159402 button> Continue </button> </div> <input id=155576 checkbox group-tol on /> </section> <a id=162116> Military & Veterans </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [171187]",
+      "op": "CLICK",
+      "element": "171187",
+      "value": "",
+      "description": "[button] Continue -> CLICK",
+      "role": "button",
+      "label": "Continue",
+      "observation": "<html> <div> <section> <div> <h1> Recommended Extras </h1> <button id=175032 button> Continue </button> </div> <button id=171187 submit> Continue </button> </section> <a id=177762> Military & Veterans </a> </div> </html>"
+    }
+  ]
+}

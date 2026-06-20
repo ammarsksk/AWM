@@ -1,0 +1,126 @@
+{
+  "activation": {
+    "operations": [
+      "CLICK"
+    ],
+    "ui_terms": [
+      "value",
+      "required",
+      "filter",
+      "link",
+      "add",
+      "women",
+      "waterproof",
+      "rating",
+      "stars",
+      "rei",
+      "shopping",
+      "speciality",
+      "browse",
+      "hiking",
+      "boots",
+      "section",
+      "results",
+      "show",
+      "only",
+      "those",
+      "are",
+      "have",
+      "least",
+      "size",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "camp",
+      "hike",
+      "220",
+      "171"
+    ],
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "when_to_use": "Use for tasks with a similar goal on the same site area."
+  },
+  "domain": "Shopping",
+  "execution": {
+    "steps": [
+      {
+        "intent": "click the Camp & Hike",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 1,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Camp & Hike",
+        "target_type": "button",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the Women's",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 2,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "Women's",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the add filter: 6(220",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 3,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "add filter: 6(220",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the add filter: Waterproof(171",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 4,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "add filter: Waterproof(171",
+        "target_type": "link",
+        "value_policy": "No value required."
+      },
+      {
+        "intent": "click the add filter: rating of 4-to-5 stars 99",
+        "operation": "CLICK",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "step": 5,
+        "success_signal": "The page advances or the selected field reflects the intended value.",
+        "target": "add filter: rating of 4-to-5 stars 99",
+        "target_type": "link",
+        "value_policy": "No value required."
+      }
+    ]
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "goal_pattern": "Browse the women's hiking boots section and filter the results to show only those that are waterproof and have a rating of at least 4 stars and size 6.",
+  "memory_type": "typed_procedure",
+  "name": "rei / Speciality workflow 294",
+  "raw_workflow_name": "rei / Speciality workflow 294",
+  "schema_version": 1,
+  "source": "Mind2Web exemplar",
+  "stats": {
+    "avg_steps": 5.0,
+    "failure_count": 0,
+    "success_count": 1
+  },
+  "subdomain": "Speciality",
+  "termination": {
+    "max_steps_hint": 5,
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible."
+  },
+  "website": "rei"
+}

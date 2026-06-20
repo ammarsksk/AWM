@@ -1,0 +1,30 @@
+{
+  "name": "qatarairways / Airlines workflow 813",
+  "source": "Mind2Web exemplar",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Retrieve booking 1234567890 booked by Jason Smith",
+  "steps": [
+    {
+      "action": "CLICK [94]",
+      "op": "CLICK",
+      "element": "94",
+      "value": "",
+      "description": "[tab] \ue90cMy Trips -> CLICK",
+      "role": "tab",
+      "label": "\ue90cMy Trips",
+      "observation": "<html> <body> <div dialog> <button id=821> Continue </button> </div> <div> <a id=2434 button> Book </a> <ul tablist> <a id=94 tab> My Trips </a> </ul> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [21531] [1234567890]",
+      "op": "TYPE",
+      "element": "21531",
+      "value": "1234567890",
+      "description": "[textbox] booking reference -> TYPE: 1234567890",
+      "role": "textbox",
+      "label": "booking reference",
+      "observation": "<html> <body> <div dialog> <button id=22259> Continue </button> </div> <div tabpanel> <div> <input e-ticket number /> <div> <input id=21531 text booking reference /> <span> Booking reference </span> </div> <button id=29715 submit> Retrieve booking </button> </div> </div> </body> </html>"
+    }
+  ]
+}

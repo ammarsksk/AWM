@@ -1,0 +1,51 @@
+{
+  "name": "sixflags / Other workflow 126",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "sixflags",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Buy a birthday party package for a group of 10 at Arizona park with my address details. Group name is Neo, group leader's name is Thomas Anderson, birthday is May 5th, 1995. The phone number is2526545258. The email address is thomas.neo@gmail.com and address is po box 2846, Texas city in the state of Texas.",
+  "goal_pattern": "Buy a birthday party package for a group of 10 at Arizona park with my address details. Group name is Neo, group leader's name is Thomas Anderson, birthday is May 5th, 1995. The phone number is2526545258. The email address is thomas.neo@gmail.com and address is po box 2846, Texas city in the state of Texas.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Browse the Parks Below",
+      "operation": "CLICK",
+      "target_type": "button",
+      "target_description": "Browse the Parks Below",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Hurricane Harbor Phoenix",
+      "operation": "CLICK",
+      "target_type": "span",
+      "target_description": "Hurricane Harbor Phoenix",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [1089]",
+      "gold_element_id": "1089",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [12288]",
+      "gold_element_id": "12288",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "sixflags / Other workflow 126"
+}

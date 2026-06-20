@@ -1,0 +1,100 @@
+{
+  "name": "ebay / General workflow 151",
+  "source": "Mind2Web exemplar",
+  "website": "ebay",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Find the cheapest used and working  Nintendo Switch for under $400 that can be bought right now.",
+  "steps": [
+    {
+      "action": "TYPE [200] [Nintendo Switch Console]",
+      "op": "TYPE",
+      "element": "200",
+      "value": "Nintendo Switch Console",
+      "description": "[combobox] Search for anything -> TYPE: Nintendo Switch Console",
+      "role": "combobox",
+      "label": "Search for anything",
+      "observation": "<html> <body> <header banner> <tr> <input id=200 combobox text search for anything _nkw /> <input id=747 submit search /> </tr> </header> <div main> <li> <a id=987> Electronics </a> <button> Expand: Electronics </button> </li> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [8853]",
+      "op": "CLICK",
+      "element": "8853",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <header banner> <tr> <ul listbox> <a id=9386 option nintendo switch console> <b> nintendo </b> <b> switch </b> <b> console </b> </a> </ul> <input id=8853 submit search /> </tr> </header> <div main> <li> <a id=10353> Refurbished </a> <button> Expand: Refurbished </button> </li> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [13202] [400]",
+      "op": "TYPE",
+      "element": "13202",
+      "value": "400",
+      "description": "[textbox] Maximum Value in $ -> TYPE: 400",
+      "role": "textbox",
+      "label": "Maximum Value in $",
+      "observation": "<html> <li> <div id=15813 button> <h3> Price </h3> </div> <div> <span> to </span> <span> <label> Max </label> <input id=13202 text maximum value in $ /> </span> <button id=15901 button submit price range /> </div> </li> </html>"
+    },
+    {
+      "action": "CLICK [35861]",
+      "op": "CLICK",
+      "element": "35861",
+      "value": "",
+      "description": "[button] Submit price range -> CLICK",
+      "role": "button",
+      "label": "Submit price range",
+      "observation": "<html> <div> <li> <div id=38507 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=35861 button submit price range /> </div> </li> <div main> <button id=39251 button sort selector. best match selected.> <span> Best Match </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47586]",
+      "op": "CLICK",
+      "element": "47586",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <input id=47586 checkbox used on /> <div main> <button id=50898 button sort selector. best match selected.> <span> Best Match </span> </button> <div group> <a id=51523> <div> Under $400.00 <span> Remove filter </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [59085]",
+      "op": "CLICK",
+      "element": "59085",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <input id=59085 radio buy it now format on /> <div main> <button id=62230 button sort selector. best match selected.> <span> Best Match </span> </button> <div group> <a id=62855> <div> Under $400.00 <span> Remove filter </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [73337]",
+      "op": "CLICK",
+      "element": "73337",
+      "value": "",
+      "description": "[button] Sort selector. Best Match selected. -> CLICK",
+      "role": "button",
+      "label": "Sort selector. Best Match selected.",
+      "observation": "<html> <div> <div id=72571 button> <h3> Price </h3> </div> <div main> <button id=73337 button sort selector. best match selected.> <span> Best Match </span> </button> <div group> <a id=73939> <div> Under $400.00 <span> Remove filter </span> </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [94218]",
+      "op": "CLICK",
+      "element": "94218",
+      "value": "",
+      "description": "[link] Price + Shipping: lowest first -> CLICK",
+      "role": "link",
+      "label": "Price + Shipping: lowest first",
+      "observation": "<html> <div> <li> <div id=93428 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=93517 button submit price range /> </div> </li> <div main> <a id=94218> <span> Price + Shipping: lowest first </span> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [101853]",
+      "op": "CLICK",
+      "element": "101853",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <ul> <li model> <input id=101853 checkbox nintendo switch on /> </li> <li> <div id=104306 button> <h3> Price </h3> </div> <div> <span> to </span> <button id=104395 button submit price range /> </div> </li> </ul> </html>"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "yelp / Restaurant workflow 262",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Find parking in California city for Limos which also offers military discounts and free wi-fi.",
+  "steps": [
+    {
+      "action": "CLICK [368]",
+      "op": "CLICK",
+      "element": "368",
+      "value": "",
+      "description": "[link] Auto Services -> HOVER",
+      "role": "link",
+      "label": "Auto Services",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div combobox> <input text /> <input id=280 textbox text near address, neighborhood, city, state or /> </div> </form> <nav business categories> <div> <a id=362> <span> Home Services </span> <span img /> </a> <a id=368> <span> Auto Services </span> <span img /> </a> </div> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [7735]",
+      "op": "CLICK",
+      "element": "7735",
+      "value": "",
+      "description": "[span] Parking -> CLICK",
+      "role": "span",
+      "label": "Parking",
+      "observation": "<html> <div banner explore banner section> <div search> <div> <form search> <div> <div combobox> <input text /> <input id=7578 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=7590 textbox text near address, neighborhood, city, state or /> </div> </div> </form> <nav business categories> <div> <a menuitem> </a> <a menuitem> </a> <a id=7735 menuitem> <div> <span img /> <span> Parking </span> </div> </a> <a menuitem> </a> </div> </nav> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [13074] [CALIFORNIA]",
+      "op": "TYPE",
+      "element": "13074",
+      "value": "CALIFORNIA",
+      "description": "[textbox] Near -> TYPE: CALIFORNIA",
+      "role": "textbox",
+      "label": "Near",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=13074 textbox text near california city, ca address, neighborhood, city, state or /> </div> </form> <div> <a id=13604> California City, CA </a> <span group filters> <button id=13658 button> <span img /> <span> All </span> </button> <button button> </button> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [19838]",
+      "op": "CLICK",
+      "element": "19838",
+      "value": "",
+      "description": "[span] California -> CLICK",
+      "role": "span",
+      "label": "California",
+      "observation": "<html> <div> <a id=20660> California City, CA </a> <div> <h5> More </h5> <a id=22119> <p> Los Angeles, CA </p> </a> </div> </div> <span id=19838 css-qgunke> <text bounding_box_rect= 469,137,65,19>California</text> </span> </html>"
+    },
+    {
+      "action": "CLICK [27035]",
+      "op": "CLICK",
+      "element": "27035",
+      "value": "",
+      "description": "[button] Limos -> CLICK",
+      "role": "button",
+      "label": "Limos",
+      "observation": "<html> <div> <nav business categories> <a id=27368> <span> Auto Services </span> <span img /> </a> </nav> <a id=27564> California City, CA </a> </div> <p id=27035 css-fohjg7> <text bounding_box_rect= -1,-1,-1,-1>Limos</text> </p> </html>"
+    },
+    {
+      "action": "CLICK [33743]",
+      "op": "CLICK",
+      "element": "33743",
+      "value": "",
+      "description": "[checkbox] Offers Military Discount -> CLICK",
+      "role": "checkbox",
+      "label": "Offers Military Discount",
+      "observation": "<html> <div> <a id=34319> California City, CA </a> <span group filters> <button id=34382 button> <span img /> <span> 1 </span> <span> All </span> </button> <button button> </button> </span> </div> <input id=33743 checkbox feature /> </html>"
+    },
+    {
+      "action": "CLICK [41436]",
+      "op": "CLICK",
+      "element": "41436",
+      "value": "",
+      "description": "[checkbox] Free Wi-Fi -> CLICK",
+      "role": "checkbox",
+      "label": "Free Wi-Fi",
+      "observation": "<html> <div> <a id=42054 button> <span> Recommended </span> <span img /> </a> <span group filters> <button id=42075 button> <span img /> <span> 2 </span> <span> All </span> </button> <button button> </button> </span> </div> <input id=41436 checkbox feature wifi.free /> </html>"
+    }
+  ]
+}

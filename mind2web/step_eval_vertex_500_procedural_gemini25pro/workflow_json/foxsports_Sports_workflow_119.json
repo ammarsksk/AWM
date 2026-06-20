@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "name": "foxsports / Sports workflow 119",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "foxsports",
+  "domain": "Entertainment",
+  "subdomain": "Sports",
+  "goal_pattern": "Open the NFL Passing yards players stats.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "open",
+      "nfl",
+      "passing",
+      "yards",
+      "stats",
+      "heading",
+      "foxsports",
+      "entertainment",
+      "sports",
+      "players",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "national",
+      "football",
+      "league",
+      "more",
+      "dropdown"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the National Football League NFL",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "National Football League NFL",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Open More Dropdown",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open More Dropdown",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the STATS",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "STATS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the PASSING YARDS",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "PASSING YARDS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "foxsports / Sports workflow 119"
+}

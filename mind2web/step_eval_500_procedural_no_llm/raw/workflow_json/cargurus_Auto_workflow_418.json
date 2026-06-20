@@ -1,0 +1,70 @@
+{
+  "name": "cargurus / Auto workflow 418",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find used BMW i3 for 10001 zip code with lowest price.",
+  "steps": [
+    {
+      "action": "CLICK [15421]",
+      "op": "CLICK",
+      "element": "15421",
+      "value": "",
+      "description": "[menuitem] Buy -> CLICK",
+      "role": "menuitem",
+      "label": "Buy",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=15421 menuitem> <span> Buy </span> </button> <div menu> </div> </li> </ul> </nav> <form dealfinderform> <fieldset> <input sourcecontext /> <span> near </span> <input id=16604 tel zip 10017 /> <input id=16608 submit search /> </fieldset> </form> </body> </html>"
+    },
+    {
+      "action": "SELECT [25275] [BMW]",
+      "op": "SELECT",
+      "element": "25275",
+      "value": "BMW",
+      "description": "[combobox] Select Make -> SELECT: BMW",
+      "role": "combobox",
+      "label": "Select Make",
+      "observation": "<html> <form> <div> <select id=25275 select make selectedmakeid> <option true> All Makes </option> <optgroup popular makes> <option m4> Acura </option> <option m124> Alfa Romeo </option> <option m19> Audi </option> <option m3> BMW </option> <option m21> Buick </option> <option m22> Cadillac </option> <option m1> Chevrolet </option> <option m23> Chrysler </option> <option m24> Dodge </option> <option m98> FIAT </option> <option m2> Ford </option> <option m203> Genesis </option> <option m26> GMC </option> <option m6> Honda </option> <option m28> Hyundai </option> <option m84> INFINITI </option> <option m31> Jaguar </option> <option m32> Jeep </option> <option m33> Kia </option> <option m35> Land Rover </option> <option m37> Lexus </option> <option m38> Lincoln </option> <option m40> Maserati </option> <option m42> Mazda </option> </optgroup> </select> <svg img /> </div> <div> <input id=26446 tel zip code zip 10017 /> <button button find my location> </button> </div> <button id=26477 submit> <div> Search </div> </button> </form> </html>"
+    },
+    {
+      "action": "SELECT [33230] [i3]",
+      "op": "SELECT",
+      "element": "33230",
+      "value": "i3",
+      "description": "[combobox] Select Model -> SELECT: i3",
+      "role": "combobox",
+      "label": "Select Model",
+      "observation": "<html> <form> <div> <select id=33230 select model> <option true> All Models </option> <optgroup popular models> <option d1052> 1 Series </option> <option d2262> 2 Series </option> <option d1512> 3 Series </option> <option d2240> 3 Series Gran Turismo </option> <option d2244> 4 Series </option> <option d1628> 5 Series </option> <option d2075> 5 Series Gran Turismo </option> <option d1513> 6 Series </option> <option d1517> 7 Series </option> <option d1627> 8 Series </option> <option d2263> i3 </option> <option d3155> i4 </option> <option d3236> i7 </option> <option d2274> i8 </option> <option d3156> iX </option> <option d2396> M2 </option> <option d390> M3 </option> <option d2258> M4 </option> <option d391> M5 </option> <option d825> M6 </option> <option d2902> M8 </option> <option d2160> X1 </option> <option d2623> X2 </option> <option d392> X3 </option> </optgroup> </select> <svg img /> </div> <div> <input id=34491 tel zip code zip 10017 /> <button button find my location> </button> </div> <button id=34522 submit> <div> Search </div> </button> </form> </html>"
+    },
+    {
+      "action": "TYPE [41253] [10001]",
+      "op": "TYPE",
+      "element": "41253",
+      "value": "10001",
+      "description": "[textbox] Zip Code -> TYPE: 10001",
+      "role": "textbox",
+      "label": "Zip Code",
+      "observation": "<html> <form> <div> <select id=42387 select model> <option> All Models </option> <optgroup popular models> <option d1052> 1 Series </option> <option d2262> 2 Series </option> <option d1512> 3 Series </option> <option d2240> 3 Series Gran Turismo </option> <option d2244> 4 Series </option> <option d1628> 5 Series </option> <option d2075> 5 Series Gran Turismo </option> <option d1513> 6 Series </option> <option d1517> 7 Series </option> <option d1627> 8 Series </option> <option d2263 true> i3 </option> <option d3155> i4 </option> <option d3236> i7 </option> <option d2274> i8 </option> <option d3156> iX </option> <option d2396> M2 </option> <option d390> M3 </option> <option d2258> M4 </option> <option d391> M5 </option> <option d825> M6 </option> <option d2902> M8 </option> <option d2160> X1 </option> <option d2623> X2 </option> <option d392> X3 </option> </optgroup> </select> <svg img /> </div> <div> <input id=41253 tel zip code zip 10017 /> <button button find my location> </button> </div> <button id=42543 submit> <div> Search </div> </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [50531]",
+      "op": "CLICK",
+      "element": "50531",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <form> <div> <select id=50374 select model> <option> All Models </option> <optgroup popular models> <option d1052> 1 Series </option> <option d2262> 2 Series </option> <option d1512> 3 Series </option> <option d2240> 3 Series Gran Turismo </option> <option d2244> 4 Series </option> <option d1628> 5 Series </option> <option d2075> 5 Series Gran Turismo </option> <option d1513> 6 Series </option> <option d1517> 7 Series </option> <option d1627> 8 Series </option> <option d2263 true> i3 </option> <option d3155> i4 </option> <option d3236> i7 </option> <option d2274> i8 </option> <option d3156> iX </option> <option d2396> M2 </option> <option d390> M3 </option> <option d2258> M4 </option> <option d391> M5 </option> <option d825> M6 </option> <option d2902> M8 </option> <option d2160> X1 </option> <option d2623> X2 </option> <option d392> X3 </option> </optgroup> </select> <svg img /> </div> <div> <label> Min price </label> <input id=50486 number minprice $ /> </div> <button id=50531 submit> <div> Search </div> </button> </form> </html>"
+    },
+    {
+      "action": "SELECT [57169] [Lowest price first]",
+      "op": "SELECT",
+      "element": "57169",
+      "value": "Lowest price first",
+      "description": "[combobox] Select Sort Order -> SELECT: Lowest price first",
+      "role": "combobox",
+      "label": "Select Sort Order",
+      "observation": "<html> <div> <label id=59043> <input id=59044 checkbox used /> <p> Used <span> (90) </span> </p> </label> <div> <select id=57169 select sort order> <option true> Best deals first </option> <option> Worst deals first </option> <option price_asc> Lowest price first </option> <option price_desc> Highest price first </option> <option mileage_asc> Lowest mileage first </option> <option mileage_desc> Highest mileage first </option> <option proximity_asc> Closest first </option> <option> Newest first (by car year) </option> <option> Oldest first (by car year) </option> <option> Newest listings first </option> <option> Oldest listings first </option> </select> <svg img /> </div> </div> </html>"
+    }
+  ]
+}

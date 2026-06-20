@@ -1,0 +1,40 @@
+{
+  "name": "cvs / Speciality workflow 165",
+  "source": "Mind2Web exemplar",
+  "website": "cvs",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Find the location and operating hours of the nearest CVS pharmacy to zip code 90028",
+  "steps": [
+    {
+      "action": "CLICK [107]",
+      "op": "CLICK",
+      "element": "107",
+      "value": "",
+      "description": "[button] change store -> CLICK",
+      "role": "button",
+      "label": "change store",
+      "observation": "<html> <app-homepage> <div> <button change store> <img id=107 /> Store </button> <div> <a> Create account </a> <a> Espaol </a> <a> Track an order </a> <a id=501> Locations </a> </div> </div> <main main> <div> <p> Buy online; FREE in-store pickup for most items in as little as one hour. </p> <a id=144> <span> Find a store </span> </a> </div> </main> </app-homepage> </html>"
+    },
+    {
+      "action": "TYPE [4931] [90028]",
+      "op": "TYPE",
+      "element": "4931",
+      "value": "90028",
+      "description": "[textbox] Search by Zip Code, City, State, or Landmark -> TYPE: 90028",
+      "role": "textbox",
+      "label": "Search by Zip Code, City, State, or Landmark",
+      "observation": "<html> <app-root> <app-homepage> <div dialog> <div dialog> <slot content-area> <div> <input id=4931 search /> <button submit submit search /> </div> </slot> </div> </div> <main main> <div> <p> Buy online; FREE in-store pickup for most items in as little as one hour. </p> <a id=4917> <span> Find a store </span> </a> </div> </main> </app-homepage> <footer contentinfo> <a id=6851> Store Locator </a> </footer> </app-root> </html>"
+    },
+    {
+      "action": "CLICK [9977]",
+      "op": "CLICK",
+      "element": "9977",
+      "value": "",
+      "description": "[button] Submit Search -> CLICK",
+      "role": "button",
+      "label": "Submit Search",
+      "observation": "<html> <div dialog> <div dialog> <slot content-area> <div> <div> <input search 90028 /> <button id=9977 submit submit search /> </div> <ul listbox> <li id=10379> <span> 90028 <span> Los Angeles, California </span> </span> </li> <button id=10387> <span> 90028 <span> Troy Rd, Enterprise, Oregon 97828 </span> </span> </button> </ul> </div> </slot> </div> </div> </html>"
+    }
+  ]
+}

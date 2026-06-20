@@ -1,0 +1,90 @@
+{
+  "name": "target / General workflow 379",
+  "source": "Mind2Web exemplar",
+  "website": "target",
+  "domain": "Shopping",
+  "subdomain": "General",
+  "task": "Browse winter coats featured in the weekly ad and is at least 15% off.",
+  "steps": [
+    {
+      "action": "TYPE [128] [winter coat]",
+      "op": "TYPE",
+      "element": "128",
+      "value": "winter coat",
+      "description": "[searchbox] Search: suggestions appear below -> TYPE: winter coat",
+      "role": "searchbox",
+      "label": "Search: suggestions appear below",
+      "observation": "<html> <div> <div> <a> Registry </a> <a id=238> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <nav> <a id=261 categories> Categories </a> <form> <input id=128 search search: suggestions appear below searchterm /> <input true /> <button submit go> go </button> </form> </nav> </div> </html>"
+    },
+    {
+      "action": "CLICK [5217]",
+      "op": "CLICK",
+      "element": "5217",
+      "value": "",
+      "description": "[button] go -> CLICK",
+      "role": "button",
+      "label": "go",
+      "observation": "<html> <div> <div> <a> Registry </a> <a id=5326> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <nav> <a id=5349 categories> Categories </a> <form> <input search search: suggestions appear below searchterm winter coat /> <input true /> <button button reset> </button> <button id=5217 submit go> go </button> </form> </nav> </div> </html>"
+    },
+    {
+      "action": "CLICK [10363]",
+      "op": "CLICK",
+      "element": "10363",
+      "value": "",
+      "description": "[button] Deals -> CLICK",
+      "role": "button",
+      "label": "Deals",
+      "observation": "<html> <div> <div> <a> Registry </a> <a id=10471> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <div> <button button category> Category </button> <button id=10363 button deals> Deals </button> <button button price> Price </button> <button button sold by> Sold by </button> <button id=10759 button discount> Discount </button> <button button color> Color </button> <button button type> Type </button> <button button size> Size </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [16928]",
+      "op": "CLICK",
+      "element": "16928",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div> <a> Registry </a> <a id=15167> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <div dialog> <div> <div> <input checkbox chk-5tdv0 sale /> <label id=16917> <span> Sale </span> </label> </div> <div> <input checkbox chk-55dgn weekly ad /> <label id=16928> <span> Weekly Ad </span> </label> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [19795]",
+      "op": "CLICK",
+      "element": "19795",
+      "value": "",
+      "description": "[button] Update -> CLICK",
+      "role": "button",
+      "label": "Update",
+      "observation": "<html> <body> <div> <div> <a> Registry </a> <a id=19904> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <div> <button button deals> Deals </button> <button button price> Price </button> <button button sold by> Sold by </button> <button id=20193 button discount> Discount </button> <button button color> Color </button> <button button type> Type </button> <button button size> Size </button> </div> </div> <div dialog> <div> <button button reset> Reset </button> <button id=19795 button update> Update </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [24521]",
+      "op": "CLICK",
+      "element": "24521",
+      "value": "",
+      "description": "[button] Discount -> CLICK",
+      "role": "button",
+      "label": "Discount",
+      "observation": "<html> <div> <div> <a> Registry </a> <a id=24622> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <div> <button id=24822 button deals: weekly ad> Weekly Ad </button> <button button category> Category </button> <button button price> Price </button> <button button sold by> Sold by </button> <button id=24521 button discount> Discount </button> <button button color> Color </button> <button button type> Type </button> <button button size> Size </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30358]",
+      "op": "CLICK",
+      "element": "30358",
+      "value": "",
+      "description": "[div] -> CLICK",
+      "role": "div",
+      "label": "",
+      "observation": "<html> <body> <div> <button id=28989 button category> Category </button> <button button price> Price </button> <button button sold by> Sold by </button> <button button discount> Discount </button> </div> <div dialog> <div> <input id=30357 checkbox chk-itlc4 0001 15% off or more /> <label id=30358> <span> 15% off or more </span> </label> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [32879]",
+      "op": "CLICK",
+      "element": "32879",
+      "value": "",
+      "description": "[button] Update -> CLICK",
+      "role": "button",
+      "label": "Update",
+      "observation": "<html> <body> <div> <div> <a> Registry </a> <a id=33085> Weekly Ad </a> <a> RedCard </a> <a> Target Circle </a> <a> Find Stores </a> </div> <div> <button id=32899 button category> Category </button> <button button price> Price </button> <button button sold by> Sold by </button> <button button discount> Discount </button> </div> </div> <div dialog> <div> <button button reset> Reset </button> <button id=32879 button update> Update </button> </div> </div> </body> </html>"
+    }
+  ]
+}

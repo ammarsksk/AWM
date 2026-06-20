@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "name": "qatarairways / Airlines workflow 263",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "qatarairways",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "Explore Durban in Africa and book a flight from Doha for 2 adults and 1 infant, on May 28, book the first flight in economy comfort.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "textbox",
+      "explore",
+      "durban",
+      "africa",
+      "book",
+      "flight",
+      "doha",
+      "infant",
+      "may",
+      "use",
+      "link",
+      "enter",
+      "date",
+      "passengers",
+      "qatarairways",
+      "travel",
+      "airlines",
+      "adults",
+      "first",
+      "economy",
+      "comfort",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "div",
+      "discover",
+      "autocomplete",
+      "selection",
+      "your",
+      "place",
+      "specific",
+      "field",
+      "strong",
+      "depart",
+      "please",
+      "format",
+      "spa",
+      "gridcell",
+      "2023",
+      "continue",
+      "class",
+      "increase",
+      "number"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Explore (current",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Explore (current",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Africa 29",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Africa 29",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Durban",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Durban",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Discover",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Discover",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the From Autocomplete selection. Enter your place.",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "From Autocomplete selection. Enter your place.",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Doha",
+        "operation": "CLICK",
+        "target_type": "strong",
+        "target": "Doha",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Depart date please enter date in the format dd spa...",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Depart date please enter date in the format dd spa...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the 28 May 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "28 May 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Continue",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Continue",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Passengers / Class",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Passengers / Class",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Increase number of infant passengers",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Increase number of infant passengers",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Confirm",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Confirm",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Show flights\ue99a",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Show flights\ue99a",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the QAR 4,980",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "QAR 4,980",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Select fare",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Select fare",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 15
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 15.0
+  },
+  "raw_workflow_name": "qatarairways / Airlines workflow 263"
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "name": "new.mta.info / Ground workflow 433",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "new.mta.info",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Plan a trip from Greenport to Oyster Bay Branch, starting with train and ending via bus with less than 1/2 mile walk.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "required",
+      "specific",
+      "field",
+      "travel",
+      "plan",
+      "trip",
+      "greenport",
+      "oyster",
+      "bay",
+      "searchbox",
+      "listitem",
+      "usa",
+      "combobox",
+      "journey",
+      "press",
+      "enter",
+      "key",
+      "submit",
+      "new",
+      "mta",
+      "info",
+      "ground",
+      "branch",
+      "starting",
+      "train",
+      "ending",
+      "via",
+      "bus",
+      "less",
+      "than",
+      "mile",
+      "walk",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "open",
+      "preferences",
+      "modal",
+      "start",
+      "end",
+      "done",
+      "pre",
+      "link"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Greenport, NY, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Greenport, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Oyster Bay, NY, USA",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Oyster Bay, NY, USA",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Open Travel Preferences modal.",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Open Travel Preferences modal.",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "select the Start Journey",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Start Journey",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "select the End Journey",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "End Journey",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Done button - Press enter key to submit travel pre...",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done button - Press enter key to submit travel pre...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Plan my Trip - Press enter key to submit the form ...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Plan my Trip - Press enter key to submit the form ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "new.mta.info / Ground workflow 433"
+}

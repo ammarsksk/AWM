@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "name": "underarmour / Fashion workflow 363",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "underarmour",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "goal_pattern": "find the Under Armour Return Policy for Men's UA Football All Over Print Metal Logo Short Sleeve",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "men",
+      "football",
+      "all",
+      "over",
+      "print",
+      "metal",
+      "logo",
+      "short",
+      "shirts",
+      "underarmour",
+      "shopping",
+      "fashion",
+      "find",
+      "under",
+      "armour",
+      "return",
+      "policy",
+      "sleeve",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "menuitem",
+      "tops",
+      "graphic",
+      "div",
+      "sports",
+      "free",
+      "returns",
+      "exchanges"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Men",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "Men",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Shirts & Tops",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Shirts & Tops",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Graphic T-shirts",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Graphic T-shirts",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Sports",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Sports",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Football",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Football",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Men's UA Football All Over Print Metal Logo Short ...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Men's UA Football All Over Print Metal Logo Short ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Free Returns & Exchanges \ue90b",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Free Returns & Exchanges \ue90b",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "underarmour / Fashion workflow 363"
+}

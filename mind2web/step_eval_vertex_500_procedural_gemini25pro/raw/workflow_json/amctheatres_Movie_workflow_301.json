@@ -1,0 +1,40 @@
+{
+  "name": "amctheatres / Movie workflow 301",
+  "source": "Mind2Web exemplar",
+  "website": "amctheatres",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Show me the coming soon AMC Artisan Films",
+  "steps": [
+    {
+      "action": "CLICK [128]",
+      "op": "CLICK",
+      "element": "128",
+      "value": "",
+      "description": "[link] Visit the See A Movie page -> CLICK",
+      "role": "link",
+      "label": "Visit the See A Movie page",
+      "observation": "<html> <div> <header banner> <ul menu> <li menuitem> <a id=128 visit the see a movie> See A Movie </a> </li> </ul> </header> <div> <div> <a> See All Movies </a> <a id=1794> Coming Soon </a> </div> <div> <a> See All Movies </a> <a id=2354> Coming Soon </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [5759]",
+      "op": "CLICK",
+      "element": "5759",
+      "value": "",
+      "description": "[link] Coming Soon -> CLICK",
+      "role": "link",
+      "label": "Coming Soon",
+      "observation": "<html> <div> <header banner> <ul menu> <li menuitem> <a id=5955 visit the our theatres page> Our Theatres </a> </li> </ul> </header> <div> <a> Now Playing </a> <a id=5759> Coming Soon </a> <a> On Demand </a> </div> <footer contentinfo> <ul navigation> <a id=6964> AMC Artisan Films </a> </ul> </footer> </div> </html>"
+    },
+    {
+      "action": "SELECT [10265] [AMC Artisan Films]",
+      "op": "SELECT",
+      "element": "10265",
+      "value": "AMC Artisan Films",
+      "description": "[combobox] Featured Movies -> SELECT: AMC Artisan Films",
+      "role": "combobox",
+      "label": "Featured Movies",
+      "observation": "<html> <div> <header banner> <ul menu> <li menuitem> <a id=10039 visit the our theatres page> Our Theatres </a> </li> </ul> </header> <label id=10265> Featured Movies <select> <option featured true> Featured Movies </option> <option artisan> AMC Artisan Films </option> <option sensory> Sensory Friendly Films </option> </select> </label> <footer contentinfo> <ul navigation> <a id=11027> AMC Artisan Films </a> </ul> </footer> </div> </html>"
+    }
+  ]
+}

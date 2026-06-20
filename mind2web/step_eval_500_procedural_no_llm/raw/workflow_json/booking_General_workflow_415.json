@@ -1,0 +1,140 @@
+{
+  "name": "booking / General workflow 415",
+  "source": "Mind2Web exemplar",
+  "website": "booking",
+  "domain": "Travel",
+  "subdomain": "General",
+  "task": "Reserve a taxi from O'hare Airport to 123 Main St, West Chicago, IL on Mar 29, 2023 at 12 noon for 2 adults.",
+  "steps": [
+    {
+      "action": "CLICK [809]",
+      "op": "CLICK",
+      "element": "809",
+      "value": "",
+      "description": "[span] Airport taxis -> CLICK",
+      "role": "span",
+      "label": "Airport taxis",
+      "observation": "<html> <body> <nav what are you looking for?> <a id=809> <span> Airport taxis </span> </a> </nav> <div main> <ul tablist> <button id=1776 tab button> <span> City </span> </button> </ul> </div> <div contentinfo> <div navigation> <a id=4717> Airports </a> </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [5828] [O'hare Airport]",
+      "op": "TYPE",
+      "element": "5828",
+      "value": "O'hare Airport",
+      "description": "[textbox] Pick-up location -> TYPE: O'hare Airport",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div> <div button> <input id=5828 text enter pick-up location /> <p> Use up and down keys to access and browse suggestions after input. Confirm your choice with enter key, or esc </p> <p> 0 places found </p> <button button open pick-up location> Pick-up location </button> </div> <div button> <input id=6777 text enter destination /> <p> Use up and down keys to access and browse suggestions after input. Confirm your choice with enter key, or esc </p> <p> 0 places found </p> <button button open drop-off location> Drop-off location </button> </div> </div> <div> <label> Date </label> <button id=6794 button pickup date input field> <span> 30/03/2023 </span> </button> <input 2023-03-27 2023-03-30 /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11423]",
+      "op": "CLICK",
+      "element": "11423",
+      "value": "",
+      "description": "[heading] Chicago O'Hare International Airport -> CLICK",
+      "role": "heading",
+      "label": "Chicago O'Hare International Airport",
+      "observation": "<html> <div button> <ul listbox> <input text airport, hotel name, railway station, /> <li id=11422 option> <button id=11423> <div> <h4> Chicago O'Hare International Airport </h4> <p> Chicago, United States </p> </div> </button> </li> <li option> </li> <li id=11437 option> <div> <h4> Hyatt Place Chicago O'Hare Airport </h4> <p> Rosemont, United States </p> </div> </li> <li option> </li> <li option> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "TYPE [15149] [123 Main St, West Chicago, IL]",
+      "op": "TYPE",
+      "element": "15149",
+      "value": "123 Main St, West Chicago, IL",
+      "description": "[textbox] Drop-off location -> TYPE: 123 Main St, West Chicago, IL",
+      "role": "textbox",
+      "label": "Drop-off location",
+      "observation": "<html> <div> <div button> <input id=15149 text enter destination /> <p> Use up and down keys to access and browse suggestions after input. Confirm your choice with enter key, or esc </p> <p> 0 places found </p> <button button open drop-off location> Drop-off location </button> </div> <div> <div> <label> Date </label> <button id=16115 button pickup date input field> <span> 30/03/2023 </span> </button> <input 2023-03-27 2023-03-30 /> </div> <button id=16179 submit searchbutton> <span> Search </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20750]",
+      "op": "CLICK",
+      "element": "20750",
+      "value": "",
+      "description": "[heading] 123 Main St -> CLICK",
+      "role": "heading",
+      "label": "123 Main St",
+      "observation": "<html> <div button> <ul listbox> <input text airport, hotel name, railway station, /> <li id=20749 option> <button id=20750> <div> <h4> 123 Main St </h4> <p> West Chicago, United States </p> </div> </button> </li> <li id=20756 option> <div> <h4> 123 E Main St </h4> <p> West Chicago, United States </p> </div> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [25397]",
+      "op": "CLICK",
+      "element": "25397",
+      "value": "",
+      "description": "[button] pickup date input field -> CLICK",
+      "role": "button",
+      "label": "pickup date input field",
+      "observation": "<html> <div> <div> <label> Date </label> <button id=25397 button pickup date input field> <span> 30/03/2023 </span> </button> <input 2023-03-27 2023-03-30 /> </div> <div> <div> <label> Pick-up time </label> <button id=25409 button pickup time input field> <span> 12:00 </span> </button> <input 12:00 /> </div> <select id=24429 passengers> <option 0> Passengers </option> <option 1 true> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> <option 11> 11 </option> <option 12> 12 </option> <option 13> 13 </option> <option 14> 14 </option> <option 15> 15 </option> <option 16> 16 </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [29198]",
+      "op": "CLICK",
+      "element": "29198",
+      "value": "",
+      "description": "[button] 29, March 2023 -> CLICK",
+      "role": "button",
+      "label": "29, March 2023",
+      "observation": "<html> <div> <label> Date </label> <button id=30164 button pickup date input field> <span> 30/03/2023 </span> </button> <div> <button id=30179> <svg rw-icon> <desc> Next Month </desc> </svg> </button> <a id=29198 button 29, march 2023> 29 </a> </div> <input 2023-03-27 2023-03-30 /> </div> </html>"
+    },
+    {
+      "action": "CLICK [34944]",
+      "op": "CLICK",
+      "element": "34944",
+      "value": "",
+      "description": "[button] pickup time input field -> CLICK",
+      "role": "button",
+      "label": "pickup time input field",
+      "observation": "<html> <div> <div> <div> <label> Pick-up time </label> <button id=34944 button pickup time input field> <span> 12:00 </span> </button> <input 12:00 /> </div> <select id=33963 passengers> <option 0> Passengers </option> <option 1 true> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> <option 11> 11 </option> <option 12> 12 </option> <option 13> 13 </option> <option 14> 14 </option> <option 15> 15 </option> <option 16> 16 </option> </select> </div> <button id=34994 submit searchbutton> <span> Search </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [39764]",
+      "op": "CLICK",
+      "element": "39764",
+      "value": "",
+      "description": "[button] Confirm -> CLICK",
+      "role": "button",
+      "label": "Confirm",
+      "observation": "<html> <div> <div> <label> Pick-up time </label> <button id=39670 button pickup time input field> <span> 12:00 </span> </button> <div> <select pickuphour> </select> <span> Minute </span> <select pickupminute> </select> <button id=39764> <span> Confirm </span> </button> </div> <input 12:00 /> </div> <select id=38686 passengers> <option 0> Passengers </option> <option 1 true> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> <option 11> 11 </option> <option 12> 12 </option> <option 13> 13 </option> <option 14> 14 </option> <option 15> 15 </option> <option 16> 16 </option> </select> </div> </html>"
+    },
+    {
+      "action": "SELECT [43403] [2]",
+      "op": "SELECT",
+      "element": "43403",
+      "value": "2",
+      "description": "[combobox] Passengers -> SELECT: 2",
+      "role": "combobox",
+      "label": "Passengers",
+      "observation": "<html> <div> <div> <div> <label> Pick-up time </label> <button id=44384 button pickup time input field> <span> 12:00 </span> </button> <input 12:00 /> </div> <select id=43403 passengers> <option 0> Passengers </option> <option 1 true> 1 </option> <option 2> 2 </option> <option 3> 3 </option> <option 4> 4 </option> <option 5> 5 </option> <option 6> 6 </option> <option 7> 7 </option> <option 8> 8 </option> <option 9> 9 </option> <option 10> 10 </option> <option 11> 11 </option> <option 12> 12 </option> <option 13> 13 </option> <option 14> 14 </option> <option 15> 15 </option> <option 16> 16 </option> </select> </div> <button id=44435 submit searchbutton> <span> Search </span> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [49068]",
+      "op": "CLICK",
+      "element": "49068",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <div> <div> <label> Date </label> <button id=49004 button pickup date input field> <span> 29/03/2023 </span> </button> <input 2023-03-27 2023-03-29 /> </div> <button id=49068 submit searchbutton> <span> Search </span> </button> </div> <button id=49228 button> <span> Search </span> </button> </body> </html>"
+    },
+    {
+      "action": "CLICK [52685]",
+      "op": "CLICK",
+      "element": "52685",
+      "value": "",
+      "description": "[button] Choose a standard-size taxi costing US$126.84 -> CLICK",
+      "role": "button",
+      "label": "Choose a standard-size taxi costing US$126.84",
+      "observation": "<html> <form> <div> <button id=52685 button> Choose a standard-size taxi costing US$126.84 </button> <button id=53391 button> Choose a luxury taxi costing US$355.49 </button> </div> <button id=53782 submit> <span> Continue to book </span> </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [56557]",
+      "op": "CLICK",
+      "element": "56557",
+      "value": "",
+      "description": "[button] Continue to book -> HOVER",
+      "role": "button",
+      "label": "Continue to book",
+      "observation": "<html> <form> <div> <label> Start searching for a departure airport </label> <input id=56470 where are you flying from? /> </div> <div> <h2> Add a note for the driver </h2> <label> Any requests? </label> <textarea id=56535 things like 'i need a /> <div> 0/500 </div> </div> <button id=56557 submit> <span> Continue to book </span> </button> </form> </html>"
+    }
+  ]
+}

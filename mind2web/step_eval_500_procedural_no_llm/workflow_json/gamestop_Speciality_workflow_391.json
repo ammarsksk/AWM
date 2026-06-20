@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "name": "gamestop / Speciality workflow 391",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "gamestop",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Find a low-priced refurbished Microsoft Xbox one console in white color and available in stock.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "refurbished",
+      "microsoft",
+      "xbox",
+      "one",
+      "white",
+      "stock",
+      "link",
+      "checkbox",
+      "low",
+      "color",
+      "consoles",
+      "div",
+      "gamestop",
+      "shopping",
+      "speciality",
+      "find",
+      "priced",
+      "console",
+      "available",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "main",
+      "menu",
+      "hardware",
+      "chevron_right",
+      "filter",
+      "generic",
+      "refine",
+      "category",
+      "condition",
+      "availability",
+      "done",
+      "best",
+      "matches",
+      "price",
+      "high",
+      "500gb"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Main Menu",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Main Menu",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Consoles & Hardware chevron_right",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Consoles & Hardware chevron_right",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Xbox One",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Xbox One",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Refine by Category: Consoles",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Refine by Category: Consoles",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Microsoft Microsoft",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Microsoft Microsoft",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Color",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Color",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the White",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "White",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Condition",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Condition",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Refurbished Refurbished",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Refurbished Refurbished",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Availability",
+        "operation": "CLICK",
+        "target_type": "div",
+        "target": "Availability",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the In Stock In Stock",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "In Stock In Stock",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Best Matches",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Best Matches",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Price Low To High",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price Low To High",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Xbox One White 500GB",
+        "operation": "CLICK",
+        "target_type": "p",
+        "target": "Xbox One White 500GB",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 16
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 16.0
+  },
+  "raw_workflow_name": "gamestop / Speciality workflow 391"
+}

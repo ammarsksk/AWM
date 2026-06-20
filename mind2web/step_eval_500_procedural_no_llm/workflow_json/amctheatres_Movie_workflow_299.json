@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "name": "amctheatres / Movie workflow 299",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "amctheatres",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "What is trending now on AMC on-demand?",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "trending",
+      "now",
+      "demand",
+      "link",
+      "value",
+      "required",
+      "amctheatres",
+      "entertainment",
+      "movie",
+      "what",
+      "amc",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "visit",
+      "page"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Visit the On Demand page",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Visit the On Demand page",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Now Trending",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Now Trending",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 2
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 2.0
+  },
+  "raw_workflow_name": "amctheatres / Movie workflow 299"
+}

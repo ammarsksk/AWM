@@ -1,0 +1,100 @@
+{
+  "name": "flightaware / Other workflow 382",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a flights between SFO and EWR using the Boeing 787-9 aircraft",
+  "steps": [
+    {
+      "action": "CLICK [123]",
+      "op": "CLICK",
+      "element": "123",
+      "value": "",
+      "description": "[textbox] Origin -> CLICK",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <header banner> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1415> <span> Products </span> </a> </li> <li menuitem> <a id=2076> <span> Company </span> </a> <ul menu> </ul> </li> </ul> </nav> </header> <form> <input id=123 text origin kosu /> <div button> </div> <input text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [10438] [SFO]",
+      "op": "TYPE",
+      "element": "10438",
+      "value": "SFO",
+      "description": "[textbox] Origin -> TYPE: SFO",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <header banner> <div> <span> All </span> <select id=11647 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <form> <input id=10438 text origin kosu /> <div button> </div> <input id=12603 text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [20757]",
+      "op": "CLICK",
+      "element": "20757",
+      "value": "",
+      "description": "[div] San Francisco Int'l (San Francisco",
+      "role": "div",
+      "label": "San Francisco Int'l (San Francisco",
+      "observation": "<html> <body> <form> <input id=22915 text origin kosu sfo /> <div button> </div> <input id=22922 text destination /> <input submit /> </form> <div> <div id=20757> San Francisco Int'l (San Francisco) - <strong> SFO </strong> - K <strong> SFO </strong> </div> <div> Fazenda Novo Horizonte (Miranda) - S </div> <div> Abbot rd Int'l (Abbot rd) - CYXX - CYXX </div> <div> Ford (Iron Mountain King rd) - IMT - KIMT </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [31218]",
+      "op": "CLICK",
+      "element": "31218",
+      "value": "",
+      "description": "[textbox] Destination -> CLICK",
+      "role": "textbox",
+      "label": "Destination",
+      "observation": "<html> <div> <header banner> <input id=32450 text search for flight, tail, airport, /> </header> <form> <input id=33377 text origin kosu ksfo /> <div button> </div> <input id=31218 text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [41681] [EWR]",
+      "op": "TYPE",
+      "element": "41681",
+      "value": "EWR",
+      "description": "[textbox] Destination -> TYPE: EWR",
+      "role": "textbox",
+      "label": "Destination",
+      "observation": "<html> <div> <form> <input id=43840 text origin kosu ksfo /> <div button> </div> <input id=41681 text destination /> <input submit /> </form> <div> <a id=44530 button filter flights /> <a> Clear Filters </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [52154]",
+      "op": "CLICK",
+      "element": "52154",
+      "value": "",
+      "description": "[div] Newark Liberty Intl (Newark",
+      "role": "div",
+      "label": "Newark Liberty Intl (Newark",
+      "observation": "<html> <body> <div> <form> <input id=54312 text origin kosu ksfo /> <div button> </div> <input text destination ewr /> <input submit /> </form> <input id=55049 text /> </div> <div> <div id=52154> Newark Liberty Intl (Newark) - <strong> EWR </strong> - K <strong> EWR </strong> </div> <div> Warientza Airport (Morona Santiago) - S </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [62635]",
+      "op": "CLICK",
+      "element": "62635",
+      "value": "",
+      "description": "[img] Submit Search -> CLICK",
+      "role": "img",
+      "label": "Submit Search",
+      "observation": "<html> <div> <button submit> <img id=62635 submit search /> </button> <div> <input id=65529 text /> <input id=65557 text /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [68007]",
+      "op": "CLICK",
+      "element": "68007",
+      "value": "",
+      "description": "[span] -> CLICK",
+      "role": "span",
+      "label": "",
+      "observation": "<html> <div> <header banner> <input id=69315 text search for flight, tail, airport, /> </header> <div> <div> <input id=70172 text origin e.g. kjfk or new york ksfo /> Did you mean ? </div> <legend> <span id=68007 /> Aircraft </legend> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [81073]",
+      "op": "CLICK",
+      "element": "81073",
+      "value": "",
+      "description": "[link] only -> CLICK",
+      "role": "link",
+      "label": "only",
+      "observation": "<html> <fieldset> <legend> <span id=83587 /> Aircraft </legend> <li> <div> <input checkbox r_boeing7879 true /> <label id=83640> Boeing 787-9 </label> </div> <a id=81073> only </a> </li> </fieldset> </html>"
+    }
+  ]
+}

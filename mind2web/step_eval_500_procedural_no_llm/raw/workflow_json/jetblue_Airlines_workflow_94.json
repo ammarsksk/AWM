@@ -1,0 +1,140 @@
+{
+  "name": "jetblue / Airlines workflow 94",
+  "source": "Mind2Web exemplar",
+  "website": "jetblue",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Book a flight + cruise for two flying from Atlanta in October for vacation starting on October 8 for 6 nights with Miami as the departure port, choose the cheapest flight, hotel, and room in the cruise for booking.",
+  "steps": [
+    {
+      "action": "CLICK [833]",
+      "op": "CLICK",
+      "element": "833",
+      "value": "",
+      "description": "[span] Flights + Cruise -> CLICK",
+      "role": "span",
+      "label": "Flights + Cruise",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button tab button> </button> <button id=818 tab button> <span> <jb-icon img /> <span> Flights + Hotel </span> </span> </button> <button id=833 tab button> <span> <jb-icon img /> <span> Flights + Cruise </span> </span> </button> <button tab button> </button> <button tab button> </button> </div> </nav> <jb-tab-panel tabpanel> <div combobox> <jb-type-ahead-input> <label> To </label> <input id=943 text /> </jb-type-ahead-input> </div> </jb-tab-panel> </jb-tabs> </html>"
+    },
+    {
+      "action": "CLICK [4946]",
+      "op": "CLICK",
+      "element": "4946",
+      "value": "",
+      "description": "[button] Search flights + cruise External Link should open ... -> CLICK",
+      "role": "button",
+      "label": "Search flights + cruise External Link should open ...",
+      "observation": "<html> <jb-tabs> <nav tablist> <div> <button tab button> </button> <button id=4888 tab button> <span> <jb-icon img /> <span> Flights + Hotel </span> </span> </button> <button tab button> </button> <button tab button> </button> <button id=4924 tab button> <span> <jb-icon img /> <span> Stays </span> </span> </button> </div> </nav> <jb-tab-panel tabpanel> <div> <div> Bundle flights, cruise and hotelall in one place. Plus, enjoy savings & perks from plane to port. </div> <a id=4946 button> <span> Search flights + cruise </span> <jb-icon img external link should open in /> </a> </div> </jb-tab-panel> </jb-tabs> </html>"
+    },
+    {
+      "action": "TYPE [8172] [ATLANTA]",
+      "op": "TYPE",
+      "element": "8172",
+      "value": "ATLANTA",
+      "description": "[combobox] Departing from -> TYPE: ATLANTA",
+      "role": "combobox",
+      "label": "Departing from",
+      "observation": "<html> <main main> <mat-tab-group> <div tablist> <div> <div id=8826 tab> <div> Flights + Hotel </div> </div> <div tab> </div> <div id=8832 tab> <div> Hotel + Points </div> </div> </div> </div> <mat-tab-body tabpanel> <jtp-location where are you flying from? departing from> <input id=8172 combobox text departing from where are you flying from? columbus port columbus intl apt, /> </jtp-location> </mat-tab-body> </mat-tab-group> </main> </html>"
+    },
+    {
+      "action": "CLICK [13204]",
+      "op": "CLICK",
+      "element": "13204",
+      "value": "",
+      "description": "[span] Atlanta, GA (ATL",
+      "role": "span",
+      "label": "Atlanta, GA (ATL",
+      "observation": "<html> <body> <main main> <mat-tab-body tabpanel> <form> <jtp-multi-select cruise departure> <mat-select id=12358 combobox> <span> Jun 2023 </span> </mat-select> </jtp-multi-select> <button id=12388 submit> <span> Search flights + cruise </span> </button> </form> </mat-tab-body> </main> <div listbox> <mat-option id=13204 option> <span> Atlanta, GA (ATL) </span> </mat-option> <mat-option option view-all> </mat-option> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [15821]",
+      "op": "CLICK",
+      "element": "15821",
+      "value": "",
+      "description": "[span] Jun 2023 -> CLICK",
+      "role": "span",
+      "label": "Jun 2023",
+      "observation": "<html> <main main> <mat-tab-group> <div tablist> <div> <div tab> </div> <div tab> </div> <div id=15757 tab> <div> Hotel + Points </div> </div> </div> </div> <mat-tab-body tabpanel> <div> <jtp-location where are you flying from? departing from> <input id=15777 combobox text departing from where are you flying from? atlanta, ga (atl) /> </jtp-location> <jtp-multi-select cruise departure> <mat-select id=15821 combobox> <span> Jun 2023 </span> </mat-select> </jtp-multi-select> </div> </mat-tab-body> </mat-tab-group> </main> </html>"
+    },
+    {
+      "action": "CLICK [20162]",
+      "op": "CLICK",
+      "element": "20162",
+      "value": "",
+      "description": "[option] Oct 2023 -> CLICK",
+      "role": "option",
+      "label": "Oct 2023",
+      "observation": "<html> <body> <main main> <mat-tab-body tabpanel> <form> <jtp-multi-select cruise departure> <mat-select id=19298 combobox> <span> Jun 2023 </span> </mat-select> </jtp-multi-select> <button id=19319 submit> <span> Search flights + cruise </span> </button> </form> </mat-tab-body> </main> <div listbox> <mat-option option> </mat-option> <mat-option option> </mat-option> <mat-option option> </mat-option> <mat-option id=20162 option> <span> Oct 2023 </span> </mat-option> <mat-option option> </mat-option> <mat-option option> </mat-option> <mat-option option> </mat-option> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [22839]",
+      "op": "CLICK",
+      "element": "22839",
+      "value": "",
+      "description": "[button] Search flights + cruise -> CLICK",
+      "role": "button",
+      "label": "Search flights + cruise",
+      "observation": "<html> <mat-sidenav-content> <header banner> <div navigation main navigation> <ul menubar main navigation> <button id=22590> <span> Book </span> </button> </ul> </div> </header> <main main> <mat-tab-body tabpanel> <form> <jtp-multi-select cruise departure> <mat-select id=22818 combobox> <span> Oct 2023 </span> </mat-select> </jtp-multi-select> <button id=22839 submit> <span> Search flights + cruise </span> </button> </form> </mat-tab-body> </main> </mat-sidenav-content> </html>"
+    },
+    {
+      "action": "CLICK [23926]",
+      "op": "CLICK",
+      "element": "23926",
+      "value": "",
+      "description": "[label] October 08, 2023 -> CLICK",
+      "role": "label",
+      "label": "October 08, 2023",
+      "observation": "<html> <div> <vtemplate> <input checkbox 2023-10-08 /> <label id=23926> <span> <span> October 08, 2023 </span> <span> (4) </span> </span> </label> </vtemplate> <vtemplate> <input id=25601 checkbox miami /> <label id=25603> <span> <span> Miami </span> <span> (42) </span> </span> </label> </vtemplate> </div> </html>"
+    },
+    {
+      "action": "CLICK [34353]",
+      "op": "CLICK",
+      "element": "34353",
+      "value": "",
+      "description": "[span] Nights -> CLICK",
+      "role": "span",
+      "label": "Nights",
+      "observation": "<html> <div> <vtemplate> <input checkbox 6 /> <label id=34353> <span> <span> 6 </span> <span> Nights </span> <span> (2) </span> </span> </label> </vtemplate> <vtemplate> <input id=34515 checkbox miami /> <label id=34517> <span> <span> Miami </span> <span> (3) </span> </span> </label> </vtemplate> </div> </html>"
+    },
+    {
+      "action": "CLICK [38886]",
+      "op": "CLICK",
+      "element": "38886",
+      "value": "",
+      "description": "[label] Miami -> CLICK",
+      "role": "label",
+      "label": "Miami",
+      "observation": "<html> <div> <vtemplate> <input id=40115 checkbox miami /> <label id=38886> <span> <span> Miami </span> <span> (1) </span> </span> </label> </vtemplate> <span> <select sort> </select> <span id=40200 combobox> <span textbox price: low high> Price: Low High </span> </span> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [44971]",
+      "op": "CLICK",
+      "element": "44971",
+      "value": "",
+      "description": "[button] View details -> CLICK",
+      "role": "button",
+      "label": "View details",
+      "observation": "<html> <div> <div> <label id=44719> <span> Sort By: </span> </label> <span> <select sort> </select> <span id=44762 combobox> <span textbox price: low high> Price: Low High </span> </span> </span> </div> <div> <label id=44971 button western caribbean from miami,fl> <span> View details </span> </label> <input checkbox load-details /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [47650]",
+      "op": "CLICK",
+      "element": "47650",
+      "value": "",
+      "description": "[link] Select package -> CLICK",
+      "role": "link",
+      "label": "Select package",
+      "observation": "<html> <div> <div> <label id=48903> <span> Sort By: </span> </label> <span> <select sort> </select> <span id=48947 combobox> <span textbox price: low high> Price: Low High </span> </span> </span> </div> <a id=47650 fly day before cruise (with> Select package </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [50845]",
+      "op": "CLICK",
+      "element": "50845",
+      "value": "",
+      "description": "[span] Checkout -> CLICK",
+      "role": "span",
+      "label": "Checkout",
+      "observation": "<html> <section> <li id=50845> <span> Checkout </span> </li> <div> <div region> <div listbox> <div option> <img id=51080 cherry on top /> </div> </div> </div> <div region> <div listbox> <div option> <img id=51615 cherry on top /> </div> </div> </div> </div> </section> </html>"
+    }
+  ]
+}

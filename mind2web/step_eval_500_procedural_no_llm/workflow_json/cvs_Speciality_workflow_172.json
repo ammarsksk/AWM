@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "name": "cvs / Speciality workflow 172",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "cvs",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Schedule COVID-19 test appointment at 90028.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "covid",
+      "value",
+      "required",
+      "schedule",
+      "test",
+      "use",
+      "testing",
+      "cvs",
+      "shopping",
+      "speciality",
+      "appointment",
+      "90028",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "span",
+      "booster",
+      "treatment",
+      "records",
+      "link",
+      "textbox",
+      "where",
+      "you",
+      "live",
+      "specific",
+      "field"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the COVID-19 booster, testing, treatment & records",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "COVID-19 booster, testing, treatment & records",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the COVID-19 testing Schedule a COVID-19 test",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "COVID-19 testing Schedule a COVID-19 test",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Where do you live? (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Where do you live? (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Schedule a test",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Schedule a test",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "cvs / Speciality workflow 172"
+}

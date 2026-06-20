@@ -1,0 +1,80 @@
+{
+  "name": "last.fm / Music workflow 239",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find the all time most popular solo track by ArianaGrande",
+  "steps": [
+    {
+      "action": "CLICK [134]",
+      "op": "CLICK",
+      "element": "134",
+      "value": "",
+      "description": "[link] Search -> CLICK",
+      "role": "link",
+      "label": "Search",
+      "observation": "<html> <div main> <div> <div> <a> Last.fm </a> <a id=134> Search </a> <ul primary navigation> <a id=596> Music </a> </ul> </div> <nav secondary navigation> <a id=807> Tracks </a> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [9416] [Ariana Grande]",
+      "op": "TYPE",
+      "element": "9416",
+      "value": "Ariana Grande",
+      "description": "[textbox] Search -> TYPE: Ariana Grande",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <div main> <div> <div> <div> <input id=9416 text q search for music /> <button submit> Search </button> </div> <ul primary navigation> <a id=9868> Music </a> </ul> </div> <nav secondary navigation> <a id=10079> Tracks </a> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18611]",
+      "op": "CLICK",
+      "element": "18611",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=18698> Next </button> </ul> </section> <div main> <div> <div> <input text q search for music ariana grande /> <button id=18611 submit> Search </button> </div> <nav secondary navigation> <a id=19273> Tracks </a> </nav> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [27810]",
+      "op": "CLICK",
+      "element": "27810",
+      "value": "",
+      "description": "[a] -> CLICK",
+      "role": "a",
+      "label": "",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=27941> Next </button> </ul> </section> <div main> <nav secondary navigation> <a id=28569> Tracks </a> </nav> </div> </body> <a id=27810 /> </html>"
+    },
+    {
+      "action": "CLICK [37585]",
+      "op": "CLICK",
+      "element": "37585",
+      "value": "",
+      "description": "[button] Sorted by: Last 7 days -> CLICK",
+      "role": "button",
+      "label": "Sorted by: Last 7 days",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=37734> Next </button> </ul> </section> <div main> <div> <div> <h3> Top Tracks </h3> <button play on youtube> Play all </button> <button id=37585> <span> Sorted by: </span> Last 7 days </button> </div> <div> <h3> Albums </h3> <button id=37674> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [58882]",
+      "op": "CLICK",
+      "element": "58882",
+      "value": "",
+      "description": "[link] All time -> CLICK",
+      "role": "link",
+      "label": "All time",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=59035> Next </button> </ul> </section> <div main> <div> <a id=58882> All time </a> <div> <h3> Albums </h3> <button id=58975> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [80191]",
+      "op": "CLICK",
+      "element": "80191",
+      "value": "",
+      "description": "[gridcell] 7 rings -> CLICK",
+      "role": "gridcell",
+      "label": "7 rings",
+      "observation": "<html> <body> <section audio player> <ul controls> <button id=80346> Next </button> </ul> </section> <div main> <div> <td id=80191> <a 7 rings> 7 rings </a> </td> <div> <h3> Albums </h3> <button id=80286> <span> Sorted by: </span> Most popular </button> </div> </div> </div> </body> </html>"
+    }
+  ]
+}

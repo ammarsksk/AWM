@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "name": "carmax / Auto workflow 356",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Search for an automatic grey sports car with the lowest price, gas fuel and free shipping manufactured between 2018 to 2022, compare the top two results and compare photos.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "compare",
+      "back",
+      "all",
+      "categories",
+      "car",
+      "menuitem",
+      "automatic",
+      "sports",
+      "lowest",
+      "price",
+      "gas",
+      "fuel",
+      "free",
+      "shipping",
+      "2018",
+      "2022",
+      "photos",
+      "listitem",
+      "path",
+      "carmax",
+      "shopping",
+      "auto",
+      "search",
+      "grey",
+      "manufactured",
+      "between",
+      "top",
+      "two",
+      "results",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "shop",
+      "img",
+      "icon",
+      "sort",
+      "label",
+      "year",
+      "2010",
+      "2023",
+      "exterior"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Shop",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Shop",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Sports car icon",
+        "operation": "CLICK",
+        "target_type": "img",
+        "target": "Sports car icon",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Sort by",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sort by",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Lowest price",
+        "operation": "CLICK",
+        "target_type": "label",
+        "target": "Lowest price",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Back to all categories",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Back to all categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Fuel Type",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Fuel Type",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Gas (45",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Gas (45",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Back to all categories",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Back to all categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Year",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Year",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the 2010",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "2010",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the 2018",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "2018",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the 2023",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the 2022",
+        "operation": "CLICK",
+        "target_type": "menuitem",
+        "target": "2022",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 14,
+        "intent": "click the Back to all categories",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Back to all categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 15,
+        "intent": "click the Exterior Color",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Exterior Color",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 16,
+        "intent": "click the Gray (5",
+        "operation": "CLICK",
+        "target_type": "listitem",
+        "target": "Gray (5",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 17,
+        "intent": "click the Back to all categories",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Back to all categories",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 18,
+        "intent": "click the Transmission",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Transmission",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 29
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 29.0
+  },
+  "raw_workflow_name": "carmax / Auto workflow 356"
+}

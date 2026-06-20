@@ -1,0 +1,50 @@
+{
+  "name": "imdb / Movie workflow 275",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Play a star wars movie trailer.",
+  "steps": [
+    {
+      "action": "TYPE [142] [Star Wars]",
+      "op": "TYPE",
+      "element": "142",
+      "value": "Star Wars",
+      "description": "[textbox] Search IMDb -> TYPE: Star Wars",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=213 button open navigation drawer> <svg id=216 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=142 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [5206]",
+      "op": "CLICK",
+      "element": "5206",
+      "value": "",
+      "description": "[button] Submit Search -> CLICK",
+      "role": "button",
+      "label": "Submit Search",
+      "observation": "<html> <div> <label id=5280 button open navigation drawer> <svg id=5283 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <button submit submit search> <svg id=5206 ipc-icon /> </button> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [7876]",
+      "op": "CLICK",
+      "element": "7876",
+      "value": "",
+      "description": "[button] Star Wars: Episode IV - A New Hope -> CLICK",
+      "role": "button",
+      "label": "Star Wars: Episode IV - A New Hope",
+      "observation": "<html> <div> <label button open navigation drawer> <svg id=7951 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <main main> <div> <a id=7876 button> Star Wars: Episode IV - A New Hope </a> <div> <a id=8756 button> <span> Movies </span> </a> <a button> </a> <a button> </a> <a button> </a> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [9514]",
+      "op": "CLICK",
+      "element": "9514",
+      "value": "",
+      "description": "[generic] Watch Original Teaser Trailer -> CLICK",
+      "role": "generic",
+      "label": "Watch Original Teaser Trailer",
+      "observation": "<html> <div> <label id=9517 button open navigation drawer> <svg id=9518 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> </div> <div id=9514 /> </div> </html>"
+    }
+  ]
+}

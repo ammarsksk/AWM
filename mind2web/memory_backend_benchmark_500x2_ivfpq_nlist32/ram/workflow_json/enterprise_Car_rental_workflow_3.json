@@ -1,0 +1,51 @@
+{
+  "name": "enterprise / Car rental workflow 3",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+  "goal_pattern": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the [a] -> CLICK",
+      "operation": "CLICK",
+      "target_type": "a",
+      "target_description": "[a] -> CLICK",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the First Name (required",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "First Name (required",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [134]",
+      "gold_element_id": "134",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [11031] [Allan]",
+      "gold_element_id": "11031",
+      "gold_value": "Allan"
+    }
+  ],
+  "raw_workflow_name": "enterprise / Car rental workflow 3"
+}

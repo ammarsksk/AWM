@@ -1,0 +1,66 @@
+2026-06-19 15:29:10,315 - 3400388 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.118_21 in:
+  results/2026-06-19_15-29-09_GenericAgentArgs_on_webarena.118_21
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:75: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-19 15:29:16,226 - 3400388 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 15:29:16,227 - 3400388 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 15:29:28,845 - 3400388 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:29:29,675 - 3400388 - browsergym.experiments.loop - INFO - The user is asking for a product to alleviate jaw bruxism. I will use the search bar to find relevant products. The search bar has a bid of '206'. I will type "jaw bruxism" into the search bar and then click the search button. The search button has a bid of '211'.
+
+action:
+fill('206', 'jaw bruxism')
+click('211')
+
+2026-06-19 15:29:42,073 - 3400388 - browsergym.experiments.loop - INFO - Saving summary info.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Collected 8 result directories.
+#4 result dirs after template dedup..
+#4 result dirs after trajectory dedup..
+#4 result dirs after manual inspection..
+2026-06-19 15:29:55,097 - 3401352 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.124_5 in:
+  results/2026-06-19_15-29-54_GenericAgentArgs_on_webarena.124_5
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:75: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-19 15:29:57,363 - 3401352 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 15:29:57,363 - 3401352 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 15:30:08,398 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:30:09,075 - 3401352 - browsergym.experiments.loop - INFO - action:
+fill('204', 'wireless earphone')
+click('209')
+
+2026-06-19 15:30:18,145 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 15:30:27,482 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:30:27,847 - 3401352 - browsergym.experiments.loop - INFO - The user wants to know the price range of wireless earphones. I have already searched for "wireless earphone" and the results are displayed on the page. To find the price range, I need to find the minimum and maximum prices. I can do this by sorting the results by price.
+
+First, I will sort the results by price in ascending order to find the minimum price. I will select the "Price" option from the "Sort By" combobox (bid '1231'). Then, I will click the "Set Ascending Direction" link (bid '1235') to ensure the order is ascending. The lowest price will then be the price of the first item in the list.
+
+Next, I will sort the results by price in descending order to find the maximum price. I will click the "Set Ascending Direction" link again, which will toggle the sort order to descending. The highest price will then be the price of the first item in the list.
+
+Finally, I will provide the user with the minimum and maximum prices.
+
+action:
+select_option('1231', 'Price')
+
+2026-06-19 15:30:31,257 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 15:30:44,261 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:30:44,695 - 3401352 - browsergym.experiments.loop - INFO - action:
+click('1141')
+
+2026-06-19 15:30:49,398 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 15:31:01,169 - 3401352 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 15:31:01,574 - 3401352 - browsergym.experiments.loop - INFO - action:
+click('1237')
+
+2026-06-19 15:31:06,193 - 3401352 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')

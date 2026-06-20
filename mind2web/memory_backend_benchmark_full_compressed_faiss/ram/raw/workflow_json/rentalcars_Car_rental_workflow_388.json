@@ -1,0 +1,30 @@
+{
+  "name": "rentalcars / Car rental workflow 388",
+  "source": "Mind2Web exemplar",
+  "website": "rentalcars",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "task": "Find a premium 4-door car with automatic transmission and unlimited mileage at Heathrow Airport for pickup, on date April 26, 2 pm, and drop off at the same Airport on April 30, 1 pm, book a range rover if available with full protection.",
+  "steps": [
+    {
+      "action": "TYPE [117] [Heathrow]",
+      "op": "TYPE",
+      "element": "117",
+      "value": "Heathrow",
+      "description": "[label] Pick-up location -> TYPE: Heathrow",
+      "role": "label",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div> <label id=117> Pick-up location </label> <input id=355 pick-up location /> </div> <button id=492 button sat, apr 22> <div> <div> Drop-off date </div> <div> Sat, Apr 22 </div> </div> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [3768]",
+      "op": "CLICK",
+      "element": "3768",
+      "value": "",
+      "description": "[div] London Heathrow Airport (LHR",
+      "role": "div",
+      "label": "London Heathrow Airport (LHR",
+      "observation": "<html> <div> <ul listbox> <li id=3767 option> <div id=3768 button> <div> <span> Airport </span> <div> <div> London Heathrow Airport (LHR) </div> <div> London, Greater London, United Kingdom </div> </div> </div> </div> </li> <li option> </li> <li option> </li> <li option> </li> </ul> <button id=3957 button sat, apr 22> <div> <div> Drop-off date </div> <div> Sat, Apr 22 </div> </div> </button> </div> </html>"
+    }
+  ]
+}

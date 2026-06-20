@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "name": "kbb / Auto workflow 330",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "goal_pattern": "Find the cheapest new electric car with highest ev mile range per charge, see the details of the top result.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "new",
+      "electric",
+      "checkbox",
+      "heading",
+      "mile",
+      "range",
+      "use",
+      "link",
+      "cars",
+      "sale",
+      "kbb",
+      "shopping",
+      "auto",
+      "find",
+      "cheapest",
+      "car",
+      "highest",
+      "per",
+      "charge",
+      "see",
+      "details",
+      "top",
+      "result",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "776",
+      "fuel",
+      "175",
+      "300",
+      "miles",
+      "combobox",
+      "sort",
+      "specific",
+      "field",
+      "2023",
+      "bmw",
+      "edrive40"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Cars for Sale",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Cars for Sale",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Cars for Sale",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Cars for Sale",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the New (9,776",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "New (9,776",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Fuel Type",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Fuel Type",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Electric (175",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Electric (175",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Electric Mile Range",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Electric Mile Range",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the 300+ Miles (12",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "300+ Miles (12",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "select the Sort By:",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "Sort By:",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the New 2023 BMW i4 eDrive40",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "New 2023 BMW i4 eDrive40",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "kbb / Auto workflow 330"
+}

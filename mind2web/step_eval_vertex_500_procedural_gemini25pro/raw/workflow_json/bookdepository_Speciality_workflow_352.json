@@ -1,0 +1,70 @@
+{
+  "name": "bookdepository / Speciality workflow 352",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "check the most popular Spanish recipe book available in paperback that are in stock.",
+  "steps": [
+    {
+      "action": "TYPE [124] [recipe]",
+      "op": "TYPE",
+      "element": "124",
+      "value": "recipe",
+      "description": "[textbox] Search for books by keyword / title / author / ISB... -> TYPE: recipe",
+      "role": "textbox",
+      "label": "Search for books by keyword / title / author / ISB...",
+      "observation": "<html> <div> <div> <input id=124 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <div> <div> <a id=1322> <div> Books by Language </div> </a> <div> Textbooks </div> <div> Harry Potter Book Series </div> <div> Game of Thrones </div> </div> <p> Looking for your new favourite book? Browse some of our top categories such as <a> Children's Books </a> , <a> Fiction </a> , <a> Graphic Novels, Anime & Manga </a> , <a id=16882> Food & Drink books </a> , <a> Crafts & Hobbies </a> , <a> Art & Photography </a> , <a> Biography </a> , and . Our editors have created lovely features for you to explore: , , , , , , and more. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [36211]",
+      "op": "CLICK",
+      "element": "36211",
+      "value": "",
+      "description": "[link] recipe book -> CLICK",
+      "role": "link",
+      "label": "recipe book",
+      "observation": "<html> <div> <div> <a> recipe </a> <a id=36211> recipe book </a> <a> slow cooker recipes </a> <a> recipe journal </a> <a> The fast 800 recipe book </a> </div> <div> <a id=36469> Paperback </a> <a id=36498> Paperback </a> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [54321] [In Stock (7,640)]",
+      "op": "SELECT",
+      "element": "54321",
+      "value": "In Stock (7,640)",
+      "description": "[select] All -> SELECT: In Stock (7,640",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <form> <div> <label> Availability </label> <select id=54321 availability> <option all true> All </option> <option in stock (7,640) 1> In Stock (7,640) </option> <option pre-order (27) 2> Pre-order (27) </option> </select> </div> <div> <label id=55386> Language </label> <select searchlang> </select> </div> </form> <a id=55583> Dictionaries & Languages <span> 117 </span> </a> </div> </html>"
+    },
+    {
+      "action": "SELECT [65368] [Spanish (42)]",
+      "op": "SELECT",
+      "element": "65368",
+      "value": "Spanish (42)",
+      "description": "[select] All -> SELECT: Spanish (42",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <div> <label id=66432> Language </label> <select id=65368 searchlang> <option all true> All </option> <option english (41,772) 123> English (41,772) </option> <option french (267) 137> French (267) </option> <option spanish (42) 404> Spanish (42) </option> <option german (21) 150> German (21) </option> <option latin (3) 246> Latin (3) </option> <option italian (84) 202> Italian (84) </option> <option chinese (1) 79> Chinese (1) </option> <option russian (30) 365> Russian (30) </option> <option japanese (1) 205> Japanese (1) </option> <option dutch; flemish (2) 116> Dutch; Flemish (2) </option> <option multiple languages (3) 292> Multiple languages (3) </option> <option hebrew (2) 173> Hebrew (2) </option> <option irish (2) 154> Irish (2) </option> <option no linguistic content (3) 486> No linguistic content (3) </option> <option czech (4) 101> Czech (4) </option> <option achinese (1) 3> Achinese (1) </option> <option danish (1) 103> Danish (1) </option> <option welsh (1) 468> Welsh (1) </option> <option portuguese (13) 349> Portuguese (13) </option> </select> </div> <form> <input searchterm recipe book /> <input agerangestotal 174 /> <select id=66917 searchsortby> <option popularity true> Most popular </option> <option price_low_high> Price, low to high </option> <option price_high_low> Price, high to low </option> <option> Publication date, old to new </option> <option> Publication date, new to old </option> </select> </form> </div> </html>"
+    },
+    {
+      "action": "SELECT [76413] [Paperback (39,356)]",
+      "op": "SELECT",
+      "element": "76413",
+      "value": "Paperback (39,356)",
+      "description": "[select] All -> SELECT: Paperback (39,356",
+      "role": "select",
+      "label": "All",
+      "observation": "<html> <div> <a id=77127> Bestsellers </a> <div> <div> <label> Format </label> <select id=76413 format> <option all true> All </option> <option paperback (39,356) 1> Paperback (39,356) </option> <option hardback (3,453) 2> Hardback (3,453) </option> <option baby books (10) 4> Baby Books (10) </option> <option audio (6) 3> Audio (6) </option> <option digital (5) 5> Digital (5) </option> <option stationery (3) 7> Stationery (3) </option> <option maps (2) 6> Maps (2) </option> </select> </div> <form> <input searchterm recipe book /> <input agerangestotal 174 /> <select id=77962 searchsortby> <option popularity true> Most popular </option> <option price_low_high> Price, low to high </option> <option price_high_low> Price, high to low </option> <option> Publication date, old to new </option> <option> Publication date, new to old </option> </select> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [87442]",
+      "op": "CLICK",
+      "element": "87442",
+      "value": "",
+      "description": "[button] Refine results -> CLICK",
+      "role": "button",
+      "label": "Refine results",
+      "observation": "<html> <div> <a id=88157> Bestsellers </a> <div> <button id=87442 submit> Refine results </button> <form> <input searchterm recipe book /> <input agerangestotal 174 /> <select id=88992 searchsortby> <option popularity true> Most popular </option> <option price_low_high> Price, low to high </option> <option price_high_low> Price, high to low </option> <option> Publication date, old to new </option> <option> Publication date, new to old </option> </select> </form> </div> </div> </html>"
+    }
+  ]
+}

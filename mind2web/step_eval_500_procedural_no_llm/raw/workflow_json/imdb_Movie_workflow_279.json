@@ -1,0 +1,150 @@
+{
+  "name": "imdb / Movie workflow 279",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find superhero sci-fi movies based on comic books rated 7 to 9, and add the three movies with the most votes to my watchlist.",
+  "steps": [
+    {
+      "action": "CLICK [224]",
+      "op": "CLICK",
+      "element": "224",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <div> <label id=221 button open navigation drawer> <svg id=224 ipc-icon ipc-icon--menu> </svg> <span> Menu </span> </label> <input checkbox on /> <a home /> </div> <main main> <div> <a button> </a> <a id=1786 button> <span> Most Popular </span> </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [5301]",
+      "op": "CLICK",
+      "element": "5301",
+      "value": "",
+      "description": "[span] Browse Movies by Genre -> CLICK",
+      "role": "span",
+      "label": "Browse Movies by Genre",
+      "observation": "<html> <div> <div> <label button open navigation drawer> <svg id=5251 ipc-icon ipc-icon--menu> </svg> <span> Menu </span> </label> <ul menu> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> <a id=5301 menuitem> <span> Browse Movies by Genre </span> </a> <a menuitem> </a> <a menuitem> </a> <a menuitem> </a> </ul> </div> <main main> <div> <a button> </a> <a id=6807 button> <span> Most Popular </span> </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [7755]",
+      "op": "CLICK",
+      "element": "7755",
+      "value": "",
+      "description": "[link] Superhero -> CLICK",
+      "role": "link",
+      "label": "Superhero",
+      "observation": "<html> <div> <div> <div> <a> Short Film </a> <a> Sport </a> <a id=7755> Superhero </a> <a> Thriller </a> <a> War </a> <a> Western </a> </div> <div> <a> Sports </a> <a id=9819> Superhero </a> <a> Thriller </a> <a> War </a> <a> Western </a> </div> </div> <div> <a> Sci-Fi </a> <a> Short </a> <a> Sport </a> <a id=10428> Superhero </a> <a> Thriller </a> <a> War </a> <a> Western </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11122]",
+      "op": "CLICK",
+      "element": "11122",
+      "value": "",
+      "description": "[checkbox] Superhero Sci Fi (745",
+      "role": "checkbox",
+      "label": "Superhero Sci Fi (745",
+      "observation": "<html> <div> <strong id=11836> Refine </strong> <fieldset keywords> <label id=12290> <input id=11122 checkbox on /> <span> Superhero Sci Fi </span> <span> (745) </span> </label> </fieldset> </div> </html>"
+    },
+    {
+      "action": "CLICK [35243]",
+      "op": "CLICK",
+      "element": "35243",
+      "value": "",
+      "description": "[checkbox] Based On Comic Book (226",
+      "role": "checkbox",
+      "label": "Based On Comic Book (226",
+      "observation": "<html> <div> <div> <li id=35993> <strong> IMDb Rating </strong> </li> <fieldset keywords> <label> <input id=35243 checkbox on /> <span> Based On Comic Book </span> <span> (226) </span> </label> </fieldset> </div> <div> Sort by: <select id=38419 sort> <option true> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span ascending order /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [60265]",
+      "op": "CLICK",
+      "element": "60265",
+      "value": "",
+      "description": "[strong] IMDb Rating -> CLICK",
+      "role": "strong",
+      "label": "IMDb Rating",
+      "observation": "<html> <div> <div> <strong id=60222> Refine </strong> <li id=60265> <strong> IMDb Rating </strong> </li> </div> <div> Sort by: <select id=62604 sort> <option true> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span ascending order /> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [84095] [7.0]",
+      "op": "SELECT",
+      "element": "84095",
+      "value": "7.0",
+      "description": "[group] IMDb user rating (average",
+      "role": "group",
+      "label": "IMDb user rating (average",
+      "observation": "<html> <div> <div> <strong id=84814> Refine </strong> <fieldset user_rating> <legend> IMDb user rating (average) </legend> <select id=84095 min 0.0> <option 1 true> 1 </option> <option 1.1> 1.1 </option> <option 1.2> 1.2 </option> <option 1.3> 1.3 </option> <option 1.4> 1.4 </option> <option 1.5> 1.5 </option> <option 1.6> 1.6 </option> <option 1.7> 1.7 </option> <option 1.8> 1.8 </option> <option 1.9> 1.9 </option> <option 2.0> 2.0 </option> <option 2.1> 2.1 </option> <option 2.2> 2.2 </option> <option 2.3> 2.3 </option> <option 2.4> 2.4 </option> <option 2.5> 2.5 </option> <option 2.6> 2.6 </option> <option 2.7> 2.7 </option> <option 2.8> 2.8 </option> <option 2.9> 2.9 </option> <option 3.0> 3.0 </option> <option 3.1> 3.1 </option> <option 3.2> 3.2 </option> <option 3.3> 3.3 </option> <option 3.4> 3.4 </option> </select> <span> to </span> <select max 0.0> </select> </fieldset> </div> <div> Sort by: <select id=87192 sort> <option true> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span ascending order /> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [108686] [9.0]",
+      "op": "SELECT",
+      "element": "108686",
+      "value": "9.0",
+      "description": "[group] IMDb user rating (average",
+      "role": "group",
+      "label": "IMDb user rating (average",
+      "observation": "<html> <div> <div> <strong id=109406> Refine </strong> <fieldset user_rating> <legend> IMDb user rating (average) </legend> <select min 7.0> </select> <span> to </span> <select id=108686 max 10.0> <option 10 true> 10 </option> <option 9.9> 9.9 </option> <option 9.8> 9.8 </option> <option 9.7> 9.7 </option> <option 9.6> 9.6 </option> <option 9.5> 9.5 </option> <option 9.4> 9.4 </option> <option 9.3> 9.3 </option> <option 9.2> 9.2 </option> <option 9.1> 9.1 </option> <option 9.0> 9.0 </option> <option 8.9> 8.9 </option> <option 8.8> 8.8 </option> <option 8.7> 8.7 </option> <option 8.6> 8.6 </option> <option 8.5> 8.5 </option> <option 8.4> 8.4 </option> <option 8.3> 8.3 </option> <option 8.2> 8.2 </option> <option 8.1> 8.1 </option> <option 8.0> 8.0 </option> <option 7.9> 7.9 </option> <option 7.8> 7.8 </option> <option 7.7> 7.7 </option> <option 7.6> 7.6 </option> </select> </fieldset> </div> <div> Sort by: <select id=111732 sort> <option true> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span ascending order /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [135534]",
+      "op": "CLICK",
+      "element": "135534",
+      "value": "",
+      "description": "[strong] Refine -> CLICK",
+      "role": "strong",
+      "label": "Refine",
+      "observation": "<html> <div> <strong id=135534> Refine </strong> <div> <div> Sort by: <select id=138579 sort> <option true> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span ascending order /> </div> <div> <span> 1 </span> to <span> 50 </span> of 53 titles <span> | </span> <a id=138624> Next </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [162393] [Number of Votes]",
+      "op": "SELECT",
+      "element": "162393",
+      "value": "Number of Votes",
+      "description": "[select] Popularity -> SELECT: Number of Votes",
+      "role": "select",
+      "label": "Popularity",
+      "observation": "<html> <div> <div> <div> Sort by: <select id=162393 sort> <option true> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span ascending order /> </div> <div> <span> 1 </span> to <span> 50 </span> of 53 titles <span> | </span> <a id=165483> Next </a> </div> </div> <div> <span> 1 </span> to <span> 50 </span> of 53 titles <span> | </span> <a id=175224> Next </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [189245]",
+      "op": "CLICK",
+      "element": "189245",
+      "value": "",
+      "description": "[generic] Compact view -> CLICK",
+      "role": "generic",
+      "label": "Compact view",
+      "observation": "<html> <body> <div> <label button open navigation drawer> <svg id=189407 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <form search> <label button all> <span> All <svg id=189677 ipc-icon /> </span> </label> </form> </div> <div> View: <span advanced view /> <span id=189245 compact view /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [216083]",
+      "op": "CLICK",
+      "element": "216083",
+      "value": "",
+      "description": "[generic] Click to add to watchlist -> CLICK",
+      "role": "generic",
+      "label": "Click to add to watchlist",
+      "observation": "<html> <body> <form search> <label button all> <span> All <svg id=216546 ipc-icon /> </span> </label> </form> <div> <div> Sort by: <select id=219169 sort> <option> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option true> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span descending order /> </div> <div> <a> Undo </a> <div id=216083 click to add to watchlist /> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [276077]",
+      "op": "CLICK",
+      "element": "276077",
+      "value": "",
+      "description": "[generic] Click to add to watchlist -> CLICK",
+      "role": "generic",
+      "label": "Click to add to watchlist",
+      "observation": "<html> <div> <strong id=276802> Refine </strong> <div> <div> Sort by: <select id=279135 sort> <option> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option true> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span descending order /> </div> <div> <a> Undo </a> <div id=276077 click to add to watchlist /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [336045]",
+      "op": "CLICK",
+      "element": "336045",
+      "value": "",
+      "description": "[generic] Click to add to watchlist -> CLICK",
+      "role": "generic",
+      "label": "Click to add to watchlist",
+      "observation": "<html> <div> <strong id=336773> Refine </strong> <div> <div> Sort by: <select id=339101 sort> <option> Popularity </option> <option> Alphabetical </option> <option> IMDb Rating </option> <option true> Number of Votes </option> <option> Release Date </option> <option> Runtime </option> <option> Year </option> </select> <span descending order /> </div> <div> <a> Undo </a> <div id=336045 click to add to watchlist /> </div> </div> </div> </html>"
+    }
+  ]
+}

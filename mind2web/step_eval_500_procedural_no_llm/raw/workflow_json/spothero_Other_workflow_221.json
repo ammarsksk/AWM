@@ -1,0 +1,90 @@
+{
+  "name": "spothero / Other workflow 221",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find a parking with EV charging for month with lowest price in Chicago.",
+  "steps": [
+    {
+      "action": "CLICK [102]",
+      "op": "CLICK",
+      "element": "102",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=102 tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=419 text search for parking search-input address, place, city or venue /> </div> <div> <p> Search for secure monthly parking facilities that make it easy to park near your home or office. </p> <a> Book NYC Monthly Parking </a> <a> Book San Francisco Monthly Parking </a> <a id=537> Book Chicago Monthly Parking </a> <a> Book Washington DC Monthly Parking </a> <a> Book Seattle Monthly Parking </a> <div group> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2073] [Chicago]",
+      "op": "TYPE",
+      "element": "2073",
+      "value": "Chicago",
+      "description": "[textbox] Search for parking -> TYPE: Chicago",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=2380 tab button> Monthly </button> <button tab button> Airport </button> </div> <div> <input id=2073 text search for parking search-input address, place, city or venue /> <button id=2400 button> Search </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4068]",
+      "op": "CLICK",
+      "element": "4068",
+      "value": "",
+      "description": "[li] Chicago, IL, USA -> CLICK",
+      "role": "li",
+      "label": "Chicago, IL, USA",
+      "observation": "<html> <div> <div> <input id=4386 text search for parking search-input chicago address, place, city or venue /> <ul> <li id=4068> Chicago, IL, USA </li> <li> Chicago Midway International Airport (MDW), South Cicero Avenue, Chicago, IL, USA </li> <li> Chicago Heights, IL, USA </li> <li> Chicago O'Hare International Airport (ORD), West Balmoral Avenue, Chicago, IL, USA </li> </ul> </div> <div> <p> Search for secure monthly parking facilities that make it easy to park near your home or office. </p> <a> Book NYC Monthly Parking </a> <a> Book San Francisco Monthly Parking </a> <a id=4516> Book Chicago Monthly Parking </a> <a> Book Washington DC Monthly Parking </a> <a> Book Seattle Monthly Parking </a> <div group> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [6196]",
+      "op": "CLICK",
+      "element": "6196",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <div> <input id=7114 text monthly start date apr 7, 2023 /> <button id=6196 button> Filter </button> </div> <select id=7144> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [11444]",
+      "op": "CLICK",
+      "element": "11444",
+      "value": "",
+      "description": "[checkbox] EV Charging (10",
+      "role": "checkbox",
+      "label": "EV Charging (10",
+      "observation": "<html> <body> <div tablist> <button tab button> Hourly </button> <button id=12218 tab button> Monthly </button> </div> <div> <input id=11444 checkbox ev on /> <label id=14016> EV Charging <span> (10) </span> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [15784]",
+      "op": "CLICK",
+      "element": "15784",
+      "value": "",
+      "description": "[button] Show 10 Results -> CLICK",
+      "role": "button",
+      "label": "Show 10 Results",
+      "observation": "<html> <body> <div tablist> <button tab button> Hourly </button> <button id=16397 tab button> Monthly </button> </div> <div> <div> <input checkbox no-contract on /> <label id=17205> Month to Month <span> (10) </span> </label> </div> <div> <button id=15784 button> Show 10 Results </button> <button button> Clear All </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [18986] [Sort by Price]",
+      "op": "SELECT",
+      "element": "18986",
+      "value": "Sort by Price",
+      "description": "[select] Sort by Distance -> SELECT: Sort by Price",
+      "role": "select",
+      "label": "Sort by Distance",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=19598 tab button> Monthly </button> </div> <input id=19744 text monthly start date apr 7, 2023 /> </div> <select id=18986> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [21909]",
+      "op": "CLICK",
+      "element": "21909",
+      "value": "",
+      "description": "[button] View Details -> CLICK",
+      "role": "button",
+      "label": "View Details",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=22520 tab button> Monthly </button> </div> <button id=22684 button> <span> 1 </span> Filter </button> </div> <button id=21909 button> View Details </button> </div> </html>"
+    }
+  ]
+}

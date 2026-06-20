@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "name": "enterprise / Car rental workflow 3",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "enterprise",
+  "domain": "Travel",
+  "subdomain": "Car rental",
+  "goal_pattern": "Sign Allan Smith for email offers with the email allan.smith@gmail.com and zip code 10001",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "textbox",
+      "specific",
+      "field",
+      "email",
+      "allan",
+      "smith",
+      "zip",
+      "code",
+      "name",
+      "address",
+      "enterprise",
+      "travel",
+      "car",
+      "rental",
+      "sign",
+      "offers",
+      "gmail",
+      "com",
+      "10001",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "first",
+      "last",
+      "confirm",
+      "submit"
+    ],
+    "operations": [
+      "TYPE",
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the [a] -> CLICK",
+        "operation": "CLICK",
+        "target_type": "a",
+        "target": "[a] -> CLICK",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "type the First Name (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "First Name (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Last Name (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Last Name (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Email Address (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Email Address (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Confirm Email Address (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Confirm Email Address (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "type the ZIP Code (required",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "ZIP Code (required",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Submit",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Submit",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 7
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 7.0
+  },
+  "raw_workflow_name": "enterprise / Car rental workflow 3"
+}

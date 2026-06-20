@@ -1,0 +1,80 @@
+{
+  "name": "spothero / Other workflow 178",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find monthly daytime only parking nearest to Madison Square Garden starting from April 22",
+  "steps": [
+    {
+      "action": "CLICK [119]",
+      "op": "CLICK",
+      "element": "119",
+      "value": "",
+      "description": "[tab] Monthly -> CLICK",
+      "role": "tab",
+      "label": "Monthly",
+      "observation": "<html> <div> <div> <div tablist> <button tab button> Hourly </button> <button id=119 tab button> Monthly </button> <button tab button> Airport </button> </div> <input id=436 text search for parking search-input address, place, city or venue /> </div> <div> <h2> Event Parking </h2> <p> Enjoy the convenience of booking a parking spot at the venue ahead of time, ensuring you have a space when </p> <a id=492> Book Madison Square Garden Parking </a> <a> Book Oracle Park Stadium Parking </a> <a> Book SoFi Stadium Parking </a> <a> Book Soldier Field Parking </a> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2090] [madison square garden]",
+      "op": "TYPE",
+      "element": "2090",
+      "value": "madison square garden",
+      "description": "[textbox] Search for parking -> TYPE: madison square garden",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=2090 text search for parking search-input address, place, city or venue /> <button id=2417 button> Search </button> </div> <div> <h2> Event Parking </h2> <p> Enjoy the convenience of booking a parking spot at the venue ahead of time, ensuring you have a space when </p> <a id=2464> Book Madison Square Garden Parking </a> <a> Book Oracle Park Stadium Parking </a> <a> Book SoFi Stadium Parking </a> <a> Book Soldier Field Parking </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [4085]",
+      "op": "CLICK",
+      "element": "4085",
+      "value": "",
+      "description": "[li] Madison Square Garden, Pennsylvania Plaza, New Yor... -> CLICK",
+      "role": "li",
+      "label": "Madison Square Garden, Pennsylvania Plaza, New Yor...",
+      "observation": "<html> <div> <ul> <li id=4085> Madison Square Garden, Pennsylvania Plaza, New York, NY, USA </li> <li> Madison Square Garden Box Office, Pennsylvania Plaza, New York, NY, USA </li> <li> Hampton Inn Manhattan-Madison Square Garden Area, West 31st Street, New York, NY, USA </li> <li> Madison Square Garden Entertainment corp, Pennsylvania Plaza, New York, NY, USA </li> <li id=4414> Madison Square Gardens Office, 5th Avenue, New York, NY, USA </li> </ul> <div> <h2> Event Parking </h2> <p> Enjoy the convenience of booking a parking spot at the venue ahead of time, ensuring you have a space when </p> <a id=4471> Book Madison Square Garden Parking </a> <a> Book Oracle Park Stadium Parking </a> <a> Book SoFi Stadium Parking </a> <a> Book Soldier Field Parking </a> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [6185] [Daytime Only Parking]",
+      "op": "SELECT",
+      "element": "6185",
+      "value": "Daytime Only Parking",
+      "description": "[select] All Parking Options -> SELECT: Daytime Only Parking",
+      "role": "select",
+      "label": "All Parking Options",
+      "observation": "<html> <div> <div> <p> Book Parking Near </p> <input id=6964 text search for parking search city, address or place /> </div> <div> <select id=6185> <option all true> All Parking Options </option> <option 247> 24/7 Regular Parking </option> <option daytime_only> Daytime Only Parking </option> </select> <button id=6995 button> Filter </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10232]",
+      "op": "CLICK",
+      "element": "10232",
+      "value": "",
+      "description": "[textbox] Monthly Start Date -> CLICK",
+      "role": "textbox",
+      "label": "Monthly Start Date",
+      "observation": "<html> <div> <div tablist> <button tab button> Hourly </button> <button id=10929 tab button> Monthly </button> </div> <input id=10232 text monthly start date apr 8, 2023 /> <button id=11042 button> Filter </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [14410]",
+      "op": "CLICK",
+      "element": "14410",
+      "value": "",
+      "description": "[gridcell] Sat Apr 22 2023 -> CLICK",
+      "role": "gridcell",
+      "label": "Sat Apr 22 2023",
+      "observation": "<html> <body> <button id=15221 button> Filter </button> <div grid> <div rowgroup> <div row> <div gridcell wed apr 19 2023> </div> <div gridcell thu apr 20 2023> </div> <div gridcell fri apr 21 2023> </div> <div id=16398 gridcell sat apr 22 2023> <span id=14410> 22 </span> </div> </div> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [18575]",
+      "op": "CLICK",
+      "element": "18575",
+      "value": "",
+      "description": "[button] Update Search -> CLICK",
+      "role": "button",
+      "label": "Update Search",
+      "observation": "<html> <div> <div> <div> <p> Book Parking Near </p> <input id=19354 text search for parking search city, address or place /> </div> <div> <button id=18575 button> Update Search </button> <button button> Cancel </button> </div> </div> <select id=19380> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    }
+  ]
+}

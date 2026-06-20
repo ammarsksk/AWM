@@ -1,0 +1,90 @@
+{
+  "name": "bookdepository / Speciality workflow 155",
+  "source": "Mind2Web exemplar",
+  "website": "bookdepository",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "task": "Cancel an order with order number X123456 of Harry Potter Box Set as not available at address.",
+  "steps": [
+    {
+      "action": "CLICK [105]",
+      "op": "CLICK",
+      "element": "105",
+      "value": "",
+      "description": "[link] Cancel my order -> CLICK",
+      "role": "link",
+      "label": "Cancel my order",
+      "observation": "<html> <div> <div> <input id=321 text search for books by keyword searchterm /> <input search find book /> <button submit search> </button> </div> <p> Looking for your new favourite book? Browse some of our top categories such as , , , , , , <a> Biography </a> , and <a> Crime & Thriller </a> . Our editors have created lovely features for you to explore: <a> Adult colouring books </a> , <a id=18216> Harry Potter </a> , <a> Roald Dahl </a> , <a> Books on screen </a> , <a> Man Booker Prize winners </a> , , and more. </p> <a id=105> Cancel my order </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [19354] [James Smith]",
+      "op": "TYPE",
+      "element": "19354",
+      "value": "James Smith",
+      "description": "[input] -> TYPE: James Smith",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <form form> <div> <label> Your full name </label> <input id=19354 text fullname /> </div> <div> <label> Order number </label> <input id=20476 text orderreference /> </div> <button id=20520 submit contact us> Cancel order </button> <input csrftoken /> </form> </html>"
+    },
+    {
+      "action": "TYPE [23786] [buckeye.foobar@gmail.com]",
+      "op": "TYPE",
+      "element": "23786",
+      "value": "buckeye.foobar@gmail.com",
+      "description": "[textbox] Email address used to place your order * -> TYPE: buckeye.foobar@gmail.com",
+      "role": "textbox",
+      "label": "Email address used to place your order *",
+      "observation": "<html> <form form> <div> <label> Email address used to place your order </label> <input id=23786 text emailaddress /> </div> <div> <label> Order number </label> <input id=24908 text orderreference /> </div> <div> <label> Reason for cancellation (optional) </label> <input id=24944 text cancelreason /> </div> </form> </html>"
+    },
+    {
+      "action": "TYPE [28217] [X123456]",
+      "op": "TYPE",
+      "element": "28217",
+      "value": "X123456",
+      "description": "[textbox] Order number * -> TYPE: X123456",
+      "role": "textbox",
+      "label": "Order number *",
+      "observation": "<html> <form form> <div> <label> Order number </label> <input id=28217 text orderreference /> </div> <div> <label> Reason for cancellation (optional) </label> <input id=29375 text cancelreason /> </div> <button id=29383 submit contact us> Cancel order </button> <input csrftoken /> </form> </html>"
+    },
+    {
+      "action": "TYPE [32646] [08/04/23]",
+      "op": "TYPE",
+      "element": "32646",
+      "value": "08/04/23",
+      "description": "[textbox] Date you received your order (DD/MM/YY",
+      "role": "textbox",
+      "label": "Date you received your order (DD/MM/YY",
+      "observation": "<html> <div> <form form> <div> <label> Date you received your order (DD/MM/YY) </label> <input id=32646 text /> </div> <button id=33814 submit contact us> Cancel order </button> <input csrftoken /> </form> <a id=33935> Cancel my order </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [37079] [Harry Potter Box Set]",
+      "op": "TYPE",
+      "element": "37079",
+      "value": "Harry Potter Box Set",
+      "description": "[textbox] Please cancel my order for the following products ... -> TYPE: Harry Potter Box Set",
+      "role": "textbox",
+      "label": "Please cancel my order for the following products ...",
+      "observation": "<html> <div> <form form> <div> <label> Please cancel my order for the following products </label> <input id=37079 text contactmessage /> </div> <button id=38245 submit contact us> Cancel order </button> <input csrftoken /> </form> <a id=38366> Cancel my order </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [41506] [Not available at address]",
+      "op": "TYPE",
+      "element": "41506",
+      "value": "Not available at address",
+      "description": "[textbox] Reason for cancellation (optional",
+      "role": "textbox",
+      "label": "Reason for cancellation (optional",
+      "observation": "<html> <div> <form form> <div> <label> Reason for cancellation (optional) </label> <input id=41506 text cancelreason /> </div> <button id=42674 submit contact us> Cancel order </button> <input csrftoken /> </form> <a id=42795> Cancel my order </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [45934]",
+      "op": "CLICK",
+      "element": "45934",
+      "value": "",
+      "description": "[button] Cancel order -> HOVER",
+      "role": "button",
+      "label": "Cancel order",
+      "observation": "<html> <div> <form form> <div> <label> Reason for cancellation (optional) </label> <input id=47094 text cancelreason not available at address /> </div> <button id=45934 submit contact us> Cancel order </button> <input csrftoken /> </form> <a id=47222> Cancel my order </a> </div> </html>"
+    }
+  ]
+}

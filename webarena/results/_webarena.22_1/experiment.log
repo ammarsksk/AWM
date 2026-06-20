@@ -1,0 +1,53 @@
+2026-06-19 14:03:21,310 - 3321599 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.22_29 in:
+  results/2026-06-19_14-03-20_GenericAgentArgs_on_webarena.22_29
+2026-06-19 14:03:23,967 - 3321599 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 14:03:23,968 - 3321599 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 14:03:37,655 - 3321599 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:03:38,180 - 3321599 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mention "under water photo". I need to navigate to the reviews section to find this information. I can see a "Reviews (12)" tab on the page. I will click on it to view the reviews. The bid for the "Reviews (12)" tab is '1405'.
+
+action:
+click('1405')
+
+2026-06-19 14:03:42,519 - 3321599 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.22.
+ValueError:
+OPENAI_API_KEY environment variable must be set when using OpenAI API.
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 441, in run
+    step_info.from_step(env, action, obs_preprocessor=agent.obs_preprocessor)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 190, in from_step
+    self.obs, self.reward, self.terminated, self.truncated, env_info = env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 124, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 392, in step
+    return super().step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 327, in step
+    return self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 465, in step
+    return self.post_step(info)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 511, in post_step
+    reward, done, user_message, task_info = self._task_validate()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 545, in _task_validate
+    reward, done, user_message, info = self.task.validate(self.page, self.chat.messages)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 201, in validate
+    score = self.evaluator(
+  File "<@beartype(webarena.evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x77eb0d0d3f40>", line 115, in __call__
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 359, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 159, in __call__
+    score = 1.0 * self.ua_match(
+  File "<@beartype(webarena.evaluation_harness.evaluators.StringEvaluator.ua_match) at 0x77eb0d0d39a0>", line 69, in ua_match
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 121, in ua_match
+    return llm_ua_match(pred, ref, intent)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/helper_functions.py", line 196, in llm_ua_match
+    response = generate_from_openai_chat_completion(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 75, in wrapper
+    raise e
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 55, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 257, in generate_from_openai_chat_completion
+    client = get_openai_client()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 19, in get_openai_client
+    raise ValueError(
+ValueError: OPENAI_API_KEY environment variable must be set when using OpenAI API.
+
+2026-06-19 14:03:42,521 - 3321599 - browsergym.experiments.loop - INFO - Saving summary info.

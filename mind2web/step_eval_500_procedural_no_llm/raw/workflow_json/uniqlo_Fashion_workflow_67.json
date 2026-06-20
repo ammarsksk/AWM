@@ -1,0 +1,50 @@
+{
+  "name": "uniqlo / Fashion workflow 67",
+  "source": "Mind2Web exemplar",
+  "website": "uniqlo",
+  "domain": "Shopping",
+  "subdomain": "Fashion",
+  "task": "Show me the list of baby products that are on sale and under 10 dollars.",
+  "steps": [
+    {
+      "action": "CLICK [290]",
+      "op": "CLICK",
+      "element": "290",
+      "value": "",
+      "description": "[link] BABY -> HOVER",
+      "role": "link",
+      "label": "BABY",
+      "observation": "<html> <div> <nav navigation left> <div> <a id=287> <span> Kids </span> </a> <a id=290> <span> Baby </span> </a> </div> </nav> <nav navigation right> <button> <svg id=296 fr-ec-icon /> <span> Search </span> </button> </nav> </div> </html>"
+    },
+    {
+      "action": "CLICK [6132]",
+      "op": "CLICK",
+      "element": "6132",
+      "value": "",
+      "description": "[link] Sale -> CLICK",
+      "role": "link",
+      "label": "Sale",
+      "observation": "<html> <div> <div> <a id=6271 baby top> <span> BABY TOP </span> </a> <a id=6132> <p> Sale </p> </a> </div> <a id=7189> <div> <img uniqlo u spring/summer 2023 /> <div> <img uniqlo u /> <div> <h2> Uniqlo U Spring/Summer 2023 </h2> <span> U Ribbed Long-Sleeve Cardigan </span> <div> <div price is $29.90> <p> $29.90 </p> </div> <p> Sale </p> </div> </div> </div> </div> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [11413]",
+      "op": "CLICK",
+      "element": "11413",
+      "value": "",
+      "description": "[heading] Price -> CLICK",
+      "role": "heading",
+      "label": "Price",
+      "observation": "<html> <div> <ul listbox> <li option 0> </li> <li option 1> </li> <li id=11794 option 2> <span> Price: Low to high </span> </li> <li id=11800 option 3> <span> Price: High to low </span> </li> <li option 4> </li> </ul> <div cell> <h4 id=11413 price> Price </h4> <svg fr-ec-icon /> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18363]",
+      "op": "CLICK",
+      "element": "18363",
+      "value": "",
+      "description": "[label] $0-$10 -> CLICK",
+      "role": "label",
+      "label": "$0-$10",
+      "observation": "<html> <ul listbox> <li option 0> </li> <li option 1> </li> <li id=18741 option 2> <span> Price: Low to high </span> </li> <li id=18747 option 3> <span> Price: High to low </span> </li> <li option 4> </li> </ul> <label id=18363 /> </html>"
+    }
+  ]
+}

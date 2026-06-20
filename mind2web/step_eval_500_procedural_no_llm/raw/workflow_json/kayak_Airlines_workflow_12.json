@@ -1,0 +1,150 @@
+{
+  "name": "kayak / Airlines workflow 12",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "From Birmingham (BHX) to Paris search for packages with casinos, restaurant, fitness and a free internet from April 7th to 11th.",
+  "steps": [
+    {
+      "action": "CLICK [513]",
+      "op": "CLICK",
+      "element": "513",
+      "value": "",
+      "description": "[link] Search for packages -> CLICK",
+      "role": "link",
+      "label": "Search for packages",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=513 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <div list> <div listitem> <div button remove> <svg id=679 img vvtc-item-icon /> </div> </div> </div> <button button submit search> <svg id=740 img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [4378] [Birmingham]",
+      "op": "TYPE",
+      "element": "4378",
+      "value": "Birmingham",
+      "description": "[textbox] From -> TYPE: Birmingham",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <div> <input id=4378 text columbus (cmh) from /> <input id=4811 text enter destination or airport /> </div> <button button submit search> <svg id=4858 img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [7624]",
+      "op": "CLICK",
+      "element": "7624",
+      "value": "",
+      "description": "[span] Birmingham, England, United Kingdom -> CLICK",
+      "role": "span",
+      "label": "Birmingham, England, United Kingdom",
+      "observation": "<html> <ul listbox> <li id=7608 option birmingham, alabama, united states> <div> <img id=7615 alabama, united states /> <div> <div> <span> Birmingham, Alabama, United States </span> <span> BHM </span> </div> <span> Birmingham </span> </div> </div> </li> <li id=7624 option birmingham, england, united kingdom> <div> <img england, united kingdom /> <div> <div> <span> Birmingham, England, United Kingdom </span> <span> BHX </span> </div> <span> Birmingham </span> </div> </div> </li> </ul> </html>"
+    },
+    {
+      "action": "TYPE [8897] [Paris]",
+      "op": "TYPE",
+      "element": "8897",
+      "value": "Paris",
+      "description": "[textbox] Enter destination or airport -> TYPE: Paris",
+      "role": "textbox",
+      "label": "Enter destination or airport",
+      "observation": "<html> <div> <input id=8897 text enter destination or airport /> <button id=9374 button submit search> <svg id=9377 img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [12091]",
+      "op": "CLICK",
+      "element": "12091",
+      "value": "",
+      "description": "[span] City -> CLICK",
+      "role": "span",
+      "label": "City",
+      "observation": "<html> <ul listbox> <li id=12091 option paris, france> <div> <img city:paris, france /> <div> <span> Paris, France </span> <span> City </span> </div> </div> </li> <li id=12104 option paris, france> <div> <svg img /> <div> <div> <span> Paris, France </span> <span> CDG </span> </div> <span> Charles de Gaulle </span> </div> </div> </li> <li option paris, texas, united states> </li> <li id=12133 option paris, france> <div> <svg img /> <div> <div> <span> Paris, France </span> <span> ORY </span> </div> <span> Orly </span> </div> </div> </li> <li option paris, tennessee, united states> </li> <li option paris, france> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [13874]",
+      "op": "CLICK",
+      "element": "13874",
+      "value": "",
+      "description": "[generic] Tuesday April 4th -> CLICK",
+      "role": "generic",
+      "label": "Tuesday April 4th",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=13738 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <div button> <span id=13874 button start date calendar input> <svg img /> <span tuesday april 4th> Tue 4/4 </span> <span> <span button decrement date by one day> <svg img /> </span> <span button increment date by one day> <svg img /> </span> </span> </span> <span button end date calendar input> </span> </div> <button id=13911 button submit search> <svg img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15854]",
+      "op": "CLICK",
+      "element": "15854",
+      "value": "",
+      "description": "[div] 7 -> CLICK",
+      "role": "div",
+      "label": "7",
+      "observation": "<html> <div tab start date calendar input use> <div> <div> <div button tuesday april 4, 2023> 4 </div> <div button wednesday april 5, 2023> 5 </div> <div button thursday april 6, 2023> 6 </div> <div id=15854 button friday april 7, 2023> 7 </div> <div button saturday april 8, 2023> 8 </div> <div button sunday april 9, 2023> 9 </div> <div button monday april 10, 2023> 10 </div> <div id=16864 button tuesday april 11, 2023> 11 </div> <div button wednesday april 12, 2023> 12 </div> <div button thursday april 13, 2023> 13 </div> <div button friday april 14, 2023> 14 </div> </div> <div> <div button thursday may 4, 2023> 4 </div> <div button friday may 5, 2023> 5 </div> <div button saturday may 6, 2023> 6 </div> <div id=16950 button sunday may 7, 2023> 7 </div> <div button monday may 8, 2023> 8 </div> <div button tuesday may 9, 2023> 9 </div> <div button wednesday may 10, 2023> 10 </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18473]",
+      "op": "CLICK",
+      "element": "18473",
+      "value": "",
+      "description": "[button] Tuesday April 11, 2023 -> CLICK",
+      "role": "button",
+      "label": "Tuesday April 11, 2023",
+      "observation": "<html> <div tab end date calendar input use> <div> <div> <div button tuesday april 4, 2023> 4 </div> <div button wednesday april 5, 2023> 5 </div> <div button thursday april 6, 2023> 6 </div> <div id=19476 button friday april 7, 2023> 7 </div> <div button saturday april 8, 2023> 8 </div> <div button sunday april 9, 2023> 9 </div> <div button monday april 10, 2023> 10 </div> <div id=18473 button tuesday april 11, 2023> 11 </div> <div button wednesday april 12, 2023> 12 </div> <div button thursday april 13, 2023> 13 </div> <div button friday april 14, 2023> 14 </div> </div> <div> <div button thursday may 4, 2023> 4 </div> <div button friday may 5, 2023> 5 </div> <div button saturday may 6, 2023> 6 </div> <div id=19569 button sunday may 7, 2023> 7 </div> <div button monday may 8, 2023> 8 </div> <div button tuesday may 9, 2023> 9 </div> <div button wednesday may 10, 2023> 10 </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [20890]",
+      "op": "CLICK",
+      "element": "20890",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <input id=21313 text birmingham, england, united kingdom (bhx) from /> <button id=21367 button submit search> <svg id=20890 img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [23129]",
+      "op": "CLICK",
+      "element": "23129",
+      "value": "",
+      "description": "[checkbox] Free internet -> CLICK",
+      "role": "checkbox",
+      "label": "Free internet",
+      "observation": "<html> <div> <div region freebies> <div> <span> <input id=23932 checkbox false /> <svg img icon /> </span> <span> <input id=23129 checkbox false /> <svg img icon /> </span> </div> </div> <div region amenities> <div id=24013 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [30810]",
+      "op": "CLICK",
+      "element": "30810",
+      "value": "",
+      "description": "[button] Amenities -> CLICK",
+      "role": "button",
+      "label": "Amenities",
+      "observation": "<html> <div> <div region freebies> <div> <span> <input id=31609 checkbox false /> <svg img icon /> </span> <span> <input id=31626 checkbox false /> <svg img icon /> </span> </div> </div> <div region amenities> <div id=30810 button amenities> <div> Amenities </div> <svg img /> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [38461]",
+      "op": "CLICK",
+      "element": "38461",
+      "value": "",
+      "description": "[checkbox] Casino -> CLICK",
+      "role": "checkbox",
+      "label": "Casino",
+      "observation": "<html> <div region amenities> <div id=39513 button amenities> <div> Amenities </div> <svg img /> </div> <span> <span> <input id=38461 checkbox false /> <svg img icon /> </span> <label id=39616> <div> Casino </div> </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [49154]",
+      "op": "CLICK",
+      "element": "49154",
+      "value": "",
+      "description": "[checkbox] Restaurant -> CLICK",
+      "role": "checkbox",
+      "label": "Restaurant",
+      "observation": "<html> <div region amenities> <div> <div id=49982 button amenities> <div> Amenities </div> <svg img /> </div> <div button reset all values for amenities> Reset </div> </div> <span> <span> <input id=49154 checkbox false /> <svg img icon /> </span> <label id=50328> <div> Restaurant </div> </label> </span> </div> </html>"
+    },
+    {
+      "action": "CLICK [54364]",
+      "op": "CLICK",
+      "element": "54364",
+      "value": "",
+      "description": "[checkbox] Fitness -> CLICK",
+      "role": "checkbox",
+      "label": "Fitness",
+      "observation": "<html> <div> <div region freebies> <span> <input id=55111 checkbox false /> <svg img icon /> </span> </div> <div region amenities> <div> <div id=55178 button amenities> <div> Amenities </div> <svg img /> </div> <div button reset all values for amenities> Reset </div> </div> <span> <input id=54364 checkbox false /> <svg img icon /> </span> </div> </div> </html>"
+    }
+  ]
+}

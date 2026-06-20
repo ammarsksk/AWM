@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "name": "gamestop / Speciality workflow 436",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "gamestop",
+  "domain": "Shopping",
+  "subdomain": "Speciality",
+  "goal_pattern": "Search for the latest deluxe digital copy of the Xbox Series X Resident Evil game for pre-order and add it to the cart.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "resident",
+      "evil",
+      "xbox",
+      "series",
+      "search",
+      "deluxe",
+      "digital",
+      "pre",
+      "add",
+      "cart",
+      "use",
+      "games",
+      "span",
+      "link",
+      "generic",
+      "refine",
+      "category",
+      "gamestop",
+      "shopping",
+      "speciality",
+      "latest",
+      "copy",
+      "game",
+      "order",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "searchbox",
+      "consoles",
+      "more",
+      "specific",
+      "field",
+      "filter",
+      "video",
+      "shop",
+      "orders",
+      "franchise",
+      "checkbox",
+      "done",
+      "heading"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search games, consoles & more",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Search games, consoles & more",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the resident evil",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "resident evil",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Refine by Category: Video Games",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Refine by Category: Video Games",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Refine by Category: Xbox Series X|S",
+        "operation": "CLICK",
+        "target_type": "generic",
+        "target": "Refine by Category: Xbox Series X|S",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Shop Pre-Orders",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Shop Pre-Orders",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Franchise",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Franchise",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Resident Evil Resident Evil",
+        "operation": "CLICK",
+        "target_type": "checkbox",
+        "target": "Resident Evil Resident Evil",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Done",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Done",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Resident Evil 4 - Xbox Series X",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Resident Evil 4 - Xbox Series X",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the Digital",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Digital",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the Deluxe",
+        "operation": "CLICK",
+        "target_type": "li",
+        "target": "Deluxe",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 13,
+        "intent": "click the Add to Cart",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add to Cart",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 13
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 13.0
+  },
+  "raw_workflow_name": "gamestop / Speciality workflow 436"
+}

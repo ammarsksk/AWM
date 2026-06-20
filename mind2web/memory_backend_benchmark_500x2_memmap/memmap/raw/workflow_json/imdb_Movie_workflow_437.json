@@ -1,0 +1,30 @@
+{
+  "name": "imdb / Movie workflow 437",
+  "source": "Mind2Web exemplar",
+  "website": "imdb",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Add Prometheus movie to watchlist.",
+  "steps": [
+    {
+      "action": "CLICK [81]",
+      "op": "CLICK",
+      "element": "81",
+      "value": "",
+      "description": "[textbox] Search IMDb -> CLICK",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=170 button open navigation drawer> <svg id=173 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=81 text search imdb q /> </div> </form> </div> </html>"
+    },
+    {
+      "action": "TYPE [5015] [Prometheus]",
+      "op": "TYPE",
+      "element": "5015",
+      "value": "Prometheus",
+      "description": "[textbox] Search IMDb -> TYPE: Prometheus",
+      "role": "textbox",
+      "label": "Search IMDb",
+      "observation": "<html> <div> <label id=5104 button open navigation drawer> <svg id=5107 ipc-icon ipc-icon--menu /> <span> Menu </span> </label> <input checkbox on /> <a home /> <form search> <div combobox> <input id=5015 text search imdb q /> </div> </form> </div> </html>"
+    }
+  ]
+}

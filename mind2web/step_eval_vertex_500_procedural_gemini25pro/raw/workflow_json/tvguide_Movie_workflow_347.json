@@ -1,0 +1,40 @@
+{
+  "name": "tvguide / Movie workflow 347",
+  "source": "Mind2Web exemplar",
+  "website": "tvguide",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find all watch options of Avatar: The Way of Water and where it's available.",
+  "steps": [
+    {
+      "action": "TYPE [145] [Avatar The Way of Water]",
+      "op": "TYPE",
+      "element": "145",
+      "value": "Avatar The Way of Water",
+      "description": "[textbox] Search TV Shows and Movies... -> TYPE: Avatar The Way of Water",
+      "role": "textbox",
+      "label": "Search TV Shows and Movies...",
+      "observation": "<html> <div> <div> <div combobox> <input id=145 text search tv shows and movies... /> </div> <ul menubar> <li menuitem> <a id=829> Recommendations </a> <div menu> </div> </li> </ul> </div> <div> <a id=2022> The Ten Commandments </a> <span> 3 hr 39 mins </span> <div> Based on the Holy Scriptures, with additional dialogue by several other hands, The Ten Commandments was the last film directed </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [12186]",
+      "op": "CLICK",
+      "element": "12186",
+      "value": "",
+      "description": "[div] Avatar: The Way of Water -> CLICK",
+      "role": "div",
+      "label": "Avatar: The Way of Water",
+      "observation": "<html> <div> <ul listbox> <li id=12186 option> <div> Avatar: The Way of Water </div> </li> </ul> <ul menubar> <li menuitem> <a id=12280> Streaming </a> <div menu> </div> </li> <li menuitem> <a id=12376> Recommendations </a> <div menu> </div> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [23168]",
+      "op": "CLICK",
+      "element": "23168",
+      "value": "",
+      "description": "[div] See All Where to Watch -> CLICK",
+      "role": "div",
+      "label": "See All Where to Watch",
+      "observation": "<html> <div movies> <div> <div> <button id=24150> Streaming </button> <div id=23168> See All Where to Watch </div> </div> <a id=26055> <h5> Avatar: The Way Of Water (Teaser Trailer 1) </h5> <span> 1:38 </span> </a> </div> </div> </html>"
+    }
+  ]
+}

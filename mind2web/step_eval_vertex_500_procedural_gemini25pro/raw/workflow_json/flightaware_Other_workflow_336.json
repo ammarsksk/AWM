@@ -1,0 +1,50 @@
+{
+  "name": "flightaware / Other workflow 336",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find map for the KCCR airport",
+  "steps": [
+    {
+      "action": "CLICK [84]",
+      "op": "CLICK",
+      "element": "84",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=1293 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <input id=84 text search for flight, tail, airport, /> </div> </header> <input id=2979 text /> </div> </html>"
+    },
+    {
+      "action": "TYPE [10050] [KCCR]",
+      "op": "TYPE",
+      "element": "10050",
+      "value": "KCCR",
+      "description": "[input] -> TYPE: KCCR",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=11259 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <input id=10050 text /> </div> </header> <form> <input text origin kosu /> <div button> </div> <input id=12209 text destination /> <input submit /> </form> </div> </html>"
+    },
+    {
+      "action": "CLICK [24809]",
+      "op": "CLICK",
+      "element": "24809",
+      "value": "",
+      "description": "[option] \uf041 Buchanan Fld (Concord",
+      "role": "option",
+      "label": "\uf041 Buchanan Fld (Concord",
+      "observation": "<html> <body> <div> <header banner> <div> <span> All </span> <select id=21211 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <input id=22892 text /> </div> <div id=24809 option> <span> Buchanan Fld (Concord) </span> <span> KCCR </span> <span> CCR </span> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [25159]",
+      "op": "CLICK",
+      "element": "25159",
+      "value": "",
+      "description": "[link] MAP & DIAGRAM -> CLICK",
+      "role": "link",
+      "label": "MAP & DIAGRAM",
+      "observation": "<html> <div> <header banner> <div> <span> All </span> <select id=26420 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <a id=25159> Map & Diagram </a> <div> <h1> Buchanan Fld Airport (Concord, CA) CCR </h1> <a id=28088> View KCCR Airport Stats </a> </div> </div> </div> </html>"
+    }
+  ]
+}

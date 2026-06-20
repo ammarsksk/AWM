@@ -1,0 +1,51 @@
+{
+  "name": "spothero / Other workflow 462",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find the cheapest wheelchair accessible parking for the Pittsburgh Pirates at St. Louis Cardinals event in Busch Stadium on Apr 13.",
+  "goal_pattern": "Find the cheapest wheelchair accessible parking for the Pittsburgh Pirates at St. Louis Cardinals event in Busch Stadium on Apr 13.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "type the Search for parking",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Search for parking",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "click the Busch Stadium, Clark Avenue, St. Louis, MO, USA",
+      "operation": "CLICK",
+      "target_type": "li",
+      "target_description": "Busch Stadium, Clark Avenue, St. Louis, MO, USA",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "TYPE [109] [busch stadium]",
+      "gold_element_id": "109",
+      "gold_value": "busch stadium"
+    },
+    {
+      "step": 2,
+      "gold_action": "CLICK [2104]",
+      "gold_element_id": "2104",
+      "gold_value": ""
+    }
+  ],
+  "raw_workflow_name": "spothero / Other workflow 462"
+}

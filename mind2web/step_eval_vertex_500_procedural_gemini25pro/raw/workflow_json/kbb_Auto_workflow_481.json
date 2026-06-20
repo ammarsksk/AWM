@@ -1,0 +1,70 @@
+{
+  "name": "kbb / Auto workflow 481",
+  "source": "Mind2Web exemplar",
+  "website": "kbb",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find the fuel economy for a 2005 Toyota Corolla",
+  "steps": [
+    {
+      "action": "CLICK [862]",
+      "op": "CLICK",
+      "element": "862",
+      "value": "",
+      "description": "[link] Price New/Used -> CLICK",
+      "role": "link",
+      "label": "Price New/Used",
+      "observation": "<html> <div> <a id=710 unstyled> Price New/Used </a> <main> <a id=862> <span> Price New/Used </span> </a> <div region> <a id=2627 unstyled search toyota corolla for sale> Toyota Corolla for Sale </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "SELECT [4489] [2005]",
+      "op": "SELECT",
+      "element": "4489",
+      "value": "2005",
+      "description": "[combobox] Year -> SELECT: 2005",
+      "role": "combobox",
+      "label": "Year",
+      "observation": "<html> <form> <select id=4489 year> <option true> Year </option> <option 2025> 2025 </option> <option 2024> 2024 </option> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> <option 2020> 2020 </option> <option 2019> 2019 </option> <option 2018> 2018 </option> <option 2017> 2017 </option> <option 2016> 2016 </option> <option 2015> 2015 </option> <option 2014> 2014 </option> <option 2013> 2013 </option> <option 2012> 2012 </option> <option 2011> 2011 </option> <option 2010> 2010 </option> <option 2009> 2009 </option> <option 2008> 2008 </option> <option 2007> 2007 </option> <option 2006> 2006 </option> <option 2005> 2005 </option> <option 2004> 2004 </option> <option 2003> 2003 </option> <option 2002> 2002 </option> </select> <select id=5319 make> <option true> Make </option> </select> <button id=5351 submit> <span> Next </span> </button> </form> </html>"
+    },
+    {
+      "action": "SELECT [11237] [Toyota]",
+      "op": "SELECT",
+      "element": "11237",
+      "value": "Toyota",
+      "description": "[combobox] Make -> SELECT: Toyota",
+      "role": "combobox",
+      "label": "Make",
+      "observation": "<html> <form> <div> <select id=11985 year> <option> Year </option> <option 2025> 2025 </option> <option 2024> 2024 </option> <option 2023> 2023 </option> <option 2022> 2022 </option> <option 2021> 2021 </option> <option 2020> 2020 </option> <option 2019> 2019 </option> <option 2018> 2018 </option> <option 2017> 2017 </option> <option 2016> 2016 </option> <option 2015> 2015 </option> <option 2014> 2014 </option> <option 2013> 2013 </option> <option 2012> 2012 </option> <option 2011> 2011 </option> <option 2010> 2010 </option> <option 2009> 2009 </option> <option 2008> 2008 </option> <option 2007> 2007 </option> <option 2006> 2006 </option> <option 2005 true> 2005 </option> <option 2004> 2004 </option> <option 2003> 2003 </option> <option 2002> 2002 </option> </select> <label> Year </label> </div> <select id=11237 make> <option true> Make </option> <option acura> Acura </option> <option aston martin> Aston Martin </option> <option audi> Audi </option> <option bentley> Bentley </option> <option bmw> BMW </option> <option buick> Buick </option> <option cadillac> Cadillac </option> <option chevrolet> Chevrolet </option> <option chrysler> Chrysler </option> <option dodge> Dodge </option> <option ford> Ford </option> <option gmc> GMC </option> <option honda> Honda </option> <option hummer> HUMMER </option> <option hyundai> Hyundai </option> <option infiniti> INFINITI </option> <option isuzu> Isuzu </option> <option jaguar> Jaguar </option> <option jeep> Jeep </option> <option kia> Kia </option> <option land rover> Land Rover </option> <option lexus> Lexus </option> <option lincoln> Lincoln </option> <option lotus> Lotus </option> </select> <button id=12189 submit> <span> Next </span> </button> </form> </html>"
+    },
+    {
+      "action": "SELECT [18182] [Corolla]",
+      "op": "SELECT",
+      "element": "18182",
+      "value": "Corolla",
+      "description": "[combobox] Model -> SELECT: Corolla",
+      "role": "combobox",
+      "label": "Model",
+      "observation": "<html> <form> <div> <select id=19017 make> <option> Make </option> <option acura> Acura </option> <option aston martin> Aston Martin </option> <option audi> Audi </option> <option bentley> Bentley </option> <option bmw> BMW </option> <option buick> Buick </option> <option cadillac> Cadillac </option> <option chevrolet> Chevrolet </option> <option chrysler> Chrysler </option> <option dodge> Dodge </option> <option ford> Ford </option> <option gmc> GMC </option> <option honda> Honda </option> <option hummer> HUMMER </option> <option hyundai> Hyundai </option> <option infiniti> INFINITI </option> <option isuzu> Isuzu </option> <option jaguar> Jaguar </option> <option jeep> Jeep </option> <option kia> Kia </option> <option land rover> Land Rover </option> <option lexus> Lexus </option> <option lincoln> Lincoln </option> <option lotus> Lotus </option> </select> <label> Make </label> </div> <select id=18182 model> <option true> Model </option> <option 4runner> 4Runner </option> <option avalon> Avalon </option> <option camry> Camry </option> <option celica> Celica </option> <option corolla> Corolla </option> <option echo> Echo </option> <option highlander> Highlander </option> <option land cruiser> Land Cruiser </option> <option matrix> Matrix </option> <option mr2> MR2 </option> <option prius> Prius </option> <option rav4> RAV4 </option> <option sequoia> Sequoia </option> <option sienna> Sienna </option> <option solara> Solara </option> <option tacoma access cab> Tacoma Access Cab </option> <option tacoma double cab> Tacoma Double Cab </option> <option tacoma regular cab> Tacoma Regular Cab </option> <option tundra access cab> Tundra Access Cab </option> <option tundra double cab> Tundra Double Cab </option> <option tundra regular cab> Tundra Regular Cab </option> </select> <button id=19180 submit> <span> Next </span> </button> </form> </html>"
+    },
+    {
+      "action": "CLICK [26304]",
+      "op": "CLICK",
+      "element": "26304",
+      "value": "",
+      "description": "[button] Next -> CLICK",
+      "role": "button",
+      "label": "Next",
+      "observation": "<html> <div> <a id=25812 unstyled> Price New/Used </a> <div> <div radiogroup> <div radiogroup> <label id=26013> <input radio price new/used true /> <div> Price New/Used </div> </label> </div> </div> <button id=26304 submit> <span> Next </span> </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [29989]",
+      "op": "CLICK",
+      "element": "29989",
+      "value": "",
+      "description": "[button] Close dialog -> CLICK",
+      "role": "button",
+      "label": "Close dialog",
+      "observation": "<html> <body> <label id=31991> <input radio trending fuel efficiency /> <div> Fuel Efficiency </div> </label> <div dialog> <section> <button yes, i'll give feedback (opens> Yes, I'll give feedback </button> <button id=35013 no thanks> No thanks </button> </section> </div> </body> <svg id=29989 fsrbutton /> </html>"
+    }
+  ]
+}

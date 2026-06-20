@@ -1,0 +1,27 @@
+2026-06-19 13:57:08,526 - 3314061 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.22_0 in:
+  results/2026-06-19_13-57-08_GenericAgentArgs_on_webarena.22_0
+2026-06-19 13:57:10,351 - 3314061 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 13:57:10,352 - 3314061 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 13:57:24,166 - 3314061 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.22.
+KeyError:
+'Could not automatically map gemini-2.5-pro to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 418, in run
+    action = step_info.from_action(agent)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 206, in from_action
+    self.action, self.agent_info = agent.get_action(self.obs.copy())
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py", line 110, in get_action
+    prompt = dynamic_prompting.fit_tokens(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/dynamic_prompting.py", line 212, in fit_tokens
+    n_token = count_tokens(prompt_str, model=model_name)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/llm_utils.py", line 184, in count_tokens
+    enc = get_tokenizer(model)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/llm_utils.py", line 178, in get_tokenizer
+    return tiktoken.encoding_for_model(model_name.split("/")[-1])
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/tiktoken/model.py", line 118, in encoding_for_model
+    return get_encoding(encoding_name_for_model(model_name))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/tiktoken/model.py", line 105, in encoding_name_for_model
+    raise KeyError(
+KeyError: 'Could not automatically map gemini-2.5-pro to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+
+2026-06-19 13:57:24,383 - 3314061 - browsergym.experiments.loop - INFO - Saving summary info.

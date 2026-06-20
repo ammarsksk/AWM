@@ -1,0 +1,50 @@
+{
+  "name": "aa / Airlines workflow 137",
+  "source": "Mind2Web exemplar",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Check my trip for Smith and booking number X899987799.",
+  "steps": [
+    {
+      "action": "CLICK [106]",
+      "op": "CLICK",
+      "element": "106",
+      "value": "",
+      "description": "[link] Manage trips / Check-in -> CLICK",
+      "role": "link",
+      "label": "Manage trips / Check-in",
+      "observation": "<html> <main main main content> <div> <ul tablist> <li tab> <a id=1039> Book </a> </li> <li tab> <a id=106> Manage trips / Check-in </a> </li> </ul> <div tabpanel> <form> <label> To <input id=1202 text city or airport /> </label> </form> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [5701] [Smith]",
+      "op": "TYPE",
+      "element": "5701",
+      "value": "Smith",
+      "description": "[textbox] Passenger last name , required. -> TYPE: Smith",
+      "role": "textbox",
+      "label": "Passenger last name , required.",
+      "observation": "<html> <main main main content> <div tabpanel> <div> <label> Passenger last name <span> , required. </span> <input id=5701 text lastname /> </label> <div> <label> Confirmation / Record locator <span> , required. </span> <input id=7055 text recordlocator ex. jcqnhd /> </label> <input id=7105 submit find your trip /> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [11278] [X899987799]",
+      "op": "TYPE",
+      "element": "11278",
+      "value": "X899987799",
+      "description": "[textbox] Confirmation / Record locator , required. -> TYPE: X899987799",
+      "role": "textbox",
+      "label": "Confirmation / Record locator , required.",
+      "observation": "<html> <main main main content> <div tabpanel> <div> <div radiogroup> <input id=12563 radio /> </div> <div> <label> Confirmation / Record locator <span> , required. </span> <input id=11278 text recordlocator ex. jcqnhd /> </label> <input id=12689 submit find your trip /> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [16849]",
+      "op": "CLICK",
+      "element": "16849",
+      "value": "",
+      "description": "[button] Find your trip -> HOVER",
+      "role": "button",
+      "label": "Find your trip",
+      "observation": "<html> <main main main content> <div tabpanel> <div> <div radiogroup> <input id=18135 radio /> </div> <div> <label> Confirmation / Record locator <span> , required. </span> <input id=18212 text recordlocator ex. jcqnhd x89998 /> </label> <input id=16849 submit find your trip /> </div> </div> </div> </main> </html>"
+    }
+  ]
+}

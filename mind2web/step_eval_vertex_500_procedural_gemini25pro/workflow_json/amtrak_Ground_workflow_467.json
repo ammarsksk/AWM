@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "name": "amtrak / Ground workflow 467",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "amtrak",
+  "domain": "Travel",
+  "subdomain": "Ground",
+  "goal_pattern": "Find the schedule between New York and Washington DC sorted by shortest trip.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "use",
+      "textbox",
+      "find",
+      "new",
+      "york",
+      "washington",
+      "shortest",
+      "trip",
+      "specific",
+      "field",
+      "option",
+      "span",
+      "amtrak",
+      "travel",
+      "ground",
+      "schedule",
+      "between",
+      "sorted",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "moynihan",
+      "train",
+      "hall",
+      "penn",
+      "sta",
+      "union",
+      "station",
+      "was",
+      "depart",
+      "date",
+      "gridcell",
+      "monday",
+      "april",
+      "2023",
+      "trains",
+      "sort",
+      "filter"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the From",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "From",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "New York, NY - Moynihan Train Hall at Penn Sta. (N...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the To",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "To",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Washington, DC - Union Station (WAS",
+        "operation": "CLICK",
+        "target_type": "option",
+        "target": "Washington, DC - Union Station (WAS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Depart Date",
+        "operation": "CLICK",
+        "target_type": "textbox",
+        "target": "Depart Date",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Monday, April 17, 2023",
+        "operation": "CLICK",
+        "target_type": "gridcell",
+        "target": "Monday, April 17, 2023",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the FIND TRAINS",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "FIND TRAINS",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Sort/Filter",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Sort/Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Shortest Trip",
+        "operation": "CLICK",
+        "target_type": "span",
+        "target": "Shortest Trip",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 9
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 9.0
+  },
+  "raw_workflow_name": "amtrak / Ground workflow 467"
+}

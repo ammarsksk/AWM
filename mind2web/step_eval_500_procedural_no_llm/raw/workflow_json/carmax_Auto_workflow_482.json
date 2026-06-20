@@ -1,0 +1,100 @@
+{
+  "name": "carmax / Auto workflow 482",
+  "source": "Mind2Web exemplar",
+  "website": "carmax",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find estimated monthly payments for a $10,000 vehicle with $500 down payment, 72 month term length and challenged credit score in the state of New Jersey",
+  "steps": [
+    {
+      "action": "CLICK [125]",
+      "op": "CLICK",
+      "element": "125",
+      "value": "",
+      "description": "[link] Finance -> CLICK",
+      "role": "link",
+      "label": "Finance",
+      "observation": "<html> <div> <header banner> <nav primary> <div> <a> Shop </a> <a> Sell/Trade </a> <a id=125> Finance </a> </div> </nav> </header> <main main> <div> <div> <input id=783 text $2,000 /> <label> Down Payment </label> </div> <div> <select id=788> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 579 FICO Score) </option> </select> <label> Credit Score </label> </div> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [3403]",
+      "op": "CLICK",
+      "element": "3403",
+      "value": "",
+      "description": "[link] Car payment calculator -> CLICK",
+      "role": "link",
+      "label": "Car payment calculator",
+      "observation": "<html> <main main> <header banner> <nav primary> <button id=3518 open helpful links menu> <span> More </span> </button> </nav> <form search> <div> <label> Search make, model, or keyword </label> <input id=3587 search search by make, model, or /> </div> </form> </header> <div> <a> How it works </a> <a id=3403> Car payment calculator </a> <a> CarMax Auto Finance </a> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [5249]",
+      "op": "CLICK",
+      "element": "5249",
+      "value": "",
+      "description": "[textbox] Vehicle Price -> CLICK",
+      "role": "textbox",
+      "label": "Vehicle Price",
+      "observation": "<html> <main main> <div> <div> <input id=5249 text $25,000 /> <label> Vehicle Price </label> </div> <div> <input id=5578 text $2,000 /> <label> Down Payment </label> </div> <div> <select id=5668> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 580 FICO Score) </option> <option 0> Custom </option> </select> <label> Credit Score </label> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [7374] [10000]",
+      "op": "TYPE",
+      "element": "7374",
+      "value": "10000",
+      "description": "[textbox] Vehicle Price -> TYPE: 10000",
+      "role": "textbox",
+      "label": "Vehicle Price",
+      "observation": "<html> <main main> <div> <div> <input id=7374 text $25,000 /> <label> Vehicle Price </label> </div> <div> <input id=7703 text $2,000 /> <label> Down Payment </label> </div> <div> <select id=7793> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 580 FICO Score) </option> <option 0> Custom </option> </select> <label> Credit Score </label> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [9533]",
+      "op": "CLICK",
+      "element": "9533",
+      "value": "",
+      "description": "[textbox] Down Payment -> CLICK",
+      "role": "textbox",
+      "label": "Down Payment",
+      "observation": "<html> <main main> <div> <div> <input id=9533 text $2,000 /> <label> Down Payment </label> </div> <div> <select id=9952> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 580 FICO Score) </option> <option 0> Custom </option> </select> <label> Credit Score </label> </div> <div> <input id=9971 text 10% /> <label> APR </label> </div> </div> </main> </html>"
+    },
+    {
+      "action": "TYPE [11678] [500]",
+      "op": "TYPE",
+      "element": "11678",
+      "value": "500",
+      "description": "[textbox] Down Payment -> TYPE: 500",
+      "role": "textbox",
+      "label": "Down Payment",
+      "observation": "<html> <main main> <div> <div> <a> How it works </a> <a id=11977> Car payment calculator </a> <a> CarMax Auto Finance </a> </div> <div> <div> <input id=11678 text $2,000 /> <label> Down Payment </label> </div> <div> <select id=12097> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 580 FICO Score) </option> <option 0> Custom </option> </select> <label> Credit Score </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "SELECT [13833] [New Jersey]",
+      "op": "SELECT",
+      "element": "13833",
+      "value": "New Jersey",
+      "description": "[combobox] State -> SELECT: New Jersey",
+      "role": "combobox",
+      "label": "State",
+      "observation": "<html> <main main> <div> <div> <a> How it works </a> <a id=14133> Car payment calculator </a> <a> CarMax Auto Finance </a> </div> <div> <div> <select id=13833> <option al> Alabama </option> <option az> Arizona </option> <option ca> California </option> <option co> Colorado </option> <option ct> Connecticut </option> <option de> Delaware </option> <option fl> Florida </option> <option ga> Georgia </option> <option id> Idaho </option> <option il> Illinois </option> <option in> Indiana </option> <option ia> Iowa </option> <option ks> Kansas </option> <option ky> Kentucky </option> <option la> Louisiana </option> <option me> Maine </option> <option md> Maryland </option> <option ma> Massachusetts </option> <option mi> Michigan </option> <option mn> Minnesota </option> <option ms> Mississippi </option> <option mo> Missouri </option> <option ne> Nebraska </option> <option nv> Nevada </option> <option nh> New Hampshire </option> </select> <label> State </label> </div> <div> <select id=14253> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 580 FICO Score) </option> <option 0> Custom </option> </select> <label> Credit Score </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "SELECT [15988] [Challenged (< 580 FICO\u00ae Score)]",
+      "op": "SELECT",
+      "element": "15988",
+      "value": "Challenged (< 580 FICO\u00ae Score)",
+      "description": "[combobox] Credit Score -> SELECT: Challenged (< 580 FICO\u00ae Score",
+      "role": "combobox",
+      "label": "Credit Score",
+      "observation": "<html> <main main> <div> <div> <a> How it works </a> <a id=16288> Car payment calculator </a> <a> CarMax Auto Finance </a> </div> <div> <div> <input id=16311 text $10,000 /> <label> Vehicle Price </label> </div> <div> <select id=15988> <option 5> Excellent (800+ FICO Score) </option> <option 6> Very Good (740-799 FICO Score) </option> <option 10 true> Good (670-739 FICO Score) </option> <option 15> Fair (580-669 FICO Score) </option> <option 24> Challenged (< 580 FICO Score) </option> <option 0> Custom </option> </select> <label> Credit Score </label> </div> </div> </div> </main> </html>"
+    },
+    {
+      "action": "SELECT [18154] [72 months]",
+      "op": "SELECT",
+      "element": "18154",
+      "value": "72 months",
+      "description": "[combobox] Term Length -> SELECT: 72 months",
+      "role": "combobox",
+      "label": "Term Length",
+      "observation": "<html> <main main> <div> <div> <a> How it works </a> <a id=18461> Car payment calculator </a> <a> CarMax Auto Finance </a> </div> <div> <div> <input id=18484 text $10,000 /> <label> Vehicle Price </label> </div> <div> <select id=18154> <option 36> 36 months </option> <option 48> 48 months </option> <option 60> 60 months </option> <option 72 true> 72 months </option> </select> <label> Term Length </label> </div> </div> </div> </main> </html>"
+    }
+  ]
+}

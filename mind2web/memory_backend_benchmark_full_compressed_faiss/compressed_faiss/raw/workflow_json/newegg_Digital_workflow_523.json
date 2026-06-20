@@ -1,0 +1,30 @@
+{
+  "name": "newegg / Digital workflow 523",
+  "source": "Mind2Web exemplar",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "task": "Find a Lenovo laptop under $800 and create a price alert for $400.",
+  "steps": [
+    {
+      "action": "TYPE [134] [lenovo laptop]",
+      "op": "TYPE",
+      "element": "134",
+      "value": "lenovo laptop",
+      "description": "[searchbox] Search Site -> TYPE: lenovo laptop",
+      "role": "searchbox",
+      "label": "Search Site",
+      "observation": "<html> <div> <input id=134 search search site /> <ul> <a id=9962 computer peripherals> <div> Computer Peripherals </div> </a> <a id=10473 electronics> <div> Electronics </div> </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [33923]",
+      "op": "CLICK",
+      "element": "33923",
+      "value": "",
+      "description": "[button] \uf002 -> CLICK",
+      "role": "button",
+      "label": "\uf002",
+      "observation": "<html> <div> <div> <input search search site lenovo laptop /> <button id=33923> <span> Search </span> </button> </div> <div> <a id=41904 lenovo laptop> <em> lenovo laptop </em> </a> <a id=42002 laptop finder> Laptop Finder </a> </div> </div> </html>"
+    }
+  ]
+}

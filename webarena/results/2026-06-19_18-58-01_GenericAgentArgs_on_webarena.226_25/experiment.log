@@ -1,0 +1,25 @@
+2026-06-19 18:58:01,545 - 3600599 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.226_25 in:
+  results/2026-06-19_18-58-01_GenericAgentArgs_on_webarena.226_25
+2026-06-19 18:58:03,488 - 3600599 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:58:03,489 - 3600599 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:58:14,069 - 3600599 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:58:14,092 - 3600599 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:58:14,312 - 3600599 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:58:14,312 - 3600599 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:58:18,906 - 3600599 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:58:19,545 - 3600599 - browsergym.experiments.loop - INFO - The user wants to find the price range for "Amazon basic" products. I will start by searching for "Amazon basic" in the search bar. The search input field has `bid` 216 and the search button has `bid` 221.
+
+action:
+fill('216', 'Amazon basic')
+click('221')
+
+2026-06-19 18:58:39,306 - 3600599 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:58:39,693 - 3600599 - browsergym.experiments.loop - INFO - The user wants to find the price range for "Amazon basic" products. The search results are already on the page. To find the price range, I need to find the minimum and maximum prices. I can do this by sorting the products by price.
+
+First, I will sort the products by price in ascending order to find the minimum price. The "Sort By" dropdown has `bid="1216"`. I will select the "Price" option.
+
+action:
+select_option('1216', 'Price')
+
+2026-06-19 18:58:42,527 - 3600599 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (7/8 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')

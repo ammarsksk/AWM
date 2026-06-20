@@ -1,0 +1,30 @@
+{
+  "name": "last.fm / Music workflow 580",
+  "source": "Mind2Web exemplar",
+  "website": "last.fm",
+  "domain": "Entertainment",
+  "subdomain": "Music",
+  "task": "Find similar artists to the Weekend.",
+  "steps": [
+    {
+      "action": "CLICK [186]",
+      "op": "CLICK",
+      "element": "186",
+      "value": "",
+      "description": "[link] Search -> CLICK",
+      "role": "link",
+      "label": "Search",
+      "observation": "<html> <div main> <div> <div> <a> Last.fm </a> <a id=186> Search </a> <ul primary navigation> <a id=795> Events </a> </ul> </div> <nav secondary navigation> <a id=985> Artists </a> </nav> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [10679] [the weeknd]",
+      "op": "TYPE",
+      "element": "10679",
+      "value": "the weeknd",
+      "description": "[textbox] Search -> TYPE: the weeknd",
+      "role": "textbox",
+      "label": "Search",
+      "observation": "<html> <div main> <div> <div> <input id=10679 text q search for music /> <button id=10741 submit> Search </button> </div> <nav secondary navigation> <a id=11438> Artists </a> </nav> </div> </div> </html>"
+    }
+  ]
+}

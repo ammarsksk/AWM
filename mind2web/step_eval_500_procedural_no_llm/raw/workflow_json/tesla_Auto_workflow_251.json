@@ -1,0 +1,50 @@
+{
+  "name": "tesla / Auto workflow 251",
+  "source": "Mind2Web exemplar",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Find a red used tesla Model S.",
+  "steps": [
+    {
+      "action": "CLICK [3561]",
+      "op": "CLICK",
+      "element": "3561",
+      "value": "",
+      "description": "[link] Model S -> CLICK",
+      "role": "link",
+      "label": "Model S",
+      "observation": "<html> <header> <a id=3561 model s> <span> Model S </span> </a> <ol> <a id=3589 shop> <span> Shop </span> </a> <button id=3597 button menu> <span> Menu </span> </button> </ol> </header> </html>"
+    },
+    {
+      "action": "CLICK [8188]",
+      "op": "CLICK",
+      "element": "8188",
+      "value": "",
+      "description": "[link] View Inventory -> CLICK",
+      "role": "link",
+      "label": "View Inventory",
+      "observation": "<html> <main main> <div> <section> <a id=8188 view inventory> <span> View Inventory </span> </a> <a order now> </a> </section> <section> <a order now> </a> <a id=8850 view inventory> <span> View Inventory </span> </a> </section> <section> <a order now> </a> <a id=9203 view inventory> <span> View Inventory </span> </a> </section> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [11465]",
+      "op": "CLICK",
+      "element": "11465",
+      "value": "",
+      "description": "[radio] Used -> CLICK",
+      "role": "radio",
+      "label": "Used",
+      "observation": "<html> <div> <div> <input id=11465 radio used inventory type /> <label id=12036> <span> Used </span> </label> </div> <div> <input checkbox on /> <label id=12072> <span> Red </span> </label> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [18727]",
+      "op": "CLICK",
+      "element": "18727",
+      "value": "",
+      "description": "[image] -> CLICK",
+      "role": "image",
+      "label": "",
+      "observation": "<html> <div> <div> <input checkbox on /> <label id=19349> <span> Red </span> </label> </div> <legend id=19353> Interior Color </legend> </div> <img id=18727 /> </html>"
+    }
+  ]
+}

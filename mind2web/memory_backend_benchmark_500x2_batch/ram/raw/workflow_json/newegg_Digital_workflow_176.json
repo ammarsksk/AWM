@@ -1,0 +1,30 @@
+{
+  "name": "newegg / Digital workflow 176",
+  "source": "Mind2Web exemplar",
+  "website": "newegg",
+  "domain": "Shopping",
+  "subdomain": "Digital",
+  "task": "add a motherboard under $200 and a compatible processor at any price to the shopping cart.",
+  "steps": [
+    {
+      "action": "TYPE [134] [motherboard]",
+      "op": "TYPE",
+      "element": "134",
+      "value": "motherboard",
+      "description": "[searchbox] Search Site -> TYPE: motherboard",
+      "role": "searchbox",
+      "label": "Search Site",
+      "observation": "<html> <div> <input id=134 search search site /> <ul> <a id=9086 computer systems> <div> Computer Systems </div> </a> <a id=10468 electronics> <div> Electronics </div> </a> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [36500]",
+      "op": "CLICK",
+      "element": "36500",
+      "value": "",
+      "description": "[button] \uf002 -> CLICK",
+      "role": "button",
+      "label": "\uf002",
+      "observation": "<html> <div> <div> <input search search site motherboard /> <button id=36500> <span> Search </span> </button> </div> <div> <a id=44481 motherboard> <em> motherboard </em> </a> <a id=44539 motherboard> <em> motherboard </em> </a> </div> </div> </html>"
+    }
+  ]
+}

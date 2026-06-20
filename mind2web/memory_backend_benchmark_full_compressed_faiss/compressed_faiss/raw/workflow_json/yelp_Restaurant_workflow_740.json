@@ -1,0 +1,30 @@
+{
+  "name": "yelp / Restaurant workflow 740",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Browse Thai restaurants that offer delivery and have vegan options available.",
+  "steps": [
+    {
+      "action": "TYPE [152] [thai restaurants]",
+      "op": "TYPE",
+      "element": "152",
+      "value": "thai restaurants",
+      "description": "[textbox] Find -> TYPE: thai restaurants",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div> <div banner explore banner section> <div search> <div> <form search> <div combobox> <input text /> <input id=152 textbox text find find_desc tacos, cheap dinner, maxs /> </div> </form> <nav business categories> <a id=369> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> </div> <div navigation category navigation section> <a id=3736> <p> Restaurants </p> </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8609]",
+      "op": "CLICK",
+      "element": "8609",
+      "value": "",
+      "description": "[span] Thai Restaurants -> CLICK",
+      "role": "span",
+      "label": "Thai Restaurants",
+      "observation": "<html> <div> <div banner explore banner section> <div search> <nav business categories> <a id=8902> <span> Restaurants </span> <span img /> </a> </nav> </div> </div> <div navigation category navigation section> <a id=12304> <p> Restaurants </p> </a> </div> </div> <span id=8609 css-qgunke> <text bounding_box_rect= 176,97,114,19>Thai Restaurants</text> </span> </html>"
+    }
+  ]
+}

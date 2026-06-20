@@ -1,0 +1,80 @@
+{
+  "name": "spothero / Other workflow 462",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find the cheapest wheelchair accessible parking for the Pittsburgh Pirates at St. Louis Cardinals event in Busch Stadium on Apr 13.",
+  "steps": [
+    {
+      "action": "TYPE [109] [busch stadium]",
+      "op": "TYPE",
+      "element": "109",
+      "value": "busch stadium",
+      "description": "[textbox] Search for parking -> TYPE: busch stadium",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=109 text search for parking search-input address, place, city or venue /> <button id=437 button> Search </button> </div> <div group> <a id=499> View All Stadiums </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [2104]",
+      "op": "CLICK",
+      "element": "2104",
+      "value": "",
+      "description": "[li] Busch Stadium, Clark Avenue, St. Louis, MO, USA -> CLICK",
+      "role": "li",
+      "label": "Busch Stadium, Clark Avenue, St. Louis, MO, USA",
+      "observation": "<html> <div> <input id=2423 text search for parking search-input busch stadium address, place, city or venue /> <ul> <li id=2104> Busch Stadium, Clark Avenue, St. Louis, MO, USA </li> <li id=2428> BUSCH STADIUM, Downtown, MO, USA </li> <li> Busch Stadium Loading Dock, 7th Street, St. Louis, MO, USA </li> <li> Stadium Lofts, Stadium Way, Indianapolis, IN, USA </li> <li> Bush Stadium, Cookeville, TN, USA </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [4146]",
+      "op": "CLICK",
+      "element": "4146",
+      "value": "",
+      "description": "[p] Pittsburgh Pirates at St. Louis Cardinals -> CLICK",
+      "role": "p",
+      "label": "Pittsburgh Pirates at St. Louis Cardinals",
+      "observation": "<html> <body> <button id=5054 button> Filter </button> <div> <div> <p id=4146> Pittsburgh Pirates at St. Louis Cardinals </p> <p> Thursday, 6:45 PM - 9:45 PM </p> </div> <div> <p id=5904> Pittsburgh Pirates at St. Louis Cardinals </p> <p> Friday, 7:15 PM - 10:15 PM </p> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [12262]",
+      "op": "CLICK",
+      "element": "12262",
+      "value": "",
+      "description": "[button] Filter -> CLICK",
+      "role": "button",
+      "label": "Filter",
+      "observation": "<html> <div> <div> <div> <span> Apr </span> <span id=12904> 13 </span> </div> <button id=12262 button> Filter </button> </div> <select id=13160> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "CLICK [15857]",
+      "op": "CLICK",
+      "element": "15857",
+      "value": "",
+      "description": "[checkbox] Wheelchair Accessible (10",
+      "role": "checkbox",
+      "label": "Wheelchair Accessible (10",
+      "observation": "<html> <body> <select id=16759> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> <div> <input id=15857 checkbox wheelchair on /> <label id=15858> Wheelchair Accessible <span> (10) </span> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [19680]",
+      "op": "CLICK",
+      "element": "19680",
+      "value": "",
+      "description": "[button] Show 10 Results -> CLICK",
+      "role": "button",
+      "label": "Show 10 Results",
+      "observation": "<html> <body> <div> <div> <span> Apr </span> <span id=20323> 13 </span> </div> <select id=20581> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> <div> <button id=19680 button> Show 10 Results </button> <button button> Clear All </button> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [23503] [Sort by Price]",
+      "op": "SELECT",
+      "element": "23503",
+      "value": "Sort by Price",
+      "description": "[select] Sort by Distance -> SELECT: Sort by Price",
+      "role": "select",
+      "label": "Sort by Distance",
+      "observation": "<html> <div> <div> <div> <p id=24149> Pittsburgh Pirates at St. Louis Cardinals </p> <button button> Change Event </button> </div> <input id=24227 text start date thu, apr 13 /> </div> <select id=23503> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "name": "yelp / Restaurant workflow 377",
+  "source": "Mind2Web exemplar",
+  "website": "yelp",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "task": "Browse the highest rated spas that are $$ dollar signs and under.",
+  "steps": [
+    {
+      "action": "TYPE [156] [spa]",
+      "op": "TYPE",
+      "element": "156",
+      "value": "spa",
+      "description": "[textbox] Find -> TYPE: spa",
+      "role": "textbox",
+      "label": "Find",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div> <div combobox> <input text /> <input id=156 textbox text find find_desc tacos, cheap dinner, maxs /> </div> <div combobox> <input text /> <input id=297 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </div> <button id=302 submit search> <span img /> </button> </div> </form> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8651]",
+      "op": "CLICK",
+      "element": "8651",
+      "value": "",
+      "description": "[span] Spa -> CLICK",
+      "role": "span",
+      "label": "Spa",
+      "observation": "<html> <div banner explore banner section> <div search> <form search> <div> <div combobox> <input text /> <input id=8784 textbox text near columbus, oh address, neighborhood, city, state or /> </div> <button id=8789 submit search> <span img /> </button> </div> </form> </div> </div> <span id=8651 css-qgunke> <text bounding_box_rect= 176,97,25,19>Spa</text> </span> </html>"
+    },
+    {
+      "action": "CLICK [15667]",
+      "op": "CLICK",
+      "element": "15667",
+      "value": "",
+      "description": "[button] Price: -> CLICK",
+      "role": "button",
+      "label": "Price:",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=15256 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </form> <div> <a id=15634 button> <span> Recommended </span> <span img /> </a> <span group filters> <button id=15667 button price:> <span> Price </span> <span img /> </button> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [24158]",
+      "op": "CLICK",
+      "element": "24158",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <span group filters> <div> <button id=24806 submit> <div> <input id=24158 checkbox on /> <span> $$ </span> </div> </button> <button id=24815 submit> <div> <input checkbox on /> <span> $$$ </span> </div> </button> </div> </span> </html>"
+    },
+    {
+      "action": "CLICK [33304]",
+      "op": "CLICK",
+      "element": "33304",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <span group filters> <span> <button id=33936 button price: $$> <span> $$ </span> <span img /> </button> <div> <button submit> <div> <input id=33304 checkbox on /> <span> $ </span> </div> </button> <button id=33967 submit> <div> <input checkbox on /> <span> $$$ </span> </div> </button> </div> </span> </span> </html>"
+    },
+    {
+      "action": "CLICK [43170]",
+      "op": "CLICK",
+      "element": "43170",
+      "value": "",
+      "description": "[span] Save -> CLICK",
+      "role": "span",
+      "label": "Save",
+      "observation": "<html> <span group filters> <menu> <button id=43150 submit> <div> <input id=43153 checkbox on /> <span> $$$ </span> </div> </button> <button id=43170 submit> <span> Save </span> </button> </menu> </span> </html>"
+    },
+    {
+      "action": "CLICK [52310]",
+      "op": "CLICK",
+      "element": "52310",
+      "value": "",
+      "description": "[button] Recommended -> CLICK",
+      "role": "button",
+      "label": "Recommended",
+      "observation": "<html> <div> <form search> <div combobox> <input text /> <input id=51932 textbox text near columbus, oh address, neighborhood, city, state or /> </div> </form> <div> <a id=52310 button> <span> Recommended </span> <span img /> </a> <span group filters> <button id=52347 button price: $,$$> <div> <span> $ </span> <span> $$ </span> </div> <span img /> </button> </span> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [59946]",
+      "op": "CLICK",
+      "element": "59946",
+      "value": "",
+      "description": "[span] Highest Rated -> CLICK",
+      "role": "span",
+      "label": "Highest Rated",
+      "observation": "<html> <div> <menu> <button submit> </button> <button id=59946 submit> <span> Highest Rated </span> </button> <button id=59951 submit> <span> Most Reviewed </span> </button> </menu> <span group filters> <button id=59987 button price: $,$$> <div> <span> $ </span> <span> $$ </span> </div> <span img /> </button> </span> </div> </html>"
+    }
+  ]
+}

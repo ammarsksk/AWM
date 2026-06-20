@@ -1,0 +1,30 @@
+{
+  "name": "parking / Other workflow 860",
+  "source": "Mind2Web exemplar",
+  "website": "parking",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Add a parking button code for my company Boston Legal located near Boston Navy Yard, and the button should be 160x400 pixels, and the parking spot should be within 15 miles of my address.",
+  "steps": [
+    {
+      "action": "CLICK [106]",
+      "op": "CLICK",
+      "element": "106",
+      "value": "",
+      "description": "[link] ADD PARKING TO YOUR WEBSITE -> CLICK",
+      "role": "link",
+      "label": "ADD PARKING TO YOUR WEBSITE",
+      "observation": "<html> <div> <div> <button id=613> Find parking near me </button> <form get> <input id=637 combobox text search /> </form> <div dialog> </div> </div> <a id=106 add parking to your website> Add Parking to your Website </a> </div> </html>"
+    },
+    {
+      "action": "TYPE [1508] [BOSTON LEGAL]",
+      "op": "TYPE",
+      "element": "1508",
+      "value": "BOSTON LEGAL",
+      "description": "[textbox] STEP 1: Enter Your Company Name -> TYPE: BOSTON LEGAL",
+      "role": "textbox",
+      "label": "STEP 1: Enter Your Company Name",
+      "observation": "<html> <div> <label> Enter Your Company Name </label> <input id=1508 text /> <p> Characters Left </p> <label> Enter an address to search and select a location </label> <input id=1757 combobox text /> <p> To link to a specific page on our site, or for other custom linking solutions, contact our marketing team at </p> <label> Customize Design </label> <label> Only show parking locations within: </label> <a id=1503> Get My Code </a> </div> </html>"
+    }
+  ]
+}

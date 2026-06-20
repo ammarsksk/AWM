@@ -1,0 +1,30 @@
+{
+  "name": "kayak / Airlines workflow 12",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "From Birmingham (BHX) to Paris search for packages with casinos, restaurant, fitness and a free internet from April 7th to 11th.",
+  "steps": [
+    {
+      "action": "CLICK [513]",
+      "op": "CLICK",
+      "element": "513",
+      "value": "",
+      "description": "[link] Search for packages -> CLICK",
+      "role": "link",
+      "label": "Search for packages",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a search for cars> </a> <a id=513 search for packages> <svg find packages icon /> <div> Packages </div> </a> <a search for trains> </a> </div> <div> <div list> <div listitem> <div button remove> <svg id=679 img vvtc-item-icon /> </div> </div> </div> <button button submit search> <svg id=740 img c8lpf-icon /> </button> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [4378] [Birmingham]",
+      "op": "TYPE",
+      "element": "4378",
+      "value": "Birmingham",
+      "description": "[textbox] From -> TYPE: Birmingham",
+      "role": "textbox",
+      "label": "From",
+      "observation": "<html> <div> <div> <input id=4378 text columbus (cmh) from /> <input id=4811 text enter destination or airport /> </div> <button button submit search> <svg id=4858 img c8lpf-icon /> </button> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "kohls / Department workflow 332",
+  "source": "Mind2Web exemplar",
+  "website": "kohls",
+  "domain": "Shopping",
+  "subdomain": "Department",
+  "task": "Browse black strollers within $100 to $250.",
+  "steps": [
+    {
+      "action": "TYPE [167] [black stroller]",
+      "op": "TYPE",
+      "element": "167",
+      "value": "black stroller",
+      "description": "[textbox] Search by keyword or web id -> TYPE: black stroller",
+      "role": "textbox",
+      "label": "Search by keyword or web id",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=163 submit submit-search /> <input id=167 text search hi james, what are you /> </fieldset> <a id=485> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [7926]",
+      "op": "CLICK",
+      "element": "7926",
+      "value": "",
+      "description": "[input] -> CLICK",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <div> <fieldset> <label> Search by Keyword or Web ID </label> <input id=7926 submit submit-search /> <input id=8141 text search hi james, what are you black stroller /> </fieldset> <a id=8266> <svg img /> <span> Shop by Category </span> </a> </div> </html>"
+    },
+    {
+      "action": "CLICK [11897]",
+      "op": "CLICK",
+      "element": "11897",
+      "value": "",
+      "description": "[div] Price -> CLICK",
+      "role": "div",
+      "label": "Price",
+      "observation": "<html> <div> <a id=12209> <svg img /> <span> Shop by Category </span> </a> <div> <div> <a menu expandable> </a> <a id=12552> Featured <span> undefined </span> </a> <ul list> </ul> </div> <div id=11897> <span> Price </span> <a button price> <span> Price </span> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [34617]",
+      "op": "CLICK",
+      "element": "34617",
+      "value": "",
+      "description": "[link] $100 to $250 (26",
+      "role": "link",
+      "label": "$100 to $250 (26",
+      "observation": "<html> <div> <div> <span id=34560> Price </span> <a id=28002 button price> <span> Price </span> </a> </div> <a id=34617 $100 to $250 - selecting> <span> $100 to $250 </span> <span> (26) </span> </a> </div> </html>"
+    }
+  ]
+}

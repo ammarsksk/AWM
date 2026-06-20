@@ -1,0 +1,60 @@
+{
+  "name": "amctheatres / Movie workflow 295",
+  "source": "Mind2Web exemplar",
+  "website": "amctheatres",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find theaters for Creed III within 20 miles of zip code 90028.",
+  "steps": [
+    {
+      "action": "CLICK [141]",
+      "op": "CLICK",
+      "element": "141",
+      "value": "",
+      "description": "[img] movie poster for Creed III -> CLICK",
+      "role": "img",
+      "label": "movie poster for Creed III",
+      "observation": "<html> <div> <header banner> <ul menu> <li menuitem> <a id=289 visit the our theatres page> Our Theatres </a> </li> </ul> </header> <div> <img id=141 movie poster for creed iii /> <div> <a id=1309> <h3> Creed III </h3> </a> <a get tickets for creed iii> Get Tickets </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [5222]",
+      "op": "CLICK",
+      "element": "5222",
+      "value": "",
+      "description": "[link] get tickets for Creed III -> CLICK",
+      "role": "link",
+      "label": "get tickets for Creed III",
+      "observation": "<html> <div> <header banner> <ul menu> <li menuitem> <a id=5393 visit the our theatres page> Our Theatres </a> </li> </ul> </header> <div> <div> <a id=5222 get tickets for creed iii> Get Tickets </a> <button> Add to Watch List </button> </div> <div> <a id=6517> <h3> Creed III </h3> </a> <a get tickets for creed iii> Get Tickets </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [9325] [Change Location...]",
+      "op": "SELECT",
+      "element": "9325",
+      "value": "Change Location...",
+      "description": "[select] AMC Columbus 10 -> SELECT: Change Location...",
+      "role": "select",
+      "label": "AMC Columbus 10",
+      "observation": "<html> <div> <div> <div> AMC Columbus 10 </div> <select id=9325> <option true> AMC Columbus 10 </option> <option> AMC Dublin Village 18 </option> <option> AMC Grove City 14 </option> <option> AMC DINE-IN Easton Town Center 30 </option> <option> Dreamscape at AMC Easton Town Center </option> <option> AMC Indian Mound 9 </option> <option another> Change Location... </option> </select> </div> <div> <div> Tue, Mar 14 </div> <select id=9473> <option 2023-03-14 true> Tue, Mar 14 </option> <option 2023-03-15> Today </option> <option 2023-03-16> Thu, Mar 16 </option> <option 2023-03-17> Fri, Mar 17 </option> <option 2023-03-18> Sat, Mar 18 </option> <option 2023-03-19> Sun, Mar 19 </option> <option 2023-03-20> Mon, Mar 20 </option> <option 2023-03-21> Tue, Mar 21 </option> <option 2023-03-22> Wed, Mar 22 </option> <option 2023-03-23> Thu, Mar 23 </option> <option 2023-03-24> Fri, Mar 24 </option> <option 2023-03-25> Sat, Mar 25 </option> <option 2023-03-26> Sun, Mar 26 </option> <option 2023-03-27> Mon, Mar 27 </option> <option 2023-03-28> Tue, Mar 28 </option> <option 2023-03-29> Wed, Mar 29 </option> <option 2023-03-30> Thu, Mar 30 </option> <option 2023-03-31> Fri, Mar 31 </option> <option 2023-04-01> Sat, Apr 1 </option> <option 2023-04-02> Sun, Apr 2 </option> <option 2023-04-03> Mon, Apr 3 </option> <option 2023-04-04> Tue, Apr 4 </option> <option 2023-04-05> Wed, Apr 5 </option> <option 2023-04-06> Thu, Apr 6 </option> <option 2023-04-07> Fri, Apr 7 </option> </select> </div> <div> <div> Creed III </div> <select id=9700> <option all> All Movies </option> <option 65-66661> 65 </option> <option> Ant-Man and the Wasp: Quantumania </option> <option> Avatar: The Way of Water </option> <option> Champions </option> <option> Cocaine Bear </option> <option true> Creed III </option> <option> Demon Slayer: Kimetsu No Yaiba - To The Swordsmith Village </option> <option> Dreamscape VR: Alien Zoo </option> <option> Dreamscape VR: Curse of the Lost Pearl: A Magic Projector Adventure </option> <option> Dreamscape VR: The Blu: Deep Rescue </option> <option> Everything Everywhere All at Once </option> <option> Jesus Revolution </option> <option m3gan-65813> M3GAN </option> <option> Magic Mike's Last Dance </option> <option missing-71239> Missing </option> <option> Nha Ba Nu (The House Of No Man) </option> <option> Operation Fortune: Ruse de guerre </option> <option> Puss In Boots: The Last Wish </option> <option> Scream VI </option> <option> Southern Gospel </option> <option> The Magic Flute </option> <option> The Quiet Girl </option> <option> Tu Jhoothi Main Makkaar </option> <option> Unwelcome </option> </select> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [12356] [90028]",
+      "op": "TYPE",
+      "element": "12356",
+      "value": "90028",
+      "description": "[textbox] Search by City, Zip or Theatre -> TYPE: 90028",
+      "role": "textbox",
+      "label": "Search by City, Zip or Theatre",
+      "observation": "<html> <body> <div> <div> AMC Columbus 10 </div> <select id=12476> <option true> AMC Columbus 10 </option> <option> AMC Dublin Village 18 </option> <option> AMC Grove City 14 </option> <option> AMC DINE-IN Easton Town Center 30 </option> <option> Dreamscape at AMC Easton Town Center </option> <option> AMC Indian Mound 9 </option> <option another> Change Location... </option> </select> </div> <div dialog> <div> <input id=12356 text search by city, zip or /> <i id=13059 submit search /> </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [15417]",
+      "op": "CLICK",
+      "element": "15417",
+      "value": "",
+      "description": "[generic] Submit Search -> CLICK",
+      "role": "generic",
+      "label": "Submit Search",
+      "observation": "<html> <body> <div> <div> Tue, Mar 14 </div> <select id=15565> <option 2023-03-14 true> Tue, Mar 14 </option> <option 2023-03-15> Today </option> <option 2023-03-16> Thu, Mar 16 </option> <option 2023-03-17> Fri, Mar 17 </option> <option 2023-03-18> Sat, Mar 18 </option> <option 2023-03-19> Sun, Mar 19 </option> <option 2023-03-20> Mon, Mar 20 </option> <option 2023-03-21> Tue, Mar 21 </option> <option 2023-03-22> Wed, Mar 22 </option> <option 2023-03-23> Thu, Mar 23 </option> <option 2023-03-24> Fri, Mar 24 </option> <option 2023-03-25> Sat, Mar 25 </option> <option 2023-03-26> Sun, Mar 26 </option> <option 2023-03-27> Mon, Mar 27 </option> <option 2023-03-28> Tue, Mar 28 </option> <option 2023-03-29> Wed, Mar 29 </option> <option 2023-03-30> Thu, Mar 30 </option> <option 2023-03-31> Fri, Mar 31 </option> <option 2023-04-01> Sat, Apr 1 </option> <option 2023-04-02> Sun, Apr 2 </option> <option 2023-04-03> Mon, Apr 3 </option> <option 2023-04-04> Tue, Apr 4 </option> <option 2023-04-05> Wed, Apr 5 </option> <option 2023-04-06> Thu, Apr 6 </option> <option 2023-04-07> Fri, Apr 7 </option> </select> </div> <div dialog> <div> <input text 90028 search by city, zip or /> <i id=16120 submit search> </i> </div> </div> </body> <svg id=15417 /> </html>"
+    }
+  ]
+}

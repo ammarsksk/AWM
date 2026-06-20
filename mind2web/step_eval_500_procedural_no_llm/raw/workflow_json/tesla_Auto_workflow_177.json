@@ -1,0 +1,70 @@
+{
+  "name": "tesla / Auto workflow 177",
+  "source": "Mind2Web exemplar",
+  "website": "tesla",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "Check the price of Tesla Model Y Performance for the 10001 zip code.",
+  "steps": [
+    {
+      "action": "CLICK [3556]",
+      "op": "CLICK",
+      "element": "3556",
+      "value": "",
+      "description": "[link] Model Y -> CLICK",
+      "role": "link",
+      "label": "Model Y",
+      "observation": "<html> <div> <header> <a id=3556 model y> <span> Model Y </span> </a> <button id=3580 button menu> <span> Menu </span> </button> </header> <main main> <div> <h1> Model Y </h1> <a id=3610> View Inventory </a> <a> View Inventory </a> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [8214]",
+      "op": "CLICK",
+      "element": "8214",
+      "value": "",
+      "description": "[link] Order Now -> CLICK",
+      "role": "link",
+      "label": "Order Now",
+      "observation": "<html> <main main> <div> <a id=8214 order now> <span> Order Now </span> </a> <div tablist model y specs tabs> <button id=9776 tab> Performance </button> <button tab> Long Range AWD </button> <button id=9782 tab> All-Wheel Drive </button> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [10945]",
+      "op": "CLICK",
+      "element": "10945",
+      "value": "",
+      "description": "[div] Dual Motor All-Wheel Drive -> CLICK",
+      "role": "div",
+      "label": "Dual Motor All-Wheel Drive",
+      "observation": "<html> <body> <div> <span> Model Y </span> <p> Est. Delivery: Apr Jun 2023 </p> <button id=10870 button> 43235 </button> <div tablist tab list> </div> <div model y performance> <input radio $mty05 /> <label id=10945> <div> <span> Model Y Performance </span> <p> $56,990 </p> </div> </label> </div> </div> <div> <label id=11389> <span> Zip code </span> </label> <input text zip /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [12423]",
+      "op": "CLICK",
+      "element": "12423",
+      "value": "",
+      "description": "[button] 43235 -> CLICK",
+      "role": "button",
+      "label": "43235",
+      "observation": "<html> <body> <div> <span> Model Y </span> <p> Est. Delivery: Apr 2023 </p> <button id=12423 button> 43235 </button> <div tablist tab list> <button id=12685 tab button> Purchase Price </button> <button tab button> Potential Savings* </button> </div> </div> <div> <label id=13413> <span> Zip code </span> </label> <input text zip /> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [14637] [10001]",
+      "op": "TYPE",
+      "element": "14637",
+      "value": "10001",
+      "description": "[input] -> TYPE: 10001",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <body> <div> <form> <input zipcode 43235 /> <input id=14637 43235 /> </form> <div tablist tab list> <button id=14935 tab button> Purchase Price </button> <button tab button> Potential Savings* </button> </div> </div> <div> <label id=15650> <span> Zip code </span> </label> <input text zip /> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [16877]",
+      "op": "CLICK",
+      "element": "16877",
+      "value": "",
+      "description": "[button] Confirm -> CLICK",
+      "role": "button",
+      "label": "Confirm",
+      "observation": "<html> <div> <div> <form> <input zipcode 10001 /> <input id=17085 10001 /> </form> <input latitude /> <input longitude -73.9991637 /> <button id=16877 submit> Confirm </button> </div> <button id=17153 button> <span> Delivery ZIP Code: <span> 10001 </span> </span> </button> </div> </html>"
+    }
+  ]
+}

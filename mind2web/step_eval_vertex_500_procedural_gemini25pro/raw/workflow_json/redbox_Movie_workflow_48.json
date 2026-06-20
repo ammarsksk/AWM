@@ -1,0 +1,100 @@
+{
+  "name": "redbox / Movie workflow 48",
+  "source": "Mind2Web exemplar",
+  "website": "redbox",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "task": "Find the newest movies for rent  in the Redbox kiosk at any Winn Dixie in Daytona Beach.",
+  "steps": [
+    {
+      "action": "CLICK [400]",
+      "op": "CLICK",
+      "element": "400",
+      "value": "",
+      "description": "[button] Navigate to Find a kiosk nearby -> CLICK",
+      "role": "button",
+      "label": "Navigate to Find a kiosk nearby",
+      "observation": "<html> <div> <nav navigation> <ul list> <li listitem> <button id=400 button navigate to find a kiosk> <svg img /> <span> Find A Kiosk </span> </button> </li> </ul> </nav> <div> <input checkbox on /> <label id=1735> <h2> At The Kiosk </h2> </label> <div> <a id=1739 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [5687] [Daytona]",
+      "op": "TYPE",
+      "element": "5687",
+      "value": "Daytona",
+      "description": "[textbox] City or ZIP Code -> TYPE: Daytona",
+      "role": "textbox",
+      "label": "City or ZIP Code",
+      "observation": "<html> <div> <div> <label> City or ZIP Code </label> <input id=5687 text enter city or zip code /> </div> <div> <div> <a id=7287 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> <div> <a navigate to on demand featured> Featured </a> <a id=7308 navigate to on demand new> New </a> <a navigate to on demand free> Free </a> <a navigate to on demand collections> Collections </a> <a navigate to on demand genres> Genres </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [11482]",
+      "op": "CLICK",
+      "element": "11482",
+      "value": "",
+      "description": "[button] select to search for a kiosk using city or zipcode -> CLICK",
+      "role": "button",
+      "label": "select to search for a kiosk using city or zipcode",
+      "observation": "<html> <div> <div> <button button> Find Near Me </button> <button id=11482 submit select to search for a> Search </button> </div> <div> <div> <a id=13081 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> <div> <a navigate to on demand featured> Featured </a> <a id=13102 navigate to on demand new> New </a> <a navigate to on demand free> Free </a> <a navigate to on demand collections> Collections </a> <a navigate to on demand genres> Genres </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [15977]",
+      "op": "CLICK",
+      "element": "15977",
+      "value": "",
+      "description": "[button] select to browse a kiosk -> CLICK",
+      "role": "button",
+      "label": "select to browse a kiosk",
+      "observation": "<html> <div> <button id=15977 button select to browse a kiosk> Browse </button> <div> <input checkbox on /> <label id=16976> <h2> At The Kiosk </h2> </label> <div> <a id=16980 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [21600]",
+      "op": "CLICK",
+      "element": "21600",
+      "value": "",
+      "description": "[button] Show Filters -> CLICK",
+      "role": "button",
+      "label": "Show Filters",
+      "observation": "<html> <div> <button id=21600 show filters> <svg img /> <span> Show Filters </span> </button> <div> <input checkbox on /> <label id=21986> <h2> At The Kiosk </h2> </label> <div> <a id=21990 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [26569]",
+      "op": "CLICK",
+      "element": "26569",
+      "value": "",
+      "description": "[button] Filter by rent -> CLICK",
+      "role": "button",
+      "label": "Filter by rent",
+      "observation": "<html> <div> <div> <div> <button id=26569 filter by rent> Rent </button> <button filter by buy> Buy </button> </div> <div> <select id=27168 sortby> <option newest true> Newest </option> <option trending> Trending </option> <option name> A - Z </option> </select> <svg img /> </div> </div> <div> <a id=27549 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [32413]",
+      "op": "CLICK",
+      "element": "32413",
+      "value": "",
+      "description": "[span] Hide Filters -> CLICK",
+      "role": "span",
+      "label": "Hide Filters",
+      "observation": "<html> <div> <div> <svg img /> <span id=32413> Hide Filters </span> </div> <div> <div> <a id=33408 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> <div> <a navigate to on demand featured> Featured </a> <a id=33429 navigate to on demand new> New </a> <a navigate to on demand free> Free </a> <a navigate to on demand collections> Collections </a> <a navigate to on demand genres> Genres </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [38280]",
+      "op": "CLICK",
+      "element": "38280",
+      "value": "",
+      "description": "[path] -> CLICK",
+      "role": "path",
+      "label": "",
+      "observation": "<html> <div> <input checkbox on /> <label id=39271> <h2> At The Kiosk </h2> </label> <div> <a id=39275 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> <path id=38280 /> </html>"
+    },
+    {
+      "action": "SELECT [44158] [Newest]",
+      "op": "SELECT",
+      "element": "44158",
+      "value": "Newest",
+      "description": "[combobox] sortBy -> SELECT: Newest",
+      "role": "combobox",
+      "label": "sortBy",
+      "observation": "<html> <div> <div> <select id=44158 sortby> <option newest true> Newest </option> <option trending> Trending </option> <option name> A - Z </option> </select> <svg img /> </div> <div> <input checkbox on /> <label id=45147> <h2> At The Kiosk </h2> </label> <div> <a id=45151 navigate to at the kiosk> New </a> <a navigate to at the kiosk> Movies To Rent </a> <a navigate to at the kiosk> Movies To Own </a> <a navigate to at the kiosk> Redbox+ Movies </a> </div> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "name": "aa / Airlines workflow 139",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "aa",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "goal_pattern": "View travel credits for the passenger Leon Sin with the record locator jcqnhd ans ticket number 1234567",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "use",
+      "travel",
+      "specific",
+      "field",
+      "required",
+      "find",
+      "ticket",
+      "number",
+      "searchbox",
+      "search",
+      "com",
+      "trip",
+      "textbox",
+      "credit",
+      "airlines",
+      "view",
+      "credits",
+      "passenger",
+      "leon",
+      "sin",
+      "record",
+      "locator",
+      "jcqnhd",
+      "ans",
+      "1234567",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "heading",
+      "your",
+      "reservation",
+      "american",
+      "air",
+      "last",
+      "name",
+      "adc"
+    ],
+    "operations": [
+      "TYPE",
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "type the Search AA.com\u00ae",
+        "operation": "TYPE",
+        "target_type": "searchbox",
+        "target": "Search AA.com\u00ae",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Search AA.com\u00ae",
+        "operation": "CLICK",
+        "target_type": "searchbox",
+        "target": "Search AA.com\u00ae",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Find your trip - Find a reservation - American Air...",
+        "operation": "CLICK",
+        "target_type": "heading",
+        "target": "Find your trip - Find a reservation - American Air...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "type the Last name",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Last name",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "type the Trip Credit / Ticket number",
+        "operation": "TYPE",
+        "target_type": "textbox",
+        "target": "Trip Credit / Ticket number",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Find travel credit",
+        "operation": "CLICK",
+        "target_type": "adc-button",
+        "target": "Find travel credit",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 6
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 6.0
+  },
+  "raw_workflow_name": "aa / Airlines workflow 139"
+}

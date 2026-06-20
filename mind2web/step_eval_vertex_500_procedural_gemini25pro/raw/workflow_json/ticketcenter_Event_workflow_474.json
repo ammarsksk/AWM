@@ -1,0 +1,80 @@
+{
+  "name": "ticketcenter / Event workflow 474",
+  "source": "Mind2Web exemplar",
+  "website": "ticketcenter",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Find parking passes for New York Yankees game on April 14",
+  "steps": [
+    {
+      "action": "CLICK [88]",
+      "op": "CLICK",
+      "element": "88",
+      "value": "",
+      "description": "[textbox] Search for artists, teams or venues... -> CLICK",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=376 button> Sports </a> <div> <input id=88 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=2576 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "TYPE [8725] [New york yankees]",
+      "op": "TYPE",
+      "element": "8725",
+      "value": "New york yankees",
+      "description": "[textbox] Search for artists, teams or venues... -> TYPE: New york yankees",
+      "role": "textbox",
+      "label": "Search for artists, teams or venues...",
+      "observation": "<html> <body> <a id=9013 button> Sports </a> <div> <input id=8725 text query search for artists, teams or /> <button submit> </button> </div> <ul tablist> <a id=11213 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [17384]",
+      "op": "CLICK",
+      "element": "17384",
+      "value": "",
+      "description": "[option] New York Yankees -> CLICK",
+      "role": "option",
+      "label": "New York Yankees",
+      "observation": "<html> <body> <a id=17671 button> Sports </a> <ul listbox> <a id=17384 option> <strong> New York Yankees </strong> </a> </ul> <ul tablist> <a id=19886 tab> Sports </a> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [26508]",
+      "op": "CLICK",
+      "element": "26508",
+      "value": "",
+      "description": "[link] TICKETS -> CLICK",
+      "role": "link",
+      "label": "TICKETS",
+      "observation": "<html> <table grid> <tbody> <tr row> <a id=26482> <span> Tickets </span> </a> </tr> <tr row> <a id=26508> <span> Tickets </span> </a> </tr> <tr row> <a id=26533> <span> Tickets </span> </a> </tr> </tbody> </table> </html>"
+    },
+    {
+      "action": "CLICK [31113]",
+      "op": "CLICK",
+      "element": "31113",
+      "value": "",
+      "description": "[div] More Options -> CLICK",
+      "role": "div",
+      "label": "More Options",
+      "observation": "<html> <body> <a id=31414 button> Sports </a> <div> <p> Quantity </p> <p id=33442> Any Quantity </p> </div> </body> <div id=31113> <div sea-title> <text bounding_box_rect= 1138.625,265.5,77.34375,14>More Options</text> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [56197]",
+      "op": "CLICK",
+      "element": "56197",
+      "value": "",
+      "description": "[span] Parking Passes -> CLICK",
+      "role": "span",
+      "label": "Parking Passes",
+      "observation": "<html> <div> <div> <p> Quantity </p> <p id=55990> Any Quantity </p> </div> <div> <div> <span> Ticket Types </span> <label id=56197> <input checkbox options parking /> <span> Parking Passes </span> </label> </div> <button id=56218> Done </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [69448]",
+      "op": "CLICK",
+      "element": "69448",
+      "value": "",
+      "description": "[button] Done -> CLICK",
+      "role": "button",
+      "label": "Done",
+      "observation": "<html> <body> <a id=69749 button> Sports </a> <button id=69448> Done </button> <a id=73813> Sports Tickets </a> </body> </html>"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "nps.gov / Other workflow 409",
+  "source": "Mind2Web exemplar",
+  "website": "nps.gov",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Search for a park in the state of California called Castle Mountains National Monument and find out it's Basic Information.",
+  "steps": [
+    {
+      "action": "CLICK [106]",
+      "op": "CLICK",
+      "element": "106",
+      "value": "",
+      "description": "[button] Find a Park by State -> CLICK",
+      "role": "button",
+      "label": "Find a Park by State",
+      "observation": "<html> <body> <form search> <button id=219 button> Search </button> <input sitelimit / /> <input affiliate nps /> </form> <div> <a id=441> Find a Park </a> <button id=106 button find a park by state> By State... </button> <a> See All Parks & Search By Map </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [3043]",
+      "op": "CLICK",
+      "element": "3043",
+      "value": "",
+      "description": "[link] California -> CLICK",
+      "role": "link",
+      "label": "California",
+      "observation": "<html> <body> <form search> <button id=3155 button> Search </button> <input sitelimit / /> <input affiliate nps /> </form> <div> <a id=3377> Find a Park </a> <a id=3043> California </a> <a> See All Parks & Search By Map </a> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [4538]",
+      "op": "CLICK",
+      "element": "4538",
+      "value": "",
+      "description": "[link] Basic Information \u00bb -> CLICK",
+      "role": "link",
+      "label": "Basic Information \u00bb",
+      "observation": "<html> <div main> <ul> <div> <div> <p> National Monument </p> <a id=5049> Castle Mountains </a> <p> Barstow, CA </p> <p> Castle Mountains represents some of the most unique elements of the Mojave Desert. Nestled between the Nevada state line and </p> </div> <a id=4538> Basic Information </a> </div> <div> <p> National Park </p> <a id=6251> Pinnacles </a> <p> Paicines, CA </p> <p> Some 23 million years ago multiple volcanoes erupted, flowed, and slid to form what would become Pinnacles National Park. What </p> </div> </ul> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "name": "ign / Game workflow 169",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "ign",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "goal_pattern": "Find a list of all movies that are being released in May 2023",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "movies",
+      "may",
+      "ign",
+      "entertainment",
+      "game",
+      "find",
+      "list",
+      "all",
+      "are",
+      "being",
+      "released",
+      "2023",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "reviews",
+      "home",
+      "discover",
+      "link",
+      "upcoming",
+      "tab"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Reviews",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Reviews",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the HOME",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "HOME",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Discover",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Discover",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the Upcoming Movies",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Upcoming Movies",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the MAY '23",
+        "operation": "CLICK",
+        "target_type": "tab",
+        "target": "MAY '23",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "ign / Game workflow 169"
+}

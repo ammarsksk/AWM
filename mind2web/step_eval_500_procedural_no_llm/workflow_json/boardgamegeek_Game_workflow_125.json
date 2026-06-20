@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "name": "boardgamegeek / Game workflow 125",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "boardgamegeek",
+  "domain": "Entertainment",
+  "subdomain": "Game",
+  "goal_pattern": "Buy the cheapest copy of King of Tokyo on GeekMarket that ships to Canada.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "link",
+      "king",
+      "tokyo",
+      "geekmarket",
+      "canada",
+      "use",
+      "ship",
+      "location",
+      "boardgamegeek",
+      "entertainment",
+      "game",
+      "buy",
+      "cheapest",
+      "copy",
+      "ships",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "shopping",
+      "combobox",
+      "search",
+      "board",
+      "games",
+      "specific",
+      "field",
+      "sort",
+      "recently",
+      "added",
+      "price",
+      "lowest",
+      "first",
+      "add",
+      "filter",
+      "any",
+      "message"
+    ],
+    "operations": [
+      "CLICK",
+      "TYPE"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the Shopping",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Shopping",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the GeekMarket",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "GeekMarket",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "type the Search Board Games...",
+        "operation": "TYPE",
+        "target_type": "combobox",
+        "target": "Search Board Games...",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the King of Tokyo",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "King of Tokyo",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Sort: Recently Added",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Sort: Recently Added",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 6,
+        "intent": "click the Price (lowest first",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Price (lowest first",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 7,
+        "intent": "click the Add Filter",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Add Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 8,
+        "intent": "click the Ship Location",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Ship Location",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 9,
+        "intent": "click the Ship Location: Any",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Ship Location: Any",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 10,
+        "intent": "click the Canada",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "Canada",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 11,
+        "intent": "click the King of Tokyo",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "King of Tokyo",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 12,
+        "intent": "click the \uf0e0 Message",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "\uf0e0 Message",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 12
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 12.0
+  },
+  "raw_workflow_name": "boardgamegeek / Game workflow 125"
+}

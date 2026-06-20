@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "name": "resy / Restaurant workflow 455",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "resy",
+  "domain": "Travel",
+  "subdomain": "Restaurant",
+  "goal_pattern": "Make a reservation for the next restaurant-related event, only 1 ticket is needed.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "restaurant",
+      "use",
+      "link",
+      "happy",
+      "hour",
+      "burger",
+      "resy",
+      "travel",
+      "make",
+      "reservation",
+      "next",
+      "related",
+      "event",
+      "only",
+      "ticket",
+      "needed",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "see",
+      "more",
+      "venues",
+      "special",
+      "events",
+      "amp",
+      "experi",
+      "aria",
+      "thursday",
+      "april",
+      "2023",
+      "combobox",
+      "tickets",
+      "specific",
+      "field",
+      "reserve",
+      "now"
+    ],
+    "operations": [
+      "CLICK",
+      "SELECT"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the See more venues in the Special Events &amp; Experi...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "See more venues in the Special Events &amp; Experi...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the HAPPY HOUR BURGER, Aria, Thursday, April 13, 2023 ...",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "HAPPY HOUR BURGER, Aria, Thursday, April 13, 2023 ...",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "select the 2 tickets for HAPPY HOUR BURGER",
+        "operation": "SELECT",
+        "target_type": "combobox",
+        "target": "2 tickets for HAPPY HOUR BURGER",
+        "value_policy": "Use the task-specific value for this field.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the 5:00 PM",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "5:00 PM",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 5,
+        "intent": "click the Reserve Now",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Reserve Now",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 5
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 5.0
+  },
+  "raw_workflow_name": "resy / Restaurant workflow 455"
+}

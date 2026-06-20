@@ -1,0 +1,100 @@
+{
+  "name": "flightaware / Other workflow 381",
+  "source": "Mind2Web exemplar",
+  "website": "flightaware",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Find flights from Washington airports to New York airports and only show those with scheduled status.",
+  "steps": [
+    {
+      "action": "CLICK [1739]",
+      "op": "CLICK",
+      "element": "1739",
+      "value": "",
+      "description": "[link] Flight Tracking -> HOVER",
+      "role": "link",
+      "label": "Flight Tracking",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=1290 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=1739> <span> Flight Tracking </span> </a> </li> </ul> </nav> </div> </header> <div> <a id=2930 button filter flights /> <a> Clear Filters </a> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [9892]",
+      "op": "CLICK",
+      "element": "9892",
+      "value": "",
+      "description": "[link] Flight Finder -> CLICK",
+      "role": "link",
+      "label": "Flight Finder",
+      "observation": "<html> <div> <header banner> <div> <span> All </span> <select id=11068 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <a id=12708 button filter flights /> <a> Clear Filters </a> </div> </div> <span id=9892> <text bounding_box_rect= -1,-1,-1,-1>Flight Finder</text> </span> </html>"
+    },
+    {
+      "action": "TYPE [19735] [Washington]",
+      "op": "TYPE",
+      "element": "19735",
+      "value": "Washington",
+      "description": "[textbox] Origin -> TYPE: Washington",
+      "role": "textbox",
+      "label": "Origin",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=20905 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <input id=20928 text search for flight, tail, airport, /> </div> </header> <input id=19735 text origin e.g. kjfk or new york /> </div> </html>"
+    },
+    {
+      "action": "CLICK [25655]",
+      "op": "CLICK",
+      "element": "25655",
+      "value": "",
+      "description": "[div] Washington -> CLICK",
+      "role": "div",
+      "label": "Washington",
+      "observation": "<html> <body> <header banner> <div> <span> All </span> <select id=26824 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <div id=25655> <strong> Washington </strong> , D.C. / All Airports - ZDC </div> <div> Reagan National ( ) - DCA - KDCA </div> <div> <strong id=28451> Washington </strong> Dulles Intl ( <strong> Washington </strong> ) - IAD - KIAD </div> <div> Manassas Rgnl ( ) - HEF - KHEF </div> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [31629] [New York]",
+      "op": "TYPE",
+      "element": "31629",
+      "value": "New York",
+      "description": "[textbox] Destination -> TYPE: New York",
+      "role": "textbox",
+      "label": "Destination",
+      "observation": "<html> <div> <header banner> <div> <span id=32796> All </span> <select id=32799 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <input id=31629 text destination e.g. klax or los angeles /> </div> </html>"
+    },
+    {
+      "action": "CLICK [37644]",
+      "op": "CLICK",
+      "element": "37644",
+      "value": "",
+      "description": "[div] New York -> CLICK",
+      "role": "div",
+      "label": "New York",
+      "observation": "<html> <body> <header banner> <div> <span> All </span> <select id=38813 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> </header> <div> <div id=37644> <strong> New York </strong> , NY / All Airports - ZNY </div> <div id=40506> John F Kennedy Intl ( <strong> New York </strong> ) - JFK - KJFK </div> <div> LaGuardia ( ) - LGA - KLGA </div> <div> Downtown Manhattan Heliport ( ) - JRB - KJRB </div> <div> Stewart Intl (New Windsor) - SWF - KSWF </div> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [43686]",
+      "op": "CLICK",
+      "element": "43686",
+      "value": "",
+      "description": "[img] Submit Search -> CLICK",
+      "role": "img",
+      "label": "Submit Search",
+      "observation": "<html> <div> <header banner> <div> <div> <span> All </span> <select id=44855 search method> <option omnisearch true> All </option> <option routesearch> Route </option> <option airlinesearch> Airline flight </option> <option privatesearch> Private flight (tail #) </option> <option airportsearch> Airport </option> </select> </div> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=45303> <span> Flight Tracking </span> </a> </li> </ul> </nav> </div> </header> <button submit> <img id=43686 submit search /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [46776]",
+      "op": "CLICK",
+      "element": "46776",
+      "value": "",
+      "description": "[group] \uf067 Status -> CLICK",
+      "role": "group",
+      "label": "\uf067 Status",
+      "observation": "<html> <div> <header banner> <nav navigation main navigation> <ul menubar> <li menuitem> <a id=48511> <span> Flight Tracking </span> </a> </li> </ul> </nav> </header> <div> <legend id=46776> Status </legend> <tr> <th> Airline </th> <th> Ident </th> <th> Aircraft </th> <th id=50011> Status </th> <th> Departure </th> <th> Arrival </th> </tr> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [103671]",
+      "op": "CLICK",
+      "element": "103671",
+      "value": "",
+      "description": "[link] only -> CLICK",
+      "role": "link",
+      "label": "only",
+      "observation": "<html> <ul> <a id=103671> only </a> <a id=105964> only </a> <a id=105974> only </a> </ul> </html>"
+    }
+  ]
+}

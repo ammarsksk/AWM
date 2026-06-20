@@ -1,0 +1,19 @@
+2026-06-19 18:42:04,607 - 3573737 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.164_16 in:
+  results/2026-06-19_18-42-04_GenericAgentArgs_on_webarena.164_16
+2026-06-19 18:42:06,592 - 3573737 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:42:06,593 - 3573737 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:42:17,988 - 3573737 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:42:18,004 - 3573737 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:42:18,180 - 3573737 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:42:18,181 - 3573737 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:42:21,336 - 3573737 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:42:21,937 - 3573737 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I need to find the reviews for this product. I can see a "Reviews (3)" tab on the page. I will click on it to see the reviews and then extract the criticisms. The link to click has the bid 1554.
+
+action:
+click('1554')
+
+2026-06-19 18:42:33,132 - 3573737 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:42:33,462 - 3573737 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('DryUneven color')
+
+2026-06-19 18:42:36,929 - 3573737 - browsergym.experiments.loop - INFO - Saving summary info.

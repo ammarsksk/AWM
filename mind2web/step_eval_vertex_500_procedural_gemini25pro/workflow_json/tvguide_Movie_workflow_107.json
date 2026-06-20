@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "name": "tvguide / Movie workflow 107",
+  "source": "Mind2Web exemplar",
+  "memory_type": "typed_procedure",
+  "website": "tvguide",
+  "domain": "Entertainment",
+  "subdomain": "Movie",
+  "goal_pattern": "Browse documentaries streaming on Netflix.",
+  "activation": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area.",
+    "ui_terms": [
+      "value",
+      "required",
+      "netflix",
+      "tvguide",
+      "entertainment",
+      "movie",
+      "browse",
+      "documentaries",
+      "streaming",
+      "use",
+      "tasks",
+      "similar",
+      "goal",
+      "same",
+      "site",
+      "area",
+      "link",
+      "what",
+      "watch",
+      "filter",
+      "documentary",
+      "view",
+      "results"
+    ],
+    "operations": [
+      "CLICK"
+    ]
+  },
+  "execution": {
+    "steps": [
+      {
+        "step": 1,
+        "intent": "click the What to Watch on Netflix",
+        "operation": "CLICK",
+        "target_type": "link",
+        "target": "What to Watch on Netflix",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 2,
+        "intent": "click the Filter",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Filter",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 3,
+        "intent": "click the Documentary",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "Documentary",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      },
+      {
+        "step": 4,
+        "intent": "click the View Results",
+        "operation": "CLICK",
+        "target_type": "button",
+        "target": "View Results",
+        "value_policy": "No value required.",
+        "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+        "success_signal": "The page advances or the selected field reflects the intended value."
+      }
+    ]
+  },
+  "termination": {
+    "success_check": "Stop when the task-specific goal is satisfied or the expected confirmation/result is visible.",
+    "max_steps_hint": 4
+  },
+  "failure_recovery": {
+    "guards": [
+      "Never copy old element ids; choose only ids visible in the current observation.",
+      "If the expected UI state is absent, ignore this procedure and reason from the page.",
+      "If a click does not advance the page, re-check visible labels before retrying."
+    ],
+    "negative_patterns": []
+  },
+  "stats": {
+    "success_count": 1,
+    "failure_count": 0,
+    "avg_steps": 4.0
+  },
+  "raw_workflow_name": "tvguide / Movie workflow 107"
+}

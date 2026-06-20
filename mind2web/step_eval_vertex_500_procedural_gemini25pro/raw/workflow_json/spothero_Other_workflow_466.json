@@ -1,0 +1,90 @@
+{
+  "name": "spothero / Other workflow 466",
+  "source": "Mind2Web exemplar",
+  "website": "spothero",
+  "domain": "Travel",
+  "subdomain": "Other",
+  "task": "Book the closest parking spot to the Orlando Magic at Brooklyn Nets event, happening in Barclays Center, to enter after 3 pm and exit after 5 pm",
+  "steps": [
+    {
+      "action": "TYPE [88] [barclays center]",
+      "op": "TYPE",
+      "element": "88",
+      "value": "barclays center",
+      "description": "[textbox] Search for parking -> TYPE: barclays center",
+      "role": "textbox",
+      "label": "Search for parking",
+      "observation": "<html> <div> <div> <input id=88 text search for parking search-input address, place, city or venue /> <button id=415 button> Search </button> </div> <button id=417 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [2083]",
+      "op": "CLICK",
+      "element": "2083",
+      "value": "",
+      "description": "[li] Barclays Center, Atlantic Avenue, Brooklyn, NY, US... -> CLICK",
+      "role": "li",
+      "label": "Barclays Center, Atlantic Avenue, Brooklyn, NY, US...",
+      "observation": "<html> <div> <div> <input id=2401 text search for parking search-input barclays center address, place, city or venue /> <ul> <li id=2083> Barclays Center, Atlantic Avenue, Brooklyn, NY, USA </li> <li> Barclays Center Parking Lots, South Elliott Place, Brooklyn, NY, USA </li> <li> GGMC Parking - Barclays Center, Atlantic Center, Atlantic Avenue, Brooklyn, NY, USA </li> <li> American Express Box Office, Atlantic Avenue, Brooklyn, NY, USA </li> </ul> </div> <button id=2424 button> Find Parking Near Me </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [4139]",
+      "op": "CLICK",
+      "element": "4139",
+      "value": "",
+      "description": "[p] Orlando Magic at Brooklyn Nets -> CLICK",
+      "role": "p",
+      "label": "Orlando Magic at Brooklyn Nets",
+      "observation": "<html> <body> <button id=5092 button> Filter </button> <div> <div> <p id=4139> Orlando Magic at Brooklyn Nets </p> <p> Today, 7:30 PM - 10:30 PM </p> </div> <div> <p> Not going to an event? </p> <button id=8563 button> Find Parking Near Venue </button> </div> </div> </body> </html>"
+    },
+    {
+      "action": "SELECT [9228] [Sort by Distance]",
+      "op": "SELECT",
+      "element": "9228",
+      "value": "Sort by Distance",
+      "description": "[select] Sort by Distance -> SELECT: Sort by Distance",
+      "role": "select",
+      "label": "Sort by Distance",
+      "observation": "<html> <div> <div> <select id=10130 start time> <option> Start Time </option> <option 12:00 am> 12:00 AM </option> <option 12:30 am> 12:30 AM </option> <option 01:00 am> 1:00 AM </option> <option 01:30 am> 1:30 AM </option> <option 02:00 am> 2:00 AM </option> <option 02:30 am> 2:30 AM </option> <option 03:00 am> 3:00 AM </option> <option 03:30 am> 3:30 AM </option> <option 04:00 am> 4:00 AM </option> <option 04:30 am> 4:30 AM </option> <option 05:00 am> 5:00 AM </option> <option 05:30 am> 5:30 AM </option> <option 06:00 am> 6:00 AM </option> <option 06:30 am> 6:30 AM </option> <option 07:00 am> 7:00 AM </option> <option 07:30 am> 7:30 AM </option> <option 08:00 am> 8:00 AM </option> <option 08:30 am> 8:30 AM </option> <option 09:00 am> 9:00 AM </option> <option 09:30 am> 9:30 AM </option> <option 10:00 am> 10:00 AM </option> <option 10:30 am> 10:30 AM </option> <option 11:00 am> 11:00 AM </option> <option 11:30 am> 11:30 AM </option> </select> <button id=10290 button> Filter </button> </div> <select id=9228> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> </div> </html>"
+    },
+    {
+      "action": "SELECT [15670] [3 00 PM]",
+      "op": "SELECT",
+      "element": "15670",
+      "value": "3 00 PM",
+      "description": "[combobox] Start Time -> SELECT: 3:00 PM",
+      "role": "combobox",
+      "label": "Start Time",
+      "observation": "<html> <div> <div> <select id=15670 start time> <option> Start Time </option> <option 12:00 am> 12:00 AM </option> <option 12:30 am> 12:30 AM </option> <option 01:00 am> 1:00 AM </option> <option 01:30 am> 1:30 AM </option> <option 02:00 am> 2:00 AM </option> <option 02:30 am> 2:30 AM </option> <option 03:00 am> 3:00 AM </option> <option 03:30 am> 3:30 AM </option> <option 04:00 am> 4:00 AM </option> <option 04:30 am> 4:30 AM </option> <option 05:00 am> 5:00 AM </option> <option 05:30 am> 5:30 AM </option> <option 06:00 am> 6:00 AM </option> <option 06:30 am> 6:30 AM </option> <option 07:00 am> 7:00 AM </option> <option 07:30 am> 7:30 AM </option> <option 08:00 am> 8:00 AM </option> <option 08:30 am> 8:30 AM </option> <option 09:00 am> 9:00 AM </option> <option 09:30 am> 9:30 AM </option> <option 10:00 am> 10:00 AM </option> <option 10:30 am> 10:30 AM </option> <option 11:00 am> 11:00 AM </option> <option 11:30 am> 11:30 AM </option> </select> <button id=16730 button> Filter </button> </div> <div> <button button> Details </button> <button id=16803 button> Book Now </button> </div> </div> </html>"
+    },
+    {
+      "action": "SELECT [22110] [5 00 PM]",
+      "op": "SELECT",
+      "element": "22110",
+      "value": "5 00 PM",
+      "description": "[combobox] End Time -> SELECT: 5:00 PM",
+      "role": "combobox",
+      "label": "End Time",
+      "observation": "<html> <div> <div> <select id=22110 end time> <option> End Time </option> <option 03:30 pm> 3:30 PM </option> <option 04:00 pm> 4:00 PM </option> <option 04:30 pm> 4:30 PM </option> <option 05:00 pm> 5:00 PM </option> <option 05:30 pm> 5:30 PM </option> <option 06:00 pm> 6:00 PM </option> <option 06:30 pm> 6:30 PM </option> <option 07:00 pm> 7:00 PM </option> <option 07:30 pm> 7:30 PM </option> <option 08:00 pm> 8:00 PM </option> <option 08:30 pm> 8:30 PM </option> <option 09:00 pm> 9:00 PM </option> <option 09:30 pm> 9:30 PM </option> <option 10:00 pm> 10:00 PM </option> <option 10:30 pm> 10:30 PM </option> <option 11:00 pm> 11:00 PM </option> <option 11:30 pm true> 11:30 PM </option> </select> <div> <button id=23172 button> Update Search </button> <button button> Cancel </button> </div> </div> <div> <span> 4 spots left </span> <button button> Details </button> <button id=24410 button> Book Now </button> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [28500]",
+      "op": "CLICK",
+      "element": "28500",
+      "value": "",
+      "description": "[button] Update Search -> CLICK",
+      "role": "button",
+      "label": "Update Search",
+      "observation": "<html> <div> <div> <button id=28500 button> Update Search </button> <button button> Cancel </button> </div> <div> <div> <span> 4 spots left </span> <button button> Details </button> <button id=30799 button> Book Now </button> </div> <div> <span> 4 spots left </span> <button button> Details </button> <button id=30861 button> Book Now </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [34837]",
+      "op": "CLICK",
+      "element": "34837",
+      "value": "",
+      "description": "[button] Book Now -> CLICK",
+      "role": "button",
+      "label": "Book Now",
+      "observation": "<html> <div> <button id=35900 button> Filter </button> <select id=35908> <option distance true> Sort by Distance </option> <option price> Sort by Price </option> </select> <div> <span> 4 spots left </span> <button button> Details </button> <button id=34837 button> Book Now </button> </div> </div> </html>"
+    }
+  ]
+}

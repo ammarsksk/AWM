@@ -1,0 +1,90 @@
+{
+  "name": "eventbrite / Event workflow 87",
+  "source": "Mind2Web exemplar",
+  "website": "eventbrite",
+  "domain": "Entertainment",
+  "subdomain": "Event",
+  "task": "Find a music party in Ohio and follow its organizer",
+  "steps": [
+    {
+      "action": "CLICK [328]",
+      "op": "CLICK",
+      "element": "328",
+      "value": "",
+      "description": "[div] Search for events -> CLICK",
+      "role": "div",
+      "label": "Search for events",
+      "observation": "<html> <div> <button id=328 button> <div> <span> Search for events </span> <input button text search events /> </div> </button> <div> <button id=515 button> <span> Music </span> </button> <div region> <a id=534> <div> Music </div> </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [2043] [music]",
+      "op": "TYPE",
+      "element": "2043",
+      "value": "music",
+      "description": "[textbox] Search events -> TYPE: music",
+      "role": "textbox",
+      "label": "Search events",
+      "observation": "<html> <div> <div> <button id=2471 button> <span> Music </span> </button> <div region> <a id=2490> <div> Music </div> </a> </div> </div> <div alertdialog> <input id=2043 textbox search search for anything /> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [4530] [ohio]",
+      "op": "TYPE",
+      "element": "4530",
+      "value": "ohio",
+      "description": "[combobox] autocomplete -> TYPE: ohio",
+      "role": "combobox",
+      "label": "autocomplete",
+      "observation": "<html> <div> <div> <button id=4962 button> <span> Music </span> </button> <div region> <a id=4981> <div> Music </div> </a> </div> </div> <div alertdialog> <main> <ul menu> </ul> <input id=4530 combobox text chicago /> </main> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [8054]",
+      "op": "CLICK",
+      "element": "8054",
+      "value": "",
+      "description": "[div] Ohio -> CLICK",
+      "role": "div",
+      "label": "Ohio",
+      "observation": "<html> <div alertdialog> <ul menu> <li menuitem> <button id=8054 button> <div> <div> Ohio </div> <div> USA </div> </div> </button> </li> <li menuitem> <button id=8062 button> <div> <div> Ohio City </div> <div> OH, USA </div> </div> </button> </li> <li menuitem> <button id=8071 button> <div> <div> Ohio </div> <div> IL, USA </div> </div> </button> </li> </ul> </div> </html>"
+    },
+    {
+      "action": "CLICK [9514]",
+      "op": "CLICK",
+      "element": "9514",
+      "value": "",
+      "description": "[generic] Run Search -> CLICK",
+      "role": "generic",
+      "label": "Run Search",
+      "observation": "<html> <div> <div> <div> Popular in </div> <input id=9903 combobox text locationpicker chicago /> </div> <div alertdialog> <div> <input id=10346 textbox search music /> <button submit> <i run search> <svg id=9514 /> <span> Run Search </span> </i> </button> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [10931]",
+      "op": "CLICK",
+      "element": "10931",
+      "value": "",
+      "description": "[label] -> CLICK",
+      "role": "label",
+      "label": "",
+      "observation": "<html> <section> <input id=11249 combobox search eventpicker music /> <label id=11466> <input radio /> <span> Music </span> </label> </section> <label id=10931 /> </div> </span> </label> </html>"
+    },
+    {
+      "action": "CLICK [17025]",
+      "op": "CLICK",
+      "element": "17025",
+      "value": "",
+      "description": "[div] RANG BARSEY- HOLI MUSIC FESTIVAL, CINCINNATI -> CLICK",
+      "role": "div",
+      "label": "RANG BARSEY- HOLI MUSIC FESTIVAL, CINCINNATI",
+      "observation": "<html> <section> <input id=16485 combobox search eventpicker music /> <div> <label id=16702> <input radio /> <span> Music </span> </label> <div> <a id=17025> <div> <div> RANG BARSEY- HOLI MUSIC FESTIVAL, CINCINNATI </div> <div> RANG BARSEY- HOLI MUSIC FESTIVAL, CINCINNATI </div> </div> </a> <div> Sat, Apr 15, 12:00 PM </div> </div> </div> </section> </html>"
+    },
+    {
+      "action": "CLICK [23431]",
+      "op": "CLICK",
+      "element": "23431",
+      "value": "",
+      "description": "[button] Follow -> CLICK",
+      "role": "button",
+      "label": "Follow",
+      "observation": "<html> <div article> <div> <section organizer profile> <button id=23431 button> Follow </button> </section> <div> <a id=24053> Cincinnati Music Parties </a> <section organizer profile> <button id=23447 button> Follow </button> </section> </div> </div> </div> </html>"
+    }
+  ]
+}

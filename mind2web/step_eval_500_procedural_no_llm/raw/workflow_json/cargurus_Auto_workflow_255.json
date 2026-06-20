@@ -1,0 +1,70 @@
+{
+  "name": "cargurus / Auto workflow 255",
+  "source": "Mind2Web exemplar",
+  "website": "cargurus",
+  "domain": "Shopping",
+  "subdomain": "Auto",
+  "task": "calculate a car loan payment for a $25000 car with a $5000 down payment and 12 percent interest rate for 48 months.",
+  "steps": [
+    {
+      "action": "CLICK [404]",
+      "op": "CLICK",
+      "element": "404",
+      "value": "",
+      "description": "[menuitem] Finance -> HOVER",
+      "role": "menuitem",
+      "label": "Finance",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <li> <button id=404 menuitem> <span> Finance </span> </button> <div menu> </div> </li> </ul> </nav> <div> <label> <div> Enter license plate </div> <input id=934 text (ex.) c4r 6uru /> </label> <label id=940> State <select state> <option true> Select </option> <option al> AL </option> <option ak> AK </option> <option az> AZ </option> <option ar> AR </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option de> DE </option> <option dc> DC </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ia> IA </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option me> ME </option> <option md> MD </option> <option ma> MA </option> <option mi> MI </option> </select> </label> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [16193]",
+      "op": "CLICK",
+      "element": "16193",
+      "value": "",
+      "description": "[menuitem] Loan Calculator -> CLICK",
+      "role": "menuitem",
+      "label": "Loan Calculator",
+      "observation": "<html> <body> <nav navigation> <ul menubar> <div menu> <ul menu> <a id=16193 menuitem> <span> Loan Calculator </span> </a> </ul> </div> </ul> </nav> <div> <label> <div> Enter license plate </div> <input id=16673 text (ex.) c4r 6uru /> </label> <label id=16679> State <select state> <option true> Select </option> <option al> AL </option> <option ak> AK </option> <option az> AZ </option> <option ar> AR </option> <option ca> CA </option> <option co> CO </option> <option ct> CT </option> <option de> DE </option> <option dc> DC </option> <option fl> FL </option> <option ga> GA </option> <option hi> HI </option> <option id> ID </option> <option il> IL </option> <option in> IN </option> <option ia> IA </option> <option ks> KS </option> <option ky> KY </option> <option la> LA </option> <option me> ME </option> <option md> MD </option> <option ma> MA </option> <option mi> MI </option> </select> </label> </div> </body> </html>"
+    },
+    {
+      "action": "TYPE [24348] [25000]",
+      "op": "TYPE",
+      "element": "24348",
+      "value": "25000",
+      "description": "[input] -> TYPE: 25000",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <main main> <fieldset> <input id=24348 text price $0 /> <input id=25105 text downpayment $0 /> <input id=25112 rate 0.00% /> </fieldset> </main> </html>"
+    },
+    {
+      "action": "TYPE [27571] [5000]",
+      "op": "TYPE",
+      "element": "27571",
+      "value": "5000",
+      "description": "[input] -> TYPE: 5000",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <main main> <fieldset> <input id=27571 text downpayment $0 /> <fieldset> <input id=28335 rate 0.00% /> <div> <input radio 36 mo term 36 /> <label id=28344> <span> 48 mo </span> </label> <input radio 48 mo term 48 /> <input radio 60 mo term 60 true /> </div> </fieldset> </fieldset> </main> </html>"
+    },
+    {
+      "action": "TYPE [30793] [12]",
+      "op": "TYPE",
+      "element": "30793",
+      "value": "12",
+      "description": "[input] -> TYPE: 12",
+      "role": "input",
+      "label": "",
+      "observation": "<html> <main main> <fieldset> <input id=31551 text downpayment 5,000 /> <fieldset> <input id=30793 rate 0.00% /> <div> <input radio 36 mo term 36 /> <label id=31566> <span> 48 mo </span> </label> <input radio 48 mo term 48 /> <input radio 60 mo term 60 true /> </div> </fieldset> </fieldset> </main> </html>"
+    },
+    {
+      "action": "CLICK [34013]",
+      "op": "CLICK",
+      "element": "34013",
+      "value": "",
+      "description": "[label] 48 mo -> CLICK",
+      "role": "label",
+      "label": "48 mo",
+      "observation": "<html> <main main> <fieldset> <input id=34772 text downpayment $5,000 /> <fieldset> <input id=34779 rate 12 /> <div> <input radio 36 mo term 36 /> <label id=34013> <span> 48 mo </span> </label> <input radio 48 mo term 48 /> <input radio 60 mo term 60 true /> </div> </fieldset> </fieldset> </main> </html>"
+    }
+  ]
+}

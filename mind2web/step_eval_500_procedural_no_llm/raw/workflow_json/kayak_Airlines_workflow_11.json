@@ -1,0 +1,130 @@
+{
+  "name": "kayak / Airlines workflow 11",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a cheapest SUV in Brooklyn for 1 day.",
+  "steps": [
+    {
+      "action": "CLICK [136]",
+      "op": "CLICK",
+      "element": "136",
+      "value": "",
+      "description": "[link] Search for cars -> CLICK",
+      "role": "link",
+      "label": "Search for cars",
+      "observation": "<html> <div> <div> <button id=545 button submit search> <svg img c8lpf-icon /> </button> <div> <a search for flights> </a> <a search for hotels> </a> <a id=136 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> </div> <button id=845 button submit search> <svg img c8lpf-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [6646]",
+      "op": "CLICK",
+      "element": "6646",
+      "value": "",
+      "description": "[textbox] Pick-up location -> CLICK",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <a search for cars> <svg id=7035 cars icon /> <div> Cars </div> </a> <div> <div button> <div img> </div> <input id=6646 text pick-up location los angeles, california, united states from? /> </div> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=7675> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> </div> </html>"
+    },
+    {
+      "action": "TYPE [12550] [Brooklyn]",
+      "op": "TYPE",
+      "element": "12550",
+      "value": "Brooklyn",
+      "description": "[textbox] Pick-up location -> TYPE: Brooklyn",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <body> <div> <div button> <div img> </div> <input id=12550 text pick-up location los angeles, california, united states from? /> </div> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=13579> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> <ul listbox> <li id=15447 option cities (including airports)> <div> Cities (including airports) </div> </li> <li option los angeles, california, united states> </li> <li option east los angeles, california, united> </li> <li option los altos, california, united states> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [21416]",
+      "op": "CLICK",
+      "element": "21416",
+      "value": "",
+      "description": "[span] Brooklyn, New York, United States -> CLICK",
+      "role": "span",
+      "label": "Brooklyn, New York, United States",
+      "observation": "<html> <body> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=19545> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> <ul listbox> <li option cities (including airports)> </li> <li id=21416 option brooklyn, new york, united states> <div> <svg img /> <div> <span> Brooklyn, New York, United States </span> <span> United States </span> </div> </div> </li> <li option brooklyn, connecticut, united states> </li> <li id=21439 option brooklyn, ohio, united states> <div> <svg img /> <div> <span> Brooklyn, Ohio, United States </span> <span> United States </span> </div> </div> </li> <li option brooklyn, michigan, united states> </li> <li option brooklyn park, minnesota, united states> </li> <li option brooklyn center, minnesota, united states> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [24494]",
+      "op": "CLICK",
+      "element": "24494",
+      "value": "",
+      "description": "[span] Different drop-off -> CLICK",
+      "role": "span",
+      "label": "Different drop-off",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=24880 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <div> <span id=24494> Different drop-off </span> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=25522> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [33301]",
+      "op": "CLICK",
+      "element": "33301",
+      "value": "",
+      "description": "[tab] Same drop-off -> CLICK",
+      "role": "tab",
+      "label": "Same drop-off",
+      "observation": "<html> <body> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=30789 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=31433> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> <ul tablist> <li id=33301 tab same drop-off> <span> Same drop-off </span> </li> <li tab different drop-off> </li> </ul> </body> </html>"
+    },
+    {
+      "action": "CLICK [36838]",
+      "op": "CLICK",
+      "element": "36838",
+      "value": "",
+      "description": "[button] End date -> CLICK",
+      "role": "button",
+      "label": "End date",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=36674 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <div> <div id=36838 button end date> <svg img jono-icon /> <span> Tue 5/23 </span> </div> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=37308> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [42420]",
+      "op": "CLICK",
+      "element": "42420",
+      "value": "",
+      "description": "[button] May 22, 2023 -> CLICK",
+      "role": "button",
+      "label": "May 22, 2023",
+      "observation": "<html> <body> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=42790 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=43426> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> <div end date calendar input> <table grid> <tr row> <td gridcell> <div id=42420 button may 22, 2023> 22 </div> </td> </tr> </table> </div> </body> </html>"
+    },
+    {
+      "action": "CLICK [48537]",
+      "op": "CLICK",
+      "element": "48537",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=48907 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <div> <button button submit click to search cars> <svg id=48537 img a_8a-icon /> </button> <p> Save money on rental cars by searching for car rental deals on KAYAK. KAYAK searches for rental car deals on <a> luxury car rentals </a> , <a id=49542> SUV rentals </a> , <a> van rentals </a> , <a> pickup truck rentals </a> , <a> convertible car rentals </a> , or minivan rentals, youll find them all on KAYAK. </p> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [54414]",
+      "op": "CLICK",
+      "element": "54414",
+      "value": "",
+      "description": "[img] SUV -> CLICK",
+      "role": "img",
+      "label": "SUV",
+      "observation": "<html> <div document> <div switch click to select \"suv\" car> <img id=54414 suv /> <div> SUV </div> </div> <div> <div tablist> <div id=55144 tab sort by cheapest> <div> <div> Cheapest </div> <div> $47 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> </div> <div tablist> <div id=59193 tab sort by cheapest> <div> <div> Cheapest </div> <div> $47 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [62644]",
+      "op": "CLICK",
+      "element": "62644",
+      "value": "",
+      "description": "[div] $75 -> CLICK",
+      "role": "div",
+      "label": "$75",
+      "observation": "<html> <div document> <div> <div tablist> <div id=62644 tab sort by cheapest> <div> <div> Cheapest </div> <div> $75 </div> </div> </div> <div tab sort by recommended> <div> Recommended <div id=62655 button> <svg img /> </div> </div> </div> <div tab sort by closest> </div> </div> <div tablist> <div id=66651 tab sort by cheapest> <div> <div> Cheapest </div> <div> $75 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [70381]",
+      "op": "CLICK",
+      "element": "70381",
+      "value": "",
+      "description": "[div] View Deal -> HOVER",
+      "role": "div",
+      "label": "View Deal",
+      "observation": "<html> <div document> <div> <div> <div tablist> <div id=70040 tab sort by cheapest> <div> <div> Cheapest </div> <div> $75 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> </div> <div button> <div tab> <div button> <button id=70381 button view deal for toyota rav4> <div> View Deal </div> </button> </div> </div> </div> </div> <div tablist> <div id=74056 tab sort by cheapest> <div> <div> Cheapest </div> <div> $75 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> </div> </div> </div> </html>"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "kayak / Airlines workflow 312",
+  "source": "Mind2Web exemplar",
+  "website": "kayak",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Search for rental cars in Seattle, WA and filter the results by the Best score.",
+  "steps": [
+    {
+      "action": "CLICK [542]",
+      "op": "CLICK",
+      "element": "542",
+      "value": "",
+      "description": "[link] Search for cars -> CLICK",
+      "role": "link",
+      "label": "Search for cars",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=542 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <div> <div> <a id=1442> CARS </a> <a> FLIGHTS </a> <a> HOTELS </a> </div> <div> <a id=1648> CARS </a> <a> FLIGHTS </a> <a> HOTELS </a> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [6362]",
+      "op": "CLICK",
+      "element": "6362",
+      "value": "",
+      "description": "[textbox] Pick-up location -> CLICK",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div button> <div img> </div> <input id=6362 text pick-up location from? /> </div> <div start time input> <div> <select id=6775> <option midnight fri mar 24 2023 00:00:00> Midnight </option> <option 1:00 am fri mar 24 2023 01:00:00> 1:00 am </option> <option 2:00 am fri mar 24 2023 02:00:00> 2:00 am </option> <option 3:00 am fri mar 24 2023 03:00:00> 3:00 am </option> <option 4:00 am fri mar 24 2023 04:00:00> 4:00 am </option> <option 5:00 am fri mar 24 2023 05:00:00> 5:00 am </option> <option 6:00 am fri mar 24 2023 06:00:00> 6:00 am </option> <option 7:00 am fri mar 24 2023 07:00:00> 7:00 am </option> <option 8:00 am fri mar 24 2023 08:00:00> 8:00 am </option> <option 9:00 am fri mar 24 2023 09:00:00> 9:00 am </option> <option 10:00 am fri mar 24 2023 10:00:00> 10:00 am </option> <option 11:00 am fri mar 24 2023 11:00:00> 11:00 am </option> <option noon fri mar 24 2023 12:00:00 true> Noon </option> <option 1:00 pm fri mar 24 2023 13:00:00> 1:00 pm </option> <option 2:00 pm fri mar 24 2023 14:00:00> 2:00 pm </option> <option 3:00 pm fri mar 24 2023 15:00:00> 3:00 pm </option> <option 4:00 pm fri mar 24 2023 16:00:00> 4:00 pm </option> <option 5:00 pm fri mar 24 2023 17:00:00> 5:00 pm </option> <option 6:00 pm fri mar 24 2023 18:00:00> 6:00 pm </option> <option 7:00 pm fri mar 24 2023 19:00:00> 7:00 pm </option> <option 8:00 pm fri mar 24 2023 20:00:00> 8:00 pm </option> <option 9:00 pm fri mar 24 2023 21:00:00> 9:00 pm </option> <option 10:00 pm fri mar 24 2023 22:00:00> 10:00 pm </option> <option 11:00 pm fri mar 24 2023 23:00:00> 11:00 pm </option> </select> <div> Noon </div> </div> </div> <button button submit click to search cars> <svg id=6387 img a_8a-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "TYPE [11695] [Seattle]",
+      "op": "TYPE",
+      "element": "11695",
+      "value": "Seattle",
+      "description": "[textbox] Pick-up location -> TYPE: Seattle",
+      "role": "textbox",
+      "label": "Pick-up location",
+      "observation": "<html> <div> <div button> <div img> </div> <input id=11695 text pick-up location from? /> </div> <div start time input> <div> <select id=12106> <option midnight fri mar 24 2023 00:00:00> Midnight </option> <option 1:00 am fri mar 24 2023 01:00:00> 1:00 am </option> <option 2:00 am fri mar 24 2023 02:00:00> 2:00 am </option> <option 3:00 am fri mar 24 2023 03:00:00> 3:00 am </option> <option 4:00 am fri mar 24 2023 04:00:00> 4:00 am </option> <option 5:00 am fri mar 24 2023 05:00:00> 5:00 am </option> <option 6:00 am fri mar 24 2023 06:00:00> 6:00 am </option> <option 7:00 am fri mar 24 2023 07:00:00> 7:00 am </option> <option 8:00 am fri mar 24 2023 08:00:00> 8:00 am </option> <option 9:00 am fri mar 24 2023 09:00:00> 9:00 am </option> <option 10:00 am fri mar 24 2023 10:00:00> 10:00 am </option> <option 11:00 am fri mar 24 2023 11:00:00> 11:00 am </option> <option noon fri mar 24 2023 12:00:00 true> Noon </option> <option 1:00 pm fri mar 24 2023 13:00:00> 1:00 pm </option> <option 2:00 pm fri mar 24 2023 14:00:00> 2:00 pm </option> <option 3:00 pm fri mar 24 2023 15:00:00> 3:00 pm </option> <option 4:00 pm fri mar 24 2023 16:00:00> 4:00 pm </option> <option 5:00 pm fri mar 24 2023 17:00:00> 5:00 pm </option> <option 6:00 pm fri mar 24 2023 18:00:00> 6:00 pm </option> <option 7:00 pm fri mar 24 2023 19:00:00> 7:00 pm </option> <option 8:00 pm fri mar 24 2023 20:00:00> 8:00 pm </option> <option 9:00 pm fri mar 24 2023 21:00:00> 9:00 pm </option> <option 10:00 pm fri mar 24 2023 22:00:00> 10:00 pm </option> <option 11:00 pm fri mar 24 2023 23:00:00> 11:00 pm </option> </select> <div> Noon </div> </div> </div> <button button submit click to search cars> <svg id=11716 img a_8a-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [19659]",
+      "op": "CLICK",
+      "element": "19659",
+      "value": "",
+      "description": "[span] Seattle, Washington, United States -> CLICK",
+      "role": "span",
+      "label": "Seattle, Washington, United States",
+      "observation": "<html> <ul listbox> <li id=19656 option cities (including airports)> <div> Cities (including airports) </div> </li> <li id=19659 option seattle, washington, united states> <div> <svg img /> <div> <span> Seattle, Washington, United States </span> <span> United States </span> </div> </div> </li> <li option airports> </li> <li id=19673 option seattle/tacoma intl> <div> <svg img /> <div> <div> <span> Seattle/Tacoma Intl </span> <span> SEA </span> </div> <span> Seattle, Washington, United States </span> </div> </div> </li> <li option king county/boeing> </li> <li option lake union spb> </li> <li option train stations> </li> </ul> </html>"
+    },
+    {
+      "action": "CLICK [22466]",
+      "op": "CLICK",
+      "element": "22466",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div> <div> <a search for flights> </a> <a search for hotels> </a> <a id=22777 search for cars> <svg id=22778 cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <button button submit click to search cars> <svg id=22466 img a_8a-icon /> </button> </div> </html>"
+    },
+    {
+      "action": "CLICK [27824]",
+      "op": "CLICK",
+      "element": "27824",
+      "value": "",
+      "description": "[svg] -> CLICK",
+      "role": "svg",
+      "label": "",
+      "observation": "<html> <div document> <div> <a search for flights> </a> <a search for hotels> </a> <a id=28193 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <div tablist> <div id=28494 tab sort by cheapest> <div> <div> Cheapest </div> <div> $164 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> <div tab> <svg id=27824 img xuuc-icon /> <div> Other sort </div> </div> </div> </div> </html>"
+    },
+    {
+      "action": "CLICK [41370]",
+      "op": "CLICK",
+      "element": "41370",
+      "value": "",
+      "description": "[tab] Best score -> CLICK",
+      "role": "tab",
+      "label": "Best score",
+      "observation": "<html> <body> <div document> <div> <a search for flights> </a> <a search for hotels> </a> <a id=37495 search for cars> <svg cars icon /> <div> Cars </div> </a> <a search for packages> </a> <a search for trains> </a> </div> <div tablist> <div id=37796 tab sort by cheapest> <div> <div> Cheapest </div> <div> $164 </div> </div> </div> <div tab sort by recommended> </div> <div tab sort by closest> </div> </div> </div> <ul tablist> <li id=41370 tab best score> <span> Best score </span> </li> </ul> </body> </html>"
+    }
+  ]
+}

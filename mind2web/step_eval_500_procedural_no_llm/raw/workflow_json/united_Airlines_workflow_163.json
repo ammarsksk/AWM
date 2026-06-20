@@ -1,0 +1,60 @@
+{
+  "name": "united / Airlines workflow 163",
+  "source": "Mind2Web exemplar",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Find a round trip from Phoenix to Miami with maximum budget of $2000.",
+  "steps": [
+    {
+      "action": "TYPE [125] [Phoenix]",
+      "op": "TYPE",
+      "element": "125",
+      "value": "Phoenix",
+      "description": "[combobox] Flying from -> TYPE: Phoenix",
+      "role": "combobox",
+      "label": "Flying from",
+      "observation": "<html> <div> <header banner> <nav navigation> <div tablist> <a tab> </a> <a tab> </a> <a tab> </a> <a id=986 tab> <span> DEALS </span> </a> </div> </nav> </header> <main main> <div> <div> <input id=125 combobox text flying from /> <label flying from> Flying from </label> </div> <ul search results> <li> <button button save to favorites> </button> <button id=1733 button option 13 of 18, miami,> <div> Miami, FL, US (MIA) </div> <span> Tue, Apr 25 - Tue, May 2 from <span> $247 </span> </span> </button> </li> </ul> </div> </main> </div> </html>"
+    },
+    {
+      "action": "CLICK [9964]",
+      "op": "CLICK",
+      "element": "9964",
+      "value": "",
+      "description": "[button] Phoenix, AZ, US (PHX",
+      "role": "button",
+      "label": "Phoenix, AZ, US (PHX",
+      "observation": "<html> <main main> <div> <div tooltip> <ul listbox> <li option> <button id=9964 button> Phoenix, AZ, US (PHX) </button> </li> <li option> <button id=11676 button> Phoenix, AZ, US (AZA) </button> </li> </ul> </div> <ul search results> <li> <button button save to favorites> </button> <button id=12005 button option 13 of 18, miami,> <div> Miami, FL, US (MIA) </div> <span> Tue, Apr 25 - Tue, May 2 from <span> $247 </span> </span> </button> </li> </ul> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [21305]",
+      "op": "CLICK",
+      "element": "21305",
+      "value": "",
+      "description": "[button] Search -> CLICK",
+      "role": "button",
+      "label": "Search",
+      "observation": "<html> <main main> <div> <div> <button id=21305 submit> <span> Search </span> </button> <button id=21308 button> <span> Refine search </span> </button> </div> <ul search results> <li> <button button save to favorites> </button> <button id=21587 button option 13 of 18, miami,> <div> Miami, FL, US (MIA) </div> <span> Tue, Apr 25 - Tue, May 2 from <span> $247 </span> </span> </button> </li> </ul> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [29134]",
+      "op": "CLICK",
+      "element": "29134",
+      "value": "",
+      "description": "[button] List of search results -> CLICK",
+      "role": "button",
+      "label": "List of search results",
+      "observation": "<html> <main main> <div> <div> <button submit> </button> <button id=30890 button> <span> Refine search </span> </button> </div> <div> <button id=29134> <h3> List of search results </h3> </button> <ul search results> <li> <button button save to favorites> </button> <button id=31168 button option 13 of 18, miami,> <div> Miami, FL, US (MIA) </div> <span> Tue, Apr 25 - Tue, May 2 from <span> $247 </span> </span> </button> </li> </ul> </div> </div> </main> </html>"
+    },
+    {
+      "action": "CLICK [40748]",
+      "op": "CLICK",
+      "element": "40748",
+      "value": "",
+      "description": "[span] Tue, Apr 25 - Tue, May 2 from -> CLICK",
+      "role": "span",
+      "label": "Tue, Apr 25 - Tue, May 2 from",
+      "observation": "<html> <main main> <div> <div group> <button id=40413 button> <span> Continue booking </span> </button> </div> <div> <div> <button submit> </button> <button id=40487 button> <span> Refine search </span> </button> </div> <ul search results> <li> <button button save to favorites> </button> <button id=40748 button option 13 of 18, miami,> <div> Miami, FL, US (MIA) </div> <span> Tue, Apr 25 - Tue, May 2 from <span> $247 </span> </span> </button> </li> </ul> </div> </div> </main> </html>"
+    }
+  ]
+}

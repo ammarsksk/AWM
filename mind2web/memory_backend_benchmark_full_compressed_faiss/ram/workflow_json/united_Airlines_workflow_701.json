@@ -1,0 +1,51 @@
+{
+  "name": "united / Airlines workflow 701",
+  "source": "Mind2Web exemplar",
+  "abstraction_type": "deterministic_fallback",
+  "website": "united",
+  "domain": "Travel",
+  "subdomain": "Airlines",
+  "task": "Search the status of flight from Columbus, number 1234 on April 5th, 2023.",
+  "goal_pattern": "Search the status of flight from Columbus, number 1234 on April 5th, 2023.",
+  "applicability": {
+    "when_to_use": "Use for tasks with a similar goal on the same site area.",
+    "when_not_to_use": "Do not use if the current task asks for a different flow or page area."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "step_intent": "click the Flight status",
+      "operation": "CLICK",
+      "target_type": "heading",
+      "target_description": "Flight status",
+      "value_policy": "No value required.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    },
+    {
+      "step": 2,
+      "step_intent": "type the Flight number",
+      "operation": "TYPE",
+      "target_type": "textbox",
+      "target_description": "Flight number",
+      "value_policy": "Use the task-specific value for this field.",
+      "selection_rule": "Choose the current visible candidate whose label, role, or nearby text best matches the target description.",
+      "success_signal": "The page advances or the selected field reflects the intended value."
+    }
+  ],
+  "evidence": [
+    {
+      "step": 1,
+      "gold_action": "CLICK [974]",
+      "gold_element_id": "974",
+      "gold_value": ""
+    },
+    {
+      "step": 2,
+      "gold_action": "TYPE [3392] [1234]",
+      "gold_element_id": "3392",
+      "gold_value": "1234"
+    }
+  ],
+  "raw_workflow_name": "united / Airlines workflow 701"
+}

@@ -140,6 +140,9 @@ def run_pipeline(args: argparse.Namespace, task_start: int, task_end: int, log_p
     env = os.environ.copy()
     env["WEBARENA_FAST_MEMORY"] = "0"
     env["WEBARENA_VECTOR_BACKEND"] = args.vector_backend
+    env["WEBARENA_RERANKER_MODE"] = args.reranker
+    env["WEBARENA_RERANKER_MODEL"] = args.reranker_model
+    env["WEBARENA_RERANKER_TRAIN_LIMIT"] = str(args.reranker_train_limit)
     env["AWM_EMBEDDING_MODEL"] = args.embedding_model
 
     with log_path.open("w") as log:
@@ -150,6 +153,9 @@ def run_pipeline(args: argparse.Namespace, task_start: int, task_end: int, log_p
                 {
                     "WEBARENA_FAST_MEMORY": env["WEBARENA_FAST_MEMORY"],
                     "WEBARENA_VECTOR_BACKEND": env["WEBARENA_VECTOR_BACKEND"],
+                    "WEBARENA_RERANKER_MODE": env["WEBARENA_RERANKER_MODE"],
+                    "WEBARENA_RERANKER_MODEL": env["WEBARENA_RERANKER_MODEL"],
+                    "WEBARENA_RERANKER_TRAIN_LIMIT": env["WEBARENA_RERANKER_TRAIN_LIMIT"],
                     "AWM_EMBEDDING_MODEL": env["AWM_EMBEDDING_MODEL"],
                 },
                 sort_keys=True,
@@ -172,6 +178,9 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
     env = os.environ.copy()
     env["WEBARENA_FAST_MEMORY"] = "0"
     env["WEBARENA_VECTOR_BACKEND"] = args.vector_backend
+    env["WEBARENA_RERANKER_MODE"] = args.reranker
+    env["WEBARENA_RERANKER_MODEL"] = args.reranker_model
+    env["WEBARENA_RERANKER_TRAIN_LIMIT"] = str(args.reranker_train_limit)
     env["AWM_EMBEDDING_MODEL"] = args.embedding_model
     memory_path = str(ROOT / args.procedural_memory_dir)
 
@@ -182,6 +191,9 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
                 {
                     "WEBARENA_FAST_MEMORY": env["WEBARENA_FAST_MEMORY"],
                     "WEBARENA_VECTOR_BACKEND": env["WEBARENA_VECTOR_BACKEND"],
+                    "WEBARENA_RERANKER_MODE": env["WEBARENA_RERANKER_MODE"],
+                    "WEBARENA_RERANKER_MODEL": env["WEBARENA_RERANKER_MODEL"],
+                    "WEBARENA_RERANKER_TRAIN_LIMIT": env["WEBARENA_RERANKER_TRAIN_LIMIT"],
                     "AWM_EMBEDDING_MODEL": env["AWM_EMBEDDING_MODEL"],
                 },
                 sort_keys=True,
@@ -275,6 +287,9 @@ def main() -> None:
     parser.add_argument("--procedural-memory-dir", default="memory/procedural")
     parser.add_argument("--vector-backend", default="hnsw_sq8")
     parser.add_argument("--embedding-model", default="BAAI/bge-small-en-v1.5")
+    parser.add_argument("--reranker", default="full", choices=["none", "feature", "ml", "cross_encoder", "full"])
+    parser.add_argument("--reranker-model", default="BAAI/bge-reranker-large")
+    parser.add_argument("--reranker-train-limit", type=int, default=1000)
     parser.add_argument("--model-name", default="openai/google/gemini-2.5-pro")
     parser.add_argument("--procedural-abstraction-model", default="openai/google/gemini-2.5-pro")
     parser.add_argument("--procedural-top-k", type=int, default=4)
@@ -333,6 +348,9 @@ def main() -> None:
             "wall_clock_sec": round(wall_sec, 3),
             "vector_backend": args.vector_backend,
             "embedding_model": args.embedding_model,
+            "reranker": args.reranker,
+            "reranker_model": args.reranker_model,
+            "reranker_train_limit": args.reranker_train_limit,
             "model_name": args.model_name,
             "skip_run": args.skip_run,
         },

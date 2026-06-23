@@ -1,6 +1,12 @@
-2026-06-23 15:56:23,939 - 1955602 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.158_4 in:
-  results/2026-06-23_15-56-23_GenericAgentArgs_on_webarena.158_4
-2026-06-23 15:56:25,964 - 1955602 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.158.
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "full", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "binary_hnsw_rotation"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.158 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-23 15:54:56,699 - 1953604 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.158_25 in:
+  results/2026-06-23_15-54-56_GenericAgentArgs_on_webarena.158_25
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+2026-06-23 15:54:58,830 - 1953604 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.158.
 AssertionError:
 Environment variable WA_SHOPPING missing.
 Please set the following environment variables to use WebArena through BrowserGym:
@@ -42,4 +48,16 @@ WA_WIKIPEDIA
 WA_MAP
 WA_HOMEPAGE
 
-2026-06-23 15:56:25,964 - 1955602 - browsergym.experiments.loop - INFO - Saving summary info.
+2026-06-23 15:54:58,831 - 1953604 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.158.
+AssertionError:
+Environment variable WA_SHOPPING missing.
+Please set the following environment variables to use WebArena through BrowserGym:
+WA_SHOPPING
+WA_SHOPPING_ADMIN
+WA_REDDIT
+WA_GITLAB
+WA_WIKIPEDIA
+WA_MAP
+WA_HOMEPAGE
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.

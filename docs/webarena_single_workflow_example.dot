@@ -1,0 +1,31 @@
+digraph SingleProcedure {
+  rankdir=LR;
+  graph [labelloc=t, fontsize=18, fontname="Helvetica", bgcolor="white", label="Single Stored Workflow Example: shopping.template_214.click_send_msg_to_user"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, margin="0.12,0.08"];
+  edge [fontname="Helvetica", fontsize=9, arrowsize=0.8];
+  "shopping.template_214.click_send_msg_to_user" [label="PROCEDURE\\nshopping.template_214.click_send_msg_to_user\\nsuccess=4 failure=0\\nfamily=order_lookup\\naction skeleton=click -> send_msg_to_user\\ngoal=Find the total cost of the latest order\\nwith status not equal to {{status}}", fillcolor="#dbeafe", color="#2563eb"];
+  "family:order_lookup" [label="TASK FAMILY\\norder_lookup\\nUsed to prevent wrong-family reuse", fillcolor="#fef3c7", color="#d97706"];
+  "intent:Find the total cost of the latest\\norder with status not equal to\\n{{status}}" [label="GOAL PATTERN\\nFind the total cost of the latest order with\\nstatus not equal to {{status}}", fillcolor="#ffedd5", color="#ea580c"];
+  "strategy:Navigate to the 'My Account'\\npage. In the order history\\ntable, find the first order\\nwho..." [label="GENERAL STRATEGY\\nNavigate to the 'My Account' page. In the\\norder history table, find the first order\\nwhose status is not the specified one (e.g.,\\n'Canceled') and extract its total cost.", fillcolor="#ecfccb", color="#65a30d"];
+  "answer_format:Return the numeric total cost\\nvalue, without currency symbols." [label="ANSWER FORMAT\\nReturn the numeric total cost value, without\\ncurrency symbols.", fillcolor="#f5f3ff", color="#7c3aed"];
+  "outcome:success" [label="SUCCESS OUTCOME\\nThis path previously solved tasks", fillcolor="#dcfce7", color="#16a34a"];
+  "family:order_lookup" -> "shopping.template_214.click_send_msg_to_user" [label="contains", color="#475569"];
+  "intent:Find the total cost of the latest\\norder with status not equal to\\n{{status}}" -> "shopping.template_214.click_send_msg_to_user" [label="activates", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user" -> "strategy:Navigate to the 'My Account'\\npage. In the order history\\ntable, find the first order\\nwho..." [label="uses_strategy", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user" -> "answer_format:Return the numeric total cost\\nvalue, without currency symbols." [label="formats_answer_as", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user:step:1:click" [label="STEP 1: click\\nintent=Navigate to the account page to view order\\nhistory.\\ntarget policy=Link with text 'My Account'.\\nvalue policy=N/A\\nraw old action=click('177')", fillcolor="#ecfdf5", color="#059669"];
+  "action:click" [label="ACTION TYPE\\nclick\\nSkeleton-level operation", fillcolor="#ede9fe", color="#7c3aed"];
+  "shopping.template_214.click_send_msg_to_user" -> "shopping.template_214.click_send_msg_to_user:step:1:click" [label="next_step / contains", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user:step:1:click" -> "action:click" [label="executes", color="#475569"];
+  "check:Page contains 'Recent Orders'\\ntable." [label="SUCCESS CHECK\\nPage contains 'Recent Orders' table.", fillcolor="#f0f9ff", color="#0284c7"];
+  "shopping.template_214.click_send_msg_to_user:step:1:click" -> "check:Page contains 'Recent Orders'\\ntable." [label="verifies", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user:step:2:send_msg_to_user" [label="STEP 2: send_msg_to_user\\nintent=Find the latest order with a status other\\nthan '{{status}}' and report its total cost.\\ntarget policy=In the 'Recent Orders' table, find the first\\nrow where the 'Status' column text is not\\n'{{status}}'. The target is the 'Order\\nTotal' cell in that row.\\nvalue policy=The text content of the target cell,\\nstripped of currency symbols.\\nraw old action=send_msg_to_user('$754.99')", fillcolor="#ecfdf5", color="#059669"];
+  "action:send_msg_to_user" [label="ACTION TYPE\\nsend_msg_to_user\\nSkeleton-level operation", fillcolor="#ede9fe", color="#7c3aed"];
+  "shopping.template_214.click_send_msg_to_user:step:1:click" -> "shopping.template_214.click_send_msg_to_user:step:2:send_msg_to_user" [label="next_step / contains", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user:step:2:send_msg_to_user" -> "action:send_msg_to_user" [label="executes", color="#475569"];
+  "check:Task is complete." [label="SUCCESS CHECK\\nTask is complete.", fillcolor="#f0f9ff", color="#0284c7"];
+  "shopping.template_214.click_send_msg_to_user:step:2:send_msg_to_user" -> "check:Task is complete." [label="verifies", color="#475569"];
+  "shopping.template_214.click_send_msg_to_user:step:2:send_msg_to_user" -> "outcome:success" [label="leads_to", color="#475569"];
+  "failure_recovery:avoid" [label="AVOID / RECOVERY\\nDo not select the first order in the list if\\nits status matches the excluded status (e.g.,\\n'Canceled').", fillcolor="#fee2e2", color="#dc2626"];
+  "shopping.template_214.click_send_msg_to_user" -> "failure_recovery:avoid" [label="avoid", color="#475569"];
+}

@@ -11,7 +11,9 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from advanced_vector_index import AdvancedIndexConfig, AdvancedProcedureVectorIndex
 from local_awm_full_demo import WorkflowEmbeddingIndex
+from procedural_reranker import ProceduralReranker
 
 
 TOKEN_RE = re.compile(r"[a-zA-Z0-9_]+")
@@ -231,11 +233,35 @@ class WebArenaProceduralMemory:
         self.root.mkdir(parents=True, exist_ok=True)
         self.db_path = self.root / "procedural_memory.sqlite3"
         self.fast_mode = os.environ.get("WEBARENA_FAST_MEMORY", "").lower() in {"1", "true", "yes"}
-        self.index = None if self.fast_mode else WorkflowEmbeddingIndex(self.root / "procedure_embeddings.json")
         self.candidate_k = candidate_k
+        self.vector_backend = os.environ.get("WEBARENA_VECTOR_BACKEND", "hnsw_sq8")
+        self.reranker_mode = os.environ.get("WEBARENA_RERANKER_MODE", "full")
+        self.index = None if self.fast_mode else AdvancedProcedureVectorIndex(
+            self.root / "advanced_vector_index",
+            AdvancedIndexConfig(
+                index_kind=self.vector_backend,
+                candidate_k=candidate_k,
+                hnsw_m=int(os.environ.get("WEBARENA_HNSW_M", "32")),
+                hnsw_ef_search=int(os.environ.get("WEBARENA_HNSW_EF_SEARCH", "64")),
+                hnsw_ef_construction=int(os.environ.get("WEBARENA_HNSW_EF_CONSTRUCTION", "80")),
+                ivf_nlist=int(os.environ.get("WEBARENA_IVF_NLIST", "64")),
+                ivf_nprobe=int(os.environ.get("WEBARENA_IVF_NPROBE", "8")),
+                pq_m=int(os.environ.get("WEBARENA_PQ_M", "16")),
+                pq_bits=int(os.environ.get("WEBARENA_PQ_BITS", "8")),
+                rotation_seed=int(os.environ.get("WEBARENA_ROTATION_SEED", "1337")),
+            ),
+        )
         self.conn = sqlite3.connect(self.db_path)
         self.conn.row_factory = sqlite3.Row
         self._init_db()
+        self.reranker = None
+        if self.reranker_mode.lower() != "none":
+            self.reranker = ProceduralReranker(
+                db_path=self.db_path,
+                mode=self.reranker_mode,
+                cross_encoder_model=os.environ.get("WEBARENA_RERANKER_MODEL", "BAAI/bge-reranker-large"),
+                train_limit=int(os.environ.get("WEBARENA_RERANKER_TRAIN_LIMIT", "1000")),
+            )
         self._sync_index()
 
     def close(self) -> None:
@@ -321,8 +347,12 @@ class WebArenaProceduralMemory:
             "SELECT name, compact_text FROM procedures ORDER BY created_at_ms, name"
         ).fetchall()
         names = [row["name"] for row in rows]
-        current_names = [entry.get("name") for entry in self.index.entries]
+        current_names = [entry.get("name") for entry in getattr(self.index, "entries", [])]
         if names != current_names:
+            if isinstance(self.index, AdvancedProcedureVectorIndex):
+                self.index.rebuild_from_rows(rows)
+                self.index.save()
+                return
             self.index.entries = [
                 {
                     "name": row["name"],
@@ -996,6 +1026,7 @@ Failed trace payload:
         signature = ui_signature(observation)
         query_family = canonical_family(goal_family(goal))
         candidates = []
+        candidate_pool = []
         raw_candidates = []
         rejected_candidates = []
         for item in retrieval_candidates:
@@ -1032,10 +1063,12 @@ Failed trace payload:
                 required_score = max(required_score, self.cross_family_min_score)
             scored = {
                 "name": row["name"],
+                "workflow_name": row["name"],
                 "score": round(score, 4),
                 "semantic_score": item.get("combined_score", 0),
                 "lexical_score": round(lexical, 4),
                 "activation_score": round(activation, 4),
+                "metadata_score": round(metadata, 4),
                 "outcome_score": round(outcome, 4),
                 "graph_score": round(graph, 4),
                 "family_score": round(family, 4),
@@ -1047,19 +1080,34 @@ Failed trace payload:
                 "accepted": score >= required_score,
             }
             raw_candidates.append(scored)
-            if score >= required_score:
-                candidates.append(
-                    {
-                        "procedure": procedure,
-                        **{k: v for k, v in scored.items() if k not in {"name", "accepted"}},
-                    }
-                )
+            candidate_pool.append(
+                {
+                    "procedure": procedure,
+                    "text_for_embedding": row["compact_text"],
+                    **scored,
+                }
+            )
+        if self.reranker is not None and candidate_pool:
+            ranked_pool = self.reranker.rerank(query, candidate_pool, top_k=len(candidate_pool))
+        else:
+            ranked_pool = sorted(candidate_pool, key=lambda item: item["score"], reverse=True)
+        for item in ranked_pool:
+            rank_score = float(item.get("rerank_score", item["score"]) or 0.0)
+            required_score = float(item.get("required_score", min_score) or min_score)
+            accepted = bool(item.get("accepted")) or rank_score >= required_score
+            public = {
+                k: v
+                for k, v in item.items()
+                if k not in {"procedure", "text_for_embedding", "accepted"}
+            }
+            if accepted and len(candidates) < top_k:
+                public["base_score"] = public.get("score", 0.0)
+                public["score"] = round(rank_score, 4)
+                candidates.append({"procedure": item["procedure"], **public})
             else:
-                rejected_candidates.append(scored)
-        candidates.sort(key=lambda item: item["score"], reverse=True)
-        candidates = candidates[:top_k]
+                rejected_candidates.append({**public, "accepted": False})
         raw_candidates.sort(key=lambda item: item["score"], reverse=True)
-        rejected_candidates.sort(key=lambda item: item["score"], reverse=True)
+        rejected_candidates.sort(key=lambda item: item.get("rerank_score", item.get("score", 0)), reverse=True)
         self.conn.execute(
             """
             INSERT INTO retrieval_events(
@@ -1228,7 +1276,9 @@ Failed trace payload:
             "retrieval_events": event_count,
             "embedding_backend": "sqlite_family_lexical_fast"
             if self.index is None
-            else self.index.backend,
+            else getattr(self.index, "actual_index_kind", getattr(self.index, "backend", "unknown")),
+            "vector_backend_requested": self.vector_backend,
+            "vector_index_stats": None if self.index is None else self.index.stats(),
             "fast_mode": self.fast_mode,
             "updated_at_ms": now_ms(),
         }

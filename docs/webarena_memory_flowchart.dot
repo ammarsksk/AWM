@@ -1,0 +1,256 @@
+digraph WebArenaMemoryFlow {
+  rankdir=TB;
+  graph [
+    labelloc=t,
+    label="Detailed WebArena Procedural Memory Architecture",
+    fontsize=20,
+    fontname="Helvetica",
+    bgcolor="white",
+    nodesep=0.45,
+    ranksep=0.55
+  ];
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica",
+    fontsize=10,
+    color="#334155",
+    fillcolor="#f8fafc",
+    margin="0.12,0.08"
+  ];
+  edge [
+    fontname="Helvetica",
+    fontsize=9,
+    color="#475569",
+    arrowsize=0.8
+  ];
+
+  subgraph cluster_runtime {
+    label="Runtime: One WebArena Task";
+    color="#93c5fd";
+    style="rounded";
+
+    user_query [
+      label="1. Task / User Query\nExample: find reviewers who mention X\nStored in WebArena config + runtime logs",
+      fillcolor="#dbeafe",
+      color="#2563eb"
+    ];
+
+    browsergym [
+      label="2. BrowserGym Environment\nStarts task, opens EC2-hosted website,\nreturns observation + reward at end",
+      fillcolor="#e0f2fe",
+      color="#0284c7"
+    ];
+
+    observation [
+      label="3. Observation Builder\nDOM + accessibility tree + visible text\n+ clickable element IDs + previous actions",
+      fillcolor="#ecfeff",
+      color="#0891b2"
+    ];
+
+    retrieval_request [
+      label="4. Retrieval Request\nInput = site + goal + compact observation\nGoal: find reusable procedure advice",
+      fillcolor="#fef3c7",
+      color="#d97706"
+    ];
+  }
+
+  subgraph cluster_memory_stores {
+    label="Memory Stores On Disk";
+    color="#86efac";
+    style="rounded";
+
+    sqlite_procedures [
+      label="SQLite: procedures table\nStores full procedure_json:\n- goal pattern\n- task family\n- action skeleton\n- step intents\n- target/value policies\n- success checks\n- answer format\n- success/failure counts",
+      fillcolor="#dcfce7",
+      color="#16a34a"
+    ];
+
+    sqlite_edges [
+      label="SQLite: procedure_edges table\nStores graph relationships:\nfamily -> procedure\nprocedure -> step\nstep -> action\nstep -> check\nprocedure -> strategy\nprocedure -> outcome",
+      fillcolor="#f0fdf4",
+      color="#15803d"
+    ];
+
+    sqlite_negative [
+      label="SQLite: negative_memory table\nStores failed patterns:\n- abstract failure\n- avoid rules\n- family\n- penalty\nUsed to warn/penalize similar tasks",
+      fillcolor="#fee2e2",
+      color="#dc2626"
+    ];
+
+    sqlite_retrieval [
+      label="SQLite: retrieval_events table\nStores retrieval logs:\n- selected memory\n- raw candidates\n- rejected candidates\n- per-feature scores\nUseful for debugging reuse rate",
+      fillcolor="#f1f5f9",
+      color="#475569"
+    ];
+
+    embeddings_json [
+      label="procedure_embeddings.json\nStores compact procedure embeddings\nand searchable entries when fast mode is off",
+      fillcolor="#ede9fe",
+      color="#7c3aed"
+    ];
+
+    result_logs [
+      label="results/webarena.* logs\nStores raw execution traces:\nexperiment.log, summary_info.json\nUsed for later abstraction/ingestion",
+      fillcolor="#fff7ed",
+      color="#ea580c"
+    ];
+  }
+
+  subgraph cluster_retrieval {
+    label="Retrieval + Scoring";
+    color="#c4b5fd";
+    style="rounded";
+
+    candidate_filter [
+      label="5. Candidate Filter\nLoad same-site procedures from SQLite\nOptionally filter by task family/template",
+      fillcolor="#fef3c7",
+      color="#d97706"
+    ];
+
+    semantic_search [
+      label="6. Semantic / Lexical Search\nEmbedding similarity if enabled\nFast mode: SQLite family + lexical overlap\nFind likely matching procedures",
+      fillcolor="#ede9fe",
+      color="#7c3aed"
+    ];
+
+    score_features [
+      label="7. Feature Scoring\nsemantic similarity\nlexical overlap\npage activation\nsite match\npast outcome\ngraph score\ntask-family match\naction-structure match\nnegative penalty",
+      fillcolor="#f5f3ff",
+      color="#6d28d9"
+    ];
+
+    graph_reasoning [
+      label="8. Graph Reasoning\nPositive edges boost trust:\nfamily, strategy, steps, checks, success\nFailure edges reduce trust",
+      fillcolor="#f0fdf4",
+      color="#16a34a"
+    ];
+
+    threshold [
+      label="9. Threshold Gate\nIf score >= required threshold,\nretrieve memory. Otherwise LLM works alone.",
+      shape=diamond,
+      fillcolor="#fefce8",
+      color="#ca8a04"
+    ];
+  }
+
+  subgraph cluster_prompt_action {
+    label="Prompting + Action Execution";
+    color="#f9a8d4";
+    style="rounded";
+
+    memory_card [
+      label="10A. Procedural Memory Card\nCompact advice injected into prompt:\nstrategy, steps, target policies,\nsuccess checks, answer format,\nnegative warnings",
+      fillcolor="#dcfce7",
+      color="#16a34a"
+    ];
+
+    no_memory [
+      label="10B. No Retrieved Memory\nPrompt contains only current task/page/action history\nGemini solves from scratch",
+      fillcolor="#fee2e2",
+      color="#dc2626"
+    ];
+
+    prompt [
+      label="11. Final LLM Prompt\nTask + observation + action space\n+ previous actions + memory card\nInstruction: use memory as policy checklist,\nnot old hardcoded element IDs",
+      fillcolor="#faf5ff",
+      color="#9333ea"
+    ];
+
+    llm [
+      label="12. Gemini 2.5 Pro\nChooses next high-level action:\nclick/fill/scroll/hover/select/send_msg_to_user",
+      fillcolor="#ede9fe",
+      color="#7c3aed"
+    ];
+
+    guard [
+      label="13. Guardrails\nParse action format\nRepair missing action blocks\nLoop detection\nMax steps/retries",
+      fillcolor="#f1f5f9",
+      color="#475569"
+    ];
+
+    playwright [
+      label="14. BrowserGym + Playwright\nExecutes action on live browser\nWaits/retries through navigation/page loading\nReturns next observation",
+      fillcolor="#e0f2fe",
+      color="#0284c7"
+    ];
+
+    done [
+      label="15. Done?",
+      shape=diamond,
+      fillcolor="#fefce8",
+      color="#ca8a04"
+    ];
+  }
+
+  subgraph cluster_storage {
+    label="Post-Task Learning";
+    color="#fdba74";
+    style="rounded";
+
+    evaluator [
+      label="16. WebArena Evaluation\nReads final browser state / answer\nOutputs reward, error, truncation,\nsteps, elapsed time",
+      fillcolor="#dbeafe",
+      color="#2563eb"
+    ];
+
+    raw_trace [
+      label="17. Raw Trace Saved\nexperiment.log captures thoughts/actions\nsummary_info.json captures metrics/result",
+      fillcolor="#fff7ed",
+      color="#ea580c"
+    ];
+
+    llm_abstraction [
+      label="18. LLM Abstraction\nRaw trace -> reusable procedure:\n- general strategy\n- abstract steps\n- target policies\n- value policies\n- success checks\n- answer format\nFailures -> avoid rules",
+      fillcolor="#faf5ff",
+      color="#9333ea"
+    ];
+
+    upsert_memory [
+      label="19. Upsert Memory\nSuccess: update/insert procedure\nFailure: insert negative memory\nUpdate success/failure stats",
+      fillcolor="#dcfce7",
+      color="#16a34a"
+    ];
+
+    update_graph [
+      label="20. Update Graph\nCreate edges:\nfamily contains procedure\nprocedure next_step step\nstep executes action\nstep verifies check\nprocedure leads_to outcome\nprocedure has_failure negative",
+      fillcolor="#f0fdf4",
+      color="#15803d"
+    ];
+
+    update_index [
+      label="21. Update Search Index\nCompact text is embedded and saved\nor fast-mode lexical cache is ready\nNext query can reuse this memory",
+      fillcolor="#ede9fe",
+      color="#7c3aed"
+    ];
+  }
+
+  user_query -> browsergym -> observation -> retrieval_request;
+  retrieval_request -> candidate_filter;
+  sqlite_procedures -> candidate_filter [label="load stored procedures"];
+  embeddings_json -> semantic_search [label="vectors if enabled"];
+  candidate_filter -> semantic_search -> score_features;
+  sqlite_edges -> graph_reasoning [label="graph edges"];
+  sqlite_negative -> score_features [label="penalties"];
+  graph_reasoning -> score_features;
+  score_features -> threshold;
+  threshold -> memory_card [label="pass"];
+  threshold -> no_memory [label="fail"];
+  memory_card -> prompt;
+  no_memory -> prompt;
+  prompt -> llm -> guard -> playwright -> done;
+  done -> observation [label="no, next step"];
+  done -> evaluator [label="yes"];
+  playwright -> browsergym [label="browser state changes"];
+  evaluator -> raw_trace;
+  result_logs -> llm_abstraction [label="read past run"];
+  raw_trace -> result_logs;
+  raw_trace -> llm_abstraction;
+  llm_abstraction -> upsert_memory;
+  upsert_memory -> sqlite_procedures;
+  upsert_memory -> sqlite_negative;
+  upsert_memory -> update_graph -> sqlite_edges;
+  upsert_memory -> sqlite_retrieval [style=dotted, label="retrieval already logged"];
+  update_graph -> update_index -> embeddings_json;
+  update_index -> retrieval_request [style=dashed, label="future task reuse"];
+}

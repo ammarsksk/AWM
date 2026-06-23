@@ -1,0 +1,141 @@
+% Paper-ready TikZ figure snippet.
+% Add these packages/libraries in your paper preamble:
+%
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta,backgrounds,calc,fit,positioning,shapes.geometric}
+%
+% Then paste this figure where needed.
+
+\begin{figure*}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[node distance=9mm and 9mm]
+
+\definecolor{inputblue}{RGB}{219,234,254}
+\definecolor{processblue}{RGB}{224,242,254}
+\definecolor{memorygreen}{RGB}{220,252,231}
+\definecolor{rankpurple}{RGB}{237,233,254}
+\definecolor{warnred}{RGB}{254,226,226}
+\definecolor{evalorange}{RGB}{255,237,213}
+\definecolor{linegray}{RGB}{71,85,105}
+\definecolor{textgray}{RGB}{30,41,59}
+
+\tikzset{
+  font=\sffamily,
+  >={Latex[length=2.2mm,width=1.6mm]},
+  module/.style={
+    rectangle,
+    rounded corners=3pt,
+    draw=#1!80!black,
+    fill=#1,
+    very thick,
+    align=center,
+    minimum width=32mm,
+    minimum height=12mm,
+    inner sep=5pt,
+    text=textgray,
+    font=\sffamily\small
+  },
+  store/.style={
+    cylinder,
+    shape border rotate=90,
+    aspect=0.22,
+    draw=#1!80!black,
+    fill=#1,
+    very thick,
+    align=center,
+    minimum width=31mm,
+    minimum height=14mm,
+    inner sep=4pt,
+    text=textgray,
+    font=\sffamily\small
+  },
+  decision/.style={
+    diamond,
+    draw=#1!80!black,
+    fill=#1,
+    very thick,
+    align=center,
+    aspect=2.05,
+    inner sep=1.5pt,
+    text=textgray,
+    font=\sffamily\small
+  },
+  group/.style={
+    rounded corners=6pt,
+    draw=#1!70!black,
+    fill=#1!18,
+    very thick,
+    inner sep=8pt
+  },
+  flow/.style={->, very thick, draw=linegray},
+  dataflow/.style={->, thick, draw=linegray, dashed},
+  feedback/.style={->, thick, draw=linegray, dotted},
+  label/.style={font=\sffamily\footnotesize, text=textgray}
+}
+
+\node[module=inputblue] (task) {User task\\\footnotesize natural-language goal};
+\node[module=processblue, right=of task] (env) {Web environment\\\footnotesize live WebArena site};
+\node[module=processblue, right=of env] (obs) {Observation encoder\\\footnotesize DOM, accessibility tree, action history};
+\node[module=rankpurple, right=of obs] (query) {Memory query\\\footnotesize goal + page state};
+
+\node[module=rankpurple, below=15mm of query] (retrieve) {Hybrid retrieval\\\footnotesize ANN search + metadata filter};
+\node[decision=evalorange, below=of retrieve] (gate) {Reusable\\memory found?};
+\node[module=rankpurple, below left=10mm and 8mm of gate] (memorycard) {Procedural advice\\\footnotesize compact policy card};
+\node[module=rankpurple, below right=10mm and 8mm of gate] (scratch) {No-memory policy\\\footnotesize solve from current page};
+\node[module=processblue, below=19mm of gate] (prompt) {Prompt composer\\\footnotesize task + page + retrieved advice};
+\node[module=processblue, below=of prompt] (llm) {LLM action policy\\\footnotesize choose click, fill, scroll, answer};
+\node[module=processblue, below=of llm] (act) {Browser action\\\footnotesize execute through BrowserGym/Playwright};
+\node[decision=evalorange, below=of act] (done) {Task\\finished?};
+\node[module=evalorange, below=of done] (eval) {WebArena evaluator\\\footnotesize reward, steps, time, errors};
+
+\node[store=memorygreen, above=17mm of retrieve] (procstore) {Procedural memory\\\footnotesize reusable workflows};
+\node[store=memorygreen, left=of procstore] (graphstore) {Relation graph\\\footnotesize families, steps, outcomes};
+\node[store=warnred, right=of procstore] (negstore) {Negative memory\\\footnotesize failures and avoid rules};
+\node[store=rankpurple, above=of procstore] (vecstore) {Vector index\\\footnotesize HNSW-SQ8 / PQ / binary};
+
+\node[module=evalorange, right=20mm of eval] (trace) {Execution trace\\\footnotesize observations, actions, result};
+\node[module=rankpurple, above=of trace] (abstract) {Procedure abstraction\\\footnotesize generalize trace into reusable policy};
+\node[module=memorygreen, above=of abstract] (update) {Memory consolidation\\\footnotesize update stores and retrieval index};
+
+\draw[flow] (task) -- (env);
+\draw[flow] (env) -- (obs);
+\draw[flow] (obs) -- (query);
+\draw[flow] (query) -- (retrieve);
+\draw[flow] (retrieve) -- (gate);
+\draw[flow] (gate) -- node[label, left] {yes} (memorycard);
+\draw[flow] (gate) -- node[label, right] {no} (scratch);
+\draw[flow] (memorycard) |- (prompt);
+\draw[flow] (scratch) |- (prompt);
+\draw[flow] (prompt) -- (llm);
+\draw[flow] (llm) -- (act);
+\draw[flow] (act) -- (done);
+\draw[flow] (done) -- node[label, right] {yes} (eval);
+\draw[feedback] (done.west) .. controls +(-22mm,0) and +(0,-8mm) .. node[label, left] {no: observe next state} (obs.south);
+
+\draw[dataflow] (vecstore) -- (retrieve);
+\draw[dataflow] (procstore) -- (retrieve);
+\draw[dataflow] (graphstore) -- (retrieve);
+\draw[dataflow] (negstore) -- (retrieve);
+
+\draw[flow] (eval) -- (trace);
+\draw[flow] (trace) -- (abstract);
+\draw[flow] (abstract) -- (update);
+\draw[dataflow] (update) -- (procstore);
+\draw[dataflow] (update) -- (graphstore);
+\draw[dataflow] (update) -- (negstore);
+\draw[dataflow] (update) -- (vecstore);
+\draw[feedback] (update.north) .. controls +(0,18mm) and +(0,16mm) .. node[label, right] {future tasks} (query.north);
+
+\begin{scope}[on background layer]
+  \node[group=processblue, fit=(task)(env)(obs)(query), label={[label]above:Online task execution}] {};
+  \node[group=rankpurple, fit=(retrieve)(gate)(memorycard)(scratch), label={[label]left:Memory selection}] {};
+  \node[group=memorygreen, fit=(graphstore)(procstore)(negstore)(vecstore), label={[label]above:Long-term procedural memory}] {};
+  \node[group=evalorange, fit=(eval)(trace)(abstract)(update), label={[label]right:Post-task learning}] {};
+\end{scope}
+
+\end{tikzpicture}%
+}
+\caption{Overview of the proposed graph-enhanced procedural memory system for WebArena agents. The agent converts each task and page state into a memory query, retrieves reusable procedures using a hybrid vector, metadata, graph, and negative-memory scorer, and injects the selected procedure as compact policy advice. After execution, traces are abstracted into reusable procedures or negative memories, updating the long-term memory graph and vector index for future tasks.}
+\label{fig:procedural-memory-system}
+\end{figure*}

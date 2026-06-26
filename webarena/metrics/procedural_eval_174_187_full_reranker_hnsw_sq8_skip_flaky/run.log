@@ -1,0 +1,1738 @@
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "full", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.174 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:54:44,701 - 3229912 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.174_3 in:
+  results/2026-06-25_14-54-44_GenericAgentArgs_on_webarena.174_3
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:54:46,629 - 3229912 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:54:46,629 - 3229912 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:54:58,166 - 3229912 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.174.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:54:58,167 - 3229912 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.174.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.174 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.174 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:55:18,566 - 3230411 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.174_3 in:
+  results/2026-06-25_14-55-18_GenericAgentArgs_on_webarena.174_3
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:55:20,546 - 3230411 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:55:20,547 - 3230411 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:55:32,260 - 3230411 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.174.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:55:32,268 - 3230411 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.174.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.174 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.175 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:55:47,153 - 3230831 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.175_17 in:
+  results/2026-06-25_14-55-46_GenericAgentArgs_on_webarena.175_17
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:55:49,298 - 3230831 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:55:49,324 - 3230831 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:56:00,877 - 3230831 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.175.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:56:00,878 - 3230831 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.175.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.175 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.175 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:56:21,705 - 3231363 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.175_6 in:
+  results/2026-06-25_14-56-21_GenericAgentArgs_on_webarena.175_6
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:56:24,230 - 3231363 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:56:24,230 - 3231363 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:56:35,806 - 3231363 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.175.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:56:35,807 - 3231363 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.175.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.175 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.176 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:56:44,980 - 3231883 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.176_12 in:
+  results/2026-06-25_14-56-44_GenericAgentArgs_on_webarena.176_12
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:56:47,187 - 3231883 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:56:47,188 - 3231883 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:56:58,704 - 3231883 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.176.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:56:58,706 - 3231883 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.176.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.176 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.176 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:57:20,241 - 3232541 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.176_2 in:
+  results/2026-06-25_14-57-20_GenericAgentArgs_on_webarena.176_2
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:57:22,328 - 3232541 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:57:22,328 - 3232541 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:57:34,018 - 3232541 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.176.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:57:34,019 - 3232541 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.176.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.176 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.177 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:57:44,055 - 3233004 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.177_18 in:
+  results/2026-06-25_14-57-43_GenericAgentArgs_on_webarena.177_18
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:57:46,190 - 3233004 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:57:46,198 - 3233004 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:57:57,805 - 3233004 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.177.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:57:57,807 - 3233004 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.177.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.177 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.177 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:58:21,317 - 3233504 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.177_12 in:
+  results/2026-06-25_14-58-21_GenericAgentArgs_on_webarena.177_12
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:58:23,414 - 3233504 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:58:23,414 - 3233504 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:58:35,120 - 3233504 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.177.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:58:35,122 - 3233504 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.177.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.177 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.178 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:58:45,325 - 3233934 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.178_5 in:
+  results/2026-06-25_14-58-45_GenericAgentArgs_on_webarena.178_5
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:58:48,023 - 3233934 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:58:48,023 - 3233934 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:58:59,747 - 3233934 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.178.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:58:59,748 - 3233934 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.178.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.178 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.178 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:59:20,714 - 3234461 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.178_19 in:
+  results/2026-06-25_14-59-20_GenericAgentArgs_on_webarena.178_19
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:59:22,559 - 3234461 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:59:22,559 - 3234461 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:59:34,464 - 3234461 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.178.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:59:34,465 - 3234461 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.178.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.178 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.179 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 14:59:43,652 - 3234876 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.179_26 in:
+  results/2026-06-25_14-59-43_GenericAgentArgs_on_webarena.179_26
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 14:59:46,212 - 3234876 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:59:46,212 - 3234876 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:59:57,782 - 3234876 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.179.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 14:59:57,784 - 3234876 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.179.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.179 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.179 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:00:17,336 - 3236291 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.179_22 in:
+  results/2026-06-25_15-00-17_GenericAgentArgs_on_webarena.179_22
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:00:19,063 - 3236291 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:00:19,063 - 3236291 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:00:30,793 - 3236291 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.179.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:00:30,794 - 3236291 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.179.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.179 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.180 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:00:42,197 - 3237032 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.180_17 in:
+  results/2026-06-25_15-00-42_GenericAgentArgs_on_webarena.180_17
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:00:44,021 - 3237032 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:00:44,021 - 3237032 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:00:55,451 - 3237032 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.180.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:00:55,453 - 3237032 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.180.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.180 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.180 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:01:17,868 - 3237646 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.180_2 in:
+  results/2026-06-25_15-01-17_GenericAgentArgs_on_webarena.180_2
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:01:20,147 - 3237646 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:01:20,147 - 3237646 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:01:31,680 - 3237646 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.180.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:01:31,681 - 3237646 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.180.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.180 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.181 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:01:44,804 - 3238165 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.181_17 in:
+  results/2026-06-25_15-01-44_GenericAgentArgs_on_webarena.181_17
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:01:46,853 - 3238165 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:01:46,853 - 3238165 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:01:58,496 - 3238165 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.181.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:01:58,498 - 3238165 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.181.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.181 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.181 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:02:21,145 - 3239019 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.181_31 in:
+  results/2026-06-25_15-02-20_GenericAgentArgs_on_webarena.181_31
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:02:23,075 - 3239019 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:02:23,075 - 3239019 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:02:34,690 - 3239019 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.181.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:02:34,692 - 3239019 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.181.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.181 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.182 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:02:44,230 - 3239516 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.182_26 in:
+  results/2026-06-25_15-02-43_GenericAgentArgs_on_webarena.182_26
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:02:45,986 - 3239516 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:02:45,986 - 3239516 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:02:57,536 - 3239516 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.182.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:02:57,537 - 3239516 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.182.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.182 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.182 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:03:17,961 - 3240028 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.182_17 in:
+  results/2026-06-25_15-03-17_GenericAgentArgs_on_webarena.182_17
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:03:19,707 - 3240028 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:03:19,707 - 3240028 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:03:31,334 - 3240028 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.182.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 184, in ui_login
+    page.get_by_label("Username or email").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+
+2026-06-25 15:03:31,336 - 3240028 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.182.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username or email")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.182 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.183 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:03:40,812 - 3240436 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.183_16 in:
+  results/2026-06-25_15-03-40_GenericAgentArgs_on_webarena.183_16
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:03:42,916 - 3240436 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:03:42,916 - 3240436 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:03:54,701 - 3240436 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.183.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:03:54,702 - 3240436 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.183.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.183 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.183 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:04:16,465 - 3240944 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.183_3 in:
+  results/2026-06-25_15-04-16_GenericAgentArgs_on_webarena.183_3
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:04:18,753 - 3240944 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:04:18,754 - 3240944 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:04:30,622 - 3240944 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.183.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:04:30,623 - 3240944 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.183.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.183 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.184 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:04:40,897 - 3241714 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.184_26 in:
+  results/2026-06-25_15-04-40_GenericAgentArgs_on_webarena.184_26
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:04:43,419 - 3241714 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:04:43,419 - 3241714 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:04:55,117 - 3241714 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.184.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:04:55,118 - 3241714 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.184.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.184 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.184 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:05:14,884 - 3242272 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.184_22 in:
+  results/2026-06-25_15-05-14_GenericAgentArgs_on_webarena.184_22
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:05:16,932 - 3242272 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:05:16,932 - 3242272 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:05:28,521 - 3242272 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.184.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:05:28,522 - 3242272 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.184.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.184 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.185 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:05:38,872 - 3242672 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.185_3 in:
+  results/2026-06-25_15-05-38_GenericAgentArgs_on_webarena.185_3
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:05:41,256 - 3242672 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:05:41,257 - 3242672 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:05:52,803 - 3242672 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.185.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:05:52,804 - 3242672 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.185.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.185 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.185 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:06:12,039 - 3243174 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.185_5 in:
+  results/2026-06-25_15-06-11_GenericAgentArgs_on_webarena.185_5
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:06:13,799 - 3243174 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:06:13,799 - 3243174 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:06:25,304 - 3243174 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.185.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:06:25,311 - 3243174 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.185.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.185 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.186 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:06:36,319 - 3243572 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.186_25 in:
+  results/2026-06-25_15-06-36_GenericAgentArgs_on_webarena.186_25
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:06:38,343 - 3243572 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:06:38,343 - 3243572 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:06:49,932 - 3243572 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.186.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:06:49,933 - 3243572 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.186.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.186 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.186 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:07:11,222 - 3244089 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.186_30 in:
+  results/2026-06-25_15-07-10_GenericAgentArgs_on_webarena.186_30
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:07:13,449 - 3244089 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:07:13,450 - 3244089 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:07:25,230 - 3244089 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.186.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:07:25,231 - 3244089 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.186.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.186 returncode=1
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.187 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:07:38,614 - 3244621 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.187_6 in:
+  results/2026-06-25_15-07-38_GenericAgentArgs_on_webarena.187_6
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:07:41,267 - 3244621 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:07:41,268 - 3244621 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:07:52,699 - 3244621 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.187.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:07:52,809 - 3244621 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.187.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+RETRY_TASK: webarena.187 attempt=2/2
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.187 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 15:08:14,943 - 3245378 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.187_12 in:
+  results/2026-06-25_15-08-14_GenericAgentArgs_on_webarena.187_12
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 15:08:16,987 - 3245378 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 15:08:16,987 - 3245378 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 15:08:28,476 - 3245378 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.187.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 411, in run
+    step_info.from_reset(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 216, in from_reset
+    self.obs, env_info = env.reset(seed=seed)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 145, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 341, in reset
+    task_goal, task_info = self.task.setup(page=self.page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 120, in setup
+    self.webarena_instance.ui_login(site=site, page=page)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/instance.py", line 202, in ui_login
+    page.get_by_label("Username").fill(username)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 15276, in fill
+    self._sync(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 208, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+
+2026-06-25 15:08:28,477 - 3245378 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.187.
+TimeoutError:
+Locator.fill: Timeout 10000ms exceeded.
+Call log:
+waiting for get_by_label("Username")
+
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_TASK_AFTER_RETRIES: webarena.187 returncode=1

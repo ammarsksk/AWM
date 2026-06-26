@@ -201,48 +201,65 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
             + "\n\n"
         )
         for tid in task_ids:
-            run_cmd = [
-                sys.executable,
-                "run.py",
-                "--task_name",
-                f"webarena.{tid}",
-                "--workflow_path",
-                f"workflow/{args.website}.txt",
-                "--model_name",
-                args.model_name,
-                "--headless",
-                str(args.headless),
-                "--max_steps",
-                str(args.max_steps),
-                "--llm_retries",
-                str(args.llm_retries),
-                "--pre_observation_delay",
-                str(args.pre_observation_delay),
-                "--extract_obs_retries",
-                str(args.extract_obs_retries),
-                "--procedural_memory_path",
-                memory_path,
-                "--procedural_site",
-                args.website,
-                "--procedural_top_k",
-                str(args.procedural_top_k),
-                "--procedural_min_score",
-                str(args.procedural_min_score),
-            ]
-            if args.browser_proxy:
-                run_cmd.extend(["--browser_proxy", args.browser_proxy])
-            log.write("COMMAND: " + " ".join(run_cmd) + "\n")
-            log.flush()
-            process = subprocess.run(
-                run_cmd,
-                cwd=ROOT,
-                env=env,
-                stdout=log,
-                stderr=subprocess.STDOUT,
-                check=False,
-            )
-            if process.returncode != 0:
-                return int(process.returncode)
+            process_returncode = 1
+            for attempt in range(args.task_retries + 1):
+                if attempt:
+                    log.write(
+                        f"RETRY_TASK: webarena.{tid} attempt={attempt + 1}/{args.task_retries + 1}\n"
+                    )
+                    log.flush()
+                    time.sleep(args.retry_sleep)
+                run_cmd = [
+                    sys.executable,
+                    "run.py",
+                    "--task_name",
+                    f"webarena.{tid}",
+                    "--workflow_path",
+                    f"workflow/{args.website}.txt",
+                    "--model_name",
+                    args.model_name,
+                    "--headless",
+                    str(args.headless),
+                    "--max_steps",
+                    str(args.max_steps),
+                    "--llm_retries",
+                    str(args.llm_retries),
+                    "--pre_observation_delay",
+                    str(args.pre_observation_delay),
+                    "--extract_obs_retries",
+                    str(args.extract_obs_retries),
+                    "--procedural_memory_path",
+                    memory_path,
+                    "--procedural_site",
+                    args.website,
+                    "--procedural_top_k",
+                    str(args.procedural_top_k),
+                    "--procedural_min_score",
+                    str(args.procedural_min_score),
+                ]
+                if args.browser_proxy:
+                    run_cmd.extend(["--browser_proxy", args.browser_proxy])
+                log.write("COMMAND: " + " ".join(run_cmd) + "\n")
+                log.flush()
+                process = subprocess.run(
+                    run_cmd,
+                    cwd=ROOT,
+                    env=env,
+                    stdout=log,
+                    stderr=subprocess.STDOUT,
+                    check=False,
+                )
+                process_returncode = int(process.returncode)
+                if process_returncode == 0:
+                    break
+            if process_returncode != 0:
+                log.write(
+                    f"SKIP_TASK_AFTER_RETRIES: webarena.{tid} returncode={process_returncode}\n"
+                )
+                log.flush()
+                if args.stop_on_error:
+                    return process_returncode
+                continue
 
             ingest_cmd = [
                 sys.executable,
@@ -267,7 +284,7 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
                 stderr=subprocess.STDOUT,
                 check=False,
             )
-            if process.returncode != 0:
+            if process.returncode != 0 and args.stop_on_error:
                 return int(process.returncode)
     return 0
 
@@ -296,6 +313,9 @@ def main() -> None:
     parser.add_argument("--procedural-min-score", type=float, default=0.42)
     parser.add_argument("--max-steps", type=int, default=30)
     parser.add_argument("--llm-retries", type=int, default=6)
+    parser.add_argument("--task-retries", type=int, default=2)
+    parser.add_argument("--retry-sleep", type=float, default=15.0)
+    parser.add_argument("--stop-on-error", action="store_true")
     parser.add_argument("--pre-observation-delay", type=float, default=1.25)
     parser.add_argument("--extract-obs-retries", type=int, default=8)
     parser.add_argument("--browser-proxy", default=None)

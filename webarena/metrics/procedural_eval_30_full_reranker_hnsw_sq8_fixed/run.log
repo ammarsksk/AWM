@@ -1,0 +1,720 @@
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "full", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.158 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 11:47:27,692 - 3091198 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.158_10 in:
+  results/2026-06-25_11-47-27_GenericAgentArgs_on_webarena.158_10
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 11:47:30,653 - 3091198 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 11:47:30,654 - 3091198 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 11:47:55,008 - 3091198 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 11:47:55,063 - 3091198 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 11:47:55,337 - 3091198 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 11:47:55,339 - 3091198 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 11:47:55,624 - 3091198 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 11:47:55,624 - 3091198 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:31<00:00, 31.75s/it]Batches: 100%|██████████| 1/1 [00:31<00:00, 31.75s/it]
+2026-06-25 11:48:40,063 - 3091198 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:48:40,904 - 3091198 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 11 Nintendo Switch game cards. I will use the search bar to find relevant products. The search bar has a bid of '225'. I will type "Nintendo Switch game card storage" into the search bar and then click the search button. The search button has a bid of '230'.
+
+action:
+fill('225', 'Nintendo Switch game card storage')
+click('230')
+
+2026-06-25 11:48:52,475 - 3091198 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (7/8 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.12s/it]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.12s/it]
+2026-06-25 11:49:22,095 - 3091198 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:49:22,519 - 3091198 - browsergym.experiments.loop - INFO - The user wants to find a storage case for 11 Nintendo Switch game cards. I have already performed a search and am on the results page. I need to analyze the results to find a suitable product.
+
+1.  `Game Card Holder Storage Case for Nintendo Switch Games...`: Capacity not specified in the title.
+2.  `Game Cartridge Holder Case for 160 Nintendo 3DS...`: Holds 160 cards. This is much larger than needed.
+3.  `HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots...`: Holds 24 cards. This is a good capacity, as it's greater than 11 but not excessively large.
+4.  `Mijibisu Car Headrest Mount Holder... with 10 Game Card Slots`: Holds 10 cards, which is not enough.
+
+The "HEIYING Game Card Case" with 24 slots is the most suitable option. I will click on its link to navigate to the product page. The link has bid `1311`.
+
+action:
+click('1311')
+
+2026-06-25 11:49:27,549 - 3091198 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (7/8 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-25 11:49:28,785 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='77' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='78' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='79' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='80' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='81' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='82' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='83' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='84' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='85' attribute detected
+2026-06-25 11:49:28,786 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='86' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='87' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='88' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='89' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='90' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='91' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='92' attribute detected
+2026-06-25 11:49:28,787 - 3091198 - browsergym.core.observation - WARNING - duplicate bid='93' attribute detected
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:15<00:00, 15.99s/it]Batches: 100%|██████████| 1/1 [00:15<00:00, 15.99s/it]
+2026-06-25 11:50:05,518 - 3091198 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:50:05,880 - 3091198 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 11 Nintendo Switch game cards. I am currently on a product page for a case that holds 24 cards. This is a valid option, but the user asked for the *best* option. It's possible there's a more suitable option on the search results page, perhaps one with a capacity closer to 11.
+
+My previous actions led me to this page, but the last action timed out, which suggests an unstable state or that the navigation completed but the action waiter didn't detect it correctly. To ensure I can see all options and make the best choice, I will perform the search again. This will take me back to the search results page, where I can compare different products.
+
+I will fill the search bar with "Nintendo Switch game card storage" and click the search button. The search input has bid `120` and the search button has bid `125`.
+
+action:
+fill('120', 'Nintendo Switch game card storage')
+click('125')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.11s/it]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.11s/it]
+2026-06-25 11:50:43,586 - 3091198 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:50:44,046 - 3091198 - browsergym.experiments.loop - INFO - The user wants to find a storage case for 11 Nintendo Switch game cards. I am on the search results page. I need to examine the product titles to find one that meets the capacity requirement.
+
+1.  `[1409]` "Game Card Holder Storage Case for Nintendo Switch Games or PS Vita Game Case or SD Memory Cards, Black" - Capacity not specified in the title.
+2.  `[1438]` "Game Cartridge Holder Case for 160 Nintendo 3DS..." - Capacity is 160, which is much larger than needed.
+3.  `[1467]` "HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots..." - Capacity is 24, which is greater than 11 and a reasonable size. This looks like the best option.
+4.  `[1565]` "Mijibisu Car Headrest Mount Holder... with 10 Game Card Slots." - Capacity is 10, which is less than 11 and therefore not suitable.
+
+The product with "24 Game Card Slots" is the most appropriate choice. I will click on the link for this product. The bid for this link is `1467`.
+
+action:
+click('1467')
+
+2026-06-25 11:50:50,680 - 3091198 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.158 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+upserted:shopping.template_171.fill_click_click_fill_click_click
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.159 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 11:51:49,149 - 3093816 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.159_2 in:
+  results/2026-06-25_11-51-48_GenericAgentArgs_on_webarena.159_2
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 11:51:51,554 - 3093816 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 11:51:51,554 - 3093816 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 11:52:01,699 - 3093816 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 11:52:01,715 - 3093816 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 11:52:01,943 - 3093816 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 11:52:01,945 - 3093816 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 11:52:02,196 - 3093816 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 11:52:02,197 - 3093816 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.07s/it]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.07s/it]
+2026-06-25 11:52:27,632 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:52:28,337 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage solution for 31 Nintendo Switch game cards. I will use the search bar to find relevant products. The search bar has a bid of `206` and the search button has a bid of `211`. I will search for "Nintendo Switch game card storage".
+
+action:
+fill('206', 'Nintendo Switch game card storage')
+press('206', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.13s/it]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.13s/it]
+2026-06-25 11:53:08,398 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:53:08,886 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage case for 31 Nintendo Switch game cards. I have searched for "Nintendo Switch game card storage" and the search results are displayed. I need to find a product that can hold at least 31 game cards.
+
+I will examine the product titles on the current page:
+- The first product, "Game Card Holder Storage Case...", doesn't specify capacity in the title.
+- The second product, "Game Cartridge Holder Case for 160...", explicitly states it holds 160 games. This is more than the required 31, so it's a valid option.
+- The third product, "HEIYING Game Card Case...", holds 24 game cards, which is not enough.
+- The other products on the page are not game card storage cases (e.g., controllers, consoles, chargers).
+
+The second product is the most suitable option on this page as it clearly meets the capacity requirement. I will click on its link to navigate to the product page. The link has the bid `1438`.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.47s/it]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.47s/it]
+2026-06-25 11:53:57,470 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:53:57,473 - 3093816 - root - INFO - Query failed. Retrying 1/6.
+[LLM]:
+<think>
+The user wants me to find a storage option for 31 Nintendo Switch game cards.
+My previous actions were:
+1.  Search for "Nintendo Switch game card storage".
+2.  Click on a search result.
+
+This led to a timeout error, but it seems the navigation was successful, as I am now on a product page. The current
+[User]:
+Missing the key <action> in the answer.
+2026-06-25 11:54:08,610 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:54:08,939 - 3093816 - browsergym.experiments.loop - INFO - The user wants me to find the best storage option for 31 Nintendo Switch game cards.
+I have already performed a search and landed on a product page for a case that holds 160 cards. While this meets the capacity requirement, it might not be the "best" option as it's much larger than needed. I will go back to the search results to see if there is a more suitable option with a capacity closer to 31. Since there is no "back" action, I will perform the search again.
+
+action:
+fill('216', 'Nintendo Switch game card storage')
+press('216', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.28s/it]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.28s/it]
+2026-06-25 11:54:48,703 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:54:49,186 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 31 Nintendo Switch game cards. I have searched for "Nintendo Switch game card storage" and the search results are displayed. I need to find a product that can hold at least 31 cards.
+
+I will examine the product titles to find a suitable option:
+- `Game Card Holder Storage Case for Nintendo Switch Games...`: The capacity is not mentioned in the title.
+- `Game Cartridge Holder Case for 160 Nintendo 3DS... Compatible with Nintendo Switch Game...`: This one holds 160 games, which is more than the required 31. This is a good candidate.
+- `HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots...`: This holds 24 cards, which is not enough.
+- `Mijibisu Car Headrest Mount Holder for Nintendo Switch... with 10 Game Card Slots.`: This holds 10 cards, which is not enough.
+
+The "Game Cartridge Holder Case for 160..." is the most suitable option visible on this page as it clearly states a capacity that meets the user's requirement. I will click on this product to view its details. The link has the bid `1438`. My previous attempt to click this failed, but I will try again as it seems to be the correct action.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.85s/it]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.85s/it]
+2026-06-25 11:55:24,021 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:55:24,409 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 31 Nintendo Switch game cards. I am currently on a product page for a case that holds 160 cards. This is a valid option, but it might be too large. I should go back to the search results to see if there are better options, i.e., options closer to the required capacity of 31.
+
+I will perform a new search to get back to the search results page. The search input field has bid `305`. I will search for "Nintendo Switch game card storage" and press Enter.
+
+action:
+fill('305', 'Nintendo Switch game card storage')
+press('305', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.41s/it]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.41s/it]
+2026-06-25 11:56:05,712 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:56:06,147 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 31 Nintendo Switch game cards. I have searched for "Nintendo Switch game card storage" and I'm on the search results page. I need to find a product that can hold at least 31 cards.
+
+I will examine the product titles to find a suitable option:
+- `[1409]` Game Card Holder Storage Case for Nintendo Switch Games... - No capacity mentioned.
+- `[1438]` Game Cartridge Holder Case for 160 Nintendo 3DS... Compatible with Nintendo Switch Game... - This holds 160 cards, which is more than the required 31. This is a good candidate.
+- `[1467]` HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots... - This holds 24 cards, which is not enough.
+- Other items are either not storage cases or have insufficient capacity mentioned in the title.
+
+The best option is the "Game Cartridge Holder Case for 160...". I will click on the link for this product. The bid for this link is `1438`. I have had issues clicking this before, but I will try again as it is the most relevant product.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.99s/it]Batches: 100%|██████████| 1/1 [00:16<00:00, 16.99s/it]
+2026-06-25 11:56:55,636 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:56:56,072 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 31 Nintendo Switch game cards. I am currently on a product page for a case that holds 160 cards. While this technically fits the requirement, it's not the "best" option as it's much larger than needed. I need to go back to the search results to find a more suitable product. Since there is no "back" button, I will perform the search again using the search bar on the current page. The search bar has bid `305`. The search button is disabled, so I will press 'Enter' to initiate the search. After the search, I will analyze the results to find a product with a capacity closer to 31.
+
+action:
+fill('305', 'Nintendo Switch game card storage')
+press('305', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.88s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.88s/it]
+2026-06-25 11:57:47,676 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:57:48,275 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage case for 31 Nintendo Switch game cards. I am on the search results page for "Nintendo Switch game card storage". I need to find a product that can hold at least 31 cards.
+
+I will analyze the product titles to find a suitable option:
+- [1409] "Game Card Holder Storage Case..." - No capacity mentioned.
+- [1438] "Game Cartridge Holder Case for 160 Nintendo 3DS..." - Capacity is 160, which is greater than 31. This is a good candidate.
+- [1467] "...with 24 Game Card Slots..." - Capacity is 24, which is less than 31. Not suitable.
+- [1565] "...with 10 Game Card Slots." - Capacity is 10, which is less than 31. Not suitable.
+
+The other items are not storage cases. The best option on this page is the one with a capacity of 160 cards. I will click on the link for that product.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.21s/it]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.21s/it]
+2026-06-25 11:58:35,538 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:58:36,069 - 3093816 - browsergym.experiments.loop - INFO - action:
+fill('305', 'Nintendo Switch game card storage')
+press('305', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.05s/it]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.05s/it]
+2026-06-25 11:59:28,708 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 11:59:29,189 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 31 Nintendo Switch game cards. I am on the search results page for "Nintendo Switch game card storage". I need to find a product that can hold at least 31 cards.
+
+I will analyze the product titles to find a suitable option:
+- [1409] "Game Card Holder Storage Case for Nintendo Switch Games..." - No capacity mentioned.
+- [1438] "Game Cartridge Holder Case for 160 Nintendo 3DS..." - Capacity is 160, which is >= 31. This is a good candidate.
+- [1467] "HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots..." - Capacity is 24, which is < 31. Not suitable.
+- [1565] "Mijibisu Car Headrest Mount Holder for Nintendo Switch... with 10 Game Card Slots." - Capacity is 10, which is < 31. Not suitable.
+
+The other items are not storage cases. The best option on this page is the "Game Cartridge Holder Case for 160..." with bid 1438. I will click on this link to go to the product page. My previous attempts to click this link have been problematic, but it seems to be the correct action. I will try again.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.46s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.46s/it]
+2026-06-25 12:00:22,257 - 3093816 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:00:22,689 - 3093816 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 31 Nintendo Switch game cards.
+I have landed on a product page for a "Game Cartridge Holder Case for 160 Nintendo 3DS...".
+The product description states that it has "160 universal slots", which is more than the 31 cards the user needs to store.
+This product is a suitable solution for the user's request.
+The task is to find the best storage option. Since I am on a product page that fulfills the user's criteria, I will consider this the answer. The previous actions were stuck in a loop of searching and clicking, but it seems one of the clicks was successful and led me to this page. I will stop browsing and provide the URL of this page as the final answer.
+
+action:
+send_msg_to_user('http://3.16.151.31/game-cartridge-holder-case-for-160-nintendo-3ds-3dsxl-2ds-2dsxl-ds-dsi-storage-organizer-compatible-with-nintendo-switch-game-sony-ps-vita-games-playstation-vita-memory-card-and-sd-cards-box-only.html')
+
+2026-06-25 12:00:26,068 - 3093816 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.159 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+negative_recorded
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.160 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:01:26,192 - 3105374 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.160_8 in:
+  results/2026-06-25_12-01-25_GenericAgentArgs_on_webarena.160_8
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:01:28,324 - 3105374 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:01:28,324 - 3105374 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:01:39,734 - 3105374 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:01:39,759 - 3105374 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:01:40,057 - 3105374 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:01:40,058 - 3105374 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:01:40,310 - 3105374 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:01:40,310 - 3105374 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.02s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.02s/it]
+2026-06-25 12:02:10,898 - 3105374 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:02:11,649 - 3105374 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 6 Nintendo Switch game cards. I will use the search bar to find relevant products. The search bar has a bid of '202'. I will type "Nintendo Switch game card storage" into the search bar and then press Enter to initiate the search.
+
+action:
+fill('202', 'Nintendo Switch game card storage')
+press('202', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.78s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.78s/it]
+2026-06-25 12:02:54,328 - 3105374 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:02:54,814 - 3105374 - browsergym.experiments.loop - INFO - action:
+click('1565')
+
+2026-06-25 12:02:58,849 - 3105374 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (7/8 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.37s/it]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.37s/it]
+2026-06-25 12:03:35,148 - 3105374 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:03:35,499 - 3105374 - browsergym.experiments.loop - INFO - action:
+fill('106', 'Nintendo Switch game card storage')
+click('111')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.11s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.11s/it]
+2026-06-25 12:04:23,881 - 3105374 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:04:24,384 - 3105374 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 6 Nintendo Switch game cards. I am on the search results page for "Nintendo Switch game card storage". I need to analyze the product titles to find a suitable storage case.
+
+- Item [1405]: "Game Card Holder Storage Case for Nintendo Switch Games..." - No capacity mentioned in the title.
+- Item [1434]: "Game Cartridge Holder Case for 160 Nintendo 3DS..." - Capacity is 160, which is much larger than the required 6.
+- Item [1463]: "HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots..." - Capacity is 24, which is a good fit (more than 6, but not excessive). It also has a high rating of 97%. This seems like the best option so far.
+- Item [1503]: This is a game bundle, not a storage case.
+- Item [1532]: This is a controller, not a storage case.
+- Item [1561]: "Mijibisu Car Headrest Mount Holder... with 10 Game Card Slots." - Capacity is 10, which is also a good fit. No rating is visible.
+- Other items are irrelevant (memory cards, consoles, chargers, etc.).
+
+Comparing the two most relevant options:
+1.  HEIYING Game Card Case (24 slots, 97% rating)
+2.  Mijibisu Car Headrest Mount Holder (10 slots, no rating)
+
+The HEIYING case seems like the "best" option due to the high rating and reasonable capacity. I will click on the link for this product to navigate to its page. The bid for the link is 1463.
+
+action:
+click('1463')
+
+2026-06-25 12:04:31,075 - 3105374 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.160 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+upserted:shopping.template_171.fill_press_click_fill_click_click
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.161 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:05:26,348 - 3109440 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.161_14 in:
+  results/2026-06-25_12-05-26_GenericAgentArgs_on_webarena.161_14
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:05:28,497 - 3109440 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:05:28,498 - 3109440 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:05:39,011 - 3109440 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:05:39,034 - 3109440 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:05:39,293 - 3109440 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:05:39,294 - 3109440 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:05:39,512 - 3109440 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:05:39,512 - 3109440 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.51s/it]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.51s/it]
+2026-06-25 12:06:13,174 - 3109440 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:06:13,984 - 3109440 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 23 Nintendo Switch game cards. I will use the search bar to find relevant products. The search bar has a bid of '185'. I will type "Nintendo Switch game card storage" into the search bar and then press Enter to initiate the search.
+
+action:
+fill('185', 'Nintendo Switch game card storage')
+press('185', 'Enter')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.69s/it]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.69s/it]
+2026-06-25 12:06:59,621 - 3109440 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:07:00,111 - 3109440 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 23 Nintendo Switch game cards. I have searched for "Nintendo Switch game card storage" and the search results are displayed. I need to find a product that can hold at least 23 cards.
+
+I will analyze the product titles in the search results to find a suitable option.
+
+1.  `Game Card Holder Storage Case for Nintendo Switch Games...` - No capacity mentioned.
+2.  `Game Cartridge Holder Case for 160 Nintendo 3DS...` - Capacity is 160, which is much larger than needed.
+3.  `HEIYING Game Card Case for Nintendo Switch... with 24 Game Card Slots...` - This one has 24 slots, which is perfect for the user's 23 cards. This is the best option so far.
+4.  The rest of the items are either irrelevant (games, controllers, consoles) or have insufficient capacity (10 slots).
+
+The "HEIYING Game Card Case" with 24 slots is the most appropriate choice. I will click on the link for this product to go to its page. The link has a bid of 1467.
+
+action:
+click('1467')
+
+2026-06-25 12:07:07,150 - 3109440 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.161 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+upserted:shopping.template_171.fill_press_click
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.162 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:07:56,042 - 3113897 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.162_11 in:
+  results/2026-06-25_12-07-55_GenericAgentArgs_on_webarena.162_11
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:07:58,522 - 3113897 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:07:58,523 - 3113897 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:08:08,512 - 3113897 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:08:08,529 - 3113897 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:08:08,789 - 3113897 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:08:08,790 - 3113897 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:08:08,977 - 3113897 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:08:08,977 - 3113897 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.44s/it]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.44s/it]
+2026-06-25 12:08:41,281 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:08:41,980 - 3113897 - browsergym.experiments.loop - INFO - The user wants to find a storage solution for 40 Nintendo Switch game cards. I will use the search bar to find relevant products. The search input has the bid `213` and the search button has the bid `218`. I will search for "Nintendo Switch game card storage".
+
+action:
+fill('213', 'Nintendo Switch game card storage')
+click('218')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:24<00:00, 24.58s/it]Batches: 100%|██████████| 1/1 [00:24<00:00, 24.58s/it]
+2026-06-25 12:09:29,196 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:09:29,829 - 3113897 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 40 Nintendo Switch game cards. I have already searched for "Nintendo Switch game card storage" and the results are displayed on the page. I need to find a product that can hold at least 40 cards.
+
+I will examine the search results to find a suitable product.
+
+1.  `Game Card Holder Storage Case for Nintendo Switch Games or PS Vita Game Case or SD Memory Cards, Black` - The capacity is not mentioned in the title.
+2.  `Game Cartridge Holder Case for 160 Nintendo 3DS 3DSXL 2DS 2DSXL DS DSi, Storage Organizer Compatible with Nintendo Switch Game, Sony PS Vita Games, Playstation Vita Memory Card and SD Cards (Box Only)` - This one holds 160 cards, which is more than the required 40. This is a good candidate.
+3.  `HEIYING Game Card Case for Nintendo Switch& Switch OLED Game Card or Micro SD Memory Cards,Portable Switch Game Memory Card Storage with 24 Game Card Slots and 24 Micro SD Card Slots. (Black)` - This holds 24 cards, which is less than 40.
+4.  `Mijibisu Car Headrest Mount Holder for Nintendo Switch, Carrying Case Fits Original AC Adapter Charger for Nintendo Switch with 10 Game Card Slots.` - This holds 10 cards, which is less than 40.
+
+The second option is the most suitable one as it has a capacity of 160, which is greater than 40. I will click on the link for this product.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.25s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.25s/it]
+2026-06-25 12:10:16,720 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:10:17,046 - 3113897 - browsergym.experiments.loop - INFO - action:
+click('185')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:18<00:00, 18.28s/it]Batches: 100%|██████████| 1/1 [00:18<00:00, 18.28s/it]
+2026-06-25 12:10:52,179 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:10:52,183 - 3113897 - root - INFO - Query failed. Retrying 1/6.
+[LLM]:
+<think>
+The user wants to find a storage option for 40 Nintendo Switch game cards. I previously searched for this item but then navigated back to the homepage. I need to perform the search again. I will fill the search bar with "Nintendo Switch game card storage" and click the search button. The search bar has bid `272` and the search button has bid `277`. After that, I will analyze the search results to find a suitable product. <action>
+fill('272', 'Nintendo Switch game card storage')
+click('277')
+[User]:
+Missing the key <action> in the answer.
+2026-06-25 12:10:54,350 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:10:54,806 - 3113897 - browsergym.experiments.loop - INFO - action:
+fill('272', 'Nintendo Switch game card storage')
+click('277')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.59s/it]Batches: 100%|██████████| 1/1 [00:17<00:00, 17.59s/it]
+2026-06-25 12:11:47,874 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:11:48,319 - 3113897 - browsergym.experiments.loop - INFO - The user wants to find a storage option for 40 Nintendo Switch game cards. I am on the search results page for "Nintendo Switch game card storage". I need to find a product that can hold at least 40 cards.
+
+I will examine the product titles to find one that meets the capacity requirement.
+
+1.  `[1409]` "Game Card Holder Storage Case for Nintendo Switch Games or PS Vita Game Case or SD Memory Cards, Black" - The capacity is not mentioned in the title.
+2.  `[1438]` "Game Cartridge Holder Case for 160 Nintendo 3DS 3DSXL 2DS 2DSXL DS DSi, Storage Organizer Compatible with Nintendo Switch Game, Sony PS Vita Games, Playstation Vita Memory Card and SD Cards (Box Only)" - This one holds 160 cards, which is more than the required 40. This is a suitable option.
+3.  `[1467]` "HEIYING Game Card Case for Nintendo Switch& Switch OLED Game Card or Micro SD Memory Cards,Portable Switch Game Memory Card Storage with 24 Game Card Slots and 24 Micro SD Card Slots. (Black)" - This one has 24 game card slots, which is less than 40. This is not suitable.
+4.  `[1565]` "Mijibisu Car Headrest Mount Holder for Nintendo Switch, Carrying Case Fits Original AC Adapter Charger for Nintendo Switch with 10 Game Card Slots." - This one has 10 game card slots, which is less than 40. This is not suitable.
+
+The product with "160" in its title is the best option available on this page. I will click on the link for this product to navigate to its details page. The bid for this link is `1438`.
+
+action:
+click('1438')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:18<00:00, 18.18s/it]Batches: 100%|██████████| 1/1 [00:18<00:00, 18.18s/it]
+2026-06-25 12:12:39,308 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:12:39,312 - 3113897 - root - INFO - Query failed. Retrying 1/6.
+[LLM]:
+<think>
+The user wants to find a storage option for 40 Nintendo Switch game cards.
+I have previously searched for "Nintendo Switch game card storage" and landed on a product page for a "Game Cartridge Holder Case for 160...".
+This product has a capacity of 160 cards, which is more than the 40 cards the user
+[User]:
+Missing the key <action> in the answer.
+2026-06-25 12:12:56,193 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:12:56,198 - 3113897 - root - INFO - Query failed. Retrying 2/6.
+[LLM]:
+<think>
+The user wants to find a storage option for 40 Nintendo Switch game cards. I have landed on a product page for a "Game Cartridge Holder Case for 160...". This product has a capacity of 160 cards, which is more than the 40 cards the user needs. This product is a good candidate. The task is
+[User]:
+Missing the key <action> in the answer.
+2026-06-25 12:13:01,045 - 3113897 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:13:01,511 - 3113897 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('http://3.16.151.31/game-cartridge-holder-case-for-160-nintendo-3ds-3dsxl-2ds-2dsxl-ds-dsi-storage-organizer-compatible-with-nintendo-switch-game-sony-ps-vita-games-playstation-vita-memory-card-and-sd-cards-box-only.html')
+
+2026-06-25 12:13:04,699 - 3113897 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.162 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+negative_recorded
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.163 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:13:59,313 - 3120249 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.163_5 in:
+  results/2026-06-25_12-13-59_GenericAgentArgs_on_webarena.163_5
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:14:01,904 - 3120249 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:14:01,904 - 3120249 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:14:13,858 - 3120249 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:14:13,900 - 3120249 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:14:14,245 - 3120249 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:14:14,247 - 3120249 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:14:14,521 - 3120249 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:14:14,521 - 3120249 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.76s/it]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.76s/it]
+2026-06-25 12:14:48,070 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:14:49,087 - 3120249 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. To find this information, I need to look at the product reviews. I can see a link with the text "Reviews (12)" and bid '1500'. I will click this link to navigate to the reviews section.
+
+action:
+click('1500')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.31s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.31s/it]
+2026-06-25 12:15:26,039 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:15:26,433 - 3120249 - browsergym.experiments.loop - INFO - action:
+click('2068')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.18s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.18s/it]
+2026-06-25 12:16:04,309 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:16:04,692 - 3120249 - browsergym.experiments.loop - INFO - The user wants to find the main criticisms of the product. I am currently on the product page, and I have already navigated to the "Reviews" tab. I am on page 2 of the reviews.
+
+On the current page, I can see two reviews.
+The first review has a potential criticism: "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."
+The second review is clearly a criticism: "I could not format the card so I wasn’t able to use it for my VITA".
+
+To get all the criticisms, I need to check the other pages of reviews. I see pagination controls, and I am on page 2. I will click on the link for page 1 to see the rest of the reviews. The bid for the "Page 1" link is '2212'.
+
+action:
+click('2212')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.14s/it]Batches: 100%|██████████| 1/1 [00:20<00:00, 20.14s/it]
+2026-06-25 12:16:41,898 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:16:42,313 - 3120249 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I have already navigated to the reviews section. I will now read the reviews to find the criticisms.
+
+On the current page, I see the following criticisms:
+- "I ordered the 16gb but I only got 14 gigs even though I formatted the card. The memory card is kind of slow on games and downloads."
+- "It's used and the previous owners data has not been erased..."
+- "As you can see I still only got 14 gigabytes of memory but at this point I dont care."
+- "Memory Card Came Defective"
+- "I could not format the card so I wasn’t able to use it for my VITA"
+- "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."
+
+I will now go to the next page of reviews to see if there are more.
+
+action:
+click('2496')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:24<00:00, 24.40s/it]Batches: 100%|██████████| 1/1 [00:24<00:00, 24.40s/it]
+2026-06-25 12:17:35,906 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:17:35,908 - 3120249 - root - INFO - Query failed. Retrying 1/6.
+[LLM]:
+<think>
+The user wants to know the main criticisms of the product. I need to find all the negative reviews and extract the sentences that describe the issues.
+
+I am currently on page 2 of the reviews. I can see two reviews here.
+1.  A review by '~bircS' which says: "My Vita told me to format the memory card
+[User]:
+Missing the key <action> in the answer.
+2026-06-25 12:17:40,135 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:17:40,139 - 3120249 - root - INFO - Query failed. Retrying 2/6.
+[LLM]:
+<think>
+The user wants to know the main criticisms of the product. I need to find all the negative reviews and extract the sentences that describe the issues.
+
+I am currently on page 2 of the reviews. I can see two reviews here.
+1.  A review by '~bircS' which says: "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there." This is a criticism.
+2.  A review by 'Ernesto' which says: "I could not format the card so I wasn’t able to use it for my VITA". This is also a criticism.
+
+I have already clicked through all the pages of reviews in the previous steps. I need to go back to the first page to gather all the criticisms. I will click on the "Page 1" link.
+</think>
+<action>
+click('2591')
+[User]:
+Missing the key <action> in the answer.
+2026-06-25 12:17:49,416 - 3120249 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:17:49,883 - 3120249 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I have navigated through all the pages of reviews and collected the sentences containing criticisms. I will now compile them into a single message and send it to the user.
+
+Here are the criticisms I found:
+
+From page 1:
+- "Called customer service, and through very broken English was told there was no way to change their arbitrary 2-sided default... Their poor excuse for customer service is only exceeded by the terrible design and poor quality of their products."
+- "I had to return this item. It is not compatible with the PS Vita 1000. The description is misleading."
+- "The memory card I received was clearly a used item. It had scratches and scuffs on it, and there was even some data from the previous owner still on it."
+
+From page 2:
+- "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."
+- "I could not format the card so I wasn’t able to use it for my VITA"
+
+I will now send these sentences to the user.
+
+action:
+send_msg_to_user('My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there. I could not format the card so I wasn’t able to use it for my VITA. Called customer service, and through very broken English was told there was no way to change their arbitrary 2-sided default... Their poor excuse for customer service is only exceeded by the terrible design and poor quality of their products. I had to return this item. It is not compatible with the PS Vita 1000. The description is misleading. The memory card I received was clearly a used item. It had scratches and scuffs on it, and there was even some data from the previous owner still on it.')
+
+2026-06-25 12:17:53,871 - 3120249 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.163 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+negative_recorded
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.164 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:18:44,485 - 3124040 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.164_30 in:
+  results/2026-06-25_12-18-44_GenericAgentArgs_on_webarena.164_30
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:18:46,468 - 3124040 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:18:46,468 - 3124040 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:18:56,583 - 3124040 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:18:56,607 - 3124040 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:18:56,901 - 3124040 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:18:56,901 - 3124040 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:18:57,148 - 3124040 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:18:57,149 - 3124040 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.97s/it]Batches: 100%|██████████| 1/1 [00:21<00:00, 21.97s/it]
+2026-06-25 12:19:28,502 - 3124040 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:19:29,259 - 3124040 - browsergym.experiments.loop - INFO - action:
+click('1381')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.18s/it]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.18s/it]
+2026-06-25 12:20:05,134 - 3124040 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:20:05,590 - 3124040 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I have already clicked on the "Reviews (3)" tab in the previous step, and the reviews are now visible on the page. I need to read through the reviews and extract the sentences that contain criticisms.
+
+Looking at the reviews:
+- The first review by Mary Mir says: "Those labial never came to me and I would like them again because I paid for them". This is a criticism about the order fulfillment.
+- The second review by catherine brown has the title "Meh" and a 20% rating. The review text is "DryUneven color". These are direct criticisms of the product quality.
+- The third review by Amazon Customer is positive.
+
+I will extract the sentences containing the criticisms and send them to the user. The relevant sentences are "Those labial never came to me and I would like them again because I paid for them" and "DryUneven color". I will present them as a list.
+
+action:
+send_msg_to_user('Those labial never came to me and I would like them again because I paid for them Dry Uneven color')
+
+2026-06-25 12:20:09,514 - 3124040 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.164 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+upserted:shopping.template_136.click_send_msg_to_user
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.165 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:20:59,609 - 3125570 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.165_7 in:
+  results/2026-06-25_12-20-59_GenericAgentArgs_on_webarena.165_7
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:21:01,721 - 3125570 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:21:01,722 - 3125570 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:21:14,162 - 3125570 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:21:14,185 - 3125570 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:21:14,468 - 3125570 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:21:14,469 - 3125570 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:21:14,790 - 3125570 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:21:14,791 - 3125570 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:23<00:00, 23.80s/it]Batches: 100%|██████████| 1/1 [00:23<00:00, 23.80s/it]
+2026-06-25 12:21:49,693 - 3125570 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:21:50,528 - 3125570 - browsergym.experiments.loop - INFO - action:
+click('1904')
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.52s/it]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.52s/it]
+2026-06-25 12:22:28,414 - 3125570 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:22:28,826 - 3125570 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('The 39 was too small. I was very sad when the shoe rubbed up against my baby toe. I had to return them because I knew in time it would tear up my feet. The problem is that the strap is made of some really stiff leather and is painful to my heel. The front is also uncomfortably tight.')
+
+2026-06-25 12:22:32,467 - 3125570 - browsergym.experiments.loop - INFO - Saving summary info.
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python procedural_memory.py ingest-result --memory-dir /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --result-dir results/webarena.165 --config-dir config_files --abstraction-model openai/google/gemini-2.5-pro
+negative_recorded
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.166 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-25 12:23:18,688 - 3127160 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.166_25 in:
+  results/2026-06-25_12-23-18_GenericAgentArgs_on_webarena.166_25
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-25 12:23:20,849 - 3127160 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:23:20,850 - 3127160 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:23:31,627 - 3127160 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:23:31,656 - 3127160 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:23:31,966 - 3127160 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:23:31,966 - 3127160 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:23:32,230 - 3127160 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:23:32,230 - 3127160 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.25s/it]Batches: 100%|██████████| 1/1 [00:22<00:00, 22.25s/it]
+2026-06-25 12:24:06,268 - 3127160 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:24:06,933 - 3127160 - browsergym.experiments.loop - INFO - action:
+click('1344')
+
+2026-06-25 12:24:14,110 - 3127160 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 400 Bad Request"
+2026-06-25 12:24:14,178 - 3127160 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.166.
+BadRequestError:
+Error code: 400 - [{'error': {'code': 400, 'message': "Malformed publisher model (`model`: 'gpt-4-1106-preview') for the 'openapi' request endpoint ID; expected '<publisher>/<model>'.", 'status': 'INVALID_ARGUMENT'}}]
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 441, in run
+    step_info.from_step(env, action, obs_preprocessor=agent.obs_preprocessor)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 190, in from_step
+    self.obs, self.reward, self.terminated, self.truncated, env_info = env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 124, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 392, in step
+    return super().step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 327, in step
+    return self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 465, in step
+    return self.post_step(info)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 511, in post_step
+    reward, done, user_message, task_info = self._task_validate()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 545, in _task_validate
+    reward, done, user_message, info = self.task.validate(self.page, self.chat.messages)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 201, in validate
+    score = self.evaluator(
+  File "<@beartype(webarena.evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x74a15c458670>", line 115, in __call__
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 368, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 159, in __call__
+    score = 1.0 * self.ua_match(
+  File "<@beartype(webarena.evaluation_harness.evaluators.StringEvaluator.ua_match) at 0x74a15c4580d0>", line 69, in ua_match
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 121, in ua_match
+    return llm_ua_match(pred, ref, intent)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/helper_functions.py", line 196, in llm_ua_match
+    response = generate_from_openai_chat_completion(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 122, in wrapper
+    raise e
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 305, in generate_from_openai_chat_completion
+    response = client.chat.completions.create(# type: ignore
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 277, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 643, in create
+    return self._post(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 942, in request
+    return self._request(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1046, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': "Malformed publisher model (`model`: 'gpt-4-1106-preview') for the 'openapi' request endpoint ID; expected '<publisher>/<model>'.", 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-25 12:24:14,179 - 3127160 - browsergym.experiments.loop - INFO - Saving summary info.
+Exception uncaught by agent or environment in task webarena.166.
+BadRequestError:
+Error code: 400 - [{'error': {'code': 400, 'message': "Malformed publisher model (`model`: 'gpt-4-1106-preview') for the 'openapi' request endpoint ID; expected '<publisher>/<model>'.", 'status': 'INVALID_ARGUMENT'}}]

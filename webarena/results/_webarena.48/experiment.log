@@ -1,0 +1,26 @@
+2026-06-19 14:46:26,010 - 3357905 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.48_28 in:
+  results/2026-06-19_14-46-25_GenericAgentArgs_on_webarena.48_28
+2026-06-19 14:46:28,105 - 3357905 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 14:46:28,105 - 3357905 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 14:46:41,233 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:46:41,931 - 3357905 - browsergym.experiments.loop - INFO - The user wants to find out the number of fulfilled orders and the total amount of money spent in the last three days. Today is 6/12/2023, so the last three days are 6/10/2023, 6/11/2023, and 6/12/2023.
+
+The current page is the main page of an e-commerce website. I need to navigate to the user's account to find their order history. I see a "My Account" link with bid '177', which is the most logical place to find this information. I will click on it.
+
+action:
+click('177')
+
+2026-06-19 14:46:55,598 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:03,849 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:04,412 - 3357905 - browsergym.experiments.loop - INFO - action:
+click('1416')
+
+2026-06-19 14:47:16,112 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:24,718 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:35,117 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:35,463 - 3357905 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user("You have 0 fulfilled orders over the past three days, and the total amount of money you spent is $0.00.")
+
+2026-06-19 14:47:44,301 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:52,421 - 3357905 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 14:47:54,523 - 3357905 - browsergym.experiments.loop - INFO - Saving summary info.

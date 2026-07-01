@@ -1,0 +1,108 @@
+2026-07-01 16:51:39,994 - 1698923 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.21_22 in:
+  results/2026-07-01_16-51-39_GenericAgentArgs_on_webarena.21_22
+2026-07-01 16:51:42,197 - 1698923 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-07-01 16:51:42,197 - 1698923 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-07-01 16:52:02,217 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:52:03,147 - 1698923 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-07-01 16:52:03,172 - 1698923 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-07-01 16:52:03,458 - 1698923 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-07-01 16:52:03,460 - 1698923 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-07-01 16:52:08,820 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:52:09,560 - 1698923 - browsergym.experiments.loop - INFO - action:
+click('1263')
+
+2026-07-01 16:52:27,763 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:52:31,393 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-07-01 16:52:31,394 - 1698923 - openai._base_client - INFO - Retrying request to /chat/completions in 0.892625 seconds
+2026-07-01 16:52:42,792 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:52:43,411 - 1698923 - browsergym.experiments.loop - INFO - action:
+click('1953')
+
+2026-07-01 16:53:03,745 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:53:09,322 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:53:09,853 - 1698923 - browsergym.experiments.loop - INFO - action:
+click('2097')
+
+2026-07-01 16:53:30,907 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:53:39,076 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:53:39,536 - 1698923 - browsergym.experiments.loop - INFO - action:
+click('2381')
+
+2026-07-01 16:54:03,655 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:54:03,658 - 1698923 - root - INFO - Query failed. Retrying 1/2.
+[LLM]:
+```json
+{
+  "task_family": "shopping_reviews",
+  "step_summary": "The 'Reviews' tab was clicked, revealing customer reviews. One review from 'John' mentions small ear cups.",
+  "current_plan": [
+    "Extract the name of the reviewer who mentioned small ear cups.",
+    "Verify no other reviewers or review
+[User]:
+Return one valid JSON object only. Do not use markdown fences.
+2026-07-01 16:54:21,554 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:54:21,557 - 1698923 - root - INFO - Query failed. Retrying 2/2.
+[LLM]:
+```json
+{
+  "task_family": "shopping_reviews",
+  "step_summary": "Clicked the reviews tab and found one relevant review on the first page from a reviewer named 'John'.",
+  "current_plan": [
+    "Check the next page of reviews for more mentions of 'small ear cups'.",
+    "Compile a list of all reviewers who mention small ear cups."
+  ],
+  "evidence": [
+    {
+      "value": "John",
+      "source": "current",
+      "why_relevant": "Reviewer who mentioned small ear cups.",
+      "confidence": 1.0
+    },
+    {
+      "value": "The sound quality is great, but the ear cups are a bit small for my ears.",
+      "source": "current",
+      "why_relevant": "Review text matching the user's query.",
+      "confidence": 1.0
+    },
+    {
+      "value": "Page 2",
+      "source": "current",
+      "why_relevant": "Indicates there are more reviews to check.",
+      "confidence": 1.0
+    }
+  ],
+  "candidate_answers": [
+    {
+      "answer": "John",
+      "support": "Review text: '...the ear cups are a bit small for my ears.'",
+      "confidence": 0.8
+    }
+  ],
+  "visited_pages": [
+    {
+      "page": "Product Page",
+      "summary": "Navigated to the product page and located the reviews tab."
+    },
+    {
+      "page": "Product Reviews - Page 1",
+      "summary": "Found one review by 'John' mentioning small ear cups."
+    }
+  ],
+  "open_questions": [
+    "Are there other reviewers on subsequent pages who mention small ear cups?"
+  ],
+  "negative_constraints": [
+    "Do not answer until all pages of reviews have been checked.",
+    "The final answer must
+[User]:
+Return one valid JSON object only. Do not use markdown fences.
+2026-07-01 16:54:21,557 - 1698923 - root - WARNING - orchestrator_update_failed: Could not parse a valid value after 2 retries.
+2026-07-01 16:54:27,697 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:54:28,099 - 1698923 - browsergym.experiments.loop - INFO - action:
+click('2476')
+
+2026-07-01 16:54:49,854 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:55:06,040 - 1698923 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:55:06,466 - 1698923 - browsergym.experiments.loop - INFO - action:
+click('2760')
+

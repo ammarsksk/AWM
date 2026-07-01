@@ -1,0 +1,66 @@
+2026-06-25 12:23:18,688 - 3127160 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.166_25 in:
+  results/2026-06-25_12-23-18_GenericAgentArgs_on_webarena.166_25
+2026-06-25 12:23:20,849 - 3127160 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 12:23:20,850 - 3127160 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 12:23:31,627 - 3127160 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 12:23:31,656 - 3127160 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 12:23:31,966 - 3127160 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:23:31,966 - 3127160 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 12:23:32,230 - 3127160 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 12:23:32,230 - 3127160 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+2026-06-25 12:24:06,268 - 3127160 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 12:24:06,933 - 3127160 - browsergym.experiments.loop - INFO - action:
+click('1344')
+
+2026-06-25 12:24:14,110 - 3127160 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 400 Bad Request"
+2026-06-25 12:24:14,178 - 3127160 - browsergym.experiments.loop - WARNING - Exception uncaught by agent or environment in task webarena.166.
+BadRequestError:
+Error code: 400 - [{'error': {'code': 400, 'message': "Malformed publisher model (`model`: 'gpt-4-1106-preview') for the 'openapi' request endpoint ID; expected '<publisher>/<model>'.", 'status': 'INVALID_ARGUMENT'}}]
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 441, in run
+    step_info.from_step(env, action, obs_preprocessor=agent.obs_preprocessor)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/experiments/loop.py", line 190, in from_step
+    self.obs, self.reward, self.terminated, self.truncated, env_info = env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 124, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/wrappers/common.py", line 392, in step
+    return super().step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 327, in step
+    return self.env.step(action)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 465, in step
+    return self.post_step(info)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 511, in post_step
+    reward, done, user_message, task_info = self._task_validate()
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/core/env.py", line 545, in _task_validate
+    reward, done, user_message, info = self.task.validate(self.page, self.chat.messages)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/browsergym/webarena/task.py", line 201, in validate
+    score = self.evaluator(
+  File "<@beartype(webarena.evaluation_harness.evaluators.EvaluatorComb.__call__) at 0x74a15c458670>", line 115, in __call__
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 368, in __call__
+    cur_score = evaluator(trajectory, config_file, page, client)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 159, in __call__
+    score = 1.0 * self.ua_match(
+  File "<@beartype(webarena.evaluation_harness.evaluators.StringEvaluator.ua_match) at 0x74a15c4580d0>", line 69, in ua_match
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/evaluators.py", line 121, in ua_match
+    return llm_ua_match(pred, ref, intent)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/evaluation_harness/helper_functions.py", line 196, in llm_ua_match
+    response = generate_from_openai_chat_completion(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 122, in wrapper
+    raise e
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/webarena/llms/providers/openai_utils.py", line 305, in generate_from_openai_chat_completion
+    response = client.chat.completions.create(# type: ignore
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 277, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 643, in create
+    return self._post(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 942, in request
+    return self._request(
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/openai/_base_client.py", line 1046, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': "Malformed publisher model (`model`: 'gpt-4-1106-preview') for the 'openapi' request endpoint ID; expected '<publisher>/<model>'.", 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-25 12:24:14,179 - 3127160 - browsergym.experiments.loop - INFO - Saving summary info.

@@ -1,0 +1,53 @@
+2026-06-25 18:35:13,562 - 3368454 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.26_11 in:
+  results/2026-06-25_18-35-13_GenericAgentArgs_on_webarena.26_11
+2026-06-25 18:35:15,812 - 3368454 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 18:35:15,813 - 3368454 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 18:35:25,163 - 3368454 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 18:35:25,182 - 3368454 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 18:35:25,339 - 3368454 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 18:35:25,339 - 3368454 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 18:35:30,360 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:35:30,955 - 3368454 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mention "complain of the customer service". I need to go to the reviews section to find this information. I see a tab with the text "Reviews (12)" and bid '1721'. I will click this tab to view the reviews.
+
+action:
+click('1721')
+
+2026-06-25 18:35:45,737 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:35:46,159 - 3368454 - browsergym.experiments.loop - INFO - action:
+click('2250')
+
+2026-06-25 18:35:58,825 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:35:59,194 - 3368454 - browsergym.experiments.loop - INFO - The user wants to find reviewers who complained about customer service. I have already navigated to the reviews section and I am currently on page 2. I have checked the reviews on this page and there is no mention of "customer service". I will now navigate to page 1 to check the reviews there.
+
+action:
+click('2394')
+
+2026-06-25 18:36:15,812 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:36:16,224 - 3368454 - browsergym.experiments.loop - INFO - The user wants to find reviewers who complained about customer service. I have already navigated to the reviews section. I have read through the reviews on the first page and found two reviewers who complained about customer service: "Bob in Vegas" and "RemyRRemyR". I will now navigate to the next page of reviews to see if there are any more. I will click on the "Page 2" link.
+
+action:
+click('2657')
+
+2026-06-25 18:36:27,454 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:36:27,801 - 3368454 - browsergym.experiments.loop - INFO - The user wants to find reviewers who complained about customer service. I have already navigated to the reviews section and I am currently on page 2. I have checked the reviews on this page and there is no mention of "customer service". I need to go to page 1 to check the other reviews. I will click on the link for "Page 1".
+
+action:
+click('2752')
+
+2026-06-25 18:36:44,617 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:36:45,038 - 3368454 - browsergym.experiments.loop - INFO - The user wants to find reviewers who have complained about customer service. I have already examined the first page of reviews and found two reviewers, "Bob in Vegas" and "RemyRRemyR", who mentioned issues with customer service. I will now navigate to the second page of reviews to continue my search.
+
+action:
+click('3015')
+
+2026-06-25 18:36:56,183 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:36:56,541 - 3368454 - browsergym.experiments.loop - INFO - The user wants to find reviewers who complained about customer service. I have already navigated to the reviews section and I am currently on page 2. I have checked the reviews on this page and there is no mention of "customer service". I need to go to page 1 to check the other reviews. I will click on the link for "Page 1".
+
+action:
+click('3110')
+
+2026-06-25 18:37:11,727 - 3368454 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:37:12,137 - 3368454 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('Bob in Vegas, RemyRRemyR')
+
+2026-06-25 18:37:16,486 - 3368454 - browsergym.experiments.loop - INFO - Saving summary info.

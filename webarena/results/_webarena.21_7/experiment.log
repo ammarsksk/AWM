@@ -1,0 +1,19 @@
+2026-06-25 17:24:47,838 - 3318228 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.21_23 in:
+  results/2026-06-25_17-24-47_GenericAgentArgs_on_webarena.21_23
+2026-06-25 17:24:50,271 - 3318228 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 17:24:50,272 - 3318228 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 17:25:00,354 - 3318228 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 17:25:00,387 - 3318228 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 17:25:00,599 - 3318228 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 17:25:00,600 - 3318228 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 17:25:05,759 - 3318228 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:25:06,326 - 3318228 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mentioned that the "ear cups being small". I need to go to the reviews section to find this information. I see a link with the text "Reviews (12)" and bid '1576'. I will click this link to navigate to the reviews.
+
+action:
+click('1576')
+
+2026-06-25 17:25:18,709 - 3318228 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:25:19,163 - 3318228 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('The reviewers who mention about ear cups being small are: Catso, Dibbins, Anglebert Dinkherhump, and Michelle DavisMichelle Davis.')
+
+2026-06-25 17:25:23,213 - 3318228 - browsergym.experiments.loop - INFO - Saving summary info.

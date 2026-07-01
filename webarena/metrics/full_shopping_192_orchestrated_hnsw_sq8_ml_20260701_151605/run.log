@@ -1,0 +1,18 @@
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python pipeline.py --website shopping --start_index 0 --end_index 192 --model_name openai/google/gemini-2.5-pro --memory_architecture procedural --procedural_memory_dir memory/procedural --procedural_top_k 4 --procedural_min_score 0.42 --procedural_abstraction_model openai/google/gemini-2.5-pro --max_steps 40 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --use_thinking False --headless
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "ml", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+usage: pipeline.py [-h] --website {shopping,shopping_admin,gitlab,reddit,map}
+                   [--start_index START_INDEX] [--end_index END_INDEX]
+                   [--model_name MODEL_NAME] [--max_steps MAX_STEPS]
+                   [--llm_retries LLM_RETRIES]
+                   [--pre_observation_delay PRE_OBSERVATION_DELAY]
+                   [--extract_obs_retries EXTRACT_OBS_RETRIES]
+                   [--criteria {autoeval,gt}] [--induction {prompt,rule}]
+                   [--eval_model EVAL_MODEL] [--headless]
+                   [--browser_proxy BROWSER_PROXY]
+                   [--memory_architecture {awm,procedural}]
+                   [--procedural_memory_dir PROCEDURAL_MEMORY_DIR]
+                   [--procedural_top_k PROCEDURAL_TOP_K]
+                   [--procedural_min_score PROCEDURAL_MIN_SCORE]
+                   [--procedural_abstraction_model PROCEDURAL_ABSTRACTION_MODEL]
+pipeline.py: error: unrecognized arguments: --use_thinking False

@@ -1,0 +1,40 @@
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "ml", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.21 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --use_thinking False --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/metrics/failed_tasks_new_agent_frozen_memory_20260630_192959/memory_task_21 --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42 --browser_proxy http://192.168.140.15:3128
+2026-06-30 19:30:08,070 - 400946 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.21_5 in:
+  results/2026-06-30_19-30-07_GenericAgentArgs_on_webarena.21_5
+/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py:82: UserWarning: 
+Warning: use_screenshot is set to True, but the chat model does not support vision. Disabling use_screenshot.
+  warn(
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-06-30 19:30:10,000 - 400946 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-30 19:30:10,000 - 400946 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-30 19:30:21,686 - 400946 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-30 19:30:21,706 - 400946 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-30 19:30:21,918 - 400946 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-30 19:30:21,919 - 400946 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-30 19:30:25,046 - 400946 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:30:25,682 - 400946 - browsergym.experiments.loop - INFO - action:
+click('1575')
+
+2026-06-30 19:30:38,492 - 400946 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:30:38,879 - 400946 - browsergym.experiments.loop - INFO - action:
+click('1992')
+
+2026-06-30 19:30:52,000 - 400946 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:30:52,330 - 400946 - browsergym.experiments.loop - INFO - action:
+click('2087')
+
+2026-06-30 19:31:02,922 - 400946 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:31:03,315 - 400946 - browsergym.experiments.loop - INFO - action:
+click('2371')
+
+2026-06-30 19:31:12,929 - 400946 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:31:13,298 - 400946 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('Michelle Davis')
+
+2026-06-30 19:31:16,414 - 400946 - browsergym.experiments.loop - INFO - Saving summary info.
+WARNING this demo agent will soon be moved elsewhere. Expect it to be removed at some point.
+SKIP_INGEST: webarena.21

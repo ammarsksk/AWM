@@ -1,19 +1,78 @@
-2026-06-19 18:40:50,040 - 3571971 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.163_15 in:
-  results/2026-06-19_18-40-49_GenericAgentArgs_on_webarena.163_15
-2026-06-19 18:40:52,437 - 3571971 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
-2026-06-19 18:40:52,437 - 3571971 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
-2026-06-19 18:41:04,850 - 3571971 - faiss.loader - INFO - Loading faiss with AVX2 support.
-2026-06-19 18:41:04,871 - 3571971 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
-2026-06-19 18:41:05,101 - 3571971 - sentence_transformers.base.model - INFO - No device provided, using cpu
-2026-06-19 18:41:05,101 - 3571971 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
-2026-06-19 18:41:08,927 - 3571971 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
-2026-06-19 18:41:09,647 - 3571971 - browsergym.experiments.loop - INFO - The user wants to find the main criticisms of the product. The current page is the product page. I can see a "Reviews (12)" tab. I will click on this tab to view the reviews and then identify the criticisms. The `bid` for the "Reviews (12)" tab is 1690. I will click on it.
+2026-06-25 14:01:07,425 - 3183525 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.163_20 in:
+  results/2026-06-25_14-01-07_GenericAgentArgs_on_webarena.163_20
+2026-06-25 14:01:10,031 - 3183525 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 14:01:10,031 - 3183525 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 14:01:20,391 - 3183525 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 14:01:20,409 - 3183525 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 14:01:20,612 - 3183525 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 14:01:20,614 - 3183525 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 14:01:20,876 - 3183525 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 14:01:20,876 - 3183525 - sentence_transformers.base.model - INFO - No modules.json found for /home/ammar/.cache/huggingface/hub/models--BAAI--bge-reranker-large/snapshots/55611d7bca2a7133960a6d3b71e083071bbfc312, initializing a new CrossEncoder model.
+2026-06-25 14:01:48,454 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:01:49,093 - 3183525 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I need to find the reviews section and extract the relevant sentences.
+I can see a link with the text "12 Reviews" and another link with "Reviews (12)". I will click on one of them to navigate to the reviews section. I will click on the link with bid '1267'.
 
 action:
-click('1690')
+click('1267')
 
-2026-06-19 18:41:20,946 - 3571971 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
-2026-06-19 18:41:21,365 - 3571971 - browsergym.experiments.loop - INFO - action:
-send_msg_to_user('The main criticisms of the product are: - "I ordered the 16gb but I only got 14 gigs even though I formatted the card." - "The memory card is kind of slow on games and downloads." - "It\'s used and the previous owners data has not been erased...This isn\'t a problem, just reformat it." - "I could not format the card so I wasn’t able to use it for my VITA" - "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."')
+2026-06-25 14:02:19,429 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:02:19,808 - 3183525 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product and has asked me to extract the relevant sentences. I have already navigated to the reviews section. I will now read through the reviews on the first page to identify any criticisms.
 
-2026-06-19 18:41:25,436 - 3571971 - browsergym.experiments.loop - INFO - Saving summary info.
+- A review by "Don’t worry bout itDon’t worry bout it" states: "I ordered the 16gb but I only got 14 gigs even though I formatted the card. The memory card is kind of slow on games and downloads."
+- A review by "The EggMan" states: "It's used and the previous owners data has not been erased..."
+- A review by "VictoriaVictoria" states: "As you can see I still only got 14 gigabytes of memory but at this point I dont care."
+- A review by "Ernesto" states: "Memory Card Came Defective" and "I could not format the card so I wasn’t able to use it for my VITA".
+- A review by "~bircS" states: "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."
+
+I have found several criticisms on this page. I will now navigate to the next page to see if there are more. I will click on the link for "Page 2".
+
+action:
+click('2068')
+
+2026-06-25 14:02:51,189 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:02:51,548 - 3183525 - browsergym.experiments.loop - INFO - I have identified two criticisms on the current page. To provide a complete answer, I need to check all review pages. I am currently on page 2, so I will navigate to page 1 to find more reviews and potential criticisms. I see a link with the text "Page 1". I will click it.
+
+action:
+click('2212')
+
+2026-06-25 14:03:21,099 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:03:21,528 - 3183525 - browsergym.experiments.loop - INFO - action:
+click('2496')
+
+2026-06-25 14:03:53,310 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:03:53,656 - 3183525 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I need to extract the relevant sentences from the customer reviews. I am currently on page 2 of the reviews. I can see two reviews on this page.
+
+The first review by '~bircS' mentions: "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there." This is a criticism.
+
+The second review by 'Ernesto' says: "I could not format the card so I wasn’t able to use it for my VITA". This is another criticism.
+
+I need to check all pages of reviews to find all criticisms. I will navigate to page 1 to check for more reviews. The link for page 1 has bid '2591'.
+
+action:
+click('2591')
+
+2026-06-25 14:04:35,007 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:04:35,473 - 3183525 - browsergym.experiments.loop - INFO - The user wants to know the main criticisms of the product. I have already navigated to the reviews section and I am on the first page of reviews. I will now extract the sentences that contain criticisms from the reviews on this page.
+
+Here are the criticisms I've identified:
+- From the review by "Don’t worry bout itDon’t worry bout it": "I ordered the 16gb but I only got 14 gigs even though I formatted the card." and "The memory card is kind of slow on games and downloads."
+- From the review by "The EggMan": "It's used and the previous owners data has not been erased..."
+- From the review by "BrockNet": "I also had to delete some info off of it when I got it."
+- From the review by "VictoriaVictoria": "As you can see I still only got 14 gigabytes of memory but at this point I dont care."
+- From the review by "Ernesto": "Memory Card Came Defective" and "I could not format the card so I wasn’t able to use it for my VITA"
+- From the review by "~bircS": "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."
+
+I will now check the next page of reviews to see if there are any more criticisms. I will click on the "Page 2" link.
+
+action:
+click('2875')
+
+2026-06-25 14:05:04,116 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:05:04,523 - 3183525 - browsergym.experiments.loop - INFO - action:
+click('2970')
+
+2026-06-25 14:05:45,993 - 3183525 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 14:05:46,491 - 3183525 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user("I ordered the 16gb but I only got 14 gigs even though I formatted the card. The memory card is kind of slow on games and downloads. No original packaging. It's used and the previous owners data has not been erased. they have used photoshop or something to remove the branding from the image. The product is a legit sony hardware that have been owned by someone else before. Pretty sure it's refurbished or returned, since I also had to delete some info off of it when I got it. I still only got 14 gigabytes of memory. Memory Card Came Defective. I could not format the card so I wasn’t able to use it for my VITA. My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there. It worked for about 2 weeks and then just stopped working. The Vita doesn't even recognize it anymore. I tried reformatting it, but it won't even do that. It's a complete piece of junk. This is not a new memory card. It is used. It had someone else's data on it.")
+
+2026-06-25 14:05:49,893 - 3183525 - browsergym.experiments.loop - INFO - Saving summary info.

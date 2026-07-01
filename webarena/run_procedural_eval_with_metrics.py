@@ -131,6 +131,8 @@ def run_pipeline(args: argparse.Namespace, task_start: int, task_end: int, log_p
         str(args.pre_observation_delay),
         "--extract_obs_retries",
         str(args.extract_obs_retries),
+        "--use_thinking",
+        str(args.use_thinking),
     ]
     if args.headless:
         cmd.append("--headless")
@@ -228,6 +230,8 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
                     str(args.pre_observation_delay),
                     "--extract_obs_retries",
                     str(args.extract_obs_retries),
+                    "--use_thinking",
+                    str(args.use_thinking),
                     "--procedural_memory_path",
                     memory_path,
                     "--procedural_site",
@@ -261,6 +265,11 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
                     return process_returncode
                 continue
 
+            if args.skip_ingest:
+                log.write(f"SKIP_INGEST: webarena.{tid}\n")
+                log.flush()
+                continue
+
             ingest_cmd = [
                 sys.executable,
                 "procedural_memory.py",
@@ -276,16 +285,30 @@ def run_direct_task_ids(args: argparse.Namespace, task_ids: list[int], log_path:
             ]
             log.write("COMMAND: " + " ".join(ingest_cmd) + "\n")
             log.flush()
-            process = subprocess.run(
-                ingest_cmd,
-                cwd=ROOT,
-                env=env,
-                stdout=log,
-                stderr=subprocess.STDOUT,
-                check=False,
-            )
-            if process.returncode != 0 and args.stop_on_error:
-                return int(process.returncode)
+            try:
+                process = subprocess.run(
+                    ingest_cmd,
+                    cwd=ROOT,
+                    env=env,
+                    stdout=log,
+                    stderr=subprocess.STDOUT,
+                    check=False,
+                    timeout=args.ingest_timeout,
+                )
+                if process.returncode != 0:
+                    log.write(
+                        f"INGEST_FAILED_NONFATAL: webarena.{tid} returncode={process.returncode}\n"
+                    )
+                    log.flush()
+                    if args.stop_on_error:
+                        return int(process.returncode)
+            except subprocess.TimeoutExpired:
+                log.write(
+                    f"INGEST_TIMEOUT_NONFATAL: webarena.{tid} timeout_sec={args.ingest_timeout}\n"
+                )
+                log.flush()
+                if args.stop_on_error:
+                    return 124
     return 0
 
 
@@ -318,6 +341,9 @@ def main() -> None:
     parser.add_argument("--stop-on-error", action="store_true")
     parser.add_argument("--pre-observation-delay", type=float, default=1.25)
     parser.add_argument("--extract-obs-retries", type=int, default=8)
+    parser.add_argument("--use-thinking", type=lambda value: str(value).lower() in {"1", "true", "yes"}, default=False)
+    parser.add_argument("--skip-ingest", action="store_true", help="Run tasks and metrics without updating procedural memory.")
+    parser.add_argument("--ingest-timeout", type=float, default=180.0)
     parser.add_argument("--browser-proxy", default=None)
     parser.add_argument("--headless", action="store_true")
     parser.add_argument("--skip-run", action="store_true")

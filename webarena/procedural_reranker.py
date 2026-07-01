@@ -146,27 +146,6 @@ def canonical_family(family: str | None) -> str:
     return FAMILY_ALIASES.get(key, key or "general")
 
 
-def family_score(query_family: str, procedure_family: str) -> float:
-    query_family = canonical_family(query_family)
-    procedure_family = canonical_family(procedure_family)
-    if query_family == procedure_family:
-        return 1.0
-    compatible = {
-        ("spend_category_total", "fulfilled_order_total"),
-        ("bought_option_lookup", "first_purchase_lookup"),
-        ("price_range", "product_search"),
-        ("product_capacity_search", "product_search"),
-        ("review_extraction", "review_lookup"),
-        ("order_status_total", "fulfilled_order_total"),
-        ("order_status_total", "bought_option_lookup"),
-    }
-    if (query_family, procedure_family) in compatible:
-        return 0.55
-    if query_family == "general" or procedure_family == "general":
-        return 0.05
-    return 0.0
-
-
 def action_skeleton_terms(text: str) -> set[str]:
     text = text or ""
     actions_match = re.search(r"\bActions:\s*(.*?)(?:\s+\d+\.\s+|$)", text, re.IGNORECASE)
@@ -196,12 +175,10 @@ def action_skeleton_terms(text: str) -> set[str]:
 
 
 def skeleton_fit(query: str, candidate_text: str) -> float:
-    query_family = canonical_family(infer_task_family(query))
-    expected = EXPECTED_ACTIONS.get(query_family, set())
     candidate_terms = action_skeleton_terms(candidate_text)
-    action_fit = len(expected & candidate_terms) / len(expected) if expected else 0.0
+    action_fit = min(1.0, len(candidate_terms & {"click", "fill", "select_option", "scroll", "send_msg_to_user", "press"}) / 5.0)
     semantic_fit = lexical_overlap(query, " ".join(candidate_terms))
-    return clamp(0.72 * action_fit + 0.28 * semantic_fit)
+    return clamp(0.38 * action_fit + 0.62 * semantic_fit)
 
 
 def candidate_name(candidate: dict[str, Any]) -> str:
@@ -450,9 +427,7 @@ class ProceduralReranker:
         metadata = float(candidate.get("metadata_score", 1.0) or 0.0)
         outcome = float(candidate.get("outcome_score", 0.0) or 0.0)
         graph = float(candidate.get("graph_score", 0.0) or 0.0)
-        q_family = canonical_family(str(candidate.get("query_family") or infer_task_family(query)))
-        p_family = canonical_family(str(candidate.get("procedure_family") or self.proc_families.get(name) or infer_task_family(text)))
-        family = float(candidate.get("family_score", family_score(q_family, p_family)) or 0.0)
+        family = 0.0
         structure = float(candidate.get("structure_score", skeleton_fit(query, text)) or 0.0)
         freshness = float(candidate.get("freshness_score", 0.0) or 0.0)
         reliability = self.reliability(name) if name else 0.5
@@ -469,7 +444,7 @@ class ProceduralReranker:
             clamp(metadata),
             clamp(outcome),
             clamp(graph),
-            clamp(family),
+            0.0,
             clamp(structure),
             clamp(freshness),
             clamp(reliability),
@@ -482,15 +457,14 @@ class ProceduralReranker:
     def feature_score(self, features: list[float]) -> float:
         values = dict(zip(FEATURE_NAMES, features))
         score = (
-            0.20 * values["base_score"]
-            + 0.12 * values["semantic_score"]
-            + 0.12 * values["lexical_score"]
+            0.22 * values["base_score"]
+            + 0.15 * values["semantic_score"]
+            + 0.15 * values["lexical_score"]
             + 0.08 * values["activation_score"]
             + 0.04 * values["metadata_score"]
             + 0.07 * values["outcome_score"]
             + 0.07 * values["graph_score"]
-            + 0.14 * values["family_score"]
-            + 0.11 * values["structure_score"]
+            + 0.13 * values["structure_score"]
             + 0.02 * values["freshness_score"]
             + 0.11 * values["reliability_score"]
             + 0.09 * values["goal_text_overlap"]

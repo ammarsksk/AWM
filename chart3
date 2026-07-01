@@ -1,0 +1,86 @@
+\ifdefined\FLOWCHARTEMBEDDED
+\begingroup
+\else
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\begin{document}
+\fi
+
+\definecolor{inputblue}{RGB}{219,234,254}
+\definecolor{processblue}{RGB}{224,242,254}
+\definecolor{memorygreen}{RGB}{220,252,231}
+\definecolor{rankpurple}{RGB}{237,233,254}
+\definecolor{warnred}{RGB}{254,226,226}
+\definecolor{evalorange}{RGB}{255,237,213}
+\definecolor{linegray}{RGB}{71,85,105}
+\definecolor{textgray}{RGB}{30,41,59}
+
+\begin{tikzpicture}[
+  font=\sffamily,
+  >={Latex[length=2.5mm,width=1.8mm]},
+  node distance=6mm and 8mm,
+  box/.style={
+    rectangle, rounded corners=3pt, very thick, align=center,
+    text width=52mm, minimum height=11mm, inner sep=4pt,
+    text=textgray, font=\sffamily\footnotesize, draw=#1!78!black, fill=#1
+  },
+  score/.style={
+    rectangle, rounded corners=3pt, thick, align=center,
+    text width=35mm, minimum height=9mm, inner sep=3pt,
+    text=textgray, font=\sffamily\scriptsize, draw=#1!78!black, fill=#1
+  },
+  decision/.style={
+    diamond, aspect=2.3, very thick, align=center,
+    text width=36mm, inner sep=2pt, text=textgray,
+    font=\sffamily\footnotesize, draw=#1!80!black, fill=#1
+  },
+  flow/.style={->, very thick, draw=linegray},
+  data/.style={->, thick, dashed, draw=linegray},
+  neg/.style={->, thick, dashed, draw=red!70!black}
+]
+
+\node[box=inputblue] (request) {Memory request enters ranking};
+\node[box=memorygreen, below left=of request] (same) {Same-site procedures loaded first};
+\node[box=rankpurple, below right=of request] (semantic) {Semantic neighbors retrieved from vector index};
+\node[box=rankpurple, below=16mm of request] (pool) {Candidate pool joins procedure records, compact text, and vector hits};
+
+\node[score=rankpurple, below left=8mm and 11mm of pool] (sem) {Semantic similarity};
+\node[score=processblue, below=8mm of pool] (lex) {Goal and page activation};
+\node[score=memorygreen, below right=8mm and 11mm of pool] (fam) {Family and action fit};
+\node[score=memorygreen, below=9mm of lex] (graph) {Graph and outcome support};
+\node[score=warnred, left=of graph] (risk) {Negative-memory risk penalty};
+
+\node[box=rankpurple, below=19mm of graph] (hybrid) {Hybrid score combines positive evidence and risk penalties};
+\node[decision=evalorange, below=of hybrid] (gate) {Pass reliability gate?};
+\node[box=rankpurple, below left=8mm and 7mm of gate] (accept) {Accepted memory cards enter prompt};
+\node[box=processblue, below right=8mm and 7mm of gate] (fallback) {Unsafe candidates trigger no-memory fallback};
+\node[box=evalorange, below=18mm of gate] (log) {Decision is logged for later threshold tuning};
+
+\draw[flow] (request) -- (same);
+\draw[flow] (request) -- (semantic);
+\draw[flow] (same) -- (pool);
+\draw[flow] (semantic) -- (pool);
+\draw[data] (pool) -- (sem);
+\draw[data] (pool) -- (lex);
+\draw[data] (pool) -- (fam);
+\draw[data] (pool) -- (graph);
+\draw[neg] (risk) -- (hybrid);
+\draw[data] (sem) |- (hybrid);
+\draw[data] (lex) -- (hybrid);
+\draw[data] (fam) |- (hybrid);
+\draw[data] (graph) -- (hybrid);
+\draw[flow] (hybrid) -- (gate);
+\draw[flow] (gate) -- node[left, font=\scriptsize] {yes} (accept);
+\draw[flow] (gate) -- node[right, font=\scriptsize] {no} (fallback);
+\draw[data] (accept) |- (log);
+\draw[data] (fallback) |- (log);
+
+\end{tikzpicture}
+
+\ifdefined\FLOWCHARTEMBEDDED
+\endgroup
+\else
+\end{document}
+\fi

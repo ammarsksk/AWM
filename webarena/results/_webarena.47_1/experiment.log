@@ -1,0 +1,41 @@
+2026-06-25 17:35:14,494 - 3325407 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.47_3 in:
+  results/2026-06-25_17-35-14_GenericAgentArgs_on_webarena.47_3
+2026-06-25 17:35:16,634 - 3325407 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 17:35:16,635 - 3325407 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 17:35:25,960 - 3325407 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 17:35:25,984 - 3325407 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 17:35:26,208 - 3325407 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 17:35:26,208 - 3325407 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 17:35:31,424 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:35:32,073 - 3325407 - browsergym.experiments.loop - INFO - action:
+click('190')
+
+2026-06-25 17:35:45,767 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:35:52,507 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:35:58,349 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-25 17:35:58,351 - 3325407 - openai._base_client - INFO - Retrying request to /chat/completions in 0.836897 seconds
+2026-06-25 17:36:05,597 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:36:05,925 - 3325407 - browsergym.experiments.loop - INFO - The user wants to find out the number of fulfilled orders and the total amount of money spent in the past month. Today is 6/12/2023, so the past month is from 5/12/2023 to 6/12/2023.
+
+I am on the "My Account" page. I can see a "Recent Orders" table. The table shows some recent orders, but it might not be a complete list. I need to view all orders to get the correct information.
+
+I see a "View All" link with bid '1416' and a "My Orders" link with bid '1500'. Both should lead to the order history page. My previous attempt to click on a link on the previous page timed out, so I will try clicking on "My Orders" this time.
+
+action:
+click('1500')
+
+2026-06-25 17:36:19,618 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:36:27,398 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:36:48,300 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:36:48,623 - 3325407 - browsergym.experiments.loop - INFO - action:
+select_option('1509', '50')
+
+2026-06-25 17:37:00,555 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:37:08,498 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:37:21,489 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:37:21,890 - 3325407 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('You have 0 fulfilled orders and spent $0 in the past month.')
+
+2026-06-25 17:37:32,100 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:37:40,309 - 3325407 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:37:42,178 - 3325407 - browsergym.experiments.loop - INFO - Saving summary info.

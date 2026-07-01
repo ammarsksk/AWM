@@ -1,0 +1,113 @@
+2026-06-19 16:15:31,826 - 3437968 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.125_22 in:
+  results/2026-06-19_16-15-31_GenericAgentArgs_on_webarena.125_22
+2026-06-19 16:15:33,846 - 3437968 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 16:15:33,846 - 3437968 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 16:15:43,240 - 3437968 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 16:15:43,240 - 3437968 - faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-19 16:15:43,240 - 3437968 - faiss.loader - INFO - Loading faiss.
+2026-06-19 16:15:43,267 - 3437968 - faiss.loader - INFO - Successfully loaded faiss.
+2026-06-19 16:15:43,511 - 3437968 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 16:15:43,512 - 3437968 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 16:15:47,798 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:15:48,543 - 3437968 - browsergym.experiments.loop - INFO - The user wants to know the price range of "teeth grinding mouth guard". I will use the search bar to find the products and then determine the price range from the search results. The search bar has a bid of '216' and the search button has a bid of '221'.
+
+action:
+fill('216', 'teeth grinding mouth guard')
+click('221')
+
+2026-06-19 16:15:57,608 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:16:08,301 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:16:08,749 - 3437968 - browsergym.experiments.loop - INFO - The user wants to know the price range of "teeth grinding mouth guard". I have already searched for the products and the results are displayed on the current page. To find the price range, I need to find the minimum and maximum prices. The current page shows 12 out of 4944 items. To efficiently find the price range, I will sort the products by price. I see a "Sort By" dropdown menu with bid '1233'. I will select the "Price" option, which has bid '1235'. After sorting, I will examine the first and last pages of the results to determine the minimum and maximum prices.
+
+action:
+select_option('1233', 'Price')
+
+2026-06-19 16:16:11,657 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:16:26,139 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:16:26,532 - 3437968 - browsergym.experiments.loop - INFO - The user wants to know the price range of "teeth grinding mouth guard".
+The current page shows the search results for "teeth grinding mouth guard".
+The results are sorted by price in descending order. The highest price on the current page is $7,149.00.
+To find the lowest price, I need to sort the results in ascending order.
+I see a link with the text "Set Ascending Direction" and bid '1255'. I will click this link to sort the products by price in ascending order. This will show the lowest priced items on the first page.
+
+action:
+click('1255')
+
+2026-06-19 16:16:31,325 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:16:46,338 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:16:46,868 - 3437968 - browsergym.experiments.loop - INFO - The user wants to find the price range of "teeth grinding mouth guard".
+The current page shows the search results. The items are sorted by price in ascending order, with the lowest price being $0.01.
+To find the price range, I need to find the highest price.
+I can do this by sorting the items by price in descending order.
+The "Set Descending Direction" link with bid '1237' will sort the items in descending order.
+After clicking this link, the first item on the page will have the highest price.
+The lowest price is already visible on the current page, which is $0.01.
+So, the plan is:
+1. Click the "Set Descending Direction" link (bid '1237').
+2. Read the price of the first item on the new page.
+3. The price range will be from $0.01 to the price of the first item.
+4. Send the price range to the user.
+
+action:
+click('1237')
+
+2026-06-19 16:16:51,424 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:17:01,857 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:17:02,343 - 3437968 - browsergym.experiments.loop - INFO - The user wants to find the price range of "teeth grinding mouth guard". I have searched for the term, but the results are not relevant. I see a "Shop By" section with different categories. "Health & Household" seems to be the most relevant category for this product. I will click on the "Health & Household" link to filter the search results. The bid for this link is '1840'.
+
+action:
+click('1840')
+
+2026-06-19 16:17:06,917 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:17:21,278 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:17:21,677 - 3437968 - browsergym.experiments.loop - INFO - The user wants to find the price range of "teeth grinding mouth guard".
+I have already searched for the product and the results are displayed.
+The results are sorted by price in descending order.
+On the current page (page 1), the highest price is $49.99 and the lowest is $19.99.
+There are more products on the next page. I need to go to the next page to find the absolute lowest price.
+I will click on the link for "Page 2" to see the remaining products. The bid for "Page 2" is '1642'.
+
+action:
+click('1642')
+
+2026-06-19 16:17:26,414 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:17:40,601 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:17:41,131 - 3437968 - browsergym.experiments.loop - INFO - The user wants to know the price range of "teeth grinding mouth guard". I have already searched for the products and the results are displayed. I am currently on page 2 of the search results. The prices on this page range from $4.99 to $18.99. To find the full price range, I need to go to page 1 to see the highest-priced items. I will click on the link for "Page 1", which has a bid of '1564'. After that, I will have all the prices and can determine the price range.
+
+action:
+click('1564')
+
+2026-06-19 16:17:45,135 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:17:59,569 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:18:00,087 - 3437968 - browsergym.experiments.loop - INFO - action:
+click('1706')
+
+2026-06-19 16:18:04,125 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:18:16,521 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:18:17,006 - 3437968 - browsergym.experiments.loop - INFO - action:
+click('1547')
+
+2026-06-19 16:18:21,003 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:18:37,943 - 3437968 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 16:18:38,453 - 3437968 - browsergym.experiments.loop - INFO - The user wants to find the price range of "teeth grinding mouth guard".
+I have searched for the product and the results are displayed. The results are sorted by price in descending order.
+On the current page (page 1), the highest price is $49.99 and the lowest is $19.99.
+There are more products on the next page. I need to go to page 2 to see the rest of the products and find the overall lowest price.
+I will click on the link for "Page 2" which has a bid of '1705'.
+
+action:
+click('1705')
+
+2026-06-19 16:18:42,624 - 3437968 - browsergym.core.env - WARNING - An error occurred while extracting the dom and axtree. Retrying (4/5 tries left).
+Error('Frame.evaluate: Execution context was destroyed, most likely because of a navigation')
+2026-06-19 16:18:45,464 - 3437968 - browsergym.experiments.loop - INFO - Saving summary info.

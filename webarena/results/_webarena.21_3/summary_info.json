@@ -1,0 +1,10 @@
+{
+    "n_steps": 0,
+    "cum_reward": 0,
+    "cum_raw_reward": 0,
+    "err_msg": "Exception uncaught by agent or environment in task webarena.21.\nValidationError:\n1 validation error for ChatOpenAI\n__root__\n  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)",
+    "stack_trace": "Traceback (most recent call last):\n  File \"/home/ammar/.local/lib/python3.10/site-packages/browsergym/experiments/loop.py\", line 399, in run\n    agent = self.agent_args.make_agent()\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py\", line 34, in make_agent\n    return GenericAgent(\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py\", line 76, in __init__\n    self.chat_llm = chat_model_args.make_chat_model()\n  File \"/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/chat_api.py\", line 85, in make_chat_model\n    return ChatOpenAI(\n  File \"/home/ammar/.local/lib/python3.10/site-packages/langchain_core/load/serializable.py\", line 113, in __init__\n    super().__init__(*args, **kwargs)\n  File \"/home/ammar/.local/lib/python3.10/site-packages/pydantic/v1/main.py\", line 364, in __init__\n    raise validation_error\npydantic.v1.error_wrappers.ValidationError: 1 validation error for ChatOpenAI\n__root__\n  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)\n",
+    "stats.cum_steps": 1,
+    "terminated": null,
+    "truncated": null
+}

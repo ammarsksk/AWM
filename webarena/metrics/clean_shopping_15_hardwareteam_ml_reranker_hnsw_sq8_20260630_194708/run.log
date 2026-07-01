@@ -1,0 +1,62 @@
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "ml", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.21 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 30 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --use_thinking False --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/run.py", line 15, in <module>
+    from agents.legacy.agent import GenericAgentArgs
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/__init__.py", line 1, in <module>
+    from .agent import GenericAgentArgs
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py", line 17, in <module>
+    from ..legacy import dynamic_prompting
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/dynamic_prompting.py", line 20, in <module>
+    from .utils.llm_utils import ParseError
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/llm_utils.py", line 18, in <module>
+    from transformers import AutoModel
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2317, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2345, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/models/auto/modeling_auto.py", line 23, in <module>
+    from .auto_factory import (
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 43, in <module>
+    from ...generation import GenerationMixin
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2317, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2345, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 43, in <module>
+    from ..masking_utils import create_masks_for_generate
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/masking_utils.py", line 40, in <module>
+    from torch._dynamo._trace_wrapped_higher_order_op import TransformGetItemToIndex
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import (
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/_dynamo/aot_compile.py", line 17, in <module>
+    from torch._dynamo.convert_frame import GraphRuntimeEnv
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 62, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 54, in <module>
+    from torch._dynamo.exc import ObservedException, TensorifyScalarRestartAnalysis
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/_dynamo/exc.py", line 44, in <module>
+    from .utils import counters
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 2716, in <module>
+    if has_triton_package():
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/torch/utils/_triton.py", line 10, in has_triton_package
+    import triton  # noqa: F401
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/triton/__init__.py", line 26, in <module>
+    from . import language
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/triton/language/__init__.py", line 5, in <module>
+    from . import extra
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/triton/language/extra/__init__.py", line 19, in <module>
+    spec.loader.exec_module(module)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/triton/language/extra/cuda/__init__.py", line 1, in <module>
+    from . import libdevice
+  File "<frozen importlib._bootstrap>", line 1024, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 174, in __exit__
+  File "<frozen importlib._bootstrap>", line 125, in release
+KeyboardInterrupt

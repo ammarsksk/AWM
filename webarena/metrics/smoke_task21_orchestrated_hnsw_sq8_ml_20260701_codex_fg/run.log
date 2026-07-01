@@ -1,0 +1,102 @@
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "ml", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.21 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 40 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --use_thinking False --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42
+2026-07-01 16:46:47,040 - 1691486 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.21_7 in:
+  results/2026-07-01_16-46-46_GenericAgentArgs_on_webarena.21_7
+/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-07-01 16:46:49,622 - 1691486 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-07-01 16:46:49,622 - 1691486 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-07-01 16:47:12,478 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:47:13,603 - 1691486 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-07-01 16:47:13,634 - 1691486 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-07-01 16:47:13,891 - 1691486 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-07-01 16:47:13,892 - 1691486 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-07-01 16:47:19,214 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:47:19,776 - 1691486 - browsergym.experiments.loop - INFO - action:
+click('1379')
+
+2026-07-01 16:47:42,728 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:47:52,013 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:47:52,431 - 1691486 - browsergym.experiments.loop - INFO - action:
+click('1953')
+
+2026-07-01 16:48:18,549 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:48:18,552 - 1691486 - root - INFO - Query failed. Retrying 1/2.
+[LLM]:
+```json
+{
+  "task_family": "information_extraction",
+  "step_summary": "The previous click did not navigate to the reviews section. The page remains on the main product view. A 'Reviews' tab has been identified in the current observation.",
+  "current_plan": [
+    "Find and click the 'Reviews' tab.",
+    "Search reviews for mentions of 'small ear cups'.",
+    "Extract the names of the reviewers who made the comments."
+  ],
+  "evidence": [
+    {
+      "value": "6S Wireless Headphones Over Ear,Noise Canceling Hi-Fi Bass Foldable Stereo Wireless Kid Headsets Earbuds with Built-in Mic, Micro SD/TF, FM for iPhone/Samsung/iPad/PC (Black & Gold)",
+      "source": "current page observation",
+      "why_relevant": "This is the product for which I need to find reviews.",
+      "confidence": 1.0
+    },
+    {
+      "value": "A 'Reviews' tab is available on the page.",
+      "source": "current page observation",
+      "why_relevant": "This is the likely location for customer reviews.",
+      "confidence": 1.0
+    }
+  ],
+  "candidate_answers": [],
+  "visited_pages": [
+    {
+      "page": "Product Page for 6S Wireless Headphones",
+      "summary": "Landed on the main product page. A 'Reviews' tab (element 1239) has been identified, but not yet clicked. Reviews are not yet visible."
+    }
+  ],
+  "open_questions": [
+    "Are there any reviewers who mention 'ear cups' being 'small'?"
+  
+[User]:
+Return one valid JSON object only. Do not use markdown fences.
+2026-07-01 16:48:43,333 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:48:43,336 - 1691486 - root - INFO - Query failed. Retrying 2/2.
+[LLM]:
+```json
+{
+  "task_family": "information_extraction",
+  "step_summary": "The previous click action did not navigate away from the main product page. The page content is largely unchanged. The next step is to locate and click the reviews tab.",
+  "current_plan": [
+    "Find and click the 'Reviews' tab.",
+
+[User]:
+Return one valid JSON object only. Do not use markdown fences.
+2026-07-01 16:48:43,336 - 1691486 - root - WARNING - orchestrator_update_failed: Could not parse a valid value after 2 retries.
+2026-07-01 16:48:49,262 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:48:49,613 - 1691486 - browsergym.experiments.loop - INFO - action:
+click('2097')
+
+2026-07-01 16:49:14,111 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:49:14,115 - 1691486 - root - INFO - Query failed. Retrying 1/2.
+[LLM]:
+```json
+{
+  "task_family": "information_extraction",
+  "step_summary": "The previous click action did not reveal the reviews section. The agent is still on the main product page, and no reviews are visible.",
+  "current_plan": [
+    "Find and navigate to the product reviews section.",
+    "Search reviews for mentions of 'small ear cups'.",
+    "Extract the names of the reviewers who made the comments."
+  ],
+  "evidence": [
+    {
+      "value": "6S Wireless Headphones Over Ear,Noise Canceling Hi-Fi Bass Foldable Stereo Wireless Kid Headsets Earbuds with Built-in Mic, Micro SD/TF, FM for iPhone/Samsung/iPad/PC (Black & Gold)",
+[User]:
+Return one valid JSON object only. Do not use markdown fences.
+2026-07-01 16:49:32,404 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:49:41,192 - 1691486 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-07-01 16:49:41,662 - 1691486 - browsergym.experiments.loop - INFO - action:
+click('2381')
+
+2026-07-01 16:49:53,774 - 1691486 - browsergym.experiments.loop - INFO - Saving summary info.

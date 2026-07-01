@@ -1,0 +1,527 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[letterpaper,margin=0.72in,columnsep=0.24in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usetikzlibrary{arrows.meta,backgrounds,calc,fit,positioning,shapes.geometric}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  citecolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\captionsetup[figure]{name=Fig.}
+
+\graphicspath{{./}{docs/}}
+\newcommand{\paperflowchart}[1]{%
+  \begingroup
+  \def\FLOWCHARTEMBEDDED{1}%
+  \begin{adjustbox}{max width=0.84\linewidth,max height=0.60\textheight,center}
+    \input{#1.tex}%
+  \end{adjustbox}%
+  \endgroup
+}
+\newcommand{\papertitle}{Graph-Guided Compressed Procedural Memory for Web Agents}
+\newcommand{\paperauthor}{Ammar Saifee}
+
+\begin{document}
+\twocolumn[
+\begin{center}
+  {\LARGE\bfseries \papertitle\par}
+  \vspace{0.35em}
+  {\large \paperauthor\par}
+  \vspace{0.85em}
+  {\bfseries Abstract\par}
+\end{center}
+\begin{quote}
+\small
+Large-language-model web agents often solve each task from scratch, even when prior interactions contain reusable procedural knowledge. This paper studies a graph-guided procedural memory architecture for web agents that abstracts prior trajectories into reusable policies, retrieves relevant memories for new tasks, and guards against negative transfer from failed procedures. The method combines compact workflow representations, relation-aware retrieval, negative memory, and context-conscious prompting in order to improve reuse while controlling memory and retrieval overhead. The system is evaluated in both offline and live web-agent settings. The results indicate that procedural memory can improve task-level behavior while making the memory layer more efficient and interpretable. More broadly, the study argues that web-agent memory should be treated as a joint learning, retrieval, and systems problem rather than as prompt augmentation alone.
+\end{quote}
+\vspace{0.8em}
+]
+
+\section{Introduction}
+
+Web agents are expected to transform natural-language goals into long-horizon browser interactions. A task such as finding a product attribute, checking an order status, filtering search results, or extracting review evidence often requires many state-dependent actions. Modern LLM agents can perform such tasks with reasoning-and-acting loops \citep{yao2023react}, but repeated web tasks contain substantial procedural reuse. A shopping review-extraction task and another shopping review-extraction task differ in entities and page ids, yet share the same high-level routine: navigate to product reviews, scan or paginate, verify textual evidence, and answer in the required format.
+
+Agent Workflow Memory (AWM) \citep{wang2024awm} captures this intuition by inducing workflows from successful trajectories and retrieving them for future tasks. The present project extends that idea into a more explicit systems architecture. Instead of treating workflow memory as only prompt text, the implementation separates: (i) durable structured memories, (ii) compact searchable text, (iii) vector embeddings, (iv) graph relations between procedures and task families, (v) negative memories derived from failures, (vi) retrieval-event logging, and (vii) compressed ANN backends. This design is evaluated in two settings:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Mind2Web} \citep{deng2023mind2web}, using recorded exemplar trajectories for offline evaluation and retrieval benchmarking.
+  \item \textbf{WebArena} \citep{zhou2023webarena}, using a live EC2-hosted WebArena stack with BrowserGym/Playwright execution and a shopping-domain procedural memory.
+\end{itemize}
+
+The contribution is not a new benchmark, but an implementation study of how procedural memory should be engineered for speed, storage, and reuse. The project asks three questions:
+
+\begin{enumerate}[leftmargin=*]
+  \item Can AWM-style procedural reuse be implemented end-to-end for Mind2Web and WebArena with paper-style metrics and reproducible evaluation methodology?
+  \item Which memory optimizations materially reduce retrieval latency and storage footprint?
+  \item What additional architecture is required for live WebArena execution, where browser state, page loading, answer formatting, and negative transfer matter?
+\end{enumerate}
+
+\section{Related Work}
+
+\paragraph{Workflow memory for agents.}
+AWM \citep{wang2024awm} induces reusable workflows from web-agent trajectories and retrieves them in offline and online settings. The work reports improvements on Mind2Web and WebArena, motivating this project. The implementation here follows the broad procedural-memory motivation but changes the storage and retrieval layer: workflows are stored as structured, graph-linked, compressed, and queryable memories rather than only as prompt snippets.
+
+\paragraph{Web-agent benchmarks.}
+Mind2Web \citep{deng2023mind2web} provides over 2,000 web tasks across 137 websites and 31 domains, with annotated action sequences on real websites. WebArena \citep{zhou2023webarena} provides a reproducible suite of live websites, including e-commerce, forums, GitLab-like development, Wikipedia-like content, map tools, and external knowledge. BrowserGym \citep{dechezelles2024browsergym} standardizes web-agent environments and provides a gym-like interface for observations and actions.
+
+\paragraph{Approximate nearest-neighbor retrieval.}
+The memory layer is a retrieval system over workflow embeddings. FAISS \citep{johnson2017faiss} provides efficient exact and approximate similarity search, including compressed-domain search. HNSW \citep{malkov2020hnsw} uses navigable small-world graphs for approximate nearest-neighbor search. Product quantization (PQ) \citep{jegou2011pq}, optimized product quantization (OPQ) \citep{ge2013opq}, and anisotropic vector quantization \citep{guo2019avq} reduce vector memory and accelerate search. DiskANN \citep{subramanya2019diskann} is relevant for future billion-scale disk-resident procedural memory. Recent quantizers such as RaBitQ \citep{gao2024rabitq} and TurboQuant \citep{zandieh2025turboquant} are relevant to low-bit vector compression and online quantization.
+
+\paragraph{Sentence embeddings.}
+The implementation uses sentence-transformer-style dense embeddings. Sentence-BERT \citep{reimers2019sentencebert} established efficient sentence embeddings for similarity search. BGE-style embeddings \citep{chen2024bge} are used in the WebArena retrieval benchmark because they provide strong compact dense representations for retrieval.
+
+\section{Problem Formulation}
+
+A web task is defined by a natural-language goal, the current website, the browser observation, and the sequence of actions already taken. A raw trajectory records what the agent saw, what it did, and whether the task eventually succeeded. The memory system does not reuse that raw trajectory directly. Instead, it abstracts the trajectory into a policy card that preserves the task family, action pattern, evidence requirements, answer format, and stopping condition while removing brittle page-specific details.
+
+At test time, the current goal, page state, site, and action history are converted into a memory request. The retriever searches for relevant procedures, checks whether they are reliable enough to use, and either returns compact guidance or allows the LLM to solve from the current page without memory assistance.
+
+\section{System Overview}
+
+Figures~\ref{fig:flowchart_online}--\ref{fig:flowchart_learning} show the implemented architecture as four connected TikZ views. The split presentation makes the retrieval path explicit: the online browser state forms a query, the persistent memory layer supplies procedure and warning evidence, the hybrid ranker decides whether memory is reliable enough to use, and the action-learning loop writes successful and failed outcomes back into memory.
+
+\subsection{Memory Stores}
+
+The implementation separates persistent procedural memory into five logical stores:
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{p{0.25\linewidth}p{0.62\linewidth}}
+\toprule
+\textbf{Store} & \textbf{Purpose} \\
+\midrule
+Procedural memory store & Reusable workflows containing activation conditions, generalized steps, evidence requirements, answer format, and termination conditions. \\
+Vector search index & Dense embedding search over compact workflow text, with exact, graph-based, scalar-quantized, product-quantized, and binary-compressed retrieval variants. \\
+Relation graph store & Links connecting procedures to task families, sites, action skeletons, page clues, outcomes, and failure patterns. \\
+Negative memory store & Failure abstractions and avoid-rules, used to penalize memories that resemble previously failed procedures. \\
+Retrieval-event history & Records selected, rejected, and raw candidates so retrieval behavior can be audited and future thresholds can be improved. \\
+\bottomrule
+\end{tabular}
+\caption{Major memory stores in the implemented architecture.}
+\label{tab:stores}
+\end{table}
+
+\subsection{Execution Loop}
+
+In WebArena, the LLM does not directly manipulate the website. BrowserGym and Playwright expose a controlled browser action space. The model receives a text observation produced from the DOM and accessibility tree. Browser actions such as clicking, filling fields, scrolling, navigating, and returning the final answer are executed by Playwright. The EC2 instance hosts the WebArena websites; the external agent runtime calls the LLM through Vertex AI and drives the browser against the hosted services.
+
+\section{Retrieval and Ranking}
+
+\subsection{Embedding Similarity}
+
+Each procedure is rendered into compact searchable text and embedded with a sentence-embedding model. The current memory request is embedded in the same space. Since the embeddings are normalized, nearest-neighbor search can use inner product as a cosine-similarity score. This gives the retriever a semantic candidate set before graph, family, and failure evidence are considered.
+
+\subsection{Hybrid Reranking}
+
+The reranker combines several kinds of evidence rather than relying on vector similarity alone:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Semantic match:} whether the compact procedure text is close to the current request.
+  \item \textbf{Lexical and page activation:} whether important goal words, page clues, and visible controls support reuse.
+  \item \textbf{Outcome and graph support:} whether the procedure is connected to successful outcomes and relevant task metadata.
+  \item \textbf{Task-family and action-structure fit:} whether the candidate procedure expects the same kind of task and the same broad action pattern.
+  \item \textbf{Negative-memory penalty:} whether similar procedures previously failed and should reduce trust.
+\end{itemize}
+
+For Mind2Web, memory is accepted when the combined score reaches 0.34 and the activation signal is at least 0.04. The compressed FAISS backend uses a retrieval-first acceptance rule: it accepts a candidate when the combined retrieval score is at least 0.30 or semantic similarity alone is at least 0.28.
+
+For WebArena, the gate is stricter because the agent is acting in a live browser. Same-family candidates require a score of at least 0.42, while cross-family candidates require at least 0.48. If the task family is incompatible, an additional mismatch penalty is applied before the memory can enter the prompt.
+
+\subsection{Graph Score}
+
+The relation graph is not only a visualization. It contributes directly to ranking by connecting procedures to task families, websites, action patterns, UI terms, success outcomes, and failure outcomes. A procedure becomes more reusable when it is strongly connected to the current site, task family, expected controls, and successful outcomes. It becomes less trustworthy when nearby graph evidence points to repeated failure or task-family mismatch.
+
+\section{Procedure Abstraction and Context Compression}
+
+\subsection{Positive Procedural Abstraction}
+
+Raw trajectories are too concrete to reuse directly. They contain transient element ids, long DOM text, and task-specific values. The implemented memory therefore stores an abstract policy card with the task family, activation condition, evidence keywords, generalized action policy, expected answer format, and termination condition. Deterministic abstraction was used in the main Mind2Web retrieval benchmark to isolate memory performance. WebArena later required LLM-based abstraction because live tasks need better semantic generalization and clearer stopping rules.
+
+\subsection{Negative Memory}
+
+For failed tasks, the system stores the failure family, the bad pattern, the avoid-rule, and the penalty that should apply to similar future candidates. During retrieval, negative memories are matched against the current request and candidate procedures. If the new task resembles a previously failed pattern, the candidate receives a risk penalty before the final gate. This prevents repeated reuse of procedures that look superficially similar but previously failed.
+
+\subsection{Prompt Context Budget}
+
+Instead of placing full trajectories in the prompt, the prompt receives compact policy cards. The online prompt contains the current goal, current browser observation, action history, accepted procedure cards, negative warnings, and task-family rules. The memory is guidance, not a hard script: the LLM still chooses each action from the current page state.
+
+\section{Storage and Retrieval Optimization}
+
+\subsection{Compression}
+
+A 384-dimensional float32 embedding requires 1,536 bytes for the raw vector values. Scalar quantization stores one byte per dimension, reducing the vector code to 384 bytes. Product quantization with 16 sub-codes stores a 16-byte vector code. Thus, IVFPQ reduces the vector-code portion from 1,536 bytes to 16 bytes, a nominal $96\times$ compression before metadata and index overhead.
+
+The main idea is simple: exact search preserves all vector values, scalar quantization stores coarse per-dimension values, and product quantization stores compact codebook ids for vector chunks. OPQ adds a learned rotation before product quantization so the compressed codes preserve similarity more accurately.
+
+\subsection{Index Families}
+
+The implementation evaluates several backends:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Flat IP}: exact inner-product search over normalized vectors.
+  \item \textbf{HNSW}: graph-based ANN with $M=32$ and efSearch $=64$.
+  \item \textbf{SQ8}: scalar-quantized vectors.
+  \item \textbf{HNSW+SQ8}: HNSW graph over scalar-quantized vectors.
+  \item \textbf{IVFPQ}: inverted-file coarse clustering with product-quantized residual/vector codes.
+  \item \textbf{OPQ-IVFPQ}: learned rotation before IVFPQ to reduce quantization error.
+  \item \textbf{TurboQuant-like binary rotation}: signed-permutation rotation followed by binary codes.
+  \item \textbf{RaBitQ-inspired dense/binary variants}: low-bit randomized quantization experiments.
+\end{itemize}
+
+Exact search compares the query against every stored vector. HNSW avoids many comparisons by navigating a proximity graph. IVF searches only a subset of coarse clusters, and PQ makes each distance computation cheaper by using compressed codes. Binary rotation methods are even smaller because they compare sign patterns rather than full vectors, but the WebArena benchmark shows that this extra compression loses retrieval quality on the small shopping-domain memory corpus.
+
+\section{Mind2Web Experiments}
+
+\subsection{Evaluation Setup}
+
+The Mind2Web evaluation uses recorded exemplar trajectories with Gemini 2.5 Pro through a Vertex/OpenAI-compatible adapter. The memory policy is same-website procedural reuse. The primary evaluation covers 500 tasks and 3,790 decision steps. A separate retrieval benchmark isolates the memory subsystem from LLM latency so that retrieval speed, storage cost, and compression behavior can be measured independently. These are study-specific evaluations and should not be represented as an official Mind2Web leaderboard submission.
+
+\subsection{Accuracy Results}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Result} \\
+\midrule
+Element accuracy & 59.76\% \\
+Relaxed element accuracy & 95.78\% \\
+Operation accuracy & 91.13\% \\
+Action F1 & 88.07\% \\
+Step success rate & 54.59\% \\
+Relaxed step success rate & 84.67\% \\
+Task success rate & 11.60\% \\
+Relaxed task success rate & 45.00\% \\
+Exact sequence rate & 11.00\% \\
+\bottomrule
+\end{tabular}
+\caption{Mind2Web procedural evaluation results.}
+\label{tab:mind2web_accuracy}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Expanded diagnostic result} \\
+\midrule
+Evaluated tasks & 1,009 \\
+Evaluated decision steps & 7,775 \\
+Element accuracy & 29.85\% \\
+Relaxed element accuracy & 44.72\% \\
+Operation accuracy & 43.15\% \\
+Action F1 & 41.54\% \\
+Step success rate & 27.31\% \\
+Relaxed step success rate & 41.07\% \\
+Task success rate & 2.18\% \\
+Relaxed task success rate & 4.76\% \\
+Exact sequence rate & 0.99\% \\
+\bottomrule
+\end{tabular}
+\caption{Expanded Mind2Web diagnostic evaluation. This broader evaluation is reported separately from the primary procedural-memory result because it was used as a coverage stress test rather than as the headline comparison.}
+\label{tab:mind2web_expanded}
+\end{table}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Metric} & \textbf{This method} & \textbf{AWM reference} & \textbf{Delta} \\
+\midrule
+Element accuracy & 59.76\% & 50.60\% & +9.16 pts \\
+Action F1 & 88.07\% & 57.30\% & +30.77 pts \\
+Step success rate & 54.59\% & 45.10\% & +9.49 pts \\
+Task success rate & 11.60\% & 4.80\% & +6.80 pts \\
+\bottomrule
+\end{tabular}
+\caption{Comparison against the strongest AWM Mind2Web reference values used in this study. The comparison is useful for orientation but is not an official reproduction because the study-specific evaluation setup, model, and data protocol differ from the original paper.}
+\label{tab:mind2web_paper_comparison}
+\end{table*}
+
+\subsection{Retrieval Benchmark}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Backend} & \textbf{Acceptance} & \textbf{Total s} & \textbf{Avg ms} & \textbf{P95 ms} & \textbf{RSS +MB} & \textbf{Code bytes} \\
+\midrule
+RAM FAISS+BM25 & 99.0\% & 72.57 & 40.50 & 64.29 & 167.31 & -- \\
+Compressed FAISS IVFPQ & 99.8\% & 39.68 & 26.16 & 38.65 & 155.51 & 16 \\
+\bottomrule
+\end{tabular}
+\caption{Mind2Web memory-backend benchmark. The compressed backend removes in-memory vector duplication and uses 16-byte product-quantized vector codes.}
+\label{tab:mind2web_retrieval}
+\end{table*}
+
+The benchmark demonstrates that the memory layer can be made significantly more efficient without reducing retrieval acceptance. Relative to the RAM FAISS baseline, compressed FAISS reduces average retrieval latency by 35.4\%, reduces P95 latency by 39.9\%, lowers total benchmark runtime by 45.3\%, and slightly increases the accepted-retrieval rate.
+
+\section{WebArena Experiments}
+
+\subsection{Live Browser Setup}
+
+The WebArena stack is hosted on an EC2 instance. The agent runtime, BrowserGym, Playwright, procedural memory, and LLM adapter run externally and interact with the hosted websites through browser automation. The key distinction from Mind2Web is that WebArena is live: tasks can fail because of navigation timing, browser loops, page loading, answer formatting, or environment availability. Therefore, WebArena evaluates both the reasoning policy and the reliability of the execution system.
+
+\subsection{Live Shopping-Domain Results}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Evaluated tasks & 29 \\
+Successful tasks & 17 \\
+Success rate & 58.62\% \\
+Average steps/task & 3.41 \\
+Procedures in snapshot & 19 \\
+Procedure edges in snapshot & 256 \\
+Negative memories in snapshot & 28 \\
+Retrieval events in snapshot & 380 \\
+Selected retrieval events in snapshot & 306 \\
+Overall selected rate & 80.5\% \\
+Memory storage & $\approx$3.2 MB \\
+\bottomrule
+\end{tabular}
+\caption{WebArena shopping-domain procedural-memory evaluation snapshot. The memory counts correspond to the completed-task evaluation rather than later memory growth.}
+\label{tab:webarena_best}
+\end{table}
+
+\subsection{WebArena Retrieval Backend Benchmark}
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Backend} & \textbf{Avg ms} & \textbf{P95 ms} & \textbf{Top-k} & \textbf{Top-1} & \textbf{Index KB} & \textbf{Disk KB} \\
+\midrule
+Flat & 21.59 & 25.66 & 82.8\% & 39.2\% & 33.0 & 66.5 \\
+HNSW & 20.55 & 23.09 & 82.8\% & 39.2\% & 39.0 & 72.5 \\
+SQ8 & 21.53 & 30.08 & 85.6\% & 39.2\% & 11.3 & 44.8 \\
+HNSW+SQ8 & 21.78 & 29.02 & 85.6\% & 39.2\% & 17.3 & 50.8 \\
+IVFPQ & 25.12 & 36.27 & 85.6\% & 39.2\% & 17.3 & 50.8 \\
+OPQ-IVFPQ & 23.99 & 29.92 & 85.6\% & 39.2\% & 17.3 & 50.8 \\
+Binary HNSW rotation & 24.06 & 32.61 & 72.8\% & 21.2\% & 7.0 & 42.0 \\
+\bottomrule
+\end{tabular}
+\caption{WebArena retrieval-backend benchmark using a small shopping-domain memory corpus with BGE-small English embeddings. Top-k and top-1 are retrieval-reference match rates, not live browser task accuracy. IVFPQ and OPQ-IVFPQ fall back to the best available compressed dense index because the corpus is below the product-quantization training requirement.}
+\label{tab:webarena_backend}
+\end{table*}
+
+In the small-memory setting, embedding and runtime overhead dominate; all non-degenerate dense indexes cluster around 20--25 ms. The more important result is the space--recall frontier: SQ8 and HNSW+SQ8 preserve the best top-k reference match rate (85.6\%) while reducing index size relative to flat search. Binary methods are far smaller but lose retrieval quality in this setting, and the RaBitQ-inspired variant has high end-to-end retrieval latency despite its small index code.
+
+\section{Qualitative Findings}
+
+\paragraph{Mind2Web.}
+The strongest Mind2Web result is that compact procedural memory can improve full-task success while keeping retrieval fast. The main remaining weakness is exact element grounding. Relaxed element accuracy is high (95.78\%), operation accuracy is high (91.13\%), and action F1 is high (88.07\%), but strict element accuracy remains lower. This suggests that the model usually understands the action intent but sometimes selects a neighboring, nested, or equivalent element that fails strict matching.
+
+\paragraph{WebArena.}
+WebArena failures were more operationally diverse. Observed failure modes include:
+\begin{itemize}[leftmargin=*]
+  \item no memory retrieved because task families were too different or thresholds were too strict;
+  \item looping on sort/pagination controls even after enough evidence was available;
+  \item evaluator-sensitive answer formatting;
+  \item navigation timing errors such as execution-context destruction while pages were loading;
+  \item weak early abstraction before mandatory LLM-based abstraction was added;
+  \item EC2 availability or proxy failures during live experiments.
+\end{itemize}
+Fixes included LLM-based positive and negative abstraction, stricter stop conditions, loop detection for price-range tasks, more retries, wait-after-action improvements, task-family guardrails, and logging of selected, rejected, and raw retrieval candidates.
+
+\section{Discussion}
+
+The central lesson is that memory quality and memory systems design are inseparable. A web-agent memory can fail in at least three ways: it can store overly concrete traces, retrieve irrelevant traces, or inject too much context into the prompt. The proposed architecture addresses these failure modes by separating full evidence from compact retrieval text, storing negative memory, requiring thresholded retrieval, and composing only compact policy cards into the prompt.
+
+For small memories, the LLM dominates runtime. However, at large scale the retrieval system becomes a first-class bottleneck. A billion workflows with 384-dimensional float32 embeddings would require approximately 1.536 TB for raw vector values alone, before metadata and graph edges. With 16-byte PQ codes, the vector-code portion would be about 16 GB. This motivates IVFPQ, OPQ, DiskANN-style disk-resident indexes, binary quantization, and learned reranking for future large-scale procedural memory.
+
+\section{Planned Machine-Learning Extension}
+
+The main machine-learning extension planned for this system is a learned procedural reranker. The current retriever uses hand-designed feature weights to decide whether a memory should be reused. A learned reranker would replace part of that manual scoring with a model trained from retrieval history and task outcomes.
+
+The intended design is a two-stage ranker. First, the memory system retrieves a broad candidate set using semantic search, lexical matching, graph evidence, and negative-memory filters. Second, the learned reranker scores each candidate procedure against the current task. Its input features include semantic similarity, lexical overlap, page activation, graph support, task-family match, action-structure match, prior success/failure reliability, freshness, negative-memory penalty, and the margin above or below the required acceptance threshold.
+
+The lightweight version is a supervised logistic reranker. It learns from selected and rejected retrieval candidates, with successful selections treated as positive evidence and rejected or failed candidates treated as negative evidence. This model is fast, interpretable, and suitable for small memory stores because each learned weight still corresponds to a meaningful retrieval signal.
+
+The stronger version adds a cross-encoder reranker. Instead of scoring the query and procedure independently, the cross-encoder reads the current task and candidate policy card together and predicts whether the memory is truly reusable. This should improve cases where two tasks are lexically similar but require different actions, or where the same page terms appear in different task families. The tradeoff is latency, so the cross-encoder should only rerank a small candidate set after the fast retriever has already filtered the memory store.
+
+The full planned model combines three signals: the current feature-based score, the learned logistic score, and the optional cross-encoder score. This would allow the system to move from fixed thresholds toward data-driven acceptance decisions while still preserving negative-memory guardrails and task-family constraints.
+
+\section{Limitations}
+
+This project is a strong implementation study but has limitations:
+\begin{itemize}[leftmargin=*]
+  \item The Mind2Web comparison is based on a study-specific evaluation, not an official paper reproduction.
+  \item The WebArena results focus on the shopping domain.
+  \item WebArena memory is still small, so billion-scale ANN backends cannot be fully validated from these data alone.
+  \item Retrieval-backend comparisons measure retrieval quality, latency, and storage cost; they should not be interpreted as end-to-end browser-task accuracy without paired live task execution.
+  \item Binary/TurboQuant/RaBitQ-style variants are experimental approximations, not full paper-faithful implementations.
+  \item LLM-based abstraction quality can vary, and malformed abstraction responses can cause skipped memory ingestion unless recovery logic is used.
+  \item Live browser experiments depend on EC2 uptime, proxy behavior, page timing, and evaluator formatting.
+\end{itemize}
+
+\section{Future Work}
+
+The next stage should evaluate multi-domain WebArena tasks, increase the memory corpus size, and measure retrieval under larger synthetic and real workflow collections. The most important engineering directions are:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Disk-resident ANN:} integrate DiskANN-style indexes for memory corpora that do not fit in RAM.
+  \item \textbf{Learned reranking:} replace fixed feature weights with a trained reranker over successful and failed retrieval events.
+  \item \textbf{Hierarchical memory:} retrieve first by task family, then workflow, then step-level action policy.
+  \item \textbf{Adaptive thresholds:} tune memory acceptance thresholds from historical success/failure outcomes.
+  \item \textbf{Better embeddings:} compare BGE-small, BGE-base/large, E5, and task-specific workflow encoders under equal latency budgets.
+  \item \textbf{Multimodal observations:} add screenshot-capable policies for visual tasks where DOM/accessibility text is insufficient.
+  \item \textbf{Production telemetry:} track retrieval latency, prompt tokens, selected memory ids, step count, loop breaks, final reward, and memory growth per evaluation.
+\end{enumerate}
+
+\section{Conclusion}
+
+This project implements a practical procedural-memory system for web agents across Mind2Web and WebArena. The Mind2Web results show that workflow memory with Gemini 2.5 Pro can outperform tracked AWM paper references under the study-specific evaluation setup, while compressed FAISS IVFPQ substantially improves retrieval latency and storage efficiency. The WebArena results show that live browser agents require more than vector search: they need graph-guided memory, negative memories, LLM-based abstraction, action-loop guards, robust browser waits, and careful answer formatting. Overall, the work supports a production-oriented view of web-agent memory: reusable procedures should be abstracted, indexed, compressed, graph-linked, logged, and selectively injected into the agent prompt.
+
+\appendix
+
+\section{Evaluation Protocol Details}
+
+All reported metrics are computed from saved experimental outputs produced during the project. Mind2Web metrics are step-level and task-level offline evaluation metrics over recorded exemplar trajectories. WebArena metrics are live-environment task outcomes over a shopping-domain subset, where success is determined by the WebArena evaluator. WebArena memory counts are reported from the completed-task evaluation snapshot. Retrieval benchmarks are measured separately from live browser execution to isolate the memory subsystem from LLM latency and website timing effects.
+
+\clearpage
+\onecolumn
+\section{Architecture Flowcharts}
+
+\begin{center}
+  \centering
+  \paperflowchart{chart1}
+  \captionof{figure}{\textbf{Online action and request loop.} The current goal, page state, accepted procedure cards, and negative warnings are composed into the prompt for each browser action. Successful and failed outcomes are routed back into the learning paths.}
+  \label{fig:flowchart_online}
+\end{center}
+\clearpage
+
+\begin{center}
+  \centering
+  \paperflowchart{chart2}
+  \captionof{figure}{\textbf{Persistent procedural memory layer.} The memory access layer reads from procedure memory, vector search, relation graph, negative memory, and retrieval-event history. Completed runs update the same stores so future retrieval can use both successful procedures and failure warnings.}
+  \label{fig:flowchart_stores}
+\end{center}
+\clearpage
+
+\begin{center}
+  \centering
+  \paperflowchart{chart3}
+  \captionof{figure}{\textbf{Hybrid retrieval and safe reuse gate.} Candidate procedures are scored using semantic similarity, page activation, task-family agreement, action-structure agreement, graph support, outcome history, and negative-memory risk before the agent accepts reusable guidance or falls back to direct solving.}
+  \label{fig:flowchart_ranking}
+\end{center}
+\clearpage
+
+\begin{center}
+  \centering
+  \paperflowchart{chart4}
+  \captionof{figure}{\textbf{Action selection and learning.} Accepted guidance and negative warnings condition the action policy. After execution, successful traces update reusable procedure memory, while failed traces update negative memory and graph relations so the same bad pattern is less likely to be reused.}
+  \label{fig:flowchart_learning}
+\end{center}
+
+\clearpage
+\twocolumn
+
+\begin{thebibliography}{99}
+
+\bibitem{wang2024awm}
+Zora Zhiruo Wang, Jiayuan Mao, Daniel Fried, and Graham Neubig.
+\newblock Agent Workflow Memory.
+\newblock \emph{arXiv preprint arXiv:2409.07429}, 2024.
+
+\bibitem{deng2023mind2web}
+Xiang Deng, Yu Gu, Boyuan Zheng, Shijie Chen, Samuel Stevens, Boshi Wang, Huan Sun, and Yu Su.
+\newblock Mind2Web: Towards a Generalist Agent for the Web.
+\newblock \emph{arXiv preprint arXiv:2306.06070}, 2023.
+
+\bibitem{zhou2023webarena}
+Shuyan Zhou, Frank F. Xu, Hao Zhu, Xuhui Zhou, Robert Lo, Abishek Sridhar, Xianyi Cheng, Tianyue Ou, Yonatan Bisk, Daniel Fried, Uri Alon, and Graham Neubig.
+\newblock WebArena: A Realistic Web Environment for Building Autonomous Agents.
+\newblock \emph{arXiv preprint arXiv:2307.13854}, 2023.
+
+\bibitem{dechezelles2024browsergym}
+Thibault Le Sellier De Chezelles, Maxime Gasse, Alexandre Drouin, Massimo Caccia, Leo Boisvert, Megh Thakkar, Tom Marty, Rim Assouel Shayegan, Lawrence Keunho Jang, Xing Han Lu, Ori Yoran, Dehan Kong, Frank F. Xu, Siva Reddy, Quentin Cappart, Graham Neubig, Ruslan Salakhutdinov, Nicolas Chapados, and Alexandre Lacoste.
+\newblock The BrowserGym Ecosystem for Web Agent Research.
+\newblock \emph{arXiv preprint arXiv:2412.05467}, 2024.
+
+\bibitem{johnson2017faiss}
+Jeff Johnson, Matthijs Douze, and Herv\'e J\'egou.
+\newblock Billion-scale similarity search with GPUs.
+\newblock In \emph{Proceedings of the IEEE International Conference on Big Data}, 2017.
+
+\bibitem{malkov2020hnsw}
+Yu. A. Malkov and D. A. Yashunin.
+\newblock Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 42(4):824--836, 2020.
+
+\bibitem{jegou2011pq}
+Herv\'e J\'egou, Matthijs Douze, and Cordelia Schmid.
+\newblock Product Quantization for Nearest Neighbor Search.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 33(1):117--128, 2011.
+
+\bibitem{ge2013opq}
+Tiezheng Ge, Kaiming He, Qifa Ke, and Jian Sun.
+\newblock Optimized Product Quantization for Approximate Nearest Neighbor Search.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 2946--2953, 2013.
+
+\bibitem{subramanya2019diskann}
+Suhas Jayaram Subramanya, Fnu Devvrit, Harsha Vardhan Simhadri, Ravishankar Krishnaswamy, and Rohan Kadekodi.
+\newblock DiskANN: Fast Accurate Billion-point Nearest Neighbor Search on a Single Node.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2019.
+
+\bibitem{guo2019avq}
+Ruiqi Guo, Philip Sun, Erik Lindgren, Quan Geng, David Simcha, Felix Chern, and Sanjiv Kumar.
+\newblock Accelerating Large-Scale Inference with Anisotropic Vector Quantization.
+\newblock \emph{arXiv preprint arXiv:1908.10396}, 2019.
+
+\bibitem{reimers2019sentencebert}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing}, pages 3982--3992, 2019.
+
+\bibitem{chen2024bge}
+Jianlv Chen, Shitao Xiao, Peitian Zhang, Kun Luo, Defu Lian, and Zheng Liu.
+\newblock BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation.
+\newblock \emph{arXiv preprint arXiv:2402.03216}, 2024.
+
+\bibitem{gao2024rabitq}
+Jianyang Gao and Cheng Long.
+\newblock RaBitQ: Quantizing High-Dimensional Vectors with a Theoretical Error Bound for Approximate Nearest Neighbor Search.
+\newblock \emph{arXiv preprint arXiv:2405.12497}, 2024.
+
+\bibitem{zandieh2025turboquant}
+Amir Zandieh, Majid Daliri, Majid Hadian, and Vahab Mirrokni.
+\newblock TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate.
+\newblock \emph{arXiv preprint arXiv:2504.19874}, 2025.
+
+\bibitem{yao2023react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao.
+\newblock ReAct: Synergizing Reasoning and Acting in Language Models.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+
+\end{thebibliography}
+
+\end{document}

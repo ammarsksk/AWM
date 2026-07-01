@@ -1,0 +1,96 @@
+{
+  "num_procedures": 5000,
+  "num_queries": 100,
+  "summaries": [
+    {
+      "backend": "flat",
+      "actual_index_kind": "flat_ip",
+      "avg_retrieval_ms": 1.6236519301310182,
+      "p95_retrieval_ms": 1.7962848767638204,
+      "build_ms": 492.4184149131179,
+      "index_bytes": 7680045,
+      "disk_bytes": 8077843,
+      "rss_mb_delta": 895.04296875
+    },
+    {
+      "backend": "hnsw",
+      "actual_index_kind": "hnsw_m32",
+      "avg_retrieval_ms": 1.0956502985209227,
+      "p95_retrieval_ms": 1.4202644815668464,
+      "build_ms": 613.3161610923707,
+      "index_bytes": 9037250,
+      "disk_bytes": 9435049,
+      "rss_mb_delta": 2.3046875
+    },
+    {
+      "backend": "sq8",
+      "actual_index_kind": "sq8_flat",
+      "avg_retrieval_ms": 1.4125146064907312,
+      "p95_retrieval_ms": 1.4547140104696155,
+      "build_ms": 244.4888218306005,
+      "index_bytes": 1923153,
+      "disk_bytes": 2320950,
+      "rss_mb_delta": 9.86328125
+    },
+    {
+      "backend": "hnsw_sq8",
+      "actual_index_kind": "hnsw_sq8_m32",
+      "avg_retrieval_ms": 1.370892757549882,
+      "p95_retrieval_ms": 1.7526470590382814,
+      "build_ms": 495.69697910919785,
+      "index_bytes": 3280358,
+      "disk_bytes": 3678165,
+      "rss_mb_delta": 7.44140625
+    },
+    {
+      "backend": "ivfpq",
+      "actual_index_kind": "ivfpq_nlist64_m16_bits8",
+      "avg_retrieval_ms": 0.43140301015228033,
+      "p95_retrieval_ms": 0.45519915875047445,
+      "build_ms": 1695.7516050897539,
+      "index_bytes": 612212,
+      "disk_bytes": 1010024,
+      "rss_mb_delta": 0.5078125
+    },
+    {
+      "backend": "opq_ivfpq",
+      "actual_index_kind": "opq_ivfpq_nlist64_m16_bits8",
+      "avg_retrieval_ms": 0.5074819829314947,
+      "p95_retrieval_ms": 0.5441967863589525,
+      "build_ms": 29825.992826838046,
+      "index_bytes": 1202107,
+      "disk_bytes": 1599930,
+      "rss_mb_delta": -9.16796875
+    },
+    {
+      "backend": "turboquant",
+      "actual_index_kind": "turboquant_signperm",
+      "avg_retrieval_ms": 0.512802074663341,
+      "p95_retrieval_ms": 0.5292232614010572,
+      "build_ms": 184.69937704503536,
+      "index_bytes": 240033,
+      "disk_bytes": 639367,
+      "rss_mb_delta": 14.59375
+    },
+    {
+      "backend": "rabitq",
+      "actual_index_kind": "rabitq_dense",
+      "avg_retrieval_ms": 3.0012130085378885,
+      "p95_retrieval_ms": 3.0904873274266715,
+      "build_ms": 367.9220099002123,
+      "index_bytes": 240033,
+      "disk_bytes": 1184535,
+      "rss_mb_delta": 17.8125
+    },
+    {
+      "backend": "binary_hnsw_rotation",
+      "actual_index_kind": "turboquant_signperm_hnsw",
+      "avg_retrieval_ms": 0.9553143428638577,
+      "p95_retrieval_ms": 1.2860143324360251,
+      "build_ms": 372.3885230720043,
+      "index_bytes": 1597226,
+      "disk_bytes": 1996576,
+      "rss_mb_delta": 5.61328125
+    }
+  ]
+}

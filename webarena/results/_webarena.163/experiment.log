@@ -1,0 +1,19 @@
+2026-06-19 18:40:50,040 - 3571971 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.163_15 in:
+  results/2026-06-19_18-40-49_GenericAgentArgs_on_webarena.163_15
+2026-06-19 18:40:52,437 - 3571971 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:40:52,437 - 3571971 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:41:04,850 - 3571971 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:41:04,871 - 3571971 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:41:05,101 - 3571971 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:41:05,101 - 3571971 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:41:08,927 - 3571971 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:41:09,647 - 3571971 - browsergym.experiments.loop - INFO - The user wants to find the main criticisms of the product. The current page is the product page. I can see a "Reviews (12)" tab. I will click on this tab to view the reviews and then identify the criticisms. The `bid` for the "Reviews (12)" tab is 1690. I will click on it.
+
+action:
+click('1690')
+
+2026-06-19 18:41:20,946 - 3571971 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:41:21,365 - 3571971 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('The main criticisms of the product are: - "I ordered the 16gb but I only got 14 gigs even though I formatted the card." - "The memory card is kind of slow on games and downloads." - "It\'s used and the previous owners data has not been erased...This isn\'t a problem, just reformat it." - "I could not format the card so I wasn’t able to use it for my VITA" - "My Vita told me to format the memory card before using it because it was apparently used and had something already stored on there."')
+
+2026-06-19 18:41:25,436 - 3571971 - browsergym.experiments.loop - INFO - Saving summary info.

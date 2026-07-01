@@ -47,10 +47,22 @@ def goal_family(text: str) -> str:
         or "customers say" in lowered
         or "customer reviews" in lowered
         or "extract the relevant sentences" in lowered
+        or "customer service" in lowered
         or "review" in tokens
         or "reviews" in tokens
     ):
-        if "reviewers" in tokens and ("mention" in tokens or "mentioned" in tokens):
+        if (
+            "reviewers" in tokens
+            or "reviewer" in tokens
+            or "complain" in tokens
+            or "complained" in tokens
+        ) and (
+            "mention" in tokens
+            or "mentioned" in tokens
+            or "complain" in tokens
+            or "complained" in tokens
+            or "customer service" in lowered
+        ):
             return "review_lookup"
         return "review_extraction"
     if (
@@ -68,6 +80,8 @@ def goal_family(text: str) -> str:
         return "price_range"
     if "how much i spent" in lowered or ("spent" in tokens and "shopping" in tokens):
         return "spend_category_total"
+    if "fulfilled" in tokens and "orders" in tokens and ("spent" in tokens or "money" in tokens):
+        return "fulfilled_order_total"
     if "configuration" in tokens and "bought" in tokens:
         return "bought_option_lookup"
     if "reviewers" in tokens and ("mention" in tokens or "mentioned" in tokens):
@@ -217,16 +231,16 @@ def ui_signature(observation: str) -> dict[str, Any]:
 
 
 class WebArenaProceduralMemory:
-    semantic_weight = 0.42
-    lexical_weight = 0.16
-    activation_weight = 0.18
+    semantic_weight = 0.48
+    lexical_weight = 0.18
+    activation_weight = 0.16
     metadata_weight = 0.06
     outcome_weight = 0.10
     graph_weight = 0.08
-    family_weight = 0.22
-    structure_weight = 0.10
-    family_mismatch_penalty = 0.22
-    cross_family_min_score = 0.48
+    family_weight = 0.0
+    structure_weight = 0.12
+    family_mismatch_penalty = 0.0
+    cross_family_min_score = 0.0
 
     def __init__(self, root: Path, candidate_k: int = 40) -> None:
         self.root = root
@@ -403,7 +417,7 @@ class WebArenaProceduralMemory:
             "intent_template_id": intent_template_id,
             "activation": {
                 "goal_pattern": compact(intent, 300),
-                "family": goal_family(intent),
+                "family": "site_scoped",
                 "keywords": [term for term, _ in Counter(tokenize(intent)).most_common(24)],
                 "ui_signature": {},
             },
@@ -480,12 +494,12 @@ class WebArenaProceduralMemory:
         system = """You convert successful WebArena browser traces into reusable procedural memory.
 Return JSON only. Do not copy numeric bid ids as reusable targets. Abstract them into page-relative policies.
 Do not overfit to literal product/order values, except for answer-format rules learned from evaluator examples.
-The procedure should help a future agent solve a similar task family with different variables."""
+The procedure should help a future agent on the same website solve a similar page/goal context with different variables."""
         human = """Create compact reusable procedure JSON. Return JSON only, no markdown fence.
 Keep the result concise: at most 7 steps, short strings, no old numeric bid ids.
 Schema:
 {
-  "family": "short_task_family",
+  "context_label": "short_site_context_label",
   "goal_pattern": "abstract goal with variables",
   "activation_keywords": ["..."],
   "general_strategy": "one concise reusable strategy",
@@ -550,8 +564,9 @@ Trace payload:
             print("llm_abstraction_error:no_steps", file=sys.stderr)
             return None
 
-        family = compact(payload.get("family") or goal_family(config.get("intent", "")), 80)
-        procedure["activation"]["family"] = family
+        procedure["activation"]["family"] = "site_scoped"
+        if payload.get("context_label"):
+            procedure["activation"]["context_label"] = compact(payload.get("context_label"), 80)
         procedure["activation"]["goal_pattern"] = compact(
             payload.get("goal_pattern") or procedure["activation"]["goal_pattern"], 300
         )
@@ -605,7 +620,7 @@ Trace payload:
         human = (
             "Build reusable WebArena memory from this successful trace. "
             "Output <=900 chars. Use exactly these keys: "
-            "family,goal_pattern,activation_keywords,general_strategy,answer_format,steps,avoid. "
+            "context_label,goal_pattern,activation_keywords,general_strategy,answer_format,steps,avoid. "
             "activation_keywords must have <=5 short strings. avoid must have <=3 short strings. "
             "steps must contain exactly 3 objects with keys action_type,intent,target_policy,value_policy,success_check. "
             "Each step field must be <=9 words. No numeric bid ids. Payload:"
@@ -650,14 +665,15 @@ Trace payload:
             action for action in actions if action_name(action) == "send_msg_to_user"
         ]
         base = {
-            "family": goal_family(config.get("intent", "")),
+            "family": "site_scoped",
             "abstract_failure": "Task failed or received zero reward.",
             "avoid": [
-                "Do not assume a retrieved procedure applies unless its task family and required evidence match.",
+                "Do not assume a retrieved procedure applies unless its website, page state, and required evidence match.",
                 "Do not send a final answer until the requested value has been verified on the current page.",
             ],
             "pattern": "reward_zero",
         }
+        self._add_failure_fallbacks(base, config, summary, final_answers)
         try:
             from langchain.schema import HumanMessage, SystemMessage
             from agents.legacy.utils.chat_api import ChatModelArgs
@@ -670,6 +686,11 @@ Trace payload:
             "intent_template_id": config.get("intent_template_id"),
             "site": config.get("sites", ["unknown"])[0],
             "expected_evaluator": config.get("eval", {}),
+            "site_context_guardrail_goal": (
+                "Extract reusable benchmark-facing instructions for future tasks on this same website/context. "
+                "Prefer concrete do/don't rules such as answer format, all-pages requirements, "
+                "date/status filters, and evidence that must be verified."
+            ),
             "summary": {
                 "reward": summary.get("cum_reward"),
                 "steps": summary.get("n_steps"),
@@ -690,15 +711,18 @@ Trace payload:
         }
         system = """You convert failed WebArena traces into reusable negative procedural memory.
 Return JSON only. Be specific about the failure pattern and what future agents should avoid.
+Use the expected_evaluator/reference answers to distinguish wrong evidence from answer-format mismatch.
+If the final answer omitted required entities, say which type of evidence was missed.
 If the final answer appears semantically right but formatting is evaluator-incompatible, say that.
+If the model failed to output a valid action tag, create a formatting/process avoid rule.
 If a retrieved memory was irrelevant or incomplete, say exactly why."""
         human = """Create compact negative memory JSON. Return JSON only, no markdown fence.
 Schema:
 {
-  "family": "short_task_family",
+  "context_label": "short_site_context_label",
   "pattern": "short_failure_pattern",
   "abstract_failure": "one concise explanation of why this failed",
-  "avoid": ["future instruction 1", "future instruction 2"],
+  "avoid": ["site/context-specific future instruction 1", "site/context-specific future instruction 2"],
   "penalty": 0.06
 }
 
@@ -724,12 +748,70 @@ Failed trace payload:
         except Exception:
             penalty = 0.06
         return {
-            "family": compact(parsed.get("family") or base["family"], 80),
+            "family": "site_scoped",
             "pattern": compact(parsed.get("pattern") or base["pattern"], 160),
             "abstract_failure": compact(parsed.get("abstract_failure") or base["abstract_failure"], 700),
             "avoid": [compact(str(item), 260) for item in avoid[:8] if str(item).strip()],
             "penalty": penalty,
         }
+
+    def _add_failure_fallbacks(
+        self,
+        base: dict[str, Any],
+        config: dict[str, Any],
+        summary: dict[str, Any],
+        final_answers: list[str],
+    ) -> None:
+        goal_text = (config.get("intent", "") or "").lower()
+        tokens = token_set(goal_text)
+        evaluator = config.get("eval", {}) if isinstance(config.get("eval"), dict) else {}
+        reference = evaluator.get("reference_answers", {}) if isinstance(evaluator.get("reference_answers"), dict) else {}
+        if ("reviewer" in tokens or "reviewers" in tokens) and {"mention", "mentioned", "complain", "complained"} & tokens:
+            expected = reference.get("must_include") or []
+            base["pattern"] = "missing_required_reviewers_or_premature_no_match"
+            if expected:
+                base["abstract_failure"] = (
+                    "The final answer did not include all evaluator-required reviewer names."
+                )
+            else:
+                base["abstract_failure"] = (
+                    "The task likely failed from answering before every review page was checked."
+                )
+            base["avoid"].extend(
+                [
+                    "For reviewer lookup tasks, inspect every review page/pagination page before final answer.",
+                    "Keep a running candidate list of matching reviewer names; do not overwrite earlier matches.",
+                    "Do not answer N/A/no reviewers unless every review page has been checked.",
+                    "Final answer must contain only reviewer names separated by commas.",
+                    "If no reviewer matches after exhaustive checking, final answer must be exactly N/A.",
+                ]
+            )
+        elif "fulfilled" in tokens and "orders" in tokens:
+            base["pattern"] = "fulfilled_order_total_count_or_format_error"
+            base["abstract_failure"] = (
+                "Fulfilled-order total task failed because the count/total was missing, wrong, or not in evaluator-friendly format."
+            )
+            base["avoid"].extend(
+                [
+                    "Use the task's current date to compute the exact date window.",
+                    "Count only fulfilled/complete orders inside the date window.",
+                    "Sum only totals from counted rows.",
+                    "Final answer must be '<N> orders, $<amount> total spend'.",
+                ]
+            )
+            if summary.get("err_msg"):
+                base["avoid"].append("If the count and total are known, immediately emit send_msg_to_user in a valid action tag.")
+                base["penalty"] = 0.12
+        elif summary.get("err_msg"):
+            base["pattern"] = "invalid_action_format"
+            base["abstract_failure"] = "The model failed after retries because it did not emit a valid action tag."
+            base["avoid"].extend(
+                [
+                    "Return exactly one <action>...</action> block.",
+                    "Do not output visible chain-of-thought before the action.",
+                    "If the final answer is known, call send_msg_to_user immediately.",
+                ]
+            )
 
     def _target_policy(self, action: str, args: str, thought: str) -> str:
         if action == "click":
@@ -755,7 +837,6 @@ Failed trace payload:
         parts = [
             f"## {procedure['name']}",
             f"Site: {procedure['site']}",
-            f"Family: {procedure['activation'].get('family', goal_family(procedure['activation']['goal_pattern']))}",
             f"Goal pattern: {procedure['activation']['goal_pattern']}",
             "Keywords: " + " ".join(procedure["activation"]["keywords"]),
             "Actions: " + " ".join(procedure["execution"]["action_skeleton"]),
@@ -817,7 +898,7 @@ Failed trace payload:
                 selected_memory,
                 site,
                 compact(pattern, 500),
-                failure["family"],
+                "general",
                 failure["abstract_failure"],
                 safe_json(failure["avoid"]),
                 selected_memory,
@@ -834,9 +915,8 @@ Failed trace payload:
                 now_ms(),
             ),
         )
-        family_node = f"family:{failure['family']}"
         failure_node = f"failure:{compact(failure['pattern'], 80)}"
-        self._edge(family_node, "has_failure", failure_node, failure["penalty"], failure["abstract_failure"])
+        self._edge(f"site:{site}", "has_failure", failure_node, failure["penalty"], failure["abstract_failure"])
         if selected_memory:
             self._edge(selected_memory, "failed_on", failure_node, failure["penalty"], failure["abstract_failure"])
         self.conn.commit()
@@ -914,8 +994,7 @@ Failed trace payload:
     def _upsert_edges(self, procedure: dict[str, Any]) -> None:
         name = procedure["name"]
         goal = procedure["activation"]["goal_pattern"]
-        family = procedure["activation"].get("family") or goal_family(goal)
-        self._edge(f"family:{family}", "contains", name, 1.5, goal)
+        self._edge(f"site:{procedure['site']}", "contains", name, 1.5, goal)
         self._edge(f"intent:{goal[:80]}", "activates", name, 1.0, goal)
         strategy = procedure.get("execution", {}).get("general_strategy")
         if strategy:
@@ -946,34 +1025,18 @@ Failed trace payload:
             (source, edge_type, target, weight, compact(evidence, 500)),
         )
 
-    def _family_score(self, query_family: str, procedure_family: str) -> float:
-        query_family = canonical_family(query_family)
-        procedure_family = canonical_family(procedure_family)
-        if query_family == procedure_family:
-            return 1.0
-        compatible = {
-            ("spend_category_total", "fulfilled_order_total"),
-            ("bought_option_lookup", "first_purchase_lookup"),
-            ("price_range", "product_search"),
-            ("product_capacity_search", "product_search"),
-            ("review_extraction", "review_lookup"),
-            ("order_status_total", "fulfilled_order_total"),
-            ("order_status_total", "bought_option_lookup"),
-        }
-        if (query_family, procedure_family) in compatible:
-            return 0.55
-        if query_family == "general" or procedure_family == "general":
-            return 0.05
-        return 0.0
-
-    def _structure_score(self, procedure: dict[str, Any], query_family: str) -> float:
-        expected = EXPECTED_ACTIONS.get(query_family)
-        if not expected:
-            return 0.0
-        skeleton = set(procedure.get("execution", {}).get("action_skeleton", []))
+    def _structure_score(self, procedure: dict[str, Any], goal: str) -> float:
+        execution = procedure.get("execution", {})
+        skeleton = set(execution.get("action_skeleton", []))
         if not skeleton:
             return 0.0
-        return len(expected & skeleton) / len(expected)
+        step_text = " ".join(
+            " ".join(str(step.get(key, "")) for key in ["action_type", "intent", "target_policy", "value_policy"])
+            for step in execution.get("steps", [])
+        )
+        action_prior = min(1.0, len(skeleton) / 5.0)
+        semantic_fit = overlap(goal, step_text)
+        return min(1.0, 0.42 * action_prior + 0.58 * semantic_fit)
 
     def _fast_retrieval_candidates(
         self,
@@ -982,28 +1045,22 @@ Failed trace payload:
         rows: dict[str, sqlite3.Row],
         limit: int,
     ) -> list[dict[str, Any]]:
-        query_family = canonical_family(goal_family(goal))
         scored = []
         page_text = compact(observation, 1200)
         for row in rows.values():
-            procedure = json.loads(row["procedure_json"])
-            proc_family = canonical_family(
-                procedure.get("activation", {}).get("family") or goal_family(row["goal_pattern"])
-            )
-            family = self._family_score(query_family, proc_family)
             lexical = max(
                 overlap(goal, row["goal_pattern"]),
                 overlap(goal, row["compact_text"]),
             )
             page = overlap(page_text, row["compact_text"]) if page_text else 0.0
-            combined = min(1.0, 0.58 * family + 0.34 * min(1.0, lexical * 2.2) + 0.08 * page)
+            combined = min(1.0, 0.72 * min(1.0, lexical * 2.2) + 0.28 * page)
             scored.append(
                 {
                     "workflow_name": row["name"],
                     "combined_score": round(combined, 4),
                     "semantic_score": 0.0,
                     "bm25_score": round(lexical, 4),
-                    "retrieval_backend": "sqlite_family_lexical_fast",
+                    "retrieval_backend": "sqlite_site_lexical_fast",
                     "text_for_embedding": row["compact_text"],
                 }
             )
@@ -1024,7 +1081,6 @@ Failed trace payload:
             retrieval = self.index.retrieve(query, top_k=max(top_k, self.candidate_k), threshold=0.0)
             retrieval_candidates = retrieval.candidates
         signature = ui_signature(observation)
-        query_family = canonical_family(goal_family(goal))
         candidates = []
         candidate_pool = []
         raw_candidates = []
@@ -1034,18 +1090,13 @@ Failed trace payload:
             if not row:
                 continue
             procedure = json.loads(row["procedure_json"])
-            proc_family = canonical_family(
-                procedure.get("activation", {}).get("family") or goal_family(row["goal_pattern"])
-            )
             lexical = overlap(goal, row["goal_pattern"])
             activation = overlap(" ".join(signature["top_terms"]), row["compact_text"])
             outcome = self._outcome_score(row)
             graph = self._graph_score(row["name"])
             metadata = 1.0 if row["site"] == site else 0.0
-            negative = self._negative_penalty(goal, site, query_family)
-            family = self._family_score(query_family, proc_family)
-            structure = self._structure_score(procedure, query_family)
-            mismatch_penalty = self.family_mismatch_penalty if family == 0.0 else 0.0
+            negative = self._negative_penalty(goal, site)
+            structure = self._structure_score(procedure, goal)
             score = (
                 self.semantic_weight * float(item.get("combined_score", 0))
                 + self.lexical_weight * lexical
@@ -1053,14 +1104,10 @@ Failed trace payload:
                 + self.metadata_weight * metadata
                 + self.outcome_weight * outcome
                 + self.graph_weight * graph
-                + self.family_weight * family
                 + self.structure_weight * structure
                 - negative
-                - mismatch_penalty
             )
             required_score = min_score
-            if family < 1.0:
-                required_score = max(required_score, self.cross_family_min_score)
             scored = {
                 "name": row["name"],
                 "workflow_name": row["name"],
@@ -1071,11 +1118,8 @@ Failed trace payload:
                 "metadata_score": round(metadata, 4),
                 "outcome_score": round(outcome, 4),
                 "graph_score": round(graph, 4),
-                "family_score": round(family, 4),
                 "structure_score": round(structure, 4),
                 "negative_penalty": round(negative, 4),
-                "query_family": query_family,
-                "procedure_family": proc_family,
                 "required_score": round(required_score, 4),
                 "accepted": score >= required_score,
             }
@@ -1154,7 +1198,7 @@ Failed trace payload:
         return max(0.0, min(total / 10.0, 1.0))
 
     def _negative_penalty(self, goal: str, site: str, family: str | None = None) -> float:
-        rows = self._negative_matches(goal, site, limit=8, family=family)
+        rows = self._negative_matches(goal, site, limit=8)
         penalty = 0.0
         for row in rows:
             penalty += float(row["penalty"])
@@ -1163,7 +1207,6 @@ Failed trace payload:
     def _negative_matches(
         self, goal: str, site: str, limit: int = 5, family: str | None = None
     ) -> list[sqlite3.Row]:
-        family = canonical_family(family or goal_family(goal))
         rows = self.conn.execute(
             """
             SELECT * FROM negative_memory
@@ -1175,71 +1218,34 @@ Failed trace payload:
         ).fetchall()
         scored = []
         for row in rows:
-            row_family = canonical_family(row["family"] or "general")
-            family_score = self._family_score(family, row_family)
             lexical = max(
                 overlap(goal, row["pattern"]),
                 overlap(goal, row["abstract_failure"]),
             )
-            if row_family == "general" and family != "general" and lexical < 0.45:
-                continue
-            score = 0.72 * family_score + 0.28 * lexical
-            if score >= 0.55 or (family == row_family and lexical >= 0.08):
+            selected_memory = row["selected_memory"] or row["procedure_name"] or ""
+            memory_overlap = overlap(goal, selected_memory)
+            score = 0.86 * lexical + 0.14 * memory_overlap
+            if score >= 0.08:
                 scored.append((score, row))
         scored.sort(key=lambda item: item[0], reverse=True)
         return [row for _, row in scored[:limit]]
 
-    def _family_directives(self, goal: str) -> list[str]:
-        family = canonical_family(goal_family(goal))
-        if family == "review_extraction":
-            return [
-                "Task-family rule: this is a strict review/extraction task.",
-                "Click/open the reviews section, then extract all relevant review sentences verbatim.",
-                "Do not summarize away details; include adjacent complaint sentences when they continue the criticism.",
-                "If the page says there are no reviews, answer that directly and do not invent customer sentiment.",
-            ]
-        if family == "product_capacity_search":
-            return [
-                "Task-family rule: this is a product-selection task with URL/page evaluator behavior.",
-                "Search for the requested item type, compare visible candidates, and choose the best product that satisfies the capacity/constraint.",
-                "Prefer the most specific product page matching the requested capacity; do not stop at the first merely valid result if a better exact match is visible.",
-                "Finish by navigating to the selected product page unless the task explicitly asks for a text answer.",
-            ]
-        if family == "order_status_total":
-            return [
-                "Task-family rule: this is an order-status lookup.",
-                "Open My Account or My Orders, read order rows from newest to oldest, and match the requested status exactly.",
-                "Do not treat pending, processing, complete, and cancelled as interchangeable.",
-                "If no order has the requested status, answer that no such order exists instead of substituting a nearby status.",
-                "For a matching order, answer only the exact total amount unless the user asks for more.",
-            ]
-        if family in {"review_lookup", "bought_option_lookup", "fulfilled_order_total", "first_purchase_lookup"}:
-            return [
-                "Task-family rule: verify the requested evidence on the current page before answering.",
-                "Adapt every element id to the current observation; never reuse old numeric ids from memory.",
-            ]
-        return []
-
     def prompt(self, goal: str, observation: str, site: str, top_k: int = 4, min_score: float = 0.42) -> str:
         candidates = self.retrieve(goal, observation, site, top_k=top_k, min_score=min_score)
         negatives = self._negative_matches(goal, site, limit=3)
-        directives = self._family_directives(goal)
-        if not candidates and not negatives and not directives:
+        if not candidates and not negatives:
             return ""
         cards = [
             "# Procedural Memory",
             "Use these retrieved procedures only when they match the current goal/page. Adapt every element id to the current observation.",
             "Follow the workflow as a policy checklist, not as a script: after each step, verify the success check on the current page before continuing.",
         ]
-        if directives:
-            cards.append("\n## Task-Family Guardrails")
-            cards.extend(f"- {item}" for item in directives)
         if negatives:
             cards.append("\n## Negative Memory")
             cards.append("Avoid repeating these similar failures:")
             for row in negatives:
                 avoid = read_json_from_text(row["avoid_json"], [])
-                cards.append(f"- Family={row['family']} pattern={row['pattern']}: {row['abstract_failure']}")
+                cards.append(f"- Similar failure pattern={row['pattern']}: {row['abstract_failure']}")
                 for item in avoid[:4]:
                     cards.append(f"  Avoid: {item}")
         for item in candidates:

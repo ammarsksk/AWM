@@ -1,0 +1,35 @@
+2026-06-25 18:28:34,665 - 3361549 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.22_10 in:
+  results/2026-06-25_18-28-34_GenericAgentArgs_on_webarena.22_10
+2026-06-25 18:28:36,336 - 3361549 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 18:28:36,337 - 3361549 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 18:28:46,212 - 3361549 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 18:28:46,236 - 3361549 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 18:28:46,492 - 3361549 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 18:28:46,493 - 3361549 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 18:28:51,808 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:28:52,354 - 3361549 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mentioned "under water photo". I need to go to the reviews section to find this information. I see a tab with the text "Reviews (12)" and bid '1402'. I will click this tab to view the reviews.
+
+action:
+click('1402')
+
+2026-06-25 18:29:04,008 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:11,856 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:12,261 - 3361549 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mentioned "under water photo". I have already navigated to the reviews section. I will now examine the reviews on the current page to see if any of them mention "under water photo". I have scrolled through the first page of reviews and did not find any mention of "under water photo". I will now navigate to the next page of reviews to continue my search. I will click on the "Page 2" link.
+
+action:
+click('1930')
+
+2026-06-25 18:29:22,402 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:30,697 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:31,054 - 3361549 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mentioned "under water photo". I have already navigated to the reviews section and I am currently on page 2 of the reviews. I have checked the reviews on this page and they do not contain the phrase "under water photo". I need to go to the first page of reviews to check for more reviews. I will click on the "Page 1" link to navigate to the first page of reviews.
+
+action:
+click('2074')
+
+2026-06-25 18:29:40,022 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:46,512 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:46,978 - 3361549 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('No reviewers mentioned "under water photo".')
+
+2026-06-25 18:29:54,495 - 3361549 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 18:29:56,499 - 3361549 - browsergym.experiments.loop - INFO - Saving summary info.

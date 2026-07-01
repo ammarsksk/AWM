@@ -1,0 +1,22 @@
+2026-06-19 18:35:43,528 - 3565567 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.161_16 in:
+  results/2026-06-19_18-35-43_GenericAgentArgs_on_webarena.161_16
+2026-06-19 18:35:45,355 - 3565567 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-19 18:35:45,355 - 3565567 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-19 18:35:54,207 - 3565567 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-19 18:35:54,224 - 3565567 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-19 18:35:54,520 - 3565567 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-19 18:35:54,521 - 3565567 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf.
+2026-06-19 18:35:58,342 - 3565567 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:35:58,973 - 3565567 - browsergym.experiments.loop - INFO - The user is looking for a storage option for 23 Nintendo Switch game cards. I will use the search bar to find relevant products. The search bar has a bid of `214`. I will type "Nintendo Switch game card storage" into the search bar and then press Enter to initiate the search.
+
+action:
+fill('214', 'Nintendo Switch game card storage')
+press('214', 'Enter')
+
+2026-06-19 18:36:19,687 - 3565567 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-19 18:36:20,535 - 3565567 - browsergym.experiments.loop - INFO - The user is looking for a storage option for 23 Nintendo Switch game cards. I have analyzed the search results and found a promising option: "HEIYING Game Card Case for Nintendo Switch& Switch OLED Game Card or Micro SD Memory Cards,Portable Switch Game Memory Card Storage with 24 Game Card Slots and 24 Micro SD Card Slots. (Black)". This case holds 24 game cards, which is a perfect fit for the user's needs. I will now click on the product link to view more details. The link has the bid `1467`.
+
+action:
+click('1467')
+
+2026-06-19 18:36:27,278 - 3565567 - browsergym.experiments.loop - INFO - Saving summary info.

@@ -1,0 +1,19 @@
+2026-06-25 17:28:37,062 - 3320707 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.23_17 in:
+  results/2026-06-25_17-28-36_GenericAgentArgs_on_webarena.23_17
+2026-06-25 17:28:38,973 - 3320707 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 17:28:38,973 - 3320707 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 17:28:48,775 - 3320707 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 17:28:48,796 - 3320707 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 17:28:48,957 - 3320707 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 17:28:48,958 - 3320707 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 17:28:53,777 - 3320707 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:28:54,291 - 3320707 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mentioned "good fingerprint resistant". I need to go to the reviews section to find this information. I see a link with the text "Reviews (12)" and bid '1383'. I will click this link to navigate to the reviews.
+
+action:
+click('1383')
+
+2026-06-25 17:29:04,745 - 3320707 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:29:05,205 - 3320707 - browsergym.experiments.loop - INFO - action:
+send_msg_to_user('Rachel, T. Gannon')
+
+2026-06-25 17:29:09,427 - 3320707 - browsergym.experiments.loop - INFO - Saving summary info.

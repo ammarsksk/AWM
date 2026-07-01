@@ -89,6 +89,8 @@ class AdvancedProcedureVectorIndex:
     - hnsw_sq8: HNSW graph over scalar-quantized vectors.
     - ivfpq: IVF + product quantization.
     - opq_ivfpq: OPQ rotation + IVF-PQ.
+    - qsgngt: experimental Quantized Scalable Graph NGT-style backend:
+      HNSW graph coarse router + IVF tree partitioning + SQ8 compressed vectors.
     - binary_rotation: TurboQuant/RaBitQ-like experimental random rotation + binary search.
     - binary_hnsw_rotation: same binary representation with binary HNSW.
     """
@@ -220,6 +222,9 @@ class AdvancedProcedureVectorIndex:
             if kind in {"ivfpq", "opq_ivfpq"}:
                 return self._build_ivfpq(matrix, with_opq=(kind == "opq_ivfpq"))
 
+            if kind in {"qsgngt", "qsg_ngt", "ngt_qg"}:
+                return self._build_qsgngt(matrix)
+
             if kind in {"rabitq", "turboquant", "binary_rotation", "binary_hnsw_rotation"}:
                 dense = kind == "rabitq"
                 return self._build_binary_rotation(matrix, hnsw=kind == "binary_hnsw_rotation", dense=dense)
@@ -266,6 +271,50 @@ class AdvancedProcedureVectorIndex:
         ivfpq.train(matrix)
         ivfpq.add(matrix)
         return ivfpq, f"ivfpq_nlist{nlist}_m{self.config.pq_m}_bits{self.config.pq_bits}"
+
+    def _build_qsgngt(self, matrix: np.ndarray):
+        """Build a QSGNGT-style index.
+
+        The public QSGNGT naming is not exposed as a standard Python package in
+        this repo, so this backend implements the same design point with FAISS:
+        a graph-based coarse router, a tree/IVF partitioning layer, and SQ8
+        compressed vectors. This lets us compare the intended architecture
+        against HNSW-SQ8 with the same memory and benchmark scripts.
+        """
+        rows, dim = matrix.shape
+        if rows < 64:
+            index = self.faiss.IndexHNSWSQ(
+                dim,
+                self.faiss.ScalarQuantizer.QT_8bit,
+                self.config.hnsw_m,
+                self.faiss.METRIC_INNER_PRODUCT,
+            )
+            index.hnsw.efConstruction = self.config.hnsw_ef_construction
+            index.hnsw.efSearch = self.config.hnsw_ef_search
+            index.train(matrix)
+            index.add(matrix)
+            return index, f"qsgngt_hnsw_sq8_small_rows{rows}"
+
+        nlist = max(2, min(self.config.ivf_nlist, int(math.sqrt(rows))))
+        if hasattr(self.faiss, "IndexHNSWFlat"):
+            quantizer = self.faiss.IndexHNSWFlat(dim, self.config.hnsw_m, self.faiss.METRIC_INNER_PRODUCT)
+            quantizer.hnsw.efConstruction = self.config.hnsw_ef_construction
+            quantizer.hnsw.efSearch = self.config.hnsw_ef_search
+            router = "hnsw_router"
+        else:
+            quantizer = self.faiss.IndexFlatIP(dim)
+            router = "flat_router"
+        index = self.faiss.IndexIVFScalarQuantizer(
+            quantizer,
+            dim,
+            nlist,
+            self.faiss.ScalarQuantizer.QT_8bit,
+            self.faiss.METRIC_INNER_PRODUCT,
+        )
+        index.nprobe = max(1, min(self.config.ivf_nprobe, nlist))
+        index.train(matrix)
+        index.add(matrix)
+        return index, f"qsgngt_{router}_ivf{nlist}_sq8_nprobe{index.nprobe}"
 
     def _build_binary_rotation(self, matrix: np.ndarray, hnsw: bool, dense: bool):
         rows, dim = matrix.shape

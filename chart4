@@ -1,0 +1,77 @@
+\ifdefined\FLOWCHARTEMBEDDED
+\begingroup
+\else
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\begin{document}
+\fi
+
+\definecolor{inputblue}{RGB}{219,234,254}
+\definecolor{processblue}{RGB}{224,242,254}
+\definecolor{memorygreen}{RGB}{220,252,231}
+\definecolor{rankpurple}{RGB}{237,233,254}
+\definecolor{warnred}{RGB}{254,226,226}
+\definecolor{evalorange}{RGB}{255,237,213}
+\definecolor{linegray}{RGB}{71,85,105}
+\definecolor{textgray}{RGB}{30,41,59}
+
+\begin{tikzpicture}[
+  font=\sffamily,
+  >={Latex[length=2.5mm,width=1.8mm]},
+  node distance=6mm and 8mm,
+  box/.style={
+    rectangle, rounded corners=3pt, very thick, align=center,
+    text width=52mm, minimum height=11mm, inner sep=4pt,
+    text=textgray, font=\sffamily\footnotesize, draw=#1!78!black, fill=#1
+  },
+  smallbox/.style={
+    rectangle, rounded corners=3pt, thick, align=center,
+    text width=39mm, minimum height=9mm, inner sep=3pt,
+    text=textgray, font=\sffamily\scriptsize, draw=#1!78!black, fill=#1
+  },
+  decision/.style={
+    diamond, aspect=2.2, very thick, align=center,
+    text width=36mm, inner sep=2pt, text=textgray,
+    font=\sffamily\footnotesize, draw=#1!80!black, fill=#1
+  },
+  flow/.style={->, very thick, draw=linegray},
+  data/.style={->, thick, dashed, draw=linegray},
+  neg/.style={->, thick, dashed, draw=red!70!black}
+]
+
+\node[box=inputblue] (start) {Live browser step begins\\[-1mm]\scriptsize current observation and action history};
+\node[smallbox=rankpurple, below left=of start] (cards) {Procedure cards};
+\node[smallbox=warnred, below right=of start] (warnings) {Avoid rules};
+\node[box=processblue, below=15mm of start] (compose) {Compose action prompt with current page as source of truth};
+\node[decision=evalorange, below=of compose] (enough) {Enough evidence to finish?};
+\node[box=processblue, below left=9mm and 8mm of enough] (act) {Select next browser action};
+\node[box=processblue, below right=9mm and 8mm of enough] (answer) {Return final answer in evaluator format};
+\node[box=processblue, below=of act] (execute) {Execute action and wait for stable page state};
+\node[decision=evalorange, below=13mm of enough] (done) {Task outcome known?};
+\node[box=memorygreen, below left=9mm and 7mm of done] (learnpos) {Positive abstraction\\successful action policy};
+\node[box=warnred, below right=9mm and 7mm of done] (learnneg) {Negative abstraction\\failed pattern and warning};
+\node[box=rankpurple, below=18mm of done] (memory) {Update procedure store, negative store, graph, vector index, and retrieval log};
+
+\draw[data] (cards) -- (compose);
+\draw[neg] (warnings) -- (compose);
+\draw[flow] (start) -- (compose);
+\draw[flow] (compose) -- (enough);
+\draw[flow] (enough) -- node[left, font=\scriptsize] {no} (act);
+\draw[flow] (enough) -- node[right, font=\scriptsize] {yes} (answer);
+\draw[flow] (act) -- (execute);
+\draw[flow] (execute) |- (done);
+\draw[flow] (answer) |- (done);
+\draw[flow] (done) -- node[left, font=\scriptsize] {success} (learnpos);
+\draw[neg] (done) -- node[right, font=\scriptsize] {failure} (learnneg);
+\draw[data] (learnpos) |- (memory);
+\draw[neg] (learnneg) |- (memory);
+
+\end{tikzpicture}
+
+\ifdefined\FLOWCHARTEMBEDDED
+\endgroup
+\else
+\end{document}
+\fi

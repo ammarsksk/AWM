@@ -114,11 +114,14 @@ class ChatModelArgs:
 
     def has_vision(self):
         # TODO make sure to upgrade this as we add more models
+        lowered = self.model_name.lower()
         name_patterns_with_vision = [
             "vision",
             "4o",
+            "gemini",
+            "claude-3",
         ]
-        return any(pattern in self.model_name for pattern in name_patterns_with_vision)
+        return any(pattern in lowered for pattern in name_patterns_with_vision)
 
 
 class HuggingFaceChatModel(SimpleChatModel):

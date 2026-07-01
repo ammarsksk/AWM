@@ -189,7 +189,7 @@ def main() -> None:
     parser.add_argument("--output-dir", default="webarena/retrieval_backend_benchmark")
     parser.add_argument(
         "--backends",
-        default="flat,hnsw,sq8,hnsw_sq8,ivfpq,opq_ivfpq,binary_rotation,binary_hnsw_rotation",
+        default="flat,hnsw,sq8,hnsw_sq8,qsgngt,ivfpq,opq_ivfpq,binary_rotation,binary_hnsw_rotation",
     )
     parser.add_argument("--max-queries", type=int, default=250)
     parser.add_argument("--top-k", type=int, default=4)

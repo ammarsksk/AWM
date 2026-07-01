@@ -1,0 +1,69 @@
+\ifdefined\FLOWCHARTEMBEDDED
+\begingroup
+\else
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\begin{document}
+\fi
+
+\definecolor{processblue}{RGB}{224,242,254}
+\definecolor{memorygreen}{RGB}{220,252,231}
+\definecolor{rankpurple}{RGB}{237,233,254}
+\definecolor{warnred}{RGB}{254,226,226}
+\definecolor{evalorange}{RGB}{255,237,213}
+\definecolor{linegray}{RGB}{71,85,105}
+\definecolor{textgray}{RGB}{30,41,59}
+
+\begin{tikzpicture}[
+  font=\sffamily,
+  >={Latex[length=2.5mm,width=1.8mm]},
+  node distance=7mm and 8mm,
+  box/.style={
+    rectangle, rounded corners=3pt, very thick, align=center,
+    text width=50mm, minimum height=11mm, inner sep=4pt,
+    text=textgray, font=\sffamily\footnotesize, draw=#1!78!black, fill=#1
+  },
+  store/.style={
+    cylinder, shape border rotate=90, aspect=0.22, very thick, align=center,
+    text width=40mm, minimum height=13mm, inner sep=3pt,
+    text=textgray, font=\sffamily\scriptsize, draw=#1!80!black, fill=#1
+  },
+  flow/.style={->, very thick, draw=linegray},
+  data/.style={->, thick, dashed, draw=linegray},
+  neg/.style={->, thick, dashed, draw=red!70!black}
+]
+
+\node[box=rankpurple] (request) {Retrieval request reaches memory layer\\[-1mm]\scriptsize goal, page state, site, family, history};
+\node[box=processblue, below=of request] (access) {Memory access layer coordinates reads and writes};
+
+\node[store=memorygreen, below left=10mm and 8mm of access] (proc) {Procedural memory\\activation, steps, checks, answer format};
+\node[store=rankpurple, below=10mm of access] (vec) {Vector index\\compact procedure embeddings};
+\node[store=memorygreen, below right=10mm and 8mm of access] (graph) {Relation graph\\families, actions, clues, outcomes};
+\node[store=warnred, below=17mm of proc] (negmem) {Negative memory\\failed patterns and penalties};
+\node[store=evalorange, below=17mm of graph] (events) {Retrieval event history\\selected, rejected, raw candidates};
+
+\node[box=memorygreen, below=20mm of vec] (updates) {Completed runs update procedures, embeddings, graph edges, warnings, and audit logs};
+\node[box=rankpurple, below=of updates] (ranker) {Handoff to hybrid retrieval ranking};
+
+\draw[flow] (request) -- (access);
+\draw[data] (access) -- (proc);
+\draw[data] (access) -- (vec);
+\draw[data] (access) -- (graph);
+\draw[neg] (access) -- (negmem);
+\draw[data] (access) -- (events);
+\draw[data] (proc) -- (updates);
+\draw[data] (vec) -- (updates);
+\draw[data] (graph) -- (updates);
+\draw[neg] (negmem) -- (updates);
+\draw[data] (events) -- (updates);
+\draw[flow] (updates) -- (ranker);
+
+\end{tikzpicture}
+
+\ifdefined\FLOWCHARTEMBEDDED
+\endgroup
+\else
+\end{document}
+\fi

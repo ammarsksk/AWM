@@ -61,6 +61,7 @@ def main():
             "--llm_retries", str(args.llm_retries),
             "--pre_observation_delay", str(args.pre_observation_delay),
             "--extract_obs_retries", str(args.extract_obs_retries),
+            "--use_thinking", str(args.use_thinking),
         ]
         if args.memory_architecture == "procedural":
             run_cmd.extend(
@@ -131,6 +132,11 @@ if __name__ == "__main__":
     parser.add_argument("--llm_retries", type=int, default=6)
     parser.add_argument("--pre_observation_delay", type=float, default=1.25)
     parser.add_argument("--extract_obs_retries", type=int, default=8)
+    parser.add_argument(
+        "--use_thinking",
+        type=lambda value: str(value).lower() in {"1", "true", "yes"},
+        default=False,
+    )
     parser.add_argument(
         "--criteria",
         type=str,

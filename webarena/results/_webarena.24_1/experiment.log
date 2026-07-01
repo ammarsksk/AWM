@@ -1,0 +1,25 @@
+2026-06-25 17:29:51,035 - 3321673 - browsergym.experiments.loop - INFO - Running experiment GenericAgentArgs_on_webarena.24_3 in:
+  results/2026-06-25_17-29-50_GenericAgentArgs_on_webarena.24_3
+2026-06-25 17:29:53,209 - 3321673 - browsergym.core.env - WARNING - Overriding the task's viewport parameter ({'width': 1280, 'height': 720} => {'width': 1500, 'height': 1280}). This might change the task's behaviour and difficulty.
+2026-06-25 17:29:53,210 - 3321673 - browsergym.core.env - WARNING - Overriding the task's slow_mo parameter (1000 => 30). This might change the task's behaviour and difficulty.
+2026-06-25 17:30:03,882 - 3321673 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2026-06-25 17:30:03,916 - 3321673 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2026-06-25 17:30:04,172 - 3321673 - sentence_transformers.base.model - INFO - No device provided, using cpu
+2026-06-25 17:30:04,173 - 3321673 - sentence_transformers.base.model - INFO - Loading SentenceTransformer model from /home/ammar/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a.
+2026-06-25 17:30:08,119 - 3321673 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:30:08,810 - 3321673 - browsergym.experiments.loop - INFO - action:
+click('1556')
+
+2026-06-25 17:30:20,083 - 3321673 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:30:26,101 - 3321673 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:30:26,456 - 3321673 - browsergym.experiments.loop - INFO - The user wants to find reviewers who mention "price being unfair".
+I have already navigated to the reviews section.
+I will now examine the reviews on the current page to see if any of them mention "price being unfair".
+I have scrolled through the reviews and did not find any mention of "price being unfair".
+I will now inform the user that no reviewers mentioned "price being unfair".
+
+action:
+send_msg_to_user('No reviewers mentioned about the price being unfair.')
+
+2026-06-25 17:30:33,532 - 3321673 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1/projects/agentic-workflow-memory/locations/global/endpoints/openapi/chat/completions "HTTP/1.1 200 OK"
+2026-06-25 17:30:35,790 - 3321673 - browsergym.experiments.loop - INFO - Saving summary info.

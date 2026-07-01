@@ -1,0 +1,25 @@
+ENV: {"AWM_EMBEDDING_MODEL": "BAAI/bge-small-en-v1.5", "WEBARENA_FAST_MEMORY": "0", "WEBARENA_RERANKER_MODE": "ml", "WEBARENA_RERANKER_MODEL": "BAAI/bge-reranker-large", "WEBARENA_RERANKER_TRAIN_LIMIT": "1000", "WEBARENA_VECTOR_BACKEND": "hnsw_sq8"}
+
+COMMAND: /home/ammar/Downloads/agent-workflow-memory-main/.venv/bin/python run.py --task_name webarena.21 --workflow_path workflow/shopping.txt --model_name openai/google/gemini-2.5-pro --headless True --max_steps 40 --llm_retries 6 --pre_observation_delay 1.25 --extract_obs_retries 8 --use_thinking False --procedural_memory_path /home/ammar/Downloads/agent-workflow-memory-main/webarena/memory/procedural --procedural_site shopping --procedural_top_k 4 --procedural_min_score 0.42
+Traceback (most recent call last):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/run.py", line 15, in <module>
+    from agents.legacy.agent import GenericAgentArgs
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/__init__.py", line 1, in <module>
+    from .agent import GenericAgentArgs
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/agent.py", line 17, in <module>
+    from ..legacy import dynamic_prompting
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/dynamic_prompting.py", line 20, in <module>
+    from .utils.llm_utils import ParseError
+  File "/home/ammar/Downloads/agent-workflow-memory-main/webarena/agents/legacy/utils/llm_utils.py", line 18, in <module>
+    from transformers import AutoModel
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/__init__.py", line 958, in <module>
+    import_structure = define_import_structure(Path(__file__).parent / "models", prefix="models")
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2867, in define_import_structure
+    import_structure = create_import_structure_from_path(module_path)
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2580, in create_import_structure_from_path
+    import_structure[f] = create_import_structure_from_path(os.path.join(module_path, f))
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2703, in create_import_structure_from_path
+    for _all_object in fetch__all__(file_content):
+  File "/home/ammar/Downloads/agent-workflow-memory-main/.venv/lib/python3.10/site-packages/transformers/utils/import_utils.py", line 2485, in fetch__all__
+    if line.startswith("__all__"):
+KeyboardInterrupt
